@@ -156,7 +156,7 @@ report['course_links_changed'] = [u for u in found if u != course]
 
 # --- checks ---
 report['whatsapp_links_left'] = len(re.findall(r'wa\.me/', s))  # banner has 1
-assert not re.search(r'data:image/[^"\'\s]{200,}', s) and 'progress' not in s, 'leftover data URI / progress'
+assert not re.search(r'data:image/[^"\'\s]{200,}', s) and 'id="progress"' not in s and "getElementById('progress')" not in s, 'leftover data URI / progress'
 for t in ('div', 'script', 'style', 'table', 'figure', 'ul', 'section', 'details'):
     assert s.count('<' + t) == s.count('</' + t + '>') or t == 'details', t
 open(f'{OUT}/{slug}.html', 'w', encoding='utf-8').write(s)
