@@ -58,7 +58,7 @@ Network notes: the cloud container can reach GitHub but **not** augmintech.com (
 - **No large data URIs** in anything sent to WordPress.
 
 ## Open items (as of 2026-11-10 evening)
-- 81–95 are published. Drafts 96–110 (posts 73659–73673) await review/publish.
+- 81–95 are published. Drafts 96–110 (73659–73673, cross-linked to each other) and 111–119 (73713–73721, cross-linked) await publish; each batch is meant to be published together. Once 96–110 are live, 111–119 can get links to them (e.g. 118 says "see our interior design interview questions guide" = 110).
 - Linking from published posts (e.g. 83 → 81/82, older posts → 85–110) needs snippet #49 changed to allow updating published posts; ask Ashish first.
 - 89 fire-fighting-system: "Full guide" labels for hydrant/sprinkler are plain text; 86/87 are live now, so they could be linked (needs the snippet change, since 89 is published). "Wet riser / Fire pump (coming soon)" labels are still on the live post.
 - 100, 102–105 use software logos and vendor/third-party screenshots and renders (Autodesk, Chaos/V-Ray, D5, Vu Nguyen render reused in 104). Check rights before publishing.
