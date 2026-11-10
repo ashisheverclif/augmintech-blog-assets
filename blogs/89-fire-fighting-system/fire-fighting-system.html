@@ -1,0 +1,344 @@
+<style>
+#aug-fire-fighting-system{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-fire-fighting-system *,#aug-fire-fighting-system *::before,#aug-fire-fighting-system *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-fire-fighting-system{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-fire-fighting-system.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-fire-fighting-system .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-fire-fighting-system .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-fire-fighting-system .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-fire-fighting-system .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-fire-fighting-system .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-fire-fighting-system .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-fire-fighting-system h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-fire-fighting-system h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-fire-fighting-system p{margin-bottom:.9rem;font-size:16px;}
+#aug-fire-fighting-system a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-fire-fighting-system a:hover{border-color:var(--brand);}
+#aug-fire-fighting-system hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-fire-fighting-system .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-fire-fighting-system .chart svg{width:100%;height:auto;display:block;}
+#aug-fire-fighting-system .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-fire-fighting-system .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-fire-fighting-system .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-fire-fighting-system .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-fire-fighting-system .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-fire-fighting-system .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-fire-fighting-system .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-fire-fighting-system table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-fire-fighting-system caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-fire-fighting-system thead tr{background:var(--slate);color:#fff;}
+#aug-fire-fighting-system thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-fire-fighting-system tbody tr:nth-child(even){background:var(--surface);}
+#aug-fire-fighting-system tbody tr:hover{background:var(--brand-lite);}
+#aug-fire-fighting-system td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-fire-fighting-system td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-fire-fighting-system tbody tr.hl{background:var(--green-lite)!important;}
+#aug-fire-fighting-system tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-fire-fighting-system ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-fire-fighting-system ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-fire-fighting-system .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-fire-fighting-system .cta-green{background:var(--slate);}
+#aug-fire-fighting-system .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-fire-fighting-system .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-fire-fighting-system .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-fire-fighting-system .cta-btn-blue{color:var(--brand);}#aug-fire-fighting-system .cta-btn-green{color:var(--slate);}
+#aug-fire-fighting-system figure{margin:1.5rem 0;}
+#aug-fire-fighting-system figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-fire-fighting-system figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-fire-fighting-system dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-fire-fighting-system dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-fire-fighting-system dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-fire-fighting-system .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-fire-fighting-system .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-fire-fighting-system .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-fire-fighting-system .srcs{list-style:none;padding:0;}
+#aug-fire-fighting-system .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-fire-fighting-system .srcs li:last-child{border-bottom:none;}
+
+/* ===== answer ===== */#aug-fire-fighting-system .defbox{margin:1.4rem 0;border:1px solid #F0C9BB;border-radius:var(--radius);background:#FDF3EF;padding:1.1rem 1.2rem;}
+#aug-fire-fighting-system .defbox-k{font-family:var(--mono);font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--coral);margin-bottom:.4rem;}
+#aug-fire-fighting-system .defbox p{font-size:16.5px;line-height:1.7;color:var(--ink-mid);margin:0;}
+#aug-fire-fighting-system .defbox p strong{color:var(--ink);}
+#aug-fire-fighting-system .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-fire-fighting-system .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-fire-fighting-system .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-fire-fighting-system .dfig svg{display:block;width:100%;height:auto;}
+#aug-fire-fighting-system .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;}
+
+/* ===== hub map ===== */#aug-fire-fighting-system .hub{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:1.2rem 0;}
+#aug-fire-fighting-system .hb{border:1px solid var(--border);border-radius:var(--radius-sm);padding:.7rem .8rem;background:#fff;}
+#aug-fire-fighting-system .hb i{font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--coral);}
+#aug-fire-fighting-system .hb b{display:block;font-family:var(--display);font-size:15px;margin:.15rem 0 .2rem;}
+#aug-fire-fighting-system .hb span{font-size:12.5px;line-height:1.45;color:var(--ink-mid);}
+#aug-fire-fighting-system .hb.soon i{color:var(--muted);}
+
+/* ===== detect-control-extinguish ===== */#aug-fire-fighting-system .dce{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:var(--radius);overflow:hidden;margin:1.2rem 0;}
+#aug-fire-fighting-system .dce div{padding:.8rem .9rem;color:#fff;}
+#aug-fire-fighting-system .dce div:nth-child(1){background:#C79A2B;} #aug-fire-fighting-system .dce div:nth-child(2){background:#D47A2A;} #aug-fire-fighting-system .dce div:nth-child(3){background:#C0471F;}
+#aug-fire-fighting-system .dce b{display:block;font-family:var(--display);font-size:16px;}
+#aug-fire-fighting-system .dce span{font-size:13px;line-height:1.5;opacity:.95;}
+
+/* ===== active/passive ===== */#aug-fire-fighting-system .ap2{display:grid;grid-template-columns:130px 1fr 1fr;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.2rem 0;}
+#aug-fire-fighting-system .ap2 div{padding:.6rem .8rem;border-bottom:1px solid var(--border);font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-fire-fighting-system .ap2 .h{font-family:var(--display);font-weight:800;font-size:15px;color:#fff;}
+#aug-fire-fighting-system .ap2 .h.a{background:var(--coral);} #aug-fire-fighting-system .ap2 .h.p{background:var(--slate);} #aug-fire-fighting-system .ap2 .h.e{background:#fff;}
+#aug-fire-fighting-system .ap2 .k{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--ink);background:var(--surface);}
+
+/* ===== 7 type sections ===== */#aug-fire-fighting-system .seven{counter-reset:t;margin:1.2rem 0;}
+#aug-fire-fighting-system .ty{counter-increment:t;display:grid;grid-template-columns:48px 1fr;gap:12px;padding:.9rem 0;border-bottom:1px solid var(--border);}
+#aug-fire-fighting-system .ty::before{content:counter(t);width:40px;height:40px;border-radius:10px;background:var(--coral);color:#fff;font-family:var(--display);font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;}
+#aug-fire-fighting-system .ty h3{font-size:17px;margin:.1rem 0 .3rem;}
+#aug-fire-fighting-system .ty p{margin:0 0 .35rem;font-size:14.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-fire-fighting-system .ty .go{font-family:var(--mono);font-size:11.5px;color:var(--brand);}
+#aug-fire-fighting-system .ty .go.soon{color:var(--muted);}
+
+/* ===== components ===== */#aug-fire-fighting-system .cmp{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:1.2rem 0;}
+#aug-fire-fighting-system .cm{background:var(--surface);border-radius:var(--radius-sm);padding:.7rem .75rem;border-left:4px solid var(--brand);}
+#aug-fire-fighting-system .cm b{display:block;font-family:var(--display);font-size:14.5px;margin-bottom:.2rem;}
+#aug-fire-fighting-system .cm span{font-size:12.5px;line-height:1.5;color:var(--ink-mid);}
+
+/* ===== codes ===== */#aug-fire-fighting-system .codes3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1.2rem 0;}
+#aug-fire-fighting-system .cd3{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-fire-fighting-system .cd3 h3{margin:0;padding:.6rem .85rem;color:#fff;font-size:15px;}
+#aug-fire-fighting-system .cd3.in h3{background:var(--green);} #aug-fire-fighting-system .cd3.ae h3{background:var(--brand);} #aug-fire-fighting-system .cd3.sa h3{background:var(--teal);}
+#aug-fire-fighting-system .cd3 ul{margin:0;padding:.7rem .85rem .7rem 1.9rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-fire-fighting-system .cd3 li{margin-bottom:.35rem;}
+#aug-fire-fighting-system .nfpa{display:flex;flex-wrap:wrap;gap:6px;margin:.8rem 0 1rem;}
+#aug-fire-fighting-system .nfpa span{font-family:var(--mono);font-size:12px;padding:5px 9px;border-radius:5px;background:var(--surface);border:1px solid var(--border);color:var(--ink);}
+#aug-fire-fighting-system .nfpa span b{color:var(--coral);}
+#aug-fire-fighting-system .alert{border-left:4px solid var(--warn);background:#FBF4E8;border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.8rem 1rem;margin:1rem 0;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-fire-fighting-system .alert b{color:var(--warn);}
+#aug-fire-fighting-system .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-fire-fighting-system .chk3{list-style:none;padding:0;margin:1rem 0;}
+#aug-fire-fighting-system .chk3 li{padding:.5rem .8rem .5rem 2rem;position:relative;font-size:14.5px;line-height:1.6;color:var(--ink-mid);border-bottom:1px dashed var(--border);}
+#aug-fire-fighting-system .chk3 li::before{content:"✓";position:absolute;left:.6rem;color:var(--green);font-weight:700;}
+#aug-fire-fighting-system .chk3 li b{color:var(--ink);}
+#aug-fire-fighting-system .code{font-family:var(--mono);font-size:12px;background:#fff;border:1px solid var(--border);border-radius:3px;padding:1px 5px;}
+
+@media(max-width:640px){
+  #aug-fire-fighting-system .hub{grid-template-columns:1fr 1fr;}
+  #aug-fire-fighting-system .dce{grid-template-columns:1fr;}
+  #aug-fire-fighting-system .ap2{grid-template-columns:90px 1fr 1fr;} #aug-fire-fighting-system .ap2 div{font-size:12.5px;padding:.5rem .55rem;}
+  #aug-fire-fighting-system .cmp{grid-template-columns:1fr 1fr;}
+  #aug-fire-fighting-system .codes3{grid-template-columns:1fr;}
+  #aug-fire-fighting-system .dfig.wide{overflow-x:auto;} #aug-fire-fighting-system .dfig.wide svg{min-width:600px;}
+  #aug-fire-fighting-system .cta{flex-direction:column;align-items:flex-start;}
+  #aug-fire-fighting-system .cta>div{max-width:100%;} #aug-fire-fighting-system .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-fire-fighting-system .cta>div:last-child .cta-btn{margin-left:0;}
+}
+
+#aug-fire-fighting-system .ph{aspect-ratio:auto}#aug-fire-fighting-system .ph img{position:static;height:auto;object-fit:contain}#aug-fire-fighting-system .blog figure img{display:block;width:100%;height:auto;cursor:zoom-in}#aug-fire-fighting-system .dfig.wide{overflow:hidden}#aug-fire-fighting-system .cmp{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}#aug-fire-fighting-system .cm{padding:1rem}#aug-fire-fighting-system .cm span{display:block;font-size:14px;line-height:1.6}#aug-fire-fighting-system .codes3{grid-template-columns:1fr}#aug-fire-fighting-system .cd3 ul{font-size:14px}#aug-fire-fighting-system .hub{grid-template-columns:repeat(auto-fit,minmax(155px,1fr))}#aug-fire-fighting-system figcaption{font-family:var(--body);font-size:13px;line-height:1.65}#aug-fire-fighting-system .dce div:first-child{background:#856718}#aug-fire-fighting-system .dce div:nth-child(2){background:#a35317}#aug-fire-fighting-system .cta-btn{white-space:normal;display:inline-block}
+#aug-fire-fighting-system #zoom89{padding:16px;border:0;border-radius:12px;max-width:96vw;max-height:94vh;margin:auto}#aug-fire-fighting-system #zoom89::backdrop{background:#102638d9}#aug-fire-fighting-system #zoom89 img{display:block;max-width:90vw;max-height:80vh;object-fit:contain}#aug-fire-fighting-system #zoom89 button{display:block;margin:0 0 10px auto;padding:10px 18px;background:#173d54;color:white;border:0;border-radius:6px;cursor:pointer}
+@media(max-width:640px){#aug-fire-fighting-system.blog{padding:1.5rem 1rem 4rem}#aug-fire-fighting-system .cmp{grid-template-columns:1fr 1fr}#aug-fire-fighting-system .ap2{grid-template-columns:75px minmax(0,1fr) minmax(0,1fr)}#aug-fire-fighting-system .ap2 div{overflow-wrap:anywhere}#aug-fire-fighting-system .cta{padding:1.1rem}}
+@media(max-width:360px){#aug-fire-fighting-system .cmp{grid-template-columns:1fr}}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-fire-fighting-system.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-fire-fighting-system h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-fire-fighting-system a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-fire-fighting-system a:hover{color:#18d104;}
+#aug-fire-fighting-system .cta{background:#1a1a1a;}
+#aug-fire-fighting-system .cta a.cta-btn{text-decoration:none;}
+#aug-fire-fighting-system .cta-btn-blue{background:#18d104;color:#000;}
+#aug-fire-fighting-system .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-fire-fighting-system [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-fire-fighting-system">
+
+<div class="defbox">
+  <div class="defbox-k">Short answer</div>
+  <p><strong>A fire fighting system detects, controls and puts out fires in a building using water, gas or chemical agents.</strong> It ranges from a fire extinguisher on a wall to a pumped network of hydrants, risers and sprinklers.</p>
+</div>
+
+
+<p>This page is the overview. Each main system has its own detailed guide, listed below. If you are an MEP or <a href="https://augmintech.com/bim-mep/">BIM engineer</a>, this is the map of what the fire services contractor will put in your ceilings, shafts and plant rooms.</p>
+
+<div class="hub">
+  <div class="hb"><i>Full guide</i><b>Fire hydrant system</b><span>Tank, pumps, ring main, landing valves, yard hydrants</span></div>
+  <div class="hb"><i>Full guide</i><b>Fire sprinkler system</b><span>Wet, dry, pre-action, deluge; NFPA 13 coverage</span></div>
+  <div class="hb soon"><i>Coming soon</i><b>Wet riser</b><span>Riser sizing, landing valves and hose reels</span></div>
+  <div class="hb soon"><i>Coming soon</i><b>Fire pump</b><span>Main, diesel and jockey pumps and their controls</span></div>
+</div>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>A fire fighting system detects, controls and extinguishes fires</strong> with water, gas or chemical agents.</li>
+  <li><strong>Active protection fights the fire; passive protection contains it</strong> with fire-rated walls, doors and dampers.</li>
+  <li><strong>Seven systems cover most buildings</strong>: hydrants, sprinklers, wet risers, dry risers, hose reels, extinguishers and gas suppression.</li>
+  <li><strong>Water systems share one backbone</strong>: a fire water tank, <a href="https://augmintech.com/pump-head-calculation/">fire pumps</a>, a ring main, <a href="https://augmintech.com/types-of-valves/">alarm valves</a> and a fire brigade inlet.</li>
+  <li><strong>India follows NBC Part 4 and IS standards; the UAE and Saudi Arabia follow their fire codes</strong>, which lean on NFPA standards.</li>
+  <li><strong>In BIM, fire services are modelled in Revit</strong> as fire protection piping systems and coordinated with HVAC, <a href="https://augmintech.com/plumbing-system-in-building/">plumbing</a> and electrical.</li>
+</ul>
+
+<h2 id="what-is">What Is a Fire Fighting System?</h2>
+<p>A fire fighting system in a building is the set of equipment that does three jobs:</p>
+<div class="dce">
+  <div><b>Detect</b><span>Smoke, heat or flame detectors, and the sprinkler bulb itself, sense a fire.</span></div>
+  <div><b>Control</b><span>Sprinklers and gas systems hold the fire back or put it out automatically.</span></div>
+  <div><b>Extinguish</b><span>Firefighters and trained occupants use hydrants, risers, hose reels and extinguishers.</span></div>
+</div>
+<figure class="dfig wide">
+<img src="https://augmintech.com/wp-content/uploads/2026/11/89-building-fire-protection-concept-showing.webp" alt="Building fire protection concept showing tank, pumps, ring main, hydrant, risers, sprinklers and independent gas suppression" loading="lazy">
+<figcaption>Fire fighting system in a building: shared water backbone (tank, pumps, ring main) feeding hydrants, the wet riser and sprinklers, plus extinguishers and a gas suppression room. Diagram: Augmintech.</figcaption>
+</figure>
+<p>On a project, this is the "F" in MEPF, and it is designed by a fire protection engineer and coordinated with the other MEP services.</p>
+
+<h2 id="active-passive">Active vs Passive Fire Protection</h2>
+<div class="ap2">
+  <div class="h e"></div><div class="h a">Active</div><div class="h p">Passive</div>
+  <div class="k">How it works</div><div>Reacts when a fire is detected, automatically or by hand</div><div>Does not fight the fire; slows and contains it through fire-resistant construction</div>
+  <div class="k">Examples</div><div>Sprinklers, hydrants, gas suppression, extinguishers, detectors and alarms</div><div>Fire-rated walls and floors, fire doors, fire and smoke dampers, fire stopping around services</div>
+  <div class="k">Who designs it</div><div>Fire protection and MEP engineers</div><div>Architects, with MEP input on dampers and penetrations</div>
+  <div class="k">MEP link</div><div>Pipes, pumps, valves and controls</div><div>Fire dampers in ducts; sealing every pipe, duct and cable tray through a fire wall</div>
+</div>
+<p class="note">Definitions and examples from <a href="https://www.cheshirefire.gov.uk/fire-protection/business-owner-landlord-or-employee/active-and-passive-fire-protection" target="_blank" rel="noopener">Cheshire Fire and Rescue Service</a>; fire and smoke dampers as passive protection from <a href="https://www.inprocorp.com/resources/blog/active-vs-passive-fire-protection" target="_blank" rel="noopener">InPro</a>. A building needs both: active systems to fight the fire, passive ones to buy time for escape.</p>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="types">7 Types of Fire Fighting Systems</h2>
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>System</th><th>Agent</th><th>Operated by</th><th>Typical use</th><th>Key standard</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hydrant system</strong></td><td>Water</td><td>Firefighters</td><td>Around and inside larger buildings and sites</td><td>IS 13039, NBC Part 4; NFPA 24</td></tr>
+    <tr><td><strong>Sprinkler system</strong></td><td>Water</td><td>Automatic</td><td>Most high-rise, commercial and industrial buildings</td><td>IS 15105; NFPA 13</td></tr>
+    <tr><td><strong>Wet riser</strong></td><td>Water (always charged)</td><td>Firefighters</td><td>Taller buildings, outlet on every floor</td><td>IS 3844; NFPA 14</td></tr>
+    <tr><td><strong>Dry riser</strong></td><td>Water pumped in by the fire brigade</td><td>Firefighters</td><td>Mid-height buildings where codes allow</td><td>BS 9990 (UK); local codes</td></tr>
+    <tr><td><strong>Hose reel</strong></td><td>Water</td><td>Occupants</td><td>First-aid fire fighting on each floor</td><td>IS 3844, IS 884</td></tr>
+    <tr><td><strong>Fire extinguishers</strong></td><td>Water, foam, powder, CO₂, clean agent</td><td>Occupants</td><td>Every building, for small fires</td><td>IS 2190; NFPA 10</td></tr>
+    <tr><td><strong>Gas suppression</strong></td><td>Clean agent or CO₂</td><td>Automatic</td><td>Server, electrical and archive rooms</td><td>NFPA 2001; NFPA 12 (CO₂)</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="cta">
+  <div><h3>Model and Coordinate Fire Services in Revit</h3><p>Augmintech's PG Program in BIM MEP covers MEP system modelling, including fire protection, with clash detection, schedules and BOQs on three building projects, across 150+ live hours over 6 months, with recordings for 1000 days and 500+ interview questions. ₹1,50,000 + GST in India, $1,800 abroad.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-mep-program/" class="cta-btn cta-btn-blue">View the BIM MEP program</a></div>
+</div>
+
+<div class="seven">
+  <div class="ty"><div><h3>Fire hydrant system</h3><p>A pumped network of pressurised pipes feeding landing valves and yard hydrants, so firefighters can connect hoses anywhere around and inside the building. Indian codes call for at least 3.5 kg/cm² at the hydraulically most remote hydrant (IS 13039).</p><div class="go">Full guide: Fire hydrant system</div></div></div>
+  <div class="ty"><div><h3>Sprinkler system</h3><p>Pipes with heat-sensitive heads that open one by one over a fire. Comes in wet, dry, pre-action and deluge types, designed in India to IS 15105 and in the Gulf largely to NFPA 13.</p><div class="go">Full guide: Fire sprinkler system</div></div></div>
+  <div class="ty"><div><h3>Wet riser</h3><p>A vertical pipe kept full of water, with automatic pumps and stored water behind it, and a landing valve on each floor (<a href="https://www.bafsa.org.uk/assets/Downloads/BIF21WetDryRiser.pdf" target="_blank" rel="noopener">BAFSA</a>).</p><div class="go soon">Full guide: Wet riser (coming soon)</div></div></div>
+  <div class="ty"><div><h3>Dry riser</h3><p>An empty vertical pipe that the fire brigade fills from its tender through an inlet on the outside wall. In UK guidance, dry or wet risers may be used between 18 m and 50 m, and only wet risers above 50 m (<a href="https://www.bafsa.org.uk/assets/Downloads/BIF21WetDryRiser.pdf" target="_blank" rel="noopener">BAFSA</a>).</p></div></div>
+  <div class="ty"><div><h3>Hose reel</h3><p>A permanently charged rubber hose on a drum next to the landing valve, for occupants to tackle a fire early. IS 3844 covers internal hydrants and hose reels.</p></div></div>
+  <div class="ty"><div><h3>Fire extinguishers</h3><p>Portable first-aid equipment chosen by fire class: A (solids), B (flammable liquids), C (gases) and D (metals). IS 2190:2010 covers selection, installation and maintenance; for energised electrical equipment it allows only dry powder, CO₂ or clean agent types (<a href="https://law.resource.org/pub/in/bis/S03/is.2190.2010.html" target="_blank" rel="noopener">IS 2190 text</a>).</p></div></div>
+  <div class="ty"><div><h3>Gas suppression</h3><p>A total flooding system that fills a closed room with a gas agent, used where water would cause damage, such as data processing, telecom and art storage. Clean agents include HFC-227ea (FM-200), FK-5-1-12 (Novec 1230) and inert gases IG-541 and IG-55, under NFPA 2001 (<a href="https://www.csemag.com/selecting-the-correct-clean-agent-suppression-system" target="_blank" rel="noopener">Consulting-Specifying Engineer</a>).</p></div></div>
+</div>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/89-clean-agent-gas-suppression-cylinders.webp" alt="Clean agent gas suppression cylinders and manifold protecting a server room" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Gas suppression protects rooms where water would do as much damage as the fire. AI-generated illustration.</figcaption>
+</figure>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/89-illustrative-corridor-fire-point-with.webp" alt="Illustrative corridor fire point with hose reel cabinet and two portable extinguishers" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>First-aid fire fighting: a hose reel and extinguishers chosen for the fire classes in that area. AI-generated illustration.</figcaption>
+</figure>
+
+<h2 id="components">Main Components: Tanks, Pumps, Pipes and Valves</h2>
+<p>Hydrants, risers and sprinklers usually share one water backbone:</p>
+<div class="cmp">
+  <div class="cm"><b>Fire water tank</b><span>Dedicated storage, sized by occupancy and height under NBC Table 7; tall buildings add a terrace tank.</span></div>
+  <div class="cm"><b>Fire pumps</b><span>Main electric pump, diesel standby pump and a small jockey pump that keeps the system pressurised.</span></div>
+  <div class="cm"><b>Ring main</b><span>A looped main around the building, so water reaches any outlet from two directions.</span></div>
+  <div class="cm"><b>Alarm valves</b><span>Sprinkler control stations that raise the alarm when water starts to flow.</span></div>
+  <div class="cm"><b>Fire brigade inlet</b><span>Lets fire tenders pump water into the system from outside.</span></div>
+</div>
+<p>The pumps are the heart of the system: when pressure drops, the main pump starts, and the diesel pump takes over if power fails. They get their own detailed guide. <span class="go" style="font-family:var(--mono);font-size:12px;color:var(--muted);">Full guide: Fire pump (coming soon)</span></p>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/89-fire-pump-room-with-main.webp" alt="Fire pump room with main electric pump, diesel standby pump and jockey pump" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>The shared backbone: a fire pump room with electric, diesel and jockey pumps. AI-generated illustration.</figcaption>
+</figure>
+
+<h2 id="codes">Fire Codes: NBC India, UAE and Saudi Arabia</h2>
+<div class="codes3">
+  <div class="cd3 in"><h3>India: NBC 2016 Part 4</h3><ul><li>Part 4, Fire and Life Safety; Table 7 sets the systems, tanks and pumps needed by occupancy and height</li><li>Design and equipment to IS standards: IS 13039 (hydrants), IS 15105 (sprinklers), IS 3844 (internal hydrants and hose reels), IS 2190 (extinguishers)</li><li>Approved by state fire services</li></ul></div>
+  <div class="cd3 ae"><h3>UAE: Fire and Life Safety Code</h3><ul><li>UAE Fire and Life Safety Code of Practice (2018 edition), enforced by each emirate's Civil Defence</li><li>Hydrants to NFPA 24, pumps to NFPA 20, sprinklers widely to NFPA 13</li><li>Abu Dhabi issued 54 local amendments on 12 March 2026</li></ul></div>
+  <div class="cd3 sa"><h3>Saudi Arabia: SBC 801</h3><ul><li>Saudi Fire Code (2018), based on the 2015 International Fire Code with NFPA standards</li><li>Section 903 sprinklers, 905 standpipes, 912 fire department connections, 913 fire pumps; Section 507 and Appendix C for water supplies and hydrants</li><li>Standpipes to NFPA 14</li></ul></div>
+</div>
+<p><strong>India.</strong> NBC 2016 Part 4 Table 7 sets the minimum fire fighting installations for each occupancy and height (<a href="https://noc.fire.kerala.gov.in/assets/uploads/NBC%20Table%207.pdf" target="_blank" rel="noopener">Table 7, Kerala Fire and Rescue Services copy</a>), and Delhi Fire Service requires sprinkler design to IS 15105 with plans and calculations submitted with the building plans (<a href="https://dfs.delhi.gov.in/hi/faqs?page=1" target="_blank" rel="noopener">Delhi Fire Service</a>).</p>
+<div class="alert"><b>NBCS 2026.</b> BIS has published the National Building Construction Standards 2026 (SP 7:2026), reported as effective from 30 April 2026 and replacing NBC 2016. Reports say fire and life safety norms now apply to residential buildings from 24 m (previously 15 m), with "should" replacing "shall" in the fire section (<a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/national-building-construction-standards-2026" target="_blank" rel="noopener">Drishti IAS</a>; <a href="https://ulba.in/national-building-construction-standards-2026-sp-72026" target="_blank" rel="noopener">ULBA</a>). Check which edition and state bye-laws apply.</div>
+<p><strong>UAE.</strong> The UAE Fire and Life Safety Code of Practice governs fire systems, enforced by Civil Defence in each emirate. Hydrant systems follow the code with NFPA 24 and pumps follow NFPA 20 (<a href="https://mmjss.com/fire-hydrant-systems-in-the-uae-types-requirements-and-maintenance/" target="_blank" rel="noopener">MMJ</a>), and NFPA 13 is widely adopted for sprinklers (<a href="https://www.bito.com/en-ae/news-know-how/detail/regulations-for-sprinkler-systems-and-storage-facilities/" target="_blank" rel="noopener">BITO</a>). Abu Dhabi Civil Defence released 54 amendments on 12 March 2026 covering items including fire pumps and hydrants (<a href="https://vortexfire.com/insights/amendments-to-the-uae-fire-and-life-safety-code-of-practice-2018" target="_blank" rel="noopener">Vortex Fire</a>).</p>
+<p><strong>Saudi Arabia.</strong> SBC 801 is based on the 2015 International Fire Code and NFPA standards, revised in 2018 (<a href="https://www.asrjetsjournal.org/American_Scientific_Journal/article/download/11808/2855/28128" target="_blank" rel="noopener">Pillai, ASRJETS 2025</a>). Its fire protection chapter covers sprinklers (903), standpipes (905), fire department connections (912) and fire pumps (913) (<a href="https://sbc.gov.sa/ar/BC/Documents/tableofcontent2018/SBC%20801/SBC801_CR_T2018.pdf" target="_blank" rel="noopener">SBC 801 contents</a>).</p>
+<p>The NFPA standards that come up most on Gulf fire projects:</p>
+<div class="nfpa"><span><b>10</b> Extinguishers</span><span><b>12</b> CO₂ systems</span><span><b>13</b> Sprinklers</span><span><b>14</b> Standpipes</span><span><b>20</b> Fire pumps</span><span><b>24</b> Private fire mains</span><span><b>2001</b> Clean agents</span></div>
+
+<h2 id="revit">How Fire Fighting Systems Are Modelled in Revit</h2>
+<p>In a BIM project, fire services are <a href="https://augmintech.com/revit-mep/">modelled in Revit</a> alongside the other MEP systems:</p>
+<ul class="chk3">
+  <li><b>Fire protection piping systems:</b> Revit has system classifications for wet, dry, pre-action and other (user-defined) fire protection systems (<a href="https://help.autodesk.com/cloudhelp/2026/ENU/Revit-API-MainReference/files/html/43ec0d75-d6bb-2d08-a920-9715e83040e7.htm" target="_blank" rel="noopener">Revit API reference</a>).</li>
+  <li><b>Sprinkler and equipment families:</b> place pendent, upright and sidewall sprinkler families, landing valves, hose reels, pumps and valves, then connect the piping.</li>
+  <li><b>Clash coordination:</b> run <span class="code">Collaborate › Coordinate › Interference Check</span> between fire pipes and <a href="https://augmintech.com/hvac-duct-design/">ducts</a>, cable trays and structure; the report lists every conflicting pair (<a href="https://help.autodesk.com/cloudhelp/2027/ENU/Revit-Collaborate/files/GUID-890A9FE0-EFF4-4CFB-9E81-B0DE1A132BEC.htm" target="_blank" rel="noopener">Autodesk Help</a>).</li>
+  <li><b>Penetrations:</b> mark where pipes cross fire-rated walls, so fire stopping is planned, not improvised on site.</li>
+</ul>
+<p>Hydraulic calculations for sprinklers and hydrants are usually done in dedicated fire protection software, with Revit carrying the coordinated model, drawings and quantities.</p>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/89-illustrative-coordination-section-of-fire.webp" alt="Illustrative coordination section of fire piping, pendent sprinklers, HVAC duct and cable tray" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Illustrative coordination section showing fire protection piping alongside HVAC and electrical services. Not a Revit screenshot.</figcaption>
+</figure>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What are the types of fire fighting systems?</div><div class="faq-a">The seven main types in buildings are fire hydrant systems, sprinkler systems, wet risers, dry risers, hose reels, fire extinguishers and gas suppression systems.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between active and passive fire protection?</div><div class="faq-a">Active fire protection reacts to a fire to fight it: sprinklers, hydrants, extinguishers, detectors and alarms. Passive fire protection does not act; it contains the fire with fire-rated walls, floors, doors, dampers and fire stopping.</div></div>
+<div class="faq-item"><div class="faq-q">Which code governs fire fighting systems in India?</div><div class="faq-a">The National Building Code of India, Part 4 (Fire and Life Safety), with IS standards such as IS 13039, IS 15105, IS 3844 and IS 2190, enforced through state fire services. BIS has now published NBCS 2026 (SP 7:2026) as its successor, so check which edition your authority applies.</div></div>
+<div class="faq-item"><div class="faq-q">What is a fire fighting system in a building?</div><div class="faq-a">It is the equipment that detects, controls and puts out fires in the building: water-based systems such as hydrants, risers, hose reels and sprinklers, plus extinguishers and gas suppression, all fed from a fire water tank and fire pumps.</div></div>
+<div class="faq-item"><div class="faq-q">Which software is used to design fire fighting systems?</div><div class="faq-a">Revit MEP (and AutoCAD) for modelling, drawings and coordination, with dedicated hydraulic calculation software for sprinkler and hydrant sizing. Navisworks or Revit's Interference Check is used for clash detection.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Cheshire Fire and Rescue Service</strong>, <a href="https://www.cheshirefire.gov.uk/fire-protection/business-owner-landlord-or-employee/active-and-passive-fire-protection" target="_blank" rel="noopener">Active and passive fire protection</a>; <strong>InPro</strong>, <a href="https://www.inprocorp.com/resources/blog/active-vs-passive-fire-protection" target="_blank" rel="noopener">Active vs passive fire protection</a>.</li>
+  <li><strong>BAFSA</strong>, <a href="https://www.bafsa.org.uk/assets/Downloads/BIF21WetDryRiser.pdf" target="_blank" rel="noopener">Wet and dry risers (BIF 21)</a>.</li>
+  <li><strong>Bureau of Indian Standards</strong>, <a href="https://law.resource.org/pub/in/bis/S03/is.2190.2010.html" target="_blank" rel="noopener">IS 2190:2010</a>; NBC 2016 Part 4 Table 7 via <a href="https://noc.fire.kerala.gov.in/assets/uploads/NBC%20Table%207.pdf" target="_blank" rel="noopener">Kerala Fire and Rescue Services</a>; <a href="https://dfs.delhi.gov.in/hi/faqs?page=1" target="_blank" rel="noopener">Delhi Fire Service FAQ</a>; NBCS 2026 via <a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/national-building-construction-standards-2026" target="_blank" rel="noopener">Drishti IAS</a> and <a href="https://ulba.in/national-building-construction-standards-2026-sp-72026" target="_blank" rel="noopener">ULBA</a>.</li>
+  <li><strong>Consulting-Specifying Engineer</strong>, Forssell, Hill and Kramer (2018), <a href="https://www.csemag.com/selecting-the-correct-clean-agent-suppression-system" target="_blank" rel="noopener">Selecting the correct clean agent suppression system</a>.</li>
+  <li><strong>UAE</strong>: <a href="https://mmjss.com/fire-hydrant-systems-in-the-uae-types-requirements-and-maintenance/" target="_blank" rel="noopener">MMJ</a>; <a href="https://www.bito.com/en-ae/news-know-how/detail/regulations-for-sprinkler-systems-and-storage-facilities/" target="_blank" rel="noopener">BITO</a>; <a href="https://vortexfire.com/insights/amendments-to-the-uae-fire-and-life-safety-code-of-practice-2018" target="_blank" rel="noopener">Vortex Fire (ADCDA amendments, March 2026)</a>.</li>
+  <li><strong>Saudi Arabia</strong>: <a href="https://sbc.gov.sa/ar/BC/Documents/tableofcontent2018/SBC%20801/SBC801_CR_T2018.pdf" target="_blank" rel="noopener">SBC 801 (2018) contents</a>; <a href="https://www.asrjetsjournal.org/American_Scientific_Journal/article/download/11808/2855/28128" target="_blank" rel="noopener">Pillai (2025), ASRJETS</a>.</li>
+  <li><strong>Autodesk</strong>: <a href="https://help.autodesk.com/cloudhelp/2026/ENU/Revit-API-MainReference/files/html/43ec0d75-d6bb-2d08-a920-9715e83040e7.htm" target="_blank" rel="noopener">Revit system classifications</a>; <a href="https://help.autodesk.com/cloudhelp/2027/ENU/Revit-Collaborate/files/GUID-890A9FE0-EFF4-4CFB-9E81-B0DE1A132BEC.htm" target="_blank" rel="noopener">Interference Check</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 7 November 2026.</p>
+
+</div>
+<dialog id="zoom89" aria-label="Enlarged illustration"><button type="button">Close</button><img alt=""></dialog><script>(()=>{const d=document.getElementById('zoom89'),im=d.querySelector('img');document.querySelectorAll('figure img').forEach(e=>{e.tabIndex=0;function open(){im.src=e.src;im.alt=e.alt;d.showModal()}e.addEventListener('click',open);e.addEventListener('keydown',k=>{if(k.key==='Enter')open()})});d.querySelector('button').onclick=()=>d.close();d.onclick=e=>{if(e.target===d)d.close()}})();</script>

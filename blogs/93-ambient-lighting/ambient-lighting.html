@@ -1,0 +1,388 @@
+<style>
+#aug-ambient-lighting{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-ambient-lighting *,#aug-ambient-lighting *::before,#aug-ambient-lighting *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-ambient-lighting{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-ambient-lighting.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-ambient-lighting .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-ambient-lighting .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-ambient-lighting .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-ambient-lighting .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-ambient-lighting .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-ambient-lighting .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-ambient-lighting h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-ambient-lighting h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-ambient-lighting p{margin-bottom:.9rem;font-size:16px;}
+#aug-ambient-lighting a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-ambient-lighting a:hover{border-color:var(--brand);}
+#aug-ambient-lighting hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-ambient-lighting .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-ambient-lighting .chart svg{width:100%;height:auto;display:block;}
+#aug-ambient-lighting .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-ambient-lighting .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-ambient-lighting .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-ambient-lighting .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-ambient-lighting .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-ambient-lighting .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-ambient-lighting .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-ambient-lighting table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-ambient-lighting caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-ambient-lighting thead tr{background:var(--slate);color:#fff;}
+#aug-ambient-lighting thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-ambient-lighting tbody tr:nth-child(even){background:var(--surface);}
+#aug-ambient-lighting tbody tr:hover{background:var(--brand-lite);}
+#aug-ambient-lighting td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-ambient-lighting td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-ambient-lighting tbody tr.hl{background:var(--green-lite)!important;}
+#aug-ambient-lighting tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-ambient-lighting ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-ambient-lighting ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-ambient-lighting .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-ambient-lighting .cta-green{background:var(--slate);}
+#aug-ambient-lighting .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-ambient-lighting .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-ambient-lighting .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-ambient-lighting .cta-btn-blue{color:var(--brand);}#aug-ambient-lighting .cta-btn-green{color:var(--slate);}
+#aug-ambient-lighting figure{margin:1.5rem 0;}
+#aug-ambient-lighting figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-ambient-lighting figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-ambient-lighting dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-ambient-lighting dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-ambient-lighting dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-ambient-lighting .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-ambient-lighting .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-ambient-lighting .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-ambient-lighting .srcs{list-style:none;padding:0;}
+#aug-ambient-lighting .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-ambient-lighting .srcs li:last-child{border-bottom:none;}
+
+/* ===== lead answer ===== */#aug-ambient-lighting .lead93{margin:1.3rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#1F2630;color:#E9E4D8;font-size:16.5px;line-height:1.65;position:relative;overflow:hidden;}
+#aug-ambient-lighting .lead93::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,#FFE3A3,#F5C451,#C0471F);}
+#aug-ambient-lighting .lead93 b{color:#FFE3A3;}
+
+/* ===== 3 layers cards ===== */#aug-ambient-lighting .l3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1.1rem 0;}
+#aug-ambient-lighting .l3 div{border-radius:var(--radius);padding:.9rem .95rem;color:#fff;font-size:14px;line-height:1.55;}
+#aug-ambient-lighting .l3 div:nth-child(1){background:linear-gradient(160deg,#3C4654,#5B6676);}
+#aug-ambient-lighting .l3 div:nth-child(2){background:linear-gradient(160deg,#6B4A1F,#A8742E);}
+#aug-ambient-lighting .l3 div:nth-child(3){background:linear-gradient(160deg,#5A1E10,#C0471F);}
+#aug-ambient-lighting .l3 b{display:block;font-family:var(--display);font-size:18px;margin-bottom:.25rem;}
+#aug-ambient-lighting .l3 i{font-style:normal;font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;opacity:.8;}
+#aug-ambient-lighting .cmp3 td:first-child{font-weight:700;white-space:nowrap;}
+
+/* ===== fixture chips ===== */#aug-ambient-lighting .fx{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:1rem 0;}
+#aug-ambient-lighting .fx>div{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;border:1px solid var(--border);border-radius:var(--radius-sm);padding:.65rem .75rem;background:#fff;}
+#aug-ambient-lighting .fx svg{width:34px;height:34px;}
+#aug-ambient-lighting .fx b{display:block;font-size:14.5px;color:var(--ink);}
+#aug-ambient-lighting .fx span{font-size:13px;line-height:1.5;color:var(--ink-mid);}
+#aug-ambient-lighting .spec{display:flex;flex-wrap:wrap;gap:6px;margin:.6rem 0 1rem;}
+#aug-ambient-lighting .spec span{font-family:var(--mono);font-size:11.5px;padding:4px 8px;border-radius:5px;background:var(--surface);border:1px solid var(--border);color:var(--ink);}
+#aug-ambient-lighting .spec span b{color:var(--coral);font-weight:700;}
+
+/* ===== ratio bar ===== */#aug-ambient-lighting .ratio{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+#aug-ambient-lighting .ratio div{display:grid;grid-template-columns:70px 1fr 200px;align-items:center;gap:10px;padding:.45rem .8rem;border-bottom:1px solid var(--border);font-size:13px;color:var(--ink-mid);}
+#aug-ambient-lighting .ratio div:last-child{border-bottom:none;}
+#aug-ambient-lighting .ratio b{font-family:var(--mono);font-size:13px;color:var(--ink);}
+#aug-ambient-lighting .ratio i{display:block;height:10px;border-radius:5px;background:linear-gradient(90deg,#F5C451,#C0471F);}
+
+/* ===== room toggle ===== */#aug-ambient-lighting .rt{margin:1.3rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#1F2630;}
+#aug-ambient-lighting .rt svg{display:block;width:100%;height:auto;}
+#aug-ambient-lighting .rt-bar{display:flex;gap:6px;padding:.6rem .7rem;background:#14181E;flex-wrap:wrap;}
+#aug-ambient-lighting .rt-bar button{font-family:var(--mono);font-size:12px;font-weight:700;padding:.45rem .8rem;border-radius:6px;border:1px solid #3A4250;background:#232A34;color:#C9CED6;cursor:pointer;}
+#aug-ambient-lighting .rt-bar button.on{background:#F5C451;color:#1F2630;border-color:#F5C451;}
+#aug-ambient-lighting .rt-cap{padding:.55rem .9rem;font-size:13px;line-height:1.5;color:#C9CED6;background:#14181E;border-top:1px solid #2A313B;}
+#aug-ambient-lighting #room3 .dark{opacity:.55;transition:opacity .4s;}
+#aug-ambient-lighting #room3 .task,#aug-ambient-lighting #room3 .acc,#aug-ambient-lighting #room3 .lt,#aug-ambient-lighting #room3 .lc{opacity:0;transition:opacity .4s;}
+#aug-ambient-lighting #room3.s2 .dark{opacity:.4;} #aug-ambient-lighting #room3.s3 .dark{opacity:.3;}
+#aug-ambient-lighting #room3.s2 .task,#aug-ambient-lighting #room3.s2 .lt,#aug-ambient-lighting #room3.s3 .task,#aug-ambient-lighting #room3.s3 .lt,#aug-ambient-lighting #room3.s3 .acc,#aug-ambient-lighting #room3.s3 .lc{opacity:1;}
+#aug-ambient-lighting .r3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1rem 0;}
+#aug-ambient-lighting .r3 figure{margin:0;} #aug-ambient-lighting .r3 figcaption{font-size:12.5px;color:var(--muted);padding:.35rem .1rem 0;line-height:1.45;}
+#aug-ambient-lighting .r3 figcaption b{color:var(--ink);}
+
+/* ===== figures ===== */#aug-ambient-lighting .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-ambient-lighting .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-ambient-lighting figure.pf{margin:1.2rem 0;} #aug-ambient-lighting figure.pf figcaption{font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-ambient-lighting .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-ambient-lighting .dfig svg{display:block;width:100%;height:auto;}
+#aug-ambient-lighting .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;}
+
+/* ===== tables ===== */#aug-ambient-lighting .rmt td:first-child{font-weight:700;}
+#aug-ambient-lighting .rmt td:last-child{font-family:var(--mono);font-size:12.5px;white-space:nowrap;}
+#aug-ambient-lighting .sch td:first-child{font-family:var(--mono);font-weight:700;color:var(--coral);text-align:center;}
+#aug-ambient-lighting .sch td:nth-child(3){font-size:13px;}
+
+/* ===== gulf ===== */#aug-ambient-lighting .gl{display:grid;grid-template-columns:1.1fr 1fr;gap:14px;margin:1.1rem 0;align-items:start;}
+#aug-ambient-lighting .gl ul{margin:0;padding:.85rem 1rem .85rem 2rem;background:#FBF4E8;border:1px solid #EFD9B4;border-radius:var(--radius);font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-ambient-lighting .gl li{margin-bottom:.35rem;} #aug-ambient-lighting .gl li b{color:#8A5A00;}
+#aug-ambient-lighting .steps-list{margin:.6rem 0 1.2rem;padding-left:1.3rem;font-size:15px;line-height:1.7;color:var(--ink-mid);}
+#aug-ambient-lighting .steps-list li{margin-bottom:.35rem;}
+#aug-ambient-lighting .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-ambient-lighting .lyr{font-family:var(--mono);font-size:11.5px;background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:1px 5px;color:var(--ink);white-space:nowrap;}
+
+@media(max-width:640px){
+  #aug-ambient-lighting .l3,#aug-ambient-lighting .r3,#aug-ambient-lighting .gl{grid-template-columns:1fr;}
+  #aug-ambient-lighting .fx{grid-template-columns:1fr;}
+  #aug-ambient-lighting .ratio div{grid-template-columns:52px 1fr;} #aug-ambient-lighting .ratio div span{grid-column:1/-1;}
+  #aug-ambient-lighting .cmp3 table,#aug-ambient-lighting .rmt table,#aug-ambient-lighting .sch table{min-width:640px;}
+  #aug-ambient-lighting .dfig.wide{overflow-x:auto;} #aug-ambient-lighting .dfig.wide svg{min-width:640px;}
+  #aug-ambient-lighting .cta{flex-direction:column;align-items:flex-start;}
+  #aug-ambient-lighting .cta>div{max-width:100%;} #aug-ambient-lighting .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-ambient-lighting .cta>div:last-child .cta-btn{margin-left:0;}
+}
+
+#aug-ambient-lighting.blog{overflow-wrap:anywhere;}#aug-ambient-lighting .blog>*{min-width:0;}
+#aug-ambient-lighting .ph{aspect-ratio:auto;}#aug-ambient-lighting .ph img{position:static;height:auto;object-fit:contain;}
+#aug-ambient-lighting #room3{display:block;width:100%;height:auto;border:0;border-radius:0;}
+#aug-ambient-lighting .r3{grid-template-columns:1fr;gap:24px;}#aug-ambient-lighting .r3 figure{min-width:0;}#aug-ambient-lighting .r3 figcaption{font:14px/1.6 var(--body);}
+#aug-ambient-lighting .gl{grid-template-columns:1fr;}#aug-ambient-lighting .image-credit{font-size:12px;color:#65717b;}
+#aug-ambient-lighting .visual-note{font-size:13px;line-height:1.6;color:#65717b;}
+#aug-ambient-lighting .dfig figcaption{font:13px/1.65 var(--body);}#aug-ambient-lighting .dfig.wide{overflow:hidden;}#aug-ambient-lighting .dfig.wide svg{min-width:0;}
+#aug-ambient-lighting .cta-btn{white-space:normal;display:inline-block;max-width:100%;}
+#aug-ambient-lighting .blog figure img,#aug-ambient-lighting #room3,#aug-ambient-lighting .dfig svg{cursor:zoom-in;}
+#aug-ambient-lighting .blog img:focus-visible,#aug-ambient-lighting .dfig svg:focus-visible{outline:3px solid #00747d;outline-offset:3px;}
+#aug-ambient-lighting #zoom93{margin:auto;border:0;border-radius:12px;width:min(96vw,1500px);max-width:96vw;max-height:94vh;padding:16px;background:white;}
+#aug-ambient-lighting #zoom93::backdrop{background:rgba(15,30,45,.85);}#aug-ambient-lighting #zoom93 button{display:block;margin:0 0 12px auto;padding:10px 20px;border:0;border-radius:6px;background:#0f4c81;color:white;font:600 15px Arial;cursor:pointer;}
+#aug-ambient-lighting #zoom93 img{display:block;width:100%;height:auto;max-height:80vh;object-fit:contain;}
+@media(max-width:420px){#aug-ambient-lighting.blog{padding-left:16px;padding-right:16px;}#aug-ambient-lighting .rt-bar button{font-size:11px;padding:10px;}}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-ambient-lighting.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-ambient-lighting h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-ambient-lighting a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-ambient-lighting a:hover{color:#18d104;}
+#aug-ambient-lighting .cta{background:#1a1a1a;}
+#aug-ambient-lighting .cta a.cta-btn{text-decoration:none;}
+#aug-ambient-lighting .cta-btn-blue{background:#18d104;color:#000;}
+#aug-ambient-lighting .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-ambient-lighting [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-ambient-lighting">
+
+
+<div class="lead93"><b>Ambient lighting is the general light that fills a room evenly, so you can see and move around safely.</b> Good rooms layer it with task lighting for activities and accent lighting for focal points. Further down, you can switch the same living room between the three layers and see the difference for yourself.</div>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Ambient lighting sets the base level</strong> with coves, downlights, panels and chandeliers spread evenly across the room.</li>
+  <li><strong>Task lighting puts brighter light where you work,</strong> such as 300 to 500 lux for reading, against 100 to 200 lux for a living room in general.</li>
+  <li><strong>Accent lighting is about contrast:</strong> a feature needs at least three times the surrounding brightness to stand out.</li>
+  <li><strong>Beam angle separates the layers,</strong> from wide 60° downlights for ambient light to narrow 24° spots for accents.</li>
+  <li><strong>A lighting plan shows each fixture, its switching and a fixture schedule</strong> on the reflected ceiling plan.</li>
+  <li><strong>Gulf villas and majlis rooms favour warm 2,700 to 3,000 K layered light,</strong> with coves and chandeliers.</li>
+</ul>
+
+<h2 id="three-layers">What Are the 3 Layers of Lighting?</h2>
+<div class="l3">
+  <div><i>Layer 1</i><b>Ambient</b>Even, general light for the whole room.</div>
+  <div><i>Layer 2</i><b>Task</b>Brighter, focused light for an activity.</div>
+  <div><i>Layer 3</i><b>Accent</b>Concentrated light that highlights a feature.</div>
+</div>
+<div class="tbl-wrap cmp3">
+<table>
+  <thead><tr><th>Layer</th><th>Purpose</th><th>Typical fixtures</th><th>Beam</th><th>How bright</th><th>Control</th></tr></thead>
+  <tbody>
+    <tr><td>Ambient</td><td>See and move safely; set the mood</td><td>Cove, recessed downlights, panels, chandeliers</td><td>Wide, e.g. 60°</td><td>Base level: 100–200 lux in a living room</td><td>Main switch, often dimmed</td></tr>
+    <tr><td>Task</td><td>Light for reading, cooking, grooming, work</td><td>Under-cabinet, reading, desk and vanity lights</td><td>Directed at the work surface</td><td>Higher: 300–500 lux for reading</td><td>Local switch at the task</td></tr>
+    <tr><td>Accent</td><td>Draw the eye to art, texture or display</td><td>Spotlights, wall washers, picture and profile lights</td><td>Narrow, e.g. 24°</td><td>At least 3× the surrounding level</td><td>Own circuit or dimmer</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Lux values: NBC 2016 Part 8, Section 1, Table 1. Accent ratio: Lighting Design Lab. Beam angles: example datasheets cited below.</p>
+
+<div class="cta">
+  <div><h3>Plan Lighting in the Same Model as the Ceiling</h3><p>Augmintech's BIM Architecture program teaches building information modelling for architecture, where ceilings, fixtures and reflected ceiling plans come out of one model and stay coordinated. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">View the BIM Architecture program</a></div>
+</div>
+
+<h2 id="ambient">Ambient Lighting</h2>
+<p>Ambient lighting replaces daylight after dark. Its job is to light the room evenly, without dark corners or hard shadows, so the space reads clearly at a glance. Crompton's guide calls it simply "the general illumination of a space".</p>
+<div class="fx">
+  <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><rect x="2" y="6" width="30" height="3" fill="#5F6B78"/><path d="M4 9 Q17 2 30 9" fill="none" stroke="#F5C451" stroke-width="2"/></svg><div><b>Cove lighting</b><span>LED strip hidden in a false-ceiling cove, bouncing light off the ceiling. The softest ambient light, with no visible source.</span></div></div>
+  <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><rect x="13" y="3" width="8" height="4" fill="#5F6B78"/><path d="M13 7 L3 31 L31 31 L21 7 Z" fill="#F5C451" opacity=".45"/></svg><div><b>Recessed downlights</b><span>Wide-beam fittings in a regular grid. Spacing them evenly is what makes the light even.</span></div></div>
+  <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><rect x="3" y="6" width="28" height="4" fill="#5F6B78"/><path d="M3 10 L1 31 L33 31 L31 10 Z" fill="#F5C451" opacity=".3"/></svg><div><b>LED panels</b><span>Flat 600 × 600 mm or round panels, common in offices and kitchens with grid ceilings.</span></div></div>
+  <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><line x1="17" y1="2" x2="17" y2="11" stroke="#5F6B78" stroke-width="2"/><path d="M8 14 Q17 9 26 14 L23 22 L11 22 Z" fill="#F5C451"/><circle cx="12" cy="26" r="1.5" fill="#F5C451"/><circle cx="17" cy="27" r="1.5" fill="#F5C451"/><circle cx="22" cy="26" r="1.5" fill="#F5C451"/></svg><div><b>Chandeliers and pendants</b><span>Decorative ambient sources, usually over a dining table or at the centre of a double-height room.</span></div></div>
+</div>
+<p>Even light comes from layout, not <a href="https://augmintech.com/smart-lighting-lumens-wattage-guide/">wattage</a>: a regular grid of fittings, beams that overlap at working height, and light bounced off pale ceilings and walls. A typical ambient downlight has a wide beam. For example, SAL's Coolum Plus is:</p>
+<div class="spec"><span>9 W</span><span><b>60°</b> beam</span><span>CRI <b>&gt;90</b></span><span>3,000 / 4,000 / 5,700 K selectable</span><span>Dimmable</span><span>IP44</span></div>
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/93-ambient-cove-lighting-in-a.webp" alt="Ambient cove lighting in a living room" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Ambient lighting: a warm cove and downlights wash the room evenly. <span class="image-credit">AI-generated architectural illustration.</span></figcaption>
+</figure>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="task">Task Lighting</h2>
+<p>Task lighting is brighter, more focused light where a specific job happens. It is there because ambient light alone is not enough for detail work. India's National Building Code (NBC 2016, Part 8) recommends 100 to 200 lux in a living room in general, but 300 to 500 lux for reading, provided locally, and 300 to 500 lux on a kitchen counter.</p>
+<div class="fx">
+  <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><rect x="2" y="4" width="30" height="8" fill="#8C7A5B"/><path d="M4 12 L2 24 L32 24 L30 12 Z" fill="#F5C451" opacity=".55"/><rect x="2" y="24" width="30" height="3" fill="#3A4652"/></svg><div><b>Under-cabinet lights</b><span>LED strips or profiles under wall cabinets, lighting the counter with no head shadow.</span></div></div>
+  <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><line x1="26" y1="6" x2="26" y2="32" stroke="#5F6B78" stroke-width="2"/><path d="M26 6 L14 9 L18 13 Z" fill="#5F6B78"/><path d="M16 11 L6 30 L22 30 Z" fill="#F5C451" opacity=".5"/></svg><div><b>Reading lights</b><span>Floor lamps, bedside lamps or wall-mounted swing arms aimed over the shoulder.</span></div></div>
+  <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><path d="M6 30 H28" stroke="#5F6B78" stroke-width="2"/><path d="M10 30 L16 14 L24 10" fill="none" stroke="#5F6B78" stroke-width="2"/><path d="M22 10 L14 30 L32 30 Z" fill="#F5C451" opacity=".45"/></svg><div><b>Desk lamps</b><span>Adjustable lamps that light the keyboard or paper, placed opposite the writing hand.</span></div></div>
+  <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><rect x="11" y="6" width="12" height="20" rx="2" fill="#DCEBF7" stroke="#5F6B78"/><rect x="5" y="8" width="3" height="16" fill="#F5C451"/><rect x="26" y="8" width="3" height="16" fill="#F5C451"/></svg><div><b>Vanity lights</b><span>Lights on both sides of a mirror, at face height, so the face is lit without shadows under the eyes.</span></div></div>
+</div>
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/93-undercabinet-task-lighting-over-a.webp" alt="Under-cabinet task lighting over a kitchen counter" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Task lighting: an LED profile under the wall cabinets lights the counter. <span class="image-credit">AI-generated architectural illustration.</span></figcaption>
+</figure>
+
+<h2 id="accent">Accent Lighting</h2>
+<p>Accent lighting draws the eye to something: a painting, a textured stone wall, a niche, a plant. It works through <strong>contrast</strong>. If the accent is barely brighter than the room, nobody notices it. Lighting Design Lab's guidance gives these ratios of accent to ambient light:</p>
+<div class="ratio">
+  <div><b>2:1</b><i style="width:13.333%"></i><span>Perceptible but "flat"</span></div>
+  <div><b>3:1</b><i style="width:20%"></i><span>Minimum to read as an accent</span></div>
+  <div><b>5:1</b><i style="width:33.333%"></i><span>Distinct focal area</span></div>
+  <div><b>10:1</b><i style="width:66.667%"></i><span>Strong focal accent</span></div>
+  <div><b>15:1</b><i style="width:100%"></i><span>Dramatic focal accent</span></div>
+</div>
+<div class="fx">
+  <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><circle cx="17" cy="5" r="3" fill="#5F6B78"/><path d="M15 7 L11 31 L23 31 L19 7 Z" fill="#F5C451" opacity=".7"/></svg><div><b>Spotlights</b><span>Adjustable recessed or track spots with narrow beams, aimed at a single object.</span></div></div>
+  <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><rect x="2" y="3" width="30" height="3" fill="#5F6B78"/><rect x="28" y="6" width="4" height="26" fill="#C9C1B3"/><path d="M6 6 L28 6 L28 32 Z" fill="#F5C451" opacity=".45"/></svg><div><b>Wall washers</b><span>Asymmetric fittings that light a whole wall evenly, ideal for stone, cladding or a feature colour.</span></div></div>
+  <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><rect x="7" y="12" width="20" height="16" fill="#3B5B73" stroke="#2A2A2A"/><rect x="9" y="6" width="16" height="3" fill="#5F6B78"/><path d="M9 9 L7 18 L27 18 L25 9 Z" fill="#F5C451" opacity=".5"/></svg><div><b>Picture lights</b><span>Small fittings mounted above a frame, lighting the art from close range.</span></div></div>
+  <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><rect x="4" y="8" width="26" height="18" fill="#B5AC9C"/><rect x="4" y="8" width="26" height="2" fill="#F5C451"/><path d="M4 10 H30 V18 H4 Z" fill="#F5C451" opacity=".35"/></svg><div><b>Profile lights</b><span>LED strip in an aluminium channel with a diffuser, set into niches, shelves and ceiling lines.</span></div></div>
+</div>
+<p>Accent fittings use narrow beams to put light only where it is wanted. Integral's AccentPro downlight, for example, is:</p>
+<div class="spec"><span>25 W</span><span>1,725 lm</span><span><b>24°</b> beam</span><span>CRI <b>90</b></span><span>3,000 K</span><span>Tilts 30°, rotates 355°</span></div>
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/93-accent-spotlight-on-artwork.webp" alt="Accent spotlight on artwork" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Accent lighting: a narrow spot makes the painting the brightest thing on the wall. <span class="image-credit">AI-generated architectural illustration.</span></figcaption>
+</figure>
+
+<h2 id="one-room">One Room, 3 Layers</h2>
+<p>Here is the same living room three ways. Use the buttons to add each layer.</p>
+<div class="rt">
+  <img id="room3" class="s1" src="https://augmintech.com/wp-content/uploads/2026/11/93-living-room-with-ambient-lighting.webp" alt="Living room with ambient lighting only" width="1400" height="788">
+
+  <div class="rt-bar"><button type="button" class="on" data-s="s1" aria-pressed="true">1 · Ambient</button><button type="button" data-s="s2" aria-pressed="false">2 · + Task</button><button type="button" data-s="s3" aria-pressed="false">3 · + Accent</button></div>
+  <div class="rt-cap" id="rt-cap">Ambient only: the cove and downlights light the room evenly, but nothing stands out and the reading chair is dim.</div>
+</div>
+<p class="visual-note">AI-generated lighting comparison. Use the controls to compare the layers; these illustrations are not a photometric simulation. Click any image to enlarge.</p>
+<div class="r3">
+  <figure><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/93-living-room-with-ambient-lighting-2.webp" alt="Living room with ambient lighting only" width="1200" height="675" loading="lazy"></div><figcaption><b>1.</b> Ambient only</figcaption></figure>
+  <figure><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/93-living-room-with-ambient-and.webp" alt="Living room with ambient and task lighting" width="1200" height="675" loading="lazy"></div><figcaption><b>2.</b> Ambient + task</figcaption></figure>
+  <figure><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/93-living-room-with-ambient-task.webp" alt="Living room with ambient, task and accent lighting" width="1200" height="675" loading="lazy"></div><figcaption><b>3.</b> Ambient + task + accent</figcaption></figure>
+</div>
+
+<h2 id="by-room">Lighting by Room and How to Draw a Lighting Plan</h2>
+<div class="tbl-wrap rmt">
+<table>
+  <thead><tr><th>Room</th><th>Ambient</th><th>Task</th><th>Accent</th><th>General lux (NBC)</th></tr></thead>
+  <tbody>
+    <tr><td>Living room</td><td>Cove, downlights, pendant</td><td>Reading floor or table lamps</td><td>Spots on art, profiles in niches</td><td>100–200</td></tr>
+    <tr><td>Bedroom</td><td>Dimmable cove or downlights</td><td>Bedside reading lamps</td><td>Headboard wall wash or profile</td><td>75–150</td></tr>
+    <tr><td>Kitchen</td><td>Downlights or panels</td><td>Under-cabinet LED over the counter</td><td>Glass-cabinet or plinth profiles</td><td>300–500 (counter)</td></tr>
+    <tr><td>Bathroom</td><td>Moisture-rated downlights (e.g. IP44)</td><td>Vanity lights beside the mirror</td><td>Niche profile in the shower</td><td>Not quoted</td></tr>
+    <tr><td>Office</td><td>LED panels in the grid</td><td>Desk lamps</td><td>Wall wash on a feature or brand wall</td><td>300–500 (desk)</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Lux: NBC 2016 Part 8, Section 1, Table 1, via Infralens. Bedroom reading 300–500 lux locally. We did not find a bathroom value in the sources checked, so none is given.</p>
+
+<p>A lighting plan is drawn on the <strong>reflected ceiling plan</strong> (RCP). It shows every fitting as a symbol, the switching that groups fittings into <a href="https://augmintech.com/electrical-load-calculation/">circuits</a>, and a schedule that defines each fitting type. Here is a sample for a 6.0 × 4.5 m living room:</p>
+<figure class="dfig wide">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 560" role="img" aria-label="Sample lighting plan of a living room: reflected ceiling plan with downlights, accent spots, cove LED, pendant, switched socket, switching lines and legend"><rect width="100%" height="100%" fill="#fff"/><rect x="37.0" y="17.0" width="646.0" height="496.0" fill="#5F6B78"/><rect x="60.0" y="40.0" width="600.0" height="450.0" fill="#fff"/><rect x="540.0" y="489.0" width="90.0" height="25.0" fill="#fff"/><path d="M540.0 490.0 A90.0 90.0 0 0 1 630.0 400.0" fill="none" stroke="#9AA3AD" stroke-dasharray="3 2"/><line x1="630.0" y1="490.0" x2="630.0" y2="400.0" stroke="#9AA3AD"/><rect x="120.0" y="100.0" width="480.0" height="330.0" fill="none" stroke="#2A3540" stroke-width="1.4"/><rect x="127.5" y="107.5" width="465.0" height="315.0" fill="none" stroke="#E0A31B" stroke-width="2" stroke-dasharray="7 4"/><rect x="420.0" y="41.0" width="130.0" height="5" fill="#3B5B73"/><text x="485.0" y="56.0" font-size="9" text-anchor="middle" fill="#3B5B73" font-family="monospace">ARTWORK</text><circle cx="180.0" cy="70.0" r="7" fill="#fff" stroke="#2A3540" stroke-width="1.4"/><path d="M175.0 65.0 L185.0 75.0 M185.0 65.0 L175.0 75.0" stroke="#2A3540"/><circle cx="360.0" cy="70.0" r="7" fill="#fff" stroke="#2A3540" stroke-width="1.4"/><path d="M355.0 65.0 L365.0 75.0 M365.0 65.0 L355.0 75.0" stroke="#2A3540"/><circle cx="180.0" cy="460.0" r="7" fill="#fff" stroke="#2A3540" stroke-width="1.4"/><path d="M175.0 455.0 L185.0 465.0 M185.0 455.0 L175.0 465.0" stroke="#2A3540"/><circle cx="360.0" cy="460.0" r="7" fill="#fff" stroke="#2A3540" stroke-width="1.4"/><path d="M355.0 455.0 L365.0 465.0 M365.0 455.0 L355.0 465.0" stroke="#2A3540"/><circle cx="90.0" cy="190.0" r="7" fill="#fff" stroke="#2A3540" stroke-width="1.4"/><path d="M85.0 185.0 L95.0 195.0 M95.0 185.0 L85.0 195.0" stroke="#2A3540"/><circle cx="90.0" cy="340.0" r="7" fill="#fff" stroke="#2A3540" stroke-width="1.4"/><path d="M85.0 335.0 L95.0 345.0 M95.0 335.0 L85.0 345.0" stroke="#2A3540"/><circle cx="630.0" cy="265.0" r="7" fill="#fff" stroke="#2A3540" stroke-width="1.4"/><path d="M625.0 260.0 L635.0 270.0 M635.0 260.0 L625.0 270.0" stroke="#2A3540"/><circle cx="450.0" cy="70.0" r="7" fill="#FDF1EC" stroke="#C0471F" stroke-width="1.6"/><circle cx="450.0" cy="70.0" r="2" fill="#C0471F"/><path d="M450.0 63.0 L450.0 54.0 M447.0 58.0 L450.0 54.0 L453.0 58.0" stroke="#C0471F" stroke-width="1.3" fill="none"/><circle cx="520.0" cy="70.0" r="7" fill="#FDF1EC" stroke="#C0471F" stroke-width="1.6"/><circle cx="520.0" cy="70.0" r="2" fill="#C0471F"/><path d="M520.0 63.0 L520.0 54.0 M517.0 58.0 L520.0 54.0 L523.0 58.0" stroke="#C0471F" stroke-width="1.3" fill="none"/><line x1="371.0" y1="265.0" x2="376.0" y2="265.0" stroke="#2A3540" stroke-width="1.2"/><line x1="367.8" y1="272.8" x2="371.3" y2="276.3" stroke="#2A3540" stroke-width="1.2"/><line x1="360.0" y1="276.0" x2="360.0" y2="281.0" stroke="#2A3540" stroke-width="1.2"/><line x1="352.2" y1="272.8" x2="348.7" y2="276.3" stroke="#2A3540" stroke-width="1.2"/><line x1="349.0" y1="265.0" x2="344.0" y2="265.0" stroke="#2A3540" stroke-width="1.2"/><line x1="352.2" y1="257.2" x2="348.7" y2="253.7" stroke="#2A3540" stroke-width="1.2"/><line x1="360.0" y1="254.0" x2="360.0" y2="249.0" stroke="#2A3540" stroke-width="1.2"/><line x1="367.8" y1="257.2" x2="371.3" y2="253.7" stroke="#2A3540" stroke-width="1.2"/><circle cx="360.0" cy="265.0" r="9" fill="#FFF6DD" stroke="#2A3540" stroke-width="1.4"/><circle cx="360.0" cy="265.0" r="3" fill="#2A3540"/><path d="M658.0 162.0 A8 8 0 0 0 658.0 178.0" fill="#fff" stroke="#2B6CB0" stroke-width="1.5"/><line x1="650.0" y1="167.0" x2="655.0" y2="167.0" stroke="#2B6CB0" stroke-width="1.3"/><line x1="650.0" y1="173.0" x2="655.0" y2="173.0" stroke="#2B6CB0" stroke-width="1.3"/><rect x="486.0" y="472.0" width="68" height="12" rx="2" fill="#2A3540"/><text x="496.0" y="481.0" font-size="8.5" text-anchor="middle" fill="#fff" font-family="monospace" font-weight="700">S1</text><text x="512.0" y="481.0" font-size="8.5" text-anchor="middle" fill="#fff" font-family="monospace" font-weight="700">S2</text><text x="528.0" y="481.0" font-size="8.5" text-anchor="middle" fill="#fff" font-family="monospace" font-weight="700">S3</text><text x="544.0" y="481.0" font-size="8.5" text-anchor="middle" fill="#fff" font-family="monospace" font-weight="700">D1</text><path d="M496.0 472.0 Q430.5 482.5 367.0 463.0" fill="none" stroke="#2A3540" stroke-width="1.1" stroke-dasharray="4 3"/><path d="M360.0 460.0 Q270.0 446.0 180.0 460.0" fill="none" stroke="#2A3540" stroke-width="1.1" stroke-dasharray="4 3"/><path d="M180.0 460.0 Q146.2 391.6 90.0 340.0" fill="none" stroke="#2A3540" stroke-width="1.1" stroke-dasharray="4 3"/><path d="M90.0 340.0 Q104.0 265.0 90.0 190.0" fill="none" stroke="#2A3540" stroke-width="1.1" stroke-dasharray="4 3"/><path d="M90.0 190.0 Q146.2 138.4 180.0 70.0" fill="none" stroke="#2A3540" stroke-width="1.1" stroke-dasharray="4 3"/><path d="M180.0 70.0 Q270.0 84.0 360.0 70.0" fill="none" stroke="#2A3540" stroke-width="1.1" stroke-dasharray="4 3"/><path d="M496.0 472.0 Q583.8 385.9 630.0 272.0" fill="none" stroke="#2A3540" stroke-width="1.1" stroke-dasharray="4 3"/><path d="M512.0 472.0 Q576.0 275.7 520.0 77.0" fill="none" stroke="#C0471F" stroke-width="1.1" stroke-dasharray="4 3"/><path d="M520.0 70.0 Q485.0 58.0 450.0 70.0" fill="none" stroke="#C0471F" stroke-width="1.1" stroke-dasharray="4 3"/><path d="M528.0 472.0 Q479.9 346.7 369.0 271.0" fill="none" stroke="#2A3540" stroke-width="1.1" stroke-dasharray="4 3"/><path d="M544.0 472.0 Q540.8 405.1 592.5 362.5" fill="none" stroke="#E0A31B" stroke-width="1.1" stroke-dasharray="4 3"/><text x="360.0" y="129.5" font-size="10" text-anchor="middle" fill="#B07A00" font-family="monospace">C · cove LED (dimmed, D1)</text><text x="180.0" y="102.0" font-size="10" text-anchor="middle" fill="#2A3540" font-family="monospace" font-weight="700">A</text><text x="485.0" y="104.0" font-size="10" text-anchor="middle" fill="#C0471F" font-family="monospace" font-weight="700">B</text><text x="393.0" y="271.0" font-size="10" text-anchor="middle" fill="#2A3540" font-family="monospace" font-weight="700">D</text><text x="646.0" y="192.0" font-size="10" text-anchor="end" fill="#2B6CB0" font-family="monospace" font-weight="700">E</text><text x="37.0" y="541.0" font-size="11.5" fill="#2A3540" font-family="monospace" font-weight="700">LIGHTING PLAN · LIVING ROOM · 6.0 × 4.5 m · SAMPLE</text><text x="723.0" y="38" font-size="11" fill="#2A3540" font-family="monospace" font-weight="700">LEGEND</text><circle cx="731.0" cy="60" r="7" fill="#fff" stroke="#2A3540" stroke-width="1.4"/><path d="M726.0 55 L736.0 65 M736.0 55 L726.0 65" stroke="#2A3540"/><text x="751.0" y="64" font-size="13" fill="#2A3540" font-family="sans-serif">Downlight (ambient)</text><circle cx="731.0" cy="94" r="7" fill="#FDF1EC" stroke="#C0471F" stroke-width="1.6"/><circle cx="731.0" cy="94" r="2" fill="#C0471F"/><text x="751.0" y="98" font-size="13" fill="#2A3540" font-family="sans-serif">Adjustable spot (accent)</text><line x1="723.0" y1="128" x2="741.0" y2="128" stroke="#E0A31B" stroke-width="2" stroke-dasharray="7 4"/><text x="751.0" y="132" font-size="13" fill="#2A3540" font-family="sans-serif">Cove LED profile (ambient)</text><circle cx="731.0" cy="162" r="8" fill="#FFF6DD" stroke="#2A3540" stroke-width="1.4"/><circle cx="731.0" cy="162" r="2.5" fill="#2A3540"/><text x="751.0" y="166" font-size="13" fill="#2A3540" font-family="sans-serif">Pendant (ambient/decor)</text><path d="M735.0 188 A8 8 0 0 0 735.0 204" fill="#fff" stroke="#2B6CB0" stroke-width="1.5"/><line x1="727.0" y1="193" x2="732.0" y2="193" stroke="#2B6CB0"/><line x1="727.0" y1="199" x2="732.0" y2="199" stroke="#2B6CB0"/><text x="751.0" y="200" font-size="13" fill="#2A3540" font-family="sans-serif">Switched socket for task lamp</text><path d="M723.0 234 Q732.0 222 741.0 234" fill="none" stroke="#2A3540" stroke-dasharray="4 3"/><text x="751.0" y="234" font-size="13" fill="#2A3540" font-family="sans-serif">Switching line</text><rect x="723.0" y="258" width="18" height="12" rx="2" fill="#2A3540"/><text x="751.0" y="268" font-size="13" fill="#2A3540" font-family="sans-serif">S1–S3 switch, D1 dimmer</text></svg>
+  <figcaption>Sample lighting plan: 7 downlights on S1, 2 accent spots on S2, pendant on S3, cove LED on dimmer D1, and a switched socket for the reading lamp. Augmintech drawing.</figcaption>
+</figure>
+<div class="tbl-wrap sch">
+<table>
+  <thead><tr><th>Type</th><th>Fixture</th><th>Example specification</th><th>Qty</th><th>Switch</th></tr></thead>
+  <tbody>
+    <tr><td>A</td><td>Recessed downlight (ambient)</td><td>9 W, 60° beam, CRI &gt;90, dimmable, IP44, 92 mm cut-out (SAL Coolum Plus)</td><td>7</td><td>S1</td></tr>
+    <tr><td>B</td><td>Adjustable spot (accent)</td><td>25 W, 1,725 lm, 24° beam, CRI 90, 3,000 K, 120 mm cut-out (Integral AccentPro)</td><td>2</td><td>S2</td></tr>
+    <tr><td>C</td><td>LED strip in profile, in cove (ambient)</td><td>3,000 K warm white, the colour Jaquar suggests for living areas; length 15.6 m (cove perimeter)</td><td>1 run</td><td>D1</td></tr>
+    <tr><td>D</td><td>Pendant or chandelier</td><td>To interior designer's selection</td><td>1</td><td>S3</td></tr>
+    <tr><td>E</td><td>Switched socket for floor lamp (task)</td><td>At reading chair</td><td>1</td><td>Local</td></tr>
+  </tbody>
+</table>
+</div>
+<p>To draw it in <a href="https://augmintech.com/autocad-download/">AutoCAD</a>:</p>
+<ol class="steps-list">
+  <li><strong>Start from the RCP:</strong> walls, ceiling levels and cove lines on their own layers, such as <span class="lyr">A-CLNG</span>.</li>
+  <li><strong>Insert fixture blocks</strong> on a lighting layer such as <span class="lyr">E-LITE</span>, one block per fitting type, tagged A, B, C.</li>
+  <li><strong>Draw switching</strong> as curved dashed lines (arcs) from each switch to the fittings it controls, on <span class="lyr">E-LITE-SWCH</span>.</li>
+  <li><strong>Add the switch plate</strong> at the door, labelling switches (S1, S2…) and dimmers (D1).</li>
+  <li><strong>Attach the fixture schedule</strong> and a legend, so every tag points to a wattage, beam angle, colour temperature and quantity.</li>
+</ol>
+
+<h3>Lighting in Gulf villas and majlis rooms</h3>
+<div class="gl">
+  <ul>
+    <li><b>Warm colour temperature.</b> Algedra's Abu Dhabi majlis guide (November 2025) recommends about 2,700 to 3,000 K for a welcoming feel.</li>
+    <li><b>Layered light.</b> The same guide says layered, warm lighting is widely used in Abu Dhabi villas, with coves, wall sconces and floor lamps as secondary layers.</li>
+    <li><b>Chandeliers as the centrepiece.</b> Large crystal chandeliers give the room presence and scatter reflections across marble floors.</li>
+    <li><b>Put coves on dimmers.</b> Majlis rooms host everything from formal visits to late evenings, so wire cove and chandelier circuits for dimming and scenes.</li>
+  </ul>
+  <figure class="pf" style="margin:0"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/93-majlis-with-warm-cove-lighting.webp" alt="Majlis with warm cove lighting and crystal chandelier" width="1200" height="675" loading="lazy"></div><figcaption>A majlis layered with warm cove light and a chandelier. <span class="image-credit">AI-generated architectural illustration.</span></figcaption></figure>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What is ambient lighting?</div><div class="faq-a">Ambient lighting is the general light that fills a room evenly so you can see and move around safely. It usually comes from cove lights, recessed downlights, LED panels or chandeliers.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between ambient and accent lighting?</div><div class="faq-a">Ambient lighting lights the whole room evenly with wide beams. Accent lighting uses narrow beams to make one object, such as a painting or textured wall, at least three times brighter than its surroundings so it stands out.</div></div>
+<div class="faq-item"><div class="faq-q">What are examples of task lighting?</div><div class="faq-a">Under-cabinet lights over a kitchen counter, reading lamps beside a sofa or bed, desk lamps, and vanity lights on each side of a bathroom mirror.</div></div>
+<div class="faq-item"><div class="faq-q">What are the types of lighting in interior design?</div><div class="faq-a">The three main types, or layers, are ambient, task and accent lighting. Some guides add decorative lighting (chandeliers and pendants chosen for their looks) and natural daylight as further types.</div></div>
+<div class="faq-item"><div class="faq-q">How do you draw a lighting plan?</div><div class="faq-a">Start from the reflected ceiling plan, insert a block for each fitting type, draw switching lines from each switch to the fittings it controls, then add a legend and a fixture schedule listing wattage, beam angle, colour temperature and quantity.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>NBC 2016 Part 8, Section 1, Table 1</strong>, via Infralens: <a href="https://infralens.in/thumbrules/lux-living-room" target="_blank" rel="noopener">living room</a>, <a href="https://infralens.in/thumbrules/lux-bedroom" target="_blank" rel="noopener">bedroom</a>, <a href="https://infralens.in/thumbrules/lux-kitchen" target="_blank" rel="noopener">kitchen</a>, <a href="https://infralens.in/thumbrules/lux-office-general" target="_blank" rel="noopener">office</a>.</li>
+  <li><strong>Lighting Design Lab</strong>, <a href="https://www.lightingdesignlab.com/node/820" target="_blank" rel="noopener">accent lighting contrast ratios</a>.</li>
+  <li><strong>Crompton</strong>, <a href="https://www.crompton.co.in/blogs/lights-guide/what-is-ambient-lighting-a-detailed-guide" target="_blank" rel="noopener">What is ambient lighting</a>.</li>
+  <li><strong>SAL</strong>, <a href="https://www.goelectrical.com.au/sals9068tc-2f-wh-2f-fg" target="_blank" rel="noopener">Coolum Plus LED downlight specification</a>; <strong>Integral LED</strong>, <a href="https://integral-led.com/na/product/downlights/accentpro-led-downlight-24-deg-beam-angle-120mm-cutout-30-deg-tiltable-355-deg--ILDL120P012" target="_blank" rel="noopener">AccentPro 24° downlight</a>.</li>
+  <li><strong>Jaquar UAE</strong>, <a href="https://uae.jaquar.com/en/blog/profile-light-design-ideas" target="_blank" rel="noopener">Profile light design ideas</a> (11 March 2026).</li>
+  <li><strong>Algedra</strong>, <a href="https://algedra.ae/blog/majlis-styling-design-in-abu-dhabi" target="_blank" rel="noopener">Majlis styling design in Abu Dhabi</a> (20 November 2025).</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 7 November 2026.</p>
+</div>
+<script>
+(function(){
+  var svg = document.getElementById('room3');
+  var cap = document.getElementById('rt-cap');
+  if (!svg) return;
+  var text = {
+    s1: 'Ambient only: the cove and downlights light the room evenly, but nothing stands out and the reading chair is dim.',
+    s2: 'Ambient + task: a reading lamp and a table lamp add brighter light exactly where people read and sit.',
+    s3: 'Ambient + task + accent: a narrow 24° spot on the artwork and a profile light in the niche give the eye somewhere to land.'
+  };
+  document.querySelectorAll('.rt-bar button').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('.rt-bar button').forEach(function(x){ x.classList.remove('on'); x.setAttribute('aria-pressed','false'); });
+      b.classList.add('on'); b.setAttribute('aria-pressed','true');
+      svg.setAttribute('class', b.dataset.s);
+      const states={s1:0,s2:1,s3:2}; const photos=document.querySelectorAll('.r3 img'); svg.src=photos[states[b.dataset.s]].src; svg.alt=photos[states[b.dataset.s]].alt;
+      if (cap) cap.textContent = text[b.dataset.s];
+    });
+  });
+})();
+</script>
+
+<dialog id="zoom93" aria-label="Enlarged lighting visual"><button type="button">Close</button><img alt=""></dialog>
+<script>
+(()=>{const d=document.getElementById('zoom93'),out=d.querySelector('img');if(!d.showModal)return;
+d.querySelector('button').addEventListener('click',()=>d.close());d.addEventListener('click',e=>{if(e.target===d)d.close();});
+document.querySelectorAll('.blog figure img,#room3,.dfig svg').forEach(el=>{el.tabIndex=0;el.title='Click to enlarge';const open=()=>{out.alt=el.alt||el.getAttribute('aria-label')||'Lighting diagram';out.src=el.tagName.toLowerCase()==='svg'?'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(el)):el.src;d.showModal();};el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});});})();
+</script>

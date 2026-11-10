@@ -1,0 +1,393 @@
+<style>
+#aug-fire-sprinkler-system{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-fire-sprinkler-system *,#aug-fire-sprinkler-system *::before,#aug-fire-sprinkler-system *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-fire-sprinkler-system{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-fire-sprinkler-system.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-fire-sprinkler-system .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-fire-sprinkler-system .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-fire-sprinkler-system .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-fire-sprinkler-system .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-fire-sprinkler-system .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-fire-sprinkler-system .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-fire-sprinkler-system h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-fire-sprinkler-system h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-fire-sprinkler-system p{margin-bottom:.9rem;font-size:16px;}
+#aug-fire-sprinkler-system a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-fire-sprinkler-system a:hover{border-color:var(--brand);}
+#aug-fire-sprinkler-system hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-fire-sprinkler-system .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-fire-sprinkler-system .chart svg{width:100%;height:auto;display:block;}
+#aug-fire-sprinkler-system .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-fire-sprinkler-system .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-fire-sprinkler-system .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-fire-sprinkler-system .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-fire-sprinkler-system .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-fire-sprinkler-system .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-fire-sprinkler-system .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-fire-sprinkler-system table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-fire-sprinkler-system caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-fire-sprinkler-system thead tr{background:var(--slate);color:#fff;}
+#aug-fire-sprinkler-system thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-fire-sprinkler-system tbody tr:nth-child(even){background:var(--surface);}
+#aug-fire-sprinkler-system tbody tr:hover{background:var(--brand-lite);}
+#aug-fire-sprinkler-system td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-fire-sprinkler-system td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-fire-sprinkler-system tbody tr.hl{background:var(--green-lite)!important;}
+#aug-fire-sprinkler-system tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-fire-sprinkler-system ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-fire-sprinkler-system ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-fire-sprinkler-system .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-fire-sprinkler-system .cta-green{background:var(--slate);}
+#aug-fire-sprinkler-system .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-fire-sprinkler-system .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-fire-sprinkler-system .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-fire-sprinkler-system .cta-btn-blue{color:var(--brand);}#aug-fire-sprinkler-system .cta-btn-green{color:var(--slate);}
+#aug-fire-sprinkler-system figure{margin:1.5rem 0;}
+#aug-fire-sprinkler-system figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-fire-sprinkler-system figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-fire-sprinkler-system dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-fire-sprinkler-system dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-fire-sprinkler-system dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-fire-sprinkler-system .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-fire-sprinkler-system .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-fire-sprinkler-system .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-fire-sprinkler-system .srcs{list-style:none;padding:0;}
+#aug-fire-sprinkler-system .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-fire-sprinkler-system .srcs li:last-child{border-bottom:none;}
+
+/* ===== answer ===== */#aug-fire-sprinkler-system .defbox{margin:1.4rem 0;border:1px solid #F0C9BB;border-radius:var(--radius);background:#FDF3EF;padding:1.1rem 1.2rem;}
+#aug-fire-sprinkler-system .defbox-k{font-family:var(--mono);font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--coral);margin-bottom:.4rem;}
+#aug-fire-sprinkler-system .defbox p{font-size:16.5px;line-height:1.7;color:var(--ink-mid);margin:0;}
+#aug-fire-sprinkler-system .defbox p strong{color:var(--ink);}
+#aug-fire-sprinkler-system .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-fire-sprinkler-system .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-fire-sprinkler-system .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-fire-sprinkler-system .dfig svg{display:block;width:100%;height:auto;}
+#aug-fire-sprinkler-system .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;}
+
+/* ===== how-it-works split ===== */#aug-fire-sprinkler-system .hw{display:grid;grid-template-columns:240px 1fr;gap:16px;align-items:start;margin:1.2rem 0;}
+#aug-fire-sprinkler-system .hw .dfig{margin:0;}
+#aug-fire-sprinkler-system .hw ol{margin:0;padding-left:1.2rem;font-size:15px;line-height:1.65;color:var(--ink-mid);}
+#aug-fire-sprinkler-system .hw li{margin-bottom:.5rem;}
+#aug-fire-sprinkler-system .hw li b{color:var(--ink);}
+#aug-fire-sprinkler-system .myth{background:var(--slate);color:#fff;border-radius:var(--radius-sm);padding:.75rem 1rem;margin:1rem 0;font-size:14.5px;line-height:1.6;}
+#aug-fire-sprinkler-system .myth b{color:#FFB59A;font-family:var(--mono);font-size:10.5px;letter-spacing:1.3px;text-transform:uppercase;display:block;margin-bottom:.2rem;}
+
+/* ===== 4 types table emphasis ===== */#aug-fire-sprinkler-system table.types td:first-child{font-weight:700;white-space:nowrap;}
+#aug-fire-sprinkler-system table.types td:first-child span{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle;}
+
+/* ===== head cards ===== */#aug-fire-sprinkler-system .heads{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:1.2rem 0;}
+#aug-fire-sprinkler-system .hd{border:1px solid var(--border);border-radius:var(--radius-sm);padding:.75rem .8rem;border-top:4px solid var(--coral);}
+#aug-fire-sprinkler-system .hd b{display:block;font-family:var(--display);font-size:15px;margin-bottom:.2rem;}
+#aug-fire-sprinkler-system .hd span{font-size:13px;line-height:1.5;color:var(--ink-mid);}
+
+/* ===== bulb colour chart ===== */#aug-fire-sprinkler-system .bulbs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:1.2rem 0;}
+#aug-fire-sprinkler-system .bb{border:1px solid var(--border);border-radius:var(--radius-sm);text-align:center;padding:.6rem .4rem;}
+#aug-fire-sprinkler-system .bb i{display:block;width:14px;height:42px;border-radius:7px;margin:0 auto .45rem;border:1px solid rgba(0,0,0,.25);}
+#aug-fire-sprinkler-system .bb b{display:block;font-family:var(--mono);font-size:12px;color:var(--ink);}
+#aug-fire-sprinkler-system .bb span{display:block;font-size:11.5px;line-height:1.35;color:var(--ink-mid);}
+#aug-fire-sprinkler-system .bb small{display:block;font-size:10.5px;color:var(--muted);margin-top:.2rem;}
+
+/* ===== hazard ladder ===== */#aug-fire-sprinkler-system .haz{margin:1.2rem 0;}
+#aug-fire-sprinkler-system .hz{display:grid;grid-template-columns:150px 1fr;gap:0;border-radius:var(--radius-sm);overflow:hidden;margin-bottom:6px;}
+#aug-fire-sprinkler-system .hz-k{color:#fff;padding:.6rem .8rem;font-family:var(--display);font-weight:800;font-size:14.5px;display:flex;align-items:center;}
+#aug-fire-sprinkler-system .hz-v{background:var(--surface);padding:.6rem .85rem;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-fire-sprinkler-system .hz.l .hz-k{background:#4F9A6E;} #aug-fire-sprinkler-system .hz.o1 .hz-k{background:#C79A2B;} #aug-fire-sprinkler-system .hz.o2 .hz-k{background:#D47A2A;} #aug-fire-sprinkler-system .hz.e1 .hz-k{background:#C0471F;} #aug-fire-sprinkler-system .hz.e2 .hz-k{background:#8E2A12;}
+
+/* ===== coverage table + checker ===== */#aug-fire-sprinkler-system .chk{border:2px solid var(--coral);border-radius:var(--radius);overflow:hidden;margin:1.3rem 0;}
+#aug-fire-sprinkler-system .chk-h{background:var(--coral);color:#fff;padding:.6rem 1rem;font-family:var(--display);font-weight:800;font-size:15.5px;}
+#aug-fire-sprinkler-system .chk-b{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:.9rem 1rem;}
+#aug-fire-sprinkler-system .chk label{font-family:var(--mono);font-size:11px;color:var(--ink-mid);display:block;margin:.35rem 0 3px;}
+#aug-fire-sprinkler-system .chk input,#aug-fire-sprinkler-system .chk select{font-family:var(--mono);font-size:14px;padding:5px 7px;border:1px solid var(--border);border-radius:var(--radius-sm);}
+#aug-fire-sprinkler-system .chk input{width:90px;}
+#aug-fire-sprinkler-system .chk-o{font-family:var(--mono);font-size:13px;line-height:1.85;}
+#aug-fire-sprinkler-system .chk-o span{color:var(--coral);font-weight:700;}
+#aug-fire-sprinkler-system .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+
+/* ===== revit steps ===== */#aug-fire-sprinkler-system .rv{list-style:none;padding:0;margin:1rem 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+#aug-fire-sprinkler-system .rv li{background:var(--surface);border-radius:var(--radius-sm);padding:.75rem .85rem;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-fire-sprinkler-system .rv li b{display:block;font-family:var(--display);font-size:15px;color:var(--brand);margin-bottom:.2rem;}
+#aug-fire-sprinkler-system .rv code{font-family:var(--mono);font-size:12px;background:#fff;border:1px solid var(--border);border-radius:3px;padding:1px 4px;}
+
+/* ===== codes ===== */#aug-fire-sprinkler-system .codes3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1.2rem 0;}
+#aug-fire-sprinkler-system .cd3{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-fire-sprinkler-system .cd3 h3{margin:0;padding:.6rem .85rem;color:#fff;font-size:15px;}
+#aug-fire-sprinkler-system .cd3.in h3{background:var(--green);} #aug-fire-sprinkler-system .cd3.ae h3{background:var(--brand);} #aug-fire-sprinkler-system .cd3.sa h3{background:var(--teal);}
+#aug-fire-sprinkler-system .cd3 ul{margin:0;padding:.7rem .85rem .7rem 1.9rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-fire-sprinkler-system .cd3 li{margin-bottom:.35rem;}
+#aug-fire-sprinkler-system .alert{border-left:4px solid var(--warn);background:#FBF4E8;border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.8rem 1rem;margin:1rem 0;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-fire-sprinkler-system .alert b{color:var(--warn);}
+
+@media(max-width:640px){
+  #aug-fire-sprinkler-system .hw{grid-template-columns:1fr;} #aug-fire-sprinkler-system .hw .dfig{max-width:280px;}
+  #aug-fire-sprinkler-system .heads{grid-template-columns:1fr 1fr;}
+  #aug-fire-sprinkler-system .bulbs{grid-template-columns:repeat(3,1fr);}
+  #aug-fire-sprinkler-system .hz{grid-template-columns:1fr;}
+  #aug-fire-sprinkler-system .chk-b,#aug-fire-sprinkler-system .rv,#aug-fire-sprinkler-system .codes3{grid-template-columns:1fr;}
+  #aug-fire-sprinkler-system .dfig.wide{overflow-x:auto;} #aug-fire-sprinkler-system .dfig.wide svg{min-width:600px;}
+  #aug-fire-sprinkler-system .cta{flex-direction:column;align-items:flex-start;}
+  #aug-fire-sprinkler-system .cta>div{max-width:100%;} #aug-fire-sprinkler-system .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-fire-sprinkler-system .cta>div:last-child .cta-btn{margin-left:0;}
+}
+#aug-fire-sprinkler-system figure img{cursor:zoom-in}#aug-fire-sprinkler-system .zoom87{margin:auto;padding:12px;border:0;border-radius:10px;max-width:94vw;max-height:94vh}#aug-fire-sprinkler-system .zoom87::backdrop{background:#102a40c9}#aug-fire-sprinkler-system .zoom87 img{display:block;max-width:89vw;max-height:78vh;object-fit:contain}#aug-fire-sprinkler-system .zoom87 button{display:block;margin-left:auto;margin-bottom:8px;padding:7px 14px}#aug-fire-sprinkler-system .zoom87 p{font-size:14px;margin-top:8px;max-width:900px}
+#aug-fire-sprinkler-system .dfig.wide img,#aug-fire-sprinkler-system .plan87 img{display:block;width:100%;height:auto;cursor:zoom-in}#aug-fire-sprinkler-system .plan87{border:1px solid #d1dfe6;border-radius:10px;overflow:hidden;background:white}#aug-fire-sprinkler-system .dfig.wide figcaption{font:13px/1.6 system-ui}#aug-fire-sprinkler-system .dfig.wide{overflow:hidden}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-fire-sprinkler-system.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-fire-sprinkler-system h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-fire-sprinkler-system a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-fire-sprinkler-system a:hover{color:#18d104;}
+#aug-fire-sprinkler-system .cta{background:#1a1a1a;}
+#aug-fire-sprinkler-system .cta a.cta-btn{text-decoration:none;}
+#aug-fire-sprinkler-system .cta-btn-blue{background:#18d104;color:#000;}
+#aug-fire-sprinkler-system .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-fire-sprinkler-system [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-fire-sprinkler-system">
+
+<div class="defbox">
+  <div class="defbox-k">Short answer</div>
+  <p><strong>A fire sprinkler system is a network of water-filled (or air-filled) pipes with heat-sensitive sprinkler heads.</strong> Each head opens on its own when the heat at that head reaches its temperature rating, and sprays water on the fire below it.</p>
+</div>
+
+
+<p>This page compares the four system types, explains sprinkler heads and bulb colours, and summarises NFPA 13 hazard classes and coverage rules in plain words, with the <a href="https://augmintech.com/revit-mep/">Revit MEP</a> workflow and the Indian, UAE and Saudi code picture at the end.</p>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Sprinklers open individually</strong>: only heads heated to their rating discharge, not the whole system.</li>
+  <li><strong>There are four system types</strong>: wet pipe, dry pipe, pre-action and deluge.</li>
+  <li><strong>Bulb colour shows the temperature rating</strong>: orange 57 °C and red 68 °C are the most common.</li>
+  <li><strong>NFPA 13 sorts occupancies into light, ordinary (groups 1 and 2) and extra hazard (groups 1 and 2).</strong></li>
+  <li><strong>A standard spray head covers up to 225 ft² (20.9 m²) in light hazard and 130 ft² (12.1 m²) in ordinary hazard</strong>, at up to 15 ft (4.6 m) spacing.</li>
+  <li><strong>India, the UAE and Saudi Arabia all point to NFPA 13 or IS 15105 for design</strong>, with local codes deciding where sprinklers are required.</li>
+</ul>
+
+<h2 id="how-it-works">How a Fire Sprinkler System Works</h2>
+<div class="hw">
+  <figure class="dfig">
+  <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Parts of a glass bulb sprinkler head: thread, orifice, frame arms, glass bulb and deflector" font-family="Inter,Arial,sans-serif">
+<rect width="300" height="260" fill="#fff"/>
+<rect x="125" y="20" width="50" height="40" fill="#B7C2CD" stroke="#1B2733" stroke-width="2"/>
+<g stroke="#1B2733" stroke-width="1"><line x1="125" y1="28" x2="175" y2="28"/><line x1="125" y1="36" x2="175" y2="36"/><line x1="125" y1="44" x2="175" y2="44"/><line x1="125" y1="52" x2="175" y2="52"/></g>
+<path d="M125 60 L120 75 L180 75 L175 60 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2"/>
+<path d="M125 75 L110 180 L125 180 L138 75 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2"/>
+<path d="M175 75 L190 180 L175 180 L162 75 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2"/>
+<ellipse cx="150" cy="128" rx="9" ry="44" fill="#E04A3A" opacity=".85" stroke="#1B2733" stroke-width="1.5"/>
+<rect x="95" y="180" width="110" height="8" rx="2" fill="#8796A5" stroke="#1B2733" stroke-width="1.5"/>
+<g font-size="12" fill="#1B2733" font-weight="700">
+<line x1="175" y1="40" x2="215" y2="40" stroke="#1B2733"/><text x="219" y="44">Thread</text>
+<line x1="180" y1="68" x2="215" y2="78" stroke="#1B2733"/><text x="219" y="82">Orifice</text>
+<line x1="186" y1="140" x2="215" y2="140" stroke="#1B2733"/><text x="219" y="144">Frame arm</text>
+<line x1="141" y1="128" x2="80" y2="118" stroke="#1B2733"/><text x="16" y="114">Glass bulb</text>
+<line x1="100" y1="184" x2="60" y2="210" stroke="#1B2733"/><text x="16" y="224">Deflector</text>
+</g>
+<text x="16" y="250" font-size="10.5" fill="#6B7785">Heat expands the liquid; the bulb bursts at its rating.</text>
+</svg>
+  <figcaption>Parts of a glass bulb sprinkler. Drawing: Augmintech.</figcaption>
+  </figure>
+  <ol>
+    <li><b>Closed heads.</b> Each sprinkler is held shut by a liquid-filled glass bulb (or a fusible metal link).</li>
+    <li><b>Heat opens one head.</b> Hot gases from the fire heat the nearest head. When its bulb reaches its rating, it bursts and water flows onto the deflector, which spreads it in a spray pattern.</li>
+    <li><b>Only nearby heads open.</b> Heads further away stay below their rating, so they stay closed and water goes only where the heat is.</li>
+    <li><b>The alarm sounds.</b> Water flowing through the alarm valve station trips a flow switch and alarm, and the <a href="https://augmintech.com/pump-head-calculation/">fire pump</a> starts if pressure drops.</li>
+  </ol>
+</div>
+<div class="myth"><b>Common myth</b>In films, every sprinkler in a building goes off at once. In a standard wet pipe system that does not happen: each head responds only to heat at its own location. Only a deluge system opens all heads together.</div>
+<figure class="dfig wide"><img src="https://augmintech.com/wp-content/uploads/2026/11/87-wetpipe-sprinkler-system-with-detailed.webp" alt="Wet-pipe sprinkler system with detailed branches and individually operating heads" width="1000" height="630">
+<figcaption>Wet-pipe system overview. One head is shown operating; other heads can open if sufficient heat reaches them. Each branch connects back to the cross main and riser.</figcaption>
+</figure>
+
+<h2 id="types">4 Types of Fire Sprinkler Systems</h2>
+<div class="tbl-wrap">
+<table class="types">
+  <thead><tr><th>Type</th><th>Pipe contents</th><th>How it responds</th><th>Typical use</th><th>Maintenance</th></tr></thead>
+  <tbody>
+    <tr><td><span style="background:#0F4C81"></span>Wet pipe</td><td>Water at all times</td><td>Fastest: water discharges as soon as a head opens</td><td>Heated buildings: offices, hotels, malls, homes</td><td>Simplest; fewest components</td></tr>
+    <tr><td><span style="background:#00747D"></span>Dry pipe</td><td>Pressurised air; water held back by a dry pipe valve</td><td>A head opens, air escapes, then water fills the pipes: slower</td><td>Unheated spaces that can freeze: parking garages, cold stores, unheated warehouses</td><td>More: air supply, valve and drain checks</td></tr>
+    <tr><td><span style="background:#4A3EA8"></span>Pre-action</td><td>Air; water admitted only after a detector signals</td><td>Detection fills the pipes; a head must still open (single or double interlock)</td><td>Where accidental discharge is costly: data centres, museums, archives</td><td>Highest: detection plus valve system</td></tr>
+    <tr><td><span style="background:#C0471F"></span>Deluge</td><td>Empty; all heads are open</td><td>Detection opens the deluge valve and every head discharges at once</td><td>Fast-spreading hazards: flammable liquids, aircraft hangars, transformers</td><td>Detection and deluge valve testing</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Based on <a href="https://blog.qrfs.com/75-fire-sprinkler-systems-history-types-and-uses/" target="_blank" rel="noopener">QRFS</a>, which notes dry pipe systems are used where temperatures cannot be kept at or above 40 °F (4 °C).</p>
+
+<div class="cta">
+  <div><h3>Lay Out Sprinkler Systems in Revit MEP</h3><p>Augmintech's PG Program in BIM MEP covers MEP system modelling, including fire protection, with clash detection, schedules and BOQs on three building projects, across 150+ live hours over 6 months, with recordings for 1000 days and 500+ interview questions. ₹1,50,000 + GST in India, $1,800 abroad.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-mep-program/" class="cta-btn cta-btn-blue">View the BIM MEP program</a></div>
+</div>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="heads">Sprinkler Head Types</h2>
+<div class="heads">
+  <div class="hd"><b>Pendent</b><span>Hangs below the pipe; the most common head in finished spaces with false ceilings.</span></div>
+  <div class="hd"><b>Upright</b><span>Sits on top of the pipe, spraying up at the deflector; used in exposed ceilings and required in unheated dry or pre-action areas.</span></div>
+  <div class="hd"><b>Sidewall</b><span>Mounted on a wall, throwing water across the room; used in corridors, hotel rooms and small spaces.</span></div>
+  <div class="hd"><b>Concealed</b><span>A recessed head behind a flat cover plate that drops off at about 11 °C (20 °F) below the head's rating.</span></div>
+</div>
+<p><strong>What do sprinkler bulb colours mean?</strong> The liquid colour in the bulb shows its temperature rating. NFPA 13 groups ratings into classifications:</p>
+<div class="bulbs">
+  <div class="bb"><i style="background:#F39C34"></i><b>57 °C</b><span>Orange</span><small>Ordinary</small></div>
+  <div class="bb"><i style="background:#D93B2B"></i><b>68 °C</b><span>Red</span><small>Ordinary</small></div>
+  <div class="bb"><i style="background:#F2D33B"></i><b>79 °C</b><span>Yellow</span><small>Intermediate</small></div>
+  <div class="bb"><i style="background:#3FA055"></i><b>93 °C</b><span>Green</span><small>Intermediate</small></div>
+  <div class="bb"><i style="background:#2F6FD1"></i><b>141 °C</b><span>Blue</span><small>High</small></div>
+  <div class="bb"><i style="background:#7D4CC2"></i><b>163 to 191 °C</b><span>Purple</span><small>Extra high</small></div>
+</div>
+<p class="note">57, 68, 79, 93 and 141 °C ratings and colours from the <a href="https://hdfire.com/wp-content/uploads/2024/06/HD_conventional_sprinkler.pdf" target="_blank" rel="noopener">HD Fire sprinkler data sheet</a>; classification ranges from an <a href="https://open-exam-prep.com/study-guides/nicet-itwbs/water-based-system-components/sprinkler-types-orifices" target="_blank" rel="noopener">NFPA 13 study summary</a>, which also lists black bulbs for very extra high and ultra high ratings (204 °C and above). Head types also from that summary.</p>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/87-pendent-upright-sidewall-and-concealed.webp" alt="Pendent, upright, sidewall and concealed sprinkler head illustrations" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Four common sprinkler head arrangements. See the colour guide above for the bulb temperature ratings.</figcaption>
+</figure>
+
+<h2 id="hazard">Hazard Classification under NFPA 13</h2>
+<p>NFPA 13 sets the design by occupancy hazard: how much there is to burn, and how fast it burns. Typical examples:</p>
+<div class="haz">
+  <div class="hz l"><div class="hz-k">Light hazard</div><div class="hz-v">Low quantity and combustibility of contents: offices, classrooms, hospitals, churches, museums, residential.</div></div>
+  <div class="hz o1"><div class="hz-k">Ordinary group 1</div><div class="hz-v">Low combustibility, moderate quantity: parking garages, bakeries, bottling and dairy plants, commercial kitchens without high-temperature fryers.</div></div>
+  <div class="hz o2"><div class="hz-k">Ordinary group 2</div><div class="hz-v">Moderate to high quantity and combustibility: auto repair garages, machine shops, supermarkets, textile mills, woodworking shops.</div></div>
+  <div class="hz e1"><div class="hz-k">Extra group 1</div><div class="hz-v">High quantity and combustibility, little or no flammable liquid: aircraft hangars, sawmills, plywood plants, rubber processing, foam upholstery.</div></div>
+  <div class="hz e2"><div class="hz-k">Extra group 2</div><div class="hz-v">Moderate to substantial flammable or combustible liquids: asphalt roofing, dip tanks, oil quenching, solvent degreasing, lacquer dipping.</div></div>
+</div>
+<p class="note">Examples from an <a href="https://open-exam-prep.com/study-guides/nicet-water-based/construction-occupancy-classification/occupancy-hazard-classifications" target="_blank" rel="noopener">NFPA 13 occupancy classification summary</a>. The designer classifies each area; one building can contain several hazard classes.</p>
+
+<h2 id="coverage">Sprinkler Coverage Area and Spacing</h2>
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>Hazard</th><th>Max coverage per head</th><th>Max spacing / to wall</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Light</strong></td><td>225 ft² (20.9 m²) under smooth noncombustible ceilings; less if obstructed or combustible</td><td>15 ft (4.6 m) / 7.5 ft (2.3 m)</td></tr>
+    <tr><td><strong>Ordinary</strong></td><td>130 ft² (12.1 m²)</td><td>15 ft (4.6 m) / 7.5 ft (2.3 m)</td></tr>
+    <tr><td><strong>Extra</strong></td><td>100 ft² (9.3 m²) below 0.25 gpm/ft²; 90 ft² (8.4 m²) at 0.25 or more</td><td>12 ft (3.7 m) / 6 ft (1.8 m)</td></tr>
+    <tr><td><strong>High-piled storage</strong></td><td>100 ft² (9.3 m²)</td><td>12 ft (3.7 m) / 6 ft (1.8 m)</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Values as summarised from NFPA 13 by <a href="https://open-exam-prep.com/study-guides/nicet-water-based/sprinkler-selection-spacing/protection-area-spacing-rules" target="_blank" rel="noopener">OpenExamPrep</a> and cross-checked with the <a href="https://www.meyerfire.com/uploads/1/6/0/7/16072416/meyerfire_-_sprinkler_-_spacing__2022_.pdf" target="_blank" rel="noopener">MeyerFire spacing chart</a>. The current edition is NFPA 13-2025 (<a href="https://risklogic.com/notable-changes-to-2025-edition-of-nfpa-13" target="_blank" rel="noopener">RiskLogic</a>): confirm against it and the edition your authority has adopted.</p>
+<p>In plain words: <strong>sprinklers must be at least 6 ft (1.8 m) apart</strong> so one head's spray does not cool and delay its neighbour, <strong>no further from a wall than half the maximum spacing</strong>, and <strong>at least 4 in (102 mm) from a wall</strong>. Extended coverage heads are listed for larger areas, but only within their own listing.</p>
+
+<div class="chk" id="chk">
+  <div class="chk-h">Sprinkler count check (rough, standard spray)</div>
+  <div class="chk-b">
+    <div>
+      <label for="cl">Room length (m)</label><input id="cl" type="number" value="12" min="0" step="0.1">
+      <label for="cw">Room width (m)</label><input id="cw" type="number" value="9" min="0" step="0.1">
+      <label for="ch">Hazard</label>
+      <select id="ch"><option value="20.9|4.6">Light (smooth ceiling)</option><option value="12.1|4.6" selected>Ordinary</option><option value="9.3|3.7">Extra (&lt;0.25 density) / storage</option><option value="8.4|3.7">Extra (≥0.25 density)</option></select>
+    </div>
+    <div class="chk-o" id="co"></div>
+  </div>
+</div>
+<p class="note">A teaching check: it takes the larger of the area-based and spacing-based counts on a simple rectangular grid. Real layouts must follow NFPA 13 rules for obstructions, ceilings and walls, plus <a href="https://augmintech.com/pressure-drop-piping-systems-darcy-weisbach/">hydraulic calculation</a>.</p>
+
+<h2 id="revit">Sprinkler Layout in Revit MEP</h2>
+<ul class="rv">
+  <li><b>1. Place heads</b>Load sprinkler families (pendent, upright, sidewall) and place them on the ceiling or a reference plane, on a grid within the hazard's spacing limits.</li>
+  <li><b>2. Set the system</b>Revit has fire protection system classifications for wet, dry, pre-action and other (user-defined) systems (<a href="https://help.autodesk.com/cloudhelp/2026/ENU/Revit-API-MainReference/files/html/43ec0d75-d6bb-2d08-a920-9715e83040e7.htm" target="_blank" rel="noopener">Revit API reference</a>).</li>
+  <li><b>3. Pipe it</b>Route the riser, cross mains and branch lines, connect each head, and check that every head belongs to the right system.</li>
+  <li><b>4. Check clashes</b>Run <code>Collaborate › Coordinate › Interference Check</code> against <a href="https://augmintech.com/hvac-duct-design/">ducts</a>, beams and cable trays; the report lists each conflicting pair and can be exported (<a href="https://help.autodesk.com/cloudhelp/2027/ENU/Revit-Collaborate/files/GUID-890A9FE0-EFF4-4CFB-9E81-B0DE1A132BEC.htm" target="_blank" rel="noopener">Autodesk Help</a>).</li>
+</ul>
+<p>Coverage checking in plain Revit is visual: tag head spacing with dimensions, or use a coverage-circle family set to the maximum spacing so gaps show up on the reflected ceiling plan. Hydraulic calculations are usually done in dedicated software.</p>
+
+<figure>
+  <div class="plan87"><img src="https://augmintech.com/wp-content/uploads/2026/11/87-dimensioned-sprinkler-ceiling-coordination-example.webp" alt="Dimensioned sprinkler ceiling coordination example with nine heads and distinct drawing symbols" width="1000" height="685"></div>
+  <figcaption>Illustrative 12 × 9 m ceiling plan with a 4 × 3 m head grid, distinct pipe weights, numbered heads, lights and diffusers. This example explains coordination; it does not establish compliant spacing.</figcaption>
+</figure>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/87-illustrative-sprinkler-alarm-valve-station.webp" alt="Illustrative sprinkler alarm valve station with isolation valve, gauges, alarm trim and drain" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>An alarm valve station: water flow through it raises the alarm when a sprinkler opens.</figcaption>
+</figure>
+
+<h2 id="codes">Sprinkler Requirements in India and the Gulf</h2>
+<div class="codes3">
+  <div class="cd3 in"><h3>India: NBC 2016 Part 4</h3><ul><li>Table 7 sets where sprinklers are needed, by occupancy and building height</li><li>Design and installation to IS 15105</li><li>NBCS 2026 now published</li></ul></div>
+  <div class="cd3 ae"><h3>UAE: Fire and Life Safety Code</h3><ul><li>UAE Fire and Life Safety Code of Practice, enforced by each emirate's Civil Defence</li><li>NFPA 13 widely used for sprinkler installation</li><li>Annual servicing by Civil Defence-approved contractors</li></ul></div>
+  <div class="cd3 sa"><h3>Saudi Arabia: SBC 801</h3><ul><li>Section 903, Automatic Sprinkler Systems (pages 141 to 147 in the 2018 code)</li><li>Based on the 2015 International Fire Code with NFPA standards</li><li>Sprinklers relax other requirements, such as travel distance</li></ul></div>
+</div>
+<p><strong>India.</strong> NBC 2016 Part 4 sets sprinkler requirements in Table 7 by occupancy type and height (<a href="https://noc.fire.kerala.gov.in/assets/uploads/NBC%20Table%207.pdf" target="_blank" rel="noopener">Table 7, Kerala Fire and Rescue Services copy</a>). Delhi Fire Service states that sprinkler systems are designed and installed to IS 15105, with design plans and calculations submitted with the building plans (<a href="https://dfs.delhi.gov.in/hi/faqs?page=1" target="_blank" rel="noopener">Delhi Fire Service FAQ</a>).</p>
+<div class="alert"><b>NBCS 2026.</b> BIS has published the National Building Construction Standards 2026 (SP 7:2026), reported as effective from 30 April 2026. Reports say fire and life safety norms now apply to residential buildings of 24 m and above (up from 15 m), and that "shall" has become "should" in the fire section (<a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/national-building-construction-standards-2026" target="_blank" rel="noopener">Drishti IAS</a>; <a href="https://ulba.in/national-building-construction-standards-2026-sp-72026" target="_blank" rel="noopener">ULBA</a>). Check which edition and state bye-laws apply to your project.</div>
+<p><strong>UAE.</strong> Sprinkler systems are governed by the UAE Fire and Life Safety Code of Practice and enforced by each emirate's Civil Defence (Dubai, Abu Dhabi, Sharjah). NFPA 13 is widely adopted, and annual servicing must be carried out by Civil Defence-approved contractors, with test certificates sent to the authority (<a href="https://www.bito.com/en-ae/news-know-how/detail/regulations-for-sprinkler-systems-and-storage-facilities/" target="_blank" rel="noopener">BITO</a>).</p>
+<p><strong>Saudi Arabia.</strong> SBC 801 covers automatic sprinkler systems in Section 903 (<a href="https://sbc.gov.sa/ar/BC/Documents/tableofcontent2018/SBC%20801/SBC801_CR_T2018.pdf" target="_blank" rel="noopener">SBC 801 contents, 2018</a>). The code is based on the 2015 International Fire Code and NFPA standards, and a sprinklered building gains relaxations elsewhere: longer travel distances, Class I instead of Class III standpipes, and hydrant distance extended from 120 m to 180 m (<a href="https://www.asrjetsjournal.org/American_Scientific_Journal/article/download/11808/2855/28128" target="_blank" rel="noopener">Pillai, ASRJETS 2025</a>).</p>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/87-chrome-pendent-sprinkler-in-a.webp" alt="Chrome pendent sprinkler in a finished ceiling near lighting and a slot diffuser" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Sprinklers in a finished ceiling, coordinated with lights and diffusers.</figcaption>
+</figure>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What are the 4 types of fire sprinkler systems?</div><div class="faq-a">Wet pipe (water always in the pipes), dry pipe (pressurised air, for freezing areas), pre-action (water admitted only after detection, for sensitive spaces) and deluge (all heads open, for fast-spreading hazards).</div></div>
+<div class="faq-item"><div class="faq-q">What is the coverage area of one sprinkler?</div><div class="faq-a">For standard spray heads under NFPA 13, up to 225 ft² (20.9 m²) in light hazard with smooth noncombustible ceilings, 130 ft² (12.1 m²) in ordinary hazard, and 90 to 100 ft² (8.4 to 9.3 m²) in extra hazard and high-piled storage.</div></div>
+<div class="faq-item"><div class="faq-q">What is NFPA 13?</div><div class="faq-a">NFPA 13, Standard for the Installation of Sprinkler Systems, is the National Fire Protection Association standard for designing and installing sprinkler systems. The current edition is 2025, and it is widely used in the Gulf.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between a wet and a dry sprinkler system?</div><div class="faq-a">A wet system keeps water in the pipes, so it discharges immediately but can freeze. A dry system holds pressurised air and lets water in only when a head opens, so it suits unheated spaces but responds more slowly and needs more maintenance.</div></div>
+<div class="faq-item"><div class="faq-q">How far apart should sprinklers be?</div><div class="faq-a">For standard spray heads, at most 15 ft (4.6 m) apart in light and ordinary hazard and 12 ft (3.7 m) in extra hazard, and at least 6 ft (1.8 m) apart. The distance to a wall must be no more than half the maximum spacing and no less than 4 in (102 mm).</div></div>
+<div class="faq-item"><div class="faq-q">What do sprinkler bulb colours mean?</div><div class="faq-a">They show the temperature at which the bulb bursts: orange 57 °C, red 68 °C, yellow 79 °C, green 93 °C, blue 141 °C, purple about 163 to 191 °C, and black for higher ratings.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>NFPA 13</strong>, Standard for the Installation of Sprinkler Systems, 2025 edition; changes summarised by <a href="https://risklogic.com/notable-changes-to-2025-edition-of-nfpa-13" target="_blank" rel="noopener">RiskLogic</a>.</li>
+  <li><strong>OpenExamPrep</strong> NFPA 13 study guides: <a href="https://open-exam-prep.com/study-guides/nicet-water-based/sprinkler-selection-spacing/protection-area-spacing-rules" target="_blank" rel="noopener">protection area and spacing</a>; <a href="https://open-exam-prep.com/study-guides/nicet-water-based/construction-occupancy-classification/occupancy-hazard-classifications" target="_blank" rel="noopener">occupancy hazard classes</a>; <a href="https://open-exam-prep.com/study-guides/nicet-itwbs/water-based-system-components/sprinkler-types-orifices" target="_blank" rel="noopener">sprinkler types and temperature ratings</a>.</li>
+  <li><strong>MeyerFire</strong>, <a href="https://www.meyerfire.com/uploads/1/6/0/7/16072416/meyerfire_-_sprinkler_-_spacing__2022_.pdf" target="_blank" rel="noopener">sprinkler spacing chart</a>.</li>
+  <li><strong>HD Fire</strong>, <a href="https://hdfire.com/wp-content/uploads/2024/06/HD_conventional_sprinkler.pdf" target="_blank" rel="noopener">conventional sprinkler data sheet</a> (temperature ratings and bulb colours).</li>
+  <li><strong>QRFS</strong>, <a href="https://blog.qrfs.com/75-fire-sprinkler-systems-history-types-and-uses/" target="_blank" rel="noopener">Fire Sprinkler Systems: History, Types, and Uses</a>.</li>
+  <li><strong>Autodesk</strong>: <a href="https://help.autodesk.com/cloudhelp/2026/ENU/Revit-API-MainReference/files/html/43ec0d75-d6bb-2d08-a920-9715e83040e7.htm" target="_blank" rel="noopener">Revit system classifications</a>; <a href="https://help.autodesk.com/cloudhelp/2027/ENU/Revit-Collaborate/files/GUID-890A9FE0-EFF4-4CFB-9E81-B0DE1A132BEC.htm" target="_blank" rel="noopener">Interference Check</a>.</li>
+  <li><strong>India</strong>: NBC 2016 Part 4 Table 7 via <a href="https://noc.fire.kerala.gov.in/assets/uploads/NBC%20Table%207.pdf" target="_blank" rel="noopener">Kerala Fire and Rescue Services</a>; <a href="https://dfs.delhi.gov.in/hi/faqs?page=1" target="_blank" rel="noopener">Delhi Fire Service FAQ</a>; NBCS 2026 via <a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/national-building-construction-standards-2026" target="_blank" rel="noopener">Drishti IAS</a> and <a href="https://ulba.in/national-building-construction-standards-2026-sp-72026" target="_blank" rel="noopener">ULBA</a>.</li>
+  <li><strong>UAE</strong>: <a href="https://www.bito.com/en-ae/news-know-how/detail/regulations-for-sprinkler-systems-and-storage-facilities/" target="_blank" rel="noopener">BITO, sprinkler regulations</a>. <strong>Saudi Arabia</strong>: <a href="https://sbc.gov.sa/ar/BC/Documents/tableofcontent2018/SBC%20801/SBC801_CR_T2018.pdf" target="_blank" rel="noopener">SBC 801 (2018) contents</a>; <a href="https://www.asrjetsjournal.org/American_Scientific_Journal/article/download/11808/2855/28128" target="_blank" rel="noopener">Pillai (2025), ASRJETS</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 5 November 2026.</p>
+
+</div>
+<script>
+(function(){
+  const g=id=>parseFloat(document.getElementById(id).value)||0;
+  function run(){
+    const L=g('cl'), W=g('cw'), p=document.getElementById('ch').value.split('|'), a=parseFloat(p[0]), s=parseFloat(p[1]);
+    const A=L*W, nA=Math.ceil(A/a), nx=Math.max(1,Math.ceil(L/s)), ny=Math.max(1,Math.ceil(W/s)), nS=nx*ny, n=Math.max(nA,nS);
+    document.getElementById('co').innerHTML='Room area: <span>'+A.toFixed(1)+' m²</span><br>By coverage ('+a+' m² each): <span>'+nA+'</span><br>By spacing ('+s+' m grid): <span>'+nx+' × '+ny+' = '+nS+'</span><br>Minimum heads: <span>'+(A>0?n:0)+'</span>';
+  }
+  document.querySelectorAll('#chk input,#chk select').forEach(e=>e.addEventListener('input',run)); run();
+})();
+</script>
+<script>
+(()=>{const d=document.createElement('dialog');d.className='zoom87';d.setAttribute('aria-label','Enlarged illustration');const b=document.createElement('button');b.textContent='Close';const im=document.createElement('img'),c=document.createElement('p');d.append(b,im,c);document.body.append(d);b.onclick=()=>d.close();d.onclick=e=>{if(e.target===d)d.close()};document.querySelectorAll('figure img').forEach(i=>{i.tabIndex=0;i.setAttribute('role','button');i.setAttribute('aria-label','Enlarge: '+i.alt);const show=()=>{im.src=i.src;im.alt=i.alt;c.textContent=i.closest('figure').querySelector('figcaption')?.textContent||i.alt;d.showModal()};i.onclick=show;i.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}}})})();
+</script>

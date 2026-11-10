@@ -1,0 +1,327 @@
+<style>
+#aug-curtain-wall{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-curtain-wall *,#aug-curtain-wall *::before,#aug-curtain-wall *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-curtain-wall{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-curtain-wall.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-curtain-wall .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-curtain-wall .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-curtain-wall .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-curtain-wall .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-curtain-wall .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-curtain-wall .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-curtain-wall h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-curtain-wall h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-curtain-wall p{margin-bottom:.9rem;font-size:16px;}
+#aug-curtain-wall a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-curtain-wall a:hover{border-color:var(--brand);}
+#aug-curtain-wall hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-curtain-wall .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-curtain-wall .chart svg{width:100%;height:auto;display:block;}
+#aug-curtain-wall .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-curtain-wall .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-curtain-wall .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-curtain-wall .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-curtain-wall .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-curtain-wall .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-curtain-wall .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-curtain-wall table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-curtain-wall caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-curtain-wall thead tr{background:var(--slate);color:#fff;}
+#aug-curtain-wall thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-curtain-wall tbody tr:nth-child(even){background:var(--surface);}
+#aug-curtain-wall tbody tr:hover{background:var(--brand-lite);}
+#aug-curtain-wall td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-curtain-wall td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-curtain-wall tbody tr.hl{background:var(--green-lite)!important;}
+#aug-curtain-wall tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-curtain-wall ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-curtain-wall ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-curtain-wall .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-curtain-wall .cta-green{background:var(--slate);}
+#aug-curtain-wall .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-curtain-wall .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-curtain-wall .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-curtain-wall .cta-btn-blue{color:var(--brand);}#aug-curtain-wall .cta-btn-green{color:var(--slate);}
+#aug-curtain-wall figure{margin:1.5rem 0;}
+#aug-curtain-wall figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-curtain-wall figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-curtain-wall dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-curtain-wall dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-curtain-wall dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-curtain-wall .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-curtain-wall .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-curtain-wall .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-curtain-wall .srcs{list-style:none;padding:0;}
+#aug-curtain-wall .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-curtain-wall .srcs li:last-child{border-bottom:none;}
+
+/* ===== definition ===== */#aug-curtain-wall .def95{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;margin:1.3rem 0;padding:1rem 1.1rem;border-radius:var(--radius);background:#EEF4FA;border:1px solid #CFDDEB;}
+#aug-curtain-wall .def95 svg{width:58px;height:78px;}
+#aug-curtain-wall .def95 p{margin:0;font-size:16.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-curtain-wall .def95 p b{color:var(--ink);}
+
+/* ===== figures ===== */#aug-curtain-wall .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-curtain-wall .dfig svg{display:block;width:100%;height:auto;}
+#aug-curtain-wall .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;}
+#aug-curtain-wall .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-curtain-wall .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-curtain-wall figure.pf{margin:1.2rem 0;} #aug-curtain-wall figure.pf figcaption{font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+
+/* ===== systems ===== */#aug-curtain-wall .sys td:first-child{font-weight:700;white-space:nowrap;}
+#aug-curtain-wall .lvl{display:inline-flex;gap:2px;vertical-align:middle;margin-right:6px;}
+#aug-curtain-wall .lvl s{display:block;width:8px;height:12px;border-radius:2px;background:#E1E4E8;}
+#aug-curtain-wall .lvl.c1 s:nth-child(-n+1),#aug-curtain-wall .lvl.c2 s:nth-child(-n+2),#aug-curtain-wall .lvl.c3 s:nth-child(-n+3),#aug-curtain-wall .lvl.c4 s:nth-child(-n+4){background:#8A5A00;}
+#aug-curtain-wall .sys4{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-curtain-wall .sy{border:1px solid var(--border);border-radius:var(--radius);padding:.85rem .95rem;background:#fff;border-top:4px solid var(--slate);}
+#aug-curtain-wall .sy:nth-child(2){border-top-color:var(--brand);} #aug-curtain-wall .sy:nth-child(3){border-top-color:var(--teal);} #aug-curtain-wall .sy:nth-child(4){border-top-color:var(--coral);}
+#aug-curtain-wall .sy h3{margin:0 0 .35rem;font-size:16px;}
+#aug-curtain-wall .sy p{margin:0;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+
+/* ===== mullion callout ===== */#aug-curtain-wall .mul{border-left:5px solid var(--slate);background:var(--surface);padding:.8rem 1rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:1rem 0;font-size:15.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-curtain-wall .mul b{color:var(--ink);}
+#aug-curtain-wall .gl-parts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:1rem 0;}
+#aug-curtain-wall .gl-parts div{border:1px solid var(--border);border-radius:var(--radius-sm);padding:.6rem .7rem;font-size:13px;line-height:1.5;color:var(--ink-mid);background:#fff;}
+#aug-curtain-wall .gl-parts b{display:block;font-size:14px;color:var(--ink);margin-bottom:.15rem;}
+
+/* ===== glass ===== */#aug-curtain-wall .gm{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:1rem 0;}
+#aug-curtain-wall .gm div{border-radius:var(--radius-sm);padding:.75rem .8rem;background:#F0F6FB;border:1px solid #D4E3F0;font-size:13px;line-height:1.5;color:var(--ink-mid);}
+#aug-curtain-wall .gm b{display:block;font-family:var(--display);font-size:16px;color:var(--brand);}
+#aug-curtain-wall .gm em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:#1D7A46;margin-top:.3rem;}
+#aug-curtain-wall .glass td{font-family:var(--mono);font-size:12.5px;}
+#aug-curtain-wall .glass th,#aug-curtain-wall .glass td{padding-left:.55rem;padding-right:.55rem;}
+#aug-curtain-wall .glass th{white-space:normal;}
+#aug-curtain-wall .glass td:first-child{font-family:var(--body,inherit);font-weight:700;font-size:14px;}
+#aug-curtain-wall .gbar{display:flex;align-items:center;gap:6px;}
+#aug-curtain-wall .gbar i{display:block;height:8px;border-radius:4px;background:#E0A31B;}
+
+/* ===== revit steps ===== */#aug-curtain-wall .rv{list-style:none;padding:0;margin:1.1rem 0;counter-reset:r;}
+#aug-curtain-wall .rv li{counter-increment:r;display:grid;grid-template-columns:40px 1fr;gap:12px;padding:.8rem 0;border-bottom:1px solid var(--border);}
+#aug-curtain-wall .rv li::before{content:counter(r);width:34px;height:34px;border-radius:8px;background:#1F4A6E;color:#fff;font-family:var(--display);font-weight:800;display:flex;align-items:center;justify-content:center;}
+#aug-curtain-wall .rv li b{display:block;font-size:15.5px;color:var(--ink);margin-bottom:.15rem;}
+#aug-curtain-wall .rv li span{font-size:14.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-curtain-wall .rv .ph{margin-top:.6rem;}
+#aug-curtain-wall .rv-path{font-family:var(--mono);font-size:12px;background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:1px 6px;color:var(--ink);}
+#aug-curtain-wall .dd{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-curtain-wall .dd>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-curtain-wall .dd .no{background:#FDF1EC;border:1px solid #F2CDBF;} #aug-curtain-wall .dd .yes{background:#EEF6F2;border:1px solid #CBE4D7;}
+#aug-curtain-wall .dd h3{margin:0 0 .35rem;font-size:15.5px;} #aug-curtain-wall .dd .no h3{color:#9A3B1E;} #aug-curtain-wall .dd .yes h3{color:var(--green);}
+#aug-curtain-wall .dd ul{margin:0;padding-left:1.1rem;} #aug-curtain-wall .dd li{margin-bottom:.25rem;}
+
+/* ===== gulf ===== */#aug-curtain-wall .gq{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1.1rem 0;}
+#aug-curtain-wall .gq div{border-radius:var(--radius);padding:.85rem .9rem;background:#FBF4E8;border:1px solid #EFD9B4;font-size:13.5px;line-height:1.55;color:var(--ink-mid);}
+#aug-curtain-wall .gq b{display:block;font-family:var(--display);font-size:15.5px;color:#8A5A00;margin-bottom:.2rem;}
+#aug-curtain-wall .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+
+@media(max-width:640px){
+  #aug-curtain-wall .def95{grid-template-columns:1fr;} #aug-curtain-wall .def95 svg{display:none;}
+  #aug-curtain-wall .sys4,#aug-curtain-wall .dd{grid-template-columns:1fr;}
+  #aug-curtain-wall .gl-parts,#aug-curtain-wall .gm{grid-template-columns:1fr 1fr;}
+  #aug-curtain-wall .gq{grid-template-columns:1fr;}
+  #aug-curtain-wall .sys table,#aug-curtain-wall .glass table{min-width:620px;}
+  #aug-curtain-wall .dfig.wide{overflow-x:auto;} #aug-curtain-wall .dfig.wide svg{min-width:640px;}
+  #aug-curtain-wall .cta{flex-direction:column;align-items:flex-start;}
+  #aug-curtain-wall .cta>div{max-width:100%;} #aug-curtain-wall .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-curtain-wall .cta>div:last-child .cta-btn{margin-left:0;}
+}
+
+#aug-curtain-wall.blog{overflow-wrap:anywhere;}#aug-curtain-wall .blog>*{min-width:0;}#aug-curtain-wall .ph{aspect-ratio:auto;}#aug-curtain-wall .ph img{position:static;height:auto;object-fit:contain;}
+#aug-curtain-wall .cta-btn{white-space:normal;display:inline-block;max-width:100%;}#aug-curtain-wall .gl-parts,#aug-curtain-wall .gm{grid-template-columns:repeat(2,minmax(0,1fr));}#aug-curtain-wall .gl-parts div,#aug-curtain-wall .gm div{padding:16px;font-size:14px;}#aug-curtain-wall .gm em{font-size:12px;line-height:1.5;}
+#aug-curtain-wall .dfig figcaption{font:13px/1.65 var(--body);}#aug-curtain-wall .dfig.wide{overflow:hidden;}#aug-curtain-wall .dfig.wide svg{min-width:0;}#aug-curtain-wall .image-credit{font-size:12px;color:#65717b;}
+#aug-curtain-wall .rv li>div{min-width:0;}#aug-curtain-wall .rv .ph{margin-top:18px;}#aug-curtain-wall .blog .ph img,#aug-curtain-wall .dfig svg{cursor:zoom-in;}#aug-curtain-wall .blog img:focus-visible,#aug-curtain-wall .dfig svg:focus-visible{outline:3px solid #00747d;outline-offset:3px;}
+#aug-curtain-wall #zoom95{margin:auto;border:0;border-radius:12px;width:min(96vw,1500px);max-width:96vw;max-height:94vh;padding:16px;background:white;}#aug-curtain-wall #zoom95::backdrop{background:rgba(15,30,45,.85);}#aug-curtain-wall #zoom95 button{display:block;margin:0 0 12px auto;padding:10px 20px;border:0;border-radius:6px;background:#0f4c81;color:white;font:600 15px Arial;cursor:pointer;}#aug-curtain-wall #zoom95 img{display:block;width:100%;height:auto;max-height:80vh;object-fit:contain;}
+@media(max-width:420px){#aug-curtain-wall.blog{padding-left:16px;padding-right:16px;}#aug-curtain-wall .gl-parts,#aug-curtain-wall .gm{grid-template-columns:1fr;}#aug-curtain-wall .rv li{grid-template-columns:1fr;gap:8px;}}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-curtain-wall.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-curtain-wall h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-curtain-wall a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-curtain-wall a:hover{color:#18d104;}
+#aug-curtain-wall .cta{background:#1a1a1a;}
+#aug-curtain-wall .cta a.cta-btn{text-decoration:none;}
+#aug-curtain-wall .cta-btn-blue{background:#18d104;color:#000;}
+#aug-curtain-wall .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-curtain-wall [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-curtain-wall">
+
+
+<div class="def95">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 78" aria-hidden="true"><rect x="0" y="0" width="58" height="78" fill="#9BC4E2"/><g fill="#5F6B78"><rect x="0" y="0" width="3" height="78"/><rect x="27" y="0" width="3" height="78"/><rect x="55" y="0" width="3" height="78"/><rect x="0" y="24" width="58" height="3"/><rect x="0" y="51" width="58" height="3"/></g><rect x="0" y="20" width="58" height="11" fill="#4A5563" opacity=".85"/><rect x="0" y="47" width="58" height="11" fill="#4A5563" opacity=".85"/></svg>
+  <p><b>A curtain wall is a non-load-bearing outer wall, usually glass in an aluminium frame, hung from a building's structure and carrying only its own weight and wind loads.</b> This guide covers the four main curtain wall systems, the parts and how they fit together, the glass numbers that matter, and how to model one properly in <a href="https://augmintech.com/learn-revit/">Revit</a>.</p>
+</div>
+<p>If you are an architecture student or a <a href="https://augmintech.com/bim-architecture/">BIM modeller</a> about to work on a glass-fronted building, this is the vocabulary and the modelling method you will need on day one.</p>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>A curtain wall hangs outside the floor slabs</strong> and carries only its own weight and wind, not floor loads.</li>
+  <li><strong>The four main systems are stick, unitised, structural glazing and spider (point-fixed),</strong> in rising order of how frameless they look.</li>
+  <li><strong>Stick systems are assembled on site; unitised panels arrive finished from the factory,</strong> which speeds up enclosure on tall buildings.</li>
+  <li><strong>A mullion is the main vertical frame member; a transom is the horizontal one</strong> between panels.</li>
+  <li><strong>For glass, read three numbers on the datasheet:</strong> U-value for <a href="https://augmintech.com/heat-load-calculation/">heat loss</a>, solar factor or SHGC for solar heat, and light transmission.</li>
+  <li><strong>In Revit, model glazing as a curtain wall with grids, mullions and panels,</strong> never as a basic wall with a glass material.</li>
+</ul>
+
+<h2 id="what-is">What Is a Curtain Wall?</h2>
+<p>A curtain wall is the outer skin of a building, not part of its structure. Designing Buildings describes curtain walling as a non-loadbearing external wall system of glazed and opaque panels in a lightweight frame fixed to the building's primary structure. It is not entirely non-structural, though: the frame, fixings and glass must resist wind and their own weight, and brackets and anchors pass those loads back to the slabs or frame.</p>
+<p>The floors, columns and core carry the building; the curtain wall only keeps out weather. That is why it can be almost entirely glass, and why it can run past many storeys without a break.</p>
+
+<h3>Curtain wall vs window wall</h3>
+<p>The two look similar from the street but sit differently on the structure. According to glazing contractor Kovach, a curtain wall attaches to the outside of the floor slabs and spans past them, while a window wall sits between the slabs, floor by floor. That leaves the window wall's slab edges exposed, usually covered with metal panels. Kovach adds that window wall works up to about 12 feet (3.7 m) floor to floor before its mullions need steel reinforcement, and that curtain wall suits taller spans and continuous glass towers.</p>
+<figure class="dfig">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" role="img" aria-label="Curtain wall hangs outside the floor slabs; a window wall sits between the slabs"><rect width="640" height="230" fill="#fff"/><defs><pattern id="conc2" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#D9D4CA"/><circle cx="2" cy="2" r="0.9" fill="#A69F92"/></pattern></defs><text x="30" y="22" font-size="12" text-anchor="start" fill="#2A3540" font-weight="700" font-family="sans-serif">CURTAIN WALL</text><rect x="30" y="50" width="170" height="22" fill="url(#conc2)" stroke="#8C857A"/><rect x="30" y="150" width="170" height="22" fill="url(#conc2)" stroke="#8C857A"/><rect x="206" y="34" width="8" height="180" fill="#8F99A4"/><rect x="214" y="34" width="4" height="180" fill="#9BC4E2"/><rect x="214" y="46" width="4" height="30" fill="#4A5563"/><rect x="214" y="146" width="4" height="30" fill="#4A5563"/><text x="230" y="110" font-size="10.5" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">Runs continuously</text><text x="230" y="124" font-size="10.5" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">past slab edges</text><text x="230" y="160" font-size="10" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">Spandrel hides slab</text><text x="350" y="22" font-size="12" text-anchor="start" fill="#2A3540" font-weight="700" font-family="sans-serif">WINDOW WALL</text><rect x="350" y="50" width="170" height="22" fill="url(#conc2)" stroke="#8C857A"/><rect x="350" y="150" width="170" height="22" fill="url(#conc2)" stroke="#8C857A"/><rect x="510" y="72" width="8" height="78" fill="#8F99A4"/><rect x="514" y="76" width="4" height="70" fill="#9BC4E2"/><rect x="510" y="172" width="8" height="44" fill="#8F99A4"/><rect x="514" y="176" width="4" height="40" fill="#9BC4E2"/><text x="532" y="110" font-size="10.5" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">Sits between slabs,</text><text x="532" y="124" font-size="10.5" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">floor by floor</text><text x="532" y="64" font-size="10" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">Slab edge exposed</text></svg>
+  <figcaption>Curtain wall runs past the slab edges, with spandrel panels hiding each floor. A window wall is installed between slabs. Augmintech diagram.</figcaption>
+</figure>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="types">4 Types of Curtain Wall Systems</h2>
+<div class="tbl-wrap sys">
+<table>
+  <thead><tr><th>System</th><th>Install method</th><th>Speed on site</th><th>Cost level (relative)</th><th>Typical buildings</th></tr></thead>
+  <tbody>
+    <tr><td>Stick</td><td>Mullions and transoms fixed piece by piece on site, then glazed</td><td>Slowest; needs access to both sides</td><td><span class="lvl c1"><s></s><s></s><s></s><s></s></span>Lower direct cost</td><td>Low and mid-rise, podiums, shopfronts</td></tr>
+    <tr><td>Unitised</td><td>Factory-built, glazed panels lifted and hooked onto slab brackets</td><td>Fastest enclosure, fewer site staff</td><td><span class="lvl c2"><s></s><s></s><s></s><s></s></span>Higher direct cost</td><td>High-rise towers, repetitive façades</td></tr>
+    <tr><td>Structural glazing</td><td>Glass bonded with structural silicone to carriers, fixed into the frame</td><td>Medium; bonding done in the factory</td><td><span class="lvl c3"><s></s><s></s><s></s><s></s></span>Higher</td><td>Offices wanting flush, frameless-looking glass</td></tr>
+    <tr><td>Spider (point-fixed)</td><td>Drilled glass held at points by stainless steel fittings on fins or steel</td><td>Slow; bespoke engineering</td><td><span class="lvl c4"><s></s><s></s><s></s><s></s></span>Highest</td><td>Lobbies, atriums, showrooms</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Stick vs unitised cost and speed: Building Design CPD on aluminium curtain walling ("higher direct costs" for unitised, which "hastens enclosure of the building" and needs fewer site staff). The other cost levels are relative and indicative only.</p>
+
+<div class="sys4">
+  <div class="sy"><h3>Stick system</h3><p>The classic method. Profiles are cut and machined in the factory, then assembled on site as a kit: mullions slide onto base brackets at each floor, transoms fix between them, and the glass goes in last. Flexible when dimensions vary, but it needs scaffolding or access on both sides.</p></div>
+  <div class="sy"><h3>Unitised system</h3><p>Whole panels, frame and glass together, are built and sealed in the factory, then lifted into place and hooked onto pre-positioned brackets on the slab. Better quality control and fewer site joints, at a higher direct cost.</p></div>
+  <div class="sy"><h3>Structural glazing</h3><p>The glass is bonded to metal carriers with structural silicone sealant, usually in the factory, so no cap or pressure plate shows outside. The result is a smooth, all-glass face.</p></div>
+  <div class="sy"><h3>Spider (point-fixed) glazing</h3><p>Large toughened panes are drilled and clamped at points by stainless steel "spider" fittings, often fixed to glass fins instead of mullions. Dimensions.com lists panes up to about 6.1 m tall for this system. Near-total transparency, with bespoke engineering.</p></div>
+</div>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/95-unitised-curtain-wall-panel-being.webp" alt="Unitised curtain wall panel being installed on a tower" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Unitised curtain wall: factory-built panels lifted onto slab brackets. <span class="image-credit">AI-generated architectural illustration.</span></figcaption>
+</figure>
+
+<h2 id="parts">Parts of a Curtain Wall</h2>
+<div class="mul"><b>A mullion is the main vertical member of a curtain wall frame, running between floors and carrying the glass and wind loads back to the building through brackets.</b> Its horizontal partner is the transom.</div>
+<figure class="dfig wide">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" role="img" aria-label="curtain wall parts: section and elevation showing mullion, transom, anchor, bracket, glazing panel, spandrel panel, gasket, pressure plate and fire stop"><rect width="900" height="470" fill="#fff"/><defs><pattern id="conc" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#D9D4CA"/><circle cx="2" cy="2" r="0.9" fill="#A69F92"/><circle cx="6" cy="5" r="0.7" fill="#A69F92"/></pattern><pattern id="fs" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#F6C9A8"/><path d="M0 6 L6 0" stroke="#C0471F" stroke-width=".8"/></pattern></defs><text x="40" y="30" font-size="12" text-anchor="start" fill="#2A3540" font-weight="700" font-family="sans-serif">SECTION</text><text x="540" y="30" font-size="12" text-anchor="start" fill="#2A3540" font-weight="700" font-family="sans-serif">ELEVATION (outside)</text><rect x="40" y="120" width="190" height="34" fill="url(#conc)" stroke="#8C857A"/><rect x="40" y="370" width="190" height="34" fill="url(#conc)" stroke="#8C857A"/><text x="60" y="115" font-size="10.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">Floor slab</text><rect x="200" y="112" width="62" height="8" fill="#5F6B78"/><rect x="254" y="112" width="8" height="30" fill="#5F6B78"/><rect x="210" y="106" width="6" height="14" fill="#2A3540"/><rect x="200" y="362" width="62" height="8" fill="#5F6B78"/><rect x="254" y="362" width="8" height="30" fill="#5F6B78"/><rect x="210" y="356" width="6" height="14" fill="#2A3540"/><rect x="262" y="50" width="26" height="410" fill="#C5CCD4" stroke="#7A8794"/><rect x="262" y="190" width="40" height="14" fill="#9AA3AD" stroke="#5F6B78"/><rect x="302" y="186" width="8" height="22" fill="#5F6B78"/><rect x="310" y="190" width="12" height="14" fill="#7A8794"/><rect x="262" y="300" width="40" height="14" fill="#9AA3AD" stroke="#5F6B78"/><rect x="302" y="296" width="8" height="22" fill="#5F6B78"/><rect x="310" y="300" width="12" height="14" fill="#7A8794"/><rect x="290" y="50" width="10" height="140" fill="#4A5563"/><rect x="270" y="56" width="18" height="128" fill="#F3E3B5" opacity=".9"/><rect x="290" y="345" width="10" height="115" fill="#4A5563"/><rect x="270" y="351" width="18" height="103" fill="#F3E3B5" opacity=".9"/><rect x="302" y="345" width="8" height="2" fill="#5F6B78"/><rect x="290" y="204" width="3" height="96" fill="#9BC4E2"/><rect x="298" y="204" width="3" height="96" fill="#9BC4E2"/><rect x="293" y="204" width="5" height="96" fill="#EEF6FC"/><circle cx="289" cy="206" r="2" fill="#111"/><circle cx="302" cy="206" r="2" fill="#111"/><circle cx="289" cy="298" r="2" fill="#111"/><circle cx="302" cy="298" r="2" fill="#111"/><rect x="230" y="120" width="32" height="34" fill="url(#fs)" stroke="#C0471F" stroke-width=".8"/><rect x="230" y="370" width="32" height="34" fill="url(#fs)" stroke="#C0471F" stroke-width=".8"/><line x1="232" y1="128" x2="150" y2="72" stroke="#C0471F" stroke-width="1"/><circle cx="232" cy="128" r="2.5" fill="#C0471F"/><text x="146" y="68" font-size="11" text-anchor="end" fill="#2A3540" font-weight="400" font-family="sans-serif">Fire stop at slab edge</text><line x1="212" y1="108" x2="150" y2="92" stroke="#C0471F" stroke-width="1"/><circle cx="212" cy="108" r="2.5" fill="#C0471F"/><text x="146" y="96" font-size="11" text-anchor="end" fill="#2A3540" font-weight="400" font-family="sans-serif">Anchor (cast in slab)</text><line x1="240" y1="363" x2="150" y2="250" stroke="#C0471F" stroke-width="1"/><circle cx="240" cy="363" r="2.5" fill="#C0471F"/><text x="146" y="254" font-size="11" text-anchor="end" fill="#2A3540" font-weight="400" font-family="sans-serif">Bracket</text><line x1="275" y1="410" x2="150" y2="425" stroke="#C0471F" stroke-width="1"/><circle cx="275" cy="410" r="2.5" fill="#C0471F"/><text x="146" y="429" font-size="11" text-anchor="end" fill="#2A3540" font-weight="400" font-family="sans-serif">Mullion (behind)</text><line x1="296" y1="250" x2="370" y2="250" stroke="#C0471F" stroke-width="1"/><circle cx="296" cy="250" r="2.5" fill="#C0471F"/><text x="376" y="250" font-size="11" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">Glazing panel</text><text x="376" y="264" font-size="10" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">(double-glazed unit)</text><line x1="295" y1="120" x2="370" y2="120" stroke="#C0471F" stroke-width="1"/><circle cx="295" cy="120" r="2.5" fill="#C0471F"/><text x="376" y="124" font-size="11" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">Spandrel panel + insulation</text><line x1="282" y1="197" x2="370" y2="180" stroke="#C0471F" stroke-width="1"/><circle cx="282" cy="197" r="2.5" fill="#C0471F"/><text x="376" y="184" font-size="11" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">Transom</text><line x1="306" y1="300" x2="370" y2="300" stroke="#C0471F" stroke-width="1"/><circle cx="306" cy="300" r="2.5" fill="#C0471F"/><text x="376" y="304" font-size="11" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">Pressure plate + cap</text><line x1="302" y1="206" x2="370" y2="215" stroke="#C0471F" stroke-width="1"/><circle cx="302" cy="206" r="2.5" fill="#C0471F"/><text x="376" y="219" font-size="11" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">Gasket</text><text x="40" y="466" font-size="9.5" text-anchor="start" fill="#7A8794" font-weight="400" font-family="sans-serif">The wall hangs outside the slab edge</text><rect x="540" y="50" width="240" height="410" fill="#CFE3F2"/><rect x="540" y="50" width="240" height="140" fill="#4A5563"/><rect x="540" y="345" width="240" height="115" fill="#4A5563"/><path d="M556 290 L588 204 L600 204 L568 290 Z" fill="#fff" opacity=".35"/><path d="M636 290 L668 204 L680 204 L648 290 Z" fill="#fff" opacity=".35"/><path d="M716 290 L748 204 L760 204 L728 290 Z" fill="#fff" opacity=".35"/><rect x="536" y="50" width="8" height="410" fill="#8F99A4"/><rect x="616" y="50" width="8" height="410" fill="#8F99A4"/><rect x="696" y="50" width="8" height="410" fill="#8F99A4"/><rect x="776" y="50" width="8" height="410" fill="#8F99A4"/><rect x="540" y="190" width="240" height="7" fill="#8F99A4"/><rect x="540" y="297" width="240" height="7" fill="#8F99A4"/><rect x="540" y="345" width="240" height="7" fill="#8F99A4"/><line x1="620" y1="120" x2="795" y2="120" stroke="#C0471F" stroke-width="1"/><circle cx="620" cy="120" r="2.5" fill="#C0471F"/><text x="795" y="114" font-size="11" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">Mullion</text><line x1="660" y1="300" x2="795" y2="300" stroke="#C0471F" stroke-width="1"/><circle cx="660" cy="300" r="2.5" fill="#C0471F"/><text x="795" y="294" font-size="11" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">Transom</text><line x1="580" y1="250" x2="795" y2="250" stroke="#C0471F" stroke-width="1"/><circle cx="580" cy="250" r="2.5" fill="#C0471F"/><text x="795" y="244" font-size="11" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">Vision</text><text x="795" y="257" font-size="11" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">glass</text><line x1="740" y1="390" x2="795" y2="400" stroke="#C0471F" stroke-width="1"/><circle cx="740" cy="390" r="2.5" fill="#C0471F"/><text x="795" y="394" font-size="11" text-anchor="start" fill="#2A3540" font-weight="400" font-family="sans-serif">Spandrel</text><text x="795" y="407" font-size="10" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">(hides slab)</text></svg>
+  <figcaption>Curtain wall parts, stick system: vertical section at the slab edge (left) and outside elevation (right). Not to scale. Augmintech diagram.</figcaption>
+</figure>
+<div class="gl-parts">
+  <div><b>Anchor and bracket</b>Steel or aluminium fixings cast into or bolted to the slab edge; they let the wall move with the building.</div>
+  <div><b>Transom</b>The horizontal frame member between mullions, supporting the glass above it.</div>
+  <div><b>Glazing panel</b>Usually a double-glazed unit (DGU): two panes sealed around a gas-filled gap.</div>
+  <div><b>Spandrel panel</b>An opaque panel, often back-painted glass with insulation, that hides the slab and ceiling void.</div>
+  <div><b>Gasket</b>Rubber (EPDM) strips that seal the glass to the frame and keep water out.</div>
+  <div><b>Pressure plate and cap</b>The outside strip that clamps the glass to the frame, covered by a decorative cap.</div>
+  <div><b>Fire stop</b>The fire-rated seal between the slab edge and the wall, closing the gap between floors.</div>
+  <div><b>Vision glass</b>The clear glass zone between spandrels, at eye level.</div>
+</div>
+
+<h2 id="glass">Glass and Performance Basics</h2>
+<p>Most curtain walls use double glazing: two panes of glass sealed around a gap filled with air or argon. One pane carries a <strong>low-E coating</strong>, a microscopically thin metal layer that lets visible light through but reflects heat. When you read a glass datasheet, four numbers matter:</p>
+<div class="gm">
+  <div><b>U-value (Ug)</b>Heat flow through the glass, in W/m²K.<em>Lower is better</em></div>
+  <div><b>Solar factor (g) / SHGC</b>Share of the sun's heat that gets through.<em>Lower is better in hot climates</em></div>
+  <div><b>Light transmission</b>Share of visible light that gets through.<em>Higher means more daylight</em></div>
+  <div><b>Selectivity</b>Light transmission divided by solar factor.<em>Higher means more light per unit of heat</em></div>
+</div>
+<p>Solar factor (g) is the European measure under EN 410; solar heat gain coefficient (SHGC) is the North American equivalent, measured slightly differently. Here are two real solar control double-glazed units:</p>
+<div class="tbl-wrap glass">
+<table>
+  <thead><tr><th>Glass (double-glazed)</th><th>Build-up</th><th>Light transmission</th><th>Solar factor g</th><th>Ug (W/m²K)</th><th>Selectivity</th></tr></thead>
+  <tbody>
+    <tr><td>Saint-Gobain SGG Cool-Lite SKN 165</td><td>6 / 16 argon / 6</td><td>60%</td><td><div class="gbar"><i style="width:34px"></i>0.34</div></td><td>1.0 (air: 1.3)</td><td>1.76</td></tr>
+    <tr><td>Guardian SunGuard SuperNeutral SN 40/23</td><td>6 / 16 argon / 4</td><td>40%</td><td><div class="gbar"><i style="width:23px"></i>0.23</div></td><td>1.0</td><td>1.74</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Values from each maker's datasheet, calculated to EN 410 and EN 673 with 90% argon. Selectivity is light transmission divided by g. The SN 40/23 lets in a third less solar heat than SKN 165, at the cost of less daylight.</p>
+
+<h2 id="revit">How to Model a Curtain Wall in Revit</h2>
+<p>In Revit, a curtain wall is a wall type made of three parts that work together: <strong>curtain grids</strong> divide the wall, <strong>mullions</strong> sit on the grid lines, and <strong>curtain panels</strong> fill the spaces. Autodesk's help explains each.</p>
+<ol class="rv">
+  <li><div><b>Pick a curtain wall type.</b><span>Start the <span class="rv-path">Architecture › Wall</span> tool and choose a curtain wall type in the Type Selector. The default template includes Curtain Wall 1 (no grids), Exterior Glazing and Storefront.</span>
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/95-illustrative-curtain-wall-type-setup.webp" alt="Illustrative curtain wall type setup: panels, grid layout and mullions" width="1100" height="650" loading="lazy"></div></div></li>
+  <li><div><b>Set the type properties.</b><span>Choose the default Curtain Panel, the vertical and horizontal grid layout and spacing, and the interior and border mullion types. Join Condition sets whether vertical or horizontal mullions run continuously.</span></div></li>
+  <li><div><b>Draw the wall.</b><span>Sketch it like any wall, with base and top constraints. Tick Automatically Embed in the type if you want a curtain wall to sit inside a basic wall like a large window.</span></div></li>
+  <li><div><b>Add or edit curtain grids.</b><span>Use <span class="rv-path">Curtain Grid</span> with All Segments, One Segment or All Except Picked, and remove pieces with Add/Remove Segments. Un-pin grids that come from the type before editing them.</span></div></li>
+  <li><div><b>Add mullions.</b><span>Use <span class="rv-path">Mullion</span> and place them on a Grid Line, a Grid Line Segment or All Grid Lines. The mullion's <a href="https://augmintech.com/revit-families-explained-key-types-applications-and-emerging-trends/">profile family</a> controls its shape and size.</span>
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/95-illustrative-wall-boundary-curtain-grids.webp" alt="Illustrative wall boundary, curtain grids and mullions sequence" width="1100" height="650" loading="lazy"></div></div></li>
+  <li><div><b>Swap panels for spandrels, doors or custom panels.</b><span>Hover over a panel, press Tab until it highlights, select it and pick a new type: a solid or empty panel, a basic wall for a spandrel, or a curtain wall door. A door fills the whole panel, so add grids first to size the panel to the door.</span>
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/95-illustrative-curtain-wall-with-vision.webp" alt="Illustrative curtain wall with vision glass, spandrel and double-door panel" width="1100" height="650" loading="lazy"></div></div></li>
+  <li><div><b>Schedule it.</b><span>Because panels and mullions are real elements, you can schedule them for quantities, sizes and glass types, which a façade contractor will ask for.</span></div></li>
+</ol>
+
+<div class="dd">
+  <div class="no"><h3>The common mistake</h3><ul><li>Drawing glass as a basic wall with a "Glass" material, or as a row of window families</li><li>No mullions, no panels, nothing to schedule</li><li>Doors cannot be hosted properly, and energy and IFC exports read it as a solid wall</li></ul></div>
+  <div class="yes"><h3>Do this instead</h3><ul><li>Use a curtain wall type for vertical glazing</li><li>Use a Curtain System (by face) for sloped or curved glazing such as skylights</li><li>Keep spandrels, doors and vision glass as panel types you can swap and schedule</li></ul></div>
+</div>
+
+<div class="cta">
+  <div><h3>Model Façades the Way Practices Do</h3><p>Augmintech's BIM Architecture program teaches building information modelling for architecture, including walls, façades and the schedules that come out of them. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">View the BIM Architecture program</a></div>
+</div>
+
+<h2 id="gulf">Curtain Walls on Gulf Projects</h2>
+<p>Many of the glass towers students will model are in Dubai, Abu Dhabi and Riyadh. A 2025 study of Dubai façades (Salih, Emirati Journal of Civil Engineering and Applications) notes that the city's skyline is defined by the extensive use of glass in its towers, and that glass selection is key to thermal performance, solar gain and indoor comfort. In that sun, solar control glass is not optional.</p>
+<div class="gq">
+  <div><b>Low solar factor</b>Choose glass with a low g or SHGC. In the table above, 0.23 against 0.34 means about a third less solar heat through every square metre.</div>
+  <div><b>Codes set limits</b>Dubai's Green Building Regulations and Specifications (2017) list a maximum SHGC among their mandatory requirements, per the World Bank's code database. Abu Dhabi uses Estidama and Saudi Arabia the Saudi Building Code energy requirements.</div>
+  <div><b>Check the current values</b>Limits depend on building type and glazing ratio, and are revised. Take the actual U-value and SHGC limits from the current code text before you specify glass.</div>
+</div>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/95-spider-pointfixed-glazing-in-a.webp" alt="Spider point-fixed glazing in a lobby" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Spider glazing: drilled glass held by stainless steel fittings on glass fins. <span class="image-credit">AI-generated architectural illustration.</span></figcaption>
+</figure>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What is a curtain wall?</div><div class="faq-a">A curtain wall is a non-load-bearing outer wall, usually glass in an aluminium frame, hung from the building's structure. It carries only its own weight and wind loads, passing them to the floor slabs through brackets and anchors.</div></div>
+<div class="faq-item"><div class="faq-q">What is a mullion in a curtain wall?</div><div class="faq-a">A mullion is the main vertical member of the curtain wall frame. It spans between floors, holds the glass with the horizontal transoms, and transfers wind and self-weight to the structure through brackets.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between stick and unitised curtain walls?</div><div class="faq-a">A stick curtain wall is assembled on site piece by piece: mullions, transoms, then glass. A unitised curtain wall arrives as factory-built, glazed panels that are lifted onto slab brackets. Unitised has higher direct costs but encloses the building faster with fewer site joints.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between a curtain wall and a window wall?</div><div class="faq-a">A curtain wall hangs outside the floor slabs and runs continuously past them. A window wall sits between the slabs, floor by floor, leaving the slab edges to be covered separately.</div></div>
+<div class="faq-item"><div class="faq-q">How do you make a curtain wall in Revit?</div><div class="faq-a">Use the Wall tool with a curtain wall type, set its grid spacing and mullion types in Type Properties, draw it like a wall, then add curtain grids and mullions and swap panels for spandrels or doors as needed.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Designing Buildings</strong>, <a href="https://www.designingbuildings.co.uk/wiki/Curtain_wall_glazing" target="_blank" rel="noopener">Curtain wall glazing</a>.</li>
+  <li><strong>Building Design CPD</strong>, <a href="https://www.bdonline.co.uk/cpd/cpd-20-2018-aluminium-curtain-walling/5096029.article" target="_blank" rel="noopener">Aluminium curtain walling</a> (2018).</li>
+  <li><strong>Kovach</strong>, <a href="https://www.kovach.net/understanding-window-wall-curtain-wall/" target="_blank" rel="noopener">Understanding curtain wall and window wall systems</a>.</li>
+  <li><strong>Dimensions.com</strong>, <a href="https://dimensions.com/element/curtain-wall-glazed-spider-fin" target="_blank" rel="noopener">Curtain wall: glazed, spider, fin</a>.</li>
+  <li><strong>Saint-Gobain</strong>, <a href="https://interglas.se/images/varegrupper/termoruder/cool-lite_skn_165.pdf" target="_blank" rel="noopener">SGG Cool-Lite SKN 165 datasheet</a>; <strong>Guardian Glass</strong>, <a href="https://www.guardianglass.com/eu/en/our-glass/sunguard-superneutral/sn-40-23" target="_blank" rel="noopener">SunGuard SuperNeutral SN 40/23</a>.</li>
+  <li><strong>Autodesk</strong>, <a href="https://help.autodesk.com/cloudhelp/2026/ENU/Revit-HaveYouTried/files/GUID-43DA0959-A541-459F-8370-C5149433FFB4.htm" target="_blank" rel="noopener">Curtain wall editing (Revit 2026 help)</a>.</li>
+  <li><strong>Salih, N. (2025)</strong>, <a href="https://emiratesscholar.com/directory/index.php/ejcea/article/view/1186" target="_blank" rel="noopener">Glass facades, variable and Dubai's climate</a>, Emirati Journal of Civil Engineering and Applications 3(2).</li>
+  <li><strong>World Bank</strong>, <a href="https://www.worldbank.org/en/building-green/explorecountries/united-arab-emirates" target="_blank" rel="noopener">Building energy codes: United Arab Emirates</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 7 November 2026.</p>
+</div>
+<dialog id="zoom95" aria-label="Enlarged curtain wall visual"><button type="button">Close</button><img alt=""></dialog><script>(()=>{const d=document.getElementById('zoom95'),out=d.querySelector('img');if(!d.showModal)return;d.querySelector('button').onclick=()=>d.close();d.addEventListener('click',e=>{if(e.target===d)d.close();});document.querySelectorAll('.blog .ph img,.dfig svg').forEach(el=>{el.tabIndex=0;el.title='Click to enlarge';const open=()=>{out.alt=el.alt||el.getAttribute('aria-label')||'Curtain wall diagram';out.src=el.tagName.toLowerCase()==='svg'?'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(el)):el.src;d.showModal();};el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});});})();</script>

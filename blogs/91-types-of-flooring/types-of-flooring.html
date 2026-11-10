@@ -1,0 +1,393 @@
+<style>
+#aug-types-of-flooring{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-types-of-flooring *,#aug-types-of-flooring *::before,#aug-types-of-flooring *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-types-of-flooring{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-types-of-flooring.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-types-of-flooring .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-types-of-flooring .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-types-of-flooring .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-types-of-flooring .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-types-of-flooring .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-types-of-flooring .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-types-of-flooring h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-types-of-flooring h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-types-of-flooring p{margin-bottom:.9rem;font-size:16px;}
+#aug-types-of-flooring a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-types-of-flooring a:hover{border-color:var(--brand);}
+#aug-types-of-flooring hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-types-of-flooring .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-types-of-flooring .chart svg{width:100%;height:auto;display:block;}
+#aug-types-of-flooring .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-types-of-flooring .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-types-of-flooring .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-types-of-flooring .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-types-of-flooring .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-types-of-flooring .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-types-of-flooring .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-types-of-flooring table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-types-of-flooring caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-types-of-flooring thead tr{background:var(--slate);color:#fff;}
+#aug-types-of-flooring thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-types-of-flooring tbody tr:nth-child(even){background:var(--surface);}
+#aug-types-of-flooring tbody tr:hover{background:var(--brand-lite);}
+#aug-types-of-flooring td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-types-of-flooring td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-types-of-flooring tbody tr.hl{background:var(--green-lite)!important;}
+#aug-types-of-flooring tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-types-of-flooring ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-types-of-flooring ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-types-of-flooring .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-types-of-flooring .cta-green{background:var(--slate);}
+#aug-types-of-flooring .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-types-of-flooring .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-types-of-flooring .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-types-of-flooring .cta-btn-blue{color:var(--brand);}#aug-types-of-flooring .cta-btn-green{color:var(--slate);}
+#aug-types-of-flooring figure{margin:1.5rem 0;}
+#aug-types-of-flooring figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-types-of-flooring figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-types-of-flooring dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-types-of-flooring dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-types-of-flooring dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-types-of-flooring .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-types-of-flooring .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-types-of-flooring .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-types-of-flooring .srcs{list-style:none;padding:0;}
+#aug-types-of-flooring .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-types-of-flooring .srcs li:last-child{border-bottom:none;}
+
+/* ===== snippet list ===== */#aug-types-of-flooring .six{list-style:none;counter-reset:f;margin:1.2rem 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+#aug-types-of-flooring .six li{counter-increment:f;position:relative;padding:.7rem .8rem .7rem 2.9rem;border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff;font-size:13.5px;line-height:1.5;color:var(--ink-mid);}
+#aug-types-of-flooring .six li::before{content:counter(f);position:absolute;left:.7rem;top:.7rem;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--display);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+#aug-types-of-flooring .six li b{display:block;font-family:var(--display);font-size:15px;color:var(--ink);}
+
+/* ===== main table ===== */#aug-types-of-flooring .ft table{font-size:13px;}
+#aug-types-of-flooring .ft th,#aug-types-of-flooring .ft td{padding-left:8px;padding-right:8px;vertical-align:top;}
+#aug-types-of-flooring .ft .pr{font-family:var(--mono);font-size:12.5px;color:var(--ink);}
+#aug-types-of-flooring .ft .pr small{display:block;font-size:11px;color:var(--muted);margin-top:2px;}
+#aug-types-of-flooring .wr{display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:9px;white-space:nowrap;}
+#aug-types-of-flooring .wr.lo{background:#FBE7DF;color:#9A3B1E;} #aug-types-of-flooring .wr.md{background:#FBF1DC;color:#8A5A00;} #aug-types-of-flooring .wr.hi{background:#DDF1E6;color:#1D6B43;}
+
+/* ===== figures ===== */#aug-types-of-flooring .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-types-of-flooring .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-types-of-flooring figure.pf{margin:1.2rem 0;} #aug-types-of-flooring figure.pf figcaption{font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-types-of-flooring .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-types-of-flooring .dfig svg{display:block;width:100%;height:auto;}
+#aug-types-of-flooring .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;}
+
+/* ===== split pros/cons ===== */#aug-types-of-flooring .pc{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1rem 0 1.2rem;}
+#aug-types-of-flooring .pc>div{border-radius:var(--radius-sm);padding:.75rem .9rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-types-of-flooring .pc .p{background:#EEF6F2;border-top:3px solid var(--green);} #aug-types-of-flooring .pc .c{background:#FDF1EC;border-top:3px solid var(--coral);}
+#aug-types-of-flooring .pc b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:.3rem;}
+#aug-types-of-flooring .pc .p b{color:var(--green);} #aug-types-of-flooring .pc .c b{color:#9A3B1E;}
+#aug-types-of-flooring .pc ul{margin:0;padding-left:1.05rem;} #aug-types-of-flooring .pc li{margin-bottom:.25rem;}
+
+/* ===== sanding meter ===== */#aug-types-of-flooring .sand{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:1rem 0;}
+#aug-types-of-flooring .sand div{border:1px solid var(--border);border-radius:var(--radius-sm);padding:.6rem .7rem;background:#fff;}
+#aug-types-of-flooring .sand i{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted);display:block;}
+#aug-types-of-flooring .sand b{display:block;font-family:var(--display);font-size:17px;color:var(--ink);margin:.1rem 0 .35rem;}
+#aug-types-of-flooring .sand span{display:flex;gap:3px;}
+#aug-types-of-flooring .sand span s{display:block;width:14px;height:14px;border-radius:3px;background:#E6E1D8;}
+#aug-types-of-flooring .sand span s.on{background:#B07B4F;}
+
+/* ===== vinyl formats ===== */#aug-types-of-flooring .vf{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1.1rem 0;}
+#aug-types-of-flooring .vfc{border:1px solid var(--border);border-radius:var(--radius);padding:.85rem .9rem;background:#fff;}
+#aug-types-of-flooring .vfc h3{margin:0 0 .3rem;font-size:16px;}
+#aug-types-of-flooring .vfc .tg{font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--brand);}
+#aug-types-of-flooring .vfc p{margin:.3rem 0 0;font-size:13.5px;line-height:1.55;color:var(--ink-mid);}
+#aug-types-of-flooring .wl{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+#aug-types-of-flooring .wl-r{display:grid;grid-template-columns:110px 1fr;align-items:center;border-bottom:1px solid var(--border);}
+#aug-types-of-flooring .wl-r:last-child{border-bottom:none;}
+#aug-types-of-flooring .wl-r>b{padding:.6rem .8rem;font-family:var(--mono);font-size:13px;background:var(--surface);height:100%;display:flex;align-items:center;}
+#aug-types-of-flooring .wl-r>div{padding:.5rem .8rem;font-size:13.5px;line-height:1.5;color:var(--ink-mid);}
+#aug-types-of-flooring .wl-r .bar{height:8px;border-radius:4px;background:var(--teal);margin-bottom:.35rem;}
+
+/* ===== AC ladder ===== */#aug-types-of-flooring .ac{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:1.1rem 0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);align-items:stretch;background:#fff;}
+#aug-types-of-flooring .ac div{padding:.6rem .6rem .7rem;font-size:12.5px;line-height:1.45;color:var(--ink-mid);border-right:1px solid var(--border);}
+#aug-types-of-flooring .ac div:last-child{border-right:none;}
+#aug-types-of-flooring .ac b{display:block;font-family:var(--display);font-size:18px;color:#fff;margin:-.6rem -.6rem .5rem;padding:.4rem .6rem;}
+#aug-types-of-flooring .ac div:nth-child(1) b{background:#9FB7C9;} #aug-types-of-flooring .ac div:nth-child(2) b{background:#7C9CB4;} #aug-types-of-flooring .ac div:nth-child(3) b{background:#5A809E;} #aug-types-of-flooring .ac div:nth-child(4) b{background:#3B6587;} #aug-types-of-flooring .ac div:nth-child(5) b{background:#1F4A6E;}
+#aug-types-of-flooring .ac i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--muted);display:block;margin-top:.25rem;}
+
+/* ===== vs mini ===== */#aug-types-of-flooring .lvv{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.1rem 0;}
+#aug-types-of-flooring .lvv-r{display:grid;grid-template-columns:130px 1fr 1fr;border-bottom:1px solid var(--border);}
+#aug-types-of-flooring .lvv-r:last-child{border-bottom:none;}
+#aug-types-of-flooring .lvv-r>div{padding:.55rem .75rem;font-size:13.5px;line-height:1.5;color:var(--ink-mid);}
+#aug-types-of-flooring .lvv-r>div+div{border-left:1px solid var(--border);}
+#aug-types-of-flooring .lvv-r>div:first-child{font-weight:700;color:var(--ink);background:var(--surface);font-size:13px;}
+#aug-types-of-flooring .lvv-h>div{font-family:var(--display);font-weight:800;color:#fff!important;font-size:15px!important;}
+#aug-types-of-flooring .lvv-h>div:nth-child(1){background:var(--ink)!important;} #aug-types-of-flooring .lvv-h>div:nth-child(2){background:#8C6E4E;} #aug-types-of-flooring .lvv-h>div:nth-child(3){background:#5A6E80;}
+
+/* ===== stone cards ===== */#aug-types-of-flooring .st{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-types-of-flooring .stc{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-types-of-flooring .stc .ph{border:none;border-bottom:1px solid var(--border);border-radius:0;}
+#aug-types-of-flooring .stc>div:last-child{padding:.75rem .9rem .85rem;}
+#aug-types-of-flooring .stc h3{margin:0 0 .3rem;font-size:16px;}
+#aug-types-of-flooring .stc p{margin:0;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-types-of-flooring .stc .pr{display:block;margin-top:.45rem;font-family:var(--mono);font-size:11.5px;color:var(--ink);}
+
+/* ===== room table ===== */#aug-types-of-flooring .rm td:first-child{font-weight:700;white-space:nowrap;}
+#aug-types-of-flooring .rm .no{color:#9A3B1E;}
+
+/* ===== gulf ===== */#aug-types-of-flooring .gf{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1.1rem 0;}
+#aug-types-of-flooring .gf div{border-radius:var(--radius-sm);padding:.75rem .85rem;background:#FBF4E8;border:1px solid #EFD9B4;font-size:13.5px;line-height:1.55;color:var(--ink-mid);}
+#aug-types-of-flooring .gf b{display:block;font-family:var(--display);font-size:15px;color:#8A5A00;margin-bottom:.2rem;}
+#aug-types-of-flooring .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+
+@media(max-width:640px){
+  #aug-types-of-flooring .six{grid-template-columns:1fr 1fr;}
+  #aug-types-of-flooring .ft table{min-width:720px;}
+  #aug-types-of-flooring .pc,#aug-types-of-flooring .st{grid-template-columns:1fr;}
+  #aug-types-of-flooring .sand{grid-template-columns:1fr 1fr;}
+  #aug-types-of-flooring .vf,#aug-types-of-flooring .gf{grid-template-columns:1fr;}
+  #aug-types-of-flooring .ac{grid-template-columns:1fr;} #aug-types-of-flooring .ac div{border-right:none;border-bottom:1px solid var(--border);}
+  #aug-types-of-flooring .lvv-r{grid-template-columns:86px 1fr 1fr;} #aug-types-of-flooring .lvv-r>div{font-size:12.5px;padding:.5rem .5rem;}
+  #aug-types-of-flooring .rm table{min-width:560px;}
+  #aug-types-of-flooring .dfig.wide{overflow-x:auto;} #aug-types-of-flooring .dfig.wide svg{min-width:640px;}
+  #aug-types-of-flooring .cta{flex-direction:column;align-items:flex-start;}
+  #aug-types-of-flooring .cta>div{max-width:100%;} #aug-types-of-flooring .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-types-of-flooring .cta>div:last-child .cta-btn{margin-left:0;}
+}
+
+#aug-types-of-flooring .ph{aspect-ratio:auto}#aug-types-of-flooring .ph img{position:static;height:auto;object-fit:contain;cursor:zoom-in}#aug-types-of-flooring .dfig img{width:100%;height:auto;display:block;cursor:zoom-in}#aug-types-of-flooring .dfig figcaption,#aug-types-of-flooring figcaption{font-family:var(--body);font-size:13px;line-height:1.65}#aug-types-of-flooring .ac{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;border:0}#aug-types-of-flooring .ac div{border:1px solid var(--border);border-radius:8px;overflow:hidden;line-height:1.65}#aug-types-of-flooring .ac div:nth-child(1) b,#aug-types-of-flooring .ac div:nth-child(2) b{color:#142e42}#aug-types-of-flooring .cta-btn{white-space:normal;display:inline-block}#aug-types-of-flooring .lvv-r>div{min-width:0;overflow-wrap:anywhere}#aug-types-of-flooring .visual-note{font-size:12px;color:#667a88}
+#aug-types-of-flooring #zoom91{padding:16px;border:0;border-radius:12px;max-width:96vw;max-height:94vh;margin:auto}#aug-types-of-flooring #zoom91::backdrop{background:#142a3cdd}#aug-types-of-flooring #zoom91 img{display:block;max-width:90vw;max-height:80vh;object-fit:contain}#aug-types-of-flooring #zoom91 button{display:block;margin:0 0 10px auto;padding:10px 18px;background:#173d54;color:white;border:0;border-radius:6px;cursor:pointer}
+@media(max-width:640px){#aug-types-of-flooring.blog{padding:1.5rem 1rem 4rem}#aug-types-of-flooring .ac{grid-template-columns:1fr 1fr}#aug-types-of-flooring .cta{padding:1.1rem}#aug-types-of-flooring .st{grid-template-columns:1fr}}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-types-of-flooring.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-types-of-flooring h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-types-of-flooring a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-types-of-flooring a:hover{color:#18d104;}
+#aug-types-of-flooring .cta{background:#1a1a1a;}
+#aug-types-of-flooring .cta a.cta-btn{text-decoration:none;}
+#aug-types-of-flooring .cta-btn-blue{background:#18d104;color:#000;}
+#aug-types-of-flooring .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-types-of-flooring [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-types-of-flooring">
+
+
+<p><strong>The six common types of flooring are solid wood, engineered wood, laminate, vinyl, tiles and marble.</strong> They differ most in cost, how they handle water and how much upkeep they need. This guide gives you one neutral comparison table with dated Indian prices, then a section on each type and a room-by-room table, so you can pick floors for each room of a home or project without wading through product pitches.</p>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Vitrified tiles are India's all-rounder:</strong> water-resistant, hard-wearing and about ₹100 to ₹170 per sq ft installed.</li>
+  <li><strong>Wood, solid or engineered, is the warmest and the dearest,</strong> at ₹380 to ₹820+ per sq ft installed, and belongs in dry rooms.</li>
+  <li><strong>Laminate looks like wood at about half the price</strong> but its fibreboard core swells if water stands on it.</li>
+  <li><strong>SPC vinyl is waterproof and clicks together,</strong> which makes it the easy wood-look option for kitchens and offices.</li>
+  <li><strong>Marble needs polishing every 3 to 4 years;</strong> granite is tougher but gets slippery when wet and polished.</li>
+  <li><strong>In Gulf homes, porcelain tiles, marble and SPC handle heat, sand and constant AC better than solid wood.</strong></li>
+</ul>
+
+<h2 id="compared">6 Types of Flooring Compared</h2>
+<ol class="six">
+  <li><b>Solid wood</b>Planks cut from one piece of timber</li>
+  <li><b>Engineered wood</b>Real wood veneer on a plywood core</li>
+  <li><b>Laminate</b>Photo of wood on a fibreboard core</li>
+  <li><b>Vinyl</b>PVC sheet, tile or rigid SPC plank</li>
+  <li><b>Tiles</b>Vitrified and ceramic</li>
+  <li><b>Marble</b>Natural stone, plus granite</li>
+</ol>
+
+<p>Prices below come from two dated Indian sources. HouseYog's figures are installed (material plus labour); JK Cement's are material only, so they run lower. Neither includes skirting, wastage or adhesive.</p>
+
+<div class="tbl-wrap ft">
+<table>
+  <thead><tr><th>Type</th><th>Cost per sq ft (India)</th><th>Life / durability</th><th>Water resistance</th><th>Maintenance</th><th>Best rooms</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Solid wood</strong></td><td class="pr">₹380–820+ installed<small>JK Cement: not listed</small></td><td>High; can be resanded many times</td><td><span class="wr lo">Low</span></td><td>Polish; sand and refinish when worn</td><td>Bedrooms, living rooms</td></tr>
+    <tr><td><strong>Engineered wood</strong></td><td class="pr">₹380–820+ installed<small>JK Cement: ₹200–450 material</small></td><td>High; resanding limited by veneer</td><td><span class="wr lo">Low</span></td><td>As solid wood, fewer sandings</td><td>Bedrooms, AC living rooms</td></tr>
+    <tr><td><strong>Laminate</strong></td><td class="pr">₹160–300 installed<small>JK Cement: not listed</small></td><td>Medium; set by AC rating</td><td><span class="wr md">Splashes only</span></td><td>Dry mop; replace damaged planks</td><td>Bedrooms, study, offices</td></tr>
+    <tr><td><strong>Vinyl (SPC)</strong></td><td class="pr">₹70–160 installed (all vinyl)<small>JK Cement: SPC ₹100–250 material</small></td><td>Medium; SPC 15–20 years</td><td><span class="wr hi">High</span></td><td>Sweep and mop; replace planks</td><td>Kitchens, offices, rentals</td></tr>
+    <tr><td><strong>Tiles</strong></td><td class="pr">Vitrified ₹100–170, ceramic ₹65–110 installed<small>JK Cement: ₹80–150 / ₹40–90 material</small></td><td>Vitrified high; ceramic medium</td><td><span class="wr hi">Very high</span></td><td>Mop; clean grout lines</td><td>Every room; wet areas</td></tr>
+    <tr><td><strong>Marble</strong></td><td class="pr">Indian ₹120–230, imported ₹280–600+ installed<small>JK Cement: ₹200–500+ material</small></td><td>High to very high</td><td><span class="wr md">Medium; stains</span></td><td>Seal; polish every 3–4 years</td><td>Living, dining, lobbies</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Installed prices: HouseYog, updated 18 April 2026 (solid and engineered wood share one range there). Material prices: JK Cement, 3 March 2026. Durability ratings are HouseYog's; the only lifespan in years (SPC 15 to 20 years) is JK Cement's. Marble polishing costs ₹25–40 per sq ft each time (HouseYog). Vitrified tile water absorption is 0.5% or less under ISO 13006.</p>
+
+<div class="cta">
+  <div><h3>Plan Floor Finishes in a BIM Model</h3><p>Augmintech's BIM Architecture program teaches building information modelling for architecture, where floor types, finish schedules and quantities come out of the same model as the drawings. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">View the BIM Architecture program</a></div>
+</div>
+
+<figure class="dfig wide">
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/91-detailed-layer-comparison-of-solid.webp" alt="Detailed layer comparison of solid wood, engineered wood, laminate and SPC vinyl planks" loading="lazy">
+  <figcaption>How the four plank floors are built. Layers are not to scale. Augmintech diagram.</figcaption>
+</figure>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="wooden">Wooden Flooring</h2><p class="visual-note">Interior and product images are AI-generated illustrations. Click any image to enlarge.</p>
+<p>Wooden flooring comes in two forms, and the difference matters more than the species.</p>
+<p><strong>Solid wood</strong> is a plank cut from a single piece of timber. Because it is wood all the way through, it can be sanded and refinished many times over its life. <strong>Engineered wood</strong> has a thin top layer of real hardwood, the veneer or wear layer, glued onto a cross-laminated plywood core. From above, the two look identical. The layered core moves less than a solid plank as humidity changes, which is why engineered boards are preferred over <a href="https://augmintech.com/heat-transfer/">underfloor heating</a>.</p>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/91-solid-wood-flooring-in-a.webp" alt="Solid wood flooring in a bedroom" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Solid wood: one piece of timber, top to bottom.</figcaption>
+</figure>
+
+<p>How often you can resand an engineered floor depends on the veneer. The Wooden Floor Store estimates that each sanding removes about 1 mm:</p>
+<div class="sand">
+  <div><i>Veneer under 2 mm</i><b>0 sandings</b><span><s></s><s></s><s></s><s></s></span></div>
+  <div><i>2–3 mm</i><b>1, with care</b><span><s class="on"></s><s></s><s></s><s></s></span></div>
+  <div><i>3–4 mm</i><b>About 2</b><span><s class="on"></s><s class="on"></s><s></s><s></s></span></div>
+  <div><i>4 mm and over</i><b>2 to 4</b><span><s class="on"></s><s class="on"></s><s class="on"></s><s class="on"></s></span></div>
+</div>
+<p class="note">Specs are written as total/veneer thickness: 15/4 means a 4 mm veneer on a 15 mm board.</p>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/91-engineered-wood-flooring-plank-showing.webp" alt="Engineered wood flooring plank showing veneer and plywood core" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Engineered wood: a hardwood veneer on a plywood core.</figcaption>
+</figure>
+
+<div class="pc">
+  <div class="p"><b>Pros</b><ul><li>Warm, quiet and real wood underfoot</li><li>Can be refinished (solid: many times)</li><li>Adds resale appeal</li></ul></div>
+  <div class="c"><b>Cons</b><ul><li>The priciest floor here, alongside imported marble</li><li>Swells, cups or stains with water</li><li>Scratches from grit and pet claws</li></ul></div>
+</div>
+<p><strong>Why bedrooms, not bathrooms:</strong> bedrooms are dry, often air-conditioned and see light foot traffic, which is where wood lasts. Bathrooms and kitchens bring standing water and steam. JK Cement notes that engineered wood swells with moisture unless it is laid over a vapour barrier, and recommends it only for dry, air-conditioned rooms.</p>
+
+<h2 id="vinyl">Vinyl Flooring</h2>
+<p>Vinyl flooring is made from PVC with a printed design and a clear wear layer on top. It comes in three formats.</p>
+<div class="vf">
+  <div class="vfc"><span class="tg">Rolls</span><h3>Sheet vinyl</h3><p>Wide rolls glued to the subfloor with few seams. Cheapest, and common in clinics, labs and budget rooms.</p></div>
+  <div class="vfc"><span class="tg">Flexible planks</span><h3>LVT / LVP</h3><p>Luxury vinyl tiles and planks, thin and flexible, usually glued down. Wood and stone looks.</p></div>
+  <div class="vfc"><span class="tg">Rigid click</span><h3>SPC</h3><p>Stone-plastic composite core makes a rigid plank that clicks together over a flat floor. Marketed as waterproof.</p></div>
+</div>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/91-spc-vinyl-flooring-in-a.webp" alt="SPC vinyl flooring in a kitchen" width="1200" height="675" loading="lazy"></div>
+  <figcaption>SPC vinyl: rigid click planks with a waterproof core.</figcaption>
+</figure>
+
+<p>The <strong>wear layer</strong> is the clear top film that takes the scuffs, and its thickness tells you where a vinyl floor can go. Alpine Floor's guide (June 2026) breaks it down like this:</p>
+<div class="wl">
+  <div class="wl-r"><b>0.3 mm</b><div><div class="bar" style="width:40%"></div>Bedrooms, living rooms, apartments and rentals; light retail</div></div>
+  <div class="wl-r"><b>0.5 mm</b><div><div class="bar" style="width:68%"></div>Kitchens, hallways, small offices; the usual commercial standard</div></div>
+  <div class="wl-r"><b>0.7 mm</b><div><div class="bar" style="width:95%"></div>Heavy commercial: retail floors, public corridors, hospitals, schools</div></div>
+</div>
+<p>Vinyl's weak points are that it cannot be sanded or refinished, cheaper products can dent under heavy furniture, and quality varies widely between brands, so check the datasheet for the wear layer and core type before buying.</p>
+
+<h2 id="laminate">Laminate Flooring</h2>
+<p>Laminate flooring is a photograph of wood or stone sealed under a hard, clear overlay and bonded to a high-density fibreboard (HDF) core, with a balancing layer underneath (see the diagram above). The planks click together and float over an underlay.</p>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/91-laminate-flooring-planks-with-hdf.webp" alt="Laminate flooring planks with HDF core" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Laminate: a wood image on a fibreboard core, clicked together over an underlay.</figcaption>
+</figure>
+
+<p>Laminate is graded by an <strong>AC (abrasion class) rating</strong> from the Association of European Producers of Laminate Flooring. The higher the number, the more traffic it takes:</p>
+<div class="ac">
+  <div><b>AC1</b>Light home use: bedrooms<i>Class 21</i></div>
+  <div><b>AC2</b>Average home use: living, dining<i>Class 22</i></div>
+  <div><b>AC3</b>Heavy home or light commercial<i>Class 23 / 31</i></div>
+  <div><b>AC4</b>Average commercial: shops, lobbies<i>Class 32</i></div>
+  <div><b>AC5</b>Heavy commercial: malls, classrooms<i>Class 33</i></div>
+</div>
+<p class="note">Ratings and use classes as summarised by Bricoflor. In the class number, 2 means residential and 3 commercial; the second digit runs from light (1) to heavy (3).</p>
+
+<h3>Laminate vs vinyl</h3>
+<p>Both are wood-look click planks, so this is the most common shortlist. The deciding question is water.</p>
+<div class="lvv">
+  <div class="lvv-r lvv-h"><div></div><div>Laminate</div><div>Vinyl (SPC)</div></div>
+  <div class="lvv-r"><div>Core</div><div>HDF fibreboard</div><div>Rigid stone-plastic composite</div></div>
+  <div class="lvv-r"><div>Water</div><div>Handles spills wiped quickly; swells with standing water</div><div>Waterproof core</div></div>
+  <div class="lvv-r"><div>Wear rating</div><div>AC1 to AC5</div><div>Wear layer in mm (0.3 to 0.7)</div></div>
+  <div class="lvv-r"><div>Installed cost</div><div>₹160–300 per sq ft</div><div>₹70–160 per sq ft (all vinyl)</div></div>
+  <div class="lvv-r"><div>Best for</div><div>Bedrooms, study, dry offices</div><div>Kitchens, utility, offices, rentals</div></div>
+</div>
+<p>Choose laminate for dry rooms where you want a firm, wood-like board with a high AC rating. Choose SPC anywhere water is likely.</p>
+
+<h2 id="tiles-marble">Tiles and Marble</h2>
+<p>Tiles and stone are still India's most common floors, because they shrug off water, heat and heavy cleaning.</p>
+<div class="st">
+  <div class="stc">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/91-vitrified-tiles-flooring-in-a.webp" alt="Vitrified tiles flooring in a living room" width="1200" height="675" loading="lazy"></div>
+    <div><h3>Vitrified tiles</h3><p>Fired until glass-like, absorbing 0.5% water or less. Hard, stain-resistant and suitable for every room; choose matt or anti-skid in wet areas.</p><span class="pr">₹100–170 installed (HouseYog)</span></div>
+  </div>
+  <div class="stc">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/91-ceramic-tiles-flooring-in-a.webp" alt="Ceramic tiles flooring in a bathroom" width="1200" height="675" loading="lazy"></div>
+    <div><h3>Ceramic tiles</h3><p>Cheaper and more porous than vitrified, so better for walls, bathrooms and light-traffic floors than for busy halls.</p><span class="pr">₹65–110 installed (HouseYog)</span></div>
+  </div>
+  <div class="stc">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/91-marble-flooring-in-a-living.webp" alt="Marble flooring in a living room" width="1200" height="675" loading="lazy"></div>
+    <div><h3>Marble</h3><p>Natural stone with unique veining. Indian marble such as Makrana costs far less than imported Italian or Turkish stone. It is porous, so seal it, and wipe spills such as lemon juice quickly.</p><span class="pr">₹120–230 Indian, ₹280–600+ imported, installed (HouseYog)</span></div>
+  </div>
+  <div class="stc">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/91-granite-flooring-on-a-staircase.webp" alt="Granite flooring on a staircase" width="1200" height="675" loading="lazy"></div>
+    <div><h3>Granite</h3><p>Harder than marble and rated very high for durability. Used on stairs, entrances and balconies; a highly polished finish gets slippery when wet.</p><span class="pr">₹130–350 installed (HouseYog)</span></div>
+  </div>
+</div>
+
+<h2 id="rooms">Which Floor for Which Room</h2>
+<div class="tbl-wrap rm">
+<table>
+  <thead><tr><th>Room</th><th>Recommended</th><th>Why</th><th>Avoid</th></tr></thead>
+  <tbody>
+    <tr><td>Living room</td><td>Vitrified tiles, marble, or engineered wood if air-conditioned</td><td>Heavy traffic and a large visible area</td><td class="no">Ceramic in busy halls</td></tr>
+    <tr><td>Bedroom</td><td>Engineered wood, laminate (AC3+), solid wood</td><td>Dry, quiet and warmer underfoot</td><td class="no">Polished stone if you want warmth</td></tr>
+    <tr><td>Kitchen</td><td>Matt vitrified tiles or SPC vinyl</td><td>Water, oil spills and frequent mopping</td><td class="no">Solid wood, laminate</td></tr>
+    <tr><td>Bathroom</td><td>Anti-skid vitrified or ceramic tiles</td><td>Constant water; floor must drain</td><td class="no">Wood, laminate</td></tr>
+    <tr><td>Balcony</td><td>Outdoor-rated vitrified tiles or flamed granite</td><td>Sun, rain and grip when wet</td><td class="no">Wood, laminate, indoor vinyl</td></tr>
+    <tr><td>Office</td><td>SPC or LVT with 0.5 mm wear layer, or AC4 laminate</td><td>Rolling chairs and steady foot traffic</td><td class="no">AC1–AC2 laminate</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="gulf">Flooring for Gulf Homes</h2>
+<p>UAE and Saudi homes put floors through conditions Indian homes rarely face at the same time: outdoor summer temperatures that regularly exceed 45°C, fine sand tracked indoors, and <a href="https://augmintech.com/types-of-hvac-systems/">air conditioning</a> that runs most of the year. Dubai flooring contractor Floorworld (July 2026) points to the constant swing between outdoor heat and air-conditioned interiors as the reason to match the material to the climate.</p>
+<div class="gf">
+  <div><b>Heat and sun</b>Porcelain and vitrified tiles have low thermal movement and do not fade under UV, which is why tile suppliers recommend them for terraces and sunlit rooms.</div>
+  <div><b>Sand</b>Fine sand acts like sandpaper on soft surfaces. Pick a thick vinyl wear layer or an AC4 laminate, and put mats at every entrance.</div>
+  <div><b>AC humidity swings</b>Wood moves as indoor humidity changes. Solid wood is the riskiest; engineered wood is safer if it is acclimatised and the AC keeps rooms steady.</div>
+</div>
+<p>In practice that points to porcelain tiles or marble for living areas and wet rooms, with SPC vinyl as the wood-look choice. Solid wood is best kept to well-sealed, air-conditioned bedrooms, if used at all.</p>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">Which type of flooring is best for home in India?</div><div class="faq-a">Vitrified tiles are the best all-round choice for most Indian homes: they resist water and stains, take heavy cleaning and cost about ₹100 to ₹170 per sq ft installed. Add engineered wood or laminate in bedrooms if you want warmth underfoot.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between vinyl and laminate flooring?</div><div class="faq-a">Laminate has a fibreboard (HDF) core and is rated AC1 to AC5 for wear; it swells if water stands on it. Vinyl is made from PVC, rated by wear layer thickness, and SPC vinyl has a waterproof rigid core, so it suits kitchens and other wet-prone rooms.</div></div>
+<div class="faq-item"><div class="faq-q">Is wooden flooring good for Indian weather?</div><div class="faq-a">It works in dry, air-conditioned rooms such as bedrooms. Humid monsoon months make wood swell and shrink, so engineered wood is the safer choice, laid over a vapour barrier, and kept out of kitchens, bathrooms and ground floors prone to damp.</div></div>
+<div class="faq-item"><div class="faq-q">Which flooring is waterproof?</div><div class="faq-a">Vitrified tiles, which absorb 0.5% water or less, and SPC vinyl are the most water-resistant floors. Wood and laminate are not waterproof, and marble needs sealing to resist stains.</div></div>
+<div class="faq-item"><div class="faq-q">What is engineered wood flooring?</div><div class="faq-a">Engineered wood is a plank with a thin top layer of real hardwood, the veneer, glued to a plywood core. It looks like solid wood but moves less with humidity, and can be sanded up to a few times depending on veneer thickness.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>HouseYog</strong>, <a href="https://www.houseyog.com/blog/flooring-cost-in-india-per-sqft/" target="_blank" rel="noopener">Flooring cost in India per sq ft</a> (updated 18 April 2026).</li>
+  <li><strong>JK Cement</strong>, <a href="https://www.jkcement.com/blog/flooring-solution/flooring-guide/" target="_blank" rel="noopener">Flooring guide: types, materials and best flooring</a> (3 March 2026).</li>
+  <li><strong>The Wooden Floor Store</strong>, <a href="https://thewoodenfloorstore.com/news/why-veneer-thickness-matters-when-choosing-engineered-wood-flooring/" target="_blank" rel="noopener">Why veneer thickness matters</a>.</li>
+  <li><strong>Alpine Floor</strong>, <a href="https://www.alpinefloor.com/news/spc-flooring-wear-layer-guide-0-3mm-0-5mm-and-0-7mm.html" target="_blank" rel="noopener">SPC flooring wear layer guide</a> (24 June 2026).</li>
+  <li><strong>Bricoflor</strong>, <a href="https://www.bricoflor.co.uk/blog/laminate-ac-ratings" target="_blank" rel="noopener">Laminate AC ratings</a>; <strong>Designing Buildings</strong>, <a href="https://www.designingbuildings.co.uk/wiki/Laminate_flooring" target="_blank" rel="noopener">Laminate flooring</a>; <strong>Kronotex India</strong>, <a href="https://kronotex.in/the-complete-guide-to-laminate-wood-flooring/" target="_blank" rel="noopener">Guide to laminate flooring</a>.</li>
+  <li><strong>Vitrified tile</strong>, <a href="https://en.wikipedia.org/wiki/Vitrified_tile" target="_blank" rel="noopener">water absorption under ISO 13006</a>.</li>
+  <li><strong>Floorworld (Dubai)</strong>, <a href="https://www.floorworld.com/blog-flooring-ideas-expert-advice/2026/july/best-flooring-for-uae-homes-how-heat-humidity-affect-your-choice/" target="_blank" rel="noopener">Best flooring for UAE homes</a> (14 July 2026); <strong>Tilesman</strong>, <a href="https://tilesman.com/are-porcelain-tiles-good-for-hot-weather-uae-climate-guide/" target="_blank" rel="noopener">Porcelain tiles in UAE heat</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 7 November 2026. Prices change often; confirm with local dealers before budgeting.</p>
+</div>
+<dialog id="zoom91" aria-label="Enlarged flooring illustration"><button type="button">Close</button><img alt=""></dialog><script>(()=>{const d=document.getElementById('zoom91'),im=d.querySelector('img');document.querySelectorAll('.ph img,.dfig img').forEach(e=>{e.tabIndex=0;function open(){im.src=e.src;im.alt=e.alt;d.showModal()}e.addEventListener('click',open);e.addEventListener('keydown',k=>{if(k.key==='Enter')open()})});d.querySelector('button').onclick=()=>d.close();d.onclick=e=>{if(e.target===d)d.close()}})();</script>

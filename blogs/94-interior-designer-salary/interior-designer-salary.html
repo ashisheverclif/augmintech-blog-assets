@@ -1,0 +1,385 @@
+<style>
+#aug-interior-designer-salary{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-interior-designer-salary *,#aug-interior-designer-salary *::before,#aug-interior-designer-salary *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-interior-designer-salary{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-interior-designer-salary.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-interior-designer-salary .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-interior-designer-salary .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-interior-designer-salary .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-interior-designer-salary .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-interior-designer-salary .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-interior-designer-salary .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-interior-designer-salary h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-interior-designer-salary h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-interior-designer-salary p{margin-bottom:.9rem;font-size:16px;}
+#aug-interior-designer-salary a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-interior-designer-salary a:hover{border-color:var(--brand);}
+#aug-interior-designer-salary hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-interior-designer-salary .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-interior-designer-salary .chart svg{width:100%;height:auto;display:block;}
+#aug-interior-designer-salary .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-interior-designer-salary .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-interior-designer-salary .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-interior-designer-salary .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-interior-designer-salary .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-interior-designer-salary .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-interior-designer-salary .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-interior-designer-salary table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-interior-designer-salary caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-interior-designer-salary thead tr{background:var(--slate);color:#fff;}
+#aug-interior-designer-salary thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-interior-designer-salary tbody tr:nth-child(even){background:var(--surface);}
+#aug-interior-designer-salary tbody tr:hover{background:var(--brand-lite);}
+#aug-interior-designer-salary td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-interior-designer-salary td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-interior-designer-salary tbody tr.hl{background:var(--green-lite)!important;}
+#aug-interior-designer-salary tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-interior-designer-salary ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-interior-designer-salary ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-interior-designer-salary .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-interior-designer-salary .cta-green{background:var(--slate);}
+#aug-interior-designer-salary .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-interior-designer-salary .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-interior-designer-salary .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-interior-designer-salary .cta-btn-blue{color:var(--brand);}#aug-interior-designer-salary .cta-btn-green{color:var(--slate);}
+#aug-interior-designer-salary figure{margin:1.5rem 0;}
+#aug-interior-designer-salary figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-interior-designer-salary figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-interior-designer-salary dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-interior-designer-salary dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-interior-designer-salary dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-interior-designer-salary .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-interior-designer-salary .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-interior-designer-salary .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-interior-designer-salary .srcs{list-style:none;padding:0;}
+#aug-interior-designer-salary .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-interior-designer-salary .srcs li:last-child{border-bottom:none;}
+
+/* ===== answer stats ===== */#aug-interior-designer-salary .ans94{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:1.3rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+#aug-interior-designer-salary .ans94 div{padding:.85rem .95rem;border-right:1px solid var(--border);background:#fff;}
+#aug-interior-designer-salary .ans94 div:last-child{border-right:none;background:#FBF4E8;}
+#aug-interior-designer-salary .ans94 i{display:block;font-style:normal;font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);}
+#aug-interior-designer-salary .ans94 b{display:block;font-family:var(--display);font-size:24px;line-height:1.15;color:var(--ink);margin:.2rem 0;}
+#aug-interior-designer-salary .ans94 span{font-size:12.5px;line-height:1.45;color:var(--ink-mid);}
+
+/* ===== experience ladder ===== */#aug-interior-designer-salary .lad{margin:1.1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+#aug-interior-designer-salary .lad-r{display:grid;grid-template-columns:170px 1fr 120px;gap:12px;align-items:center;padding:.6rem .85rem;border-bottom:1px solid var(--border);background:#fff;}
+#aug-interior-designer-salary .lad-r:last-child{border-bottom:none;}
+#aug-interior-designer-salary .lad-r b{font-size:14px;color:var(--ink);} #aug-interior-designer-salary .lad-r b small{display:block;font-weight:400;font-size:11.5px;color:var(--muted);font-family:var(--mono);}
+#aug-interior-designer-salary .lad-r .bar{height:14px;border-radius:7px;background:linear-gradient(90deg,#2B6CB0,#1D7A8C);}
+#aug-interior-designer-salary .lad-r .v{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--ink);text-align:right;}
+#aug-interior-designer-salary .lad-r .v small{display:block;font-weight:400;font-size:10.5px;color:var(--muted);}
+
+/* ===== city bars ===== */#aug-interior-designer-salary .city{margin:1.1rem 0;}
+#aug-interior-designer-salary .cb{display:grid;grid-template-columns:120px 1fr 90px;gap:10px;align-items:center;margin-bottom:8px;font-size:14px;}
+#aug-interior-designer-salary .cb span{color:var(--ink);font-weight:600;}
+#aug-interior-designer-salary .cb i{display:block;height:22px;border-radius:4px;background:var(--teal);}
+#aug-interior-designer-salary .cb b{font-family:var(--mono);font-size:13.5px;text-align:right;color:var(--ink);}
+#aug-interior-designer-salary .cb.na i{background:repeating-linear-gradient(45deg,#E6E9EE 0 6px,#F4F6F8 6px 12px);}
+#aug-interior-designer-salary .cb.na b{color:var(--muted);font-weight:400;font-size:12px;}
+
+/* ===== gulf ===== */#aug-interior-designer-salary .gsrc{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-interior-designer-salary .gs{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-interior-designer-salary .gs h3{margin:0;padding:.6rem .9rem;font-size:15px;color:#fff;}
+#aug-interior-designer-salary .gs.a h3{background:var(--slate);} #aug-interior-designer-salary .gs.b h3{background:#8A5A00;}
+#aug-interior-designer-salary .gs p{margin:.6rem .9rem;font-size:13.5px;line-height:1.55;color:var(--ink-mid);}
+#aug-interior-designer-salary .gs table{font-size:13px;}
+#aug-interior-designer-salary .gs td,#aug-interior-designer-salary .gs th{padding:.4rem .9rem;}
+#aug-interior-designer-salary .gs td:last-child{font-family:var(--mono);text-align:right;white-space:nowrap;}
+#aug-interior-designer-salary .perks{display:flex;flex-wrap:wrap;gap:8px;margin:1rem 0;}
+#aug-interior-designer-salary .perks span{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;padding:6px 11px;border-radius:20px;background:#FBF4E8;border:1px solid #EFD9B4;color:#6B4A00;}
+#aug-interior-designer-salary .perks span b{font-family:var(--mono);font-size:11px;}
+
+/* ===== skills & software ===== */#aug-interior-designer-salary .sk{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:1rem 0;}
+#aug-interior-designer-salary .sk div{border-radius:var(--radius-sm);padding:.7rem .75rem;background:var(--surface);border-top:3px solid var(--brand);font-size:13px;line-height:1.5;color:var(--ink-mid);}
+#aug-interior-designer-salary .sk b{display:block;font-family:var(--display);font-size:14.5px;color:var(--ink);margin-bottom:.2rem;}
+#aug-interior-designer-salary .sw td:first-child{font-weight:700;white-space:nowrap;}
+#aug-interior-designer-salary .sw td:nth-child(2) span{display:inline-block;font-family:var(--mono);font-size:10.5px;padding:2px 7px;border-radius:9px;background:#EEF2F7;color:var(--brand);white-space:nowrap;}
+
+/* ===== steps ===== */#aug-interior-designer-salary .path{list-style:none;padding:0;margin:1.1rem 0;counter-reset:p;position:relative;}
+#aug-interior-designer-salary .path li{counter-increment:p;position:relative;padding:0 0 1rem 3.2rem;font-size:14.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-interior-designer-salary .path li::before{content:counter(p);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--display);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px;}
+#aug-interior-designer-salary .path li::after{content:"";position:absolute;left:16px;top:36px;bottom:2px;width:2px;background:#D6DEE8;}
+#aug-interior-designer-salary .path li:last-child::after{display:none;}
+#aug-interior-designer-salary .path li b{display:block;color:var(--ink);font-size:15.5px;}
+#aug-interior-designer-salary .eng{border:2px solid var(--teal);border-radius:var(--radius);padding:.9rem 1.05rem;margin:1.2rem 0;background:#F0F8F8;}
+#aug-interior-designer-salary .eng h3{margin:0 0 .4rem;font-size:16.5px;color:var(--teal);}
+#aug-interior-designer-salary .eng ul{margin:0;padding-left:1.15rem;font-size:14.5px;line-height:1.6;color:var(--ink-mid);} #aug-interior-designer-salary .eng li{margin-bottom:.3rem;}
+
+/* ===== portfolio ===== */#aug-interior-designer-salary .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-interior-designer-salary .dfig svg{display:block;width:100%;height:auto;}
+#aug-interior-designer-salary .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;}
+#aug-interior-designer-salary .pchk{columns:2;column-gap:20px;list-style:none;padding:0;margin:1rem 0;}
+#aug-interior-designer-salary .pchk li{break-inside:avoid;padding:.35rem 0 .35rem 1.6rem;position:relative;font-size:14.5px;line-height:1.55;color:var(--ink-mid);}
+#aug-interior-designer-salary .pchk li::before{content:"✓";position:absolute;left:.2rem;color:var(--green);font-weight:700;}
+#aug-interior-designer-salary .pchk li b{color:var(--ink);}
+
+#aug-interior-designer-salary .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-interior-designer-salary .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-interior-designer-salary figure.pf{margin:1.2rem 0;} #aug-interior-designer-salary figure.pf figcaption{font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-interior-designer-salary .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-interior-designer-salary .alert{border-left:4px solid var(--warn);background:#FBF4E8;border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.8rem 1rem;margin:1rem 0;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-interior-designer-salary .alert b{color:var(--warn);}
+
+@media(max-width:640px){
+  #aug-interior-designer-salary .ans94{grid-template-columns:1fr;} #aug-interior-designer-salary .ans94 div{border-right:none;border-bottom:1px solid var(--border);}
+  #aug-interior-designer-salary .lad-r{grid-template-columns:1fr 100px;} #aug-interior-designer-salary .lad-r .bar{grid-column:1/-1;grid-row:2;}
+  #aug-interior-designer-salary .cb{grid-template-columns:90px 1fr 80px;font-size:13px;}
+  #aug-interior-designer-salary .gsrc{grid-template-columns:1fr;}
+  #aug-interior-designer-salary .sk{grid-template-columns:1fr 1fr;}
+  #aug-interior-designer-salary .pchk{columns:1;}
+  #aug-interior-designer-salary .ig table,#aug-interior-designer-salary .sw table{min-width:600px;}
+  #aug-interior-designer-salary .dfig.wide{overflow-x:auto;} #aug-interior-designer-salary .dfig.wide svg{min-width:620px;}
+  #aug-interior-designer-salary .cta{flex-direction:column;align-items:flex-start;}
+  #aug-interior-designer-salary .cta>div{max-width:100%;} #aug-interior-designer-salary .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-interior-designer-salary .cta>div:last-child .cta-btn{margin-left:0;}
+}
+
+#aug-interior-designer-salary.blog{overflow-wrap:anywhere;}#aug-interior-designer-salary .blog>*{min-width:0;}#aug-interior-designer-salary .ph{aspect-ratio:auto;}#aug-interior-designer-salary .ph img{position:static;height:auto;object-fit:contain;}
+#aug-interior-designer-salary .cta-btn{white-space:normal;display:inline-block;max-width:100%;}#aug-interior-designer-salary .sk{grid-template-columns:repeat(2,minmax(0,1fr));}#aug-interior-designer-salary .sk div:last-child{grid-column:1/-1;}#aug-interior-designer-salary .sk div{padding:16px;font-size:14px;}
+#aug-interior-designer-salary .gsrc{grid-template-columns:1fr;}#aug-interior-designer-salary .gs td:last-child{white-space:normal;width:42%;}#aug-interior-designer-salary .gs td{padding:12px 16px;}#aug-interior-designer-salary .gs h3{font-size:17px;}
+#aug-interior-designer-salary .visual-label{font-size:12px;font-weight:600;letter-spacing:.4px;color:#526779;padding:14px 16px;background:#f1f5f8;}
+#aug-interior-designer-salary .city{border:1px solid #dce3ea;border-radius:10px;overflow:hidden;}#aug-interior-designer-salary .cb{margin:0;padding:12px 16px;border-bottom:1px solid #e9edf1;grid-template-columns:110px minmax(0,1fr) 90px;}#aug-interior-designer-salary .cb:last-child{border:0;}#aug-interior-designer-salary .cb i{height:18px;background:#00747d;}#aug-interior-designer-salary .cb.na{background:#f6f8fa;}
+#aug-interior-designer-salary .lad-r{padding:15px 16px;}#aug-interior-designer-salary .lad-r:nth-child(4),#aug-interior-designer-salary .lad-r:last-child{background:#f5f7fa;}#aug-interior-designer-salary .lad-r:nth-child(4) .bar,#aug-interior-designer-salary .lad-r:last-child .bar{background:#718091;}#aug-interior-designer-salary .lad-r b small,#aug-interior-designer-salary .lad-r .v small{font-size:12px;line-height:1.5;}
+#aug-interior-designer-salary .image-credit{font-size:12px;color:#65717b;}#aug-interior-designer-salary .dfig figcaption{font:13px/1.65 var(--body);}
+#aug-interior-designer-salary .portfolio94{padding:26px;background:#f4f7fa;}#aug-interior-designer-salary .portfolio-head span{font:600 11px var(--mono);letter-spacing:1.5px;color:#0f4c81;}#aug-interior-designer-salary .portfolio-head h3{margin:8px 0 24px;font-size:24px;line-height:1.3;}
+#aug-interior-designer-salary .portfolio-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px;}#aug-interior-designer-salary .portfolio-columns section{background:#fff;padding:20px;border:1px solid #dce3ea;border-radius:10px;min-width:0;}#aug-interior-designer-salary .portfolio-num{font:700 13px var(--mono);color:#00747d;}#aug-interior-designer-salary .portfolio-columns h4{font-size:19px;margin:5px 0;}#aug-interior-designer-salary .portfolio-columns p{font-size:13px;line-height:1.5;color:#526779;}
+#aug-interior-designer-salary .portfolio-sheet{border:1px solid #ccd8e2;padding:14px;box-shadow:0 6px 18px #22384d12;margin:20px 0;}#aug-interior-designer-salary .sheet-name{font-size:14px;font-weight:700;border-bottom:2px solid #00747d;padding-bottom:10px;}#aug-interior-designer-salary .sheet-hero{height:100px;display:flex;align-items:center;justify-content:center;background:#e1eaf2;color:#0f4c81;font-size:15px;font-weight:600;margin:12px 0;}#aug-interior-designer-salary .sheet-thumbs{display:flex;gap:5px;}#aug-interior-designer-salary .sheet-thumbs span{flex:1;padding:14px 3px;background:#ece6db;text-align:center;font-size:10px;}#aug-interior-designer-salary .sheet-line{font-size:10px;margin-top:14px;}#aug-interior-designer-salary .portfolio-foot{margin-bottom:0!important;}
+#aug-interior-designer-salary .portfolio-flow{list-style:none;padding:0;}#aug-interior-designer-salary .portfolio-flow li{border-left:3px solid #00747d;padding:10px 0 10px 14px;margin:12px 0;background:#f6f9fa;}#aug-interior-designer-salary .portfolio-flow b{display:block;font-size:14px;line-height:1.5;}#aug-interior-designer-salary .portfolio-flow span{display:block;font-size:12px;line-height:1.6;color:#526779;}#aug-interior-designer-salary .portfolio-bottom{font-size:13px;color:#526779;border-top:1px solid #dce3ea;padding-top:16px;margin-top:20px;}
+#aug-interior-designer-salary .blog figure img{cursor:zoom-in;}#aug-interior-designer-salary .blog img:focus-visible{outline:3px solid #00747d;outline-offset:3px;}
+#aug-interior-designer-salary #zoom94{margin:auto;border:0;border-radius:12px;width:min(96vw,1400px);max-width:96vw;max-height:94vh;padding:16px;background:white;}#aug-interior-designer-salary #zoom94::backdrop{background:rgba(15,30,45,.85);}#aug-interior-designer-salary #zoom94 button{display:block;margin:0 0 12px auto;padding:10px 20px;border:0;border-radius:6px;background:#0f4c81;color:white;font:600 15px Arial;cursor:pointer;}#aug-interior-designer-salary #zoom94 img{display:block;width:100%;height:auto;max-height:80vh;object-fit:contain;}
+@media(max-width:640px){#aug-interior-designer-salary .portfolio-columns{grid-template-columns:1fr;}#aug-interior-designer-salary .portfolio94{padding:18px;}#aug-interior-designer-salary .cb{grid-template-columns:1fr 100px;gap:8px;}#aug-interior-designer-salary .cb i{grid-column:1/-1;grid-row:2;}#aug-interior-designer-salary .cb b{grid-column:2;grid-row:1;}#aug-interior-designer-salary .cb.na i{display:none;}#aug-interior-designer-salary .lad-r{grid-template-columns:1fr 110px;}#aug-interior-designer-salary .lad-r .v{grid-column:2;grid-row:1;}#aug-interior-designer-salary .lad-r .bar{grid-column:1/-1;grid-row:2;}}
+@media(max-width:420px){#aug-interior-designer-salary.blog{padding-left:16px;padding-right:16px;}#aug-interior-designer-salary .sk{grid-template-columns:1fr;}#aug-interior-designer-salary .sk div:last-child{grid-column:auto;}}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-interior-designer-salary.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-interior-designer-salary h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-interior-designer-salary a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-interior-designer-salary a:hover{color:#18d104;}
+#aug-interior-designer-salary .cta{background:#1a1a1a;}
+#aug-interior-designer-salary .cta a.cta-btn{text-decoration:none;}
+#aug-interior-designer-salary .cta-btn-blue{background:#18d104;color:#000;}
+#aug-interior-designer-salary .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-interior-designer-salary [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-interior-designer-salary">
+
+
+<p><strong>Interior designers in India earn about ₹3.3 lakh a year in base pay on average, from about ₹2.5 lakh for freshers to around ₹9.8 lakh for the top 10%</strong> (PayScale, updated October 2026). In Dubai, GulfTalent puts the average at AED 6,000 a month, and a design recruiter's 2026 guide puts mid-level packages at AED 13,000 to 23,000. If you are a student or an engineer weighing a move into interior design, here is what the numbers really say, and how to get your first job.</p>
+
+<div class="ans94">
+  <div><i>India, fresher</i><b>₹2.5 L/yr</b><span>Under 1 year, average total pay (PayScale, Oct 2026)</span></div>
+  <div><i>India, mid-career</i><b>₹5.0 L/yr</b><span>5 to 9 years, average (PayScale, Apr 2026)</span></div>
+  <div><i>Dubai</i><b>AED 6,000/mo</b><span>Average, 69 designers on GulfTalent; tax-free</span></div>
+</div>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/94-interior-designer-working-with-drawings.webp" alt="Interior designer working with drawings and material samples" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Interior design pays modestly at the start in India; skills, portfolio and city make the biggest difference. <span class="image-credit">AI-generated illustration.</span></figcaption>
+</figure>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Freshers in India start at about ₹2.5 lakh a year</strong> on average, according to PayScale's October 2026 data.</li>
+  <li><strong>Pay roughly doubles by the mid-career stage,</strong> to about ₹5 to 6 lakh a year for 5 to 9 years' experience.</li>
+  <li><strong>Mumbai pays the most</strong> on Indeed, at about ₹47,700 a month, against a national average of about ₹23,600.</li>
+  <li><strong>Gulf figures vary widely by source:</strong> AED 6,000 a month on average on GulfTalent, but AED 13,000 to 40,000 packages for mid and senior roles in a recruiter's guide.</li>
+  <li><strong><a href="https://augmintech.com/autocad-download/">AutoCAD</a>, SketchUp, V-Ray, <a href="https://augmintech.com/how-to-download-install-3ds-max-step-by-step-guide/">3ds Max</a> and Photoshop</strong> are the core software set employers expect.</li>
+  <li><strong>A <a href="https://augmintech.com/bim-portfolio/">focused portfolio</a> of 4 to 6 projects,</strong> with plans, renders and process, matters more than the degree name.</li>
+</ul>
+
+<h2 id="by-experience">Interior Designer Salary in India by Experience</h2>
+<p>Here is how average pay grows with experience, using PayScale's India data. Note the bars mix average base salary and average total pay, as PayScale publishes them, so read them as a guide rather than exact steps.</p>
+<div class="lad"><div class="visual-label">Annual pay · ₹ lakh · shared scale 0–10</div>
+  <div class="lad-r"><b>Fresher<small>&lt; 1 year</small></b><div class="bar" style="width:24.8%"></div><div class="v">₹2.48 L<small>132 salaries</small></div></div>
+  <div class="lad-r"><b>Early career<small>1–4 years</small></b><div class="bar" style="width:30.4%"></div><div class="v">₹3.04 L<small>199 salaries</small></div></div>
+  <div class="lad-r"><b>All designers<small>average base</small></b><div class="bar" style="width:32.7%"></div><div class="v">₹3.27 L<small>294 profiles</small></div></div>
+  <div class="lad-r"><b>Mid career<small>5–9 years</small></b><div class="bar" style="width:50.3%"></div><div class="v">₹5.03 L<small>83 profiles</small></div></div>
+  <div class="lad-r"><b>Senior Interior Designer<small>job title, average base</small></b><div class="bar" style="width:55.5%"></div><div class="v">₹5.55 L<small>73 profiles</small></div></div>
+  <div class="lad-r"><b>Top 10%<small>90th percentile, all designers</small></b><div class="bar" style="width:98%"></div><div class="v">₹9.8 L<small>PayScale</small></div></div>
+</div>
+<p class="note">Source: PayScale India, Interior Designer (updated 24 October 2026; mid-career page updated 12 April 2026) and Senior Interior Designer (updated 9 February 2026). Annual figures in lakh rupees. Indeed's national average is ₹23,598 a month, about ₹2.8 lakh a year (713 salaries, updated 18 June 2026).</p>
+<p>Two honest points. First, these are averages of self-reported salaries that mix designers at small studios and showrooms with those at large firms, so your own offer can sit well away from the average. Second, the spread is wide: PayScale's range runs from about ₹1.5 lakh to ₹9.8 lakh, and designers who also handle clients, site execution or their own projects often earn well above the average.</p>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="by-city">Interior Designer Salary by City</h2>
+<p>Average monthly pay by city from one source, Indeed India, updated 18 June 2026:</p>
+<div class="city"><div class="visual-label">Average monthly salary · INR</div>
+  <div class="cb"><span>Mumbai</span><i style="width:95.346%"></i><b>₹47,673</b></div>
+  <div class="cb"><span>Hyderabad</span><i style="width:80.36%"></i><b>₹40,180</b></div>
+  <div class="cb"><span>Bengaluru</span><i style="width:67.838%"></i><b>₹33,919</b></div>
+  <div class="cb"><span>Chennai</span><i style="width:58.882%"></i><b>₹29,441</b></div>
+  <div class="cb"><span>Delhi</span><i style="width:58.586%"></i><b>₹29,293</b></div>
+  <div class="cb na"><span>Pune</span><i style="width:0%"></i><b>Not listed</b></div>
+</div>
+<p class="note">Indeed does not publish a Pune figure or per-city sample sizes on this page, and lists New Delhi rather than all of Delhi NCR. All five city averages sit above the national average of ₹23,598, which suggests pay outside the big metros is lower.</p>
+
+<h2 id="gulf">Interior Designer Salary in the UAE and Gulf</h2>
+<p>The Gulf pays more, but the figure you see depends heavily on the source. Self-reported job-board data covers everyone from showroom designers to studio leads; recruiter guides cover established design firms and quote full packages. Here are both, side by side.</p>
+
+<div class="gsrc">
+  <div class="gs a">
+    <h3>Job-board averages (base pay)</h3>
+    <table>
+      <tbody>
+        <tr><td>Dubai, average (GulfTalent, 69 designers)</td><td>AED 6,000/mo</td></tr>
+        <tr><td>Dubai, range (GulfTalent)</td><td>AED 3,500–10,500/mo</td></tr>
+        <tr><td>Dubai, average (PayScale, 28 profiles, Feb 2026)</td><td>AED 37,800/yr</td></tr>
+        <tr><td>Riyadh, average (GulfTalent, 7 designers, Sep 2024)</td><td>SAR 6,000/mo</td></tr>
+        <tr><td>Riyadh, range (GulfTalent)</td><td>SAR 4,500–9,000/mo</td></tr>
+      </tbody>
+    </table>
+    <p>Small samples: treat Riyadh in particular as indicative only.</p>
+  </div>
+  <div class="gs b">
+    <h3>Recruiter guide 2026 (total packages)</h3>
+    <table>
+      <tbody>
+        <tr><td>Dubai, Intermediate Interior Designer</td><td>AED 13,000–23,000/mo</td></tr>
+        <tr><td>Dubai, Senior Interior Designer</td><td>AED 20,000–40,000/mo</td></tr>
+        <tr><td>Riyadh, Intermediate Interior Designer</td><td>SAR 14,000–25,000/mo</td></tr>
+        <tr><td>Riyadh, Senior Interior Designer</td><td>SAR 21,000–42,000/mo</td></tr>
+        <tr><td>Riyadh, Senior FF&amp;E Designer</td><td>SAR 23,000–56,000/mo</td></tr>
+      </tbody>
+    </table>
+    <p>Bespoke Careers, 2026: base salary plus housing and transport allowances where they apply.</p>
+  </div>
+</div>
+
+<div class="alert"><b>Abu Dhabi:</b> we could not find a public, dated salary figure for interior designers in Abu Dhabi that we could verify, so none is given here. Check GulfTalent and Bayt's live salary pages before you negotiate.</div>
+
+<p><strong>What a Gulf offer usually includes beyond salary.</strong> Bespoke Careers' 2026 guides describe packages built from these parts, depending on the firm and seniority:</p>
+<div class="perks"><span><b>✓</b>Work visa and residency</span><span><b>✓</b>Housing allowance, partial or full</span><span><b>✓</b>Transport allowance</span><span><b>✓</b>Annual return flights (better packages)</span><span><b>✓</b>Health insurance</span><span><b>✓</b>No income tax on salary in the UAE</span></div>
+<p>When you compare a Gulf offer with an Indian one, compare the whole package: a lower base with housing included can be worth more than a higher base without it. Ask each employer to break the offer down in writing.</p>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/94-interior-designers-in-a-dubai.webp" alt="Interior designers in a Dubai design studio" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Gulf studios and fit-out firms hire designers who can draw, render and coordinate on site. <span class="image-credit">AI-generated illustration.</span></figcaption>
+</figure>
+
+<h2 id="skills">Skills and Software You Need</h2>
+<div class="sk">
+  <div><b>Space planning</b>Furniture layouts, circulation and zoning that work in real room sizes.</div>
+  <div><b>Drawings</b>Plans, elevations, sections and ceiling plans a contractor can build from.</div>
+  <div><b>Materials</b>Finishes, flooring, laminates and stone: cost, durability and where each works.</div>
+  <div><b>Lighting</b>Ambient, task and accent layers, and how they tie into the ceiling.</div>
+  <div><b>Client handling</b>Briefs, presentations, budgets and saying no to the wrong idea politely.</div>
+</div>
+<div class="tbl-wrap sw">
+<table>
+  <thead><tr><th>Software</th><th>Stage</th><th>What designers use it for</th></tr></thead>
+  <tbody>
+    <tr><td>AutoCAD</td><td><span>Drawings</span></td><td>2D plans, elevations, ceiling plans, joinery details and working drawings for site</td></tr>
+    <tr><td>SketchUp</td><td><span>3D concept</span></td><td>Fast 3D modelling of rooms and furniture for design development and client walk-throughs</td></tr>
+    <tr><td>V-Ray</td><td><span>Rendering</span></td><td>Photo-realistic renders, used as a plug-in inside SketchUp or 3ds Max</td></tr>
+    <tr><td>3ds Max</td><td><span>High-end 3D</span></td><td>Detailed modelling and premium renders, common in visualisation teams and larger studios</td></tr>
+    <tr><td>Photoshop</td><td><span>Presentation</span></td><td>Render post-production, mood boards and portfolio layouts</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Larger architecture and design firms increasingly work in <a href="https://augmintech.com/bim-architecture/">BIM tools</a> such as <a href="https://augmintech.com/learn-revit/">Revit</a>, where the plans, elevations and schedules come from one model. It is worth learning once you are comfortable with drawings.</p>
+
+<div class="cta">
+  <div><h3>Build Design Skills on a BIM Workflow</h3><p>Augmintech's BIM Architecture program teaches building information modelling for architecture: plans, elevations, sections and schedules from one model. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">View the BIM Architecture program</a></div>
+</div>
+
+<h2 id="how-to">How to Become an Interior Designer: Step by Step</h2>
+<ol class="path">
+  <li><b>Pick an education route.</b>A bachelor's degree in interior design (B.Des or B.Sc), a shorter diploma, or a degree in architecture or <a href="https://augmintech.com/difference-between-civil-and-structural-engineering/">civil engineering</a>. Studios hire from all of these; what they test is your drawings and portfolio.</li>
+  <li><b>Learn the core software.</b>AutoCAD first, because every project needs drawings, then SketchUp for 3D and V-Ray or 3ds Max for renders, and Photoshop for presentation.</li>
+  <li><b>Build real projects.</b>Redesign your own flat, a relative's shop or a café nearby. Measure the space, draw it, design it, render it and price it.</li>
+  <li><b>Do an internship.</b>Three to six months in a design studio, a fit-out contractor or a modular kitchen firm teaches you site work, vendors and client meetings that no course covers.</li>
+  <li><b>Make a portfolio.</b>Four to six projects with plans, renders and process, plus a one-page PDF version (see below).</li>
+  <li><b>Land your first job.</b>Apply as a junior designer, design associate, 3D visualiser or site designer. Your first role is about learning execution; specialise after two or three years.</li>
+</ol>
+
+<div class="eng">
+  <h3>Switching from civil engineering or architecture</h3>
+  <ul>
+    <li><strong>You already have the hard part:</strong> reading and producing drawings, understanding structure and services, and site experience.</li>
+    <li><strong>Fill the gaps:</strong> design principles, materials and finishes, lighting, and rendering in SketchUp, V-Ray or 3ds Max.</li>
+    <li><strong>Use your edge:</strong> false ceilings, lighting, kitchens and wet areas all depend on structure and MEP coordination. Engineers who can design and coordinate are valuable to fit-out firms.</li>
+    <li><strong>Common entry points:</strong> fit-out site engineer, design coordinator, or junior designer in a design-and-build company, then move into design leadership.</li>
+  </ul>
+</div>
+
+<h2 id="portfolio">What a Good Interior Design Portfolio Looks Like</h2>
+<p>A portfolio gets you the interview; the degree rarely does. Keep it short and show how you think, not just how well you render.</p>
+<figure class="dfig wide">
+  <div class="portfolio94">
+<div class="portfolio-head"><span>PORTFOLIO STRUCTURE</span><h3>Show the thinking behind the finished room</h3></div>
+<div class="portfolio-columns">
+<section><span class="portfolio-num">01</span><h4>One-page summary</h4><p>A quick introduction for applications</p><div class="portfolio-sheet"><div class="sheet-name">Your name + contact</div><div class="sheet-hero">Strongest project</div><div class="sheet-thumbs"><span>Project 2</span><span>Project 3</span><span>Project 4</span></div><div class="sheet-line">Skills · Software · Portfolio link</div></div><p class="portfolio-foot">A4 PDF · under 5 MB</p></section>
+<section><span class="portfolio-num">02</span><h4>Full portfolio</h4><p>4–6 projects, strongest first</p><ol class="portfolio-flow"><li><b>Brief + measured plan</b><span>Explain the space and constraints.</span></li><li><b>Concept + materials</b><span>Show the mood board and choices.</span></li><li><b>Renders + working drawings</b><span>Connect the visual idea to buildable details.</span></li><li><b>Process + decisions</b><span>Show options and why they changed.</span></li></ol></section>
+</div><div class="portfolio-bottom">Suggested mix: residential · villa · café or retail · office · kitchen</div></div>
+  <figcaption>Sample portfolio layout: a one-page PDF summary to attach to applications, and a full portfolio of 4 to 6 projects. Augmintech diagram.</figcaption>
+</figure>
+<ul class="pchk">
+  <li><b>4 to 6 projects,</b> strongest and most relevant first.</li>
+  <li><b>A mix of types:</b> a flat, a villa or large home, and one commercial space.</li>
+  <li><b>For each project:</b> the brief, a measured plan, concept and mood board, renders, and working drawings.</li>
+  <li><b>Process sheets</b> showing options you rejected and why.</li>
+  <li><b>Real details:</b> a ceiling plan, a kitchen elevation or a joinery section.</li>
+  <li><b>A one-page PDF</b> under 5 MB, plus a link to the full version online.</li>
+</ul>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/94-interior-design-portfolio-spread-with.webp" alt="Interior design portfolio spread with plan, render and material board" width="1200" height="675" loading="lazy"></div>
+  <figcaption>A portfolio spread: plan, render and materials on one page. <span class="image-credit">AI-generated illustration.</span></figcaption>
+</figure>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What is the salary of an interior designer in India?</div><div class="faq-a">PayScale puts the average base salary at about ₹3.3 lakh a year (updated October 2026), with most designers between about ₹1.5 lakh and ₹9.8 lakh. Indeed's average is ₹23,598 a month, about ₹2.8 lakh a year (June 2026).</div></div>
+<div class="faq-item"><div class="faq-q">What is the salary of a fresher interior designer?</div><div class="faq-a">About ₹2.5 lakh a year on average for designers with under one year's experience, according to PayScale (132 salaries, October 2026). Big-city studios and designers with strong software skills can start higher.</div></div>
+<div class="faq-item"><div class="faq-q">How much do interior designers earn in Dubai?</div><div class="faq-a">GulfTalent's average is AED 6,000 a month, within a range of AED 3,500 to 10,500, based on 69 designers. A 2026 recruiter guide from Bespoke Careers puts total packages for established firms at AED 13,000 to 23,000 a month for intermediate designers and AED 20,000 to 40,000 for senior designers.</div></div>
+<div class="faq-item"><div class="faq-q">How do I become an interior designer after engineering?</div><div class="faq-a">Use your drawing and site skills, then add design principles, materials, lighting and rendering software. Build two or three interior projects for your portfolio, and apply for roles such as design coordinator or junior designer at fit-out and design-and-build firms.</div></div>
+<div class="faq-item"><div class="faq-q">Which software do interior designers use?</div><div class="faq-a">AutoCAD for drawings, SketchUp for 3D modelling, V-Ray or 3ds Max for renders, and Photoshop for presentation. Larger firms also use BIM software such as Revit.</div></div>
+<div class="faq-item"><div class="faq-q">What should an interior design portfolio include?</div><div class="faq-a">Four to six projects, each with the brief, a plan, concept and mood board, renders, working drawings and process sheets, plus a one-page PDF summary to attach to applications.</div></div>
+
+<div class="cta">
+  <div><h3>Ready to Start?</h3><p>Learn to produce plans, elevations and schedules from one BIM model in Augmintech's BIM Architecture program. Check the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">View the BIM Architecture program</a></div>
+</div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>PayScale India</strong>: <a href="https://www.payscale.com/research/IN/Job=Interior_Designer/Salary" target="_blank" rel="noopener">Interior Designer</a> (updated 24 October 2026); <a href="https://www.payscale.com/research/IN/Job=Interior_Designer/Salary/731917f0/Mid-Career" target="_blank" rel="noopener">Mid-career Interior Designer</a> (12 April 2026); <a href="https://www.payscale.com/research/IN/Job=Senior_Interior_Designer/Salary" target="_blank" rel="noopener">Senior Interior Designer</a> (9 February 2026).</li>
+  <li><strong>Indeed India</strong>, <a href="https://in.indeed.com/salaries/interior-designer-Salaries" target="_blank" rel="noopener">Interior designer salaries</a> (updated 18 June 2026).</li>
+  <li><strong>GulfTalent</strong>: <a href="https://gulftalent.com/symfony_web/mobile/uae/salaries/dubai/interior-designer" target="_blank" rel="noopener">Interior Designer salaries in Dubai</a>; <a href="https://gulftalent.com/mobile/saudi-arabia/salaries/riyadh/interior-designer" target="_blank" rel="noopener">Interior Designer salaries in Riyadh</a> (September 2024).</li>
+  <li><strong>PayScale UAE</strong>, <a href="https://www.payscale.com/research/AE/Job=Interior_Designer/Salary/1fefee76/Dubai" target="_blank" rel="noopener">Interior Designer salary in Dubai</a> (1 February 2026).</li>
+  <li><strong>Bespoke Careers</strong>, <a href="https://www.bespokecareers.com/salary-guide/dubai/" target="_blank" rel="noopener">Architecture and interior design salaries in Dubai, 2026</a>; <a href="https://www.bespokecareers.com/salary-guide/riyadh/" target="_blank" rel="noopener">Riyadh, 2026</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 7 November 2026. Salary data changes often; check the live source pages before negotiating.</p>
+</div>
+<dialog id="zoom94" aria-label="Enlarged interior design visual"><button type="button">Close</button><img alt=""></dialog><script>(()=>{const d=document.getElementById('zoom94'),out=d.querySelector('img');if(!d.showModal)return;d.querySelector('button').onclick=()=>d.close();d.addEventListener('click',e=>{if(e.target===d)d.close();});document.querySelectorAll('.blog figure img').forEach(el=>{el.tabIndex=0;el.title='Click to enlarge';const open=()=>{out.src=el.src;out.alt=el.alt;d.showModal();};el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});});})();</script>

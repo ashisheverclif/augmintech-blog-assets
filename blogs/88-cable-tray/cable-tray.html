@@ -1,0 +1,351 @@
+<style>
+#aug-cable-tray{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-cable-tray *,#aug-cable-tray *::before,#aug-cable-tray *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-cable-tray{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-cable-tray.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-cable-tray .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-cable-tray .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-cable-tray .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-cable-tray .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-cable-tray .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-cable-tray .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-cable-tray h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-cable-tray h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-cable-tray p{margin-bottom:.9rem;font-size:16px;}
+#aug-cable-tray a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-cable-tray a:hover{border-color:var(--brand);}
+#aug-cable-tray hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-cable-tray .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-cable-tray .chart svg{width:100%;height:auto;display:block;}
+#aug-cable-tray .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-cable-tray .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-cable-tray .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-cable-tray .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-cable-tray .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-cable-tray .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-cable-tray .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-cable-tray table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-cable-tray caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-cable-tray thead tr{background:var(--slate);color:#fff;}
+#aug-cable-tray thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-cable-tray tbody tr:nth-child(even){background:var(--surface);}
+#aug-cable-tray tbody tr:hover{background:var(--brand-lite);}
+#aug-cable-tray td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-cable-tray td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-cable-tray tbody tr.hl{background:var(--green-lite)!important;}
+#aug-cable-tray tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-cable-tray ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-cable-tray ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-cable-tray .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-cable-tray .cta-green{background:var(--slate);}
+#aug-cable-tray .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-cable-tray .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-cable-tray .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-cable-tray .cta-btn-blue{color:var(--brand);}#aug-cable-tray .cta-btn-green{color:var(--slate);}
+#aug-cable-tray figure{margin:1.5rem 0;}
+#aug-cable-tray figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-cable-tray figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-cable-tray dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-cable-tray dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-cable-tray dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-cable-tray .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-cable-tray .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-cable-tray .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-cable-tray .srcs{list-style:none;padding:0;}
+#aug-cable-tray .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-cable-tray .srcs li:last-child{border-bottom:none;}
+
+/* ===== answer ===== */#aug-cable-tray .defbox{margin:1.4rem 0;border:1px solid var(--brand-border);border-radius:var(--radius);background:var(--brand-lite);padding:1.1rem 1.2rem;}
+#aug-cable-tray .defbox-k{font-family:var(--mono);font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--brand);margin-bottom:.4rem;}
+#aug-cable-tray .defbox p{font-size:16.5px;line-height:1.7;color:var(--ink-mid);margin:0;}
+#aug-cable-tray .defbox p strong{color:var(--ink);}
+#aug-cable-tray .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-cable-tray .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+
+/* ===== tray vs trunking vs conduit ===== */#aug-cable-tray .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.2rem 0;}
+#aug-cable-tray .trio div{padding:.8rem .9rem;border-right:1px solid var(--border);}
+#aug-cable-tray .trio div:last-child{border-right:none;}
+#aug-cable-tray .trio div:first-child{background:var(--brand-lite);}
+#aug-cable-tray .trio b{display:block;font-family:var(--display);font-size:15.5px;margin-bottom:.25rem;}
+#aug-cable-tray .trio div:first-child b{color:var(--brand);}
+#aug-cable-tray .trio span{font-size:13.5px;line-height:1.55;color:var(--ink-mid);}
+
+/* ===== type cards ===== */#aug-cable-tray .ttypes{display:grid;grid-template-columns:1fr;gap:10px;margin:1.2rem 0;}
+#aug-cable-tray .tt{display:grid;grid-template-columns:220px 1fr;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-cable-tray .tt-v{border-right:1px solid var(--border);display:flex;align-items:center;}
+#aug-cable-tray .tt-v svg{display:block;width:100%;height:auto;}
+#aug-cable-tray .tt-b{padding:.8rem 1rem;}
+#aug-cable-tray .tt-b h3{font-size:17px;margin:0 0 .3rem;}
+#aug-cable-tray .tt-b p{margin:0 0 .35rem;font-size:14.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-cable-tray .tt-b .k{font-family:var(--mono);font-size:11.5px;color:var(--brand);}
+
+/* ===== material grid ===== */#aug-cable-tray .mats{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:1.2rem 0;}
+#aug-cable-tray .mt{border-radius:var(--radius-sm);padding:.7rem .75rem;background:var(--surface);border-top:4px solid var(--slate);}
+#aug-cable-tray .mt b{display:block;font-family:var(--display);font-size:14.5px;}
+#aug-cable-tray .mt small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted);margin:.15rem 0 .35rem;}
+#aug-cable-tray .mt span{font-size:12.5px;line-height:1.5;color:var(--ink-mid);}
+#aug-cable-tray .dots{letter-spacing:2px;color:var(--teal);font-size:13px;}
+
+/* ===== corrosivity bar ===== */#aug-cable-tray .cbar{display:grid;grid-template-columns:repeat(5,1fr);margin:1rem 0 .4rem;border-radius:var(--radius-sm);overflow:hidden;}
+#aug-cable-tray .cbar div{padding:.55rem .5rem;color:#fff;font-size:12px;line-height:1.4;}
+#aug-cable-tray .cbar b{display:block;font-family:var(--mono);font-size:13px;}
+#aug-cable-tray .cbar div:nth-child(1){background:#4F9A6E;} #aug-cable-tray .cbar div:nth-child(2){background:#8FA83A;} #aug-cable-tray .cbar div:nth-child(3){background:#C79A2B;} #aug-cable-tray .cbar div:nth-child(4){background:#D47A2A;} #aug-cable-tray .cbar div:nth-child(5){background:#C0471F;}
+
+/* ===== fill rules ===== */#aug-cable-tray .rules{list-style:none;padding:0;margin:1rem 0;}
+#aug-cable-tray .rules li{display:grid;grid-template-columns:200px 1fr;gap:12px;padding:.65rem .9rem;margin:.4rem 0;border-radius:var(--radius-sm);background:var(--surface);font-size:14.5px;line-height:1.55;color:var(--ink-mid);}
+#aug-cable-tray .rules li b{font-family:var(--display);color:var(--ink);}
+#aug-cable-tray .formula{font-family:var(--mono);font-size:14px;background:var(--slate);color:#fff;padding:.65rem .95rem;border-radius:var(--radius-sm);margin:.8rem 0;line-height:1.6;}
+
+/* ===== load chart (bars) ===== */#aug-cable-tray .swl{margin:1.2rem 0;border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem;}
+#aug-cable-tray .swl-h{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;}
+#aug-cable-tray .sw-r{display:grid;grid-template-columns:60px 1fr 130px;gap:10px;align-items:center;margin:.35rem 0;font-family:var(--mono);font-size:13px;}
+#aug-cable-tray .sw-r .bar{height:16px;background:var(--brand);border-radius:3px;}
+#aug-cable-tray .sw-r span:last-child{text-align:right;color:var(--ink);}
+#aug-cable-tray .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-cable-tray .chk3{list-style:none;padding:0;margin:1rem 0;}
+#aug-cable-tray .chk3 li{padding:.5rem .8rem .5rem 2rem;position:relative;font-size:14.5px;line-height:1.6;color:var(--ink-mid);border-bottom:1px dashed var(--border);}
+#aug-cable-tray .chk3 li::before{content:"✓";position:absolute;left:.6rem;color:var(--green);font-weight:700;}
+#aug-cable-tray .chk3 li b{color:var(--ink);}
+
+/* ===== gulf ===== */#aug-cable-tray .gulf{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1.2rem 0;}
+#aug-cable-tray .gs{background:var(--slate);color:#fff;border-radius:var(--radius-sm);padding:.85rem .95rem;}
+#aug-cable-tray .gs b{display:block;font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-cable-tray .gs span{display:block;font-size:12.5px;line-height:1.5;opacity:.88;margin-top:.3rem;}
+#aug-cable-tray .code{font-family:var(--mono);font-size:12px;background:#fff;border:1px solid var(--border);border-radius:3px;padding:1px 5px;}
+
+@media(max-width:640px){
+  #aug-cable-tray .trio{grid-template-columns:1fr;} #aug-cable-tray .trio div{border-right:none;border-bottom:1px solid var(--border);}
+  #aug-cable-tray .tt{grid-template-columns:1fr;} #aug-cable-tray .tt-v{border-right:none;border-bottom:1px solid var(--border);max-width:300px;}
+  #aug-cable-tray .mats{grid-template-columns:1fr 1fr;}
+  #aug-cable-tray .cbar{grid-template-columns:1fr;}
+  #aug-cable-tray .rules li{grid-template-columns:1fr;gap:2px;}
+  #aug-cable-tray .sw-r{grid-template-columns:50px 1fr 110px;}
+  #aug-cable-tray .gulf{grid-template-columns:1fr;}
+  #aug-cable-tray .cta{flex-direction:column;align-items:flex-start;}
+  #aug-cable-tray .cta>div{max-width:100%;} #aug-cable-tray .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-cable-tray .cta>div:last-child .cta-btn{margin-left:0;}
+}
+
+/* Completed visual layout */#aug-cable-tray .ph{aspect-ratio:auto;background:#f5f8fb}#aug-cable-tray .ph img{position:static;height:auto;object-fit:contain;cursor:zoom-in}
+#aug-cable-tray .tt-v{background:#f5f8fb}#aug-cable-tray .tt-v svg{cursor:zoom-in}#aug-cable-tray .tt{grid-template-columns:minmax(230px,40%) minmax(0,1fr)}
+#aug-cable-tray .mats{grid-template-columns:repeat(auto-fit,minmax(165px,1fr))}#aug-cable-tray .mt{padding:1rem}#aug-cable-tray .mt span{display:block;font-size:14px;line-height:1.6}
+#aug-cable-tray figcaption{font-family:var(--body);font-size:13px;line-height:1.65}#aug-cable-tray .cta-btn{white-space:normal;display:inline-block}#aug-cable-tray .formula{overflow-wrap:anywhere}#aug-cable-tray .sw-r{grid-template-columns:55px minmax(0,1fr) 105px;gap:12px}#aug-cable-tray .sw-r .bar{height:22px;background:linear-gradient(90deg,#0f4c81,#178ba3)}
+#aug-cable-tray #visual88{border:0;border-radius:12px;padding:16px;max-width:96vw;max-height:94vh;margin:auto;background:#fff}#aug-cable-tray #visual88::backdrop{background:#0b1d30d9}#aug-cable-tray #visual88 img{display:block;max-width:90vw;max-height:80vh;object-fit:contain}#aug-cable-tray #visual88 button{display:block;margin:0 0 10px auto;border:0;background:#173c55;color:white;padding:9px 16px;border-radius:6px;cursor:pointer}
+@media(max-width:640px){#aug-cable-tray .tt{grid-template-columns:1fr}#aug-cable-tray .tt-v{max-width:none;width:100%;border-right:0}#aug-cable-tray .tt-v svg{max-width:440px;margin:auto}#aug-cable-tray .mats{grid-template-columns:1fr 1fr}#aug-cable-tray.blog{padding:1.5rem 1rem 4rem}#aug-cable-tray .sw-r{font-size:11px;grid-template-columns:44px minmax(0,1fr) 90px}#aug-cable-tray .cta{padding:1.2rem}#aug-cable-tray .mt{padding:.8rem}}
+@media(max-width:360px){#aug-cable-tray .mats{grid-template-columns:1fr}}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-cable-tray.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-cable-tray h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-cable-tray a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-cable-tray a:hover{color:#18d104;}
+#aug-cable-tray .cta{background:#1a1a1a;}
+#aug-cable-tray .cta a.cta-btn{text-decoration:none;}
+#aug-cable-tray .cta-btn-blue{background:#18d104;color:#000;}
+#aug-cable-tray .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-cable-tray [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-cable-tray">
+
+<div class="defbox">
+  <div class="defbox-k">Short answer</div>
+  <p><strong>A cable tray is an open support system that carries and routes cables through a building or plant.</strong> Five types cover most projects: ladder, perforated, solid bottom, wire mesh and channel. This guide helps you pick the right type, material and size, not shop for one.</p>
+</div>
+
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Ladder trays suit heavy <a href="https://augmintech.com/cable-size-calculator/">power cables</a> and long spans; wire mesh suits data and low-voltage cables.</strong></li>
+  <li><strong>Material follows the environment</strong>: pre-galvanised indoors, hot-dip galvanised outdoors, stainless 316 or GRP on the coast or in chemical plants.</li>
+  <li><strong>Size by fill and load</strong>: NEC Article 392 limits fill, and the maker's load table, tested to IEC 61537, sets the support spacing.</li>
+  <li><strong>Gulf coastal sites corrode zinc fast</strong>, which pushes specifications toward hot-dip galvanised, stainless or GRP trays.</li>
+</ul>
+
+<h2 id="what-is">What Is a Cable Tray?</h2>
+<p>A cable tray is a rigid structural system (open or ventilated, with side rails) that supports insulated cables between equipment. It is not a raceway: cables lie in it rather than being pulled through it. Here is how it compares with the two alternatives:</p>
+<div class="trio">
+  <div><b>Cable tray</b><span>Open support. Easy to add or replace cables, good heat dissipation, carries many cables over long runs. Used for main power, control and data routes.</span></div>
+  <div><b>Cable trunking</b><span>Enclosed metal or PVC box with a removable lid. Protects cables from dust and touch. Used for final circuits and wiring in finished areas.</span></div>
+  <div><b>Conduit</b><span>Closed tube; cables are pulled through. Best physical protection, but hard to modify. Used for individual circuits, concealed and exposed wiring.</span></div>
+</div>
+
+<h2 id="types">5 Types of Cable Tray</h2>
+<div class="ttypes">
+  <div class="tt"><div class="tt-v"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 330" role="img"><rect width="500" height="330" fill="#f5f8fb"/><polygon points="108.6,119.6 441.1,119.6 443.2,117.1 110.7,117.1" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="108.6,157.6 441.1,157.6 441.1,119.6 108.6,119.6" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="441.1,157.6 443.2,155.1 443.2,117.1 441.1,119.6" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="59.2,226.0 76.3,226.0 139.9,151.6 122.8,151.6" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="59.2,232.0 76.3,232.0 76.3,226.0 59.2,226.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="76.3,232.0 139.9,157.6 139.9,151.6 76.3,226.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="103.9,226.0 121.0,226.0 184.6,151.6 167.5,151.6" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="103.9,232.0 121.0,232.0 121.0,226.0 103.9,226.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="121.0,232.0 184.6,157.6 184.6,151.6 121.0,226.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="148.6,226.0 165.6,226.0 229.2,151.6 212.2,151.6" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="148.6,232.0 165.6,232.0 165.6,226.0 148.6,226.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="165.6,232.0 229.2,157.6 229.2,151.6 165.6,226.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="193.2,226.0 210.3,226.0 273.9,151.6 256.8,151.6" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="193.2,232.0 210.3,232.0 210.3,226.0 193.2,226.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="210.3,232.0 273.9,157.6 273.9,151.6 210.3,226.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="237.8,226.0 254.9,226.0 318.6,151.6 301.4,151.6" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="237.8,232.0 254.9,232.0 254.9,226.0 237.8,226.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="254.9,232.0 318.6,157.6 318.6,151.6 254.9,226.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="282.5,226.0 299.6,226.0 363.2,151.6 346.1,151.6" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="282.5,232.0 299.6,232.0 299.6,226.0 282.5,226.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="299.6,232.0 363.2,157.6 363.2,151.6 299.6,226.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="327.1,226.0 344.2,226.0 407.9,151.6 390.8,151.6" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="327.1,232.0 344.2,232.0 344.2,226.0 327.1,226.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="344.2,232.0 407.9,157.6 407.9,151.6 344.2,226.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="45.0,194.0 377.5,194.0 379.6,191.5 47.1,191.5" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="45.0,232.0 377.5,232.0 377.5,194.0 45.0,194.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="377.5,232.0 379.6,229.5 379.6,191.5 377.5,194.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><text x="24" y="34" font-family="Arial,sans-serif" font-size="15" fill="#24465c">LADDER</text><text x="24" y="300" font-family="Arial,sans-serif" font-size="17" fill="#24465c">Open rungs · maximum ventilation</text></svg></div><div class="tt-b"><h3>1. Ladder cable tray</h3><p>Two side rails joined by rungs. Without covers, it gives the maximum free flow of air across the cables, and is used on intermediate to long support spans of 12 to 30 ft (about 3.7 to 9 m).</p><div class="k">Best for: MV and main LV power cables, transformer and switchgear rooms, plant pipe racks</div></div></div>
+  <div class="tt"><div class="tt-v"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 330" role="img"><rect width="500" height="330" fill="#f5f8fb"/><polygon points="108.6,119.6 441.1,119.6 443.2,117.1 110.7,117.1" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="108.6,157.6 441.1,157.6 441.1,119.6 108.6,119.6" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="441.1,157.6 443.2,155.1 443.2,117.1 441.1,119.6" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="45.0,229.0 377.5,229.0 441.1,154.6 108.6,154.6" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="45.0,232.0 377.5,232.0 377.5,229.0 45.0,229.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="377.5,232.0 441.1,157.6 441.1,154.6 377.5,229.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="68.5,221.1 86.5,221.1 90.2,216.7 72.2,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="80.6,206.8 98.7,206.8 102.4,202.5 84.4,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="92.8,192.5 110.9,192.5 114.6,188.2 96.5,188.2" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="105.0,178.3 123.1,178.3 126.8,173.9 108.7,173.9" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="117.2,164.0 135.3,164.0 139.0,159.7 120.9,159.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="99.8,221.1 117.9,221.1 121.6,216.7 103.5,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="112.0,206.8 130.1,206.8 133.8,202.5 115.7,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="124.2,192.5 142.2,192.5 145.9,188.2 127.9,188.2" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="136.4,178.3 154.4,178.3 158.1,173.9 140.1,173.9" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="148.6,164.0 166.6,164.0 170.3,159.7 152.3,159.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="131.2,221.1 149.2,221.1 152.9,216.7 134.9,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="143.3,206.8 161.4,206.8 165.1,202.5 147.1,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="155.5,192.5 173.6,192.5 177.3,188.2 159.2,188.2" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="167.7,178.3 185.8,178.3 189.5,173.9 171.4,173.9" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="179.9,164.0 198.0,164.0 201.7,159.7 183.6,159.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="162.5,221.1 180.6,221.1 184.3,216.7 166.2,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="174.7,206.8 192.8,206.8 196.5,202.5 178.4,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="186.9,192.5 204.9,192.5 208.6,188.2 190.6,188.2" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="199.1,178.3 217.1,178.3 220.8,173.9 202.8,173.9" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="211.3,164.0 229.3,164.0 233.0,159.7 215.0,159.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="193.9,221.1 211.9,221.1 215.6,216.7 197.6,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="206.1,206.8 224.1,206.8 227.8,202.5 209.8,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="218.2,192.5 236.3,192.5 240.0,188.2 221.9,188.2" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="230.4,178.3 248.5,178.3 252.2,173.9 234.1,173.9" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="242.6,164.0 260.7,164.0 264.4,159.7 246.3,159.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="225.2,221.1 243.3,221.1 247.0,216.7 228.9,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="237.4,206.8 255.4,206.8 259.2,202.5 241.1,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="249.6,192.5 267.6,192.5 271.3,188.2 253.3,188.2" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="261.8,178.3 279.8,178.3 283.5,173.9 265.5,173.9" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="274.0,164.0 292.0,164.0 295.7,159.7 277.7,159.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="256.6,221.1 274.6,221.1 278.3,216.7 260.3,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="268.8,206.8 286.8,206.8 290.5,202.5 272.5,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="280.9,192.5 299.0,192.5 302.7,188.2 284.6,188.2" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="293.1,178.3 311.2,178.3 314.9,173.9 296.8,173.9" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="305.3,164.0 323.4,164.0 327.1,159.7 309.0,159.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="287.9,221.1 306.0,221.1 309.7,216.7 291.6,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="300.1,206.8 318.2,206.8 321.9,202.5 303.8,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="312.3,192.5 330.3,192.5 334.1,188.2 316.0,188.2" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="324.5,178.3 342.5,178.3 346.2,173.9 328.2,173.9" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="336.7,164.0 354.7,164.0 358.4,159.7 340.4,159.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="319.3,221.1 337.3,221.1 341.0,216.7 323.0,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="331.4,206.8 349.5,206.8 353.2,202.5 335.2,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="343.6,192.5 361.7,192.5 365.4,188.2 347.3,188.2" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="355.8,178.3 373.9,178.3 377.6,173.9 359.5,173.9" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="368.0,164.0 386.1,164.0 389.8,159.7 371.7,159.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="350.6,221.1 368.7,221.1 372.4,216.7 354.3,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="362.8,206.8 380.9,206.8 384.6,202.5 366.5,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="375.0,192.5 393.0,192.5 396.8,188.2 378.7,188.2" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="387.2,178.3 405.2,178.3 408.9,173.9 390.9,173.9" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="399.4,164.0 417.4,164.0 421.1,159.7 403.1,159.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="45.0,194.0 377.5,194.0 379.6,191.5 47.1,191.5" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="45.0,232.0 377.5,232.0 377.5,194.0 45.0,194.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="377.5,232.0 379.6,229.5 379.6,191.5 377.5,194.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><text x="24" y="34" font-family="Arial,sans-serif" font-size="15" fill="#24465c">PERFORATED</text><text x="24" y="300" font-family="Arial,sans-serif" font-size="17" fill="#24465c">Ventilated sheet base</text></svg></div><div class="tt-b"><h3>2. Perforated cable tray</h3><p>A sheet-steel base with ventilation holes (also called ventilated trough). Moderate ventilation with more continuous cable support, on spans of 5 to 12 ft (about 1.5 to 3.7 m).</p><div class="k">Best for: LV power and control cables in buildings</div></div></div>
+  <div class="tt"><div class="tt-v"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 330" role="img"><rect width="500" height="330" fill="#f5f8fb"/><polygon points="108.6,119.6 441.1,119.6 443.2,117.1 110.7,117.1" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="108.6,157.6 441.1,157.6 441.1,119.6 108.6,119.6" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="441.1,157.6 443.2,155.1 443.2,117.1 441.1,119.6" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="45.0,229.0 377.5,229.0 441.1,154.6 108.6,154.6" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="45.0,232.0 377.5,232.0 377.5,229.0 45.0,229.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="377.5,232.0 441.1,157.6 441.1,154.6 377.5,229.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="45.0,194.0 377.5,194.0 379.6,191.5 47.1,191.5" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="45.0,232.0 377.5,232.0 377.5,194.0 45.0,194.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="377.5,232.0 379.6,229.5 379.6,191.5 377.5,194.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><text x="24" y="34" font-family="Arial,sans-serif" font-size="15" fill="#24465c">SOLID BOTTOM</text><text x="24" y="300" font-family="Arial,sans-serif" font-size="17" fill="#24465c">Continuous base · shown uncovered</text></svg></div><div class="tt-b"><h3>3. Solid bottom cable tray</h3><p>A continuous, non-ventilated base that fully supports delicate cables and, with a cover, protects them. Used for minimal heat-generating electrical or telecom cables on spans of 5 to 12 ft.</p><div class="k">Best for: instrumentation, telecom and cables needing protection or EMI shielding</div></div></div>
+  <div class="tt"><div class="tt-v"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 330" role="img"><rect width="500" height="330" fill="#f5f8fb"/><polyline points="45.0,194.0 45.0,232.0 108.6,157.6 108.6,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="68.75,194.0 68.75,232.0 132.35,157.6 132.35,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="92.5,194.0 92.5,232.0 156.1,157.6 156.1,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="116.25,194.0 116.25,232.0 179.85,157.6 179.85,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="140.0,194.0 140.0,232.0 203.6,157.6 203.6,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="163.75,194.0 163.75,232.0 227.35,157.6 227.35,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="187.5,194.0 187.5,232.0 251.1,157.6 251.1,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="211.25,194.0 211.25,232.0 274.85,157.6 274.85,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="235.0,194.0 235.0,232.0 298.6,157.6 298.6,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="258.75,194.0 258.75,232.0 322.35,157.6 322.35,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="282.5,194.0 282.5,232.0 346.1,157.6 346.1,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="306.25,194.0 306.25,232.0 369.85,157.6 369.85,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="330.0,194.0 330.0,232.0 393.6,157.6 393.6,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="353.75,194.0 353.75,232.0 417.35,157.6 417.35,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><polyline points="377.5,194.0 377.5,232.0 441.1,157.6 441.1,119.6" fill="none" stroke="#7893a6" stroke-width="3"/><path d="M45.0 232.0 L377.5 232.0" stroke="#6a879b" stroke-width="2.5" fill="none"/><path d="M57.72 217.12 L390.22 217.12" stroke="#6a879b" stroke-width="2.5" fill="none"/><path d="M70.44 202.24 L402.94 202.24" stroke="#6a879b" stroke-width="2.5" fill="none"/><path d="M83.16 187.36 L415.66 187.36" stroke="#6a879b" stroke-width="2.5" fill="none"/><path d="M95.88 172.48000000000002 L428.38 172.48000000000002" stroke="#6a879b" stroke-width="2.5" fill="none"/><path d="M108.6 157.6 L441.1 157.6" stroke="#6a879b" stroke-width="2.5" fill="none"/><path d="M45.0 214.0 L377.5 214.0" stroke="#5f8097" stroke-width="3" fill="none"/><path d="M45.0 194.0 L377.5 194.0" stroke="#5f8097" stroke-width="3" fill="none"/><path d="M108.6 139.6 L441.1 139.6" stroke="#5f8097" stroke-width="3" fill="none"/><path d="M108.6 119.6 L441.1 119.6" stroke="#5f8097" stroke-width="3" fill="none"/><text x="24" y="34" font-family="Arial,sans-serif" font-size="15" fill="#24465c">WIRE MESH</text><text x="24" y="300" font-family="Arial,sans-serif" font-size="17" fill="#24465c">Welded wire basket</text></svg></div><div class="tt-b"><h3>4. Wire mesh (basket) cable tray</h3><p>A light grid of welded steel wire, easy to cut and bend on site. Used mainly for telecom and fibre optic cables on short spans of 4 to 8 ft (about 1.2 to 2.4 m).</p><div class="k">Best for: data, ICT and low-current systems above ceilings and in data centres</div></div></div>
+  <div class="tt"><div class="tt-v"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 330" role="img"><rect width="500" height="330" fill="#f5f8fb"/><polygon points="70.4,179.2 402.9,179.2 405.1,176.8 72.6,176.8" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="70.4,202.2 402.9,202.2 402.9,179.2 70.4,179.2" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="402.9,202.2 405.1,199.8 405.1,176.8 402.9,179.2" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="45.0,229.0 377.5,229.0 402.9,199.2 70.4,199.2" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="45.0,232.0 377.5,232.0 377.5,229.0 45.0,229.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="377.5,232.0 402.9,202.2 402.9,199.2 377.5,229.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><polygon points="68.5,221.1 86.5,221.1 90.2,216.7 72.2,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="80.6,206.8 98.7,206.8 102.4,202.5 84.4,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="99.8,221.1 117.9,221.1 121.6,216.7 103.5,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="112.0,206.8 130.1,206.8 133.8,202.5 115.7,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="131.2,221.1 149.2,221.1 152.9,216.7 134.9,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="143.3,206.8 161.4,206.8 165.1,202.5 147.1,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="162.5,221.1 180.6,221.1 184.3,216.7 166.2,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="174.7,206.8 192.8,206.8 196.5,202.5 178.4,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="193.9,221.1 211.9,221.1 215.6,216.7 197.6,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="206.1,206.8 224.1,206.8 227.8,202.5 209.8,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="225.2,221.1 243.3,221.1 247.0,216.7 228.9,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="237.4,206.8 255.4,206.8 259.2,202.5 241.1,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="256.6,221.1 274.6,221.1 278.3,216.7 260.3,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="268.8,206.8 286.8,206.8 290.5,202.5 272.5,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="287.9,221.1 306.0,221.1 309.7,216.7 291.6,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="300.1,206.8 318.2,206.8 321.9,202.5 303.8,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="319.3,221.1 337.3,221.1 341.0,216.7 323.0,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="331.4,206.8 349.5,206.8 353.2,202.5 335.2,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="350.6,221.1 368.7,221.1 372.4,216.7 354.3,216.7" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="362.8,206.8 380.9,206.8 384.6,202.5 366.5,202.5" fill="#607887" stroke="#607e92" stroke-width="1"/><polygon points="45.0,209.0 377.5,209.0 379.6,206.5 47.1,206.5" fill="#dce6ee" stroke="#607e92" stroke-width="1"/><polygon points="45.0,232.0 377.5,232.0 377.5,209.0 45.0,209.0" fill="#9eb2c1" stroke="#607e92" stroke-width="1"/><polygon points="377.5,232.0 379.6,229.5 379.6,206.5 377.5,209.0" fill="#6e889c" stroke="#607e92" stroke-width="1"/><text x="24" y="34" font-family="Arial,sans-serif" font-size="15" fill="#24465c">CHANNEL</text><text x="24" y="300" font-family="Arial,sans-serif" font-size="17" fill="#24465c">Narrow open channel</text></svg></div><div class="tt-b"><h3>5. Channel cable tray</h3><p>A narrow single channel for a small number of cables where conduit is undesirable, on short to medium spans of 5 to 10 ft (about 1.5 to 3 m).</p><div class="k">Best for: drops to equipment, a few control or instrument cables</div></div></div>
+</div>
+<p class="note">Descriptions and spans from an <a href="https://www.idc-online.com/technical_references/pdfs/electrical_engineering/Type_of_Cable_Tray.pdf" target="_blank" rel="noopener">IDC technical reference</a>; typical cables from <a href="https://engalaxy.com/cable-trays/" target="_blank" rel="noopener">Engalaxy</a>. Spans are typical ranges; the maker's load table decides the actual spacing.</p>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h3>Cable tray type selection table</h3>
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>Type</th><th>Ventilation</th><th>Load and span</th><th>Typical cables</th><th>Typical location</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Ladder</strong></td><td>Maximum</td><td>Heavy; long spans (12 to 30 ft)</td><td>MV and large LV power</td><td>Plant rooms, risers, pipe racks</td></tr>
+    <tr><td><strong>Perforated</strong></td><td>Moderate</td><td>Medium; 5 to 12 ft</td><td>LV power and control</td><td>Building ceilings and service corridors</td></tr>
+    <tr><td><strong>Solid bottom</strong></td><td>None</td><td>Medium; 5 to 12 ft</td><td>Instrumentation, telecom, sensitive cables</td><td>Areas needing protection or shielding</td></tr>
+    <tr><td><strong>Wire mesh</strong></td><td>High</td><td>Light; 4 to 8 ft</td><td>Data, fibre, low-current</td><td>Above false ceilings, data centres</td></tr>
+    <tr><td><strong>Channel</strong></td><td>Low to moderate</td><td>Light; 5 to 10 ft</td><td>A few control or instrument cables</td><td>Drops to equipment</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="cta">
+  <div><h3>Route Cable Trays in Revit MEP</h3><p>Augmintech's PG Program in BIM MEP covers MEP system modelling, clash-free coordination, schedules and BOQs on three building projects, across 150+ live hours over 6 months, with recordings for 1000 days and 500+ interview questions. ₹1,50,000 + GST in India, $1,800 abroad.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-mep-program/" class="cta-btn cta-btn-blue">View the BIM MEP program</a></div>
+</div>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/88-ladder-perforated-and-wire-mesh.webp" alt="Ladder, perforated and wire mesh cable trays installed in tiers in a service corridor" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Trays are often run in tiers, keeping power, control and data cables on separate trays. AI-generated installation illustration.</figcaption>
+</figure>
+
+<h2 id="materials">Cable Tray Materials: GI, SS, Aluminium and FRP</h2>
+<div class="mats">
+  <div class="mt"><b>Pre-galvanised (GI)</b><small>BS EN 10346</small><span>Thin zinc coat (13 µm min. on tray). Dry indoor areas.</span><div class="dots">●○○○</div></div>
+  <div class="mt"><b>Hot-dip galvanised</b><small>BS EN ISO 1461</small><span>Thick coat (45 µm on tray, 55 µm on ladder). Outdoors and plant areas.</span><div class="dots">●●○○</div></div>
+  <div class="mt"><b>Stainless 316L</b><small>1.4404</small><span>For highly corrosive, extreme and marine conditions. Highest cost.</span><div class="dots">●●●●</div></div>
+  <div class="mt"><b>Aluminium</b><small>e.g. 6063-T6</small><span>High strength-to-weight ratio; light to install.</span><div class="dots">●●●○</div></div>
+  <div class="mt"><b>FRP / GRP</b><small>Fibreglass</small><span>Designed for highly corrosive environments; non-conductive.</span><div class="dots">●●●●</div></div>
+</div>
+<p class="note">Dots show relative corrosion resistance (indicative). Coating thicknesses and 316L suitability from <a href="https://cdn.shopify.com/s/files/1/0623/3872/8100/files/MEF_-_Metsec_-Suitablity_of_Materials_and_Finishes.pdf" target="_blank" rel="noopener">Metsec, Suitability of Materials and Finishes</a>; aluminium from the IDC reference; GRP from <a href="https://www.eaeelectric.com/cable-tray-general-information" target="_blank" rel="noopener">EAE</a>.</p>
+<p>Zinc wears away at a rate that depends on the environment. ISO corrosivity categories, with typical zinc loss per year:</p>
+<div class="cbar">
+  <div><b>C1</b>Dry interior<br>&lt; 0.1 µm/yr</div>
+  <div><b>C2</b>Rural, some condensation<br>0.1 to 0.7</div>
+  <div><b>C3</b>Urban, mild coastal<br>0.7 to 2</div>
+  <div><b>C4</b>Industrial, urban coastal, chemical plants<br>2 to 4</div>
+  <div><b>C5</b>Industrial humid, high-salinity coastal<br>4 to 8</div>
+</div>
+<p class="note">Categories and rates from Metsec. A thicker zinc coat lasts longer in a given category, so match the finish to the category.</p>
+
+<h2 id="sizing">Cable Tray Sizing and Fill</h2>
+<p>Pick the width for fill and future cables, and the depth (side rail height) to contain the cable bundle. In the US, cable fill follows <strong>NEC Article 392</strong> (NFPA 70). The main rules, as set out in Eaton B-Line's cable tray manual:</p>
+<ul class="rules">
+  <li><b>Multiconductor cables 4/0 AWG and larger</b><span>Single layer; the sum of the cable diameters must not exceed the tray's inside width (<a href="https://submittalbuilder.legrand.us/loadtable/" target="_blank" rel="noopener">Legrand NEC fill calculator</a>).</span></li>
+  <li><b>Smaller multiconductor cables</b><span>Total cross-sectional area must not exceed the allowable fill area for that tray width in the NEC table (for example, 7.0 in² in the manual's 6 in wide example).</span></li>
+  <li><b>Control and signal cables only</b><span>Ladder or ventilated trough trays up to 6 in deep can be filled to 50% of their area; deeper trays are calculated as 6 in deep.</span></li>
+  <li><b>Solid bottom trays</b><span>Lower fill: about 30% for mixed cables, and only 90% of the width for 4/0 and larger.</span></li>
+</ul>
+<div class="formula">Example: control cables, 300 mm × 100 mm ladder tray → 30,000 mm² × 50% = 15,000 mm² of cable area</div>
+<p class="note">Rules from <a href="https://www.manualsdir.com/manuals/61541/cooper-bussmann-ct02man.html?page=35" target="_blank" rel="noopener">Eaton (Cooper) B-Line Cable Tray Manual</a>, which cites NEC 392.9 (renumbered 392.22 in recent editions). The 2026 NEC is current; check the edition your authority applies. IEC 61537:2023 covers tray strength and electrical continuity tests rather than fill, so on IEC projects fill and spare capacity come from the project specification.</p>
+
+<h2 id="support">Support Spacing and Installation</h2>
+<p>Support spacing comes from the <strong>maker's load table</strong>, tested to <strong>IEC 61537</strong> (2023 edition). The test loads trays and ladders on spans of up to 6 m and records deflection to set a safe working load (SWL) for each span (<a href="https://www.crown.co.za/sparks-electrical-news/contractors-corner/36150-cabstrut-s-testing-of-cable-ladders-and-trays-in-accordance-with-iec-61537-2023-sans" target="_blank" rel="noopener">Sparks Electrical News</a>). Load capacity falls fast as the span grows. One maker's published table for a 300 × 150 mm hot-dip galvanised ladder:</p>
+<div class="swl">
+  <div class="swl-h">Safe working load vs support spacing (IEC 61537)</div>
+  <div class="sw-r"><span>3.0 m</span><div class="bar" style="width:100%"></div><span>4,628 N/m</span></div>
+  <div class="sw-r"><span>4.0 m</span><div class="bar" style="width:56%"></div><span>2,598 N/m</span></div>
+  <div class="sw-r"><span>5.0 m</span><div class="bar" style="width:36%"></div><span>1,667 N/m</span></div>
+  <div class="sw-r"><span>6.0 m</span><div class="bar" style="width:25%"></div><span>1,157 N/m</span></div>
+</div>
+<p class="note">Marshall-Tufflex 300 × 150 × 2 mm ladder, hot-dip galvanised, via <a href="https://www.voltimum.co.uk/product-details/1sXHrrLy/marshall-tufflex/marshall-tufflex-300mm-x-150mm-x-2mm-ladder-3m-hot-dip-galvanised" target="_blank" rel="noopener">Voltimum</a>. Doubling the span from 3 m to 6 m cuts the safe load to a quarter. Always use the table for the exact product.</p>
+<ul class="chk3">
+  <li><b>Check the load:</b> add up the cable weights in kg/m (or N/m), plus any allowance the spec requires, and pick a span the table allows.</li>
+  <li><b>Support near joints and fittings:</b> place supports close to splices, bends and tees, as the maker's instructions show.</li>
+  <li><b>Respect bend radius:</b> use bends with an inside radius that suits the largest cable's minimum bending radius.</li>
+  <li><b>Earth continuity:</b> IEC 61537 tests the electrical continuity of tray systems; bond across joints with the maker's links where the tray is earthed.</li>
+  <li><b>Leave access:</b> keep space above and beside trays to pull in cables later.</li>
+</ul>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/88-cable-tray-on-channel-supports.webp" alt="Cable tray on channel supports with splice plate, bend and earth bonding link" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Supports, splice plates, bends and a bonding link on a cable tray run. AI-generated installation illustration.</figcaption>
+</figure>
+
+<h2 id="revit">Modelling Cable Trays in Revit</h2>
+<p>In <a href="https://augmintech.com/revit-mep/">Revit</a>, cable tray is drawn from <span class="code">Systems › Electrical › Cable Tray</span>. From the Type Selector you choose a cable tray type, with or without fittings, then set the width, height, offset and bend radius on the ribbon; bends are added automatically as you draw (<a href="https://help.autodesk.com/cloudhelp/2027/ENU/Revit-MEPEng/files/GUID-C9FCE20F-32CE-4C96-BB60-DA43E63D6E05.htm" target="_blank" rel="noopener">Autodesk Revit Help</a>).</p>
+<ul class="chk3">
+  <li><b>Set up types</b> for ladder and channel trays, with the right fittings (bends, tees, crosses, reducers) loaded.</li>
+  <li><b>Route in coordination zones</b>: agree tray heights with HVAC and plumbing so every tray keeps access and clearance for pulling cables.</li>
+  <li><b>Check clashes</b> with <span class="code">Collaborate › Coordinate › Interference Check</span> against <a href="https://augmintech.com/hvac-duct-design/">ducts</a>, pipes and structure (<a href="https://help.autodesk.com/cloudhelp/2027/ENU/Revit-Collaborate/files/GUID-890A9FE0-EFF4-4CFB-9E81-B0DE1A132BEC.htm" target="_blank" rel="noopener">Autodesk Help</a>).</li>
+  <li><b>Schedule quantities</b>: cable tray and fitting schedules give lengths and counts for the BOQ.</li>
+</ul>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/88-illustrative-ceiling-coordination-section-showing.webp" alt="Illustrative ceiling coordination section showing separate power and data trays, ductwork, pipes and access space" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Illustrative ceiling coordination section showing cable trays, ductwork, pipes and access space. Not a Revit screenshot.</figcaption>
+</figure>
+
+<h2 id="gulf">Cable Trays on Gulf Projects</h2>
+<p>Gulf sites combine heat, humidity and airborne salt, and coastal sites corrode zinc far faster than inland ones. A corrosion study at five sites in Abu Dhabi measured:</p>
+<div class="gulf">
+  <div class="gs"><b>15 µm/yr</b><span>Zinc corrosion rate on the coast</span></div>
+  <div class="gs"><b>0.6 µm/yr</b><span>Zinc corrosion rate inland</span></div>
+  <div class="gs"><b>56 µm/yr</b><span>Steel corrosion rate on the coast (10 inland)</span></div>
+</div>
+<p class="note">Ganther et al. (2011), "Towards the development of a corrosion map for Abu Dhabi", <a href="https://research-repository.griffith.edu.au/items/3839f044-73fc-5cf8-adb1-9e93ebd92327" target="_blank" rel="noopener">Materials and Corrosion</a>. The authors link the high rates to salt build-up, made worse by very low rainfall. A study at Jubail, Saudi Arabia, also found the Gulf splash zone "much more corrosive to mild and galvanized steel than the other parts of the world" (<a href="https://pure.kfupm.edu.sa/en/publications/corrosion-of-bare-and-galvanized-mild-steel-in-arabian-gulf-envir/" target="_blank" rel="noopener">Saricimen et al., 2010</a>).</p>
+<p>Put those numbers side by side with coating thickness. At 15 µm of zinc lost per year, a 45 µm hot-dip galvanised tray coating would be gone in roughly three years on an exposed coastal site (a simple division that ignores shelter and local variation), and a 13 µm pre-galvanised coat in under a year. That is the case for specifying hot-dip galvanised trays as a minimum outdoors, and stainless steel 316L or GRP on exposed coastal, offshore and chemical sites. Indoors, in dry air-conditioned spaces, pre-galvanised remains the standard finish.</p>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/88-stainless-steel-cable-ladders-on.webp" alt="Stainless steel cable ladders on an outdoor pipe rack at a Gulf coastal plant" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Illustrative stainless steel cable ladder before cable installation at a coastal facility. AI-generated image.</figcaption>
+</figure>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What are the types of cable tray?</div><div class="faq-a">The five main types are ladder, perforated (ventilated trough), solid bottom, wire mesh (basket) and channel cable trays. They are made in pre-galvanised or hot-dip galvanised steel, stainless steel, aluminium or FRP/GRP.</div></div>
+<div class="faq-item"><div class="faq-q">Which cable tray is best for power cables?</div><div class="faq-a">Ladder cable tray. It gives the most ventilation, which helps cables carry their rated current, and it supports heavy cables over long spans. Perforated tray suits smaller LV power and control cables.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between a cable tray and cable trunking?</div><div class="faq-a">A cable tray is open, so cables are easy to add and stay cool; it is used for main cable routes. Trunking is an enclosed box with a lid, protecting cables in finished areas and for final circuits.</div></div>
+<div class="faq-item"><div class="faq-q">What is the maximum fill for a cable tray?</div><div class="faq-a">Under NEC Article 392, control and signal cables may fill 50% of a ladder or ventilated trough tray's area (up to 6 in deep). Multiconductor power cables 4/0 and larger go in a single layer with diameters adding up to no more than the tray width. On IEC projects, fill and spare capacity come from the project specification.</div></div>
+<div class="faq-item"><div class="faq-q">What is the support spacing for a cable tray?</div><div class="faq-a">It depends on the tray and the cable load, so take it from the maker's load table tested to IEC 61537. Typical spans are 4 to 8 ft for wire mesh, 5 to 12 ft for perforated and solid bottom trays, and 12 to 30 ft for ladders.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>IDC Technologies</strong>, "Type of Cable Tray", <a href="https://www.idc-online.com/technical_references/pdfs/electrical_engineering/Type_of_Cable_Tray.pdf" target="_blank" rel="noopener">idc-online.com</a>.</li>
+  <li><strong>Engalaxy</strong>, <a href="https://engalaxy.com/cable-trays/" target="_blank" rel="noopener">Cable trays</a>; <strong>EAE</strong>, <a href="https://www.eaeelectric.com/cable-tray-general-information" target="_blank" rel="noopener">Cable tray general information</a>.</li>
+  <li><strong>Metsec</strong>, <a href="https://cdn.shopify.com/s/files/1/0623/3872/8100/files/MEF_-_Metsec_-Suitablity_of_Materials_and_Finishes.pdf" target="_blank" rel="noopener">Suitability of Materials and Finishes</a> (coatings and corrosivity categories).</li>
+  <li><strong>Eaton (Cooper) B-Line</strong>, <a href="https://www.manualsdir.com/manuals/61541/cooper-bussmann-ct02man.html?page=35" target="_blank" rel="noopener">Cable Tray Manual</a>; <strong>Legrand</strong>, <a href="https://submittalbuilder.legrand.us/loadtable/" target="_blank" rel="noopener">cable fill calculator</a>. NFPA 70 (NEC), 2026 edition.</li>
+  <li><strong>IEC 61537:2023</strong>, via <a href="https://www.crown.co.za/sparks-electrical-news/contractors-corner/36150-cabstrut-s-testing-of-cable-ladders-and-trays-in-accordance-with-iec-61537-2023-sans" target="_blank" rel="noopener">Sparks Electrical News</a>; Marshall-Tufflex load data via <a href="https://www.voltimum.co.uk/product-details/1sXHrrLy/marshall-tufflex/marshall-tufflex-300mm-x-150mm-x-2mm-ladder-3m-hot-dip-galvanised" target="_blank" rel="noopener">Voltimum</a>.</li>
+  <li><strong>Autodesk</strong>: <a href="https://help.autodesk.com/cloudhelp/2027/ENU/Revit-MEPEng/files/GUID-C9FCE20F-32CE-4C96-BB60-DA43E63D6E05.htm" target="_blank" rel="noopener">Draw Cable Tray</a>; <a href="https://help.autodesk.com/cloudhelp/2027/ENU/Revit-Collaborate/files/GUID-890A9FE0-EFF4-4CFB-9E81-B0DE1A132BEC.htm" target="_blank" rel="noopener">Interference Check</a>.</li>
+  <li><strong>Ganther et al.</strong> (2011), <a href="https://research-repository.griffith.edu.au/items/3839f044-73fc-5cf8-adb1-9e93ebd92327" target="_blank" rel="noopener">corrosion map for Abu Dhabi</a>; <strong>Saricimen et al.</strong> (2010), <a href="https://pure.kfupm.edu.sa/en/publications/corrosion-of-bare-and-galvanized-mild-steel-in-arabian-gulf-envir/" target="_blank" rel="noopener">corrosion in the Arabian Gulf environment</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 5 November 2026.</p>
+
+</div>
+<dialog id="visual88" aria-label="Enlarged blog illustration"><button type="button">Close</button><img alt=""></dialog><script>(()=>{const d=document.getElementById('visual88'),im=d.querySelector('img');document.querySelectorAll('figure img,.tt-v svg').forEach(e=>{e.tabIndex=0;e.setAttribute('aria-label',(e.getAttribute('alt')||e.getAttribute('aria-label')||'Cable tray illustration')+'. Open enlarged view');function open(){im.src=e.tagName.toLowerCase()==='svg'?'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(e)):e.src;im.alt=e.getAttribute('alt')||'Cable tray illustration';d.showModal()}e.addEventListener('click',open);e.addEventListener('keydown',k=>{if(k.key==='Enter'){open()}})});d.querySelector('button').onclick=()=>d.close();d.onclick=e=>{if(e.target===d)d.close()}})();</script>

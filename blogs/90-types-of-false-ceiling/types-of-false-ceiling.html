@@ -1,0 +1,416 @@
+<style>
+#aug-types-of-false-ceiling{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-types-of-false-ceiling *,#aug-types-of-false-ceiling *::before,#aug-types-of-false-ceiling *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-types-of-false-ceiling{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-types-of-false-ceiling.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-types-of-false-ceiling .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-types-of-false-ceiling .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-types-of-false-ceiling .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-types-of-false-ceiling .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-types-of-false-ceiling .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-types-of-false-ceiling .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-types-of-false-ceiling h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-types-of-false-ceiling h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-types-of-false-ceiling p{margin-bottom:.9rem;font-size:16px;}
+#aug-types-of-false-ceiling a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-types-of-false-ceiling a:hover{border-color:var(--brand);}
+#aug-types-of-false-ceiling hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-types-of-false-ceiling .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-types-of-false-ceiling .chart svg{width:100%;height:auto;display:block;}
+#aug-types-of-false-ceiling .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-types-of-false-ceiling .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-types-of-false-ceiling .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-types-of-false-ceiling .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-types-of-false-ceiling .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-types-of-false-ceiling .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-types-of-false-ceiling .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-types-of-false-ceiling table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-types-of-false-ceiling caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-types-of-false-ceiling thead tr{background:var(--slate);color:#fff;}
+#aug-types-of-false-ceiling thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-types-of-false-ceiling tbody tr:nth-child(even){background:var(--surface);}
+#aug-types-of-false-ceiling tbody tr:hover{background:var(--brand-lite);}
+#aug-types-of-false-ceiling td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-types-of-false-ceiling td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-types-of-false-ceiling tbody tr.hl{background:var(--green-lite)!important;}
+#aug-types-of-false-ceiling tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-types-of-false-ceiling ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-types-of-false-ceiling ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-types-of-false-ceiling .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-types-of-false-ceiling .cta-green{background:var(--slate);}
+#aug-types-of-false-ceiling .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-types-of-false-ceiling .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-types-of-false-ceiling .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-types-of-false-ceiling .cta-btn-blue{color:var(--brand);}#aug-types-of-false-ceiling .cta-btn-green{color:var(--slate);}
+#aug-types-of-false-ceiling figure{margin:1.5rem 0;}
+#aug-types-of-false-ceiling figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-types-of-false-ceiling figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-types-of-false-ceiling dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-types-of-false-ceiling dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-types-of-false-ceiling dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-types-of-false-ceiling .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-types-of-false-ceiling .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-types-of-false-ceiling .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-types-of-false-ceiling .srcs{list-style:none;padding:0;}
+#aug-types-of-false-ceiling .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-types-of-false-ceiling .srcs li:last-child{border-bottom:none;}
+
+/* ===== answer strip ===== */#aug-types-of-false-ceiling .ans6{margin:1.3rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-types-of-false-ceiling .ans6-h{padding:.7rem 1rem;background:var(--ink);color:#fff;font-size:15.5px;line-height:1.55;}
+#aug-types-of-false-ceiling .ans6-h b{color:#FFD6C7;}
+#aug-types-of-false-ceiling .ans6 ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);}
+#aug-types-of-false-ceiling .ans6 li{padding:.7rem .7rem .8rem;border-right:1px solid var(--border);font-size:13px;line-height:1.45;color:var(--ink-mid);}
+#aug-types-of-false-ceiling .ans6 li:last-child{border-right:none;}
+#aug-types-of-false-ceiling .ans6 li i{display:block;width:100%;height:10px;border-radius:3px;margin-bottom:.5rem;}
+#aug-types-of-false-ceiling .ans6 li b{display:block;font-family:var(--display);font-size:15px;color:var(--ink);}
+#aug-types-of-false-ceiling .sw-gy{background:#E9E6DF;} #aug-types-of-false-ceiling .sw-pop{background:#F6F1E4;border:1px solid #DDD3BA;} #aug-types-of-false-ceiling .sw-pvc{background:#9BC4E2;} #aug-types-of-false-ceiling .sw-wd{background:#B07B4F;} #aug-types-of-false-ceiling .sw-mt{background:linear-gradient(90deg,#A9B1B9,#D9DEE3,#A9B1B9);} #aug-types-of-false-ceiling .sw-mf{background:repeating-linear-gradient(90deg,#EDEDE8 0 6px,#D8D8D0 6px 7px);}
+
+/* ===== comparison table ===== */#aug-types-of-false-ceiling .cmp90 table{min-width:0;width:100%;}
+#aug-types-of-false-ceiling .cmp90 th,#aug-types-of-false-ceiling .cmp90 td{font-size:13px;padding-left:8px;padding-right:8px;}
+#aug-types-of-false-ceiling .cmp90 .chip{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px;}
+#aug-types-of-false-ceiling .cmp90 .rc{font-family:var(--mono);font-size:12.5px;color:var(--ink);}
+#aug-types-of-false-ceiling .cmp90 th{white-space:normal;}
+#aug-types-of-false-ceiling .cmp90 .rc small{display:block;font-size:11px;color:var(--muted);}
+#aug-types-of-false-ceiling .lv{display:inline-flex;gap:2px;vertical-align:middle;margin-right:5px;}
+#aug-types-of-false-ceiling .lv s{display:block;width:8px;height:12px;border-radius:2px;background:#E1E4E8;text-decoration:none;}
+#aug-types-of-false-ceiling .lv.l1 s:nth-child(-n+1),#aug-types-of-false-ceiling .lv.l2 s:nth-child(-n+2),#aug-types-of-false-ceiling .lv.l3 s:nth-child(-n+3){background:var(--teal);}
+#aug-types-of-false-ceiling .fire-ok{color:var(--green);font-weight:600;} #aug-types-of-false-ceiling .fire-bad{color:var(--coral);font-weight:600;}
+
+/* ===== material cards ===== */#aug-types-of-false-ceiling .mats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.2rem 0;}
+#aug-types-of-false-ceiling .mat{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-types-of-false-ceiling .mat .ph{border:none;border-bottom:1px solid var(--border);border-radius:0;}
+#aug-types-of-false-ceiling .mat-b{padding:.8rem .95rem .9rem;}
+#aug-types-of-false-ceiling .mat-b h3{margin:0 0 .35rem;font-size:17px;display:flex;align-items:center;gap:8px;}
+#aug-types-of-false-ceiling .mat-b h3 i{width:14px;height:14px;border-radius:3px;flex:none;}
+#aug-types-of-false-ceiling .mat-b p{margin:0 0 .55rem;font-size:14.5px;line-height:1.62;color:var(--ink-mid);}
+#aug-types-of-false-ceiling .mat-b dl{margin:0;display:grid;grid-template-columns:78px 1fr;gap:4px 8px;font-size:13.5px;line-height:1.5;}
+#aug-types-of-false-ceiling .mat-b dt{font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);padding-top:2px;}
+#aug-types-of-false-ceiling .mat-b dd{margin:0;color:var(--ink-mid);}
+#aug-types-of-false-ceiling .mat-b dd.neg{color:#9A3B1E;}
+
+/* ===== gypsum vs pop ===== */#aug-types-of-false-ceiling .vs{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.2rem 0;}
+#aug-types-of-false-ceiling .vs-r{display:grid;grid-template-columns:120px 1fr 1fr;border-bottom:1px solid var(--border);}
+#aug-types-of-false-ceiling .vs-r:last-child{border-bottom:none;}
+#aug-types-of-false-ceiling .vs-r>div{padding:.6rem .8rem;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-types-of-false-ceiling .vs-r>div:first-child{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--ink);background:var(--surface);font-weight:600;}
+#aug-types-of-false-ceiling .vs-r>div+div{border-left:1px solid var(--border);}
+#aug-types-of-false-ceiling .vs-h>div{font-family:var(--display)!important;font-size:16px!important;font-weight:800;letter-spacing:0!important;text-transform:none!important;}
+#aug-types-of-false-ceiling .vs-h>div:nth-child(2){background:#5F6B78;color:#fff;} #aug-types-of-false-ceiling .vs-h>div:nth-child(3){background:#B89A5E;color:#fff;}
+#aug-types-of-false-ceiling .vs-r .w{display:inline-block;margin-left:6px;font-family:var(--mono);font-size:10px;padding:1px 6px;border-radius:9px;background:#E3F3EA;color:var(--green);vertical-align:1px;}
+
+/* ===== design types ===== */#aug-types-of-false-ceiling .dtypes{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:1.2rem 0;}
+#aug-types-of-false-ceiling .dt{border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;background:#fff;}
+#aug-types-of-false-ceiling .dt svg{display:block;width:100%;height:auto;background:#FAFAF7;border-bottom:1px solid var(--border);}
+#aug-types-of-false-ceiling .dt div{padding:.55rem .65rem .65rem;}
+#aug-types-of-false-ceiling .dt b{display:block;font-family:var(--display);font-size:14.5px;margin-bottom:.15rem;}
+#aug-types-of-false-ceiling .dt span{font-size:12.5px;line-height:1.5;color:var(--ink-mid);}
+
+/* ===== room gallery ===== */#aug-types-of-false-ceiling .rooms{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-types-of-false-ceiling .rooms figure{margin:0;}
+#aug-types-of-false-ceiling .rooms figcaption{font-size:13px;line-height:1.5;color:var(--muted);padding:.4rem .1rem 0;}
+#aug-types-of-false-ceiling .rooms figcaption b{color:var(--ink);}
+
+/* ===== figures ===== */#aug-types-of-false-ceiling .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-types-of-false-ceiling .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-types-of-false-ceiling .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-types-of-false-ceiling .dfig svg{display:block;width:100%;height:auto;}
+#aug-types-of-false-ceiling .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;}
+
+/* ===== rcp steps ===== */#aug-types-of-false-ceiling .rcp-steps{list-style:none;counter-reset:s;padding:0;margin:1.1rem 0;}
+#aug-types-of-false-ceiling .rcp-steps li{counter-increment:s;position:relative;padding:.65rem .8rem .65rem 3.1rem;border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px;font-size:14.5px;line-height:1.6;color:var(--ink-mid);background:#fff;}
+#aug-types-of-false-ceiling .rcp-steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:.75rem;top:.65rem;font-family:var(--mono);font-size:13px;font-weight:700;color:var(--brand);}
+#aug-types-of-false-ceiling .rcp-steps li b{color:var(--ink);}
+#aug-types-of-false-ceiling .lyr{font-family:var(--mono);font-size:11.5px;background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:1px 5px;color:var(--ink);white-space:nowrap;}
+
+/* ===== gulf ===== */#aug-types-of-false-ceiling .gulf{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-types-of-false-ceiling .gz{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-types-of-false-ceiling .gz h3{margin:0 0 .4rem;font-size:15.5px;}
+#aug-types-of-false-ceiling .gz.risk{background:#FDF1EC;border:1px solid #F2CDBF;} #aug-types-of-false-ceiling .gz.risk h3{color:#9A3B1E;}
+#aug-types-of-false-ceiling .gz.fix{background:#EEF6F2;border:1px solid #CBE4D7;} #aug-types-of-false-ceiling .gz.fix h3{color:var(--green);}
+#aug-types-of-false-ceiling .gz ul{margin:0;padding-left:1.1rem;} #aug-types-of-false-ceiling .gz li{margin-bottom:.3rem;}
+
+/* ===== lead magnet ===== */#aug-types-of-false-ceiling .lm{display:flex;gap:14px;align-items:center;border:2px dashed #25D366;border-radius:var(--radius);padding:.9rem 1rem;margin:1.4rem 0;background:#F3FBF6;}
+#aug-types-of-false-ceiling .lm-ic{flex:none;width:52px;height:60px;border-radius:6px;background:#fff;border:1px solid #CFE9D9;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700;color:#1D7A46;}
+#aug-types-of-false-ceiling .lm b{display:block;font-family:var(--display);font-size:16px;color:var(--ink);}
+#aug-types-of-false-ceiling .lm p{margin:.15rem 0 0;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-types-of-false-ceiling .lm a{flex:none;margin-left:auto;background:#25D366;color:#fff;font-weight:700;font-size:14px;padding:.6rem 1rem;border-radius:8px;text-decoration:none;white-space:nowrap;}
+
+#aug-types-of-false-ceiling .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-types-of-false-ceiling .alert{border-left:4px solid var(--warn);background:#FBF4E8;border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.8rem 1rem;margin:1rem 0;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-types-of-false-ceiling .alert b{color:var(--warn);}
+
+@media(max-width:640px){
+  #aug-types-of-false-ceiling .ans6 ol{grid-template-columns:1fr 1fr 1fr;}
+  #aug-types-of-false-ceiling .ans6 li:nth-child(3){border-right:none;} #aug-types-of-false-ceiling .ans6 li:nth-child(-n+3){border-bottom:1px solid var(--border);}
+  #aug-types-of-false-ceiling .mats,#aug-types-of-false-ceiling .rooms,#aug-types-of-false-ceiling .gulf{grid-template-columns:1fr;}
+  #aug-types-of-false-ceiling .cmp90 table{min-width:720px;}
+  #aug-types-of-false-ceiling .vs-r{grid-template-columns:82px 1fr 1fr;} #aug-types-of-false-ceiling .vs-r>div{font-size:12.5px;padding:.5rem .55rem;}
+  #aug-types-of-false-ceiling .dtypes{grid-template-columns:1fr 1fr;}
+  #aug-types-of-false-ceiling .dfig.wide{overflow-x:auto;} #aug-types-of-false-ceiling .dfig.wide svg{min-width:600px;}
+  #aug-types-of-false-ceiling .lm{flex-wrap:wrap;} #aug-types-of-false-ceiling .lm a{margin-left:0;}
+  #aug-types-of-false-ceiling .cta{flex-direction:column;align-items:flex-start;}
+  #aug-types-of-false-ceiling .cta>div{max-width:100%;} #aug-types-of-false-ceiling .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-types-of-false-ceiling .cta>div:last-child .cta-btn{margin-left:0;}
+}
+
+/* Completed illustrations and readable visual cards */#aug-types-of-false-ceiling .ph{aspect-ratio:auto}#aug-types-of-false-ceiling .ph img{position:static;width:100%;height:auto;object-fit:contain;cursor:zoom-in}#aug-types-of-false-ceiling .dfig img{width:100%;height:auto;display:block;cursor:zoom-in}#aug-types-of-false-ceiling .dt svg{cursor:zoom-in}#aug-types-of-false-ceiling .dtypes{grid-template-columns:repeat(auto-fit,minmax(205px,1fr))}#aug-types-of-false-ceiling .dt div{padding:1rem}#aug-types-of-false-ceiling .dt span{display:block;font-size:14px;line-height:1.65}#aug-types-of-false-ceiling .dt b{font-size:16px}#aug-types-of-false-ceiling .dfig figcaption,#aug-types-of-false-ceiling figcaption{font-family:var(--body);font-size:13px;line-height:1.65}#aug-types-of-false-ceiling .rooms{gap:20px}#aug-types-of-false-ceiling .cta-btn{white-space:normal;display:inline-block}#aug-types-of-false-ceiling .vs-r>div{min-width:0;overflow-wrap:anywhere}#aug-types-of-false-ceiling .lm a{white-space:normal}#aug-types-of-false-ceiling .visual-note{font-size:12px;color:#657581;margin:.5rem 0 1rem}
+#aug-types-of-false-ceiling #zoom90{padding:16px;border:0;border-radius:12px;max-width:96vw;max-height:94vh;margin:auto}#aug-types-of-false-ceiling #zoom90::backdrop{background:#142a3cdd}#aug-types-of-false-ceiling #zoom90 img{display:block;max-width:90vw;max-height:80vh;object-fit:contain}#aug-types-of-false-ceiling #zoom90 button{display:block;margin:0 0 10px auto;padding:10px 18px;background:#173d54;color:#fff;border:0;border-radius:6px;cursor:pointer}
+@media(max-width:640px){#aug-types-of-false-ceiling.blog{padding:1.5rem 1rem 4rem}#aug-types-of-false-ceiling .dtypes{grid-template-columns:1fr 1fr}#aug-types-of-false-ceiling .dt div{padding:.8rem}#aug-types-of-false-ceiling .dt span{font-size:13px}#aug-types-of-false-ceiling .rooms{grid-template-columns:1fr}#aug-types-of-false-ceiling .cta{padding:1.1rem}}
+@media(max-width:360px){#aug-types-of-false-ceiling .dtypes{grid-template-columns:1fr}}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-types-of-false-ceiling.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-types-of-false-ceiling h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-types-of-false-ceiling a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-types-of-false-ceiling a:hover{color:#18d104;}
+#aug-types-of-false-ceiling .cta{background:#1a1a1a;}
+#aug-types-of-false-ceiling .cta a.cta-btn{text-decoration:none;}
+#aug-types-of-false-ceiling .cta-btn-blue{background:#18d104;color:#000;}
+#aug-types-of-false-ceiling .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-types-of-false-ceiling [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-types-of-false-ceiling">
+
+
+<p><strong>The main types of false ceiling are gypsum, POP (plaster of Paris), PVC, wooden, metal and mineral fibre.</strong> Each one changes the cost, how the room handles moisture and fire, and which designs you can build. If you are a homeowner picking a ceiling for a new flat, or a design student drawing your first reflected ceiling plan, the comparison table below is what you need first. Photos and room ideas follow.</p>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Six materials cover almost every Indian and Gulf home:</strong> gypsum, POP, PVC, wood, metal and mineral fibre.</li>
+  <li><strong>Gypsum and POP are the cheapest mainstream options,</strong> at roughly ₹65 to ₹150 per sq ft on 2026 rate cards.</li>
+  <li><strong>Wood costs the most,</strong> with Design Cafe quoting ₹500 to ₹1,200 per sq ft for veneer and timber finishes.</li>
+  <li><strong>PVC and metal handle water best,</strong> which is why they suit bathrooms, balconies and kitchens.</li>
+  <li><strong>Gypsum boards install faster and crack less; POP is better for curves and cornices.</strong></li>
+  <li><strong>Peripheral, cove, coffered, island and stretch</strong> are the five design types you will see in most catalogues.</li>
+  <li><strong>In the Gulf, use moisture-resistant gypsum board</strong> near wet rooms and AC units, with access panels at every drain pan.</li>
+</ul>
+
+<h2 id="what-is">What Is a False Ceiling?</h2>
+<p>A false ceiling, also called a dropped or suspended ceiling, is a second ceiling hung below the concrete slab on a metal frame or grid. The gap between the two is called the ceiling void or plenum.</p>
+<p>That void is the reason false ceilings exist. It hides <a href="https://augmintech.com/hvac-duct-design/">ducts</a>, AC indoor units, electrical conduits, sprinkler pipes and drainage lines. It holds recessed lights and <a href="https://augmintech.com/smart-lighting-lumens-wattage-guide/">cove LEDs</a>. It can carry acoustic tiles or insulation to cut noise and heat gain from the slab above. And it lets a designer change the shape of the room with levels, recesses and borders without touching the structure.</p>
+
+<h2 id="types">6 Types of False Ceiling Materials</h2><p class="visual-note">Interior images are AI-generated illustrations of the ceiling materials and designs described. Click an image to enlarge.</p>
+
+<div class="ans6">
+  <div class="ans6-h">The <b>6 types of false ceiling</b> by material:</div>
+  <ol>
+    <li><i class="sw-gy"></i><b>1. Gypsum</b>Factory boards, flat, quick to fit</li>
+    <li><i class="sw-pop"></i><b>2. POP</b>Plaster cast on site, curves and cornices</li>
+    <li><i class="sw-pvc"></i><b>3. PVC</b>Plastic panels, waterproof</li>
+    <li><i class="sw-wd"></i><b>4. Wooden</b>Timber, veneer or laminate panels</li>
+    <li><i class="sw-mt"></i><b>5. Metal</b>Aluminium or steel tiles and planks</li>
+    <li><i class="sw-mf"></i><b>6. Mineral fibre</b>Acoustic tiles in a grid</li>
+  </ol>
+</div>
+
+<p>Glass, fabric and stretch-film ceilings exist too, but they are niche or decorative choices rather than everyday materials, so they are covered under designs below.</p>
+
+<div class="mats">
+
+  <div class="mat">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/90-gypsum-false-ceiling.webp" alt="Gypsum false ceiling" width="1200" height="675" loading="lazy"></div>
+    <div class="mat-b">
+      <h3><i class="sw-gy"></i>Gypsum false ceiling</h3>
+      <p>A gypsum false ceiling uses factory-made boards screwed to a galvanised steel frame, then jointed, taped and painted. It is the default for modern Indian flats and Gulf villas because it is fast, clean and gives a flat, even surface.</p>
+      <dl><dt>Suits</dt><dd>Living rooms, bedrooms, offices; moisture-resistant (MR) board for kitchens</dd><dt>Drawback</dt><dd class="neg">Standard boards absorb water; a leak means cutting out and replacing a section</dd></dl>
+    </div>
+  </div>
+
+  <div class="mat">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/90-pop-false-ceiling.webp" alt="POP false ceiling" width="1200" height="675" loading="lazy"></div>
+    <div class="mat-b">
+      <h3><i class="sw-pop"></i>POP ceiling</h3>
+      <p>A POP ceiling is plaster of Paris powder mixed with water on site and applied over a mesh and frame by a plasterer. Because it is shaped wet, it can take curves, domes, cornices and carved borders that boards cannot.</p>
+      <dl><dt>Suits</dt><dd>Living rooms and bedrooms with curved or ornate designs</dd><dt>Drawback</dt><dd class="neg">Slow and messy to install; can crack if badly mixed or cured</dd></dl>
+    </div>
+  </div>
+
+  <div class="mat">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/90-pvc-false-ceiling.webp" alt="PVC false ceiling" width="1200" height="675" loading="lazy"></div>
+    <div class="mat-b">
+      <h3><i class="sw-pvc"></i>PVC false ceiling</h3>
+      <p>A PVC false ceiling uses lightweight interlocking plastic panels clipped onto a frame. Asian Paints' guide lists it as cost-effective, easy to clean, and highly resistant to water and termites.</p>
+      <dl><dt>Suits</dt><dd>Bathrooms, balconies, utility areas, budget rentals</dd><dt>Drawback</dt><dd class="neg">Poor fire behaviour: PVC melts and gives off toxic fumes in a fire</dd></dl>
+    </div>
+  </div>
+
+  <div class="mat">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/90-wooden-false-ceiling.webp" alt="Wooden false ceiling" width="1200" height="675" loading="lazy"></div>
+    <div class="mat-b">
+      <h3><i class="sw-wd"></i>Wooden false ceiling</h3>
+      <p>Wooden ceilings use solid timber, veneered plywood, laminate or slats. They add warmth and are often used as a feature over a dining table or a TV wall rather than across the whole room.</p>
+      <dl><dt>Suits</dt><dd>Feature zones in living and dining rooms, villas, hotel lobbies</dd><dt>Drawback</dt><dd class="neg">Most expensive; combustible and vulnerable to termites and damp</dd></dl>
+    </div>
+  </div>
+
+  <div class="mat">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/90-metal-false-ceiling.webp" alt="Metal false ceiling" width="1200" height="675" loading="lazy"></div>
+    <div class="mat-b">
+      <h3><i class="sw-mt"></i>Metal false ceiling</h3>
+      <p>Metal ceilings are prefabricated aluminium or galvanised steel tiles, planks or baffles fixed to a matching grid. They are durable, do not burn and wipe clean, which suits kitchens and busy public spaces.</p>
+      <dl><dt>Suits</dt><dd>Kitchens, bathrooms, corridors, airports, malls, offices</dd><dt>Drawback</dt><dd class="neg">Costly; needs a protective coating to resist corrosion, especially near the coast</dd></dl>
+    </div>
+  </div>
+
+  <div class="mat">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/90-mineral-fibre-false-ceiling.webp" alt="Mineral fibre false ceiling" width="1200" height="675" loading="lazy"></div>
+    <div class="mat-b">
+      <h3><i class="sw-mf"></i>Mineral fibre false ceiling</h3>
+      <p>Mineral fibre ceilings are lay-in tiles, usually 600 × 600 mm, dropped into an exposed T-grid. Any tile lifts out for access to services above. Armstrong's ANF tile, for example, lists a noise reduction coefficient (NRC) of 0.50 and 85% light reflectance.</p>
+      <dl><dt>Suits</dt><dd>Offices, clinics, schools, retail</dd><dt>Drawback</dt><dd class="neg">Visible grid looks commercial in a home; tiles stain and sag if they get wet</dd></dl>
+    </div>
+  </div>
+
+</div>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="comparison">False Ceiling Comparison: Cost, Life and Moisture</h2>
+<p>Costs below are per sq ft in India from two current rate cards. Treat them as a starting range, not a quote: city, design complexity, framing, lighting cut-outs and finish all move the price.</p>
+
+<div class="tbl-wrap cmp90">
+<table>
+  <thead><tr><th>Material</th><th>Cost per sq ft (India)</th><th>Life (relative)</th><th>Moisture</th><th>Fire</th><th>Best rooms</th></tr></thead>
+  <tbody>
+    <tr><td><strong><span class="chip sw-gy"></span>Gypsum</strong></td><td class="rc">₹78<small>HouseYog: ₹75–150</small></td><td>Long if kept dry</td><td><span class="lv l1"><s></s><s></s><s></s></span>Low (MR board: medium)</td><td class="fire-ok">Board rated A2-s1,d0</td><td>Living, bedroom, office</td></tr>
+    <tr><td><strong><span class="chip sw-pop"></span>POP</strong></td><td class="rc">₹75–120<small>HouseYog: ₹65–120</small></td><td>Long if mixed and cured well</td><td><span class="lv l1"><s></s><s></s><s></s></span>Low</td><td class="fire-ok">Gypsum plaster, does not burn</td><td>Living, bedroom (curves)</td></tr>
+    <tr><td><strong><span class="chip sw-pvc"></span>PVC</strong></td><td class="rc">₹70–160<small>HouseYog: ₹70–150</small></td><td>Long; termite-proof</td><td><span class="lv l3"><s></s><s></s><s></s></span>High</td><td class="fire-bad">Poor; toxic fumes</td><td>Bathroom, balcony, utility</td></tr>
+    <tr><td><strong><span class="chip sw-wd"></span>Wooden</strong></td><td class="rc">₹500–1,200<small>HouseYog: ₹120–350</small></td><td>Needs regular upkeep</td><td><span class="lv l1"><s></s><s></s><s></s></span>Low</td><td class="fire-bad">Combustible</td><td>Feature zones, dining</td></tr>
+    <tr><td><strong><span class="chip sw-mt"></span>Metal</strong></td><td class="rc">₹150–300<small>HouseYog: ₹90–250</small></td><td>Long, with anti-corrosion coat</td><td><span class="lv l3"><s></s><s></s><s></s></span>High</td><td class="fire-ok">Non-combustible</td><td>Kitchen, bath, commercial</td></tr>
+    <tr><td><strong><span class="chip sw-mf"></span>Mineral fibre</strong></td><td class="rc">₹85–150<small>HouseYog: not listed</small></td><td>Medium; tiles swap out</td><td><span class="lv l2"><s></s><s></s><s></s></span>Medium (humidity-rated, not wet)</td><td class="fire-ok">Class A (ASTM E84)</td><td>Office, clinic, retail</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Main cost figure: Design Cafe, published 10 September 2026. Second figure: HouseYog, updated 7 March 2026; its page is inconsistent on whether labour is included and lists labour separately at ₹20–50 per sq ft. Design Cafe's wood range covers veneer and natural timber; HouseYog's lower range reflects simpler wood finishes. "Life" is relative because neither rate card nor the datasheets we checked publish a lifespan in years. Fire: gypsum board per Gyproc's moisture-resistant board datasheet; mineral fibre per Armstrong ANF; PVC per Asian Paints and Mehbud.</p>
+
+<div class="cta">
+  <div><h3>Draw Ceilings the BIM Way</h3><p>Augmintech's BIM Architecture program teaches building information modelling for architecture, where ceilings, levels and reflected ceiling plans come straight out of one model instead of separate drawings. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">View the BIM Architecture program</a></div>
+</div>
+
+<h2 id="gypsum-vs-pop">Gypsum vs POP Ceiling</h2>
+<p>This is the choice most Indian homeowners face, because the two cost about the same and look similar once painted. The difference is in how they are made: gypsum arrives as finished boards, POP is mixed and shaped on site.</p>
+
+<div class="vs">
+  <div class="vs-r vs-h"><div></div><div>Gypsum board</div><div>POP</div></div>
+  <div class="vs-r"><div>Install time</div><div>Fast: boards screwed to a frame <span class="w">wins</span></div><div>Slow: applied wet by hand, needs drying</div></div>
+  <div class="vs-r"><div>Site mess</div><div>Little dust, dry work <span class="w">wins</span></div><div>Wet and messy</div></div>
+  <div class="vs-r"><div>Finish</div><div>Uniform, factory-flat; joints can show if taping is poor</div><div>Seamless; takes curves, domes and cornices <span class="w">wins</span></div></div>
+  <div class="vs-r"><div>Cracking</div><div>Lower chance of cracks <span class="w">wins</span></div><div>Can crack if mixed or cured badly</div></div>
+  <div class="vs-r"><div>Cost / sq ft</div><div>₹78 (Design Cafe); ₹75–150 (HouseYog)</div><div>₹75–120 (Design Cafe); ₹65–120 (HouseYog)</div></div>
+  <div class="vs-r"><div>Repairs</div><div>Cut out and replace the damaged section <span class="w">wins</span></div><div>Messy; hard to match the existing detail</div></div>
+  <div class="vs-r"><div>Moisture</div><div>Standard board sensitive; MR board for damp areas</div><div>Sensitive; keep away from leaks</div></div>
+</div>
+<p>On price, the rate cards overlap, and JK Cement's own comparison contradicts itself: its table calls POP 25 to 40% cheaper, while its FAQ says a basic gypsum ceiling is slightly cheaper. In practice, plain POP is often quoted a little lower and climbs quickly with detail. <strong>Choose gypsum for speed, flat modern designs and easy repairs; choose POP when the design needs curves or mouldings.</strong></p>
+
+<h2 id="designs">False Ceiling Designs by Room</h2>
+<p>Most false ceiling designs are built from five basic shapes. The sections below show each one cut through the room, with the slab at the top.</p>
+
+<div class="dtypes">
+  <div class="dt"><svg viewBox="0 0 160 90" role="img" aria-label="Peripheral false ceiling section"><rect x="0" y="0" width="160" height="10" fill="#B9BDC3"/><rect x="0" y="10" width="6" height="80" fill="#C9CDD2"/><rect x="154" y="10" width="6" height="80" fill="#C9CDD2"/><path d="M6 44 H50 V30 H110 V44 H154" fill="none" stroke="#5F6B78" stroke-width="3"/><circle cx="28" cy="47" r="2.5" fill="#F5C451"/><circle cx="132" cy="47" r="2.5" fill="#F5C451"/><text x="80" y="24" font-size="8" text-anchor="middle" fill="#7A8794" font-family="monospace">higher centre</text></svg><div><b>Peripheral</b><span>A dropped band around the walls with a higher centre. Hides AC ducts and holds downlights. The most common Indian design.</span></div></div>
+  <div class="dt"><svg viewBox="0 0 160 90" role="img" aria-label="Cove false ceiling section"><rect x="0" y="0" width="160" height="10" fill="#B9BDC3"/><rect x="0" y="10" width="6" height="80" fill="#C9CDD2"/><rect x="154" y="10" width="6" height="80" fill="#C9CDD2"/><path d="M6 46 H44 V40 H48" fill="none" stroke="#5F6B78" stroke-width="3"/><path d="M154 46 H116 V40 H112" fill="none" stroke="#5F6B78" stroke-width="3"/><path d="M44 40 Q60 24 80 22 Q100 24 116 40" fill="none" stroke="#F5C451" stroke-width="3" stroke-dasharray="3 3"/><path d="M50 22 H110" stroke="#5F6B78" stroke-width="2"/><rect x="42" y="42" width="5" height="3" fill="#F5C451"/><rect x="113" y="42" width="5" height="3" fill="#F5C451"/></svg><div><b>Cove</b><span>A peripheral band with an upturned lip that hides an LED strip, washing the ceiling with indirect light.</span></div></div>
+  <div class="dt"><svg viewBox="0 0 160 90" role="img" aria-label="Coffered false ceiling section"><rect x="0" y="0" width="160" height="10" fill="#B9BDC3"/><rect x="0" y="10" width="6" height="80" fill="#C9CDD2"/><rect x="154" y="10" width="6" height="80" fill="#C9CDD2"/><path d="M6 44 H22 V30 H48 V44 H58 V30 H84 V44 H94 V30 H120 V44 H130 V30 H154" fill="none" stroke="#5F6B78" stroke-width="3"/></svg><div><b>Coffered</b><span>A grid of recessed boxes, like a waffle. Adds depth to large living and dining rooms with tall slabs.</span></div></div>
+  <div class="dt"><svg viewBox="0 0 160 90" role="img" aria-label="Island false ceiling section"><rect x="0" y="0" width="160" height="10" fill="#B9BDC3"/><rect x="0" y="10" width="6" height="80" fill="#C9CDD2"/><rect x="154" y="10" width="6" height="80" fill="#C9CDD2"/><line x1="52" y1="10" x2="52" y2="46" stroke="#9AA3AD" stroke-width="1.2"/><line x1="108" y1="10" x2="108" y2="46" stroke="#9AA3AD" stroke-width="1.2"/><rect x="40" y="46" width="80" height="6" fill="#F2F0EA" stroke="#5F6B78" stroke-width="2"/><circle cx="48" cy="55" r="2.5" fill="#F5C451"/><circle cx="112" cy="55" r="2.5" fill="#F5C451"/><text x="80" y="76" font-size="8" text-anchor="middle" fill="#7A8794" font-family="monospace">floating panel</text></svg><div><b>Island</b><span>A floating panel hung over one zone, such as a bed, dining table or desk, with the slab exposed around it.</span></div></div>
+  <div class="dt"><svg viewBox="0 0 160 90" role="img" aria-label="Stretch false ceiling section"><rect x="0" y="0" width="160" height="10" fill="#B9BDC3"/><rect x="0" y="10" width="6" height="80" fill="#C9CDD2"/><rect x="154" y="10" width="6" height="80" fill="#C9CDD2"/><rect x="6" y="10" width="148" height="28" fill="#FFF6DD"/><line x1="6" y1="38" x2="154" y2="38" stroke="#8FB3D9" stroke-width="2.5"/><rect x="6" y="35" width="6" height="6" fill="#5F6B78"/><rect x="148" y="35" width="6" height="6" fill="#5F6B78"/><text x="80" y="28" font-size="8" text-anchor="middle" fill="#B8922E" font-family="monospace">backlight</text><text x="80" y="52" font-size="8" text-anchor="middle" fill="#7A8794" font-family="monospace">PVC film on profile</text></svg><div><b>Stretch</b><span>A PVC film pulled tight on a perimeter profile. Can be glossy, printed or backlit for a "sky" effect.</span></div></div>
+</div>
+
+<div class="rooms">
+  <figure>
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/90-living-room-with-gypsum-peripheral.webp" alt="Living room with gypsum peripheral false ceiling and cove lighting" width="1200" height="675" loading="lazy"></div>
+    <figcaption><b>Living room:</b> gypsum peripheral band with cove light; a linear diffuser in the band hides the AC.</figcaption>
+  </figure>
+  <figure>
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/90-bedroom-with-pop-island-false.webp" alt="Bedroom with POP island false ceiling over the bed" width="1200" height="675" loading="lazy"></div>
+    <figcaption><b>Bedroom:</b> POP island over the bed, with curved edges and warm indirect light.</figcaption>
+  </figure>
+  <figure>
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/90-kitchen-with-flat-moistureresistant-gypsum.webp" alt="Kitchen with flat moisture-resistant gypsum false ceiling" width="1200" height="675" loading="lazy"></div>
+    <figcaption><b>Kitchen:</b> a flat moisture-resistant gypsum or metal ceiling that hides the chimney duct.</figcaption>
+  </figure>
+  <figure>
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/90-office-with-mineral-fibre-grid.webp" alt="Office with mineral fibre grid false ceiling and LED panels" width="1200" height="675" loading="lazy"></div>
+    <figcaption><b>Office:</b> mineral fibre grid ceiling, with lights and diffusers dropped into the tiles.</figcaption>
+  </figure>
+</div>
+
+<h2 id="rcp">How to Draw a Reflected Ceiling Plan in AutoCAD</h2>
+<p>A reflected ceiling plan (RCP) shows the ceiling as if the floor were a mirror: you look down, but you see what is overhead. It tells the ceiling contractor, electrician and HVAC contractor where every level, light, diffuser and access panel goes. Here is a sample for a 6 × 4.5 m living room.</p>
+
+<figure class="dfig wide">
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/90-sample-living-room-reflected-ceiling.webp" alt="Sample living room reflected ceiling plan with dimensions, levels, downlights, cove lighting and complete legend" loading="lazy">
+  <figcaption>Sample RCP: gypsum peripheral band at +2700 with downlights, raised centre at +2850 with hidden cove LED, linear supply diffuser, return grille, access panel and section A-A. Augmintech diagram.</figcaption>
+</figure>
+
+<ol class="rcp-steps">
+  <li><b>Start from the floor plan.</b> Copy the architectural plan, freeze furniture and door swings, and keep walls, windows and columns. Set a layer such as <span class="lyr">A-CLNG</span> for the ceiling outline.</li>
+  <li><b>Draw ceiling levels and heights.</b> Outline each level with closed polylines and tag it with its height above finished floor, for example <span class="lyr">CH +2700</span> for the band and <span class="lyr">CH +2850</span> for the raised centre. Hatch the lower level so the two read clearly.</li>
+  <li><b>Lay out the grid.</b> For a grid ceiling, start the 600 × 600 mm grid from the room centre line so cut tiles at the walls are equal on both sides. For a gypsum ceiling, draw the main and furring channel directions on a separate layer if the contractor needs them.</li>
+  <li><b>Place light fixtures.</b> Insert downlight, pendant and LED-panel blocks on <span class="lyr">E-LITE-CLNG</span>. Space them evenly in the band and mark the cove LED line as a hidden (dashed) line.</li>
+  <li><b>Add diffusers and grilles.</b> Insert supply diffusers and return grilles from the HVAC drawing on <span class="lyr">M-HVAC-CLNG</span>, so lights and diffusers do not clash. Add sprinkler heads and smoke detectors if the building needs them.</li>
+  <li><b>Show access panels.</b> Mark a panel under every AC unit, valve, damper and junction box that needs servicing.</li>
+  <li><b>Add section callouts and notes.</b> Cut a section (A-A) through every change in level, and draw that section at a larger scale to show the drop, the cove profile and the frame. Finish with a legend, material notes and the scale (often 1:50 for a room).</li>
+</ol>
+<p>In a <a href="https://augmintech.com/bim-architecture/">BIM tool</a> such as <a href="https://augmintech.com/learn-revit/">Revit</a>, the RCP is a ceiling plan view generated from the 3D model, so heights, fixtures and sections stay in step when the design changes.</p>
+
+<h2 id="gulf">False Ceilings in Gulf Homes</h2>
+<p>Gypsum false ceilings are the norm in UAE and Saudi apartments and villas, and the main reason is the air conditioning. Ducted split units and fan coil units, with their ducts, drain pipes and refrigerant lines, have to be hidden somewhere, and a gypsum board ceiling on a steel frame is the fastest, cleanest way to do that in dry construction.</p>
+<p>The weak point is water. Cold ducts and pipes sit in a warm, humid void, AC drain pans overflow, and storms find gaps in roofs. A UAE contractor's guide published in March 2026 lists AC leaks and roof seepage as common causes of stained and sagging gypsum ceilings, and warns that wet gypsum can lose its strength and collapse.</p>
+
+<div class="gulf">
+  <div class="gz risk"><h3>Where Gulf ceilings fail</h3><ul><li>Under FCU and ducted-unit drain pans</li><li>Bathrooms and kitchens with poor extract</li><li>Uninsulated chilled-water and refrigerant pipes that sweat</li><li>Top-floor and coastal units after heavy rain</li></ul></div>
+  <div class="gz fix"><h3>What specifiers do</h3><ul><li>Use moisture-resistant (MR) gypsum board near wet areas and AC units</li><li>Put an access panel under every unit, drain pan and valve</li><li>Insulate and seal cold pipes and ducts in the void</li><li>Use metal or PVC in fully wet areas such as shower zones</li></ul></div>
+</div>
+
+<p>MR boards are standard gypsum boards with reduced water absorption. Knauf's UAE range describes its MR board as suited to areas exposed to high moisture and humidity. They are not waterproof, though: Gyproc's datasheet says its moisture-resistant board is unsuitable for continuously damp or humid conditions. Specify MR board for kitchens and bathroom ceilings, and still fix the leak at its source.</p>
+
+<div class="alert"><b>Check the local rules.</b> Dubai, Abu Dhabi and Saudi authorities may require fire-rated ceiling assemblies in some locations, such as corridors and escape routes. Confirm with the project's fire consultant before choosing PVC or wood in shared or commercial areas.</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">Which type of false ceiling is best for home?</div><div class="faq-a">Gypsum is the best all-round choice for living rooms and bedrooms: it is fast to install, cracks less than POP and costs about the same. Use POP if you want curves or cornices, moisture-resistant gypsum or metal in kitchens, and PVC or metal in bathrooms.</div></div>
+<div class="faq-item"><div class="faq-q">What is the cost of false ceiling per sq ft in India?</div><div class="faq-a">On 2026 rate cards, gypsum costs about ₹75 to ₹150 per sq ft, POP ₹65 to ₹120, PVC ₹70 to ₹160, metal ₹90 to ₹300, mineral fibre ₹85 to ₹150 and wood ₹120 to ₹1,200 depending on the finish (Design Cafe, September 2026; HouseYog, March 2026). Lighting and complex designs cost extra.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between gypsum and POP ceiling?</div><div class="faq-a">Gypsum ceilings use factory-made boards fixed to a frame, so they go up quickly with little mess. POP ceilings are mixed and shaped on site, which takes longer but allows curves and mouldings. POP can crack if it is badly mixed or cured, and it is harder to repair.</div></div>
+<div class="faq-item"><div class="faq-q">Which false ceiling is waterproof?</div><div class="faq-a">PVC and metal ceilings are the most water-resistant, which is why they are used in bathrooms and balconies. Moisture-resistant gypsum board copes with steam and humidity but is not waterproof and should not stay wet.</div></div>
+<div class="faq-item"><div class="faq-q">What is a reflected ceiling plan?</div><div class="faq-a">A reflected ceiling plan (RCP) is a drawing of the ceiling as seen from above, as if reflected in a mirror on the floor. It shows ceiling heights, the grid, lights, diffusers, access panels and section callouts, so every trade knows what goes where.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Design Cafe</strong>, <a href="https://www.designcafe.com/blog/home-interiors/false-ceiling-cost/" target="_blank" rel="noopener">How Much Does a False Ceiling Cost in 2026?</a> (published 10 September 2026).</li>
+  <li><strong>HouseYog</strong>, <a href="https://www.houseyog.com/blog/false-ceiling-cost-per-sq-ft-pop-gypsum-pvc-in-india/" target="_blank" rel="noopener">False Ceiling Cost per Sq Ft in India (2026)</a> (updated 7 March 2026).</li>
+  <li><strong>JK Cement</strong>, <a href="https://www.jkcement.com/blog/interior-design/pop-vs-gypsum-ceiling/" target="_blank" rel="noopener">POP Ceiling vs Gypsum Ceiling</a> (19 June 2026).</li>
+  <li><strong>Asian Paints Beautiful Homes</strong>, <a href="https://www.beautifulhomes.asianpaints.com/blogs/types-of-false-ceilings" target="_blank" rel="noopener">Types of false ceilings</a>.</li>
+  <li><strong>Knauf Ceiling Solutions</strong>, <a href="https://knaufceilingsolutions.com/en/products/armstrong-anf" target="_blank" rel="noopener">Armstrong ANF mineral tile</a>; <strong>Knauf UAE</strong>, <a href="https://knauf.com/en-AE/p/product/moisture-resistant-mr-12.5mm-gypsum-board-10004_0606" target="_blank" rel="noopener">Moisture Resistant (MR) 12.5 mm gypsum board</a>.</li>
+  <li><strong>Gyproc (Saint-Gobain)</strong>, <a href="https://www.gyproc.ie/documents/product-datasheets/pds-gyproc-moisture-resistant.pdf" target="_blank" rel="noopener">Gyproc Moisture Resistant product datasheet</a>.</li>
+  <li><strong>Mehbud</strong>, <a href="https://blog.mehbud.com.ua/en/ceilings/fire-resistant-ceilings/" target="_blank" rel="noopener">Fire-resistant ceilings</a>; <strong>VOX</strong>, <a href="https://www.voxfurniture.ae/blogs/posts/fixing-water-damaged-ceilings" target="_blank" rel="noopener">Fixing water-damaged ceilings in the UAE</a> (30 March 2026).</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 7 November 2026. Prices change often; confirm with local contractors before budgeting.</p>
+</div>
+<dialog id="zoom90" aria-label="Enlarged ceiling illustration"><button type="button">Close</button><img alt=""></dialog><script>(()=>{const d=document.getElementById('zoom90'),im=d.querySelector('img');document.querySelectorAll('.ph img,.dfig img,.dt svg').forEach(e=>{e.tabIndex=0;function open(){if(e.tagName.toLowerCase()==='svg'){let v=e.cloneNode(true);v.setAttribute('xmlns','http://www.w3.org/2000/svg');im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(v))}else{im.src=e.src}im.alt=e.getAttribute('alt')||e.getAttribute('aria-label')||'Ceiling section';d.showModal()}e.addEventListener('click',open);e.addEventListener('keydown',k=>{if(k.key==='Enter')open()})});d.querySelector('button').onclick=()=>d.close();d.onclick=e=>{if(e.target===d)d.close()}})();</script>

@@ -1,0 +1,376 @@
+<style>
+#aug-pipe-fittings{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-pipe-fittings *,#aug-pipe-fittings *::before,#aug-pipe-fittings *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-pipe-fittings{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-pipe-fittings.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-pipe-fittings .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-pipe-fittings .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-pipe-fittings .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-pipe-fittings .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-pipe-fittings .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-pipe-fittings .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-pipe-fittings h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-pipe-fittings h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-pipe-fittings p{margin-bottom:.9rem;font-size:16px;}
+#aug-pipe-fittings a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-pipe-fittings a:hover{border-color:var(--brand);}
+#aug-pipe-fittings hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-pipe-fittings .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-pipe-fittings .chart svg{width:100%;height:auto;display:block;}
+#aug-pipe-fittings .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-pipe-fittings .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-pipe-fittings .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-pipe-fittings .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-pipe-fittings .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-pipe-fittings .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-pipe-fittings .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-pipe-fittings table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-pipe-fittings caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-pipe-fittings thead tr{background:var(--slate);color:#fff;}
+#aug-pipe-fittings thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-pipe-fittings tbody tr:nth-child(even){background:var(--surface);}
+#aug-pipe-fittings tbody tr:hover{background:var(--brand-lite);}
+#aug-pipe-fittings td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-pipe-fittings td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-pipe-fittings tbody tr.hl{background:var(--green-lite)!important;}
+#aug-pipe-fittings tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-pipe-fittings ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-pipe-fittings ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-pipe-fittings .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-pipe-fittings .cta-green{background:var(--slate);}
+#aug-pipe-fittings .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-pipe-fittings .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-pipe-fittings .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-pipe-fittings .cta-btn-blue{color:var(--brand);}#aug-pipe-fittings .cta-btn-green{color:var(--slate);}
+#aug-pipe-fittings figure{margin:1.5rem 0;}
+#aug-pipe-fittings figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-pipe-fittings figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-pipe-fittings dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-pipe-fittings dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-pipe-fittings dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-pipe-fittings .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-pipe-fittings .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-pipe-fittings .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-pipe-fittings .srcs{list-style:none;padding:0;}
+#aug-pipe-fittings .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-pipe-fittings .srcs li:last-child{border-bottom:none;}
+
+/* ===== answer ===== */#aug-pipe-fittings .defbox{margin:1.4rem 0;border:1px solid var(--brand-border);border-radius:var(--radius);background:var(--brand-lite);padding:1.1rem 1.2rem;}
+#aug-pipe-fittings .defbox-k{font-family:var(--mono);font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--brand);margin-bottom:.4rem;}
+#aug-pipe-fittings .defbox p{font-size:16.5px;line-height:1.7;color:var(--ink-mid);margin:0;}
+#aug-pipe-fittings .defbox p strong{color:var(--ink);}
+#aug-pipe-fittings .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-pipe-fittings .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-pipe-fittings .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-pipe-fittings .dfig svg{display:block;width:100%;height:auto;}
+#aug-pipe-fittings .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;}
+
+/* ===== labelled grid of 10 ===== */#aug-pipe-fittings .fgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:1.3rem 0;}
+#aug-pipe-fittings .fg{border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;background:#fff;text-decoration:none;color:inherit;display:block;}
+#aug-pipe-fittings .fg svg{display:block;width:100%;height:auto;}
+#aug-pipe-fittings .fg div{padding:.45rem .55rem .55rem;border-top:1px solid var(--border);background:var(--surface);}
+#aug-pipe-fittings .fg b{display:block;font-family:var(--display);font-size:14px;color:var(--ink);}
+#aug-pipe-fittings .fg span{font-size:11.5px;line-height:1.35;color:var(--ink-mid);}
+#aug-pipe-fittings .fg i{font-style:normal;font-family:var(--mono);font-size:10px;color:var(--brand);float:right;}
+
+/* ===== scope note ===== */#aug-pipe-fittings .scope{display:flex;gap:10px;align-items:flex-start;border:1px dashed var(--warn);background:#FBF4E8;border-radius:var(--radius-sm);padding:.75rem .95rem;margin:1rem 0;font-size:14.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-pipe-fittings .scope b{color:var(--warn);font-family:var(--mono);font-size:10.5px;letter-spacing:1.3px;text-transform:uppercase;white-space:nowrap;margin-top:2px;}
+
+/* ===== point list ===== */#aug-pipe-fittings .pts{list-style:none;padding:0;margin:1rem 0;}
+#aug-pipe-fittings .pts li{padding:.55rem .85rem;margin:.35rem 0;border-left:4px solid var(--teal);background:var(--surface);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:14.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-pipe-fittings .pts li b{color:var(--ink);}
+
+/* ===== mini cards ===== */#aug-pipe-fittings .mini{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:1.2rem 0;}
+#aug-pipe-fittings .mn{border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;background:#fff;}
+#aug-pipe-fittings .mn svg{display:block;width:100%;height:auto;}
+#aug-pipe-fittings .mn div{padding:.5rem .6rem;border-top:1px solid var(--border);}
+#aug-pipe-fittings .mn b{display:block;font-family:var(--display);font-size:14px;}
+#aug-pipe-fittings .mn span{font-size:12.5px;line-height:1.45;color:var(--ink-mid);}
+
+/* ===== standard panels ===== */#aug-pipe-fittings .std{display:grid;grid-template-columns:150px 1fr;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.2rem 0;}
+#aug-pipe-fittings .std-k{background:var(--slate);color:#fff;padding:1rem;display:flex;flex-direction:column;justify-content:center;}
+#aug-pipe-fittings .std-k b{font-family:var(--mono);font-size:17px;}
+#aug-pipe-fittings .std-k span{font-size:12px;opacity:.8;margin-top:.3rem;line-height:1.4;}
+#aug-pipe-fittings .std-b{padding:.85rem 1rem;}
+#aug-pipe-fittings .std-b p{margin:0 0 .5rem;font-size:14.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-pipe-fittings .std-b p:last-child{margin:0;}
+#aug-pipe-fittings .cls{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin:.8rem 0 1rem;font-family:var(--mono);font-size:13px;}
+#aug-pipe-fittings .cls div{padding:.5rem .6rem;text-align:center;border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
+#aug-pipe-fittings .cls div:nth-child(4n){border-right:none;}
+#aug-pipe-fittings .cls .h{background:var(--slate);color:#fff;font-weight:600;font-size:11.5px;}
+#aug-pipe-fittings .cls .na{color:#C3CAD1;}
+#aug-pipe-fittings .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+
+/* ===== gulf ===== */#aug-pipe-fittings .gulf{background:var(--slate);color:#fff;border-radius:var(--radius);padding:1rem 1.15rem;margin:1.2rem 0;display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;}
+#aug-pipe-fittings .gulf b{font-family:var(--display);font-size:40px;font-weight:800;line-height:1;}
+#aug-pipe-fittings .gulf p{margin:0;font-size:14.5px;line-height:1.6;opacity:.95;}
+#aug-pipe-fittings .gulf a{color:#fff;}
+#aug-pipe-fittings .cta-btn-wa{background:#fff;color:var(--green);margin-left:6px;}
+
+@media(max-width:640px){
+  #aug-pipe-fittings .fgrid,#aug-pipe-fittings .mini{grid-template-columns:repeat(2,1fr);}
+  #aug-pipe-fittings .std{grid-template-columns:1fr;}
+  #aug-pipe-fittings .gulf{grid-template-columns:1fr;}
+  #aug-pipe-fittings .scope{flex-direction:column;}
+  #aug-pipe-fittings .cta{flex-direction:column;align-items:flex-start;}
+  #aug-pipe-fittings .cta>div{max-width:100%;} #aug-pipe-fittings .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-pipe-fittings .cta>div:last-child .cta-btn{margin-left:0;}
+}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-pipe-fittings.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-pipe-fittings h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-pipe-fittings a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-pipe-fittings a:hover{color:#18d104;}
+#aug-pipe-fittings .cta{background:#1a1a1a;}
+#aug-pipe-fittings .cta a.cta-btn{text-decoration:none;}
+#aug-pipe-fittings .cta-btn-blue{background:#18d104;color:#000;}
+#aug-pipe-fittings .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-pipe-fittings [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-pipe-fittings">
+
+<div class="defbox">
+  <div class="defbox-k">Short answer</div>
+  <p><strong>Pipe fittings are the components that change a line's direction, branch it, change its size or close it.</strong> This guide covers fittings for industrial process piping (refineries, plants, EPC projects), not home plumbing.</p>
+</div>
+
+
+<p>Here are all 10 fittings at a glance. Tap any one to jump to its section. You will see these names on every piping isometric and material take-off (MTO).</p>
+
+<div class="fgrid">
+  <a class="fg" href="#elbows"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="90 degree elbow"><rect width="100%" height="100%" fill="#fff"/><path d="M30 100 L30 70 A50 50 0 0 1 80 20 L110 20 L110 48 L80 48 A22 22 0 0 0 58 70 L58 100 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><ellipse cx="44" cy="100" rx="14" ry="4" fill="#8796A5" stroke="#1B2733" stroke-width="1.5"/><ellipse cx="110" cy="34" rx="4" ry="14" fill="#8796A5" stroke="#1B2733" stroke-width="1.5"/></svg><div><i>B16.9/11</i><b>Elbow</b><span>Changes direction: 45°, 90°, 180°</span></div></a>
+  <a class="fg" href="#tees"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Equal tee"><rect width="100%" height="100%" fill="#fff"/><path d="M15 60 L145 60 L145 90 L15 90 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><path d="M65 60 L65 25 L95 25 L95 60" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><ellipse cx="80" cy="25" rx="15" ry="4" fill="#8796A5" stroke="#1B2733" stroke-width="1.5"/><ellipse cx="15" cy="75" rx="4" ry="15" fill="#8796A5" stroke="#1B2733" stroke-width="1.5"/><ellipse cx="145" cy="75" rx="4" ry="15" fill="#8796A5" stroke="#1B2733" stroke-width="1.5"/></svg><div><i>B16.9/11</i><b>Tee</b><span>Branches flow at 90°</span></div></a>
+  <a class="fg" href="#reducers"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Concentric reducer"><rect width="100%" height="100%" fill="#fff"/><path d="M25 35 L65 35 L105 50 L135 50 L135 80 L105 80 L65 95 L25 95 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><ellipse cx="25" cy="65" rx="5" ry="30" fill="#8796A5" stroke="#1B2733" stroke-width="1.5"/><ellipse cx="135" cy="65" rx="4" ry="15" fill="#8796A5" stroke="#1B2733" stroke-width="1.5"/></svg><div><i>B16.9</i><b>Reducer</b><span>Changes pipe size</span></div></a>
+  <a class="fg" href="#small"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipe cap"><rect width="100%" height="100%" fill="#fff"/><path d="M40 40 L95 40 Q130 40 130 65 Q130 90 95 90 L40 90 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><ellipse cx="40" cy="65" rx="5" ry="25" fill="#8796A5" stroke="#1B2733" stroke-width="1.5"/></svg><div><i>B16.9/11</i><b>Cap</b><span>Closes a pipe end</span></div></a>
+  <a class="fg" href="#small"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coupling joining two small-bore pipes"><rect width="100%" height="100%" fill="#fff"/><rect x="10" y="52" width="40" height="26" fill="#DDE3E9" stroke="#1B2733"/><rect x="110" y="52" width="40" height="26" fill="#DDE3E9" stroke="#1B2733"/><rect x="45" y="42" width="70" height="46" rx="3" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><line x1="80" y1="42" x2="80" y2="88" stroke="#1B2733" stroke-dasharray="3 2"/></svg><div><i>B16.11</i><b>Coupling</b><span>Joins two small-bore pipes</span></div></a>
+  <a class="fg" href="#small"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Union with nut and two ends"><rect width="100%" height="100%" fill="#fff"/><rect x="10" y="54" width="30" height="22" fill="#DDE3E9" stroke="#1B2733"/><rect x="120" y="54" width="30" height="22" fill="#DDE3E9" stroke="#1B2733"/><rect x="38" y="46" width="30" height="38" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><polygon points="68,36 98,36 104,44 104,86 98,94 68,94 62,86 62,44" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><rect x="98" y="48" width="24" height="34" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><line x1="83" y1="36" x2="83" y2="94" stroke="#1B2733"/></svg><div><i>B16.11</i><b>Union</b><span>Joins pipes; can be undone</span></div></a>
+  <a class="fg" href="#tees"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cross"><rect width="100%" height="100%" fill="#fff"/><path d="M15 50 L145 50 L145 80 L15 80 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><path d="M65 50 L65 15 L95 15 L95 50 M65 80 L65 112 L95 112 L95 80" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/></svg><div><i>B16.9/11</i><b>Cross</b><span>Four-way branch</span></div></a>
+  <a class="fg" href="#small"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swage nipple with large and small ends"><rect width="100%" height="100%" fill="#fff"/><path d="M15 45 L60 45 L100 56 L145 56 L145 74 L100 74 L60 85 L15 85 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><text x="20" y="40" font-size="10" fill="#1B2733" font-family="Inter,Arial">large end</text><text x="102" y="50" font-size="10" fill="#1B2733" font-family="Inter,Arial">small end</text></svg><div><i>SP-95</i><b>Swage nipple</b><span>Size change, small bore</span></div></a>
+  <a class="fg" href="#tees"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weldolet welded onto a run pipe"><rect width="100%" height="100%" fill="#fff"/><rect x="10" y="70" width="140" height="34" fill="#DDE3E9" stroke="#1B2733"/><path d="M58 70 L66 40 L94 40 L102 70 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><rect x="66" y="28" width="28" height="12" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><text x="18" y="96" font-size="10" fill="#1B2733" font-family="Inter,Arial">run pipe</text><text x="104" y="38" font-size="10" fill="#1B2733" font-family="Inter,Arial">branch</text></svg><div><i>SP-97</i><b>Olet</b><span>Branch welded onto the run</span></div></a>
+  <a class="fg" href="#small"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stub end with lap joint flange outline"><rect width="100%" height="100%" fill="#fff"/><path d="M20 50 L110 50 L110 30 L125 30 L125 100 L110 100 L110 80 L20 80 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><rect x="90" y="22" width="18" height="86" fill="none" stroke="#0F4C81" stroke-width="2" stroke-dasharray="4 3"/><text x="40" y="118" font-size="10" fill="#0F4C81" font-family="Inter,Arial">loose lap joint flange</text></svg><div><i>B16.9</i><b>Stub end</b><span>Used with a lap joint flange</span></div></a>
+</div>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Fittings change direction (elbows), branch (tees, crosses, olets), change size (reducers, swages) or close a line (caps).</strong></li>
+  <li><strong>Butt weld fittings follow ASME B16.9</strong> (NPS 1/2 to 48) and match the <a href="https://augmintech.com/pipe-schedule-chart/">pipe schedule</a>.</li>
+  <li><strong>Socket weld and threaded fittings follow ASME B16.11</strong> (NPS 1/8 to 4) and are rated by class: 2000, 3000, 6000 or 9000.</li>
+  <li><strong>The line class decides the fitting type, end connection and material</strong> for each size range.</li>
+</ul>
+
+<h2 id="what-are">What Are Pipe Fittings?</h2>
+<p>A pipe fitting is any component, other than straight pipe, <a href="https://augmintech.com/flange-types/">flanges</a> and <a href="https://augmintech.com/types-of-valves/">valves</a>, that joins pipe and does one of four jobs: <strong>change direction, branch the flow, change the <a href="https://augmintech.com/pipe-sizing-calculation/">pipe size</a>, or close the end.</strong> On a piping isometric each fitting appears as a symbol, and on the MTO as a line item with its size, schedule or class, end type and material.</p>
+<div class="scope"><b>Scope</b><span>Search results for "pipe fittings" mix in home plumbing and online shopping (PVC, brass, push-fit). This page is about steel fittings for industrial process piping built to ASME and ASTM standards.</span></div>
+
+<h2 id="types">10 Types of Pipe Fittings with Names and Pictures</h2>
+
+<h3 id="elbows">Elbows (45°, 90°, 180°; Long and Short Radius)</h3>
+<p>Elbows change direction. They come in 45°, 90° and 180° (return bend) versions, and in two radii (<a href="https://blog.projectmaterials.com/quick-answers/pipe-fittings/long-radius-vs-short-radius-elbow/" target="_blank" rel="noopener">Project Materials</a>):</p>
+<figure class="dfig">
+<svg viewBox="0 0 560 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Long radius elbow 1.5D compared with short radius elbow 1D" font-family="Inter,Arial,sans-serif"><rect width="560" height="230" fill="#fff"/>
+<path d="M40 200 L40 170 A120 120 0 0 1 160 50 L190 50 L190 82 L160 82 A88 88 0 0 0 72 170 L72 200 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/>
+<line x1="56" y1="200" x2="56" y2="66" stroke="#C0471F" stroke-dasharray="5 3"/><line x1="56" y1="66" x2="190" y2="66" stroke="#C0471F" stroke-dasharray="5 3"/>
+<text x="62" y="62" font-size="13" fill="#C0471F" font-weight="700">1.5D</text><text x="40" y="222" font-size="14" fill="#1B2733" font-weight="700">Long radius (LR)</text>
+<path d="M330 200 L330 170 A80 80 0 0 1 410 90 L440 90 L440 122 L410 122 A48 48 0 0 0 362 170 L362 200 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/>
+<line x1="346" y1="200" x2="346" y2="106" stroke="#C0471F" stroke-dasharray="5 3"/><line x1="346" y1="106" x2="440" y2="106" stroke="#C0471F" stroke-dasharray="5 3"/>
+<text x="352" y="102" font-size="13" fill="#C0471F" font-weight="700">1D</text><text x="330" y="222" font-size="14" fill="#1B2733" font-weight="700">Short radius (SR)</text>
+<text x="200" y="120" font-size="11.5" fill="#5A6672">centre-to-end</text><text x="200" y="136" font-size="11.5" fill="#5A6672">= 1.5 × NPS</text><text x="455" y="150" font-size="11.5" fill="#5A6672">centre-to-end</text><text x="455" y="166" font-size="11.5" fill="#5A6672">= 1 × NPS</text>
+</svg>
+<figcaption>Long radius (LR): centre-to-end = 1.5 × NPS. Short radius (SR): centre-to-end = 1 × NPS. Drawing: Augmintech.</figcaption>
+</figure>
+<ul class="pts">
+  <li><b>Long radius (1.5D)</b> is the default. A 90° LR elbow has a resistance coefficient of about 0.25 to 0.30, with less erosion, and ASME B31.3 assumes LR unless the designer specifies otherwise.</li>
+  <li><b>Short radius (1D)</b> is used in tight spaces, where the spec calls for it, or in low-pressure utility service. Its K-factor is higher (about 0.35 to 0.45), and SR elbows can jam pipeline pigs.</li>
+</ul>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/85-butt-weld-pipe-elbows-45.webp" alt="Butt weld pipe elbows: 45 degree, 90 degree long radius, 90 degree short radius and 180 degree return bend" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Butt weld elbows: 45°, 90° long radius, 90° short radius and a 180° return.</figcaption>
+</figure>
+
+<h3 id="tees">Tees, Crosses and Olets</h3>
+<p>An <strong>equal tee</strong> has a branch the same size as the run; a <strong>reducing tee</strong> has a smaller branch. A <strong>cross</strong> adds a fourth opening, but is used far less in process piping. When the branch is much smaller than the run, an <strong>olet</strong> is welded straight onto the run pipe instead of cutting in a tee. Olets are integrally reinforced, so no separate reinforcing pad is needed, and are covered by MSS SP-97: weldolets for butt weld branches, sockolets for socket weld and threadolets for threaded instrument connections (<a href="https://blog.projectmaterials.com/quick-answers/epc/mss-sp-97-vs-mss-sp-95/" target="_blank" rel="noopener">Project Materials</a>). The project's branch table in the line class says which to use for each run and branch size. Olets get a full guide of their own soon.</p>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/85-pipe-tees-a-cross-and.webp" alt="Pipe tees, a cross and a weldolet branch fitting welded on a run pipe" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Branch fittings: equal tee, reducing tee, cross and a weldolet on a run pipe.</figcaption>
+</figure>
+
+<style>
+.aug-cta-banner-pipingwa2, .aug-cta-banner-pipingwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-pipingwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-pipingwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-pipingwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-pipingwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-pipingwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-pipingwa2">
+  <div class="aug-cta-banner-pipingwa2-text">
+    <h3>Build In-Demand Piping Design &amp; Analysis Skills</h3>
+    <p>Chat with our Piping course advisors on WhatsApp — get structure, duration, fees and placement support instantly.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+Piping+Design+%26+Analysis+Course.+Please+share+the+course+details." class="aug-cta-banner-pipingwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h3 id="reducers">Reducers (Concentric and Eccentric)</h3>
+<p>A <strong>concentric reducer</strong> keeps both ends on the same centreline. An <strong>eccentric reducer</strong> has one flat side, so the top or bottom of the pipe stays level. At a <strong>pump suction</strong>, reducers can trap air or vapour, so an eccentric reducer is installed flat side up to eliminate air pockets. When the supply source is above the pump, it is installed flat side down instead (<a href="https://www.theprocesspiping.com/pumps-suction-piping-eccentric-reducers-straight-lengths" target="_blank" rel="noopener">The Process Piping</a>).</p>
+<figure class="dfig">
+<svg viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eccentric reducer installed flat side up at pump suction compared with concentric reducer" font-family="Inter,Arial,sans-serif"><rect width="600" height="220" fill="#fff"/>
+<text x="20" y="22" font-size="13" fill="#1B2733" font-weight="700">Concentric: air can collect at the top</text>
+<rect x="20" y="40" width="110" height="60" fill="#DDE3E9" stroke="#1B2733"/><path d="M130 40 L180 55 L180 85 L130 100 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><rect x="180" y="55" width="60" height="30" fill="#DDE3E9" stroke="#1B2733"/>
+<ellipse cx="128" cy="47" rx="10" ry="5" fill="#fff" stroke="#C0471F" stroke-width="2"/><text x="96" y="122" font-size="11" fill="#C0471F">air pocket</text>
+<text x="320" y="22" font-size="13" fill="#1B2733" font-weight="700">Eccentric, flat side up: no pocket</text>
+<rect x="320" y="50" width="110" height="60" fill="#DDE3E9" stroke="#1B2733"/><path d="M430 50 L480 50 L480 80 L430 110 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><rect x="480" y="50" width="50" height="30" fill="#DDE3E9" stroke="#1B2733"/>
+<rect x="530" y="38" width="50" height="54" rx="6" fill="#0F4C81"/><text x="538" y="70" font-size="11" fill="#fff" font-weight="700">PUMP</text>
+<line x1="430" y1="45" x2="480" y2="45" stroke="#00747D" stroke-width="3"/><text x="432" y="128" font-size="11" fill="#00747D">flat side up (top level)</text>
+<polygon points="250,160 280,160 280,152 296,166 280,180 280,172 250,172" fill="#0F4C81" opacity=".5"/><text x="20" y="170" font-size="11.5" fill="#5A6672">Flow to pump suction</text>
+<text x="20" y="200" font-size="11" fill="#6B7785">If the supply comes from above the pump, the eccentric reducer is installed flat side down instead.</text>
+</svg>
+<figcaption>Why pump suctions use eccentric reducers. Drawing: Augmintech.</figcaption>
+</figure>
+
+<h3 id="small">Caps, Couplings, Unions, Swage Nipples and Stub Ends</h3>
+<div class="mini">
+  <div class="mn"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipe cap"><rect width="100%" height="100%" fill="#fff"/><path d="M40 40 L95 40 Q130 40 130 65 Q130 90 95 90 L40 90 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><ellipse cx="40" cy="65" rx="5" ry="25" fill="#8796A5" stroke="#1B2733" stroke-width="1.5"/></svg><div><b>Cap</b><span>Closes the end of a pipe permanently (butt weld or socket weld).</span></div></div>
+  <div class="mn"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coupling joining two small-bore pipes"><rect width="100%" height="100%" fill="#fff"/><rect x="10" y="52" width="40" height="26" fill="#DDE3E9" stroke="#1B2733"/><rect x="110" y="52" width="40" height="26" fill="#DDE3E9" stroke="#1B2733"/><rect x="45" y="42" width="70" height="46" rx="3" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><line x1="80" y1="42" x2="80" y2="88" stroke="#1B2733" stroke-dasharray="3 2"/></svg><div><b>Coupling</b><span>Joins two small-bore pipes end to end; a half coupling makes a branch.</span></div></div>
+  <div class="mn"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Union with nut and two ends"><rect width="100%" height="100%" fill="#fff"/><rect x="10" y="54" width="30" height="22" fill="#DDE3E9" stroke="#1B2733"/><rect x="120" y="54" width="30" height="22" fill="#DDE3E9" stroke="#1B2733"/><rect x="38" y="46" width="30" height="38" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><polygon points="68,36 98,36 104,44 104,86 98,94 68,94 62,86 62,44" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><rect x="98" y="48" width="24" height="34" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><line x1="83" y1="36" x2="83" y2="94" stroke="#1B2733"/></svg><div><b>Union</b><span>Joins two small-bore pipes so the joint can be undone without turning the pipe.</span></div></div>
+  <div class="mn"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swage nipple with large and small ends"><rect width="100%" height="100%" fill="#fff"/><path d="M15 45 L60 45 L100 56 L145 56 L145 74 L100 74 L60 85 L15 85 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><text x="20" y="40" font-size="10" fill="#1B2733" font-family="Inter,Arial">large end</text><text x="102" y="50" font-size="10" fill="#1B2733" font-family="Inter,Arial">small end</text></svg><div><b>Swage nipple</b><span>Changes size between small-bore lines; MSS SP-95, NPS 1/8 to 4.</span></div></div>
+  <div class="mn"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stub end with lap joint flange outline"><rect width="100%" height="100%" fill="#fff"/><path d="M20 50 L110 50 L110 30 L125 30 L125 100 L110 100 L110 80 L20 80 Z" fill="#B7C2CD" stroke="#1B2733" stroke-width="2" stroke-linejoin="round"/><rect x="90" y="22" width="18" height="86" fill="none" stroke="#0F4C81" stroke-width="2" stroke-dasharray="4 3"/><text x="40" y="118" font-size="10" fill="#0F4C81" font-family="Inter,Arial">loose lap joint flange</text></svg><div><b>Stub end</b><span>Butt-welded to the pipe; a loose lap joint flange slides over it.</span></div></div>
+</div>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/85-pipe-cap-coupling-union-swage.webp" alt="Pipe cap, coupling, union, swage nipple and stub end with lap joint flange" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Caps, couplings, unions, swage nipples and a stub end with its lap joint flange.</figcaption>
+</figure>
+
+<h2 id="b169">Butt Weld Fittings (ASME B16.9)</h2>
+<div class="std">
+  <div class="std-k"><b>ASME B16.9</b><span>Factory-made wrought buttwelding fittings, NPS 1/2 to 48</span></div>
+  <div class="std-b">
+    <p>B16.9 covers the dimensions, tolerances, testing and marking of elbows, tees, crosses, reducers, caps and lap joint stub ends (<a href="https://blog.projectmaterials.com/quick-answers/pipe-fittings/what-is-asme-b16-9/" target="_blank" rel="noopener">Project Materials</a>). Fittings are ordered to match the connecting pipe schedule, so a SCH 80 line uses SCH 80 fittings.</p>
+    <p>They suit larger and high-pressure lines because the full-penetration butt weld gives a smooth bore and can be radiographed. Materials come from separate ASTM specifications.</p>
+  </div>
+</div>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/85-fabricated-pipe-spool-with-butt.webp" alt="Fabricated pipe spool with butt welded elbow and tee next to its piping isometric drawing" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>A fabricated spool: butt weld fittings welded to pipe, built from the isometric.</figcaption>
+</figure>
+
+<h2 id="b1611">Socket Weld and Threaded Fittings (ASME B16.11)</h2>
+<div class="std">
+  <div class="std-k"><b>ASME B16.11</b><span>Forged steel fittings, socket welding and threaded, NPS 1/8 to 4</span></div>
+  <div class="std-b">
+    <p>B16.11 fittings are forged and rated by pressure class rather than by schedule (<a href="https://blog.projectmaterials.com/quick-answers/pipe-fittings/what-is-asme-b16-11/" target="_blank" rel="noopener">Project Materials</a>). In hydrocarbon piping, socket weld is the usual choice up to about NPS 1-1/2 to 2, threaded joints are generally limited to utility service, and socket weld joints cannot be radiographed (<a href="https://blog.projectmaterials.com/quick-answers/epc/asme-b16-11-vs-b16-9/" target="_blank" rel="noopener">Project Materials, B16.11 vs B16.9</a>).</p>
+  </div>
+</div>
+<table style="width:100%;border-collapse:collapse;text-align:left"><caption style="text-align:left;font-weight:700;padding:.6rem 0">Pipe wall used to calculate fitting ratings</caption><thead><tr><th>Fitting class</th><th>Socket weld</th><th>Threaded</th></tr></thead><tbody><tr><td>2000</td><td>Not listed</td><td>Sch 80 / XS</td></tr><tr><td>3000</td><td>Sch 80 / XS</td><td>Sch 160</td></tr><tr><td>6000</td><td>Sch 160</td><td>XXS</td></tr><tr><td>9000</td><td>XXS</td><td>Not listed</td></tr></tbody></table><p class="note">Source: ASME B16.11-2021, Table 2.1.1-1. These correlations are the basis for calculating ratings; they do not specify the <a href="https://augmintech.com/pipe-wall-thickness-calculation/">pipe wall</a> to use for every installation.</p>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/85-socketweld-fittings-with-smooth-counterbores.webp" alt="Socket-weld fittings with smooth counterbores beside fittings with internal threads" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Look inside the opening: the socket-weld end (left) has a smooth recess and a shoulder; the threaded end (right) has internal threads.</figcaption>
+</figure>
+
+<h2 id="selection">Pipe Fittings Selection Table</h2>
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>Fitting</th><th>Function</th><th>End connection</th><th>Standard</th><th>Typical size range</th><th>Typical service</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Elbow</strong></td><td>Change direction</td><td>BW / SW / THD</td><td>B16.9 / B16.11</td><td>NPS 1/2 to 48 (BW); 1/8 to 4 (SW, THD)</td><td>All lines; LR by default</td></tr>
+    <tr><td><strong>Tee</strong></td><td>Branch at 90°</td><td>BW / SW / THD</td><td>B16.9 / B16.11</td><td>As elbows</td><td>Branches close to run size</td></tr>
+    <tr><td><strong>Reducer</strong></td><td>Change size</td><td>BW</td><td>B16.9</td><td>NPS 1/2 to 48</td><td>Eccentric at pump suction; concentric elsewhere</td></tr>
+    <tr><td><strong>Cap</strong></td><td>Close a line end</td><td>BW / SW / THD</td><td>B16.9 / B16.11</td><td>As elbows</td><td>Dead ends, headers</td></tr>
+    <tr><td><strong>Coupling</strong></td><td>Join or branch small bore</td><td>SW / THD</td><td>B16.11</td><td>NPS 1/8 to 4</td><td>Small-bore lines, vents, drains</td></tr>
+    <tr><td><strong>Union</strong></td><td>Removable joint</td><td>SW / THD</td><td>B16.11</td><td>NPS 1/8 to 4</td><td>Small utility lines needing disassembly</td></tr>
+    <tr><td><strong>Cross</strong></td><td>Four-way branch</td><td>BW / SW / THD</td><td>B16.9 / B16.11</td><td>As elbows</td><td>Rare in process piping</td></tr>
+    <tr><td><strong>Swage nipple</strong></td><td>Change size, small bore</td><td>Plain, bevel or threaded ends</td><td>MSS SP-95</td><td>NPS 1/8 to 4</td><td>Small-bore size changes, instrument hook-ups</td></tr>
+    <tr><td><strong>Olet</strong></td><td>Small branch off a run</td><td>BW / SW / THD (branch)</td><td>MSS SP-97</td><td>Run NPS 1/2 to 36+</td><td>Instrument, vent, drain and small process branches</td></tr>
+    <tr><td><strong>Stub end</strong></td><td>Carries a lap joint flange</td><td>BW</td><td>B16.9</td><td>NPS 1/2 to 48</td><td>Stainless and alloy lines</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">BW = butt weld, SW = socket weld, THD = threaded. Sizes from Project Materials (B16.9, B16.11, MSS SP-95 and SP-97). The line class sets the actual limits on each project.</p>
+
+<h2 id="materials">Pipe Fitting Materials and Gulf Project Use</h2>
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>Material</th><th>Butt weld (wrought)</th><th>Socket weld / threaded (forged)</th><th>Typical service</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Carbon steel</strong></td><td>ASTM A234 WPB</td><td>ASTM A105</td><td>General process piping, ambient up to about 400 °C</td></tr>
+    <tr><td><strong>Low-temperature carbon steel</strong></td><td>ASTM A420 WPL6 (impact tested at −46 °C)</td><td>ASTM A350 LF2</td><td>LPG, LNG, ammonia, cold service</td></tr>
+    <tr><td><strong>Stainless steel</strong></td><td>ASTM A403 (e.g. WP304, WP316)</td><td>ASTM A182 F304 / F316</td><td>Corrosive, hygienic and cryogenic service</td></tr>
+    <tr><td><strong>Alloy steel</strong></td><td>ASTM A234 (e.g. WP11, WP22)</td><td>ASTM A182 F11 / F22</td><td>High-temperature steam and hydrocarbon</td></tr>
+    <tr><td><strong>Duplex / super duplex</strong></td><td>ASTM A815 (S31803, S32205 / S32750, S32760)</td><td>ASTM A182 (duplex grades)</td><td>Seawater, offshore, desalination</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Grades and services from Project Materials (<a href="https://blog.projectmaterials.com/quick-answers/pipe-fittings/what-is-asme-b16-9/" target="_blank" rel="noopener">B16.9</a>, <a href="https://blog.projectmaterials.com/quick-answers/pipe-fittings/what-is-asme-b16-11/" target="_blank" rel="noopener">B16.11</a>, <a href="https://www.blog.projectmaterials.com/quick-answers/pipe-fittings/a420-wpl6-vs-a234-wpb/" target="_blank" rel="noopener">A420 WPL6 vs A234 WPB</a>, <a href="https://blog.projectmaterials.com/quick-answers/pipe-fittings/what-is-astm-a815/" target="_blank" rel="noopener">ASTM A815</a>). See our materials selection page for how a grade is chosen.</p>
+
+<div class="gulf">
+  <b>~40%</b>
+  <p>The GCC produces around 40% of the world's desalinated water (<a href="https://www.omanobserver.om/article/16017/Business/gcc-states-account-for-40pc-of-global-water-desalination-capacity" target="_blank" rel="noopener">Oman Observer, February 2020</a>). Desalination, seawater cooling and offshore platforms all need fittings that resist chloride pitting, which is why duplex and super duplex fittings are common on Gulf projects.</p>
+</div>
+<p>Duplex grades have a PREN of around 34 to 35; super duplex grades are near 42, and are used for seawater injection, offshore process piping, subsea lines and high-pressure reverse osmosis feed piping (<a href="https://blog.projectmaterials.com/quick-answers/pipe-fittings/what-is-astm-a815/" target="_blank" rel="noopener">Project Materials</a>). Super duplex fittings are often made to order, so lead time matters when you plan procurement.</p>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/85-illustration-of-welded-stainless-steel.webp" alt="Illustration of welded stainless steel fittings on a coastal plant pipe run" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Welded fittings on a coastal plant line. Appearance alone does not identify a duplex or super duplex grade.</figcaption>
+</figure>
+
+<div class="cta">
+  <div><h3>Read Isometrics and MTOs with Confidence</h3><p>Augmintech's PG Program in Piping Design &amp; Analysis covers piping components, codes and line classes, then isometrics and BOM generation in AutoCAD Plant 3D, across 150+ live hours over 6 months, with SP3D, CAESAR II, 3 industry projects and 500+ interview questions. ₹65,000 + GST in India, $850 abroad.</p></div>
+  <div><a href="https://augmintech.com/courses/pg-program-in-piping-engineering-design-and-analysis/" class="cta-btn cta-btn-blue">View the program</a></div>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What are the types of pipe fittings?</div><div class="faq-a">The main types are elbows, tees, reducers, caps, couplings, unions, crosses, swage nipples, olets and stub ends. By end connection they are butt weld (ASME B16.9), socket weld or threaded (ASME B16.11).</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between a long radius and a short radius elbow?</div><div class="faq-a">A long radius elbow has a centre-to-end dimension of 1.5 × NPS; a short radius elbow has 1 × NPS. LR is the default, with lower pressure drop and erosion. SR is used where space is tight or the spec calls for it.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between a concentric and an eccentric reducer?</div><div class="faq-a">A concentric reducer keeps both ends on one centreline. An eccentric reducer has one flat side, so the top or bottom of the line stays level. Eccentric reducers are used at pump suctions, flat side up, to avoid air pockets.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between butt weld and socket weld fittings?</div><div class="faq-a">Butt weld fittings (ASME B16.9, NPS 1/2 to 48) are welded end to end with a full-penetration weld that can be radiographed, and match the pipe schedule. Socket weld fittings (ASME B16.11, NPS 1/8 to 4) take the pipe into a socket with a fillet weld, are rated by class, and are used for small bore.</div></div>
+<div class="faq-item"><div class="faq-q">What is an olet in piping?</div><div class="faq-a">An olet is an integrally reinforced branch fitting welded directly onto a run pipe to take off a smaller branch, without cutting in a tee. Common types are weldolet, sockolet and threadolet, covered by MSS SP-97.</div></div>
+<div class="faq-item"><div class="faq-q">Which standard covers pipe fittings?</div><div class="faq-a">ASME B16.9 for butt weld fittings and ASME B16.11 for forged socket weld and threaded fittings. MSS SP-97 covers olets and MSS SP-95 covers swage nipples. Materials come from ASTM specifications such as A234, A105, A403 and A182.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Project Materials</strong>: <a href="https://blog.projectmaterials.com/quick-answers/pipe-fittings/what-is-asme-b16-9/" target="_blank" rel="noopener">What is ASME B16.9</a>; <a href="https://blog.projectmaterials.com/quick-answers/pipe-fittings/what-is-asme-b16-11/" target="_blank" rel="noopener">What is ASME B16.11</a>; <a href="https://blog.projectmaterials.com/quick-answers/epc/asme-b16-11-vs-b16-9/" target="_blank" rel="noopener">B16.11 vs B16.9</a>; <a href="https://blog.projectmaterials.com/quick-answers/pipe-fittings/long-radius-vs-short-radius-elbow/" target="_blank" rel="noopener">Long vs short radius elbow</a>; <a href="https://blog.projectmaterials.com/quick-answers/epc/mss-sp-97-vs-mss-sp-95/" target="_blank" rel="noopener">MSS SP-97 vs SP-95</a>; <a href="https://www.blog.projectmaterials.com/quick-answers/pipe-fittings/a420-wpl6-vs-a234-wpb/" target="_blank" rel="noopener">A420 WPL6 vs A234 WPB</a>; <a href="https://blog.projectmaterials.com/quick-answers/pipe-fittings/what-is-astm-a815/" target="_blank" rel="noopener">ASTM A815</a>.</li>
+  <li><strong>The Process Piping</strong>, "Pumps Suction Piping: Eccentric Reducers and Straight Lengths", <a href="https://www.theprocesspiping.com/pumps-suction-piping-eccentric-reducers-straight-lengths" target="_blank" rel="noopener">theprocesspiping.com</a>.</li>
+  <li><strong>Oman Observer</strong>, "GCC states account for 40pc of global water desalination capacity", 24 February 2020, <a href="https://www.omanobserver.om/article/16017/Business/gcc-states-account-for-40pc-of-global-water-desalination-capacity" target="_blank" rel="noopener">omanobserver.om</a>.</li>
+  <li><strong>ASME B16.9 and B16.11</strong>; <strong>MSS SP-95 and SP-97</strong>. Check current editions before design use.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 4 November 2026.</p>
+
+</div>

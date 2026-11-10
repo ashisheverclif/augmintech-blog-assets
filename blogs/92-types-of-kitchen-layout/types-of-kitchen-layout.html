@@ -1,0 +1,331 @@
+<style>
+#aug-types-of-kitchen-layout{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-types-of-kitchen-layout *,#aug-types-of-kitchen-layout *::before,#aug-types-of-kitchen-layout *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-types-of-kitchen-layout{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-types-of-kitchen-layout.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-types-of-kitchen-layout .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-types-of-kitchen-layout .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-types-of-kitchen-layout .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-types-of-kitchen-layout .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-types-of-kitchen-layout .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-types-of-kitchen-layout .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-types-of-kitchen-layout h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-types-of-kitchen-layout h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-types-of-kitchen-layout p{margin-bottom:.9rem;font-size:16px;}
+#aug-types-of-kitchen-layout a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-types-of-kitchen-layout a:hover{border-color:var(--brand);}
+#aug-types-of-kitchen-layout hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-types-of-kitchen-layout .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-types-of-kitchen-layout .chart svg{width:100%;height:auto;display:block;}
+#aug-types-of-kitchen-layout .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-types-of-kitchen-layout .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-types-of-kitchen-layout .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-types-of-kitchen-layout .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-types-of-kitchen-layout .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-types-of-kitchen-layout .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-types-of-kitchen-layout .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-types-of-kitchen-layout table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-types-of-kitchen-layout caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-types-of-kitchen-layout thead tr{background:var(--slate);color:#fff;}
+#aug-types-of-kitchen-layout thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-types-of-kitchen-layout tbody tr:nth-child(even){background:var(--surface);}
+#aug-types-of-kitchen-layout tbody tr:hover{background:var(--brand-lite);}
+#aug-types-of-kitchen-layout td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-types-of-kitchen-layout td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-types-of-kitchen-layout tbody tr.hl{background:var(--green-lite)!important;}
+#aug-types-of-kitchen-layout tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-types-of-kitchen-layout ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-types-of-kitchen-layout ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-types-of-kitchen-layout .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-types-of-kitchen-layout .cta-green{background:var(--slate);}
+#aug-types-of-kitchen-layout .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-types-of-kitchen-layout .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-types-of-kitchen-layout .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-types-of-kitchen-layout .cta-btn-blue{color:var(--brand);}#aug-types-of-kitchen-layout .cta-btn-green{color:var(--slate);}
+#aug-types-of-kitchen-layout figure{margin:1.5rem 0;}
+#aug-types-of-kitchen-layout figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-types-of-kitchen-layout figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-types-of-kitchen-layout dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-types-of-kitchen-layout dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-types-of-kitchen-layout dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-types-of-kitchen-layout .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-types-of-kitchen-layout .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-types-of-kitchen-layout .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-types-of-kitchen-layout .srcs{list-style:none;padding:0;}
+#aug-types-of-kitchen-layout .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-types-of-kitchen-layout .srcs li:last-child{border-bottom:none;}
+
+/* ===== answer chips ===== */#aug-types-of-kitchen-layout .lay6{display:flex;flex-wrap:wrap;gap:6px;margin:1rem 0 1.3rem;}
+#aug-types-of-kitchen-layout .lay6 span{font-family:var(--display);font-weight:700;font-size:14px;padding:6px 12px;border-radius:20px;background:var(--surface);border:1px solid var(--border);color:var(--ink);}
+#aug-types-of-kitchen-layout .lay6 span b{font-family:var(--mono);font-size:11px;color:var(--coral);margin-right:6px;}
+
+/* ===== plan cards ===== */#aug-types-of-kitchen-layout .plans{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:1.2rem 0;}
+#aug-types-of-kitchen-layout .pl{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+#aug-types-of-kitchen-layout .pl svg{display:block;width:100%;height:auto;border-bottom:1px solid var(--border);}
+#aug-types-of-kitchen-layout .pl-b{padding:.7rem .85rem .85rem;}
+#aug-types-of-kitchen-layout .pl-b h3{margin:0 0 .25rem;font-size:16px;}
+#aug-types-of-kitchen-layout .pl-b .mn{display:inline-block;font-family:var(--mono);font-size:11px;background:#EEF2F7;color:var(--brand);padding:2px 7px;border-radius:4px;margin-bottom:.4rem;}
+#aug-types-of-kitchen-layout .pl-b p{margin:0 0 .4rem;font-size:13.5px;line-height:1.55;color:var(--ink-mid);}
+#aug-types-of-kitchen-layout .pl-b .pm{font-size:12.5px;line-height:1.5;}
+#aug-types-of-kitchen-layout .pl-b .pm i{font-style:normal;font-weight:700;color:var(--green);} #aug-types-of-kitchen-layout .pl-b .pm em{font-style:normal;font-weight:700;color:#9A3B1E;}
+#aug-types-of-kitchen-layout .legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--muted);margin:.2rem 0 1rem;}
+#aug-types-of-kitchen-layout .legend span{display:inline-flex;align-items:center;gap:5px;}
+#aug-types-of-kitchen-layout .legend i{display:inline-block;width:14px;height:10px;border-radius:2px;}
+
+/* ===== triangle rules ===== */#aug-types-of-kitchen-layout .tri{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:1.1rem 0;}
+#aug-types-of-kitchen-layout .tri div{border-radius:var(--radius);padding:.85rem .85rem .9rem;background:#FDF3EF;border:1px solid #F0C9BB;}
+#aug-types-of-kitchen-layout .tri b{display:block;font-family:var(--display);font-size:24px;line-height:1.1;color:var(--coral);}
+#aug-types-of-kitchen-layout .tri small{display:block;font-family:var(--mono);font-size:10.5px;color:#9A3B1E;margin:.15rem 0 .4rem;}
+#aug-types-of-kitchen-layout .tri span{font-size:13px;line-height:1.5;color:var(--ink-mid);}
+
+/* ===== dims table ===== */#aug-types-of-kitchen-layout .dim td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--ink);}
+#aug-types-of-kitchen-layout .dim td:last-child{white-space:nowrap;}
+#aug-types-of-kitchen-layout .dim td:last-child{font-size:12.5px;color:var(--muted);}
+
+/* ===== figures ===== */#aug-types-of-kitchen-layout .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-types-of-kitchen-layout .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-types-of-kitchen-layout figure.pf{margin:1.2rem 0;} #aug-types-of-kitchen-layout figure.pf figcaption{font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-types-of-kitchen-layout .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-types-of-kitchen-layout .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;}
+#aug-types-of-kitchen-layout .pe{display:grid;grid-template-columns:1fr 1.25fr;align-items:center;}
+#aug-types-of-kitchen-layout .pe svg{display:block;width:100%;height:auto;}
+#aug-types-of-kitchen-layout .pe>div+div{border-left:1px solid var(--border);}
+
+/* ===== drawing steps ===== */#aug-types-of-kitchen-layout .dsteps{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:1rem 0;counter-reset:d;}
+#aug-types-of-kitchen-layout .dsteps div{counter-increment:d;border:1px solid var(--border);border-radius:var(--radius-sm);padding:.65rem .8rem;font-size:14px;line-height:1.55;color:var(--ink-mid);background:#fff;}
+#aug-types-of-kitchen-layout .dsteps div::before{content:"Step " counter(d);display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--brand);margin-bottom:.2rem;}
+#aug-types-of-kitchen-layout .dsteps b{color:var(--ink);}
+#aug-types-of-kitchen-layout .lyr{font-family:var(--mono);font-size:11.5px;background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:1px 5px;color:var(--ink);white-space:nowrap;}
+
+/* ===== gulf ===== */#aug-types-of-kitchen-layout .oc{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-types-of-kitchen-layout .oc>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);border:1px solid var(--border);}
+#aug-types-of-kitchen-layout .oc h3{margin:0 0 .35rem;font-size:15.5px;}
+#aug-types-of-kitchen-layout .oc .o{background:#EEF4FA;} #aug-types-of-kitchen-layout .oc .o h3{color:var(--brand);}
+#aug-types-of-kitchen-layout .oc .c{background:#FBF4E8;} #aug-types-of-kitchen-layout .oc .c h3{color:#8A5A00;}
+#aug-types-of-kitchen-layout .oc ul{margin:0;padding-left:1.1rem;} #aug-types-of-kitchen-layout .oc li{margin-bottom:.25rem;}
+#aug-types-of-kitchen-layout .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+
+@media(max-width:640px){
+  #aug-types-of-kitchen-layout .plans{grid-template-columns:1fr;}
+  #aug-types-of-kitchen-layout .tri{grid-template-columns:1fr 1fr;}
+  #aug-types-of-kitchen-layout .dsteps,#aug-types-of-kitchen-layout .oc{grid-template-columns:1fr;}
+  #aug-types-of-kitchen-layout .pe{grid-template-columns:1fr;} #aug-types-of-kitchen-layout .pe>div+div{border-left:none;border-top:1px solid var(--border);}
+  #aug-types-of-kitchen-layout .sz table,#aug-types-of-kitchen-layout .lt table{min-width:620px;}
+  #aug-types-of-kitchen-layout .cta{flex-direction:column;align-items:flex-start;}
+  #aug-types-of-kitchen-layout .cta>div{max-width:100%;} #aug-types-of-kitchen-layout .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-types-of-kitchen-layout .cta>div:last-child .cta-btn{margin-left:0;}
+}
+
+#aug-types-of-kitchen-layout.blog{overflow-wrap:anywhere;} #aug-types-of-kitchen-layout .blog>*{min-width:0;}
+#aug-types-of-kitchen-layout .ph{aspect-ratio:auto;} #aug-types-of-kitchen-layout .ph img{position:static;height:auto;object-fit:contain;}
+#aug-types-of-kitchen-layout .tri{grid-template-columns:repeat(2,minmax(0,1fr));}#aug-types-of-kitchen-layout .tri small{font-size:12px;}#aug-types-of-kitchen-layout .tri span{font-size:14px;}
+#aug-types-of-kitchen-layout .pe{grid-template-columns:1fr;}#aug-types-of-kitchen-layout .pe>div:first-child{max-width:460px;width:100%;margin:auto;}#aug-types-of-kitchen-layout .pe>div+div{border-left:0;border-top:1px solid var(--border);}
+#aug-types-of-kitchen-layout .dfig figcaption,#aug-types-of-kitchen-layout figcaption{font-family:var(--body);font-size:13px;line-height:1.65;}
+#aug-types-of-kitchen-layout .cta-btn{white-space:normal;display:inline-block;max-width:100%;}#aug-types-of-kitchen-layout .dim td:last-child{white-space:normal;}
+#aug-types-of-kitchen-layout .blog figure img,#aug-types-of-kitchen-layout .blog svg{cursor:zoom-in;}#aug-types-of-kitchen-layout .blog img:focus-visible,#aug-types-of-kitchen-layout .blog svg:focus-visible{outline:3px solid #00747d;outline-offset:3px;}
+#aug-types-of-kitchen-layout #zoom92{margin:auto;border:0;border-radius:12px;width:min(96vw,1300px);max-width:96vw;max-height:94vh;padding:16px;background:white;}
+#aug-types-of-kitchen-layout #zoom92::backdrop{background:rgba(15,30,45,.82);}#aug-types-of-kitchen-layout #zoom92 button{display:block;margin:0 0 12px auto;padding:10px 20px;border:0;border-radius:6px;background:#0f4c81;color:#fff;font:600 15px Arial;cursor:pointer;}
+#aug-types-of-kitchen-layout #zoom92 img{display:block;width:100%;height:auto;max-height:80vh;object-fit:contain;}
+@media(max-width:420px){#aug-types-of-kitchen-layout.blog{padding-left:16px;padding-right:16px;}#aug-types-of-kitchen-layout .tri{grid-template-columns:1fr;}#aug-types-of-kitchen-layout .dim table{min-width:550px;}}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-types-of-kitchen-layout.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-types-of-kitchen-layout h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-types-of-kitchen-layout a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-types-of-kitchen-layout a:hover{color:#18d104;}
+#aug-types-of-kitchen-layout .cta{background:#1a1a1a;}
+#aug-types-of-kitchen-layout .cta a.cta-btn{text-decoration:none;}
+#aug-types-of-kitchen-layout .cta-btn-blue{background:#18d104;color:#000;}
+#aug-types-of-kitchen-layout .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-types-of-kitchen-layout [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-types-of-kitchen-layout">
+
+
+<p><strong>The six types of kitchen layout are straight, L-shaped, U-shaped, parallel, island and peninsula.</strong> Each one below comes with a plan drawn to scale, the minimum room width it needs, and its pros and cons. If you are planning a modular kitchen for an actual flat, start with the comparison table, then check your choice against the work triangle and standard dimensions further down.</p>
+
+<div class="lay6"><span><b>01</b>Straight</span><span><b>02</b>L-shaped</span><span><b>03</b>U-shaped</span><span><b>04</b>Parallel</span><span><b>05</b>Island</span><span><b>06</b>Peninsula</span></div>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Straight and L-shaped layouts suit small kitchens,</strong> down to the 1.8 m minimum width India's building code sets for a kitchen.</li>
+  <li><strong>U-shaped and parallel layouts need about 2.3 m of width</strong> to keep NKBA's 1,067 mm work aisle between counters.</li>
+  <li><strong>Island and peninsula layouts need open-plan space,</strong> with clearance for seating as well as cooking.</li>
+  <li><strong>The NKBA work triangle limits the sink-hob-fridge loop to 7.9 m,</strong> with each leg between 1.2 and 2.7 m.</li>
+  <li><strong>Indian counters are usually about 860 mm high and 600 mm deep,</strong> with wall cabinets 450 to 600 mm above.</li>
+  <li><strong>Gulf flats often have open kitchens,</strong> but heavy Indian-style cooking works better in a closed kitchen with <a href="https://augmintech.com/ventilation-design-guide/">ducted exhaust</a>.</li>
+</ul>
+
+<h2 id="layouts">6 Types of Kitchen Layout</h2>
+<div class="tbl-wrap lt">
+<table>
+  <thead><tr><th>Layout</th><th>Min. room width</th><th>Best for</th><th>Main pro</th><th>Main con</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Straight</strong></td><td>1.8 m</td><td>Studios, 1BHK</td><td>Cheapest; fits one wall</td><td>Least counter; no triangle</td></tr>
+    <tr><td><strong>L-shaped</strong></td><td>1.8 m</td><td>1BHK, 2BHK</td><td>Natural triangle, one side open</td><td>Awkward blind corner</td></tr>
+    <tr><td><strong>U-shaped</strong></td><td>About 2.3 m</td><td>2BHK, 3BHK closed kitchens</td><td>Most counter and storage</td><td>Two corners; can feel boxed in</td></tr>
+    <tr><td><strong>Parallel</strong></td><td>About 2.3 m</td><td>Long, narrow kitchens</td><td>Short steps between runs</td><td>Traffic if doors at both ends</td></tr>
+    <tr><td><strong>Island</strong></td><td>About 3.7 m</td><td>Villas, open-plan homes</td><td>Social; extra prep and seating</td><td>Space; services in the floor</td></tr>
+    <tr><td><strong>Peninsula</strong></td><td>About 2.3 m plus seating</td><td>Open plan without island space</td><td>Seating with less floor area</td><td>Can block the way in</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Widths are derived, not quoted: 1.8 m is India's minimum kitchen width (NBC 2016 Part 3). The others add 600 mm counters to NKBA's 1,067 mm one-cook work aisle; the island figure also allows a 900 mm island and NKBA's 1,118 mm walk-past space behind seated diners.</p>
+
+<div class="cta">
+  <div><h3>Draw Kitchen Plans and Elevations Properly</h3><p>Augmintech's BIM Architecture program teaches building information modelling for architecture, where plans, elevations and schedules come from one model and stay in step. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">View the BIM Architecture program</a></div>
+</div>
+
+<p>Each plan below is a sample room drawn to scale in millimetres, with the work triangle dashed. In a <strong>modular kitchen</strong>, the counters are built from factory cabinet modules, usually in widths such as 450, 600 and 900 mm, so the layout decides how many modules and corner units you need.</p>
+<div class="legend"><span><i style="background:#EEE5D3;border:1px solid #8C7A5B"></i>Counter, 600 deep</span><span><i style="background:#DCEBF7;border:1px solid #2B6CB0"></i>S Sink</span><span><i style="background:#2A3540"></i>Hob</span><span><i style="background:#fff;border:1px solid #2A3540"></i>F Fridge</span><span><i style="background:#FBEDE8;border:1px dashed #C0471F"></i>Work triangle</span></div>
+
+<div class="plans">
+  <div class="pl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 200" role="img" aria-label="Straight kitchen layout plan"><rect width="100%" height="100%" fill="#fff"/><rect x="39.1" y="39.1" width="193.8" height="121.8" fill="#5F6B78"/><rect x="46.0" y="46.0" width="180.0" height="108.0" fill="#fff"/><rect x="172.0" y="153.0" width="48.0" height="8.9" fill="#fff"/><rect x="46.0" y="46.0" width="180.0" height="36.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="46.0" y="46.0" width="42.0" height="36.0" fill="#fff" stroke="#2A3540" stroke-width="1.3"/><path d="M46.0 46.0 L88.0 82.0" stroke="#9AA3AD" stroke-width=".6"/><text x="67.0" y="67.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2A3540" font-weight="700">F</text><rect x="103.0" y="50.5" width="48.0" height="27.0" rx="3" fill="#DCEBF7" stroke="#2B6CB0" stroke-width="1"/><text x="127.0" y="67.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2B6CB0" font-weight="700">S</text><rect x="170.5" y="50.5" width="45.0" height="27.0" fill="#2A3540"/><circle cx="181.8" cy="57.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="204.2" cy="57.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="181.8" cy="70.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="204.2" cy="70.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><path d="M127.0 64.0 L193.0 64.0 L67.0 64.0" fill="#C0471F" fill-opacity="0.06" stroke="#C0471F" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="46.0" y1="32.2" x2="226.0" y2="32.2" stroke="#7A8794" stroke-width=".8"/><line x1="46.0" y1="28.2" x2="46.0" y2="36.2" stroke="#7A8794"/><line x1="226.0" y1="28.2" x2="226.0" y2="36.2" stroke="#7A8794"/><text x="136.0" y="28.2" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400">3000</text><line x1="244.0" y1="46.0" x2="244.0" y2="82.0" stroke="#7A8794" stroke-width=".8"/><line x1="240.0" y1="46.0" x2="248.0" y2="46.0" stroke="#7A8794"/><line x1="240.0" y1="82.0" x2="248.0" y2="82.0" stroke="#7A8794"/><text x="255.0" y="64.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400" transform="rotate(-90 255.0 64.0)">600</text><line x1="244.0" y1="82.0" x2="244.0" y2="154.0" stroke="#7A8794" stroke-width=".8"/><line x1="240.0" y1="82.0" x2="248.0" y2="82.0" stroke="#7A8794"/><line x1="240.0" y1="154.0" x2="248.0" y2="154.0" stroke="#7A8794"/><text x="255.0" y="118.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400" transform="rotate(-90 255.0 118.0)">1200 clear</text></svg><div class="pl-b"><h3>Straight kitchen</h3><span class="mn">Sample 3.0 × 1.8 m</span><p>Everything on one wall: fridge, sink, then hob. A modular kitchen here is a single run of base and wall units.</p><div class="pm"><i>Pro:</i> cheapest and fits the smallest rooms. <em>Con:</em> the triangle flattens into a line, and counter space runs out fast.</div></div></div>
+  <div class="pl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 254" role="img" aria-label="L-shaped kitchen layout plan"><rect width="100%" height="100%" fill="#fff"/><rect x="39.1" y="39.1" width="193.8" height="175.8" fill="#5F6B78"/><rect x="46.0" y="46.0" width="180.0" height="162.0" fill="#fff"/><rect x="166.0" y="207.0" width="48.0" height="8.9" fill="#fff"/><rect x="46.0" y="46.0" width="180.0" height="36.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="46.0" y="82.0" width="36.0" height="126.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="103.0" y="50.5" width="48.0" height="27.0" rx="3" fill="#DCEBF7" stroke="#2B6CB0" stroke-width="1"/><text x="127.0" y="67.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2B6CB0" font-weight="700">S</text><rect x="50.5" y="104.5" width="27.0" height="45.0" fill="#2A3540"/><circle cx="57.2" cy="115.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="70.8" cy="115.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="57.2" cy="138.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="70.8" cy="138.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><rect x="190.0" y="46.0" width="36.0" height="36.0" fill="#fff" stroke="#2A3540" stroke-width="1.3"/><path d="M190.0 46.0 L226.0 82.0" stroke="#9AA3AD" stroke-width=".6"/><text x="208.0" y="67.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2A3540" font-weight="700">F</text><path d="M127.0 64.0 L64.0 127.0 L208.0 64.0 Z" fill="#C0471F" fill-opacity="0.06" stroke="#C0471F" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="46.0" y1="32.2" x2="226.0" y2="32.2" stroke="#7A8794" stroke-width=".8"/><line x1="46.0" y1="28.2" x2="46.0" y2="36.2" stroke="#7A8794"/><line x1="226.0" y1="28.2" x2="226.0" y2="36.2" stroke="#7A8794"/><text x="136.0" y="28.2" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400">3000</text><line x1="32.2" y1="46.0" x2="32.2" y2="208.0" stroke="#7A8794" stroke-width=".8"/><line x1="28.2" y1="46.0" x2="36.2" y2="46.0" stroke="#7A8794"/><line x1="28.2" y1="208.0" x2="36.2" y2="208.0" stroke="#7A8794"/><text x="28.2" y="127.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400" transform="rotate(-90 28.200000000000003 127.0)">2700</text></svg><div class="pl-b"><h3>L-shaped kitchen</h3><span class="mn">Sample 3.0 × 2.7 m</span><p>Counters on two adjoining walls. The most common layout in Indian flats, and easy to open to a dining area.</p><div class="pm"><i>Pro:</i> a natural triangle across the corner. <em>Con:</em> the corner unit needs a carousel or blind-corner fitting to be usable.</div></div></div>
+  <div class="pl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 254" role="img" aria-label="U-shaped kitchen layout plan"><rect width="100%" height="100%" fill="#fff"/><rect x="39.1" y="39.1" width="193.8" height="175.8" fill="#5F6B78"/><rect x="46.0" y="46.0" width="180.0" height="162.0" fill="#fff"/><rect x="112.0" y="207.0" width="48.0" height="8.9" fill="#fff"/><rect x="46.0" y="46.0" width="180.0" height="36.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="46.0" y="82.0" width="36.0" height="90.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="190.0" y="82.0" width="36.0" height="90.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="112.0" y="50.5" width="48.0" height="27.0" rx="3" fill="#DCEBF7" stroke="#2B6CB0" stroke-width="1"/><text x="136.0" y="67.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2B6CB0" font-weight="700">S</text><rect x="50.5" y="101.5" width="27.0" height="45.0" fill="#2A3540"/><circle cx="57.2" cy="112.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="70.8" cy="112.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="57.2" cy="135.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="70.8" cy="135.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><rect x="190.0" y="130.0" width="36.0" height="42.0" fill="#fff" stroke="#2A3540" stroke-width="1.3"/><path d="M190.0 130.0 L226.0 172.0" stroke="#9AA3AD" stroke-width=".6"/><text x="208.0" y="154.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2A3540" font-weight="700">F</text><path d="M136.0 64.0 L64.0 124.0 L208.0 151.0 Z" fill="#C0471F" fill-opacity="0.06" stroke="#C0471F" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="46.0" y1="32.2" x2="226.0" y2="32.2" stroke="#7A8794" stroke-width=".8"/><line x1="46.0" y1="28.2" x2="46.0" y2="36.2" stroke="#7A8794"/><line x1="226.0" y1="28.2" x2="226.0" y2="36.2" stroke="#7A8794"/><text x="136.0" y="28.2" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400">3000</text><line x1="82.0" y1="187.0" x2="190.0" y2="187.0" stroke="#7A8794" stroke-width=".8"/><line x1="82.0" y1="183.0" x2="82.0" y2="191.0" stroke="#7A8794"/><line x1="190.0" y1="183.0" x2="190.0" y2="191.0" stroke="#7A8794"/><text x="136.0" y="183.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400">1800 clear</text><line x1="32.2" y1="46.0" x2="32.2" y2="208.0" stroke="#7A8794" stroke-width=".8"/><line x1="28.2" y1="46.0" x2="36.2" y2="46.0" stroke="#7A8794"/><line x1="28.2" y1="208.0" x2="36.2" y2="208.0" stroke="#7A8794"/><text x="28.2" y="127.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400" transform="rotate(-90 28.200000000000003 127.0)">2700</text></svg><div class="pl-b"><h3>U-shaped kitchen</h3><span class="mn">Sample 3.0 × 2.7 m</span><p>Counters on three walls, with the sink often under the window and hob and fridge on the side runs.</p><div class="pm"><i>Pro:</i> the most counter and storage of any layout. <em>Con:</em> two corner units, and it feels cramped if the gap between legs is under 1.07 m.</div></div></div>
+  <div class="pl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 236" role="img" aria-label="Parallel kitchen layout plan"><rect width="100%" height="100%" fill="#fff"/><rect x="39.1" y="39.1" width="193.8" height="157.8" fill="#5F6B78"/><rect x="46.0" y="46.0" width="180.0" height="144.0" fill="#fff"/><rect x="38.1" y="82.0" width="8.9" height="72.0" fill="#fff"/><rect x="46.0" y="46.0" width="180.0" height="36.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="46.0" y="154.0" width="180.0" height="36.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="88.0" y="50.5" width="48.0" height="27.0" rx="3" fill="#DCEBF7" stroke="#2B6CB0" stroke-width="1"/><text x="112.0" y="67.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2B6CB0" font-weight="700">S</text><rect x="101.5" y="158.5" width="45.0" height="27.0" fill="#2A3540"/><circle cx="112.8" cy="165.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="135.2" cy="165.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="112.8" cy="178.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="135.2" cy="178.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><rect x="184.0" y="154.0" width="42.0" height="36.0" fill="#fff" stroke="#2A3540" stroke-width="1.3"/><path d="M184.0 154.0 L226.0 190.0" stroke="#9AA3AD" stroke-width=".6"/><text x="205.0" y="175.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2A3540" font-weight="700">F</text><path d="M112.0 64.0 L124.0 172.0 L205.0 172.0 Z" fill="#C0471F" fill-opacity="0.06" stroke="#C0471F" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="46.0" y1="32.2" x2="226.0" y2="32.2" stroke="#7A8794" stroke-width=".8"/><line x1="46.0" y1="28.2" x2="46.0" y2="36.2" stroke="#7A8794"/><line x1="226.0" y1="28.2" x2="226.0" y2="36.2" stroke="#7A8794"/><text x="136.0" y="28.2" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400">3000</text><line x1="244.0" y1="82.0" x2="244.0" y2="154.0" stroke="#7A8794" stroke-width=".8"/><line x1="240.0" y1="82.0" x2="248.0" y2="82.0" stroke="#7A8794"/><line x1="240.0" y1="154.0" x2="248.0" y2="154.0" stroke="#7A8794"/><text x="255.0" y="118.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400" transform="rotate(-90 255.0 118.0)">1200 aisle</text><line x1="32.2" y1="46.0" x2="32.2" y2="190.0" stroke="#7A8794" stroke-width=".8"/><line x1="28.2" y1="46.0" x2="36.2" y2="46.0" stroke="#7A8794"/><line x1="28.2" y1="190.0" x2="36.2" y2="190.0" stroke="#7A8794"/><text x="28.2" y="118.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400" transform="rotate(-90 28.200000000000003 118.0)">2400</text></svg><div class="pl-b"><h3>Parallel kitchen</h3><span class="mn">Sample 3.0 × 2.4 m</span><p>Two facing runs with an aisle between, also called a galley kitchen. Often sink on one side, hob on the other.</p><div class="pm"><i>Pro:</i> very efficient, with short steps between runs. <em>Con:</em> with doors at both ends it becomes a corridor.</div></div></div>
+  <div class="pl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344 326" role="img" aria-label="Island kitchen layout plan"><rect width="100%" height="100%" fill="#fff"/><rect x="39.1" y="39.1" width="265.8" height="247.8" fill="#5F6B78"/><rect x="46.0" y="46.0" width="252.0" height="234.0" fill="#fff"/><rect x="226.0" y="279.0" width="54.0" height="8.9" fill="#fff"/><rect x="46.0" y="46.0" width="252.0" height="36.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="109.0" y="154.0" width="126.0" height="54.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="149.5" y="50.5" width="45.0" height="27.0" fill="#2A3540"/><circle cx="160.8" cy="57.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="183.2" cy="57.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="160.8" cy="70.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="183.2" cy="70.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><rect x="148.0" y="167.5" width="48.0" height="27.0" rx="3" fill="#DCEBF7" stroke="#2B6CB0" stroke-width="1"/><text x="172.0" y="184.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2B6CB0" font-weight="700">S</text><rect x="46.0" y="46.0" width="42.0" height="36.0" fill="#fff" stroke="#2A3540" stroke-width="1.3"/><path d="M46.0 46.0 L88.0 82.0" stroke="#9AA3AD" stroke-width=".6"/><text x="67.0" y="67.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2A3540" font-weight="700">F</text><path d="M172.0 181.0 L172.0 64.0 L67.0 64.0 Z" fill="#C0471F" fill-opacity="0.06" stroke="#C0471F" stroke-width="1.4" stroke-dasharray="4 3"/><circle cx="136.0" cy="223.0" r="7" fill="#fff" stroke="#9AA3AD"/><circle cx="172.0" cy="223.0" r="7" fill="#fff" stroke="#9AA3AD"/><circle cx="208.0" cy="223.0" r="7" fill="#fff" stroke="#9AA3AD"/><line x1="46.0" y1="32.2" x2="298.0" y2="32.2" stroke="#7A8794" stroke-width=".8"/><line x1="46.0" y1="28.2" x2="46.0" y2="36.2" stroke="#7A8794"/><line x1="298.0" y1="28.2" x2="298.0" y2="36.2" stroke="#7A8794"/><text x="172.0" y="28.2" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400">4200</text><line x1="100.0" y1="82.0" x2="100.0" y2="154.0" stroke="#7A8794" stroke-width=".8"/><line x1="96.0" y1="82.0" x2="104.0" y2="82.0" stroke="#7A8794"/><line x1="96.0" y1="154.0" x2="104.0" y2="154.0" stroke="#7A8794"/><text x="96.0" y="118.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400" transform="rotate(-90 96.0 118.0)">1200</text><line x1="109.0" y1="146.8" x2="235.0" y2="146.8" stroke="#7A8794" stroke-width=".8"/><line x1="109.0" y1="142.8" x2="109.0" y2="150.8" stroke="#7A8794"/><line x1="235.0" y1="142.8" x2="235.0" y2="150.8" stroke="#7A8794"/><text x="172.0" y="142.8" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400">2100 island</text><line x1="32.2" y1="46.0" x2="32.2" y2="280.0" stroke="#7A8794" stroke-width=".8"/><line x1="28.2" y1="46.0" x2="36.2" y2="46.0" stroke="#7A8794"/><line x1="28.2" y1="280.0" x2="36.2" y2="280.0" stroke="#7A8794"/><text x="28.2" y="163.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400" transform="rotate(-90 28.200000000000003 163.0)">3900</text><line x1="280.0" y1="208.0" x2="280.0" y2="280.0" stroke="#7A8794" stroke-width=".8"/><line x1="276.0" y1="208.0" x2="284.0" y2="208.0" stroke="#7A8794"/><line x1="276.0" y1="280.0" x2="284.0" y2="280.0" stroke="#7A8794"/><text x="276.0" y="244.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400" transform="rotate(-90 276.0 244.0)">1200</text></svg><div class="pl-b"><h3>Island kitchen</h3><span class="mn">Sample 4.2 × 3.9 m</span><p>A wall run plus a free-standing island, which can hold the sink or hob and a breakfast counter.</p><div class="pm"><i>Pro:</i> social, with extra prep space and seating. <em>Con:</em> needs a large room, and a sink or hob on the island needs plumbing or exhaust routed through the floor or ceiling.</div></div></div>
+  <div class="pl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 326 272" role="img" aria-label="Peninsula kitchen layout plan"><rect width="100%" height="100%" fill="#fff"/><rect x="39.1" y="39.1" width="247.8" height="193.8" fill="#5F6B78"/><rect x="46.0" y="46.0" width="234.0" height="180.0" fill="#fff"/><rect x="64.0" y="225.0" width="48.0" height="8.9" fill="#fff"/><rect x="46.0" y="46.0" width="234.0" height="36.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="46.0" y="82.0" width="36.0" height="90.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="172.0" y="82.0" width="36.0" height="90.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="166.0" y="50.5" width="48.0" height="27.0" rx="3" fill="#DCEBF7" stroke="#2B6CB0" stroke-width="1"/><text x="190.0" y="67.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2B6CB0" font-weight="700">S</text><rect x="95.5" y="50.5" width="45.0" height="27.0" fill="#2A3540"/><circle cx="106.8" cy="57.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="129.2" cy="57.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="106.8" cy="70.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="129.2" cy="70.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><rect x="46.0" y="130.0" width="36.0" height="42.0" fill="#fff" stroke="#2A3540" stroke-width="1.3"/><path d="M46.0 130.0 L82.0 172.0" stroke="#9AA3AD" stroke-width=".6"/><text x="64.0" y="154.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2A3540" font-weight="700">F</text><path d="M190.0 64.0 L118.0 64.0 L64.0 151.0 Z" fill="#C0471F" fill-opacity="0.06" stroke="#C0471F" stroke-width="1.4" stroke-dasharray="4 3"/><circle cx="223.0" cy="106.0" r="7" fill="#fff" stroke="#9AA3AD"/><circle cx="223.0" cy="133.0" r="7" fill="#fff" stroke="#9AA3AD"/><circle cx="223.0" cy="160.0" r="7" fill="#fff" stroke="#9AA3AD"/><line x1="46.0" y1="32.2" x2="280.0" y2="32.2" stroke="#7A8794" stroke-width=".8"/><line x1="46.0" y1="28.2" x2="46.0" y2="36.2" stroke="#7A8794"/><line x1="280.0" y1="28.2" x2="280.0" y2="36.2" stroke="#7A8794"/><text x="163.0" y="28.2" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400">3900</text><line x1="32.2" y1="46.0" x2="32.2" y2="226.0" stroke="#7A8794" stroke-width=".8"/><line x1="28.2" y1="46.0" x2="36.2" y2="46.0" stroke="#7A8794"/><line x1="28.2" y1="226.0" x2="36.2" y2="226.0" stroke="#7A8794"/><text x="28.2" y="136.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400" transform="rotate(-90 28.200000000000003 136.0)">3000</text><line x1="82.0" y1="187.0" x2="172.0" y2="187.0" stroke="#7A8794" stroke-width=".8"/><line x1="82.0" y1="183.0" x2="82.0" y2="191.0" stroke="#7A8794"/><line x1="172.0" y1="183.0" x2="172.0" y2="191.0" stroke="#7A8794"/><text x="127.0" y="183.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400">1500 clear</text><text x="190.0" y="184.0" font-family="monospace" font-size="8.5" text-anchor="middle" fill="#8C7A5B" font-weight="400">peninsula</text></svg><div class="pl-b"><h3>Peninsula kitchen</h3><span class="mn">Sample 3.9 × 3.0 m</span><p>An L or U with one counter jutting into the room, open on its end, with seating on the far side. Sometimes called a G-shape.</p><div class="pm"><i>Pro:</i> island-style seating in less space. <em>Con:</em> it can block the route into the kitchen.</div></div></div>
+</div>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/92-lshaped-modular-kitchen-in-an.webp" alt="L-shaped modular kitchen in an Indian flat" width="1200" height="675" loading="lazy"></div>
+  <figcaption>L-shaped modular kitchen with a corner counter, wall-mounted hood and sink below the window. AI-generated architectural illustration.</figcaption>
+</figure>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="triangle">The Kitchen Work Triangle</h2>
+<p>The work triangle connects the three places you move between most: the <strong>sink</strong>, the <strong>hob</strong> and the <strong>fridge</strong>. If the legs are too short, you are cramped; too long, and you walk too much. The National Kitchen &amp; Bath Association (NKBA) sets these limits in its Kitchen Planning Guidelines:</p>
+<div class="tri">
+  <div><b>7.9 m</b><small>26 ft · Guideline 3</small><span>Maximum total of the three legs.</span></div>
+  <div><b>1.2–2.7 m</b><small>4–9 ft · Guideline 3</small><span>Minimum and maximum for each leg.</span></div>
+  <div><b>305 mm</b><small>12 in · Guideline 3</small><span>No leg should cut through an island or peninsula by more than this.</span></div>
+  <div><b>No traffic</b><small>Guideline 5</small><span>Major walking routes should not cross the triangle.</span></div>
+</div>
+<p>Every sample plan above passes: their legs run from 1.2 to 2.6 m and their totals from 5.4 to 6.3 m. NKBA also asks for counter space beside each work point, called landing areas: at least 610 mm on one side of the sink and 457 mm on the other (Guideline 11); 305 mm on one side of the hob and 381 mm on the other (Guideline 17); and 381 mm on the handle side of the fridge (Guideline 16). A dishwasher should sit within 914 mm of the sink (Guideline 13).</p>
+
+<h2 id="dimensions">Standard Kitchen Dimensions</h2>
+<div class="tbl-wrap dim">
+<table>
+  <thead><tr><th>Item</th><th>Dimension</th><th>Source</th></tr></thead>
+  <tbody>
+    <tr><td>Counter height (India)</td><td>860–915 mm; about 860 mm most common</td><td>HouseYog, May 2026</td></tr>
+    <tr><td>Counter heights (NKBA access)</td><td>Two heights: 711–914 and 914–1,143 mm</td><td>NKBA Guideline 25</td></tr>
+    <tr><td>Counter depth</td><td>600 mm ideal; 560 mm minimum</td><td>HouseYog, May 2026</td></tr>
+    <tr><td>Wall cabinet above counter</td><td>450–600 mm gap</td><td>HouseYog, May 2026</td></tr>
+    <tr><td>Chimney above gas hob</td><td>650–750 mm</td><td>Electrolux hood guidance</td></tr>
+    <tr><td>Clearance above cooking surface</td><td>610 mm minimum to a protected surface</td><td>NKBA Guideline 18</td></tr>
+    <tr><td>Work aisle</td><td>1,067 mm one cook; 1,219 mm two or more</td><td>NKBA Guideline 6</td></tr>
+    <tr><td>Walkway</td><td>914 mm minimum</td><td>NKBA Guideline 8</td></tr>
+    <tr><td>Behind seated diners</td><td>813 mm no traffic; 914 mm to edge past; 1,118 mm to walk past</td><td>NKBA Guideline 8</td></tr>
+    <tr><td>Ventilation</td><td>150 cfm minimum, ducted</td><td>NKBA Guideline 19</td></tr>
+    <tr><td>Kitchen size (India)</td><td>5.0 m² minimum, 1.8 m minimum width</td><td>NBC 2016 Part 3, cl. 12.3</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">NKBA figures are converted from inches as NKBA publishes them. HouseYog's Indian figures are planning norms, not code requirements. India's NBC 2016 is being replaced by NBCS 2026 (SP 7:2026), so check the current clause with your local authority.</p>
+
+<h2 id="flat-size">Which Layout Suits Your Flat Size</h2>
+<div class="tbl-wrap sz">
+<table>
+  <thead><tr><th>Home</th><th>Suitable layouts</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td><strong>1BHK / studio</strong></td><td>Straight or L-shaped</td><td>Kitchens are close to the 5 m² minimum; one or two walls is all that fits with a usable aisle.</td></tr>
+    <tr><td><strong>2BHK</strong></td><td>L-shaped or parallel</td><td>Enough width for two runs or a corner, and room for a fridge without blocking the door.</td></tr>
+    <tr><td><strong>3BHK</strong></td><td>U-shaped, or L with a peninsula</td><td>Room for a full triangle, more storage, and a breakfast counter if the kitchen opens to dining.</td></tr>
+    <tr><td><strong>Villa</strong></td><td>Island, or U with an island</td><td>Space for NKBA aisles on all sides of an island, plus seating clearance behind diners.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="drawing">Drawing a Kitchen Layout Plan</h2>
+<p>A <a href="https://augmintech.com/autocad-download/">kitchen drawing set</a> needs at least a dimensioned plan and an elevation of each wall. Here is the L-shaped sample as a plan, and its sink wall as an elevation.</p>
+<figure class="dfig">
+  <div class="pe"><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 254" role="img" aria-label="L-shaped kitchen layout plan"><rect width="100%" height="100%" fill="#fff"/><rect x="39.1" y="39.1" width="193.8" height="175.8" fill="#5F6B78"/><rect x="46.0" y="46.0" width="180.0" height="162.0" fill="#fff"/><rect x="166.0" y="207.0" width="48.0" height="8.9" fill="#fff"/><rect x="46.0" y="46.0" width="180.0" height="36.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="46.0" y="82.0" width="36.0" height="126.0" fill="#EEE5D3" stroke="#8C7A5B" stroke-width="1"/><rect x="103.0" y="50.5" width="48.0" height="27.0" rx="3" fill="#DCEBF7" stroke="#2B6CB0" stroke-width="1"/><text x="127.0" y="67.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2B6CB0" font-weight="700">S</text><rect x="50.5" y="104.5" width="27.0" height="45.0" fill="#2A3540"/><circle cx="57.2" cy="115.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="70.8" cy="115.8" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="57.2" cy="138.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><circle cx="70.8" cy="138.2" r="3.2" fill="none" stroke="#F5C451" stroke-width="1"/><rect x="190.0" y="46.0" width="36.0" height="36.0" fill="#fff" stroke="#2A3540" stroke-width="1.3"/><path d="M190.0 46.0 L226.0 82.0" stroke="#9AA3AD" stroke-width=".6"/><text x="208.0" y="67.5" font-family="monospace" font-size="10" text-anchor="middle" fill="#2A3540" font-weight="700">F</text><path d="M127.0 64.0 L64.0 127.0 L208.0 64.0 Z" fill="#C0471F" fill-opacity="0.06" stroke="#C0471F" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="46.0" y1="32.2" x2="226.0" y2="32.2" stroke="#7A8794" stroke-width=".8"/><line x1="46.0" y1="28.2" x2="46.0" y2="36.2" stroke="#7A8794"/><line x1="226.0" y1="28.2" x2="226.0" y2="36.2" stroke="#7A8794"/><text x="136.0" y="28.2" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400">3000</text><line x1="32.2" y1="46.0" x2="32.2" y2="208.0" stroke="#7A8794" stroke-width=".8"/><line x1="28.2" y1="46.0" x2="36.2" y2="46.0" stroke="#7A8794"/><line x1="28.2" y1="208.0" x2="36.2" y2="208.0" stroke="#7A8794"/><text x="28.2" y="127.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400" transform="rotate(-90 28.200000000000003 127.0)">2700</text></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 330" role="img" aria-label="Kitchen elevation of the sink wall with base cabinets, counter, wall cabinets and fridge, dimensioned in mm"><rect width="100%" height="100%" fill="#fff"/><line x1="40.0" y1="270.0" x2="380.0" y2="270.0" stroke="#2A3540" stroke-width="1.5"/><rect x="60.0" y="188.0" width="90.0" height="72.0" fill="#F4EEE2" stroke="#8C7A5B"/><rect x="60.0" y="260.0" width="90.0" height="10.0" fill="#D9D2C3" stroke="#8C7A5B"/><text x="105.0" y="224.0" font-family="monospace" font-size="9" text-anchor="middle" fill="#6B5A3E" font-weight="400">Corner 900</text><rect x="150.0" y="188.0" width="90.0" height="72.0" fill="#F4EEE2" stroke="#8C7A5B"/><rect x="150.0" y="260.0" width="90.0" height="10.0" fill="#D9D2C3" stroke="#8C7A5B"/><text x="195.0" y="224.0" font-family="monospace" font-size="9" text-anchor="middle" fill="#6B5A3E" font-weight="400">Sink 900</text><rect x="240.0" y="188.0" width="60.0" height="72.0" fill="#F4EEE2" stroke="#8C7A5B"/><rect x="240.0" y="260.0" width="60.0" height="10.0" fill="#D9D2C3" stroke="#8C7A5B"/><text x="270.0" y="224.0" font-family="monospace" font-size="9" text-anchor="middle" fill="#6B5A3E" font-weight="400">Drawers</text><line x1="240.0" y1="210.0" x2="300.0" y2="210.0" stroke="#8C7A5B"/><line x1="240.0" y1="234.0" x2="300.0" y2="234.0" stroke="#8C7A5B"/><rect x="60.0" y="184.0" width="240.0" height="4.0" fill="#3A4652"/><path d="M195.0 184.0 v-14 h8" fill="none" stroke="#2B6CB0" stroke-width="2"/><rect x="60.0" y="54.0" width="90.0" height="70.0" fill="#F4EEE2" stroke="#8C7A5B"/><rect x="150.0" y="54.0" width="90.0" height="70.0" fill="#F4EEE2" stroke="#8C7A5B"/><rect x="240.0" y="54.0" width="60.0" height="70.0" fill="#F4EEE2" stroke="#8C7A5B"/><text x="105.0" y="89.0" font-family="monospace" font-size="9" text-anchor="middle" fill="#6B5A3E" font-weight="400">Wall units</text><rect x="302.0" y="90.0" width="56.0" height="180.0" rx="3" fill="#fff" stroke="#2A3540" stroke-width="1.2"/><line x1="302.0" y1="155.0" x2="358.0" y2="155.0" stroke="#2A3540"/><text x="330.0" y="200.0" font-family="monospace" font-size="9" text-anchor="middle" fill="#2A3540" font-weight="400">Fridge</text><rect x="300.0" y="54.0" width="60.0" height="30.0" fill="#F4EEE2" stroke="#8C7A5B"/><line x1="385.0" y1="270.0" x2="385.0" y2="184.0" stroke="#7A8794"/><line x1="381.0" y1="270.0" x2="389.0" y2="270.0" stroke="#7A8794"/><line x1="381.0" y1="184.0" x2="389.0" y2="184.0" stroke="#7A8794"/><text x="391.0" y="230.0" font-family="monospace" font-size="9.5" text-anchor="start" fill="#56616D" font-weight="400">860 counter</text><line x1="385.0" y1="184.0" x2="385.0" y2="124.0" stroke="#7A8794"/><line x1="381.0" y1="184.0" x2="389.0" y2="184.0" stroke="#7A8794"/><line x1="381.0" y1="124.0" x2="389.0" y2="124.0" stroke="#7A8794"/><text x="391.0" y="157.0" font-family="monospace" font-size="9.5" text-anchor="start" fill="#56616D" font-weight="400">600 gap</text><line x1="385.0" y1="124.0" x2="385.0" y2="54.0" stroke="#7A8794"/><line x1="381.0" y1="124.0" x2="389.0" y2="124.0" stroke="#7A8794"/><line x1="381.0" y1="54.0" x2="389.0" y2="54.0" stroke="#7A8794"/><text x="391.0" y="92.0" font-family="monospace" font-size="9.5" text-anchor="start" fill="#56616D" font-weight="400">700 wall unit</text><line x1="45.0" y1="270.0" x2="45.0" y2="260.0" stroke="#7A8794"/><line x1="41.0" y1="270.0" x2="49.0" y2="270.0" stroke="#7A8794"/><line x1="41.0" y1="260.0" x2="49.0" y2="260.0" stroke="#7A8794"/><text x="51.0" y="268.0" font-family="monospace" font-size="9.5" text-anchor="start" fill="#56616D" font-weight="400"></text><text x="43.0" y="268.0" font-family="monospace" font-size="8.5" text-anchor="end" fill="#56616D" font-weight="400">100</text><line x1="60.0" y1="288.0" x2="360.0" y2="288.0" stroke="#7A8794"/><line x1="60.0" y1="284.0" x2="60.0" y2="292.0" stroke="#7A8794"/><line x1="360.0" y1="284.0" x2="360.0" y2="292.0" stroke="#7A8794"/><text x="210.0" y="301.0" font-family="monospace" font-size="9.5" text-anchor="middle" fill="#56616D" font-weight="400">3000</text><text x="60.0" y="320.0" font-family="monospace" font-size="9.5" text-anchor="start" fill="#2A3540" font-weight="700">ELEVATION A · SINK WALL · mm</text></svg></div></div>
+  <figcaption>Sample plan and Elevation A of the L-shaped kitchen. Counter 860 mm, 600 mm gap, 700 mm wall units; module widths 900, 900 and 600 mm. Augmintech drawing.</figcaption>
+</figure>
+<div class="dsteps">
+  <div><b>Measure and draw the shell.</b> Walls, doors, windows, columns and beams from site measurements, plus water, drain, gas and electrical points.</div>
+  <div><b>Set up layers.</b> Keep walls, casework, appliances and dimensions apart, for example <span class="lyr">A-WALL</span>, <span class="lyr">I-CASE</span>, <span class="lyr">I-APPL</span> and <span class="lyr">A-ANNO-DIMS</span>.</div>
+  <div><b>Offset the counter.</b> Draw the counter line 600 mm off the wall and split it into modules, starting with the corner unit.</div>
+  <div><b>Place sink, hob and fridge.</b> Insert blocks, then check each triangle leg and the aisle against the NKBA figures.</div>
+  <div><b>Project the elevations.</b> Draw each wall with plinth, base units, the 860 mm counter, the gap, wall units and the chimney.</div>
+  <div><b>Annotate.</b> Add module widths, appliance sizes, finishes, socket and switch positions, and a title block with scale.</div>
+</div>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/92-illustrative-lshaped-kitchen-work-zones.webp" alt="Illustrative L-shaped kitchen work zones and entry route" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Plan the sink, hob, fridge and clear approach before detailing cabinets. Illustrative diagram, not an AutoCAD screenshot. Click to enlarge.</figcaption>
+</figure>
+
+<h2 id="gulf">Kitchen Layouts in Gulf Apartments</h2>
+<p>Many newer UAE apartments come with open-plan kitchens. Bayut's guide names Jumeirah Village Circle and Jumeirah Lake Towers as areas known for them, often with an island or breakfast counter facing the living room. The same guide warns that in an open kitchen, cooking smells spread through the home, and that frequent cooks often prefer a closed kitchen so the rest of the house is unaffected.</p>
+<div class="oc">
+  <div class="o"><h3>Open kitchen with island</h3><ul><li>Suits light cooking and entertaining</li><li>Plan NKBA seating clearance behind island stools</li><li>Put the hob on the wall run, under a ducted hood, rather than on the island</li></ul></div>
+  <div class="c"><h3>Closed kitchen</h3><ul><li>Suits daily Indian-style cooking: tempering, frying and spices</li><li>Fit a ducted chimney 650–750 mm above the gas hob</li><li>A glass partition or sliding door keeps the open feel without the smells</li></ul></div>
+</div>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/92-island-kitchen-in-an-openplan.webp" alt="Island kitchen in an open-plan UAE apartment" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Open-plan kitchen with a separate island, seating and a wall-mounted cooking hood. AI-generated architectural illustration.</figcaption>
+</figure>
+
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/92-closed-kitchen-with-ducted-chimney.webp" alt="Closed kitchen with ducted chimney and glass sliding door" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Closed parallel kitchen with an extractor hood and glazed sliding door to the dining area. AI-generated architectural illustration.</figcaption>
+</figure>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What are the types of kitchen layout?</div><div class="faq-a">The six types are straight (single wall), L-shaped, U-shaped, parallel (galley), island and peninsula. They differ in how many walls the counters use and whether a free-standing or projecting counter is added.</div></div>
+<div class="faq-item"><div class="faq-q">What is the kitchen work triangle?</div><div class="faq-a">It is the imaginary triangle joining the sink, hob and fridge. NKBA guidelines say the three legs should total no more than 7.9 m (26 ft), each leg should be 1.2 to 2.7 m (4 to 9 ft), and major traffic should not pass through it.</div></div>
+<div class="faq-item"><div class="faq-q">Which kitchen layout is best for small flats?</div><div class="faq-a">A straight or L-shaped layout. Both fit kitchens as narrow as India's 1.8 m minimum width, and the L-shape still gives a working triangle across the corner.</div></div>
+<div class="faq-item"><div class="faq-q">What is the standard kitchen counter height in India?</div><div class="faq-a">About 860 mm (34 in) is most common, with 860 to 915 mm considered ideal (HouseYog, May 2026). Taller cooks may want the higher end, and the counter should be set after choosing the hob, since a built-on hob adds height.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between a parallel and an L-shaped kitchen?</div><div class="faq-a">A parallel kitchen has two facing counters with an aisle between them, so it needs about 2.3 m of width for a 1,067 mm aisle. An L-shaped kitchen uses two adjoining walls, so it fits narrower rooms and leaves one side open to dining or a door.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>National Kitchen &amp; Bath Association</strong>, <a href="https://kb.nkba.org/uploads/2022/05/Kitchen-Planning-Guidelines.pdf" target="_blank" rel="noopener">Kitchen Planning Guidelines with Access Standards</a> (Guidelines 3, 5, 6, 8, 9, 11, 13, 16, 17, 18, 19, 25).</li>
+  <li><strong>HouseYog</strong>, <a href="https://www.houseyog.com/blog/kitchen-platform-height-depth-walkway/" target="_blank" rel="noopener">Kitchen platform height, depth and walkway size (India)</a> (2 May 2026).</li>
+  <li><strong>NBC 2016 Part 3</strong>, kitchen minimum area via <a href="https://infralens.in/thumbrules/kitchen-min-area" target="_blank" rel="noopener">Infralens</a>.</li>
+  <li><strong>Electrolux</strong>, <a href="https://www.electrolux.com.my/support/faq/kitchen-hoods/" target="_blank" rel="noopener">Kitchen hoods FAQ</a>.</li>
+  <li><strong>Bayut</strong>, <a href="https://bayut.com/mybayut/open-kitchen-vs-closed-kitchen-pros-cons" target="_blank" rel="noopener">Open kitchen vs closed kitchen</a> (updated 11 September 2023).</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 7 November 2026.</p>
+</div>
+<dialog id="zoom92" aria-label="Enlarged kitchen visual"><button type="button">Close</button><img alt=""></dialog>
+<script>
+(()=>{const d=document.getElementById('zoom92'),out=d.querySelector('img');if(!d.showModal)return;
+const close=()=>d.close();d.querySelector('button').addEventListener('click',close);d.addEventListener('click',e=>{if(e.target===d)close();});
+document.querySelectorAll('.blog figure img,.blog svg').forEach(el=>{el.tabIndex=0;el.title='Click to enlarge';const open=()=>{out.alt=el.alt||el.getAttribute('aria-label')||'Kitchen diagram';out.src=el.tagName.toLowerCase()==='svg'?'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(el)):el.src;d.showModal();};el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});});})();
+</script>

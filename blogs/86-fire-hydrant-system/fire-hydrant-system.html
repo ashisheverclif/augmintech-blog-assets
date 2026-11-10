@@ -1,0 +1,315 @@
+<style>
+#aug-fire-hydrant-system{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-fire-hydrant-system *,#aug-fire-hydrant-system *::before,#aug-fire-hydrant-system *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-fire-hydrant-system{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-fire-hydrant-system.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-fire-hydrant-system .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-fire-hydrant-system .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-fire-hydrant-system .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-fire-hydrant-system .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-fire-hydrant-system .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-fire-hydrant-system .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-fire-hydrant-system h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-fire-hydrant-system h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-fire-hydrant-system p{margin-bottom:.9rem;font-size:16px;}
+#aug-fire-hydrant-system a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-fire-hydrant-system a:hover{border-color:var(--brand);}
+#aug-fire-hydrant-system hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-fire-hydrant-system .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-fire-hydrant-system .chart svg{width:100%;height:auto;display:block;}
+#aug-fire-hydrant-system .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-fire-hydrant-system .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-fire-hydrant-system .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-fire-hydrant-system .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-fire-hydrant-system .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-fire-hydrant-system .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-fire-hydrant-system .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-fire-hydrant-system table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-fire-hydrant-system caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-fire-hydrant-system thead tr{background:var(--slate);color:#fff;}
+#aug-fire-hydrant-system thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-fire-hydrant-system tbody tr:nth-child(even){background:var(--surface);}
+#aug-fire-hydrant-system tbody tr:hover{background:var(--brand-lite);}
+#aug-fire-hydrant-system td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-fire-hydrant-system td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-fire-hydrant-system tbody tr.hl{background:var(--green-lite)!important;}
+#aug-fire-hydrant-system tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-fire-hydrant-system ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-fire-hydrant-system ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-fire-hydrant-system .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-fire-hydrant-system .cta-green{background:var(--slate);}
+#aug-fire-hydrant-system .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-fire-hydrant-system .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-fire-hydrant-system .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-fire-hydrant-system .cta-btn-blue{color:var(--brand);}#aug-fire-hydrant-system .cta-btn-green{color:var(--slate);}
+#aug-fire-hydrant-system figure{margin:1.5rem 0;}
+#aug-fire-hydrant-system figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-fire-hydrant-system figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-fire-hydrant-system dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-fire-hydrant-system dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-fire-hydrant-system dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-fire-hydrant-system .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-fire-hydrant-system .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-fire-hydrant-system .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-fire-hydrant-system .srcs{list-style:none;padding:0;}
+#aug-fire-hydrant-system .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-fire-hydrant-system .srcs li:last-child{border-bottom:none;}
+
+/* ===== answer ===== */#aug-fire-hydrant-system .defbox{margin:1.4rem 0;border:1px solid #F0C9BB;border-radius:var(--radius);background:#FDF3EF;padding:1.1rem 1.2rem;}
+#aug-fire-hydrant-system .defbox-k{font-family:var(--mono);font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--coral);margin-bottom:.4rem;}
+#aug-fire-hydrant-system .defbox p{font-size:16.5px;line-height:1.7;color:var(--ink-mid);margin:0;}
+#aug-fire-hydrant-system .defbox p strong{color:var(--ink);}
+#aug-fire-hydrant-system .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-fire-hydrant-system .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-fire-hydrant-system .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-fire-hydrant-system .dfig svg{display:block;width:100%;height:auto;}
+#aug-fire-hydrant-system .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;}
+
+/* ===== not street hydrant ===== */#aug-fire-hydrant-system .vs{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.2rem 0;}
+#aug-fire-hydrant-system .vs div{padding:.85rem 1rem;}
+#aug-fire-hydrant-system .vs div+div{border-left:1px solid var(--border);}
+#aug-fire-hydrant-system .vs b{display:block;font-family:var(--display);font-size:15.5px;margin-bottom:.25rem;}
+#aug-fire-hydrant-system .vs .y{background:#FDF3EF;} #aug-fire-hydrant-system .vs .y b{color:var(--coral);}
+#aug-fire-hydrant-system .vs .n{background:var(--surface);} #aug-fire-hydrant-system .vs .n b{color:var(--muted);}
+#aug-fire-hydrant-system .vs span{font-size:14px;line-height:1.6;color:var(--ink-mid);}
+
+/* ===== water path ===== */#aug-fire-hydrant-system .path{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;margin:1.2rem 0;}
+#aug-fire-hydrant-system .pn{flex:1 1 0;min-width:110px;background:var(--coral);color:#fff;padding:.7rem .7rem;position:relative;margin-right:14px;border-radius:var(--radius-sm);}
+#aug-fire-hydrant-system .pn:last-child{margin-right:0;}
+#aug-fire-hydrant-system .pn:not(:last-child)::after{content:"";position:absolute;right:-12px;top:50%;transform:translateY(-50%);border:8px solid transparent;border-left:9px solid var(--coral);}
+#aug-fire-hydrant-system .pn i{font-style:normal;font-family:var(--mono);font-size:10px;opacity:.8;}
+#aug-fire-hydrant-system .pn b{display:block;font-family:var(--display);font-size:14.5px;margin:.1rem 0 .2rem;}
+#aug-fire-hydrant-system .pn span{font-size:12px;line-height:1.45;opacity:.92;}
+
+/* ===== components ===== */#aug-fire-hydrant-system .comp5{counter-reset:c;list-style:none;padding:0;margin:1.2rem 0;}
+#aug-fire-hydrant-system .comp5 li{counter-increment:c;display:grid;grid-template-columns:54px 1fr;gap:12px;padding:.85rem 0;border-bottom:1px solid var(--border);}
+#aug-fire-hydrant-system .comp5 li::before{content:"0" counter(c);font-family:var(--display);font-weight:800;font-size:28px;color:var(--coral);line-height:1;}
+#aug-fire-hydrant-system .comp5 h3{font-size:17px;margin:0 0 .25rem;}
+#aug-fire-hydrant-system .comp5 p{margin:0;font-size:14.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-fire-hydrant-system .comp5 .spec{font-family:var(--mono);font-size:11.5px;color:var(--brand);margin-top:.35rem;}
+
+/* ===== code numbers ===== */#aug-fire-hydrant-system .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1.2rem 0;}
+#aug-fire-hydrant-system .nm{border:1px solid var(--border);border-top:4px solid var(--coral);border-radius:0 0 var(--radius-sm) var(--radius-sm);padding:.75rem .85rem;background:#fff;}
+#aug-fire-hydrant-system .nm b{display:block;font-family:var(--display);font-size:24px;font-weight:800;color:var(--ink);line-height:1.1;}
+#aug-fire-hydrant-system .nm span{display:block;font-size:13px;line-height:1.5;color:var(--ink-mid);margin-top:.3rem;}
+#aug-fire-hydrant-system .nm small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:.4rem;}
+#aug-fire-hydrant-system .alert{border-left:4px solid var(--warn);background:#FBF4E8;border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.8rem 1rem;margin:1rem 0;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-fire-hydrant-system .alert b{color:var(--warn);}
+#aug-fire-hydrant-system .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+
+/* ===== codes side by side ===== */#aug-fire-hydrant-system .codes3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1.2rem 0;}
+#aug-fire-hydrant-system .cd3{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-fire-hydrant-system .cd3 h3{margin:0;padding:.6rem .85rem;color:#fff;font-size:15px;}
+#aug-fire-hydrant-system .cd3.in h3{background:var(--green);} #aug-fire-hydrant-system .cd3.ae h3{background:var(--brand);} #aug-fire-hydrant-system .cd3.sa h3{background:var(--teal);}
+#aug-fire-hydrant-system .cd3 ul{margin:0;padding:.7rem .85rem .7rem 1.9rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-fire-hydrant-system .cd3 li{margin-bottom:.35rem;}
+#aug-fire-hydrant-system .cta-btn-wa{background:#fff;color:var(--green);margin-left:6px;}
+
+@media(max-width:640px){
+  #aug-fire-hydrant-system .vs{grid-template-columns:1fr;} #aug-fire-hydrant-system .vs div+div{border-left:none;border-top:1px solid var(--border);}
+  #aug-fire-hydrant-system .path{flex-direction:column;} #aug-fire-hydrant-system .pn{margin:0 0 14px 0;} #aug-fire-hydrant-system .pn:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-15px;transform:translateX(-50%);border:8px solid transparent;border-top:9px solid var(--coral);}
+  #aug-fire-hydrant-system .nums,#aug-fire-hydrant-system .codes3{grid-template-columns:1fr;}
+  #aug-fire-hydrant-system .dfig{overflow-x:auto;} #aug-fire-hydrant-system .dfig svg{min-width:600px;}
+  #aug-fire-hydrant-system .cta{flex-direction:column;align-items:flex-start;}
+  #aug-fire-hydrant-system .cta>div{max-width:100%;} #aug-fire-hydrant-system .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-fire-hydrant-system .cta>div:last-child .cta-btn{margin-left:0;}
+}
+#aug-fire-hydrant-system figure img{cursor:zoom-in}#aug-fire-hydrant-system .visual86{margin:auto;padding:12px;border:none;border-radius:10px;max-width:94vw;max-height:94vh}#aug-fire-hydrant-system .visual86::backdrop{background:#0a2035c9}#aug-fire-hydrant-system .visual86 img{display:block;width:auto;max-width:88vw;max-height:75vh;object-fit:contain}#aug-fire-hydrant-system .visual86 button{display:block;margin:0 0 8px auto;padding:6px 14px;cursor:pointer}#aug-fire-hydrant-system .visual86 p{max-width:850px;font-size:14px;line-height:1.5;margin-top:8px}#aug-fire-hydrant-system figure img:focus-visible{outline:3px solid #1a6a9b;outline-offset:3px}
+#aug-fire-hydrant-system .water86{list-style:none;display:grid;gap:10px;margin:1.3rem 0;padding:0}#aug-fire-hydrant-system .water86 li{display:grid;grid-template-columns:42px minmax(0,1fr);align-items:start;gap:12px;padding:15px 18px;border:1px solid #d5e1e6;border-radius:9px;background:#f6f9fa}#aug-fire-hydrant-system .water86 .step86{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#e8f0f5;color:#174e72;font:700 14px/1 system-ui}#aug-fire-hydrant-system .water86 b{display:block;color:#183f54;font:700 17px/1.4 system-ui}#aug-fire-hydrant-system .water86 p{margin:4px 0 0;font:400 15px/1.5 system-ui;color:#48616d}#aug-fire-hydrant-system .dfig{overflow-x:auto}#aug-fire-hydrant-system .dfig svg{min-width:760px}#aug-fire-hydrant-system .dfig figcaption{font:400 13px/1.6 system-ui;position:sticky;left:0}#aug-fire-hydrant-system .dfig::before{content:"System overview · Swipe sideways on smaller screens";display:block;padding:12px 16px;color:#516976;font:500 12px/1.4 system-ui;border-bottom:1px solid #e1e8eb}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-fire-hydrant-system.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-fire-hydrant-system h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-fire-hydrant-system a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-fire-hydrant-system a:hover{color:#18d104;}
+#aug-fire-hydrant-system .cta{background:#1a1a1a;}
+#aug-fire-hydrant-system .cta a.cta-btn{text-decoration:none;}
+#aug-fire-hydrant-system .cta-btn-blue{background:#18d104;color:#000;}
+#aug-fire-hydrant-system .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-fire-hydrant-system [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-fire-hydrant-system">
+
+<div class="defbox">
+  <div class="defbox-k">Short answer</div>
+  <p><strong>A building fire hydrant system is a network of pumps, pipes and <a href="https://augmintech.com/types-of-valves/">valves</a> that supplies pressurised water to hose points</strong>, so firefighters and trained occupants can fight a fire inside and around the building.</p>
+</div>
+
+
+<p>This page is about hydrant systems inside building premises, not the red street hydrants on public roads. The labelled diagram below shows the whole system at a glance, from the water tank to the hose.</p>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>A hydrant system stores water, pumps it, and delivers it under pressure</strong> to hose outlets inside and outside a building.</li>
+  <li><strong>Water flows from the tank to the <a href="https://augmintech.com/pump-head-calculation/">fire pumps</a>, through a ring main, to wet risers and yard hydrants</strong>, then out through landing valves and hoses.</li>
+  <li><strong>The five main components are the fire pump, ring main, landing valve, hose box and fire brigade inlet.</strong></li>
+  <li><strong>Yard hydrants protect the outside of a building; internal hydrants (wet risers) serve each floor.</strong></li>
+  <li><strong>Indian codes call for at least 3.5 kg/cm² at the hydraulically most remote hydrant</strong> (IS 13039 and NBC 2016 Part 4).</li>
+  <li><strong>Saudi SBC 801 and UAE practice follow NFPA</strong>; NFPA 14 asks for 100 psi residual at the most remote standpipe hose valves.</li>
+</ul>
+
+<h2 id="what-is">What Is a Fire Hydrant System?</h2>
+<p>A fire hydrant system in a building is a <strong>permanently installed, water-filled fire fighting system</strong>: a dedicated water store, fire pumps, a pipe network, and hose outlets placed so that every part of the building can be reached by a hose. It is part of the "F" in <a href="https://augmintech.com/mep-systems-construction/">MEPF</a>.</p>
+<div class="vs">
+  <div class="y"><b>Building hydrant system (this page)</b><span>Private system within a site: tank, pumps, ring main, wet risers, landing valves, hose boxes and yard hydrants, designed to NBC, IS, NFPA or local fire codes.</span></div>
+  <div class="n"><b>Street hydrant (not this page)</b><span>Public hydrant on a municipal water main, used by the fire brigade to fill tenders. This is what most encyclopedia pages describe.</span></div>
+</div>
+
+<h2 id="how-it-works">How a Fire Hydrant System Works</h2>
+<p>A hydrant system is kept full of water and pressurised all the time, so water is available the moment a valve is opened. The water path:</p>
+<ol class="water86"><li><span class="step86">01</span><div><b>Stored water</b><p>Dedicated fire-water reserve supplies the pumps.</p></div></li><li><span class="step86">02</span><div><b>Pressure and pumping</b><p>Jockey pump maintains pressure; fire pumps supply the fire demand.</p></div></li><li><span class="step86">03</span><div><b>Distribution loop</b><p>The ring main carries water around the building.</p></div></li><li><span class="step86">04</span><div><b>Indoor and outdoor outlets</b><p>Wet risers supply floor outlets; branches feed yard hydrants.</p></div></li><li><span class="step86">05</span><div><b>Hose connection</b><p>Firefighters connect a hose at the landing valve.</p></div></li></ol><figure class="dfig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 670" role="img" aria-label="Conceptual fire-water system showing tank, parallel pumps, ring main, wet riser and yard hydrant"><rect x="0" y="0" width="900" height="670" rx="8" fill="#fff" stroke="#fff"/><text x="30" y="36" font-family="Arial,sans-serif" font-size="15" fill="#597985" font-weight="700">FIRE WATER: FROM STORAGE TO OUTLETS</text><text x="30" y="66" font-family="Arial,sans-serif" font-size="25" fill="#183e52" font-weight="700">One connected system. Two outlet routes.</text><rect x="484" y="175" width="252" height="330" rx="8" fill="#f3f6f8" stroke="#b8cbd3"/><path d="M485 260 H735" fill="none" stroke="#cad6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M485 340 H735" fill="none" stroke="#cad6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M485 420 H735" fill="none" stroke="#cad6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><text x="550" y="159" font-family="Arial,sans-serif" font-size="15" fill="#254557" font-weight="700">BUILDING / WET RISER</text><path d="M525 552 V205" fill="none" stroke="#ba4b31" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><path d="M525 222 H577" fill="none" stroke="#ba4b31" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><rect x="575" y="206" width="35" height="36" rx="3" fill="#fff" stroke="#c65d43"/><circle cx="592" cy="220" r="9" fill="none" stroke="#b74b32" stroke-width="2"/><path d="M592 228 v6 h10" fill="none" stroke="#ba4b31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><circle cx="553" cy="222" r="5" fill="#b74b32"/><path d="M525 302 H577" fill="none" stroke="#ba4b31" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><rect x="575" y="286" width="35" height="36" rx="3" fill="#fff" stroke="#c65d43"/><circle cx="592" cy="300" r="9" fill="none" stroke="#b74b32" stroke-width="2"/><path d="M592 308 v6 h10" fill="none" stroke="#ba4b31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><circle cx="553" cy="302" r="5" fill="#b74b32"/><path d="M525 382 H577" fill="none" stroke="#ba4b31" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><rect x="575" y="366" width="35" height="36" rx="3" fill="#fff" stroke="#c65d43"/><circle cx="592" cy="380" r="9" fill="none" stroke="#b74b32" stroke-width="2"/><path d="M592 388 v6 h10" fill="none" stroke="#ba4b31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><circle cx="553" cy="382" r="5" fill="#b74b32"/><path d="M525 462 H577" fill="none" stroke="#ba4b31" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><rect x="575" y="446" width="35" height="36" rx="3" fill="#fff" stroke="#c65d43"/><circle cx="592" cy="460" r="9" fill="none" stroke="#b74b32" stroke-width="2"/><path d="M592 468 v6 h10" fill="none" stroke="#ba4b31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><circle cx="553" cy="462" r="5" fill="#b74b32"/><text x="622" y="304" font-family="Arial,sans-serif" font-size="13" fill="#254557" font-weight="400">Floor outlet</text><text x="622" y="384" font-family="Arial,sans-serif" font-size="13" fill="#254557" font-weight="400">Floor outlet</text><text x="622" y="464" font-family="Arial,sans-serif" font-size="13" fill="#254557" font-weight="400">Floor outlet</text><text x="759" y="208" font-family="Arial,sans-serif" font-size="14" fill="#254557" font-weight="700">Landing valve</text><text x="759" y="230" font-family="Arial,sans-serif" font-size="14" fill="#254557" font-weight="400">and hose reel</text><path d="M747 218 H617" fill="none" stroke="#607e8b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /><rect x="575" y="100" width="126" height="42" rx="2" fill="#d9edf5" stroke="#337b9f"/><text x="591" y="126" font-family="Arial,sans-serif" font-size="15" fill="#254557" font-weight="400">Terrace tank</text><path d="M575 122 H525 V195" fill="none" stroke="#ba4b31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/><text x="718" y="121" font-family="Arial,sans-serif" font-size="13" fill="#607e8b" font-weight="400">Where required</text><rect x="30" y="210" width="132" height="115" rx="4" fill="#daedf5" stroke="#3b83a2"/><path d="M40 245 q12 -9 24 0 t24 0 t24 0 t24 0" fill="none" stroke="#70b1cb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><text x="49" y="278" font-family="Arial,sans-serif" font-size="18" fill="#215b77" font-weight="700">Fire-water</text><text x="75" y="302" font-family="Arial,sans-serif" font-size="18" fill="#215b77" font-weight="700">tank</text><path d="M163 285 H196 V445" fill="none" stroke="#24749b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><path d="M196 285 V265" fill="none" stroke="#24749b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><text x="220" y="209" font-family="Arial,sans-serif" font-size="16" fill="#254557" font-weight="700">PUMP SET</text><path d="M196 265 H255" fill="none" stroke="#24749b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><path d="M286 265 H389" fill="none" stroke="#ba4b31" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><circle cx="271" cy="265" r="17" fill="#fff" stroke="#244f65" stroke-width="3"/><path d="M264 257 l17 8 -17 8z" fill="#244f65"/><text x="236" y="238" font-family="Arial,sans-serif" font-size="16" fill="#254557" font-weight="700">Electric</text><path d="M327 259 l12 6 -12 6z" fill="#b94b31"/><path d="M196 355 H255" fill="none" stroke="#24749b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><path d="M286 355 H389" fill="none" stroke="#ba4b31" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><circle cx="271" cy="355" r="17" fill="#fff" stroke="#244f65" stroke-width="3"/><path d="M264 347 l17 8 -17 8z" fill="#244f65"/><text x="236" y="328" font-family="Arial,sans-serif" font-size="16" fill="#254557" font-weight="700">Diesel</text><path d="M327 349 l12 6 -12 6z" fill="#b94b31"/><path d="M196 445 H255" fill="none" stroke="#24749b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><path d="M286 445 H389" fill="none" stroke="#ba4b31" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><circle cx="271" cy="445" r="12" fill="#fff" stroke="#244f65" stroke-width="3"/><path d="M264 437 l17 8 -17 8z" fill="#244f65"/><text x="236" y="418" font-family="Arial,sans-serif" font-size="16" fill="#254557" font-weight="700">Jockey</text><path d="M327 439 l12 6 -12 6z" fill="#b94b31"/><path d="M389 265 V552" fill="none" stroke="#ba4b31" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><path d="M389 552 H829 V613 H389 Z" fill="none" stroke="#ba4b31" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><text x="488" y="641" font-family="Arial,sans-serif" font-size="16" fill="#b04a34" font-weight="700">LOOPED RING MAIN</text><path d="M829 552 V449" fill="none" stroke="#ba4b31" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><rect x="814" y="433" width="30" height="19" rx="3" fill="#c35136" stroke="#a54028"/><path d="M829 433 V422 M814 422 H844" fill="none" stroke="#ba4b31" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><text x="764" y="397" font-family="Arial,sans-serif" font-size="16" fill="#254557" font-weight="700">Yard hydrant</text><rect x="220" y="507" width="86" height="32" rx="3" fill="#fff" stroke="#ab4c35"/><circle cx="238" cy="523" r="6" fill="#c9a56c" stroke="#7c6543"/><circle cx="266" cy="523" r="6" fill="#c9a56c" stroke="#7c6543"/><circle cx="290" cy="523" r="6" fill="#c9a56c" stroke="#7c6543"/><path d="M306 523 H349 V552 H389" fill="none" stroke="#ba4b31" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><text x="212" y="574" font-family="Arial,sans-serif" font-size="16" fill="#254557" font-weight="700">Fire brigade inlet</text><path d="M-7 -5 L4 0 -7 5" fill="none" stroke="white" stroke-width="2.4" transform="translate(457 552) rotate(0)"/><path d="M-7 -5 L4 0 -7 5" fill="none" stroke="white" stroke-width="2.4" transform="translate(706 613) rotate(180)"/><path d="M-7 -5 L4 0 -7 5" fill="none" stroke="white" stroke-width="2.4" transform="translate(525 496) rotate(-90)"/><path d="M-7 -5 L4 0 -7 5" fill="none" stroke="white" stroke-width="2.4" transform="translate(389 482) rotate(90)"/><text x="30" y="620" font-family="Arial,sans-serif" font-size="14" fill="#24749b" font-weight="400">Blue: supply to pumps</text><text x="30" y="644" font-family="Arial,sans-serif" font-size="14" fill="#b04a34" font-weight="400">Red: fire-water distribution</text></svg>
+<figcaption>Conceptual water path. Electric, diesel and jockey pumps connect in parallel. Floor outlets and yard hydrants branch from the distribution system. Valves, controls and detailed pump-suction arrangements are omitted. Terrace supply depends on the approved design.</figcaption>
+</figure>
+<p>When a landing valve is opened, line pressure falls and the pressure switches start the main electric pump. If it fails, a diesel standby pump starts. The fire brigade can also pump water into the system through the fire brigade inlet.</p>
+
+<div class="cta">
+  <div><h3>Model Fire Protection Systems in Revit MEP</h3><p>Augmintech's PG Program in BIM MEP covers MEP system modelling, including fire protection, with clash detection, schedules and BOQs on three building projects, across 150+ live hours over 6 months, with recordings for 1000 days and 500+ interview questions. ₹1,50,000 + GST in India, $1,800 abroad.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-mep-program/" class="cta-btn cta-btn-blue">View the BIM MEP program</a></div>
+</div>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="components">5 Main Components</h2>
+<ol class="comp5">
+  <li><div><h3>Fire pump set</h3><p>Usually a main electric pump, a diesel standby pump of the same capacity and a small jockey pump to keep the system pressurised. NBC 2016 Table 7 notes refer to sets with electric and diesel pumps, including 2 850 litre/min diesel standby and 180 litre/min jockey pumps for taller buildings.</p><div class="spec">Ref: NBC 2016 Part 4, Table 7 (notes)</div></div></li>
+  <li><div><h3>Ring main</h3><p>The main pipe is laid as a ring (loop), so water can reach any hydrant from two directions and a section can be isolated for repair without shutting down the whole system. IS 13039 says hydrant mains "should always be laid in rings or crosslinked rings".</p><div class="spec">Ref: IS 13039:1991, clause 5.4</div></div></li>
+  <li><div><h3>Landing valve</h3><p>The hose outlet valve on each floor of a wet riser and at each yard hydrant. Landing valves come in single and double outlet types, typically 63 mm, to IS 5290.</p><div class="spec">Ref: IS 5290:1993, Specification for landing valves</div></div></li>
+  <li><div><h3>Hose box and hose reel</h3><p>A cabinet beside the landing valve holding fire hoses and a branch pipe (nozzle), so firefighters do not need to carry hose up the building. A first-aid hose reel is usually provided next to it for occupants.</p><div class="spec">Ref: IS 3844:1989, internal hydrants and hose reels</div></div></li>
+  <li><div><h3>Fire brigade inlet</h3><p>An inlet connection at ground level, usually with several instantaneous couplings, through which fire brigade tenders can pump water into the ring main or riser if the building's own supply runs short.</p></div></li>
+</ol>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/86-wet-riser-landing-valve-with.webp" alt="Wet riser landing valve with hose reel and hose box in a building corridor" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>An internal hydrant point: landing valve on the wet riser, hose reel and hose box.</figcaption>
+</figure>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/86-illustrative-fire-pump-room-showing.webp" alt="Illustrative fire pump room showing electric and diesel driven pumps connected to common headers" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Fire pump room illustration: electric drive on the left, diesel drive at the centre. The smaller jockey pump is not clearly visible in this view.</figcaption>
+</figure>
+
+<h2 id="yard-vs-internal">Yard Hydrant vs Internal Hydrant</h2>
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>Point</th><th>Yard hydrant (external)</th><th>Internal hydrant (wet riser)</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Location</strong></td><td>Outside, around the building on the ring main; IS 13039 says at least 2 m from the building face</td><td>Inside, on a vertical riser in staircase lobbies or shafts, one outlet per floor</td></tr>
+    <tr><td><strong>Purpose</strong></td><td>Fighting fires from outside and protecting the site and nearby buildings</td><td>Fighting fires floor by floor from inside the building</td></tr>
+    <tr><td><strong>Spacing</strong></td><td>IS 13039: every 30 m along the building line for high hazard, 45 m for moderate hazard</td><td>Set by floor layout and hose reach</td></tr>
+    <tr><td><strong>Outlet</strong></td><td>Hydrant valve with hose box nearby</td><td>Landing valve with hose box and hose reel</td></tr>
+    <tr><td><strong>Typical buildings</strong></td><td>Industrial plants, warehouses, campuses, large plots</td><td>Multi-storey residential, commercial, hospitals and hotels</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Spacing and distance from <a href="https://ia801809.us.archive.org/21/items/gov.in.is.13039.1991/is.13039.1991.txt" target="_blank" rel="noopener">IS 13039:1991</a>, clauses 6.7 and 6.9. Many buildings need both: NBC 2016 Table 7 sets which occupancies and heights need yard hydrants, wet risers or both.</p>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/86-external-yard-hydrant-with-hose.webp" alt="External yard hydrant with hose box beside an industrial building" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>A yard hydrant with its hose box, placed clear of the building face.</figcaption>
+</figure>
+
+<h2 id="requirements">Pressure, Flow and Code Requirements</h2>
+<div class="nums">
+  <div class="nm"><b>3.5 kg/cm²</b><span>Minimum pressure at the hydraulically most remote hydrant</span><small>IS 13039:1991 cl. 6.7; NBC 2016 Part 4 Table 7</small></div>
+  <div class="nm"><b>5.25 kg/cm²</b><span>Minimum at the remote point for high-hazard occupancies</span><small>IS 13039:1991 cl. 6.7</small></div>
+  <div class="nm"><b>1 125 L/min</b><span>Minimum output a hydrant should yield</span><small>IS 13039:1991 cl. 7.5</small></div>
+</div>
+<p>The Indian standards that cover hydrant systems are:</p>
+<ul class="bullets">
+  <li><strong>NBC 2016 Part 4</strong> (Fire and Life Safety): Table 7 sets which buildings need hydrants, wet risers, tanks and pumps, by occupancy and height.</li>
+  <li><strong>IS 13039:1991</strong>: External hydrant systems, provision and maintenance (code of practice).</li>
+  <li><strong>IS 3844:1989</strong>: Installation and maintenance of internal hydrants and hose reels on premises.</li>
+  <li><strong>IS 5290:1993</strong>: Specification for landing valves.</li>
+</ul>
+<div class="alert"><b>Code update: NBCS 2026.</b> BIS has published the National Building Construction Standards 2026 (SP 7:2026), reported as effective from 30 April 2026 and replacing NBC 2016 (<a href="https://ulba.in/national-building-construction-standards-2026-sp-72026" target="_blank" rel="noopener">ULBA</a>; <a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/national-building-construction-standards-2026" target="_blank" rel="noopener">Drishti IAS</a>). A comparison by Sparrow RMS reports that the 3.5 bar minimum at the remotest hydrant is unchanged, with a new 7.0 bar maximum and pump capacities now calculated from protection levels (<a href="https://sparrowrms.in/sparrow-rms/portfolio/nbc-2016-vs-nbcs-2026-fire-safety-changes/" target="_blank" rel="noopener">Sparrow RMS</a>). Check which edition your local fire authority applies.</div>
+<p class="note">NBC 2016 Table 7 values checked against the copy published by <a href="https://noc.fire.kerala.gov.in/assets/uploads/NBC%20Table%207.pdf" target="_blank" rel="noopener">Kerala Fire and Rescue Services</a>. IS titles from <a href="https://infralens.in/code/IS-3844-1989" target="_blank" rel="noopener">InfraLens</a> and the IS 13039 text. Tank and pump sizes vary by occupancy and height, so read them from Table 7 for your building.</p>
+
+<h2 id="gulf">Hydrant Requirements in the UAE and Saudi Arabia</h2>
+<div class="codes3">
+  <div class="cd3 in"><h3>India: NBC 2016 Part 4</h3><ul><li>Table 7 sets hydrants, risers, tanks and pumps by occupancy and height</li><li>3.5 kg/cm² at the most remote hydrant</li><li>IS 13039, IS 3844 and IS 5290 for design and equipment</li><li>NBCS 2026 now published</li></ul></div>
+  <div class="cd3 ae"><h3>UAE: Fire and Life Safety Code</h3><ul><li>UAE Fire and Life Safety Code of Practice, 2018 edition, enforced by Civil Defence</li><li>Hydrant systems designed to the code and NFPA 24; pumps to NFPA 20</li><li>Abu Dhabi Civil Defence issued 54 local amendments on 12 March 2026, covering fire pumps and hydrants</li></ul></div>
+  <div class="cd3 sa"><h3>Saudi Arabia: SBC 801</h3><ul><li>Saudi Fire Code, based on the 2015 International Fire Code with NFPA standards; revised 2018</li><li>Section 507 and Appendix C: water supplies and hydrant locations</li><li>Section 905 standpipes, 912 fire department connections, 913 fire pumps</li><li>Standpipes to NFPA 14</li></ul></div>
+</div>
+<p><strong>UAE.</strong> The UAE Fire and Life Safety Code of Practice (2018 edition) governs hydrant systems, which are designed with hydraulic calculations to the code and NFPA 24, with pumps to NFPA 20 (<a href="https://mmjss.com/fire-hydrant-systems-in-the-uae-types-requirements-and-maintenance/" target="_blank" rel="noopener">MMJ</a>). In Abu Dhabi, the Civil Defence Authority released 54 amendments on 12 March 2026 affecting fire pumps and hydrant requirements. One example: for industrial buildings, private hydrant systems may be waived where public hydrants are available within 100 m (<a href="https://vortexfire.com/insights/amendments-to-the-uae-fire-and-life-safety-code-of-practice-2018" target="_blank" rel="noopener">Vortex Fire</a>).</p>
+<p><strong>Saudi Arabia.</strong> SBC 801 places fire water supplies and hydrant locations in Section 507 and Appendix C, and standpipes, fire department connections and fire pumps in Sections 905, 912 and 913 (<a href="https://sbc.gov.sa/ar/BC/Documents/tableofcontent2018/SBC%20801/SBC801_CR_T2018.pdf" target="_blank" rel="noopener">SBC 801 contents, 2018</a>). A 2025 comparative study notes that standpipes follow NFPA 14, with Class III for buildings over 9 m, and that on-site hydrants may be required where a facility is more than 120 m from a hydrant, or 180 m if sprinklered (<a href="https://www.asrjetsjournal.org/American_Scientific_Journal/article/download/11808/2855/28128" target="_blank" rel="noopener">Pillai, ASRJETS 2025</a>).</p>
+<p><strong>NFPA 14 numbers.</strong> Under NFPA 14, a Class I standpipe system needs a minimum <a href="https://augmintech.com/pressure-drop-piping-systems-darcy-weisbach/">residual pressure</a> of 100 psi (about 6.9 bar) at the two most remote 2½ in hose valves, with 500 gpm for the first standpipe and 250 gpm for each additional one (<a href="https://nfsa.org/?p=16606" target="_blank" rel="noopener">NFSA</a>; <a href="https://www.sf-fire.org/419-manual-wet-standpipe-sizing" target="_blank" rel="noopener">San Francisco Fire Department, citing NFPA 14-2019</a>). That is roughly twice the Indian minimum of 3.5 kg/cm² (about 3.4 bar), so always design to the code the project is approved under.</p>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/86-fourway-fire-brigade-inlet-on.webp" alt="Four-way fire brigade inlet on a building facade with signage" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>A fire brigade inlet (fire department connection) lets tenders pump water into the system.</figcaption>
+</figure>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">How does a fire hydrant system work?</div><div class="faq-a">Water is stored in a dedicated tank and kept under pressure by a jockey pump. When a landing valve or hydrant is opened, pressure drops and the main fire pump starts, pushing water through the ring main and risers to the hose. A diesel pump takes over if the electric pump fails, and the fire brigade can pump in through the fire brigade inlet.</div></div>
+<div class="faq-item"><div class="faq-q">What are the main components of a fire hydrant system?</div><div class="faq-a">The fire pump set (main, diesel standby and jockey pumps), the ring main, landing valves, hose boxes with hose reels, and the fire brigade inlet, plus the water tank and wet risers.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between a yard hydrant and an internal hydrant?</div><div class="faq-a">A yard hydrant is outside the building on the ring main and protects the building from outside. An internal hydrant is a landing valve on a wet riser inside the building, one per floor, used to fight fires floor by floor.</div></div>
+<div class="faq-item"><div class="faq-q">What pressure is required in a fire hydrant system?</div><div class="faq-a">In India, at least 3.5 kg/cm² at the hydraulically most remote hydrant (IS 13039 and NBC 2016 Part 4), and 5.25 kg/cm² for high-hazard occupancies under IS 13039. Under NFPA 14, used in the Gulf, a Class I standpipe needs 100 psi residual at the most remote hose valves.</div></div>
+<div class="faq-item"><div class="faq-q">What is a landing valve?</div><div class="faq-a">A landing valve is the hose outlet valve on a wet riser or hydrant, usually 63 mm, single or double outlet, to which firefighters connect a hose. In India it is specified by IS 5290.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Bureau of Indian Standards</strong>, IS 13039:1991, External Hydrant Systems: Provision and Maintenance, text via <a href="https://ia801809.us.archive.org/21/items/gov.in.is.13039.1991/is.13039.1991.txt" target="_blank" rel="noopener">archive.org</a>.</li>
+  <li><strong>National Building Code of India 2016, Part 4</strong>, Table 7, as published by <a href="https://noc.fire.kerala.gov.in/assets/uploads/NBC%20Table%207.pdf" target="_blank" rel="noopener">Kerala Fire and Rescue Services</a>.</li>
+  <li><strong>InfraLens</strong>, <a href="https://infralens.in/code/IS-3844-1989" target="_blank" rel="noopener">IS 3844:1989</a> and <a href="https://infralens.in/code/IS-5290-1993" target="_blank" rel="noopener">IS 5290:1993</a> summaries.</li>
+  <li><strong>NBCS 2026 (SP 7:2026)</strong>: <a href="https://ulba.in/national-building-construction-standards-2026-sp-72026" target="_blank" rel="noopener">ULBA</a>; <a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/national-building-construction-standards-2026" target="_blank" rel="noopener">Drishti IAS</a>; <a href="https://sparrowrms.in/sparrow-rms/portfolio/nbc-2016-vs-nbcs-2026-fire-safety-changes/" target="_blank" rel="noopener">Sparrow RMS comparison</a>.</li>
+  <li><strong>Saudi Building Code</strong>, <a href="https://sbc.gov.sa/ar/BC/Documents/tableofcontent2018/SBC%20801/SBC801_CR_T2018.pdf" target="_blank" rel="noopener">SBC 801 (2018) table of contents</a>; Pillai, S. R. (2025), "From Prescription to Performance: A Comparative Analysis of SBC 801 and ADB Fire Codes", <a href="https://www.asrjetsjournal.org/American_Scientific_Journal/article/download/11808/2855/28128" target="_blank" rel="noopener">ASRJETS</a>.</li>
+  <li><strong>UAE</strong>: <a href="https://mmjss.com/fire-hydrant-systems-in-the-uae-types-requirements-and-maintenance/" target="_blank" rel="noopener">MMJ, fire hydrant systems in the UAE</a>; <a href="https://vortexfire.com/insights/amendments-to-the-uae-fire-and-life-safety-code-of-practice-2018" target="_blank" rel="noopener">Vortex Fire, ADCDA amendments (March 2026)</a>.</li>
+  <li><strong>NFPA 14</strong> values via <a href="https://nfsa.org/?p=16606" target="_blank" rel="noopener">NFSA</a> and <a href="https://www.sf-fire.org/419-manual-wet-standpipe-sizing" target="_blank" rel="noopener">San Francisco Fire Department</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 4 November 2026.</p>
+
+</div>
+<script>
+(function(){
+const images=document.querySelectorAll('figure img');
+const d=document.createElement('dialog');d.className='visual86';d.setAttribute('aria-label','Enlarged illustration');
+const close=document.createElement('button');close.textContent='Close';close.type='button';
+const photo=document.createElement('img'),cap=document.createElement('p');d.append(close,photo,cap);document.body.append(d);
+close.onclick=()=>d.close();d.addEventListener('click',e=>{if(e.target===d)d.close()});
+images.forEach(im=>{im.tabIndex=0;im.setAttribute('role','button');im.setAttribute('aria-label','Enlarge: '+im.alt);
+function open(){photo.src=im.src;photo.alt=im.alt;cap.textContent=im.closest('figure').querySelector('figcaption')?.textContent||im.alt;d.showModal()}
+im.onclick=open;im.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}};
+});
+})();
+</script>
