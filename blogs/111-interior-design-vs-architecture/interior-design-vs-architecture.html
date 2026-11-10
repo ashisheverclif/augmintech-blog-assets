@@ -1,0 +1,380 @@
+<style>
+#aug-interior-design-vs-architecture{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-interior-design-vs-architecture *,#aug-interior-design-vs-architecture *::before,#aug-interior-design-vs-architecture *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-interior-design-vs-architecture{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-interior-design-vs-architecture.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-interior-design-vs-architecture .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-interior-design-vs-architecture .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-interior-design-vs-architecture .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-interior-design-vs-architecture .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-interior-design-vs-architecture .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-interior-design-vs-architecture .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-interior-design-vs-architecture h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-interior-design-vs-architecture h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-interior-design-vs-architecture p{margin-bottom:.9rem;font-size:16px;}
+#aug-interior-design-vs-architecture a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-interior-design-vs-architecture a:hover{border-color:var(--brand);}
+#aug-interior-design-vs-architecture hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-interior-design-vs-architecture .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-interior-design-vs-architecture .chart svg{width:100%;height:auto;display:block;}
+#aug-interior-design-vs-architecture .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-interior-design-vs-architecture .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-interior-design-vs-architecture .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-interior-design-vs-architecture .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-interior-design-vs-architecture .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-interior-design-vs-architecture .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-interior-design-vs-architecture .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-interior-design-vs-architecture table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-interior-design-vs-architecture caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-interior-design-vs-architecture thead tr{background:var(--slate);color:#fff;}
+#aug-interior-design-vs-architecture thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-interior-design-vs-architecture tbody tr:nth-child(even){background:var(--surface);}
+#aug-interior-design-vs-architecture tbody tr:hover{background:var(--brand-lite);}
+#aug-interior-design-vs-architecture td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-interior-design-vs-architecture td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-interior-design-vs-architecture tbody tr.hl{background:var(--green-lite)!important;}
+#aug-interior-design-vs-architecture tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-interior-design-vs-architecture ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-interior-design-vs-architecture ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-interior-design-vs-architecture .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-interior-design-vs-architecture .cta-green{background:var(--slate);}
+#aug-interior-design-vs-architecture .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-interior-design-vs-architecture .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-interior-design-vs-architecture .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-interior-design-vs-architecture .cta-btn-blue{color:var(--brand);}#aug-interior-design-vs-architecture .cta-btn-green{color:var(--slate);}
+#aug-interior-design-vs-architecture figure{margin:1.5rem 0;}
+#aug-interior-design-vs-architecture figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-interior-design-vs-architecture figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-interior-design-vs-architecture dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-interior-design-vs-architecture dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-interior-design-vs-architecture dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-interior-design-vs-architecture .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-interior-design-vs-architecture .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-interior-design-vs-architecture .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-interior-design-vs-architecture .srcs{list-style:none;padding:0;}
+#aug-interior-design-vs-architecture .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-interior-design-vs-architecture .srcs li:last-child{border-bottom:none;}
+
+#aug-interior-design-vs-architecture .ans{margin:1.3rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#F4F6F8;border-left:4px solid var(--brand);font-size:16.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-interior-design-vs-architecture .ans b{color:var(--ink);}
+#aug-interior-design-vs-architecture .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-interior-design-vs-architecture .dfig svg{display:block;width:100%;height:auto;}
+#aug-interior-design-vs-architecture .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-interior-design-vs-architecture .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-interior-design-vs-architecture .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-interior-design-vs-architecture figure.pf{margin:1.2rem 0;} #aug-interior-design-vs-architecture figure.pf figcaption{font-family:var(--body);font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-interior-design-vs-architecture .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;} #aug-interior-design-vs-architecture .pair figure{margin:0;}
+#aug-interior-design-vs-architecture .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-interior-design-vs-architecture .alert{margin:1.2rem 0;padding:.85rem 1rem;border-radius:var(--radius);background:#FFF4E5;border:1px solid #F3D3A4;font-size:14.5px;line-height:1.6;}
+#aug-interior-design-vs-architecture .alert b{color:var(--warn);}
+#aug-interior-design-vs-architecture .t table{font-size:13.5px;} #aug-interior-design-vs-architecture .t td:first-child{font-weight:700;color:var(--ink);} #aug-interior-design-vs-architecture .t th{white-space:normal;}
+#aug-interior-design-vs-architecture .t .m{font-family:var(--mono);font-size:12px;white-space:nowrap;}
+#aug-interior-design-vs-architecture .t caption{caption-side:bottom;text-align:left;font-family:var(--body);text-transform:none;letter-spacing:0;font-size:12.5px;color:var(--muted);padding:.5rem .2rem 0;}
+#aug-interior-design-vs-architecture .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.2rem 0;}
+#aug-interior-design-vs-architecture .cards.two{grid-template-columns:1fr 1fr;} #aug-interior-design-vs-architecture .cards.four{grid-template-columns:repeat(4,1fr);}
+#aug-interior-design-vs-architecture .cards>div{border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:var(--radius);padding:.85rem .95rem;background:#fff;}
+#aug-interior-design-vs-architecture .cards>div.c2{border-top-color:#1D6B43;} #aug-interior-design-vs-architecture .cards>div.c3{border-top-color:#8A5A00;} #aug-interior-design-vs-architecture .cards>div.c4{border-top-color:#5B3A86;} #aug-interior-design-vs-architecture .cards>div.c5{border-top-color:#B5371B;}
+#aug-interior-design-vs-architecture .cards b{display:block;font-family:var(--display);font-size:15.5px;color:var(--ink);margin-bottom:.25rem;line-height:1.3;}
+#aug-interior-design-vs-architecture .cards span{display:block;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-interior-design-vs-architecture .cards em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.5rem;}
+#aug-interior-design-vs-architecture .cards ul{margin:.3rem 0 0;padding-left:1.05rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-interior-design-vs-architecture .steps{list-style:none;margin:1.2rem 0;padding:0;counter-reset:s;display:grid;gap:10px;}
+#aug-interior-design-vs-architecture .steps li{counter-increment:s;position:relative;padding:.8rem 1rem .8rem 3.4rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;font-size:15px;line-height:1.6;}
+#aug-interior-design-vs-architecture .steps li::before{content:counter(s);position:absolute;left:.9rem;top:.8rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--display);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+#aug-interior-design-vs-architecture .steps li b{display:block;font-family:var(--display);color:var(--ink);font-size:15.5px;margin-bottom:2px;}
+#aug-interior-design-vs-architecture .nl{list-style:none;padding:0;margin:1.2rem 0;counter-reset:u;}
+#aug-interior-design-vs-architecture .nl li{counter-increment:u;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;padding:.75rem 0;border-top:1px solid var(--border);font-size:15px;line-height:1.6;}
+#aug-interior-design-vs-architecture .nl li:first-child{border-top:none;}
+#aug-interior-design-vs-architecture .nl li::before{content:counter(u,decimal-leading-zero);font-family:var(--mono);font-weight:700;color:var(--coral);font-size:14px;padding-top:2px;}
+#aug-interior-design-vs-architecture .nl b{color:var(--ink);}
+#aug-interior-design-vs-architecture .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-interior-design-vs-architecture .pick>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-interior-design-vs-architecture .pick .a{background:#EEF7F1;border:1px solid #C6E3D1;} #aug-interior-design-vs-architecture .pick .r{background:#FDF1EC;border:1px solid #F1CDBE;}
+#aug-interior-design-vs-architecture .pick h3{margin:0 0 .4rem;font-size:15.5px;} #aug-interior-design-vs-architecture .pick .a h3{color:#1D6B43;} #aug-interior-design-vs-architecture .pick .r h3{color:#9A3B1E;}
+#aug-interior-design-vs-architecture .pick ul{margin:0;padding-left:1.1rem;} #aug-interior-design-vs-architecture .pick li{margin-bottom:.3rem;}
+#aug-interior-design-vs-architecture .chk{margin:1.2rem 0;border:1px solid var(--border);border-radius:var(--radius);background:#fff;padding:.4rem 1rem;}
+#aug-interior-design-vs-architecture .chk div{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:.6rem 0;border-top:1px solid var(--border);font-size:14.5px;line-height:1.55;}
+#aug-interior-design-vs-architecture .chk div:first-child{border-top:none;}
+#aug-interior-design-vs-architecture .chk div::before{content:"";width:16px;height:16px;border:2px solid var(--green);border-radius:4px;margin-top:3px;}
+#aug-interior-design-vs-architecture .chk b{color:var(--ink);}
+#aug-interior-design-vs-architecture .qa{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-interior-design-vs-architecture .qa .q{padding:.75rem 1rem;background:var(--surface);font-family:var(--display);font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.45;}
+#aug-interior-design-vs-architecture .qa .q span{font-family:var(--mono);font-size:11px;color:var(--brand);font-weight:700;margin-right:8px;letter-spacing:.04em;}
+#aug-interior-design-vs-architecture .qa .a{padding:.75rem 1rem;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-interior-design-vs-architecture .qa .a i{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--coral);margin-top:.5rem;letter-spacing:.03em;}
+#aug-interior-design-vs-architecture .bar{display:flex;margin:1.2rem 0 .4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-interior-design-vs-architecture .bar div{padding:.75rem .7rem;font-size:13px;line-height:1.4;color:#fff;}
+#aug-interior-design-vs-architecture .bar div b{display:block;font-family:var(--display);font-size:17px;}
+#aug-interior-design-vs-architecture .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-interior-design-vs-architecture .split>div{border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);padding:.9rem 1rem;}
+#aug-interior-design-vs-architecture .split h3{margin:0 0 .5rem;font-size:16px;} #aug-interior-design-vs-architecture .split dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14px;}
+#aug-interior-design-vs-architecture .split dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:2px;} #aug-interior-design-vs-architecture .split dd{margin:0;color:var(--ink);}
+
+@media(max-width:820px){ #aug-interior-design-vs-architecture .cards,#aug-interior-design-vs-architecture .cards.four{grid-template-columns:1fr 1fr;} }
+@media(max-width:640px){
+  #aug-interior-design-vs-architecture .t table{min-width:600px;}
+  #aug-interior-design-vs-architecture .cards,#aug-interior-design-vs-architecture .cards.two,#aug-interior-design-vs-architecture .cards.four,#aug-interior-design-vs-architecture .pick,#aug-interior-design-vs-architecture .pair,#aug-interior-design-vs-architecture .split{grid-template-columns:1fr;}
+  #aug-interior-design-vs-architecture .bar{flex-direction:column;} #aug-interior-design-vs-architecture .bar div{flex:none!important;}
+  #aug-interior-design-vs-architecture .steps li{padding-left:3rem;}
+  #aug-interior-design-vs-architecture .dfig.wide{overflow-x:auto;} #aug-interior-design-vs-architecture .dfig.wide svg{min-width:640px;}
+  #aug-interior-design-vs-architecture .cta{flex-direction:column;align-items:flex-start;}
+  #aug-interior-design-vs-architecture .cta>div{max-width:100%;} #aug-interior-design-vs-architecture .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-interior-design-vs-architecture .cta>div:last-child .cta-btn{margin-left:0;white-space:normal;text-align:center;line-height:1.5;}
+}
+#aug-interior-design-vs-architecture .pf .ph{height:auto!important;aspect-ratio:auto!important;min-height:0!important;padding:0!important;background:#f5f8fa!important;overflow:hidden}#aug-interior-design-vs-architecture .ph::before,#aug-interior-design-vs-architecture .ph::after{display:none!important}#aug-interior-design-vs-architecture .pf .ph img{position:static!important;display:block;width:100%!important;height:auto!important;object-fit:contain!important;opacity:1!important;filter:none!important}#aug-interior-design-vs-architecture .pf figcaption{font-family:Arial,sans-serif!important;font-size:14px!important;line-height:1.65!important;padding:16px!important;overflow-wrap:anywhere}#aug-interior-design-vs-architecture .tbl-wrap{overflow-x:auto}#aug-interior-design-vs-architecture .cta-btn{white-space:normal!important}#aug-interior-design-vs-architecture .dfig svg{max-width:100%;height:auto}#aug-interior-design-vs-architecture .wide{overflow-x:auto}@media(max-width:650px){#aug-interior-design-vs-architecture .pair,#aug-interior-design-vs-architecture .grid3,#aug-interior-design-vs-architecture .gq3{grid-template-columns:1fr!important}}
+/* ===== Augmintech theme overrides ===== */
+#aug-interior-design-vs-architecture.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-interior-design-vs-architecture h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-interior-design-vs-architecture a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-interior-design-vs-architecture a:hover{color:#18d104;}
+#aug-interior-design-vs-architecture .cta{background:#1a1a1a;}
+#aug-interior-design-vs-architecture .cta a.cta-btn{text-decoration:none;}
+#aug-interior-design-vs-architecture .cta-btn-blue{background:#18d104;color:#000;}
+#aug-interior-design-vs-architecture .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-interior-design-vs-architecture [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-interior-design-vs-architecture">
+
+
+<div class="ans"><b>Architecture is about designing the whole building, from site and structure to the envelope and approvals; interior design is about shaping the spaces inside it, from layouts and furniture to finishes and lighting.</b> In India, architecture needs a five-year B.Arch and Council of Architecture registration, and only registered architects may use the title "Architect". Interior design has many routes, from diplomas to four-year degrees, and no statutory licence. Architecture takes longer and carries more legal responsibility; interior design is quicker to enter and closer to clients' daily lives. Below is a full comparison of the work, skills, courses, costs, pay and career paths, and a guide to choosing.</div>
+
+<figure class="dfig wide">
+  <svg viewBox="0 0 1000 400" role="img" aria-label="Overlap between architecture and interior design: architecture covers the building, structure coordination, envelope and approvals; interior design covers furniture, finishes, joinery and styling; both share space planning, materials, lighting and user experience"><rect width="1000" height="400" fill="#fff"/><text x="500" y="28" font-size="14" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">WHERE ARCHITECTURE AND INTERIOR DESIGN OVERLAP</text><circle cx="390" cy="210" r="170" fill="#1F4A6E" fill-opacity=".09" stroke="#1F4A6E" stroke-width="2"/><circle cx="610" cy="210" r="170" fill="#B5371B" fill-opacity=".08" stroke="#B5371B" stroke-width="2"/><text x="300" y="105" font-size="15" text-anchor="middle" fill="#1F4A6E" font-weight="800" font-family="sans-serif">ARCHITECTURE</text><text x="300" y="140" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="400" font-family="sans-serif">Site planning and massing</text><text x="300" y="168" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="400" font-family="sans-serif">Structure and envelope</text><text x="300" y="196" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="400" font-family="sans-serif">Building services layout</text><text x="300" y="224" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="400" font-family="sans-serif">Codes, fire, approvals</text><text x="300" y="252" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="400" font-family="sans-serif">Sanction drawings</text><text x="700" y="105" font-size="15" text-anchor="middle" fill="#B5371B" font-weight="800" font-family="sans-serif">INTERIOR DESIGN</text><text x="700" y="140" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="400" font-family="sans-serif">Furniture and joinery</text><text x="700" y="168" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="400" font-family="sans-serif">Finishes and fabrics</text><text x="700" y="196" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="400" font-family="sans-serif">Decor and styling</text><text x="700" y="224" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="400" font-family="sans-serif">Fit-out detailing</text><text x="700" y="252" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="400" font-family="sans-serif">FF&amp;E procurement</text><text x="500" y="140" font-size="13" text-anchor="middle" fill="#56616D" font-weight="800" font-family="sans-serif">SHARED</text><text x="500" y="168" font-size="12.5" text-anchor="middle" fill="#1E2833" font-weight="600" font-family="sans-serif">Space planning</text><text x="500" y="193" font-size="12.5" text-anchor="middle" fill="#1E2833" font-weight="600" font-family="sans-serif">Materials</text><text x="500" y="218" font-size="12.5" text-anchor="middle" fill="#1E2833" font-weight="600" font-family="sans-serif">Lighting</text><text x="500" y="243" font-size="12.5" text-anchor="middle" fill="#1E2833" font-weight="600" font-family="sans-serif">Human scale</text><text x="500" y="268" font-size="12.5" text-anchor="middle" fill="#1E2833" font-weight="600" font-family="sans-serif">Client brief</text><text x="500" y="392" font-size="12" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">Simplified; on real projects the boundary depends on the contract and team.</text></svg>
+  <figcaption>The two professions share a large middle ground. Augmintech diagram.</figcaption>
+</figure>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Architects design buildings; interior designers design how spaces inside work and feel.</strong> Both plan space, choose materials and design light.</li>
+  <li><strong>Architecture is regulated:</strong> a recognised B.Arch and CoA registration are needed to practise as an architect. Interior design has no statutory licence in India.</li>
+  <li><strong>Architecture takes five years;</strong> interior design takes from one year (diploma) to four years (B.Des).</li>
+  <li><strong>Average pay starts modest in both:</strong> PayScale puts architects at about ₹4.2 lakh and interior designers at about ₹3.3 lakh a year on average.</li>
+  <li><strong>Choose architecture</strong> if you are drawn to whole buildings, structure and cities; <strong>choose interior design</strong> if you love furniture, materials, colour and how people use rooms day to day.</li>
+  <li><strong>Both increasingly use BIM</strong> on larger projects, so <a href="https://augmintech.com/learn-revit/">Revit skills</a> help in either career.</li>
+</ul>
+
+<h2 id="work">What Each Profession Actually Does</h2>
+<div class="pick">
+  <div class="r"><h3>An architect's work</h3><ul><li>Studies the site, by-laws and the client's brief</li><li>Designs the building's form, plans, sections and elevations</li><li>Coordinates structural, <a href="https://augmintech.com/mep-systems-construction/">MEP</a> and fire consultants</li><li>Prepares and signs drawings for building approval</li><li>Produces working drawings and visits site through construction</li></ul></div>
+  <div class="a"><h3>An interior designer's work</h3><ul><li>Measures existing spaces and understands how users live or work</li><li>Plans layouts, furniture and storage</li><li>Selects finishes, fabrics, <a href="https://augmintech.com/ambient-lighting/">lighting</a> and fixtures</li><li>Details joinery, ceilings and partitions</li><li>Coordinates vendors and contractors through fit-out</li></ul></div>
+</div>
+<p>The overlap is real. Architects design interiors too, especially in smaller practices, and interior designers on fit-out projects coordinate closely with services and fire consultants. The main difference is scale and responsibility: an architect is answerable for the building as a whole, including structure-related and statutory drawings, while an interior designer works within the shell the architect created.</p>
+
+<h2 id="compare">Interior Design vs Architecture at a Glance</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th></th><th>Architecture</th><th>Interior design</th></tr></thead>
+  <tbody>
+    <tr><td>Scale of work</td><td>Whole buildings, campuses, urban areas</td><td>Rooms, homes, offices, shops, hotels</td></tr>
+    <tr><td>Main degree</td><td>B.Arch, 5 years</td><td>B.Des, B.Sc or BID (3–4 years); diplomas (1–3 years)</td></tr>
+    <tr><td>Entrance</td><td>NATA, or JEE Main Paper 2 for NITs and similar institutes</td><td>Design aptitude tests (such as NID DAT) or college admission</td></tr>
+    <tr><td>Licence</td><td>CoA registration required to use the title "Architect"</td><td>No statutory licence; IIID membership is voluntary</td></tr>
+    <tr><td>Legal responsibility</td><td>Signs drawings for building approval</td><td>Structural or statutory work must be certified by a licensed architect or engineer</td></tr>
+    <tr><td>Core subjects</td><td>Design, structures, building services, construction, history, planning, laws</td><td>Design, materials, furniture, lighting, finishes, services basics, styling</td></tr>
+    <tr><td>Key software</td><td>AutoCAD, Revit, SketchUp, Rhino, a renderer</td><td>AutoCAD, SketchUp, a renderer, Photoshop, increasingly Revit</td></tr>
+    <tr><td>Average pay (PayScale)</td><td>About ₹4.2 lakh a year</td><td>About ₹3.3 lakh a year</td></tr>
+    <tr><td>Project length</td><td>Often years</td><td>Often weeks to months</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Licensing: CoA notice (August 2026) and Studio Matrx (July 2026). Pay: PayScale India; see our <a href="https://augmintech.com/interior-designer-salary/">salary guides</a> for detail.</p>
+
+<div class="cta">
+  <div><h3>BIM Skills for Either Path</h3><p>Architects and interior designers both work in BIM on larger projects. Augmintech's PG Program in BIM Architecture teaches building information modelling for architecture. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">Explore the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="day">A Day in Each Job</h2>
+<div class="split">
+  <div><h3>A junior architect's day</h3><dl>
+    <dt>9:30</dt><dd>Revise the ground-floor plan after the structural engineer moves two columns</dd>
+    <dt>11:30</dt><dd>Check the setback and FAR against local by-laws for the approval set</dd>
+    <dt>14:00</dt><dd>Coordinate shafts and ceiling heights with the MEP consultant</dd>
+    <dt>16:30</dt><dd>Site visit to check slab levels and window openings</dd>
+  </dl></div>
+  <div><h3>A junior interior designer's day</h3><dl>
+    <dt>9:30</dt><dd>Update a 3BHK furniture layout after the client adds a study</dd>
+    <dt>11:30</dt><dd>Draw wardrobe elevations and a kitchen section for the carpenter</dd>
+    <dt>14:00</dt><dd>Visit a showroom to approve laminate and tile samples</dd>
+    <dt>16:30</dt><dd>Site check of false-ceiling framing and electrical points</dd>
+  </dl></div>
+</div>
+<p class="note">Illustrative days, compiled by Augmintech from typical junior roles.</p>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/111-buildingscale-responsibilities-the-agreed-professional.webp" alt="Building-scale responsibilities; the agreed professional scope and local rules govern the actual work." loading="lazy"></div><figcaption>Building-scale responsibilities; the agreed professional scope and local rules govern the actual work.</figcaption></figure>
+  <figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/111-interiorscale-decisions-connect-function-finishes.webp" alt="Interior-scale decisions connect function, finishes and buildable details." loading="lazy"></div><figcaption>Interior-scale decisions connect function, finishes and buildable details.</figcaption></figure>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="skills">Skills Each Profession Needs</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Skill</th><th>Architecture</th><th>Interior design</th></tr></thead>
+  <tbody>
+    <tr><td>Spatial design</td><td>Essential, at building and site scale</td><td>Essential, at room and furniture scale</td></tr>
+    <tr><td>Maths and physics</td><td>Needed for structures, services and admission (Physics and Maths at Class 12)</td><td>Basic geometry and measurement; most courses do not require science</td></tr>
+    <tr><td>Technical drawing</td><td>Plans, sections, elevations, details, approval sets</td><td>Layouts, RCPs, elevations, joinery details</td></tr>
+    <tr><td>Materials knowledge</td><td>Structural and envelope materials, plus finishes</td><td>Finishes, fabrics, joinery and fittings in depth</td></tr>
+    <tr><td>Codes and regulations</td><td>By-laws, NBC, fire, accessibility, approvals</td><td>Fire and safety in fit-outs, accessibility, minimum room sizes</td></tr>
+    <tr><td>People skills</td><td>Clients, authorities, consultants, contractors</td><td>Clients, vendors, carpenters and site teams, often daily</td></tr>
+    <tr><td>Software</td><td>AutoCAD, Revit, SketchUp, Rhino, rendering</td><td>AutoCAD, SketchUp, rendering, Photoshop, Revit</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Software is the one area where the two careers are converging. Larger architecture and fit-out projects are increasingly delivered in BIM, and Revit is used by both professions to produce coordinated drawing sets. Whichever path you pick, adding BIM later, for example through a structured option such as Augmintech's PG Program in BIM Architecture, keeps larger projects open to you.</p>
+
+<h2 id="courses">Courses, Entrance Exams and Duration</h2>
+<div class="cards two">
+  <div><b>Becoming an architect</b><ul><li>Class 12 with Physics and Mathematics; NATA requires 45% aggregate (as listed for the 2027 cycle), with 10+3 diploma holders with Maths also eligible.</li><li>Entrance: NATA, or JEE Main Paper 2 for NITs and similar institutes.</li><li>B.Arch: five years, including a practical training semester.</li><li>Register with the Council of Architecture.</li><li>Optional: two-year M.Arch in a specialisation.</li></ul></div>
+  <div class="c5"><b>Becoming an interior designer</b><ul><li>Class 12 from most streams for many programmes; some ask for specific subjects.</li><li>Entrance: design aptitude tests (such as NID DAT) or college admission.</li><li>Options: three-year polytechnic diploma after Class 10, 1–2-year private diplomas, 3–4-year B.Des, B.Sc or BID.</li><li>No registration required; IIID membership optional.</li><li>Optional: M.Des or a specialist master's.</li></ul></div>
+</div>
+<p class="note">NATA eligibility as published for the 2027 cycle; confirm each year on the official NATA website. Interior routes as detailed in our guide to interior design courses.</p>
+
+
+<h2 id="study">What You Study, Year by Year</h2>
+<p>Both degrees are studio-led, but the content diverges after the first year. A typical progression looks like this (individual syllabi vary):</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Stage</th><th>B.Arch (5 years)</th><th>Interior degree (3–4 years)</th></tr></thead>
+  <tbody>
+    <tr><td>Year 1</td><td>Basic design, architectural drawing, model making, history, building materials</td><td>2D and 3D design, sketching, model making, history of design, materials</td></tr>
+    <tr><td>Year 2</td><td>Small buildings (house, school), structures, construction, climate</td><td>Residential interiors, technical drawing, construction of partitions and ceilings, CAD</td></tr>
+    <tr><td>Year 3</td><td>Larger buildings, building services, working drawings, settlement planning</td><td>Commercial interiors (shop, office, café), services basics, lighting, rendering</td></tr>
+    <tr><td>Year 4</td><td>Practical training in an office, urban design, professional practice, specifications</td><td>Hospitality and institutional interiors, estimation, tender documents, internship</td></tr>
+    <tr><td>Year 5</td><td>Complex building design and thesis</td><td>(Four-year programmes) dissertation, portfolio and professional practice</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Typical structure compiled by Augmintech; for a real interior example, see the University of Mumbai B.Sc (Hons) Interior Design structure in our interior design courses guide.</p>
+
+<h2 id="lifestyle">Work Environment and Lifestyle</h2>
+<div class="cards">
+  <div><b>Office vs site</b><span>Architects split time between studio, authority offices and building sites; interior designers spend more time at showrooms, client homes and fit-out sites.</span></div>
+  <div class="c2"><b>Deadlines</b><span>Architecture has long projects with intense submission peaks; interior projects are shorter, with frequent client meetings and fast decisions.</span></div>
+  <div class="c3"><b>Independence</b><span>Interior designers often start small independent practices earlier; architects usually build several years of experience before opening a firm.</span></div>
+  <div class="c4"><b>Clients</b><span>Architects often deal with developers, institutions and authorities; interior designers often deal directly with families and business owners.</span></div>
+</div>
+
+<h2 id="myths">Five Common Myths</h2>
+<ol class="nl">
+  <li><div><b>"Interior design is just decoration."</b> Professional interior work involves technical drawings, services coordination, fire safety and site management, not only styling.</div></li>
+  <li><div><b>"Architects only design the outside."</b> Architects design the whole building, including interior spaces, and many run interior projects themselves.</div></li>
+  <li><div><b>"You must be great at drawing by hand."</b> Sketching helps you think, but software now produces most drawings; clarity of thinking matters more than artistic talent.</div></li>
+  <li><div><b>"Interior designers can't work on big projects."</b> Hotels, airports, offices and malls all employ large interior teams, often working in BIM.</div></li>
+  <li><div><b>"Architecture guarantees higher pay."</b> Averages are somewhat higher, but a skilled interior designer with a strong practice can out-earn many architects.</div></li>
+</ol>
+
+<h2 id="cost">Cost of Study</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Route</th><th>Example published fee</th><th>Duration</th></tr></thead>
+  <tbody>
+    <tr><td>Interior design diploma (government polytechnic)</td><td class="m">₹33,918 total (Govt Polytechnic Ghaziabad)</td><td>3 years</td></tr>
+    <tr><td>Interior design degree (private university)</td><td class="m">~₹8.9 lakh total (DIT University B.Des)</td><td>4 years</td></tr>
+    <tr><td>Interior design degree (national design institute)</td><td class="m">₹15.83 lakh total (NID B.Des)</td><td>4 years</td></tr>
+    <tr><td>B.Arch</td><td>Varies widely between government and private colleges; check each institute</td><td>5 years</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Because B.Arch runs a year longer than most interior degrees, it usually costs more in total at a comparable institute and delays your first salary by a year. Government architecture colleges can be very affordable; private ones vary widely. Build a full-course budget for each option, including the materials, models and laptop both courses need.</p>
+
+<h2 id="pay">Salary and Career Growth</h2>
+<p>Both careers start modestly and grow with responsibility. PayScale's averages put architects at about ₹4.2 lakh a year in base pay and interior designers at about ₹3.3 lakh, with freshers lower in both. Architects have more defined senior roles (project architect, associate, principal) and access to government posts at fixed pay levels; interior designers often move faster into running their own projects or practice because projects are shorter and do not need statutory sign-off.</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Stage</th><th>Architecture</th><th>Interior design</th></tr></thead>
+  <tbody>
+    <tr><td>Start</td><td>Junior architect: drawings, models, approvals</td><td>Junior designer or draughtsperson: layouts, drawings, site checks</td></tr>
+    <tr><td>3–6 years</td><td>Project architect, BIM coordinator</td><td>Project designer, lead designer, fit-out manager</td></tr>
+    <tr><td>7+ years</td><td>Senior/associate, BIM manager, principal</td><td>Design head, studio owner, specialist (hospitality, retail, lighting)</td></tr>
+    <tr><td>Alternatives</td><td>Planning, urban design, conservation, teaching, government</td><td>Furniture, product, set design, visualisation, modular kitchen and furniture brands</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Typical progressions, Augmintech editorial. For figures see our architect salary and interior designer salary guides.</p>
+
+<h2 id="shared-project">The Same Renovation, Two Different Responsibilities</h2><p>Consider an apartment renovation with a kitchen relocation and a new opening proposed in a wall. The interior designer develops the activity layout, storage, finishes, joinery and lighting intent. The architect reviews how the proposal relates to the building arrangement and relevant approvals within the appointed scope. Structural and building-services specialists assess structural changes and service implications where needed.</p><p>A useful coordination package contains the existing-condition survey, proposed plan, marked changes, ceiling information and an unresolved-issues list. Neither profession should assume that an attractive layout makes a structural intervention or service relocation acceptable. The roles overlap, but responsibilities must be agreed rather than inferred from a job title.</p><h3>Try Both Types of Work Before Choosing</h3><p>For the architecture exercise, sketch how a small building sits on its site, then develop a plan and section showing daylight, access and levels. For the interiors exercise, take one existing room and develop furniture options, a storage elevation and a material specification. Notice which decisions you enjoy, but also which technical tasks you are willing to practise repeatedly.</p><p>Compare actual syllabi and student work before choosing a course. Ask about studio feedback, construction knowledge, site exposure, documentation and the qualification awarded. Software training can strengthen either path; it does not replace a recognised qualification or registration where these are required.</p><p>For India, distinguish eligibility to use the protected title from local submission permissions. The <a href="https://coa.gov.in/index1.php?lang=1&amp;level=2&amp;lid=134&amp;sublinkid=120">Council of Architecture’s text of Section 37</a> addresses use of the title. Check the relevant authority for the requirements of a particular project.</p><h2 id="choose">Which Suits You? Ten Honest Questions</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>If you…</th><th>Leans towards</th></tr></thead>
+  <tbody>
+    <tr><td>Enjoy physics and like knowing how buildings stand up</td><td>Architecture</td></tr>
+    <tr><td>Notice furniture, fabrics and colour wherever you go</td><td>Interior design</td></tr>
+    <tr><td>Are patient with projects that take years</td><td>Architecture</td></tr>
+    <tr><td>Like seeing results in weeks or months</td><td>Interior design</td></tr>
+    <tr><td>Are interested in cities, landscapes and public buildings</td><td>Architecture</td></tr>
+    <tr><td>Enjoy working closely with homeowners and their daily routines</td><td>Interior design</td></tr>
+    <tr><td>Want the legal title and authority to sign building approvals</td><td>Architecture</td></tr>
+    <tr><td>Want a shorter, cheaper route into a design career</td><td>Interior design</td></tr>
+    <tr><td>Did not take Physics and Mathematics in Class 12</td><td>Interior design (B.Arch requires them)</td></tr>
+    <tr><td>Love both and cannot decide</td><td>Architecture keeps both doors open; architects can practise interiors</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="alert"><b>Try before you commit:</b> spend a week shadowing an architect and a week with an interior designer, or do short summer workshops in each. A few days on real projects tells you more than any article.</div>
+
+<h2 id="switch">Switching Between the Two</h2>
+<ul class="bullets">
+  <li><strong>Architect to interior designer:</strong> straightforward. Architects can design interiors without further qualification; many specialise through practice or an interior master's.</li>
+  <li><strong>Interior designer to architect:</strong> harder. You would need a recognised B.Arch and CoA registration to practise as an architect, which means starting the five-year degree.</li>
+  <li><strong>Middle ground:</strong> interior architecture programmes and fit-out roles in large firms combine both, and BIM roles welcome people from either background.</li>
+</ul>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/111-aigenerated-illustration-of-a-joint.webp" alt="AI-generated illustration of a joint design review, not a real project team." loading="lazy"></div><figcaption>AI-generated illustration of a joint design review, not a real project team.</figcaption></figure>
+
+<h2 id="gulf">Interior Design and Architecture in the Gulf</h2>
+<p><a href="https://augmintech.com/bim-careers-middle-east-uae-ksa/">Gulf cities</a> offer strong demand in both fields, especially hospitality, retail and office fit-outs for interior designers and large mixed-use projects for architects. Registration to practise as an architect or engineer there is regulated separately by each country, so check with the local authority. For both professions, BIM skills carry weight: since 1 January 2024, Dubai has required BIM model submissions in IFC format for building permits on larger buildings, as summarised on Autodesk's Dubai BIM mandate page.</p>
+
+<div class="cta cta-green">
+  <div><h3>Whichever You Choose, Add BIM</h3><p>Revit and coordinated drawing sets are common ground for architects and interior designers on larger projects. Augmintech's PG Program in BIM Architecture is a structured way to build those skills. Check the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-green">See the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What is the main difference between interior design and architecture?</div><div class="faq-a">Architecture designs the whole building, including structure coordination, envelope and approvals; interior design shapes the spaces inside, including layouts, furniture, finishes and lighting.</div></div>
+<div class="faq-item"><div class="faq-q">Which is better, interior design or architecture?</div><div class="faq-a">Neither is better; they suit different people. Architecture suits those drawn to whole buildings and willing to study five years; interior design suits those who love materials, furniture and how people use rooms, and offers quicker routes into work.</div></div>
+<div class="faq-item"><div class="faq-q">Can an interior designer become an architect?</div><div class="faq-a">Only by completing a recognised B.Arch and registering with the Council of Architecture. Architects, on the other hand, can practise interior design without further qualification.</div></div>
+<div class="faq-item"><div class="faq-q">Do I need maths for interior design?</div><div class="faq-a">Many interior design programmes accept Class 12 from most streams, though some set subject requirements. B.Arch requires Physics and Mathematics at Class 12.</div></div>
+<div class="faq-item"><div class="faq-q">Who earns more, an architect or an interior designer?</div><div class="faq-a">On PayScale's averages, architects earn somewhat more (about ₹4.2 lakh vs ₹3.3 lakh a year). In both fields, pay depends far more on experience, firm and specialisation than on the title.</div></div>
+<div class="faq-item"><div class="faq-q">Is a licence needed for interior design in India?</div><div class="faq-a">No. There is no statutory licence, and IIID membership is voluntary. Architects must be registered with the Council of Architecture to use the title "Architect".</div></div>
+<div class="faq-item"><div class="faq-q">Is interior design easier than architecture?</div><div class="faq-a">It is shorter and has less legal responsibility, but it is not easy: good interior design demands detailed technical drawings, materials knowledge and constant client and site management.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Free Press Journal</strong>, <a href="https://www.freepressjournal.in/amp/business/council-of-architecture-warns-against-unregistered-individuals-misusing-architect-title-issues-public-advisory" target="_blank" rel="noopener">Council of Architecture advisory on the "Architect" title</a> (2 August 2026).</li>
+  <li><strong>Studio Matrx</strong>, <a href="https://www.studiomatrx.org/students/interior-professional-practice/role-of-the-interior-designer" target="_blank" rel="noopener">Role of the interior designer</a> (July 2026).</li>
+  <li><strong>Physics Wallah</strong>, <a href="https://www.pw.live/design-architecture/exams/nata-eligibility-criteria" target="_blank" rel="noopener">NATA eligibility criteria</a>.</li>
+  <li><strong>PayScale India</strong>: <a href="https://www.payscale.com/research/IN/Job=Architect_(but_not_Landscape_or_Naval)/Salary" target="_blank" rel="noopener">Architect</a>; <a href="https://www.payscale.com/research/IN/Job=Interior_Designer/Salary" target="_blank" rel="noopener">Interior Designer</a>.</li>
+  <li><strong>Careers360</strong>: <a href="https://www.careers360.com/university/national-institute-of-design-ahmedabad/bdes-furniture-and-interior-design-course" target="_blank" rel="noopener">NID B.Des Furniture and Interior Design</a>; <a href="https://www.careers360.com/colleges/government-polytechnic-ghaziabad/diploma-in-interior-decoration-course" target="_blank" rel="noopener">Government Polytechnic Ghaziabad diploma</a>.</li>
+  <li><strong>DIT University</strong>, <a href="https://www.dituniversity.edu.in/assets/frontend/course-structure/BDes-ID-Fee-Structure-2026.pdf" target="_blank" rel="noopener">B.Des Interior Design fee structure 2026</a>.</li>
+  <li><strong>Autodesk</strong>, <a href="https://boards.autodesk.com/dubai-bim-mandate" target="_blank" rel="noopener">Dubai Municipality BIM mandate</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 8 November 2026. Admission rules and fees change every year; check official notices before you apply.</p>
+</div>

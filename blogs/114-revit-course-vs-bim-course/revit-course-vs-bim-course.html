@@ -1,0 +1,383 @@
+<style>
+#aug-revit-course-vs-bim-course{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-revit-course-vs-bim-course *,#aug-revit-course-vs-bim-course *::before,#aug-revit-course-vs-bim-course *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-revit-course-vs-bim-course{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-revit-course-vs-bim-course.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-revit-course-vs-bim-course .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-revit-course-vs-bim-course .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-revit-course-vs-bim-course .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-revit-course-vs-bim-course .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-revit-course-vs-bim-course .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-revit-course-vs-bim-course .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-revit-course-vs-bim-course h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-revit-course-vs-bim-course h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-revit-course-vs-bim-course p{margin-bottom:.9rem;font-size:16px;}
+#aug-revit-course-vs-bim-course a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-revit-course-vs-bim-course a:hover{border-color:var(--brand);}
+#aug-revit-course-vs-bim-course hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-revit-course-vs-bim-course .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-revit-course-vs-bim-course .chart svg{width:100%;height:auto;display:block;}
+#aug-revit-course-vs-bim-course .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-revit-course-vs-bim-course .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-revit-course-vs-bim-course .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-revit-course-vs-bim-course .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-revit-course-vs-bim-course .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-revit-course-vs-bim-course .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-revit-course-vs-bim-course .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-revit-course-vs-bim-course table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-revit-course-vs-bim-course caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-revit-course-vs-bim-course thead tr{background:var(--slate);color:#fff;}
+#aug-revit-course-vs-bim-course thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-revit-course-vs-bim-course tbody tr:nth-child(even){background:var(--surface);}
+#aug-revit-course-vs-bim-course tbody tr:hover{background:var(--brand-lite);}
+#aug-revit-course-vs-bim-course td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-revit-course-vs-bim-course td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-revit-course-vs-bim-course tbody tr.hl{background:var(--green-lite)!important;}
+#aug-revit-course-vs-bim-course tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-revit-course-vs-bim-course ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-revit-course-vs-bim-course ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-revit-course-vs-bim-course .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-revit-course-vs-bim-course .cta-green{background:var(--slate);}
+#aug-revit-course-vs-bim-course .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-revit-course-vs-bim-course .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-revit-course-vs-bim-course .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-revit-course-vs-bim-course .cta-btn-blue{color:var(--brand);}#aug-revit-course-vs-bim-course .cta-btn-green{color:var(--slate);}
+#aug-revit-course-vs-bim-course figure{margin:1.5rem 0;}
+#aug-revit-course-vs-bim-course figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-revit-course-vs-bim-course figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-revit-course-vs-bim-course dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-revit-course-vs-bim-course dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-revit-course-vs-bim-course dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-revit-course-vs-bim-course .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-revit-course-vs-bim-course .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-revit-course-vs-bim-course .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-revit-course-vs-bim-course .srcs{list-style:none;padding:0;}
+#aug-revit-course-vs-bim-course .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-revit-course-vs-bim-course .srcs li:last-child{border-bottom:none;}
+
+#aug-revit-course-vs-bim-course .ans{margin:1.3rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#F4F6F8;border-left:4px solid var(--brand);font-size:16.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-revit-course-vs-bim-course .ans b{color:var(--ink);}
+#aug-revit-course-vs-bim-course .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-revit-course-vs-bim-course .dfig svg{display:block;width:100%;height:auto;}
+#aug-revit-course-vs-bim-course .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-revit-course-vs-bim-course .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-revit-course-vs-bim-course .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-revit-course-vs-bim-course figure.pf{margin:1.2rem 0;} #aug-revit-course-vs-bim-course figure.pf figcaption{font-family:var(--body);font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-revit-course-vs-bim-course .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;} #aug-revit-course-vs-bim-course .pair figure{margin:0;}
+#aug-revit-course-vs-bim-course .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-revit-course-vs-bim-course .alert{margin:1.2rem 0;padding:.85rem 1rem;border-radius:var(--radius);background:#FFF4E5;border:1px solid #F3D3A4;font-size:14.5px;line-height:1.6;}
+#aug-revit-course-vs-bim-course .alert b{color:var(--warn);}
+#aug-revit-course-vs-bim-course .t table{font-size:13.5px;} #aug-revit-course-vs-bim-course .t td:first-child{font-weight:700;color:var(--ink);} #aug-revit-course-vs-bim-course .t th{white-space:normal;}
+#aug-revit-course-vs-bim-course .t .m{font-family:var(--mono);font-size:12px;white-space:nowrap;}
+#aug-revit-course-vs-bim-course .t caption{caption-side:bottom;text-align:left;font-family:var(--body);text-transform:none;letter-spacing:0;font-size:12.5px;color:var(--muted);padding:.5rem .2rem 0;}
+#aug-revit-course-vs-bim-course .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.2rem 0;}
+#aug-revit-course-vs-bim-course .cards.two{grid-template-columns:1fr 1fr;} #aug-revit-course-vs-bim-course .cards.four{grid-template-columns:repeat(4,1fr);}
+#aug-revit-course-vs-bim-course .cards>div{border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:var(--radius);padding:.85rem .95rem;background:#fff;}
+#aug-revit-course-vs-bim-course .cards>div.c2{border-top-color:#1D6B43;} #aug-revit-course-vs-bim-course .cards>div.c3{border-top-color:#8A5A00;} #aug-revit-course-vs-bim-course .cards>div.c4{border-top-color:#5B3A86;} #aug-revit-course-vs-bim-course .cards>div.c5{border-top-color:#B5371B;}
+#aug-revit-course-vs-bim-course .cards b{display:block;font-family:var(--display);font-size:15.5px;color:var(--ink);margin-bottom:.25rem;line-height:1.3;}
+#aug-revit-course-vs-bim-course .cards span{display:block;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-revit-course-vs-bim-course .cards em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.5rem;}
+#aug-revit-course-vs-bim-course .cards ul{margin:.3rem 0 0;padding-left:1.05rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-revit-course-vs-bim-course .steps{list-style:none;margin:1.2rem 0;padding:0;counter-reset:s;display:grid;gap:10px;}
+#aug-revit-course-vs-bim-course .steps li{counter-increment:s;position:relative;padding:.8rem 1rem .8rem 3.4rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;font-size:15px;line-height:1.6;}
+#aug-revit-course-vs-bim-course .steps li::before{content:counter(s);position:absolute;left:.9rem;top:.8rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--display);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+#aug-revit-course-vs-bim-course .steps li b{display:block;font-family:var(--display);color:var(--ink);font-size:15.5px;margin-bottom:2px;}
+#aug-revit-course-vs-bim-course .nl{list-style:none;padding:0;margin:1.2rem 0;counter-reset:u;}
+#aug-revit-course-vs-bim-course .nl li{counter-increment:u;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;padding:.75rem 0;border-top:1px solid var(--border);font-size:15px;line-height:1.6;}
+#aug-revit-course-vs-bim-course .nl li:first-child{border-top:none;}
+#aug-revit-course-vs-bim-course .nl li::before{content:counter(u,decimal-leading-zero);font-family:var(--mono);font-weight:700;color:var(--coral);font-size:14px;padding-top:2px;}
+#aug-revit-course-vs-bim-course .nl b{color:var(--ink);}
+#aug-revit-course-vs-bim-course .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-revit-course-vs-bim-course .pick>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-revit-course-vs-bim-course .pick .a{background:#EEF7F1;border:1px solid #C6E3D1;} #aug-revit-course-vs-bim-course .pick .r{background:#FDF1EC;border:1px solid #F1CDBE;}
+#aug-revit-course-vs-bim-course .pick h3{margin:0 0 .4rem;font-size:15.5px;} #aug-revit-course-vs-bim-course .pick .a h3{color:#1D6B43;} #aug-revit-course-vs-bim-course .pick .r h3{color:#9A3B1E;}
+#aug-revit-course-vs-bim-course .pick ul{margin:0;padding-left:1.1rem;} #aug-revit-course-vs-bim-course .pick li{margin-bottom:.3rem;}
+#aug-revit-course-vs-bim-course .chk{margin:1.2rem 0;border:1px solid var(--border);border-radius:var(--radius);background:#fff;padding:.4rem 1rem;}
+#aug-revit-course-vs-bim-course .chk div{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:.6rem 0;border-top:1px solid var(--border);font-size:14.5px;line-height:1.55;}
+#aug-revit-course-vs-bim-course .chk div:first-child{border-top:none;}
+#aug-revit-course-vs-bim-course .chk div::before{content:"";width:16px;height:16px;border:2px solid var(--green);border-radius:4px;margin-top:3px;}
+#aug-revit-course-vs-bim-course .chk b{color:var(--ink);}
+#aug-revit-course-vs-bim-course .qa{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-revit-course-vs-bim-course .qa .q{padding:.75rem 1rem;background:var(--surface);font-family:var(--display);font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.45;}
+#aug-revit-course-vs-bim-course .qa .q span{font-family:var(--mono);font-size:11px;color:var(--brand);font-weight:700;margin-right:8px;letter-spacing:.04em;}
+#aug-revit-course-vs-bim-course .qa .a{padding:.75rem 1rem;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-revit-course-vs-bim-course .qa .a i{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--coral);margin-top:.5rem;letter-spacing:.03em;}
+#aug-revit-course-vs-bim-course .bar{display:flex;margin:1.2rem 0 .4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-revit-course-vs-bim-course .bar div{padding:.75rem .7rem;font-size:13px;line-height:1.4;color:#fff;}
+#aug-revit-course-vs-bim-course .bar div b{display:block;font-family:var(--display);font-size:17px;}
+#aug-revit-course-vs-bim-course .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-revit-course-vs-bim-course .split>div{border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);padding:.9rem 1rem;}
+#aug-revit-course-vs-bim-course .split h3{margin:0 0 .5rem;font-size:16px;} #aug-revit-course-vs-bim-course .split dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14px;}
+#aug-revit-course-vs-bim-course .split dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:2px;} #aug-revit-course-vs-bim-course .split dd{margin:0;color:var(--ink);}
+
+@media(max-width:820px){ #aug-revit-course-vs-bim-course .cards,#aug-revit-course-vs-bim-course .cards.four{grid-template-columns:1fr 1fr;} }
+@media(max-width:640px){
+  #aug-revit-course-vs-bim-course .t table{min-width:600px;}
+  #aug-revit-course-vs-bim-course .cards,#aug-revit-course-vs-bim-course .cards.two,#aug-revit-course-vs-bim-course .cards.four,#aug-revit-course-vs-bim-course .pick,#aug-revit-course-vs-bim-course .pair,#aug-revit-course-vs-bim-course .split{grid-template-columns:1fr;}
+  #aug-revit-course-vs-bim-course .bar{flex-direction:column;} #aug-revit-course-vs-bim-course .bar div{flex:none!important;}
+  #aug-revit-course-vs-bim-course .steps li{padding-left:3rem;}
+  #aug-revit-course-vs-bim-course .dfig.wide{overflow-x:auto;} #aug-revit-course-vs-bim-course .dfig.wide svg{min-width:640px;}
+  #aug-revit-course-vs-bim-course .cta{flex-direction:column;align-items:flex-start;}
+  #aug-revit-course-vs-bim-course .cta>div{max-width:100%;} #aug-revit-course-vs-bim-course .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-revit-course-vs-bim-course .cta>div:last-child .cta-btn{margin-left:0;white-space:normal;text-align:center;line-height:1.5;}
+}
+#aug-revit-course-vs-bim-course .pf .ph{height:auto!important;aspect-ratio:auto!important;min-height:0!important;padding:0!important;background:#f5f8fa!important;overflow:hidden}#aug-revit-course-vs-bim-course .ph::before,#aug-revit-course-vs-bim-course .ph::after{display:none!important}#aug-revit-course-vs-bim-course .pf .ph img{position:static!important;display:block;width:100%!important;height:auto!important;object-fit:contain!important;opacity:1!important;filter:none!important}#aug-revit-course-vs-bim-course .pf figcaption{font-family:Arial,sans-serif!important;font-size:14px!important;line-height:1.65!important;padding:16px!important;overflow-wrap:anywhere}#aug-revit-course-vs-bim-course .tbl-wrap{overflow-x:auto}#aug-revit-course-vs-bim-course .cta-btn{white-space:normal!important}#aug-revit-course-vs-bim-course .dfig svg{max-width:100%;height:auto}#aug-revit-course-vs-bim-course .wide{overflow-x:auto}@media(max-width:650px){#aug-revit-course-vs-bim-course .pair,#aug-revit-course-vs-bim-course .grid3,#aug-revit-course-vs-bim-course .gq3{grid-template-columns:1fr!important}}
+/* ===== Augmintech theme overrides ===== */
+#aug-revit-course-vs-bim-course.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-revit-course-vs-bim-course h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-revit-course-vs-bim-course a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-revit-course-vs-bim-course a:hover{color:#18d104;}
+#aug-revit-course-vs-bim-course .cta{background:#1a1a1a;}
+#aug-revit-course-vs-bim-course .cta a.cta-btn{text-decoration:none;}
+#aug-revit-course-vs-bim-course .cta-btn-blue{background:#18d104;color:#000;}
+#aug-revit-course-vs-bim-course .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-revit-course-vs-bim-course [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-revit-course-vs-bim-course">
+
+
+<div class="ans"><b>A Revit course teaches you a software tool: how to model a building and produce drawings and schedules in Revit. A BIM course teaches a way of working: the standards, information management, coordination and teamwork that BIM projects run on, usually using Revit plus tools such as Navisworks.</b> Revit skills support modelling roles; BIM process skills and project experience support progression towards coordination and management. Many courses use the two names loosely, so the only reliable test is the syllabus. This guide shows what each should cover, who needs which, and how to judge any course before paying.</div>
+
+<figure class="dfig wide">
+  <svg viewBox="0 0 1000 400" role="img" aria-label="A Revit course sits inside a BIM course: Revit covers modelling, documentation, families and schedules; a BIM course adds standards such as ISO 19650, BIM execution plans, common data environments, level of development, federated models and clash detection, 4D and 5D, and IFC exchange"><rect width="1000" height="400" fill="#fff"/><text x="500" y="26" font-size="14" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">A REVIT COURSE TEACHES A TOOL; A BIM COURSE TEACHES A WAY OF WORKING</text><rect x="30" y="45" width="940" height="320" rx="16" fill="#5B3A86" fill-opacity=".07" stroke="#5B3A86" stroke-width="2"/><text x="52" y="75" font-size="15" text-anchor="start" fill="#5B3A86" font-weight="800" font-family="sans-serif">BIM COURSE</text><text x="52" y="95" font-size="12" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">Process, standards and teamwork, usually taught through Revit plus coordination tools</text><rect x="52" y="115" width="400" height="225" rx="12" fill="#1F4A6E" fill-opacity=".1" stroke="#1F4A6E" stroke-width="2"/><text x="72" y="145" font-size="15" text-anchor="start" fill="#1F4A6E" font-weight="800" font-family="sans-serif">REVIT COURSE</text><text x="72" y="175" font-size="13" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">• Levels, grids, walls, floors, roofs</text><text x="72" y="201" font-size="13" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">• Doors, windows, stairs, rooms</text><text x="72" y="227" font-size="13" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">• Families and parameters</text><text x="72" y="253" font-size="13" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">• Views, view templates, sheets</text><text x="72" y="279" font-size="13" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">• Schedules and quantities</text><text x="72" y="305" font-size="13" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">• Linking DWG, exporting DWG and IFC</text><circle cx="490" cy="124" r="5" fill="#5B3A86"/><text x="505" y="128" font-size="13.5" text-anchor="start" fill="#5B3A86" font-weight="700" font-family="sans-serif">Standards</text><text x="700" y="128" font-size="12.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">ISO 19650, naming, BIM execution plan</text><circle cx="490" cy="156" r="5" fill="#5B3A86"/><text x="505" y="160" font-size="13.5" text-anchor="start" fill="#5B3A86" font-weight="700" font-family="sans-serif">Common data environment</text><text x="700" y="160" font-size="12.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">Shared, controlled project information</text><circle cx="490" cy="188" r="5" fill="#5B3A86"/><text x="505" y="192" font-size="13.5" text-anchor="start" fill="#5B3A86" font-weight="700" font-family="sans-serif">Level of development</text><text x="700" y="192" font-size="12.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">LOD 100–500: what each model holds</text><circle cx="490" cy="220" r="5" fill="#5B3A86"/><text x="505" y="224" font-size="13.5" text-anchor="start" fill="#5B3A86" font-weight="700" font-family="sans-serif">Federation and clashes</text><text x="700" y="224" font-size="12.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">Combine models, find conflicts (Navisworks)</text><circle cx="490" cy="252" r="5" fill="#5B3A86"/><text x="505" y="256" font-size="13.5" text-anchor="start" fill="#5B3A86" font-weight="700" font-family="sans-serif">4D and 5D</text><text x="700" y="256" font-size="12.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">Link the model to time and cost</text><circle cx="490" cy="284" r="5" fill="#5B3A86"/><text x="505" y="288" font-size="13.5" text-anchor="start" fill="#5B3A86" font-weight="700" font-family="sans-serif">openBIM exchange</text><text x="700" y="288" font-size="12.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">IFC for authorities and other tools</text><circle cx="490" cy="316" r="5" fill="#5B3A86"/><text x="505" y="320" font-size="13.5" text-anchor="start" fill="#5B3A86" font-weight="700" font-family="sans-serif">Roles</text><text x="700" y="320" font-size="12.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">Modeller, coordinator, manager</text><text x="500" y="390" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">Simplified; course content varies by provider. Augmintech diagram.</text></svg>
+  <figcaption>What a Revit course covers, and what a BIM course adds around it. Augmintech diagram.</figcaption>
+</figure>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong><a href="https://augmintech.com/learn-revit/">Revit</a> is a tool; BIM is a process.</strong> You can know Revit well and still not know how a BIM project is run.</li>
+  <li><strong>A Revit course</strong> covers modelling, families, views, sheets and schedules: what a BIM modeller does daily.</li>
+  <li><strong>A BIM course</strong> adds <a href="https://augmintech.com/bim-standards/">ISO 19650</a> concepts, BIM execution plans, common data environments, <a href="https://augmintech.com/understanding-level-of-development-lod-in-bim-from-concept-to-construction/">LOD</a>, <a href="https://augmintech.com/navisworks-clash-detection/">clash detection</a>, 4D/5D and IFC.</li>
+  <li><strong>Start with Revit if you are new;</strong> move to BIM coordination once you can model and document a full project.</li>
+  <li><strong>Judge courses by syllabus, project work and the instructor's real BIM experience,</strong> not by the title.</li>
+</ul>
+
+<h2 id="difference">The Real Difference</h2>
+<p>Building information modelling (BIM) is a method of designing, building and operating assets using shared, structured digital information. Revit is one of the main software tools used to create the models. The relationship is like that between accounting and a spreadsheet program: knowing the program is necessary, but it does not make you an accountant.</p>
+<div class="pick">
+  <div class="r"><h3>A Revit course answers</h3><ul><li>How do I model walls, floors, roofs and stairs?</li><li>How do I create families and parameters?</li><li>How do I make views, sheets and schedules?</li><li>How do I export DWG and IFC?</li></ul></div>
+  <div class="a"><h3>A BIM course answers</h3><ul><li>How is information planned, named, shared and approved?</li><li>What should a model contain at each stage (LOD)?</li><li>How do we combine models and resolve clashes?</li><li>Who is responsible for what, and how is it documented?</li></ul></div>
+</div>
+
+<h2 id="syllabus">Syllabus Side by Side</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Topic</th><th>Typical Revit course</th><th>Typical BIM course</th></tr></thead>
+  <tbody>
+    <tr><td>Revit modelling and documentation</td><td>Core content</td><td>Included or assumed</td></tr>
+    <tr><td>Families and parameters</td><td>Basic to intermediate</td><td>Plus content standards and naming</td></tr>
+    <tr><td>Schedules and quantities</td><td>Yes</td><td>Plus quantity checking and data quality</td></tr>
+    <tr><td>Worksharing</td><td>Sometimes</td><td>Yes, with team workflows</td></tr>
+    <tr><td>ISO 19650, BEP, CDE</td><td>Rarely</td><td>Core content</td></tr>
+    <tr><td>Level of development (LOD)</td><td>Rarely</td><td>Yes</td></tr>
+    <tr><td>Federated models and clash detection</td><td>No</td><td>Yes (often Navisworks)</td></tr>
+    <tr><td>4D scheduling and 5D cost</td><td>No</td><td>Introduced in many courses</td></tr>
+    <tr><td>IFC and openBIM exchange</td><td>Export only</td><td>Exchange, checking and requirements</td></tr>
+    <tr><td>Multi-discipline coordination (structure, MEP)</td><td>Rarely</td><td>Yes</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Typical content compiled by Augmintech from common course structures; individual courses vary widely.</p>
+
+<div class="cta">
+  <div><h3>Looking for a BIM Route in Architecture?</h3><p>Augmintech's PG Program in BIM Architecture teaches building information modelling for architecture. Compare it, like any course, against the checklist in this guide. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">Explore the PG Program in BIM Architecture</a></div>
+</div>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="revit-course">What a Good Revit Course Covers</h2>
+<ol class="steps">
+  <li><b>Interface and project setup</b>Templates, project units, levels and grids, and the project browser.</li>
+  <li><b>Building elements</b>Walls and wall types, floors, roofs, ceilings, doors, windows, stairs, railings and <a href="https://augmintech.com/curtain-wall/">curtain walls</a>.</li>
+  <li><b>Rooms and areas</b>Room placement, area calculation (to wall finish by default), tags and colour schemes.</li>
+  <li><b>Views and graphics</b>Plans, sections, elevations, 3D views, visibility settings and view templates.</li>
+  <li><b>Families</b>Loadable families, types and parameters, and editing or creating simple ones.</li>
+  <li><b>Documentation</b>Dimensions, annotation, detail components, schedules, sheets and title blocks.</li>
+  <li><b>Collaboration basics</b>Linking DWG and Revit models, worksharing, exporting DWG and IFC.</li>
+  <li><b>A full project</b>A complete building modelled and documented as a drawing set.</li>
+</ol>
+<p>Two practical notes. First, ask which Revit version you will learn and whether the institute provides licences; students can use Revit free for learning through Autodesk's education plan. Second, Revit LT lacks several features that BIM work relies on, including worksharing, view filters and <a href="https://augmintech.com/how-to-download-install-dynamo-revit/">Dynamo</a>, according to Autodesk's own comparison, so make sure training uses full Revit.</p>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/114-original-modeltodocumentation-diagram-the-outputs.webp" alt="Original model-to-documentation diagram. The outputs still require review." loading="lazy"></div><figcaption>Original model-to-documentation diagram. The outputs still require review.</figcaption></figure>
+
+<h2 id="bim-course">What a BIM Course Adds</h2>
+<h3>Standards and information management (ISO 19650)</h3>
+<p>ISO 19650 is the international series of standards for managing information on projects using BIM. Its parts cover concepts and principles, the delivery phase, the operational phase, information exchange and security-minded information management. A BIM course should explain its key ideas:</p>
+<div class="cards">
+  <div><b>Information requirements</b><span>What the client needs: organisational (OIR), project (PIR), asset (AIR) and exchange (EIR) information requirements.</span></div>
+  <div class="c2"><b>BIM execution plan (BEP)</b><span>How the team will produce, exchange and manage information on this project.</span></div>
+  <div class="c3"><b>Common data environment (CDE)</b><span>The agreed single source of project information, with controlled access and approval states.</span></div>
+  <div class="c4"><b>Delivery plans</b><span>The master and task information delivery plans (MIDP and TIDPs) that schedule who delivers what, when.</span></div>
+</div>
+
+<h3>Level of development (LOD)</h3>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>LOD</th><th>Meaning</th><th>Typical use</th></tr></thead>
+  <tbody>
+    <tr><td>100</td><td>Conceptual: a symbol or generic placeholder</td><td>Massing, early options</td></tr>
+    <tr><td>200</td><td>Approximate geometry: generic size, shape and location</td><td>Schematic design</td></tr>
+    <tr><td>300</td><td>Precise geometry: specific size, shape, location and quantity</td><td>Design development, construction documents</td></tr>
+    <tr><td>350</td><td>Adds connections and interfaces with other systems</td><td>Coordination</td></tr>
+    <tr><td>400</td><td>Fabrication and installation detail</td><td>Shop drawings, fabrication</td></tr>
+    <tr><td>500</td><td>As-built, verified in the field</td><td>Handover and facility management</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">LOD 100–500 as defined by the AIA, with LOD 350 developed by BIMForum, summarised by BIMcommunity.</p>
+
+<h3>Federation, clash detection and 4D</h3>
+<p>Coordination is where BIM saves real money. Architectural, structural and MEP models are combined into one federated model and checked for conflicts. Autodesk describes Navisworks Manage's Clash Detective as identifying cross-discipline interferences earlier in the design process, and notes it can also test models against laser-scanned point clouds. Linked with TimeLiner, it can run time-based clash checks, which is the basis of 4D construction sequencing. A BIM course should have you run a clash test, review and assign clashes, and track them to resolution.</p>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/114-original-coordination-illustration-the-revised.webp" alt="Original coordination illustration. The revised route is a discussion option, not an engineered solution." loading="lazy"></div><figcaption>Original coordination illustration. The revised route is a discussion option, not an engineered solution.</figcaption></figure>
+
+<h3>openBIM and IFC</h3>
+<p>IFC is the open format for exchanging BIM models between software and with authorities. Dubai, for example, has required BIM model submissions in IFC format for building permits on larger buildings since 1 January 2024, as summarised on Autodesk's Dubai BIM mandate page. A BIM course should cover exporting, checking and reviewing IFC models, not just clicking export.</p>
+
+<h2 id="who">Which Course Do You Need?</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>You are…</th><th>Start with</th><th>Then</th></tr></thead>
+  <tbody>
+    <tr><td>A student or fresher new to Revit</td><td>Revit course with a full project</td><td>BIM coordination after some project experience</td></tr>
+    <tr><td>An <a href="https://augmintech.com/architectural-drafting/">AutoCAD draftsman</a> moving to BIM</td><td>Revit course focused on documentation</td><td>Worksharing and coordination</td></tr>
+    <tr><td>An architect already using Revit daily</td><td>BIM course: standards, BEP, coordination</td><td>BIM management</td></tr>
+    <tr><td>An interior designer</td><td>Revit for interiors (rooms, finishes, families)</td><td>Coordination with architects' and MEP models</td></tr>
+    <tr><td>A team lead or office owner</td><td>BIM implementation and standards</td><td>Templates, content libraries, CDE setup</td></tr>
+    <tr><td>Aiming at Gulf BIM projects</td><td>Revit, then a BIM course covering ISO 19650 and IFC</td><td>Coordination tools such as Navisworks</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="careers">Where Each Course Leads</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Role</th><th>Main skills</th><th>Pay indication</th></tr></thead>
+  <tbody>
+    <tr><td>BIM modeller</td><td>Revit modelling, families, documentation</td><td>PayScale average ₹4.20 lakh/yr (Sep 2026)</td></tr>
+    <tr><td>BIM coordinator</td><td>Federation, clash detection, model QA, BEP compliance</td><td>Archgyan indicative ₹55,000–95,000/month (3–6 yrs)</td></tr>
+    <tr><td>BIM manager</td><td>Standards, BEP, CDE, team leadership, client requirements</td><td>PayScale average ₹9.06 lakh/yr (Revit Architecture, 2023 data); Archgyan indicative ₹1–1.8 lakh/month</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">PayScale India (small samples); Archgyan 2026 figures are indicative ranges, as it describes them.</p>
+<p>The pattern is clear: Revit skills get you in; BIM process skills move you up. But no course alone makes you a coordinator or manager. Those roles also need project experience, which is why the best courses build around real or realistic projects.</p>
+
+
+<h2 id="deliverables">What You Should Have at the End</h2>
+<p>The best way to compare courses is by what you can show afterwards. Ask each provider whether you will finish with these:</p>
+<div class="split">
+  <div><h3>After a Revit course</h3><dl>
+    <dt>Model</dt><dd>A complete building model with correct levels, types and rooms</dd>
+    <dt>Drawings</dt><dd>A titled sheet set: plans, sections, elevations, details</dd>
+    <dt>Schedules</dt><dd>Doors, windows, rooms and areas from the model</dd>
+    <dt>Families</dt><dd>At least one parametric family you built</dd>
+    <dt>Exports</dt><dd>PDF, DWG and IFC versions of your work</dd>
+  </dl></div>
+  <div><h3>After a BIM course</h3><dl>
+    <dt>BEP</dt><dd>A BIM execution plan you drafted for a sample project</dd>
+    <dt>Federation</dt><dd>Architecture, structure and MEP models combined</dd>
+    <dt>Clash report</dt><dd>Clashes found, grouped, assigned and resolved</dd>
+    <dt>Standards</dt><dd>File naming, LOD responsibilities, CDE workflow</dd>
+    <dt>4D/IFC</dt><dd>A simple sequence and a checked IFC exchange</dd>
+  </dl></div>
+</div>
+<p class="note">Augmintech's suggested benchmark for comparing courses.</p>
+
+<h2 id="formats">Course Formats: Which Suits You?</h2>
+<div class="cards four">
+  <div><b>Self-paced video</b><span>Cheapest and flexible, but little feedback. Good for Revit basics if you are disciplined.</span></div>
+  <div class="c2"><b>Live online</b><span>Scheduled classes with an instructor and reviews; works alongside a job.</span></div>
+  <div class="c3"><b>Classroom</b><span>Most interaction and peer learning; needs time and travel.</span></div>
+  <div class="c4"><b>Longer programmes</b><span>Cover Revit and BIM process together through projects; suit career changers and graduates.</span></div>
+</div>
+
+<h2 id="self-learn">Can You Learn It Yourself?</h2>
+<p>Revit basics, yes. Students can use Revit free through Autodesk's education plan, and Autodesk offers free skill-builder and certification-prep courses in its learning pathways. Many professionals learn modelling by rebuilding a project they already know. The BIM process is harder to self-teach, because it is about teamwork: you need other people's models to coordinate with, a BEP to follow, and someone to review your work. That is where structured training with real coordination exercises earns its fee.</p>
+
+<h2 id="same-exercise">One Project, Two Different Assessments</h2><p>Use the same small office fit-out to compare course outcomes. In a Revit assessment, model the agreed shell and interiors, create rooms, organise views and produce a checked drawing set with schedules. The reviewer should be able to trace the drawings back to model elements and parameters.</p><p>In the BIM assessment, add the exchange requirements and team responsibilities. Agree model coordinates and version, receive consultant information, record which files were checked, run an appropriate coordination test and manage one issue through review and rechecking. The output is evidence of a controlled workflow, not only a coloured clash screenshot.</p><h3>What an Issue Record Should Contain</h3><p>Record an issue ID, location, relevant model versions, affected elements, a clear description, the responsible party, the proposed action and review status. If a duct intersects a beam, do not move the beam or reduce the duct size simply to remove the clash. The responsible designers must review the engineering implications. Recheck the accepted revision and retain the decision.</p><h3>Ask for Assessment Evidence</h3><p>Before enrolling, ask whether the trainer reviews editable files, whether learners receive revision feedback, and whether collaboration is practised with other models. Clarify the required software edition: Autodesk’s <a href="https://help.autodesk.com/cloudhelp/2026/ENU/Navisworks-Clash-Detective/files/GUID-36D9904E-12F3-4F82-8DD3-C2103DB0BC29.htm">Clash Detective documentation</a> identifies it as a Navisworks Manage feature.</p><p><a href="https://www.iso.org/standard/68078.html?browse=tc">ISO 19650-1</a> concerns information-management concepts and principles. A file-naming exercise alone does not demonstrate the complete process. Similarly, a higher LOD label is not automatically better: the required information should suit the element, purpose and agreed stage.</p><h2 id="evaluate">How to Judge Any Revit or BIM Course</h2>
+<div class="chk">
+  <div><span><b>A written, detailed syllabus</b> with topics and hours, not just "Revit + BIM".</span></div>
+  <div><span><b>A complete project</b> you will model and document, ideally with structure and MEP coordination.</span></div>
+  <div><span><b>Standards actually taught:</b> ISO 19650 concepts, BEP, naming, LOD, if it calls itself a BIM course.</span></div>
+  <div><span><b>Coordination tools:</b> clash detection and IFC checking, not only Revit.</span></div>
+  <div><span><b>Instructors with real project BIM experience,</b> not only software trainers.</span></div>
+  <div><span><b>Feedback on your work:</b> reviews of your model and drawings, not just videos.</span></div>
+  <div><span><b>Portfolio output:</b> what you will be able to show an employer at the end.</span></div>
+  <div><span><b>Licences and version:</b> full Revit (not LT), and which release.</span></div>
+  <div><span><b>Honest claims:</b> no guaranteed jobs or salaries; clear about any certification and who issues it.</span></div>
+</div>
+<p>Use this list on every option you are considering, including Augmintech's PG Program in BIM Architecture: ask for the syllabus, the project you will complete and examples of student work before you enrol. On certification, Autodesk itself runs certification learning pathways and offers free skill-builder and certification-prep courses, so be clear whether a course leads to an Autodesk exam or to the provider's own certificate.</p>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/114-aigenerated-collaboration-scene-bim-coordination.webp" alt="AI-generated collaboration scene. BIM coordination uses shared information and documented responsibilities, not just a clash image." loading="lazy"></div><figcaption>AI-generated collaboration scene. BIM coordination uses shared information and documented responsibilities, not just a clash image.</figcaption></figure>
+
+<h2 id="red-flags">Red Flags in Course Marketing</h2>
+<ol class="nl">
+  <li><div><b>"BIM course" that only teaches Revit buttons</b> with no standards or coordination.</div></li>
+  <li><div><b>Guaranteed placement or salary promises.</b> No course can guarantee either.</div></li>
+  <li><div><b>Vague software lists</b> (ten programs in a few weeks) with no project.</div></li>
+  <li><div><b>Certificates presented as official</b> without saying who issues them.</div></li>
+  <li><div><b>No access to sample student work</b> or to the instructors before enrolling.</div></li>
+  <li><div><b>Training on Revit LT,</b> which lacks worksharing and other BIM features.</div></li>
+</ol>
+
+<h2 id="path">A Sensible Learning Path</h2>
+<ol class="steps">
+  <li><b>Revit foundations</b>Model and document one complete building on your own.</li>
+  <li><b>Revit for your discipline</b>Architecture, interiors, structure or MEP depth, with families and schedules.</li>
+  <li><b>Team BIM</b>Worksharing, linking consultant models, a BIM execution plan and naming standards.</li>
+  <li><b>Coordination</b>Federation, clash detection, IFC exchange and issue tracking.</li>
+  <li><b>Management</b>Standards, templates, content libraries, CDE workflows and client requirements.</li>
+</ol>
+
+<div class="cta cta-green">
+  <div><h3>From Revit User to BIM Professional</h3><p>Moving beyond software into BIM workflows is the step that changes roles. Augmintech's PG Program in BIM Architecture is one structured option for architecture. Check the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-green">See the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">Is a Revit course the same as a BIM course?</div><div class="faq-a">No. A Revit course teaches the software; a BIM course teaches the process around it: standards, information management, coordination and teamwork. Some courses use the names loosely, so check the syllabus.</div></div>
+<div class="faq-item"><div class="faq-q">Should I learn Revit or BIM first?</div><div class="faq-a">Revit first if you are new. BIM process skills make sense once you can model and document a complete project.</div></div>
+<div class="faq-item"><div class="faq-q">What software does a BIM course use?</div><div class="faq-a">Usually Revit for modelling, plus coordination tools such as Navisworks for federation and clash detection, and IFC viewers for openBIM exchange. Some also introduce 4D and 5D tools.</div></div>
+<div class="faq-item"><div class="faq-q">What is ISO 19650?</div><div class="faq-a">An international series of standards for managing information on projects using BIM, covering concepts, the delivery and operational phases, information exchange and security.</div></div>
+<div class="faq-item"><div class="faq-q">What is LOD in BIM?</div><div class="faq-a">Level of development: how complete and reliable a model element is, from LOD 100 (conceptual) through 200, 300, 350 and 400 to 500 (as-built).</div></div>
+<div class="faq-item"><div class="faq-q">Can I become a BIM coordinator after a course?</div><div class="faq-a">A course gives you the knowledge, but coordinator roles usually also need a few years of project experience. Start as a modeller and build towards coordination.</div></div>
+<div class="faq-item"><div class="faq-q">Is Autodesk certification necessary?</div><div class="faq-a">Not required, but it can help benchmark your skills. Autodesk offers certification pathways with free prep courses; check whether any course you take leads to an Autodesk exam or its own certificate.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Catenda</strong>, <a href="https://catenda.com/glossary/iso-19650" target="_blank" rel="noopener">ISO 19650 glossary</a>.</li>
+  <li><strong>BIMcommunity</strong>, <a href="https://bimcommunity.com/news/load/1643/bim-level-of-development-lod-100-200-300-350-400-500" target="_blank" rel="noopener">BIM Level of Development 100 to 500</a>.</li>
+  <li><strong>Autodesk</strong>: <a href="https://help.autodesk.com/cloudhelp/2025/ENU/Navisworks-Clash-Detective/files/GUID-36D9904E-12F3-4F82-8DD3-C2103DB0BC29.htm" target="_blank" rel="noopener">Overview of Clash Detective</a>; <a href="https://www.autodesk.com/compare/compare-features/revit-vs-revit-lt" target="_blank" rel="noopener">Revit vs Revit LT</a>; <a href="https://www-int.autodesk.com/certification/learning-pathways" target="_blank" rel="noopener">Certification learning pathways</a>; <a href="https://www.autodesk.com:443/education/home" target="_blank" rel="noopener">Education plan</a>; <a href="https://boards.autodesk.com/dubai-bim-mandate" target="_blank" rel="noopener">Dubai Municipality BIM mandate</a>.</li>
+  <li><strong>PayScale India</strong>: <a href="https://www.payscale.com/research/IN/Job=Building_Information_Modeling_(BIM)_Modeler/Salary" target="_blank" rel="noopener">BIM Modeler</a>; <a href="https://www.payscale.com/research/IN/Job=Building_Information_Modeling_(BIM)_Manager/Salary/960cbdb9/Autodesk-Revit-Architecture" target="_blank" rel="noopener">BIM Manager (Revit Architecture)</a>.</li>
+  <li><strong>Archgyan</strong>, <a href="https://archgyan.com/architecture-salary-guide-india-earnings-career-stages/" target="_blank" rel="noopener">Architecture salary guide India 2026</a> (indicative ranges).</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 8 November 2026. Course content varies widely; always check the current syllabus before enrolling.</p>
+</div>

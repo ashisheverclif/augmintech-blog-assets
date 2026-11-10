@@ -1,0 +1,332 @@
+<style>
+#aug-interior-designer-skills{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-interior-designer-skills *,#aug-interior-designer-skills *::before,#aug-interior-designer-skills *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-interior-designer-skills{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-interior-designer-skills.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-interior-designer-skills .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-interior-designer-skills .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-interior-designer-skills .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-interior-designer-skills .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-interior-designer-skills .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-interior-designer-skills .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-interior-designer-skills h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-interior-designer-skills h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-interior-designer-skills p{margin-bottom:.9rem;font-size:16px;}
+#aug-interior-designer-skills a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-interior-designer-skills a:hover{border-color:var(--brand);}
+#aug-interior-designer-skills hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-interior-designer-skills .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-interior-designer-skills .chart svg{width:100%;height:auto;display:block;}
+#aug-interior-designer-skills .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-interior-designer-skills .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-interior-designer-skills .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-interior-designer-skills .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-interior-designer-skills .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-interior-designer-skills .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-interior-designer-skills .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-interior-designer-skills table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-interior-designer-skills caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-interior-designer-skills thead tr{background:var(--slate);color:#fff;}
+#aug-interior-designer-skills thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-interior-designer-skills tbody tr:nth-child(even){background:var(--surface);}
+#aug-interior-designer-skills tbody tr:hover{background:var(--brand-lite);}
+#aug-interior-designer-skills td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-interior-designer-skills td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-interior-designer-skills tbody tr.hl{background:var(--green-lite)!important;}
+#aug-interior-designer-skills tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-interior-designer-skills ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-interior-designer-skills ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-interior-designer-skills .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-interior-designer-skills .cta-green{background:var(--slate);}
+#aug-interior-designer-skills .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-interior-designer-skills .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-interior-designer-skills .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-interior-designer-skills .cta-btn-blue{color:var(--brand);}#aug-interior-designer-skills .cta-btn-green{color:var(--slate);}
+#aug-interior-designer-skills figure{margin:1.5rem 0;}
+#aug-interior-designer-skills figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-interior-designer-skills figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-interior-designer-skills dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-interior-designer-skills dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-interior-designer-skills dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-interior-designer-skills .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-interior-designer-skills .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-interior-designer-skills .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-interior-designer-skills .srcs{list-style:none;padding:0;}
+#aug-interior-designer-skills .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-interior-designer-skills .srcs li:last-child{border-bottom:none;}
+
+#aug-interior-designer-skills .ans{margin:1.3rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#F4F6F8;border-left:4px solid var(--brand);font-size:16.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-interior-designer-skills .ans b{color:var(--ink);}
+#aug-interior-designer-skills .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-interior-designer-skills .dfig svg{display:block;width:100%;height:auto;}
+#aug-interior-designer-skills .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-interior-designer-skills .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-interior-designer-skills .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-interior-designer-skills figure.pf{margin:1.2rem 0;} #aug-interior-designer-skills figure.pf figcaption{font-family:var(--body);font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-interior-designer-skills .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;} #aug-interior-designer-skills .pair figure{margin:0;}
+#aug-interior-designer-skills .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-interior-designer-skills .alert{margin:1.2rem 0;padding:.85rem 1rem;border-radius:var(--radius);background:#FFF4E5;border:1px solid #F3D3A4;font-size:14.5px;line-height:1.6;}
+#aug-interior-designer-skills .alert b{color:var(--warn);}
+#aug-interior-designer-skills .t table{font-size:13.5px;} #aug-interior-designer-skills .t td:first-child{font-weight:700;color:var(--ink);} #aug-interior-designer-skills .t th{white-space:normal;}
+#aug-interior-designer-skills .t .m{font-family:var(--mono);font-size:12px;white-space:nowrap;}
+#aug-interior-designer-skills .t caption{caption-side:bottom;text-align:left;font-family:var(--body);text-transform:none;letter-spacing:0;font-size:12.5px;color:var(--muted);padding:.5rem .2rem 0;}
+#aug-interior-designer-skills .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.2rem 0;}
+#aug-interior-designer-skills .cards.two{grid-template-columns:1fr 1fr;} #aug-interior-designer-skills .cards.four{grid-template-columns:repeat(4,1fr);}
+#aug-interior-designer-skills .cards>div{border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:var(--radius);padding:.85rem .95rem;background:#fff;}
+#aug-interior-designer-skills .cards>div.c2{border-top-color:#1D6B43;} #aug-interior-designer-skills .cards>div.c3{border-top-color:#8A5A00;} #aug-interior-designer-skills .cards>div.c4{border-top-color:#5B3A86;} #aug-interior-designer-skills .cards>div.c5{border-top-color:#B5371B;}
+#aug-interior-designer-skills .cards b{display:block;font-family:var(--display);font-size:15.5px;color:var(--ink);margin-bottom:.25rem;line-height:1.3;}
+#aug-interior-designer-skills .cards span{display:block;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-interior-designer-skills .cards em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.5rem;}
+#aug-interior-designer-skills .cards ul{margin:.3rem 0 0;padding-left:1.05rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-interior-designer-skills .steps{list-style:none;margin:1.2rem 0;padding:0;counter-reset:s;display:grid;gap:10px;}
+#aug-interior-designer-skills .steps li{counter-increment:s;position:relative;padding:.8rem 1rem .8rem 3.4rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;font-size:15px;line-height:1.6;}
+#aug-interior-designer-skills .steps li::before{content:counter(s);position:absolute;left:.9rem;top:.8rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--display);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+#aug-interior-designer-skills .steps li b{display:block;font-family:var(--display);color:var(--ink);font-size:15.5px;margin-bottom:2px;}
+#aug-interior-designer-skills .nl{list-style:none;padding:0;margin:1.2rem 0;counter-reset:u;}
+#aug-interior-designer-skills .nl li{counter-increment:u;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;padding:.75rem 0;border-top:1px solid var(--border);font-size:15px;line-height:1.6;}
+#aug-interior-designer-skills .nl li:first-child{border-top:none;}
+#aug-interior-designer-skills .nl li::before{content:counter(u,decimal-leading-zero);font-family:var(--mono);font-weight:700;color:var(--coral);font-size:14px;padding-top:2px;}
+#aug-interior-designer-skills .nl b{color:var(--ink);}
+#aug-interior-designer-skills .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-interior-designer-skills .pick>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-interior-designer-skills .pick .a{background:#EEF7F1;border:1px solid #C6E3D1;} #aug-interior-designer-skills .pick .r{background:#FDF1EC;border:1px solid #F1CDBE;}
+#aug-interior-designer-skills .pick h3{margin:0 0 .4rem;font-size:15.5px;} #aug-interior-designer-skills .pick .a h3{color:#1D6B43;} #aug-interior-designer-skills .pick .r h3{color:#9A3B1E;}
+#aug-interior-designer-skills .pick ul{margin:0;padding-left:1.1rem;} #aug-interior-designer-skills .pick li{margin-bottom:.3rem;}
+#aug-interior-designer-skills .chk{margin:1.2rem 0;border:1px solid var(--border);border-radius:var(--radius);background:#fff;padding:.4rem 1rem;}
+#aug-interior-designer-skills .chk div{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:.6rem 0;border-top:1px solid var(--border);font-size:14.5px;line-height:1.55;}
+#aug-interior-designer-skills .chk div:first-child{border-top:none;}
+#aug-interior-designer-skills .chk div::before{content:"";width:16px;height:16px;border:2px solid var(--green);border-radius:4px;margin-top:3px;}
+#aug-interior-designer-skills .chk b{color:var(--ink);}
+#aug-interior-designer-skills .qa{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-interior-designer-skills .qa .q{padding:.75rem 1rem;background:var(--surface);font-family:var(--display);font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.45;}
+#aug-interior-designer-skills .qa .q span{font-family:var(--mono);font-size:11px;color:var(--brand);font-weight:700;margin-right:8px;letter-spacing:.04em;}
+#aug-interior-designer-skills .qa .a{padding:.75rem 1rem;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-interior-designer-skills .qa .a i{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--coral);margin-top:.5rem;letter-spacing:.03em;}
+#aug-interior-designer-skills .bar{display:flex;margin:1.2rem 0 .4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-interior-designer-skills .bar div{padding:.75rem .7rem;font-size:13px;line-height:1.4;color:#fff;}
+#aug-interior-designer-skills .bar div b{display:block;font-family:var(--display);font-size:17px;}
+#aug-interior-designer-skills .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-interior-designer-skills .split>div{border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);padding:.9rem 1rem;}
+#aug-interior-designer-skills .split h3{margin:0 0 .5rem;font-size:16px;} #aug-interior-designer-skills .split dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14px;}
+#aug-interior-designer-skills .split dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:2px;} #aug-interior-designer-skills .split dd{margin:0;color:var(--ink);}
+
+@media(max-width:820px){ #aug-interior-designer-skills .cards,#aug-interior-designer-skills .cards.four{grid-template-columns:1fr 1fr;} }
+@media(max-width:640px){
+  #aug-interior-designer-skills .t table{min-width:600px;}
+  #aug-interior-designer-skills .cards,#aug-interior-designer-skills .cards.two,#aug-interior-designer-skills .cards.four,#aug-interior-designer-skills .pick,#aug-interior-designer-skills .pair,#aug-interior-designer-skills .split{grid-template-columns:1fr;}
+  #aug-interior-designer-skills .bar{flex-direction:column;} #aug-interior-designer-skills .bar div{flex:none!important;}
+  #aug-interior-designer-skills .steps li{padding-left:3rem;}
+  #aug-interior-designer-skills .dfig.wide{overflow-x:auto;} #aug-interior-designer-skills .dfig.wide svg{min-width:640px;}
+  #aug-interior-designer-skills .cta{flex-direction:column;align-items:flex-start;}
+  #aug-interior-designer-skills .cta>div{max-width:100%;} #aug-interior-designer-skills .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-interior-designer-skills .cta>div:last-child .cta-btn{margin-left:0;white-space:normal;text-align:center;line-height:1.5;}
+}
+#aug-interior-designer-skills .pf .ph{height:auto!important;aspect-ratio:auto!important;padding:0!important;min-height:0!important;overflow:hidden}#aug-interior-designer-skills .pf .ph img{position:static!important;display:block;width:100%!important;height:auto!important;object-fit:contain!important}#aug-interior-designer-skills .pf figcaption{font-family:Arial,sans-serif!important;font-size:14px!important;line-height:1.6!important;padding:12px!important}#aug-interior-designer-skills .pair{display:block!important}#aug-interior-designer-skills .pair .pf{margin:18px 0!important}#aug-interior-designer-skills .tbl-wrap{overflow-x:auto}#aug-interior-designer-skills .software-link{display:inline-block;padding:5px 8px;margin:4px 2px;background:#eef4fa;border:1px solid #bacfe1;border-radius:5px;line-height:1.5}#aug-interior-designer-skills .cta-btn{white-space:normal!important}#aug-interior-designer-skills blockquote{margin:20px 0;padding:20px;background:#edf4f8;border-left:4px solid #0f4c81}@media(max-width:640px){#aug-interior-designer-skills .tbl-wrap table{min-width:620px}#aug-interior-designer-skills h2,#aug-interior-designer-skills h3{overflow-wrap:anywhere}}
+/* Official software demonstrations */#aug-interior-designer-skills .vendor-demo{margin:28px 0;border:1px solid #d5dfe7;border-radius:14px;overflow:hidden;background:#fff}#aug-interior-designer-skills .vendor-demo h3{padding:20px 24px 0;margin:0;font-size:1.25rem}#aug-interior-designer-skills .vendor-demo .demo-screen{background:#101820;aspect-ratio:16/9;width:100%;margin-top:16px}#aug-interior-designer-skills .vendor-demo iframe,#aug-interior-designer-skills .vendor-demo video{display:block;width:100%;height:100%;border:0;object-fit:contain}#aug-interior-designer-skills .vendor-demo figcaption{padding:18px 24px;font-family:inherit;font-size:16px;line-height:1.65;color:#344b5c}#aug-interior-designer-skills .vendor-demo p{margin:0 0 10px}#aug-interior-designer-skills .vendor-demo a{text-decoration:underline}#aug-interior-designer-skills .vendor-demo .demo-watch{border-top:1px solid #e2e8ee;padding-top:12px}#aug-interior-designer-skills .vendor-demo strong{color:#183a50}@media(max-width:600px){#aug-interior-designer-skills .vendor-demo h3,#aug-interior-designer-skills .vendor-demo figcaption{padding-left:16px;padding-right:16px}#aug-interior-designer-skills .vendor-demo figcaption{font-size:15px}}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-interior-designer-skills.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-interior-designer-skills h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-interior-designer-skills a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-interior-designer-skills a:hover{color:#18d104;}
+#aug-interior-designer-skills .cta{background:#1a1a1a;}
+#aug-interior-designer-skills .cta a.cta-btn{text-decoration:none;}
+#aug-interior-designer-skills .cta-btn-blue{background:#18d104;color:#000;}
+#aug-interior-designer-skills .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-interior-designer-skills [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+<div class="blog" id="aug-interior-designer-skills">
+<div class="ans"><b>Interior designers need four groups of skills: design (space planning, concept, materials, lighting, furniture), technical (working drawings, detailing, services coordination, codes, estimation), digital (AutoCAD, SketchUp, rendering, Photoshop, Revit) and professional (client communication, vendors, site supervision, scheduling).</b> Good taste is only the start; what makes a designer employable is the ability to turn ideas into accurate drawings that carpenters, electricians and contractors can build from. This guide explains each skill, the numbers and standards to know, how employers test it and how to build it, with a self-assessment rubric and a 12-week plan.</div>
+<figure class="dfig wide">
+<svg aria-label="Interior designer skills map in four groups: design, technical, digital and professional, with five skills each" role="img" viewBox="0 0 1000 380"><rect fill="#fff" height="380" width="1000"></rect><text fill="#1E2833" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle" x="500" y="28">THE INTERIOR DESIGNER SKILLS MAP</text><rect fill="#1F4A6E" height="36" rx="8" width="225" x="25" y="48"></rect><text fill="#fff" font-family="sans-serif" font-size="14" font-weight="800" text-anchor="middle" x="137.5" y="72">DESIGN</text><rect fill="#1F4A6E" fill-opacity=".08" height="42" rx="8" stroke="#1F4A6E" stroke-opacity=".5" width="225" x="25" y="94"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="137.5" y="120">Space planning</text><rect fill="#1F4A6E" fill-opacity=".08" height="42" rx="8" stroke="#1F4A6E" stroke-opacity=".5" width="225" x="25" y="144"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="137.5" y="170">Concept and brief</text><rect fill="#1F4A6E" fill-opacity=".08" height="42" rx="8" stroke="#1F4A6E" stroke-opacity=".5" width="225" x="25" y="194"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="137.5" y="220">Colour and materials</text><rect fill="#1F4A6E" fill-opacity=".08" height="42" rx="8" stroke="#1F4A6E" stroke-opacity=".5" width="225" x="25" y="244"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="137.5" y="270">Lighting design</text><rect fill="#1F4A6E" fill-opacity=".08" height="42" rx="8" stroke="#1F4A6E" stroke-opacity=".5" width="225" x="25" y="294"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="137.5" y="320">Furniture and joinery design</text><rect fill="#1D6B43" height="36" rx="8" width="225" x="267" y="48"></rect><text fill="#fff" font-family="sans-serif" font-size="14" font-weight="800" text-anchor="middle" x="379.5" y="72">TECHNICAL</text><rect fill="#1D6B43" fill-opacity=".08" height="42" rx="8" stroke="#1D6B43" stroke-opacity=".5" width="225" x="267" y="94"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="379.5" y="120">Working drawings</text><rect fill="#1D6B43" fill-opacity=".08" height="42" rx="8" stroke="#1D6B43" stroke-opacity=".5" width="225" x="267" y="144"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="379.5" y="170">Construction and detailing</text><rect fill="#1D6B43" fill-opacity=".08" height="42" rx="8" stroke="#1D6B43" stroke-opacity=".5" width="225" x="267" y="194"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="379.5" y="220">Services coordination</text><rect fill="#1D6B43" fill-opacity=".08" height="42" rx="8" stroke="#1D6B43" stroke-opacity=".5" width="225" x="267" y="244"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="379.5" y="270">Codes and standards</text><rect fill="#1D6B43" fill-opacity=".08" height="42" rx="8" stroke="#1D6B43" stroke-opacity=".5" width="225" x="267" y="294"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="379.5" y="320">Estimation and BOQ</text><rect fill="#5B3A86" height="36" rx="8" width="225" x="509" y="48"></rect><text fill="#fff" font-family="sans-serif" font-size="14" font-weight="800" text-anchor="middle" x="621.5" y="72">DIGITAL</text><rect fill="#5B3A86" fill-opacity=".08" height="42" rx="8" stroke="#5B3A86" stroke-opacity=".5" width="225" x="509" y="94"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="621.5" y="120">AutoCAD</text><rect fill="#5B3A86" fill-opacity=".08" height="42" rx="8" stroke="#5B3A86" stroke-opacity=".5" width="225" x="509" y="144"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="621.5" y="170">SketchUp</text><rect fill="#5B3A86" fill-opacity=".08" height="42" rx="8" stroke="#5B3A86" stroke-opacity=".5" width="225" x="509" y="194"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="621.5" y="220">Rendering</text><rect fill="#5B3A86" fill-opacity=".08" height="42" rx="8" stroke="#5B3A86" stroke-opacity=".5" width="225" x="509" y="244"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="621.5" y="270">Photoshop and layout</text><rect fill="#5B3A86" fill-opacity=".08" height="42" rx="8" stroke="#5B3A86" stroke-opacity=".5" width="225" x="509" y="294"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="621.5" y="320">Revit / BIM</text><rect fill="#8A5A00" height="36" rx="8" width="225" x="751" y="48"></rect><text fill="#fff" font-family="sans-serif" font-size="14" font-weight="800" text-anchor="middle" x="863.5" y="72">PROFESSIONAL</text><rect fill="#8A5A00" fill-opacity=".08" height="42" rx="8" stroke="#8A5A00" stroke-opacity=".5" width="225" x="751" y="94"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="863.5" y="120">Client communication</text><rect fill="#8A5A00" fill-opacity=".08" height="42" rx="8" stroke="#8A5A00" stroke-opacity=".5" width="225" x="751" y="144"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="863.5" y="170">Vendor management</text><rect fill="#8A5A00" fill-opacity=".08" height="42" rx="8" stroke="#8A5A00" stroke-opacity=".5" width="225" x="751" y="194"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="863.5" y="220">Site supervision</text><rect fill="#8A5A00" fill-opacity=".08" height="42" rx="8" stroke="#8A5A00" stroke-opacity=".5" width="225" x="751" y="244"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="863.5" y="270">Scheduling</text><rect fill="#8A5A00" fill-opacity=".08" height="42" rx="8" stroke="#8A5A00" stroke-opacity=".5" width="225" x="751" y="294"></rect><text fill="#1E2833" font-family="sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="863.5" y="320">Presentation</text><text fill="#7A8794" font-family="sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" x="500" y="368">Every interior role uses all four columns; the balance shifts with seniority. Augmintech diagram.</text></svg>
+<figcaption>Twenty skills in four groups. Augmintech skills map.</figcaption>
+</figure>
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+<li><strong><a href="https://augmintech.com/space-planning/">Space planning</a> comes first:</strong> a beautiful room that does not work is a failed design.</li>
+<li><strong>Technical documentation is where most juniors fall short:</strong> layouts, RCPs, elevations and joinery details must be buildable.</li>
+<li><strong>Know the numbers:</strong> minimum room sizes, <a href="https://augmintech.com/types-of-kitchen-layout/">kitchen clearances</a>, lux levels and drawing scales.</li>
+<li><strong>Digital skills are tested first:</strong> Tools matched to the employer’s workflow, often AutoCAD and SketchUp, a renderer, and increasingly <a href="https://augmintech.com/learn-revit/">Revit</a>.</li>
+<li><strong>Professional skills decide whether projects finish well:</strong> clients, vendors, site and schedule.</li>
+</ul>
+<h2 id="design-skills">Design Skills</h2>
+<h3>1. Space planning</h3>
+<p>Organising activities, circulation and furniture so a space works. It runs from brief and measurement through adjacency, zoning and circulation to a dimensioned furniture layout. Know the minimums: under NBC 2016, a single habitable room should be at least 9.5 m² and 2.4 m wide, a kitchen 5.0 m² and 1.8 m wide, and a combined bath and WC 2.8 m². Clearances matter as much: the NKBA recommends 914 mm walkways and a 1,067 mm work aisle for one cook.</p>
+<p><strong>How it is tested:</strong> a timed layout of a small flat or café. <strong>How to build it:</strong> measure and replan real rooms every week; redraw published plans and critique them.</p>
+<h3>2. Concept and brief development</h3>
+<p>Turning a client's needs, budget and personality into a clear design idea and a written programme of spaces. Strong designers ask about daily routines, storage and future needs, not just style.</p>
+<h3>3. Colour, materials and finishes</h3>
+<p>Selecting finishes that look right, perform in use and fit the budget: for example, avoiding <a href="https://augmintech.com/types-of-flooring/">laminate flooring</a> where water may stand, because its fibreboard core can swell, and using moisture-resistant boards near wet areas. Build a personal library of materials with real product names, sizes and costs.</p>
+<h3>4. Lighting design</h3>
+<p>Layering ambient, task and accent light. Typical targets: about 100–200 lux for general living areas, 300–500 lux for reading and task areas, and accent light at roughly three times the surrounding brightness so a feature stands out. Show it on a reflected ceiling plan with a fixture schedule.</p>
+<h3>5. Furniture and joinery design</h3>
+<p>Designing wardrobes, kitchens, TV units and custom pieces with correct ergonomics and buildable construction. In Indian kitchens, counters are usually about 860 mm high and 600 mm deep.</p>
+<figure class="vendor-demo"><h3>Revit demonstration: turn a model into drawing views</h3><div class="demo-screen"><video controls="controls" crossorigin="anonymous" data-video-id="5kbWJwaDE6D33v4iF_zBDvqkeg14CQxL" poster="https://help.autodesk.com/videos/5kbWJwaDE6D33v4iF_zBDvqkeg14CQxL/poster" preload="none"><source src="https://help.autodesk.com/videos/5kbWJwaDE6D33v4iF_zBDvqkeg14CQxL/video.webm" type="video/webm"/><source src="https://help.autodesk.com/videos/5kbWJwaDE6D33v4iF_zBDvqkeg14CQxL/video.mp4" type="video/mp4"/></video></div><figcaption><p>Autodesk’s Create Views tutorial shows genuine Revit controls and model views. Use it to understand the drawing workflow behind an interior package. <a href="https://help.autodesk.com/cloudhelp/2026/ENU/Revit-GetStarted/files/GUID-6BFB71DA-BCE6-4623-8ECD-D378E1C9C7F7.htm" rel="noopener" target="_blank">Open the original demonstration</a>.</p><p class="demo-watch"><strong>What to look for:</strong> Track how a model view is created and adjusted. Apply the same principle to a room: a furniture plan explains arrangement, an interior elevation explains a wall and a section explains vertical relationships. Each view needs a clear purpose and an appropriate scale.</p><p>Vendor-hosted video. Internet access is required; if playback is blocked, use the source link. The recorded interface may differ from your installed release.</p></figcaption></figure>
+<div class="cta">
+<div><h3>Add BIM to Your Technical Skills</h3><p>On larger projects, interior documentation increasingly happens in BIM. Augmintech's PG Program in BIM Architecture teaches building information modelling for architecture. See the course page for the current syllabus, schedule and fees.</p></div>
+<div><a class="cta-btn cta-btn-blue" href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/">Explore the PG Program in BIM Architecture</a></div>
+</div>
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="technical-skills">Technical Skills</h2>
+<h3>6. Working drawings</h3>
+<p>The core of the job: furniture layout, flooring plan, reflected ceiling plan, electrical and <a href="https://augmintech.com/ambient-lighting/">lighting layout</a>, interior elevations, joinery details and schedules. Use standard scales: IS 962 recommends 1:50 or 1:100 for plans and elevations and 1:10 or 1:20 for details. A drawing set must be complete, consistent between sheets and revision-controlled.</p>
+<h3>7. Construction and detailing</h3>
+<p>Knowing how gypsum ceilings are framed, how partitions are built, how stone meets wood, and how hardware fixes to joinery. Detailing is where design intent survives or dies on site.</p>
+<h3>8. Services coordination</h3>
+<p>Placing lights, AC grilles, sprinklers, switches, sockets and plumbing points so they work with the design and with the engineers' layouts. Unresolved service interfaces can cause rework, so review them before issuing the coordinated drawings.</p>
+<h3>9. Codes and standards</h3>
+<p>Minimum room sizes, door widths (verify clear opening requirements against the applicable local and accessibility provisions), fire and egress in commercial fit-outs, and how areas are measured: RERA's carpet area includes internal partitions, while a Revit room is measured to the wall finish by default.</p>
+<h3>10. Estimation and bills of quantities</h3>
+<p>Measuring quantities from drawings, applying current rates, adding wastage and contingency, and presenting clear inclusions and exclusions. Clients judge designers heavily on whether budgets hold.</p>
+<figure class="pf"><div class="ph"><img alt="Conceptual joinery study. It is not a dimensioned fabrication detail; specify materials, hardware and fixings for the real installation." loading="lazy" src="https://augmintech.com/wp-content/uploads/2026/11/118-conceptual-joinery-study-it-is.webp"/></div><figcaption>Conceptual joinery study. It is not a dimensioned fabrication detail; specify materials, hardware and fixings for the real installation.</figcaption></figure>
+<h2 id="digital-skills">Digital Skills</h2>
+<p>PayScale's 2026 page for interior designers in India lists AutoCAD, SketchUp, 3D rendering, Photoshop, CorelDRAW, project management, Microsoft Office, Revit Architecture and <a href="https://augmintech.com/how-to-download-install-3ds-max-step-by-step-guide/">3ds Max</a> among the most popular skills. In practice:</p>
+<div class="tbl-wrap t">
+<table>
+<thead><tr><th>Skill</th><th>What employers expect</th><th>Level for a junior</th></tr></thead>
+<tbody>
+<tr><td>11. AutoCAD</td><td>Clean layouts, RCPs, elevations, details with layers and plotting</td><td>Role-dependent foundation</td></tr>
+<tr><td>12. SketchUp</td><td>Quick, accurate 3D from CAD plans; scenes for clients</td><td>Role-dependent foundation</td></tr>
+<tr><td>13. Rendering</td><td>Realistic stills and walkthroughs in one renderer</td><td>Expected</td></tr>
+<tr><td>14. Photoshop and layout</td><td>Boards, post-production, presentations</td><td>Expected</td></tr>
+<tr><td>15. Revit / BIM</td><td>Rooms, finishes, furniture schedules, coordinated sheets</td><td>Advantage now; required on many larger projects</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">Popular skills from PayScale India (interior designer, updated 24 October 2026); expectation levels are Augmintech guidance.</p>
+<p>Revit is the skill most likely to move you onto larger commercial, hospitality and Gulf projects, where coordinated drawing sets and schedules are expected. It is also the hardest to learn alone, because the challenge is the workflow rather than the buttons. A structured option such as Augmintech's PG Program in BIM Architecture is one way to build it.</p>
+<h2 id="professional-skills">Professional Skills</h2>
+<div class="cards">
+<div><b>16. Client communication</b><span>Listening, explaining options with drawings and costs, managing expectations and recording decisions in writing.</span></div>
+<div class="c2"><b>17. Vendor management</b><span>Getting comparable quotes, checking samples, tracking orders and lead times.</span></div>
+<div class="c3"><b>18. Site supervision</b><span>Checking work against drawings, solving problems quickly, keeping quality and safety.</span></div>
+<div class="c4"><b>19. Scheduling</b><span>Sequencing trades (civil, electrical, ceiling, carpentry, painting) and protecting the handover date.</span></div>
+<div class="c5"><b>20. Presentation</b><span>Telling a design story clearly to clients, juries and interviewers.</span></div>
+</div>
+<figure class="pf"><div class="ph"><img alt="Original AI-generated fit-out review scene illustrating communication between designer and carpenter." loading="lazy" src="https://augmintech.com/wp-content/uploads/2026/11/118-original-aigenerated-fitout-review-scene.webp"/></div><figcaption>Original AI-generated fit-out review scene illustrating communication between designer and carpenter.</figcaption></figure>
+<h2 id="room-package">Worked Skill Exercise: Take One Bedroom to a Reviewable Package</h2><p>Choose a measured bedroom and write the brief before opening software: users, bed size, storage needs, study requirements, budget and items to retain. Record door and window positions, ceiling height and visible service points. Mark any dimension that still needs site verification.</p><h3>Build the package in a deliberate order</h3><ol><li>Produce two furniture options and test door swings, wardrobe access and movement around the bed.</li><li>Develop the selected plan and an elevation of the wardrobe wall.</li><li>Coordinate a reflected ceiling plan with lights, access panels and the engineers' service information.</li><li>Create a finish schedule with codes that also appear on the drawings.</li><li>Model and visualise the room, then compare the render against the actual plan.</li><li>Prepare a quantity sheet and a revision log.</li></ol><h3>What a joinery drawing needs beyond a nice elevation</h3><p>Show overall dimensions, internal divisions, shutter operation, material and finish specification, edge treatment, hardware references, fixing strategy and interfaces with the floor and ceiling. Review long shelf spans, door weight and hardware capacity with the fabricator or manufacturer. Do not copy a generic board thickness into every project.</p><h3>A small quantity check</h3><p>For a hypothetical rectangular ceiling measuring 4.0 × 3.6 m, the plan area is 14.4 m². A separate 0.6 × 1.2 m opening has an area of 0.72 m². If the agreed measurement method deducts that opening, the net area is 13.68 m². Perimeter bulkheads, drops, access panels, framing and finishes need their own measurement basis. State whether labour, wastage and taxes are included before comparing quotes.</p><h3>Make software skill visible</h3><p>In AutoCAD, show organised layers and a readable plotted PDF. In SketchUp, show clean components and consistent scenes. In Revit, demonstrate a room or furniture schedule and a controlled revision. One application is not mandatory for every role; match the office's deliverables and workflow.</p><p><a class="software-link" href="https://help.autodesk.com/cloudhelp/2026/ENU/Revit-GetStarted/files/GUID-3197A4ED-323F-4D32-91C0-BA79E794B806.htm">See Autodesk's genuine Revit interface tour</a>, then practise opening a view, inspecting an element and checking its schedule. A portfolio should contain your own software captures and editable work, with any AI visuals identified.</p><h3>Ask for specific feedback</h3><p>Have a reviewer identify one planning issue, one documentation issue and one buildability issue. Correct the source files and show the change. This provides stronger evidence of growth than adding another unrelated render to the portfolio.</p><h2 id="rubric">Rate Yourself: A Skills Rubric</h2>
+<div class="tbl-wrap t">
+<table>
+<thead><tr><th>Skill</th><th>Beginner</th><th>Competent</th><th>Advanced</th></tr></thead>
+<tbody>
+<tr><td>Space planning</td><td>Layouts that fit furniture</td><td>Layouts with correct clearances and circulation</td><td>Several strong options solving the brief's conflicts</td></tr>
+<tr><td>Working drawings</td><td>Plans with dimensions</td><td>Full set: layout, RCP, elevations, details</td><td>Coordinated, revision-controlled sets with documented checks and resolved review comments</td></tr>
+<tr><td>Detailing</td><td>Copies standard details</td><td>Adapts details to each project</td><td>Solves unusual junctions and custom joinery</td></tr>
+<tr><td>Lighting</td><td>Places downlights evenly</td><td>Layers ambient, task and accent with targets</td><td>Designs scenes, controls and fixture specifications</td></tr>
+<tr><td>Software</td><td>Basic AutoCAD and SketchUp</td><td>Fast CAD, clean 3D, good renders</td><td>Revit drawing sets and schedules; coordination with consultants</td></tr>
+<tr><td>Estimation</td><td>Rough lump sums</td><td>Quantities from drawings with current rates</td><td>Accurate BOQs that hold through tender</td></tr>
+<tr><td>Client and site</td><td>Follows instructions</td><td>Runs meetings and site visits independently</td><td>Leads projects, resolves conflicts, protects budget and date</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">Augmintech rubric. Mark where you are today, then pick two rows to move up in the next three months.</p>
+<h2 id="tested">How Employers Test Each Skill</h2>
+<div class="tbl-wrap t">
+<table>
+<thead><tr><th>Skill</th><th>Typical test or question</th><th>How to prepare</th></tr></thead>
+<tbody>
+<tr><td>Space planning</td><td>Lay out a small flat or café in 60–120 minutes</td><td>Practise timed layouts with clearances written on the plan</td></tr>
+<tr><td>Working drawings</td><td>Draw an elevation from a sketch, or find errors in a drawing</td><td>Redraw published elevations and details; check your own sets line by line</td></tr>
+<tr><td>Detailing</td><td>"How would you detail a wardrobe shutter or a ceiling cove?"</td><td>Sketch sections of real joinery you have seen on site</td></tr>
+<tr><td>Lighting</td><td>"Plan the lighting for this living room"</td><td>Know lux targets and draw an RCP with a fixture schedule</td></tr>
+<tr><td>Materials</td><td>"Which floor would you use in a kitchen and why?"</td><td>Learn performance, cost and maintenance of common finishes</td></tr>
+<tr><td>AutoCAD</td><td>Timed furniture layout with layers and dimensions</td><td>Work from a clean template; practise one layout a day</td></tr>
+<tr><td>SketchUp / rendering</td><td>Model and render a room from a plan</td><td>Keep a library of clean components and real materials</td></tr>
+<tr><td>Revit</td><td>"Can you produce a room finish schedule?"</td><td>Model one project end to end with rooms, finishes and sheets</td></tr>
+<tr><td>Estimation</td><td>"Estimate the false ceiling for this room"</td><td>Measure areas from drawings, apply current rates, add wastage</td></tr>
+<tr><td>Client handling</td><td>"A client rejects your design. What do you do?"</td><td>Prepare two real examples using situation, action, result</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">Typical formats compiled by Augmintech; see our interior design interview questions guide for model answers.</p>
+<h2 id="gaps">Five Common Skill Gaps in Junior Designers</h2>
+<ol class="nl">
+<li><div><b>Renders without drawings.</b> Strong visuals, but no RCP, elevations or details a contractor can build from.</div></li>
+<li><div><b>Guessing dimensions.</b> Layouts that ignore clearances, door swings and real furniture sizes.</div></li>
+<li><div><b>Weak materials knowledge.</b> Choosing finishes for looks without knowing how they perform or what they cost.</div></li>
+<li><div><b>No services thinking.</b> Lights and switches placed after the design instead of with it.</div></li>
+<li><div><b>Little site exposure.</b> Not knowing how ceilings, partitions and joinery are actually built.</div></li>
+</ol>
+<h2 id="resources">Free Resources to Build These Skills</h2>
+<ul class="bullets">
+<li><strong>Standards:</strong> NBC 2016 summaries and thumb rules for room sizes and doors; IS 962 for drawing conventions.</li>
+<li><strong>Kitchens:</strong> the NKBA Kitchen Planning Guidelines for clearances, aisles and landing areas.</li>
+<li><strong>Software:</strong> Autodesk's education plan gives students free AutoCAD and Revit, and Autodesk offers free certification-prep courses.</li>
+<li><strong>Sites:</strong> ask your college or office for site visits; nothing teaches detailing faster.</li>
+<li><strong>Showrooms:</strong> visit tile, laminate, lighting and hardware showrooms and note products, sizes and prices.</li>
+</ul>
+<h2 id="by-stage">Skills by Career Stage</h2>
+<div class="tbl-wrap t">
+<table>
+<thead><tr><th>Stage</th><th>Focus skills</th></tr></thead>
+<tbody>
+<tr><td>Student</td><td>Space planning, drawing, AutoCAD, SketchUp, one renderer, portfolio</td></tr>
+<tr><td>Junior designer (0–2 years)</td><td>Working drawings, detailing, site checks, materials knowledge, speed in software</td></tr>
+<tr><td>Designer (2–5 years)</td><td>Client meetings, estimation, coordination, Revit, running small projects</td></tr>
+<tr><td>Senior / lead (5+ years)</td><td>Concept leadership, budgets, vendor and team management, business development</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="plan">A 12-Week Plan to Strengthen Your Skills</h2>
+<ol class="steps">
+<li><b>Weeks 1–3: Space planning</b>Measure three real rooms; produce two layout options each with clearances checked against NKBA and NBC figures.</li>
+<li><b>Weeks 4–6: Working drawings</b>For one 2BHK, draw a full set: layout, flooring, RCP with lighting, electrical, elevations and two joinery details.</li>
+<li><b>Weeks 7–8: Materials and lighting</b>Build a material board with real products and a lighting plan with lux targets and a fixture schedule.</li>
+<li><b>Weeks 9–10: 3D and presentation</b>Model the flat in SketchUp, render three views and lay out a portfolio spread.</li>
+<li><b>Weeks 11–12: Revit and estimation</b>Rebuild one room in Revit with a finish schedule; prepare a simple BOQ for the whole flat.</li>
+</ol>
+<h2 id="pay">Do Skills Change Pay?</h2>
+<p>PayScale puts the average interior designer in India at about ₹3.27 lakh a year in base pay (294 profiles, October 2026). It does not publish a reliable pay premium for individual skills, so be wary of anyone who promises a fixed raise for a certificate. What skills do is change the roles you can take: designers who can run drawings, budgets and sites move into project and lead roles, and those with Revit and coordination skills can work on larger commercial and Gulf projects.</p>
+<h2 id="gulf">Skills for Gulf Interior Jobs</h2>
+<p>Gulf fit-out and hospitality firms look especially for strong working drawings and detailing, services coordination, materials suited to heat and humidity, and Revit. Larger projects are BIM-led: since 1 January 2024, Dubai has required BIM model submissions in IFC format for building permits on larger buildings, as summarised on Autodesk's Dubai BIM mandate page.</p>
+<div class="cta cta-green">
+<div><h3>Turn Your Technical Skills Into BIM Skills</h3><p>Rooms, finishes and schedules in one coordinated model is the next step for many interior designers. Augmintech's PG Program in BIM Architecture is a structured way to build it. Check the course page for the current syllabus, schedule and fees.</p></div>
+<div><a class="cta-btn cta-btn-green" href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/">See the PG Program in BIM Architecture</a></div>
+</div>
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What skills does an interior designer need?</div><div class="faq-a">Design skills (space planning, concept, materials, lighting, furniture), technical skills (working drawings, detailing, services coordination, codes, estimation), digital skills (AutoCAD, SketchUp, rendering, Photoshop, Revit) and professional skills (clients, vendors, site, scheduling).</div></div>
+<div class="faq-item"><div class="faq-q">What is the most important skill for an interior designer?</div><div class="faq-a">Space planning sets the foundation, but for getting hired, accurate working drawings and software skills are what employers test first.</div></div>
+<div class="faq-item"><div class="faq-q">Which software skills do interior designers need?</div><div class="faq-a">Tools matched to the employer’s workflow, often AutoCAD and SketchUp, one renderer, Photoshop for presentations, and increasingly Revit for larger projects. PayScale also lists 3ds Max and CorelDRAW among popular skills in India.</div></div>
+<div class="faq-item"><div class="faq-q">Do interior designers need to know building codes?</div><div class="faq-a">Yes, at least the parts that affect interiors: minimum room sizes, door widths, accessibility, and fire and egress rules in commercial fit-outs.</div></div>
+<div class="faq-item"><div class="faq-q">How can I improve my interior design skills?</div><div class="faq-a">Work on real spaces: measure and replan rooms, draw complete working drawing sets, visit sites, learn materials hands-on, and get regular feedback from experienced designers.</div></div>
+<div class="faq-item"><div class="faq-q">What soft skills do interior designers need?</div><div class="faq-a">Listening, clear explanation, negotiation with vendors, problem-solving on site, and staying organised across several projects.</div></div>
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+<li><strong>Infralens (citing NBC 2016 and IS codes)</strong>: <a href="https://infralens.in/thumbrules/habitable-room-minimum-area-single" rel="noopener" target="_blank">Habitable room minimum</a>; <a href="https://infralens.in/thumbrules/kitchen-min-area" rel="noopener" target="_blank">Kitchen minimum</a>; <a href="https://infralens.in/thumbrules/bath-wc-combined-area" rel="noopener" target="_blank">Bath and WC</a>; <a href="https://infralens.in/thumbrules/bathroom-wc-door-width" rel="noopener" target="_blank">Bathroom door width</a>; <a href="https://infralens.in/thumbrules/lux-living-room" rel="noopener" target="_blank">Living room lux</a>; <a href="https://infralens.in/code/IS-962-1989" rel="noopener" target="_blank">IS 962 summary</a>.</li>
+<li><strong>NKBA</strong>, <a href="https://kb.nkba.org/uploads/2022/05/Kitchen-Planning-Guidelines.pdf" rel="noopener" target="_blank">Kitchen Planning Guidelines</a>; <strong>HouseYog</strong>, <a href="https://www.houseyog.com/blog/kitchen-platform-height-depth-walkway/" rel="noopener" target="_blank">Kitchen platform height and depth</a>.</li>
+<li><strong>Lighting Design Lab</strong>, <a href="https://www.lightingdesignlab.com/node/820" rel="noopener" target="_blank">Accent lighting contrast</a>.</li>
+<li><strong>Designing Buildings</strong>, <a href="https://www.designingbuildings.co.uk/wiki/Laminate_flooring" rel="noopener" target="_blank">Laminate flooring</a>.</li>
+<li><strong>Government of India</strong>, <a href="https://www.indiacode.nic.in/bitstream/123456789/19012/1/reraact.pdf" rel="noopener" target="_blank">RERA Act 2016</a>, Section 2(k).</li>
+<li><strong>PayScale India</strong>, <a href="https://www.payscale.com/research/IN/Job=Interior_Designer/Salary" rel="noopener" target="_blank">Interior Designer</a> (updated 24 October 2026).</li>
+<li><strong>Autodesk</strong>: <a href="https://www-int.autodesk.com/certification/learning-pathways" rel="noopener" target="_blank">Certification learning pathways</a>; <a href="https://www.autodesk.com:443/education/home" rel="noopener" target="_blank">Education plan</a>; <a href="https://help.autodesk.com/cloudhelp/2022/ENU/RevitLT-ArchDes/files/GUID-0BB62832-36DD-4E06-A9D4-EE98CE0FCF89.htm" rel="noopener" target="_blank">Room area boundary</a>; <a href="https://boards.autodesk.com/dubai-bim-mandate" rel="noopener" target="_blank">Dubai Municipality BIM mandate</a>.</li>
+</ul>
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 8 November 2026. Standards and pay data change; check current codes and sources for each project.</p>
+</div>

@@ -1,0 +1,288 @@
+<style>
+#aug-architect-interview-questions{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-architect-interview-questions *,#aug-architect-interview-questions *::before,#aug-architect-interview-questions *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-architect-interview-questions{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-architect-interview-questions.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-architect-interview-questions .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-architect-interview-questions .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-architect-interview-questions .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-architect-interview-questions .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-architect-interview-questions .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-architect-interview-questions .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-architect-interview-questions h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-architect-interview-questions h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-architect-interview-questions p{margin-bottom:.9rem;font-size:16px;}
+#aug-architect-interview-questions a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-architect-interview-questions a:hover{border-color:var(--brand);}
+#aug-architect-interview-questions hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-architect-interview-questions .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-architect-interview-questions .chart svg{width:100%;height:auto;display:block;}
+#aug-architect-interview-questions .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-architect-interview-questions .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-architect-interview-questions .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-architect-interview-questions .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-architect-interview-questions .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-architect-interview-questions .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-architect-interview-questions .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-architect-interview-questions table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-architect-interview-questions caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-architect-interview-questions thead tr{background:var(--slate);color:#fff;}
+#aug-architect-interview-questions thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-architect-interview-questions tbody tr:nth-child(even){background:var(--surface);}
+#aug-architect-interview-questions tbody tr:hover{background:var(--brand-lite);}
+#aug-architect-interview-questions td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-architect-interview-questions td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-architect-interview-questions tbody tr.hl{background:var(--green-lite)!important;}
+#aug-architect-interview-questions tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-architect-interview-questions ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-architect-interview-questions ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-architect-interview-questions .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-architect-interview-questions .cta-green{background:var(--slate);}
+#aug-architect-interview-questions .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-architect-interview-questions .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-architect-interview-questions .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-architect-interview-questions .cta-btn-blue{color:var(--brand);}#aug-architect-interview-questions .cta-btn-green{color:var(--slate);}
+#aug-architect-interview-questions figure{margin:1.5rem 0;}
+#aug-architect-interview-questions figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-architect-interview-questions figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-architect-interview-questions dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-architect-interview-questions dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-architect-interview-questions dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-architect-interview-questions .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-architect-interview-questions .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-architect-interview-questions .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-architect-interview-questions .srcs{list-style:none;padding:0;}
+#aug-architect-interview-questions .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-architect-interview-questions .srcs li:last-child{border-bottom:none;}
+
+#aug-architect-interview-questions .ans{margin:1.3rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#F4F6F8;border-left:4px solid var(--brand);font-size:16.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-architect-interview-questions .ans b{color:var(--ink);}
+#aug-architect-interview-questions .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-architect-interview-questions .dfig svg{display:block;width:100%;height:auto;}
+#aug-architect-interview-questions .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-architect-interview-questions .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-architect-interview-questions .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-architect-interview-questions figure.pf{margin:1.2rem 0;} #aug-architect-interview-questions figure.pf figcaption{font-family:var(--body);font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-architect-interview-questions .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;} #aug-architect-interview-questions .pair figure{margin:0;}
+#aug-architect-interview-questions .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-architect-interview-questions .alert{margin:1.2rem 0;padding:.85rem 1rem;border-radius:var(--radius);background:#FFF4E5;border:1px solid #F3D3A4;font-size:14.5px;line-height:1.6;}
+#aug-architect-interview-questions .alert b{color:var(--warn);}
+#aug-architect-interview-questions .t table{font-size:13.5px;} #aug-architect-interview-questions .t td:first-child{font-weight:700;color:var(--ink);} #aug-architect-interview-questions .t th{white-space:normal;}
+#aug-architect-interview-questions .t .m{font-family:var(--mono);font-size:12px;white-space:nowrap;}
+#aug-architect-interview-questions .t caption{caption-side:bottom;text-align:left;font-family:var(--body);text-transform:none;letter-spacing:0;font-size:12.5px;color:var(--muted);padding:.5rem .2rem 0;}
+#aug-architect-interview-questions .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.2rem 0;}
+#aug-architect-interview-questions .cards.two{grid-template-columns:1fr 1fr;} #aug-architect-interview-questions .cards.four{grid-template-columns:repeat(4,1fr);}
+#aug-architect-interview-questions .cards>div{border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:var(--radius);padding:.85rem .95rem;background:#fff;}
+#aug-architect-interview-questions .cards>div.c2{border-top-color:#1D6B43;} #aug-architect-interview-questions .cards>div.c3{border-top-color:#8A5A00;} #aug-architect-interview-questions .cards>div.c4{border-top-color:#5B3A86;} #aug-architect-interview-questions .cards>div.c5{border-top-color:#B5371B;}
+#aug-architect-interview-questions .cards b{display:block;font-family:var(--display);font-size:15.5px;color:var(--ink);margin-bottom:.25rem;line-height:1.3;}
+#aug-architect-interview-questions .cards span{display:block;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-architect-interview-questions .cards em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.5rem;}
+#aug-architect-interview-questions .cards ul{margin:.3rem 0 0;padding-left:1.05rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-architect-interview-questions .steps{list-style:none;margin:1.2rem 0;padding:0;counter-reset:s;display:grid;gap:10px;}
+#aug-architect-interview-questions .steps li{counter-increment:s;position:relative;padding:.8rem 1rem .8rem 3.4rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;font-size:15px;line-height:1.6;}
+#aug-architect-interview-questions .steps li::before{content:counter(s);position:absolute;left:.9rem;top:.8rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--display);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+#aug-architect-interview-questions .steps li b{display:block;font-family:var(--display);color:var(--ink);font-size:15.5px;margin-bottom:2px;}
+#aug-architect-interview-questions .nl{list-style:none;padding:0;margin:1.2rem 0;counter-reset:u;}
+#aug-architect-interview-questions .nl li{counter-increment:u;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;padding:.75rem 0;border-top:1px solid var(--border);font-size:15px;line-height:1.6;}
+#aug-architect-interview-questions .nl li:first-child{border-top:none;}
+#aug-architect-interview-questions .nl li::before{content:counter(u,decimal-leading-zero);font-family:var(--mono);font-weight:700;color:var(--coral);font-size:14px;padding-top:2px;}
+#aug-architect-interview-questions .nl b{color:var(--ink);}
+#aug-architect-interview-questions .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-architect-interview-questions .pick>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-architect-interview-questions .pick .a{background:#EEF7F1;border:1px solid #C6E3D1;} #aug-architect-interview-questions .pick .r{background:#FDF1EC;border:1px solid #F1CDBE;}
+#aug-architect-interview-questions .pick h3{margin:0 0 .4rem;font-size:15.5px;} #aug-architect-interview-questions .pick .a h3{color:#1D6B43;} #aug-architect-interview-questions .pick .r h3{color:#9A3B1E;}
+#aug-architect-interview-questions .pick ul{margin:0;padding-left:1.1rem;} #aug-architect-interview-questions .pick li{margin-bottom:.3rem;}
+#aug-architect-interview-questions .chk{margin:1.2rem 0;border:1px solid var(--border);border-radius:var(--radius);background:#fff;padding:.4rem 1rem;}
+#aug-architect-interview-questions .chk div{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:.6rem 0;border-top:1px solid var(--border);font-size:14.5px;line-height:1.55;}
+#aug-architect-interview-questions .chk div:first-child{border-top:none;}
+#aug-architect-interview-questions .chk div::before{content:"";width:16px;height:16px;border:2px solid var(--green);border-radius:4px;margin-top:3px;}
+#aug-architect-interview-questions .chk b{color:var(--ink);}
+#aug-architect-interview-questions .qa{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-architect-interview-questions .qa .q{padding:.75rem 1rem;background:var(--surface);font-family:var(--display);font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.45;}
+#aug-architect-interview-questions .qa .q span{font-family:var(--mono);font-size:11px;color:var(--brand);font-weight:700;margin-right:8px;letter-spacing:.04em;}
+#aug-architect-interview-questions .qa .a{padding:.75rem 1rem;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-architect-interview-questions .qa .a i{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--coral);margin-top:.5rem;letter-spacing:.03em;}
+#aug-architect-interview-questions .bar{display:flex;margin:1.2rem 0 .4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-architect-interview-questions .bar div{padding:.75rem .7rem;font-size:13px;line-height:1.4;color:#fff;}
+#aug-architect-interview-questions .bar div b{display:block;font-family:var(--display);font-size:17px;}
+#aug-architect-interview-questions .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-architect-interview-questions .split>div{border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);padding:.9rem 1rem;}
+#aug-architect-interview-questions .split h3{margin:0 0 .5rem;font-size:16px;} #aug-architect-interview-questions .split dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14px;}
+#aug-architect-interview-questions .split dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:2px;} #aug-architect-interview-questions .split dd{margin:0;color:var(--ink);}
+
+@media(max-width:820px){ #aug-architect-interview-questions .cards,#aug-architect-interview-questions .cards.four{grid-template-columns:1fr 1fr;} }
+@media(max-width:640px){
+  #aug-architect-interview-questions .t table{min-width:600px;}
+  #aug-architect-interview-questions .cards,#aug-architect-interview-questions .cards.two,#aug-architect-interview-questions .cards.four,#aug-architect-interview-questions .pick,#aug-architect-interview-questions .pair,#aug-architect-interview-questions .split{grid-template-columns:1fr;}
+  #aug-architect-interview-questions .bar{flex-direction:column;} #aug-architect-interview-questions .bar div{flex:none!important;}
+  #aug-architect-interview-questions .steps li{padding-left:3rem;}
+  #aug-architect-interview-questions .dfig.wide{overflow-x:auto;} #aug-architect-interview-questions .dfig.wide svg{min-width:640px;}
+  #aug-architect-interview-questions .cta{flex-direction:column;align-items:flex-start;}
+  #aug-architect-interview-questions .cta>div{max-width:100%;} #aug-architect-interview-questions .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-architect-interview-questions .cta>div:last-child .cta-btn{margin-left:0;white-space:normal;text-align:center;line-height:1.5;}
+}
+#aug-architect-interview-questions .pf .ph{height:auto!important;aspect-ratio:auto!important;padding:0!important;min-height:0!important;overflow:hidden}#aug-architect-interview-questions .pf .ph img{position:static!important;display:block;width:100%!important;height:auto!important;object-fit:contain!important}#aug-architect-interview-questions .pf figcaption{font-family:Arial,sans-serif!important;font-size:14px!important;line-height:1.6!important;padding:12px!important}#aug-architect-interview-questions .pair{display:block!important}#aug-architect-interview-questions .pair .pf{margin:18px 0!important}#aug-architect-interview-questions .tbl-wrap{overflow-x:auto}#aug-architect-interview-questions .software-link{display:inline-block;padding:5px 8px;margin:4px 2px;background:#eef4fa;border:1px solid #bacfe1;border-radius:5px;line-height:1.5}#aug-architect-interview-questions .cta-btn{white-space:normal!important}#aug-architect-interview-questions blockquote{margin:20px 0;padding:20px;background:#edf4f8;border-left:4px solid #0f4c81}@media(max-width:640px){#aug-architect-interview-questions .tbl-wrap table{min-width:620px}#aug-architect-interview-questions h2,#aug-architect-interview-questions h3{overflow-wrap:anywhere}}
+/* Official software demonstrations */#aug-architect-interview-questions .vendor-demo{margin:28px 0;border:1px solid #d5dfe7;border-radius:14px;overflow:hidden;background:#fff}#aug-architect-interview-questions .vendor-demo h3{padding:20px 24px 0;margin:0;font-size:1.25rem}#aug-architect-interview-questions .vendor-demo .demo-screen{background:#101820;aspect-ratio:16/9;width:100%;margin-top:16px}#aug-architect-interview-questions .vendor-demo iframe,#aug-architect-interview-questions .vendor-demo video{display:block;width:100%;height:100%;border:0;object-fit:contain}#aug-architect-interview-questions .vendor-demo figcaption{padding:18px 24px;font-family:inherit;font-size:16px;line-height:1.65;color:#344b5c}#aug-architect-interview-questions .vendor-demo p{margin:0 0 10px}#aug-architect-interview-questions .vendor-demo a{text-decoration:underline}#aug-architect-interview-questions .vendor-demo .demo-watch{border-top:1px solid #e2e8ee;padding-top:12px}#aug-architect-interview-questions .vendor-demo strong{color:#183a50}@media(max-width:600px){#aug-architect-interview-questions .vendor-demo h3,#aug-architect-interview-questions .vendor-demo figcaption{padding-left:16px;padding-right:16px}#aug-architect-interview-questions .vendor-demo figcaption{font-size:15px}}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-architect-interview-questions.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-architect-interview-questions h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-architect-interview-questions a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-architect-interview-questions a:hover{color:#18d104;}
+#aug-architect-interview-questions .cta{background:#1a1a1a;}
+#aug-architect-interview-questions .cta a.cta-btn{text-decoration:none;}
+#aug-architect-interview-questions .cta-btn-blue{background:#18d104;color:#000;}
+#aug-architect-interview-questions .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-architect-interview-questions [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+<div class="blog" id="aug-architect-interview-questions">
+<div class="ans"><b>Architect interviews test five things: how you think about design (through your portfolio), whether you can produce correct working drawings, what you actually did on real projects, how well you know construction, codes and approvals, and how fluent you are in AutoCAD, Revit and BIM coordination.</b> Expect a portfolio walkthrough, technical questions with real numbers, questions about your internship or past projects, and often a design or drafting test. Below are 40 common questions grouped by topic, each with what the interviewer is checking and a model answer to adapt, plus test tips and questions to ask the firm.</div>
+<figure class="dfig wide">
+<svg aria-label="Five areas architect interviews assess: portfolio, technical drawings, project experience, codes and professional practice, and software and BIM" role="img" viewBox="0 0 1000 300"><rect fill="#fff" height="300" width="1000"></rect><text fill="#1E2833" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle" x="500" y="28">WHAT ARCHITECT INTERVIEWS ACTUALLY TEST</text><line stroke="#D6DEE8" stroke-linecap="round" stroke-width="5" x1="100" x2="900" y1="125" y2="125"></line><circle cx="100" cy="125" fill="#1F4A6E" r="38"></circle><text fill="#fff" font-family="sans-serif" font-size="24" font-weight="800" text-anchor="middle" x="100" y="133">1</text><text fill="#1E2833" font-family="sans-serif" font-size="14.5" font-weight="800" text-anchor="middle" x="100" y="195">Portfolio</text><text fill="#56616D" font-family="sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" x="100" y="218">Design thinking, range</text><text fill="#56616D" font-family="sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" x="100" y="234">your role</text><circle cx="300" cy="125" fill="#1D6B43" r="38"></circle><text fill="#fff" font-family="sans-serif" font-size="24" font-weight="800" text-anchor="middle" x="300" y="133">2</text><text fill="#1E2833" font-family="sans-serif" font-size="14.5" font-weight="800" text-anchor="middle" x="300" y="195">Technical drawings</text><text fill="#56616D" font-family="sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" x="300" y="218">Working drawings, details</text><text fill="#56616D" font-family="sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" x="300" y="234">standards</text><circle cx="500" cy="125" fill="#8A5A00" r="38"></circle><text fill="#fff" font-family="sans-serif" font-size="24" font-weight="800" text-anchor="middle" x="500" y="133">3</text><text fill="#1E2833" font-family="sans-serif" font-size="14.5" font-weight="800" text-anchor="middle" x="500" y="195">Project experience</text><text fill="#56616D" font-family="sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" x="500" y="218">What you did, problems you solved</text><circle cx="700" cy="125" fill="#B5371B" r="38"></circle><text fill="#fff" font-family="sans-serif" font-size="24" font-weight="800" text-anchor="middle" x="700" y="133">4</text><text fill="#1E2833" font-family="sans-serif" font-size="14.5" font-weight="800" text-anchor="middle" x="700" y="195">Codes and practice</text><text fill="#56616D" font-family="sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" x="700" y="218">By-laws, NBC</text><text fill="#56616D" font-family="sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" x="700" y="234">approvals, contracts</text><circle cx="900" cy="125" fill="#5B3A86" r="38"></circle><text fill="#fff" font-family="sans-serif" font-size="24" font-weight="800" text-anchor="middle" x="900" y="133">5</text><text fill="#1E2833" font-family="sans-serif" font-size="14.5" font-weight="800" text-anchor="middle" x="900" y="195">Software and BIM</text><text fill="#56616D" font-family="sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" x="900" y="218">AutoCAD, Revit</text><text fill="#56616D" font-family="sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" x="900" y="234">coordination</text><text fill="#7A8794" font-family="sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" x="500" y="292">Typical emphasis; small studios may cover all five in one conversation.</text></svg>
+<figcaption>The five areas most architect interviews cover. Augmintech diagram.</figcaption>
+</figure>
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+<li><strong>Know every page of your <a href="https://augmintech.com/bim-portfolio/">portfolio</a>:</strong> the brief, your role, your decisions and what you would change.</li>
+<li><strong>Show you can draw for construction,</strong> not just present: working drawings and details matter as much as renders.</li>
+<li><strong>Use real numbers:</strong> scales, minimum room sizes, stair widths and fire rules show you can be trusted on a live project.</li>
+<li><strong>Tell project stories with structure:</strong> situation, what you did, result.</li>
+<li><strong>Be honest about software:</strong> say what you can demonstrate, especially for <a href="https://augmintech.com/learn-revit/">Revit</a> and BIM.</li>
+</ul>
+<h2 id="portfolio">Portfolio and About You</h2>
+<div class="qa"><div class="q"><span>Q1</span>Tell us about yourself.</div><div class="a">Sixty to ninety seconds: your degree and CoA registration status, internship, one strength with proof, and why this firm. "I completed my B.Arch in 2026 and I'm registering with the Council of Architecture. During my internship I produced the working drawings for a G+4 residential block, and I'm keen to grow in residential and mixed-use work like yours."<i>CHECKING: focus, research, registration status</i></div></div>
+<div class="qa"><div class="q"><span>Q2</span>Walk us through your thesis or best project.</div><div class="a">Follow the logic of your pages: context and brief, the key problem, your concept in one sentence, two or three design moves, how it was resolved in plan and section, and what you would do differently. Keep it to five minutes unless they ask for more.<i>CHECKING: design thinking and communication</i></div></div>
+<div class="qa"><div class="q"><span>Q3</span>Why did you place the core and services here?</div><div class="a">Explain the reasoning: efficient circulation, shortest service runs, structural logic, natural light for habitable rooms, and fire egress. If you are unsure, say what you would check rather than guessing.<i>CHECKING: planning logic, honesty</i></div></div>
+<div class="qa"><div class="q"><span>Q4</span>Which of these drawings did you personally produce?</div><div class="a">Be precise about your contribution in group and office work. Interviewers often ask detailed follow-ups on whatever you claim.<i>CHECKING: authorship</i></div></div>
+<div class="qa"><div class="q"><span>Q5</span>Why do you want to work here?</div><div class="a">Name two of their projects and connect them to your interests and skills. Generic answers suggest you applied everywhere.<i>CHECKING: genuine interest</i></div></div>
+<figure class="pf"><div class="ph"><img alt="Original AI-generated portfolio interview scene; not a documented interview." loading="lazy" src="https://augmintech.com/wp-content/uploads/2026/11/116-original-aigenerated-portfolio-interview-scene.webp"/></div><figcaption>Original AI-generated portfolio interview scene; not a documented interview.</figcaption></figure>
+<div class="cta">
+<div><h3>Walk In With BIM Skills</h3><p>Revit and coordination questions come up in more and more architect interviews. Augmintech's PG Program in BIM Architecture teaches building information modelling for architecture. See the course page for the current syllabus, schedule and fees.</p></div>
+<div><a class="cta-btn cta-btn-blue" href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/">Explore the PG Program in BIM Architecture</a></div>
+</div>
+<h2 id="drawings">Technical Drawing Questions</h2>
+<div class="qa"><div class="q"><span>Q6</span>What does a working drawing set contain?</div><div class="a">Site plan, floor plans, elevations, sections, details (wall sections, staircase, toilets, doors and windows), reflected ceiling plans, door, window and finish schedules, and coordination with structural and services drawings, all on numbered, titled sheets with a drawing list and revision control.<i>CHECKING: you know what "complete" means</i></div></div>
+<div class="qa"><div class="q"><span>Q7</span>What scales would you use?</div><div class="a">Following IS 962: 1:500 or 1:1000 for site plans, 1:50 or 1:100 for plans, elevations and sections, and 1:10 or 1:20 for details.<i>CHECKING: drafting standards</i></div></div>
+<div class="qa"><div class="q"><span>Q8</span>How do you make a drawing readable when printed?</div><div class="a">Clear line hierarchy (IS 962 asks for thick lines at least twice the thickness of thin ones), consistent text heights, dimensions that do not clash, a title block at bottom right, scale and north point, and only the information that drawing needs.<i>CHECKING: graphic discipline</i></div></div>
+<div class="qa"><div class="q"><span>Q9</span>What would you show in a wall section?</div><div class="a">Foundation and plinth outline, wall and floor build-ups, slab and beam, window sill, lintel and head, parapet or roof with waterproofing and slope, internal and external finishes, levels and key dimensions, with materials labelled.<i>CHECKING: construction understanding</i></div></div>
+<div class="qa"><div class="q"><span>Q10</span>Plan and section disagree on a window height. What do you do?</div><div class="a">Find the correct value from the design intent or the architect, fix every affected drawing, cloud the revision, update the revision table and tell the team. In BIM, change the responsible model element, then inspect every affected view, schedule and manually authored note.<i>CHECKING: checking discipline</i></div></div>
+<div class="qa"><div class="q"><span>Q11</span>How do you coordinate with the structural drawings?</div><div class="a">Overlay the structural grid and beam layout on plans and sections, check beam depths against ceiling heights and window heads, column positions against doors and furniture, and raise conflicts early with the engineer.<i>CHECKING: coordination</i></div></div>
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="construction">Construction and Services Questions</h2>
+<div class="qa"><div class="q"><span>Q12</span>How would you waterproof a toilet in an upper floor?</div><div class="a">A sunken or level slab with a waterproofing membrane taken up the walls, sloped screed to the floor trap, proper sealing around pipe penetrations, and a flood test before tiling. Mention coordination with plumbing drawings for trap and shaft positions.<i>CHECKING: practical construction knowledge</i></div></div>
+<div class="qa"><div class="q"><span>Q13</span>What affects the choice of structural system for a G+4 building?</div><div class="a">Spans and planning grid, loads, soil conditions, speed and cost, local construction skills and fire requirements. A framed RCC structure is common in India; the structural engineer makes the final design.<i>CHECKING: you know where your role ends</i></div></div>
+<div class="qa"><div class="q"><span>Q14</span>How do you plan service shafts?</div><div class="a">Stack wet areas vertically, keep shafts accessible for maintenance, size them with the MEP consultant, and keep them out of habitable rooms where possible.<i>CHECKING: services awareness</i></div></div>
+<div class="qa"><div class="q"><span>Q15</span>How do you reduce heat gain in a building in a hot climate?</div><div class="a">Orientation, shading on east and west faces, smaller and shaded west openings, insulated roofs, light-coloured surfaces, cross-ventilation and, where relevant, high-performance glazing.<i>CHECKING: climate-responsive design</i></div></div>
+<h2 id="codes">Codes, By-laws and Approvals</h2>
+<div class="qa"><div class="q"><span>Q16</span>What is the minimum size of a habitable room?</div><div class="a">Under NBC 2016, where a unit has a single habitable room, it should be at least 9.5 m² with a minimum width of 2.4 m. Local by-laws can differ, so always check the city's rules.<i>CHECKING: code knowledge</i></div></div>
+<div class="qa"><div class="q"><span>Q17</span>What is the minimum width of a common staircase in an apartment building?</div><div class="a">Establish the occupancy, occupant load, building height and applicable local provisions, then verify the required clear width and how it is measured. Do not give one width as a universal answer for apartment buildings.<i>CHECKING: fire and egress</i></div></div>
+<div class="qa"><div class="q"><span>Q18</span>What is a dead-end corridor, and how long can it be?</div><div class="a">A corridor with only one direction of escape. The permitted dead-end length depends on the applicable occupancy and fire provisions. Check the relevant adopted code and sprinkler conditions rather than applying one pair of limits to every building.<i>CHECKING: fire safety basics</i></div></div>
+<div class="qa"><div class="q"><span>Q19</span>What do you check before starting a building design on a plot?</div><div class="a">Zoning and permitted use, FAR or FSI, ground coverage, setbacks, height limits, road widening, parking norms, and any heritage, airport or environmental restrictions, from the local development control rules.<i>CHECKING: approvals awareness</i></div></div>
+<div class="qa"><div class="q"><span>Q20</span>What is carpet area?</div><div class="a">Under Section 2(k) of the RERA Act 2016, the net usable floor area of a flat, excluding external walls, service shafts and exclusive balconies or terraces, but including internal partition walls. It matters for sale agreements and area statements.<i>CHECKING: industry knowledge</i></div></div>
+<div class="qa"><div class="q"><span>Q21</span>Who can sign drawings for building approval?</div><div class="a">A registered architect (or other professional as the local rules allow). In India, only people registered with the Council of Architecture may use the title "Architect".<i>CHECKING: professional responsibility</i></div></div>
+<h2 id="software">Software and BIM Questions</h2>
+<div class="qa"><div class="q"><span>Q22</span>Which software do you use, and for what?</div><div class="a">Match tools to tasks: "AutoCAD for details and DWG exchange, Revit for the model and drawing set, SketchUp or Rhino for early massing, Enscape for visuals." Only list what you can demonstrate.<i>CHECKING: honest fluency</i></div></div>
+<div class="qa"><div class="q"><span>Q23</span>What is the difference between AutoCAD and Revit?</div><div class="a">AutoCAD draws lines; Revit models building elements, and plans, sections, elevations and schedules are views of one model that update together.<i>CHECKING: BIM understanding</i></div></div>
+<div class="qa"><div class="q"><span>Q24</span>How does worksharing in Revit work?</div><div class="a">The team works from a central model, each person in a local copy. You edit elements in worksets you own or borrow, and synchronise with central to publish your changes and receive others'. Autodesk recommends synchronising at least daily and creating a fresh local copy every day.<i>CHECKING: team BIM experience</i></div></div>
+<div class="qa"><div class="q"><span>Q25</span>What is LOD?</div><div class="a">Level of development describes the defined reliability and development of a model element for an agreed use. Refer to the project’s adopted specification and element requirements; a visually detailed object is not automatically suitable for fabrication or verified as-built use.<i>CHECKING: BIM vocabulary</i></div></div>
+<div class="qa"><div class="q"><span>Q26</span>Have you worked with a BIM execution plan or ISO 19650?</div><div class="a">If yes, describe what you followed: naming conventions, model responsibilities, the common data environment, exchange dates. If not, explain what you know: ISO 19650 is the international series for managing information on BIM projects, and the BEP sets out how a team will deliver it.<i>CHECKING: readiness for larger projects</i></div></div>
+<div class="qa"><div class="q"><span>Q27</span>A consultant's Revit model clashes with yours. What do you do?</div><div class="a">Link both models, run a clash check or review in 3D, agree which element moves with the consultant, update the model, and record the decision so it does not reappear.<i>CHECKING: coordination maturity</i></div></div>
+<p>Software questions are where many graduates are weakest, especially beyond basic Revit modelling. If you are applying to larger practices or <a href="https://augmintech.com/bim-careers-middle-east-uae-ksa/">Gulf firms</a>, building real BIM skills first, through self-study or a structured option such as Augmintech's PG Program in BIM Architecture, makes these answers far stronger.</p>
+<h2 id="experience">Project Experience Questions</h2>
+<p>For these, use a simple structure: <strong>situation</strong> (the project and problem), <strong>action</strong> (what you personally did) and <strong>result</strong> (what changed, ideally with a number).</p>
+<div class="qa"><div class="q"><span>Q28</span>Tell us about a problem you solved on site.</div><div class="a">"During my internship, a beam clashed with a window head on the second floor. I checked the structural drawing, proposed lowering the window by 150 mm with a revised sill height, drew the change and got it approved in a day, avoiding rework on the formwork."<i>CHECKING: practical problem solving</i></div></div>
+<div class="qa"><div class="q"><span>Q29</span>Describe a time you missed a deadline or made a mistake.</div><div class="a">Pick a real example, own it, explain the fix and the system you changed, such as a drawing checklist before issue.<i>CHECKING: accountability</i></div></div>
+<div class="qa"><div class="q"><span>Q30</span>How did you handle a difficult client or consultant?</div><div class="a">Show listening, documenting decisions, offering options with consequences, and escalating to your senior when needed.<i>CHECKING: professionalism</i></div></div>
+<div class="qa"><div class="q"><span>Q31</span>What did you learn in your internship?</div><div class="a">Name two or three concrete skills, such as producing submission drawings or coordinating MEP shafts, and the projects where you used them.<i>CHECKING: learning from practice</i></div></div>
+<div class="qa"><div class="q"><span>Q32</span>How do you manage several deadlines at once?</div><div class="a">A list of deliverables and dates, weekly priorities agreed with your lead, and early warning when two deadlines collide.<i>CHECKING: organisation</i></div></div>
+<h2 id="practice">Professional Practice Questions</h2>
+<div class="qa"><div class="q"><span>Q33</span>What are the stages of an architectural project?</div><div class="a">Brief and feasibility, concept, schematic design, design development, approvals, working drawings and tender, construction and site supervision, and handover.<i>CHECKING: big-picture understanding</i></div></div>
+<div class="qa"><div class="q"><span>Q34</span>What is a tender, and what goes into tender documents?</div><div class="a">The process of inviting contractors to price the work. Documents usually include drawings, specifications, a bill of quantities, conditions of contract and the form of tender.<i>CHECKING: practice knowledge</i></div></div>
+<div class="qa"><div class="q"><span>Q35</span>Where do you see yourself in three years?</div><div class="a">Realistic and aligned with the firm: "Running small projects end to end, from design to site, and leading the Revit model on a larger project."<i>CHECKING: ambition that fits</i></div></div>
+<div class="qa"><div class="q"><span>Q36</span>What are your salary expectations?</div><div class="a">Give a range based on data for your city and experience. PayScale's 2026 page puts the average architect in India at about ₹4.2 lakh a year in base pay, with entry-level pay lower; adjust for the city, firm and your skills.<i>CHECKING: realism</i></div></div>
+<h2 id="gulf">Questions for Gulf Interviews</h2>
+<div class="qa"><div class="q"><span>Q37</span>Do you have experience on large, BIM-led projects?</div><div class="a">Describe your role honestly. Mention that since 1 January 2024 Dubai has required BIM model submissions in IFC format for building permits on larger buildings, and how your Revit and IFC experience prepares you for that.<i>CHECKING: BIM readiness</i></div></div>
+<div class="qa"><div class="q"><span>Q38</span>Have you worked with international consultants or standards?</div><div class="a">Mention any exposure to international codes, metric drawing standards, or coordination with overseas teams; if limited, show adaptability with a concrete example.<i>CHECKING: fit for international teams</i></div></div>
+<div class="qa"><div class="q"><span>Q39</span>How would you design for extreme heat and sand?</div><div class="a">Deep shading, high-performance glazing, compact form, insulated envelopes, sealed openings and durable finishes, coordinated with HVAC design.<i>CHECKING: climate design</i></div></div>
+<div class="qa"><div class="q"><span>Q40</span>Are you comfortable with shop-drawing review and site coordination?</div><div class="a">Explain how you check shop drawings against design intent, dimensions and specifications, and how you record comments.<i>CHECKING: delivery-stage skills</i></div></div>
+<h2 id="tests">The Design and Drafting Test</h2>
+<div class="cards">
+<div><b>Design test</b><span>A small brief, such as a clinic or house on a given plot, to plan in one to three hours with a short explanation.</span><em>Show zoning, circulation, code awareness</em></div>
+<div class="c2"><b>Drafting test</b><span>Draft a plan from a sketch, derive a section through a staircase, or detail a wall or toilet.</span><em>Show accuracy, line weights, annotation</em></div>
+<div class="c3"><b>Software test</b><span>Model a small building in Revit or produce a sheet in a set time.</span><em>Show clean structure: levels, types, views</em></div>
+</div>
+<ul class="bullets">
+<li><strong>Read the brief twice</strong> and list the requirements before drawing.</li>
+<li><strong>Plan your time:</strong> zoning, then plan, then section, then annotation.</li>
+<li><strong>Show code awareness:</strong> stair widths, room sizes, setbacks, accessible entry.</li>
+<li><strong>Leave five minutes</strong> to check dimensions and labels.</li>
+</ul>
+<figure class="pf"><div class="ph"><img alt="A suggested practice allocation, not a standard employer test duration." loading="lazy" src="https://augmintech.com/wp-content/uploads/2026/11/116-a-suggested-practice-allocation-not.webp"/></div><figcaption>A suggested practice allocation, not a standard employer test duration.</figcaption></figure>
+<h2 id="ask">Questions to Ask the Firm</h2>
+<div class="chk">
+<div><span><b>What projects would I work on</b> in the first six months?</span></div>
+<div><span><b>Do juniors get site exposure,</b> and how often?</span></div>
+<div><span><b>Which software and standards</b> does the office use: AutoCAD, Revit, a BIM execution plan?</span></div>
+<div><span><b>How are drawings reviewed</b> before issue?</span></div>
+<div><span><b>Will the firm support my CoA registration</b> and further training?</span></div>
+</div>
+<h2 id="demonstrate">Turn a Model Answer Into Evidence</h2><p>Prepare one project in enough detail to explain the brief, constraints, your contribution, the drawings and one revision. A fictional practice project is acceptable when clearly labelled. Do not present an internship team's output as work you personally completed.</p><h3>A useful answer structure</h3><p>For a coordination question, explain the location and conflict, the information you checked, who authorised the decision, what you changed and how you verified the result. For example: “In a practice model, I found that the proposed ceiling left insufficient space below a beam for the intended service route. I recorded the issue and compared a local ceiling adjustment with a revised route. I would obtain the responsible designers' agreement before changing the model.” Keep an exercise distinct from live project experience.</p><h3>What to demonstrate in Revit</h3><p>Open a plan and section, select a door, explain its type and instance properties, then make a controlled change. Show the affected schedule and sheet. Check whether notes and dimensions still communicate the design correctly. A live model can update geometry while leaving a manually typed note wrong.</p><p><a class="software-link" href="https://help.autodesk.com/cloudhelp/2026/ENU/Revit-GetStarted/files/GUID-3197A4ED-323F-4D32-91C0-BA79E794B806.htm">Autodesk Revit: official interface video and guide</a>. Use it to identify the Ribbon, Properties palette, Project Browser and View Control Bar before practising. The guide identifies its release; your installed version may look different.</p><h3>When you do not know the answer</h3><p>Say what you know, identify the missing information and explain how you would verify it. For a stair-width question, establish occupancy, building height, occupant load and the applicable local provisions before giving a figure. For a waterproofing question, identify the specified system and manufacturer's requirements. Guessing a confident number is weaker than explaining a reliable checking process.</p><h3>Prepare a compact interview folder</h3><ul><li>A short portfolio PDF with your role stated on each project.</li><li>One coordinated drawing set and one developed construction detail.</li><li>An editable practice model you can navigate without a tutorial.</li><li>A revision example showing the issue, decision and checked output.</li><li>A list of assumptions and unresolved items, rather than hidden gaps.</li></ul><p>Check that you are permitted to show employer or client material. Use a personal exercise when project confidentiality prevents sharing. Test the files offline, keep a PDF backup and avoid downloading assets during the interview.</p><h2 id="prepare">Preparation Checklist</h2>
+<div class="chk">
+<div><span><b>Portfolio:</b> best project first, every page explainable, working drawings included.</span></div>
+<div><span><b>Numbers:</b> revise IS 962 scales, NBC room and stair minimums, fire basics and carpet area.</span></div>
+<div><span><b>Stories:</b> three project examples using situation, action, result.</span></div>
+<div><span><b>Software:</b> practise a timed AutoCAD plan and a small Revit model with a sheet.</span></div>
+<div><span><b>The firm:</b> three of their projects and a comment on each.</span></div>
+<div><span><b>Registration:</b> CoA registration number or application status ready.</span></div>
+</div>
+<figure class="vendor-demo"><h3>Revit demonstration: assemble a drawing sheet</h3><div class="demo-screen"><video controls="controls" crossorigin="anonymous" data-video-id="ptdmJwaDE6-UwwNV1gv4TKoOBrbTNNEX" poster="https://help.autodesk.com/videos/ptdmJwaDE6-UwwNV1gv4TKoOBrbTNNEX/poster" preload="none"><source src="https://help.autodesk.com/videos/ptdmJwaDE6-UwwNV1gv4TKoOBrbTNNEX/video.webm" type="video/webm"/><source src="https://help.autodesk.com/videos/ptdmJwaDE6-UwwNV1gv4TKoOBrbTNNEX/video.mp4" type="video/mp4"/></video></div><figcaption><p>Autodesk’s Create Sheets tutorial shows the application and the steps used to assemble a drawing sheet. <a href="https://help.autodesk.com/cloudhelp/2026/ENU/Revit-GetStarted/files/GUID-267C7626-F0B4-444A-9593-A3FB101C4F21.htm" rel="noopener" target="_blank">Open the original demonstration</a>.</p><p class="demo-watch"><strong>What to look for:</strong> Follow sheet creation, selection of a view from the Project Browser and placement on the sheet. In an interview, explain your own view scale, annotation and sheet-checking decisions rather than only naming commands.</p><p>Vendor-hosted video. Internet access is required; if playback is blocked, use the source link. The recorded interface may differ from your installed release.</p></figcaption></figure>
+<div class="cta cta-green">
+<div><h3>Answer the BIM Questions With Confidence</h3><p>Worksharing, LOD, coordination and BEPs come up in more interviews every year. Augmintech's PG Program in BIM Architecture is a structured way to build those skills. Check the course page for the current syllabus, schedule and fees.</p></div>
+<div><a class="cta-btn cta-btn-green" href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/">See the PG Program in BIM Architecture</a></div>
+</div>
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What questions are asked in an architect interview?</div><div class="faq-a">Portfolio and design questions, technical drawing and construction questions, codes and approvals, software and BIM, project experience, and often a design or drafting test.</div></div>
+<div class="faq-item"><div class="faq-q">How do I prepare for an architect interview as a fresher?</div><div class="faq-a">Know your portfolio deeply, revise key standards and code figures, prepare three project stories, practise a timed drafting task and a small Revit model, and research the firm's projects.</div></div>
+<div class="faq-item"><div class="faq-q">What is asked in an architecture design test?</div><div class="faq-a">Usually a small building on a given plot to zone and plan in one to three hours, or a drafting task such as a section through a staircase or a wall detail.</div></div>
+<div class="faq-item"><div class="faq-q">Do architecture firms ask about Revit?</div><div class="faq-a">Increasingly, yes, especially larger practices and Gulf firms. Expect questions on worksharing, views and sheets, and coordination with consultants' models.</div></div>
+<div class="faq-item"><div class="faq-q">Should I bring a printed portfolio?</div><div class="faq-a">Yes, or a tablet, plus a short PDF sent in advance. Include working drawings, not only renders.</div></div>
+<div class="faq-item"><div class="faq-q">How should I answer salary questions?</div><div class="faq-a">Give a researched range for your city and experience. PayScale puts the average architect in India at about ₹4.2 lakh a year in base pay, with freshers lower.</div></div>
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+<li><strong>Infralens</strong>: <a href="https://infralens.in/code/IS-962-1989" rel="noopener" target="_blank">IS 962:1989 summary</a>; <a href="https://infralens.in/thumbrules/habitable-room-minimum-area-single" rel="noopener" target="_blank">Habitable room minimum (NBC 2016)</a>; <a href="https://infralens.in/thumbrules/min-staircase-width-apartments" rel="noopener" target="_blank">Staircase width, apartments</a>; <a href="https://infralens.in/thumbrules/fire-max-dead-end-corridor" rel="noopener" target="_blank">Dead-end corridor limit</a>.</li>
+<li><strong>Government of India</strong>, <a href="https://www.indiacode.nic.in/bitstream/123456789/19012/1/reraact.pdf" rel="noopener" target="_blank">RERA Act 2016</a>, Section 2(k).</li>
+<li><strong>Free Press Journal</strong>, <a href="https://www.freepressjournal.in/amp/business/council-of-architecture-warns-against-unregistered-individuals-misusing-architect-title-issues-public-advisory" rel="noopener" target="_blank">CoA advisory on the "Architect" title</a> (2 August 2026).</li>
+<li><strong>Autodesk</strong>: <a href="https://help.autodesk.com/cloudhelp/2023/ENU/Revit-Collaborate/files/GUID-D2579433-CBF9-4853-8BE6-1D6013CD3BFC.htm" rel="noopener" target="_blank">Revit worksharing workflow</a>; <a href="https://boards.autodesk.com/dubai-bim-mandate" rel="noopener" target="_blank">Dubai Municipality BIM mandate</a>.</li>
+<li><strong>BIMcommunity</strong>, <a href="https://bimcommunity.com/news/load/1643/bim-level-of-development-lod-100-200-300-350-400-500" rel="noopener" target="_blank">LOD 100 to 500</a>; <strong>Catenda</strong>, <a href="https://catenda.com/glossary/iso-19650" rel="noopener" target="_blank">ISO 19650</a>.</li>
+<li><strong>PayScale India</strong>, <a href="https://www.payscale.com/research/IN/Job=Architect_(but_not_Landscape_or_Naval)/Salary" rel="noopener" target="_blank">Architect salary</a>.</li>
+</ul>
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 8 November 2026. Model answers are examples; adapt them to your own projects, and check codes against current local rules.</p>
+</div>

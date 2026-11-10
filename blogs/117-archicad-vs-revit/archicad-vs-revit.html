@@ -1,0 +1,328 @@
+<style>
+#aug-archicad-vs-revit{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-archicad-vs-revit *,#aug-archicad-vs-revit *::before,#aug-archicad-vs-revit *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-archicad-vs-revit{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-archicad-vs-revit.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-archicad-vs-revit .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-archicad-vs-revit .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-archicad-vs-revit .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-archicad-vs-revit .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-archicad-vs-revit .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-archicad-vs-revit .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-archicad-vs-revit h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-archicad-vs-revit h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-archicad-vs-revit p{margin-bottom:.9rem;font-size:16px;}
+#aug-archicad-vs-revit a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-archicad-vs-revit a:hover{border-color:var(--brand);}
+#aug-archicad-vs-revit hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-archicad-vs-revit .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-archicad-vs-revit .chart svg{width:100%;height:auto;display:block;}
+#aug-archicad-vs-revit .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-archicad-vs-revit .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-archicad-vs-revit .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-archicad-vs-revit .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-archicad-vs-revit .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-archicad-vs-revit .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-archicad-vs-revit .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-archicad-vs-revit table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-archicad-vs-revit caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-archicad-vs-revit thead tr{background:var(--slate);color:#fff;}
+#aug-archicad-vs-revit thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-archicad-vs-revit tbody tr:nth-child(even){background:var(--surface);}
+#aug-archicad-vs-revit tbody tr:hover{background:var(--brand-lite);}
+#aug-archicad-vs-revit td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-archicad-vs-revit td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-archicad-vs-revit tbody tr.hl{background:var(--green-lite)!important;}
+#aug-archicad-vs-revit tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-archicad-vs-revit ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-archicad-vs-revit ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-archicad-vs-revit .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-archicad-vs-revit .cta-green{background:var(--slate);}
+#aug-archicad-vs-revit .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-archicad-vs-revit .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-archicad-vs-revit .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-archicad-vs-revit .cta-btn-blue{color:var(--brand);}#aug-archicad-vs-revit .cta-btn-green{color:var(--slate);}
+#aug-archicad-vs-revit figure{margin:1.5rem 0;}
+#aug-archicad-vs-revit figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-archicad-vs-revit figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-archicad-vs-revit dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-archicad-vs-revit dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-archicad-vs-revit dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-archicad-vs-revit .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-archicad-vs-revit .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-archicad-vs-revit .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-archicad-vs-revit .srcs{list-style:none;padding:0;}
+#aug-archicad-vs-revit .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-archicad-vs-revit .srcs li:last-child{border-bottom:none;}
+
+#aug-archicad-vs-revit .ans{margin:1.3rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#F4F6F8;border-left:4px solid var(--brand);font-size:16.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-archicad-vs-revit .ans b{color:var(--ink);}
+#aug-archicad-vs-revit .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-archicad-vs-revit .dfig svg{display:block;width:100%;height:auto;}
+#aug-archicad-vs-revit .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-archicad-vs-revit .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-archicad-vs-revit .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-archicad-vs-revit figure.pf{margin:1.2rem 0;} #aug-archicad-vs-revit figure.pf figcaption{font-family:var(--body);font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-archicad-vs-revit .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;} #aug-archicad-vs-revit .pair figure{margin:0;}
+#aug-archicad-vs-revit .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-archicad-vs-revit .alert{margin:1.2rem 0;padding:.85rem 1rem;border-radius:var(--radius);background:#FFF4E5;border:1px solid #F3D3A4;font-size:14.5px;line-height:1.6;}
+#aug-archicad-vs-revit .alert b{color:var(--warn);}
+#aug-archicad-vs-revit .t table{font-size:13.5px;} #aug-archicad-vs-revit .t td:first-child{font-weight:700;color:var(--ink);} #aug-archicad-vs-revit .t th{white-space:normal;}
+#aug-archicad-vs-revit .t .m{font-family:var(--mono);font-size:12px;white-space:nowrap;}
+#aug-archicad-vs-revit .t caption{caption-side:bottom;text-align:left;font-family:var(--body);text-transform:none;letter-spacing:0;font-size:12.5px;color:var(--muted);padding:.5rem .2rem 0;}
+#aug-archicad-vs-revit .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.2rem 0;}
+#aug-archicad-vs-revit .cards.two{grid-template-columns:1fr 1fr;} #aug-archicad-vs-revit .cards.four{grid-template-columns:repeat(4,1fr);}
+#aug-archicad-vs-revit .cards>div{border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:var(--radius);padding:.85rem .95rem;background:#fff;}
+#aug-archicad-vs-revit .cards>div.c2{border-top-color:#1D6B43;} #aug-archicad-vs-revit .cards>div.c3{border-top-color:#8A5A00;} #aug-archicad-vs-revit .cards>div.c4{border-top-color:#5B3A86;} #aug-archicad-vs-revit .cards>div.c5{border-top-color:#B5371B;}
+#aug-archicad-vs-revit .cards b{display:block;font-family:var(--display);font-size:15.5px;color:var(--ink);margin-bottom:.25rem;line-height:1.3;}
+#aug-archicad-vs-revit .cards span{display:block;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-archicad-vs-revit .cards em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.5rem;}
+#aug-archicad-vs-revit .cards ul{margin:.3rem 0 0;padding-left:1.05rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-archicad-vs-revit .steps{list-style:none;margin:1.2rem 0;padding:0;counter-reset:s;display:grid;gap:10px;}
+#aug-archicad-vs-revit .steps li{counter-increment:s;position:relative;padding:.8rem 1rem .8rem 3.4rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;font-size:15px;line-height:1.6;}
+#aug-archicad-vs-revit .steps li::before{content:counter(s);position:absolute;left:.9rem;top:.8rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--display);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+#aug-archicad-vs-revit .steps li b{display:block;font-family:var(--display);color:var(--ink);font-size:15.5px;margin-bottom:2px;}
+#aug-archicad-vs-revit .nl{list-style:none;padding:0;margin:1.2rem 0;counter-reset:u;}
+#aug-archicad-vs-revit .nl li{counter-increment:u;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;padding:.75rem 0;border-top:1px solid var(--border);font-size:15px;line-height:1.6;}
+#aug-archicad-vs-revit .nl li:first-child{border-top:none;}
+#aug-archicad-vs-revit .nl li::before{content:counter(u,decimal-leading-zero);font-family:var(--mono);font-weight:700;color:var(--coral);font-size:14px;padding-top:2px;}
+#aug-archicad-vs-revit .nl b{color:var(--ink);}
+#aug-archicad-vs-revit .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-archicad-vs-revit .pick>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-archicad-vs-revit .pick .a{background:#EEF7F1;border:1px solid #C6E3D1;} #aug-archicad-vs-revit .pick .r{background:#FDF1EC;border:1px solid #F1CDBE;}
+#aug-archicad-vs-revit .pick h3{margin:0 0 .4rem;font-size:15.5px;} #aug-archicad-vs-revit .pick .a h3{color:#1D6B43;} #aug-archicad-vs-revit .pick .r h3{color:#9A3B1E;}
+#aug-archicad-vs-revit .pick ul{margin:0;padding-left:1.1rem;} #aug-archicad-vs-revit .pick li{margin-bottom:.3rem;}
+#aug-archicad-vs-revit .chk{margin:1.2rem 0;border:1px solid var(--border);border-radius:var(--radius);background:#fff;padding:.4rem 1rem;}
+#aug-archicad-vs-revit .chk div{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:.6rem 0;border-top:1px solid var(--border);font-size:14.5px;line-height:1.55;}
+#aug-archicad-vs-revit .chk div:first-child{border-top:none;}
+#aug-archicad-vs-revit .chk div::before{content:"";width:16px;height:16px;border:2px solid var(--green);border-radius:4px;margin-top:3px;}
+#aug-archicad-vs-revit .chk b{color:var(--ink);}
+#aug-archicad-vs-revit .qa{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-archicad-vs-revit .qa .q{padding:.75rem 1rem;background:var(--surface);font-family:var(--display);font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.45;}
+#aug-archicad-vs-revit .qa .q span{font-family:var(--mono);font-size:11px;color:var(--brand);font-weight:700;margin-right:8px;letter-spacing:.04em;}
+#aug-archicad-vs-revit .qa .a{padding:.75rem 1rem;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-archicad-vs-revit .qa .a i{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--coral);margin-top:.5rem;letter-spacing:.03em;}
+#aug-archicad-vs-revit .bar{display:flex;margin:1.2rem 0 .4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-archicad-vs-revit .bar div{padding:.75rem .7rem;font-size:13px;line-height:1.4;color:#fff;}
+#aug-archicad-vs-revit .bar div b{display:block;font-family:var(--display);font-size:17px;}
+#aug-archicad-vs-revit .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-archicad-vs-revit .split>div{border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);padding:.9rem 1rem;}
+#aug-archicad-vs-revit .split h3{margin:0 0 .5rem;font-size:16px;} #aug-archicad-vs-revit .split dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14px;}
+#aug-archicad-vs-revit .split dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:2px;} #aug-archicad-vs-revit .split dd{margin:0;color:var(--ink);}
+
+@media(max-width:820px){ #aug-archicad-vs-revit .cards,#aug-archicad-vs-revit .cards.four{grid-template-columns:1fr 1fr;} }
+@media(max-width:640px){
+  #aug-archicad-vs-revit .t table{min-width:600px;}
+  #aug-archicad-vs-revit .cards,#aug-archicad-vs-revit .cards.two,#aug-archicad-vs-revit .cards.four,#aug-archicad-vs-revit .pick,#aug-archicad-vs-revit .pair,#aug-archicad-vs-revit .split{grid-template-columns:1fr;}
+  #aug-archicad-vs-revit .bar{flex-direction:column;} #aug-archicad-vs-revit .bar div{flex:none!important;}
+  #aug-archicad-vs-revit .steps li{padding-left:3rem;}
+  #aug-archicad-vs-revit .dfig.wide{overflow-x:auto;} #aug-archicad-vs-revit .dfig.wide svg{min-width:640px;}
+  #aug-archicad-vs-revit .cta{flex-direction:column;align-items:flex-start;}
+  #aug-archicad-vs-revit .cta>div{max-width:100%;} #aug-archicad-vs-revit .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-archicad-vs-revit .cta>div:last-child .cta-btn{margin-left:0;white-space:normal;text-align:center;line-height:1.5;}
+}
+#aug-archicad-vs-revit .pf .ph{height:auto!important;aspect-ratio:auto!important;padding:0!important;min-height:0!important;overflow:hidden}#aug-archicad-vs-revit .pf .ph img{position:static!important;display:block;width:100%!important;height:auto!important;object-fit:contain!important}#aug-archicad-vs-revit .pf figcaption{font-family:Arial,sans-serif!important;font-size:14px!important;line-height:1.6!important;padding:12px!important}#aug-archicad-vs-revit .pair{display:block!important}#aug-archicad-vs-revit .pair .pf{margin:18px 0!important}#aug-archicad-vs-revit .tbl-wrap{overflow-x:auto}#aug-archicad-vs-revit .software-link{display:inline-block;padding:5px 8px;margin:4px 2px;background:#eef4fa;border:1px solid #bacfe1;border-radius:5px;line-height:1.5}#aug-archicad-vs-revit .cta-btn{white-space:normal!important}#aug-archicad-vs-revit blockquote{margin:20px 0;padding:20px;background:#edf4f8;border-left:4px solid #0f4c81}@media(max-width:640px){#aug-archicad-vs-revit .tbl-wrap table{min-width:620px}#aug-archicad-vs-revit h2,#aug-archicad-vs-revit h3{overflow-wrap:anywhere}}
+/* Official software demonstrations */#aug-archicad-vs-revit .vendor-demo{margin:28px 0;border:1px solid #d5dfe7;border-radius:14px;overflow:hidden;background:#fff}#aug-archicad-vs-revit .vendor-demo h3{padding:20px 24px 0;margin:0;font-size:1.25rem}#aug-archicad-vs-revit .vendor-demo .demo-screen{background:#101820;aspect-ratio:16/9;width:100%;margin-top:16px}#aug-archicad-vs-revit .vendor-demo iframe,#aug-archicad-vs-revit .vendor-demo video{display:block;width:100%;height:100%;border:0;object-fit:contain}#aug-archicad-vs-revit .vendor-demo figcaption{padding:18px 24px;font-family:inherit;font-size:16px;line-height:1.65;color:#344b5c}#aug-archicad-vs-revit .vendor-demo p{margin:0 0 10px}#aug-archicad-vs-revit .vendor-demo a{text-decoration:underline}#aug-archicad-vs-revit .vendor-demo .demo-watch{border-top:1px solid #e2e8ee;padding-top:12px}#aug-archicad-vs-revit .vendor-demo strong{color:#183a50}@media(max-width:600px){#aug-archicad-vs-revit .vendor-demo h3,#aug-archicad-vs-revit .vendor-demo figcaption{padding-left:16px;padding-right:16px}#aug-archicad-vs-revit .vendor-demo figcaption{font-size:15px}}
+
+#aug-archicad-vs-revit .interface-still{margin:28px 0;border:1px solid #d5dfe7;border-radius:14px;overflow:hidden;background:white}#aug-archicad-vs-revit .interface-still h3{padding:22px 24px;margin:0;font-size:1.3rem}#aug-archicad-vs-revit .interface-still img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}#aug-archicad-vs-revit .interface-still figcaption{font:16px/1.65 Inter,Arial,sans-serif;color:#344b5c;padding:20px 24px}#aug-archicad-vs-revit .interface-still figcaption p{margin:0 0 12px}#aug-archicad-vs-revit .interface-still figcaption p:last-child{margin-bottom:0}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-archicad-vs-revit.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-archicad-vs-revit h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-archicad-vs-revit a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-archicad-vs-revit a:hover{color:#18d104;}
+#aug-archicad-vs-revit .cta{background:#1a1a1a;}
+#aug-archicad-vs-revit .cta a.cta-btn{text-decoration:none;}
+#aug-archicad-vs-revit .cta-btn-blue{background:#18d104;color:#000;}
+#aug-archicad-vs-revit .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-archicad-vs-revit [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+<div class="blog" id="aug-archicad-vs-revit">
+<div class="ans"><b>Archicad and Revit are both full BIM programs that model buildings and produce coordinated drawing sets. The main differences: Archicad runs natively on Mac and Windows, has its own architecture-focused workflows; Revit runs only on Windows but covers architecture, structure and MEP in one platform and has a large add-in ecosystem.</b> Both offer education access for eligible students, subject to their terms. The right choice depends less on features than on what your target employers and consultants use. This guide compares workflows, collaboration, cost, hardware and learning requirements in detail.</div>
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+<li><strong>Both are complete BIM tools</strong> for modelling, documentation, schedules and team collaboration.</li>
+<li><strong>Archicad runs on Mac and Windows;</strong> <a href="https://augmintech.com/learn-revit/">Revit</a> runs only on Windows.</li>
+<li>Compare current regional quotations for the authoring, teamwork and analysis capabilities you need. A lower headline price may exclude required services.</li>
+<li><strong>Revit is stronger for multi-discipline projects</strong> where structure and MEP teams also work in Autodesk tools.</li>
+<li><strong>Both are free for students:</strong> Archicad's EDU licence and Autodesk's education plan.</li>
+<li><strong>Choose by your market:</strong> read job adverts in the city where you want to work.</li>
+</ul>
+<h2 id="glance">Archicad vs Revit at a Glance</h2>
+<div class="tbl-wrap t">
+<table>
+<thead><tr><th></th><th>Archicad</th><th>Revit</th></tr></thead>
+<tbody>
+<tr><td>Developer</td><td>Graphisoft</td><td>Autodesk</td></tr>
+<tr><td>Platforms</td><td>Windows and macOS, native builds at the same price</td><td>Windows only</td></tr>
+<tr><td>Student licence</td><td>Free EDU licence, one year, renewable; files carry an educational watermark</td><td>Free through Autodesk's education plan, for learning use</td></tr>
+<tr><td>Disciplines</td><td>Architecture; MEP modelling in the Collaborate plan</td><td>Architecture, structure and MEP in one product</td></tr>
+<tr><td>Team collaboration</td><td>Teamwork on BIMcloud (element reservation, Delta Server sync)</td><td>Worksharing with a central model, local copies and worksets</td></tr>
+<tr><td>Native file</td><td>.pln (and .pla archives)</td><td>.rvt; opens only in the same or a newer release</td></tr>
+<tr><td>Exchange</td><td>IFC, DWG, PDF and more</td><td>IFC, DWG, PDF and more</td></tr>
+<tr><td>Built-in AI tools</td><td>AI Assistant and AI Visualizer included in both plans</td><td>Varies by release; add-ins widely available</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">Archicad: Render a House pricing and system requirements (September 2026). Revit: Render a House (September 2026); Autodesk help on file compatibility. Collaboration: Graphisoft and Autodesk help.</p>
+<div class="cta">
+<div><h3>Learn BIM, Whatever the Platform</h3><p>The habits that make a good BIM architect carry across software. Augmintech's PG Program in BIM Architecture teaches building information modelling for architecture. See the course page for the current syllabus, schedule and fees.</p></div>
+<div><a class="cta-btn cta-btn-blue" href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/">Explore the PG Program in BIM Architecture</a></div>
+</div>
+<h2 id="modelling">Modelling Workflow</h2>
+<p>Both programs model buildings with intelligent elements (walls, slabs, roofs, doors, windows, stairs) and generate plans, sections and elevations from the model. The way they organise that model differs:</p>
+<div class="pick">
+<div class="a"><h3>Archicad's approach</h3><ul><li>The building is organised by stories</li><li>Elements are placed with tools and settings dialogs; complex shapes use tools such as Morph</li><li>Libraries of parametric objects for doors, windows and furniture</li><li>A <a href="https://augmintech.com/architectural-drafting/">drafting-friendly</a> feel that many former 2D users find natural</li></ul></div>
+<div class="r"><h3>Revit's approach</h3><ul><li>The building is organised by levels and grids</li><li>Elements belong to <a href="https://augmintech.com/revit-families-explained-key-types-applications-and-emerging-trends/">families</a> and types with parameters</li><li>Strong parametric relationships: walls attach to levels and roofs, doors host in walls</li><li>Custom families built in the Family Editor</li></ul></div>
+</div>
+<p>In practice, both handle typical architecture well. Revit's family system is powerful but takes time to master; Archicad's object approach is often described as quicker to get productive in. For unusual forms, both connect to other tools, and both export IFC for exchange.</p>
+<figure class="pair">
+<figure class="interface-still"><h3>Archicad: navigating between project views</h3><img alt="Archicad interface showing the Toolbox and previews of a floor plan, section and 3D model" height="752" src="https://augmintech.com/wp-content/uploads/2026/11/117-archicad-interface-showing-the-toolbox.webp" width="1146"/><figcaption><p>Graphisoft’s Tab Overview screenshot shows Archicad 24, as identified in its title bar. It appears in the Archicad 28 help documentation. <a href="https://help.graphisoft.com/AC/28/INT/_AC28_Help/020_Configuration/020_Configuration-18.htm" rel="noopener" target="_blank">Source: Graphisoft</a>.</p><p>The Toolbox runs down the left edge. The Tab Bar sits above the drawing area. The highlighted Tab Overview button displays previews of open views, making it easier to switch between a plan, section and 3D view.</p></figcaption></figure>
+<figure class="interface-still"><h3>Revit: model and drawing views together</h3><img alt="Revit 2025.1 interface with Properties, Project Browser, ribbon and tiled architectural views" height="900" src="https://augmintech.com/wp-content/uploads/2026/11/117-revit-20251-interface-with-properties.webp" width="1600"/><figcaption><p>Still from Autodesk’s official interface tutorial, showing Revit 2025.1. <a href="https://help.autodesk.com/cloudhelp/2026/ENU/Revit-GetStarted/files/GUID-3197A4ED-323F-4D32-91C0-BA79E794B806.htm" rel="noopener" target="_blank">Source: Autodesk</a>.</p><p>The Ribbon is across the top. Properties is at the upper left, with the Project Browser below it. The drawing area shows a 3D view, elevation and floor plan together. The View Control Bar below each view controls settings such as scale and visual style.</p></figcaption></figure>
+</figure>
+<h2 id="documentation">Documentation and Drawing Sets</h2>
+<p>Both produce complete drawing sets from the model, with schedules that read model data. The differences are mostly in how sets are organised and published:</p>
+<div class="tbl-wrap t">
+<table>
+<thead><tr><th>Task</th><th>Archicad</th><th>Revit</th></tr></thead>
+<tbody>
+<tr><td>Views</td><td>Saved views from the View Map</td><td>Views in the Project Browser, controlled by view templates</td></tr>
+<tr><td>Sheets</td><td>Layouts in the Layout Book</td><td>Sheets with title blocks</td></tr>
+<tr><td>Publishing</td><td>Publisher sets for batch PDF, DWG and other outputs</td><td>Print and export sets</td></tr>
+<tr><td>Schedules</td><td>Interactive schedules from element data</td><td>Schedules as live model views, editable in place</td></tr>
+<tr><td>Graphic control</td><td>Graphic overrides, layer combinations, pen sets</td><td>Visibility/graphics, view filters, object styles</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">Feature names as used in each program; both cover the same core documentation tasks.</p>
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="collaboration">Team Collaboration</h2>
+<div class="cards two">
+<div class="c2"><b>Archicad Teamwork on BIMcloud</b><span>Team members reserve the elements they work on and send and receive changes through BIMcloud. Graphisoft says its Delta Server technology keeps network traffic to a minimum, so teams can work together over ordinary internet connections, and users can keep working on reserved elements if the connection drops. The Studio plan includes in-house teamwork; Collaborate adds Graphisoft-hosted cloud collaboration.</span></div>
+<div><b>Revit worksharing</b><span>The team shares a central model, each person working in a local copy. You edit elements in worksets you own or borrow, and synchronise with central to publish your changes and receive others'. Autodesk recommends synchronising at least daily and creating a fresh local copy every day. Cloud collaboration is available through Autodesk's cloud services.</span></div>
+</div>
+<p>For multi-company projects, both rely on exchanging models. Revit teams often coordinate with structural and MEP consultants who also use Revit, and run <a href="https://augmintech.com/navisworks-clash-detection/">clash checks</a> in Navisworks Manage, which Autodesk describes as identifying cross-discipline interferences earlier in design. Archicad teams typically coordinate through IFC with consultants using other software.</p>
+<h2 id="openbim">IFC and Working With Other Software</h2>
+<p>IFC, the open BIM exchange format, lets Archicad and Revit models be combined and reviewed together. That matters where authorities ask for it: since 1 January 2024, Dubai has required BIM model submissions in IFC format for building permits on larger buildings, according to Autodesk's summary of the mandate. Both programs export IFC; in either, the quality of the export depends on how carefully the model is classified and checked, so learning IFC export settings is worth the time whichever you choose.</p>
+<figure class="pf"><div class="ph"><img alt="Original AI-generated architectural sectional model. It illustrates the design information to coordinate, not an actual IFC export." loading="lazy" src="https://augmintech.com/wp-content/uploads/2026/11/117-original-aigenerated-architectural-sectional-model.webp"/></div><figcaption>Original AI-generated architectural sectional model. It illustrates the design information to coordinate, not an actual IFC export.</figcaption></figure>
+<h2 id="same-project">One Project in Both: Step by Step</h2>
+<p>Here is how a G+3 residential building typically moves through each program. It is an illustrative comparison of workflow, not a timed test.</p>
+<div class="tbl-wrap t">
+<table>
+<thead><tr><th>Step</th><th>In Archicad</th><th>In Revit</th></tr></thead>
+<tbody>
+<tr><td>Set up</td><td>Choose a template; define stories and their heights</td><td>Choose a template; create levels and grids</td></tr>
+<tr><td>Walls and slabs</td><td>Wall and slab tools with composite structures</td><td>Wall and floor types with layered structures</td></tr>
+<tr><td>Doors and windows</td><td>Parametric library objects placed in walls</td><td>Loadable families hosted in walls</td></tr>
+<tr><td>Stairs and roofs</td><td>Stair and roof tools; Morph for unusual shapes</td><td>Stair and roof tools; in-place or custom families for unusual shapes</td></tr>
+<tr><td>Rooms and areas</td><td>Zones with area calculations</td><td>Rooms with area calculations and tags</td></tr>
+<tr><td>Drawings</td><td>Saved views placed on layouts</td><td>Views placed on sheets</td></tr>
+<tr><td>Schedules</td><td>Interactive schedules</td><td>Schedules as model views</td></tr>
+<tr><td>Team</td><td>Teamwork on BIMcloud</td><td>Worksharing with a central model</td></tr>
+<tr><td>Consultants</td><td>IFC exchange; DWG for 2D</td><td>Linked Revit models when consultants use Revit; IFC otherwise</td></tr>
+<tr><td>Issue</td><td>Publisher sets to PDF and DWG</td><td>Print and export sets to PDF and DWG</td></tr>
+</tbody>
+</table>
+</div>
+<p>The steps line up almost one to one. What differs is vocabulary and feel, which is why architects who know one well can transfer their understanding while learning the new tool’s conventions.</p>
+<h2 id="myths">Four Myths About Archicad and Revit</h2>
+<ol class="nl">
+<li><div><b>"Archicad is only for small projects."</b> It runs large projects with Teamwork on BIMcloud; the deciding factor is usually the team's ecosystem, not size.</div></li>
+<li><div><b>"Revit is only for big firms."</b> Solo architects use it too, though Revit LT lacks several features teams rely on.</div></li>
+<li><div><b>"You must pick one forever."</b> Concepts transfer, and many architects learn both over a career.</div></li>
+<li><div><b>"IFC makes the choice irrelevant."</b> IFC helps teams exchange models, but each office still works daily in one native tool, so match your employers.</div></li>
+</ol>
+<h2 id="cost">Cost Over Three Years</h2><p>Request a quote for the exact region, plan and collaboration requirements. A subscription comparison should include authoring, hosted teamwork, coordination, rendering, support and training rather than treating historic US list prices as a current quotation.</p><div class="tbl-wrap"><table><thead><tr><th>Requirement</th><th>What to verify</th></tr></thead><tbody><tr><td>Archicad Studio / Collaborate</td><td>Local versus hosted BIMcloud, MEP entitlements, support and AI access for the selected plan.</td></tr><tr><td>Revit</td><td>Standalone versus collection purchase, cloud collaboration and additional coordination tools.</td></tr><tr><td>Education</td><td>Eligibility, renewal and permitted use. An education licence does not authorise commercial work.</td></tr><tr><td>Three-year budget</td><td>3 × annual authoring cost + collaboration + add-ins + training, with renewal changes and taxes stated.</td></tr></tbody></table></div><p>Compare current <a href="https://www.graphisoft.com/en-in/pricing/">Graphisoft India plans</a> and <a href="https://www.autodesk.com/in/products/revit/overview">Autodesk India Revit options</a>. Do not assume the cheaper headline plan includes the workflow your team needs.</p>
+<h2 id="hardware">Hardware and Platform Requirements</h2><p>Archicad offers native macOS and Windows versions; Revit is a Windows application. Use the exact release requirements before buying hardware, and check renderer requirements separately. Minimum specifications are not a promise of comfortable performance on a large linked model.</p><p>Consult <a href="https://www.graphisoft.com/resources-and-support/system-requirements">Graphisoft system requirements</a> and <a href="https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/System-requirements-for-Autodesk-Revit-products.html">Autodesk Revit system requirements</a>. Test a representative model, section view, schedule and export on the intended machine.</p>
+<h2 id="interface-tour">Get Familiar With the Actual Interfaces</h2><p>The screenshots above show genuine application interfaces. Their captions identify the recorded versions so you can distinguish these examples from your installed release. Use the named controls to understand how each program connects model navigation with drawing production.</p><p>In Archicad, distinguish a model viewpoint from a saved view with documentation settings. In Revit, distinguish the element properties from the properties of the active view. In either tool, a model can be correct while its drawing looks wrong because of the saved view settings.</p><h2 id="revision-test">Compare Them With the Same Revision Test</h2><p>Use a small apartment exercise. Produce a plan, an internal elevation, a section, a door schedule and one issued sheet in each tool. Keep the brief and geometry identical; do not compare an experienced user's template against a beginner's empty file.</p><ol><li><strong>Model:</strong> set stories or levels, place walls and hosted openings, and classify objects appropriately.</li><li><strong>Document:</strong> establish view settings, annotate, schedule and assemble the sheet.</li><li><strong>Revise:</strong> move one door 300 mm and change one finish specification.</li><li><strong>Check:</strong> inspect all affected views, quantities, manual notes and the exported PDF.</li><li><strong>Reflect:</strong> record setup effort, repeated editing and errors caught, rather than claiming one tool is always faster.</li></ol><h3>Check an IFC exchange, not just a successful export</h3><p>Agree the exchange purpose, IFC version, coordinates, units and required properties before exporting. Open the result in the receiving workflow and compare a known dimension, floor elevations, element categories, opening positions and a small sample of properties. Record missing items and export settings. IFC exchange does not promise a fully editable native replica.</p><h3>Common first-project problems</h3><p>A missing object may be a visibility or renovation/phase issue, not deleted geometry. A wrong quantity may come from schedule criteria or categories. A displaced consultant model may indicate coordinate disagreement. Diagnose the settings first; duplicating objects or moving a linked model by eye can hide the problem.</p><p>For a course decision, ask to see the final model, documentation and review process. BIM skills become transferable through clean information and checked outputs, but learning a new interface still takes practice. No fixed switching time applies to every student.</p><h2 id="learning">Learning Requirements</h2>
+<div class="tbl-wrap t">
+<table>
+<thead><tr><th>Requirement</th><th>Archicad</th><th>Revit</th></tr></thead>
+<tbody>
+<tr><td>Prior knowledge</td><td>Architectural drawing and construction basics</td><td>Same, plus comfort with parametric thinking</td></tr>
+<tr><td>Time to basic productivity</td><td>Often reported as shorter</td><td>Often reported as longer, mainly because of families and view control</td></tr>
+<tr><td>Free student access</td><td>EDU licence</td><td>Autodesk education plan</td></tr>
+<tr><td>Official learning</td><td>Graphisoft Learn (discount with Collaborate)</td><td><a href="https://augmintech.com/autodesk-certification/">Autodesk certification</a> pathways with free prep courses</td></tr>
+<tr><td>Hardest part</td><td>Libraries, Teamwork setup, IFC mapping</td><td>Families, view templates, worksharing</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">Learning-time rows are general observations, not measured data.</p>
+<h3>A learning path that works for either</h3>
+<ol class="steps">
+<li><b>Weeks 1–4: Model a building you know</b>Stories or levels, walls, slabs, roofs, doors, windows and stairs.</li>
+<li><b>Weeks 5–8: Document it</b>Plans, sections, elevations, details, schedules and a sheet set exported to PDF and DWG.</li>
+<li><b>Weeks 9–12: Work as a team</b>Teamwork or worksharing, linking a consultant model, exporting and checking IFC.</li>
+</ol>
+<p>The concepts transfer: an architect who understands levels, element types, views, schedules and coordination in one program can carry that knowledge into the other tool, with practice. That is why learning BIM thinking matters more than the badge on the software; a structured option such as Augmintech's PG Program in BIM Architecture is one way to build it.</p>
+<h2 id="choose">Which Should You Learn?</h2>
+<div class="tbl-wrap t">
+<table>
+<thead><tr><th>Your situation</th><th>Leans towards</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>You use a Mac and do not want Windows</td><td>Archicad</td><td>Native macOS; Revit is Windows-only</td></tr>
+<tr><td>You will work with structure and MEP teams in the same platform</td><td>Revit</td><td>All three disciplines in one product</td></tr>
+<tr><td>You run a small architecture practice on a budget</td><td>Archicad Studio</td><td>Compare the complete required workflow and current regional quotes</td></tr>
+<tr><td>Your target employers list Revit in job adverts</td><td>Revit</td><td>Match what you will use on day one</td></tr>
+<tr><td>Your target employers list Archicad</td><td>Archicad</td><td>Same reason</td></tr>
+<tr><td>You want to script and automate</td><td>Revit</td><td><a href="https://augmintech.com/how-to-download-install-dynamo-revit/">Dynamo</a> and a large add-in ecosystem (not in Revit LT)</td></tr>
+<tr><td>You are a student unsure of your market</td><td>Either; check local adverts</td><td>Both are free for learning; skills transfer</td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert"><b>Do this before deciding:</b> search job portals in your target city for "Revit" and for "Archicad" and compare how many architecture roles ask for each. That tells you more than any comparison article.</div>
+<h2 id="switching">Switching From One to the Other</h2>
+<ul class="bullets">
+<li><strong>What transfers:</strong> BIM thinking, drawing standards, construction knowledge, schedules and coordination habits.</li>
+<li><strong>What you relearn:</strong> the interface, how elements are organised (stories vs levels, objects vs families), and graphic controls.</li>
+<li><strong>Files:</strong> move projects through IFC; expect to rebuild complex objects and check every element after import.</li>
+<li><strong>Versions:</strong> Revit files open only in the same or a newer release, so agree one version for every team member.</li>
+</ul>
+<div class="cta cta-green">
+<div><h3>Build BIM Skills That Transfer</h3><p>Levels, element types, schedules and coordination work the same way in principle across platforms. Augmintech's PG Program in BIM Architecture is a structured way to build those skills. Check the course page for the current syllabus, schedule and fees.</p></div>
+<div><a class="cta-btn cta-btn-green" href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/">See the PG Program in BIM Architecture</a></div>
+</div>
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">Is Archicad better than Revit?</div><div class="faq-a">Neither is better overall. Archicad suits Mac users and architecture-focused practices ; Revit suits multi-discipline teams and has a larger add-in ecosystem. Choose what your market uses.</div></div>
+<div class="faq-item"><div class="faq-q">Is Archicad easier to learn than Revit?</div><div class="faq-a">Many users find Archicad quicker to get productive in, especially coming from 2D drafting. Revit's families and view controls take longer to master. Both need solid architectural knowledge.</div></div>
+<div class="faq-item"><div class="faq-q">Can I use Revit on a Mac?</div><div class="faq-a">Not natively; Revit is Windows-only. Mac users run Windows in a virtual machine. Archicad runs natively on macOS.</div></div>
+<div class="faq-item"><div class="faq-q">How much do Archicad and Revit cost?</div><div class="faq-a">Prices depend on region, plan, billing term and collaboration entitlements. Check current vendor quotations; eligible students can apply for education access under the respective terms.</div></div>
+<div class="faq-item"><div class="faq-q">Can Archicad and Revit work together?</div><div class="faq-a">Yes, through IFC. Teams often combine an Archicad architectural model with Revit structural or MEP models for coordination, checking each import carefully.</div></div>
+<div class="faq-item"><div class="faq-q">Which is used more in India and the Gulf?</div><div class="faq-a">It varies by firm and city, and reliable market-share data is not public. Check job adverts in your target city; many list Revit, some list Archicad, and some accept either.</div></div>
+<div class="faq-item"><div class="faq-q">Does Archicad have MEP?</div><div class="faq-a">Yes, MEP modelling is included in the Archicad Collaborate plan; Studio users can trial it but need Collaborate for real work.</div></div>
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+<li><strong>Render a House</strong>: <a href="https://www.renderahouse.com/blog/archicad-pricing" rel="noopener" target="_blank">Archicad pricing</a> (7 September 2026); <a href="https://www.renderahouse.com/blog/archicad-system-requirements" rel="noopener" target="_blank">Archicad system requirements</a>; <a href="https://www.renderahouse.com/blog/revit-pricing" rel="noopener" target="_blank">Revit pricing</a>; <a href="https://www.renderahouse.com/blog/revit-system-requirements" rel="noopener" target="_blank">Revit system requirements</a> (2026).</li>
+<li><strong>Graphisoft</strong>, <a href="https://help.graphisoft.com/AC/28/INT/_AC28_Help/080_Collaboration/080_Collaboration-4.htm" rel="noopener" target="_blank">BIMcloud features and benefits</a>.</li>
+<li><strong>Autodesk</strong>: <a href="https://help.autodesk.com/cloudhelp/2023/ENU/Revit-Collaborate/files/GUID-D2579433-CBF9-4853-8BE6-1D6013CD3BFC.htm" rel="noopener" target="_blank">Revit worksharing workflow</a>; <a href="https://help.autodesk.com/cloudhelp/2024/ENU/RevitLT-GetStarted/files/GUID-B3112DE3-A923-4950-B547-3A83A30CDD38.htm" rel="noopener" target="_blank">Opening models from an earlier release</a>; <a href="https://www.autodesk.com/compare/compare-features/revit-vs-revit-lt" rel="noopener" target="_blank">Revit vs Revit LT</a>; <a href="https://help.autodesk.com/cloudhelp/2025/ENU/Navisworks-Clash-Detective/files/GUID-36D9904E-12F3-4F82-8DD3-C2103DB0BC29.htm" rel="noopener" target="_blank">Navisworks Clash Detective</a>; <a href="https://www-int.autodesk.com/certification/learning-pathways" rel="noopener" target="_blank">Certification learning pathways</a>; <a href="https://www.autodesk.com:443/education/home" rel="noopener" target="_blank">Education plan</a>; <a href="https://boards.autodesk.com/dubai-bim-mandate" rel="noopener" target="_blank">Dubai Municipality BIM mandate</a>.</li>
+</ul>
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 8 November 2026. Prices, plans and features change with each release; check the vendors' sites before you buy.</p>
+</div>

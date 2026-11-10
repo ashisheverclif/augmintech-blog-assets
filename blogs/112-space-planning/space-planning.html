@@ -1,0 +1,373 @@
+<style>
+#aug-space-planning{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-space-planning *,#aug-space-planning *::before,#aug-space-planning *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-space-planning{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-space-planning.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-space-planning .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-space-planning .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-space-planning .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-space-planning .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-space-planning .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-space-planning .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-space-planning h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-space-planning h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-space-planning p{margin-bottom:.9rem;font-size:16px;}
+#aug-space-planning a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-space-planning a:hover{border-color:var(--brand);}
+#aug-space-planning hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-space-planning .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-space-planning .chart svg{width:100%;height:auto;display:block;}
+#aug-space-planning .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-space-planning .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-space-planning .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-space-planning .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-space-planning .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-space-planning .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-space-planning .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-space-planning table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-space-planning caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-space-planning thead tr{background:var(--slate);color:#fff;}
+#aug-space-planning thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-space-planning tbody tr:nth-child(even){background:var(--surface);}
+#aug-space-planning tbody tr:hover{background:var(--brand-lite);}
+#aug-space-planning td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-space-planning td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-space-planning tbody tr.hl{background:var(--green-lite)!important;}
+#aug-space-planning tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-space-planning ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-space-planning ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-space-planning .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-space-planning .cta-green{background:var(--slate);}
+#aug-space-planning .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-space-planning .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-space-planning .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-space-planning .cta-btn-blue{color:var(--brand);}#aug-space-planning .cta-btn-green{color:var(--slate);}
+#aug-space-planning figure{margin:1.5rem 0;}
+#aug-space-planning figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-space-planning figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-space-planning dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-space-planning dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-space-planning dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-space-planning .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-space-planning .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-space-planning .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-space-planning .srcs{list-style:none;padding:0;}
+#aug-space-planning .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-space-planning .srcs li:last-child{border-bottom:none;}
+
+#aug-space-planning .ans{margin:1.3rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#F4F6F8;border-left:4px solid var(--brand);font-size:16.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-space-planning .ans b{color:var(--ink);}
+#aug-space-planning .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-space-planning .dfig svg{display:block;width:100%;height:auto;}
+#aug-space-planning .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-space-planning .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-space-planning .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-space-planning figure.pf{margin:1.2rem 0;} #aug-space-planning figure.pf figcaption{font-family:var(--body);font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-space-planning .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;} #aug-space-planning .pair figure{margin:0;}
+#aug-space-planning .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-space-planning .alert{margin:1.2rem 0;padding:.85rem 1rem;border-radius:var(--radius);background:#FFF4E5;border:1px solid #F3D3A4;font-size:14.5px;line-height:1.6;}
+#aug-space-planning .alert b{color:var(--warn);}
+#aug-space-planning .t table{font-size:13.5px;} #aug-space-planning .t td:first-child{font-weight:700;color:var(--ink);} #aug-space-planning .t th{white-space:normal;}
+#aug-space-planning .t .m{font-family:var(--mono);font-size:12px;white-space:nowrap;}
+#aug-space-planning .t caption{caption-side:bottom;text-align:left;font-family:var(--body);text-transform:none;letter-spacing:0;font-size:12.5px;color:var(--muted);padding:.5rem .2rem 0;}
+#aug-space-planning .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.2rem 0;}
+#aug-space-planning .cards.two{grid-template-columns:1fr 1fr;} #aug-space-planning .cards.four{grid-template-columns:repeat(4,1fr);}
+#aug-space-planning .cards>div{border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:var(--radius);padding:.85rem .95rem;background:#fff;}
+#aug-space-planning .cards>div.c2{border-top-color:#1D6B43;} #aug-space-planning .cards>div.c3{border-top-color:#8A5A00;} #aug-space-planning .cards>div.c4{border-top-color:#5B3A86;} #aug-space-planning .cards>div.c5{border-top-color:#B5371B;}
+#aug-space-planning .cards b{display:block;font-family:var(--display);font-size:15.5px;color:var(--ink);margin-bottom:.25rem;line-height:1.3;}
+#aug-space-planning .cards span{display:block;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-space-planning .cards em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.5rem;}
+#aug-space-planning .cards ul{margin:.3rem 0 0;padding-left:1.05rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-space-planning .steps{list-style:none;margin:1.2rem 0;padding:0;counter-reset:s;display:grid;gap:10px;}
+#aug-space-planning .steps li{counter-increment:s;position:relative;padding:.8rem 1rem .8rem 3.4rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;font-size:15px;line-height:1.6;}
+#aug-space-planning .steps li::before{content:counter(s);position:absolute;left:.9rem;top:.8rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--display);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+#aug-space-planning .steps li b{display:block;font-family:var(--display);color:var(--ink);font-size:15.5px;margin-bottom:2px;}
+#aug-space-planning .nl{list-style:none;padding:0;margin:1.2rem 0;counter-reset:u;}
+#aug-space-planning .nl li{counter-increment:u;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;padding:.75rem 0;border-top:1px solid var(--border);font-size:15px;line-height:1.6;}
+#aug-space-planning .nl li:first-child{border-top:none;}
+#aug-space-planning .nl li::before{content:counter(u,decimal-leading-zero);font-family:var(--mono);font-weight:700;color:var(--coral);font-size:14px;padding-top:2px;}
+#aug-space-planning .nl b{color:var(--ink);}
+#aug-space-planning .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-space-planning .pick>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-space-planning .pick .a{background:#EEF7F1;border:1px solid #C6E3D1;} #aug-space-planning .pick .r{background:#FDF1EC;border:1px solid #F1CDBE;}
+#aug-space-planning .pick h3{margin:0 0 .4rem;font-size:15.5px;} #aug-space-planning .pick .a h3{color:#1D6B43;} #aug-space-planning .pick .r h3{color:#9A3B1E;}
+#aug-space-planning .pick ul{margin:0;padding-left:1.1rem;} #aug-space-planning .pick li{margin-bottom:.3rem;}
+#aug-space-planning .chk{margin:1.2rem 0;border:1px solid var(--border);border-radius:var(--radius);background:#fff;padding:.4rem 1rem;}
+#aug-space-planning .chk div{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:.6rem 0;border-top:1px solid var(--border);font-size:14.5px;line-height:1.55;}
+#aug-space-planning .chk div:first-child{border-top:none;}
+#aug-space-planning .chk div::before{content:"";width:16px;height:16px;border:2px solid var(--green);border-radius:4px;margin-top:3px;}
+#aug-space-planning .chk b{color:var(--ink);}
+#aug-space-planning .qa{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-space-planning .qa .q{padding:.75rem 1rem;background:var(--surface);font-family:var(--display);font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.45;}
+#aug-space-planning .qa .q span{font-family:var(--mono);font-size:11px;color:var(--brand);font-weight:700;margin-right:8px;letter-spacing:.04em;}
+#aug-space-planning .qa .a{padding:.75rem 1rem;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-space-planning .qa .a i{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--coral);margin-top:.5rem;letter-spacing:.03em;}
+#aug-space-planning .bar{display:flex;margin:1.2rem 0 .4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-space-planning .bar div{padding:.75rem .7rem;font-size:13px;line-height:1.4;color:#fff;}
+#aug-space-planning .bar div b{display:block;font-family:var(--display);font-size:17px;}
+#aug-space-planning .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-space-planning .split>div{border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);padding:.9rem 1rem;}
+#aug-space-planning .split h3{margin:0 0 .5rem;font-size:16px;} #aug-space-planning .split dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14px;}
+#aug-space-planning .split dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:2px;} #aug-space-planning .split dd{margin:0;color:var(--ink);}
+
+@media(max-width:820px){ #aug-space-planning .cards,#aug-space-planning .cards.four{grid-template-columns:1fr 1fr;} }
+@media(max-width:640px){
+  #aug-space-planning .t table{min-width:600px;}
+  #aug-space-planning .cards,#aug-space-planning .cards.two,#aug-space-planning .cards.four,#aug-space-planning .pick,#aug-space-planning .pair,#aug-space-planning .split{grid-template-columns:1fr;}
+  #aug-space-planning .bar{flex-direction:column;} #aug-space-planning .bar div{flex:none!important;}
+  #aug-space-planning .steps li{padding-left:3rem;}
+  #aug-space-planning .dfig.wide{overflow-x:auto;} #aug-space-planning .dfig.wide svg{min-width:640px;}
+  #aug-space-planning .cta{flex-direction:column;align-items:flex-start;}
+  #aug-space-planning .cta>div{max-width:100%;} #aug-space-planning .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-space-planning .cta>div:last-child .cta-btn{margin-left:0;white-space:normal;text-align:center;line-height:1.5;}
+}
+#aug-space-planning .pf .ph{height:auto!important;aspect-ratio:auto!important;min-height:0!important;padding:0!important;background:#f5f8fa!important;overflow:hidden}#aug-space-planning .ph::before,#aug-space-planning .ph::after{display:none!important}#aug-space-planning .pf .ph img{position:static!important;display:block;width:100%!important;height:auto!important;object-fit:contain!important;opacity:1!important;filter:none!important}#aug-space-planning .pf figcaption{font-family:Arial,sans-serif!important;font-size:14px!important;line-height:1.65!important;padding:16px!important;overflow-wrap:anywhere}#aug-space-planning .tbl-wrap{overflow-x:auto}#aug-space-planning .cta-btn{white-space:normal!important}#aug-space-planning .dfig svg{max-width:100%;height:auto}#aug-space-planning .wide{overflow-x:auto}@media(max-width:650px){#aug-space-planning .pair,#aug-space-planning .grid3,#aug-space-planning .gq3{grid-template-columns:1fr!important}}
+/* ===== Augmintech theme overrides ===== */
+#aug-space-planning.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-space-planning h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-space-planning a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-space-planning a:hover{color:#18d104;}
+#aug-space-planning .cta{background:#1a1a1a;}
+#aug-space-planning .cta a.cta-btn{text-decoration:none;}
+#aug-space-planning .cta-btn-blue{background:#18d104;color:#000;}
+#aug-space-planning .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-space-planning [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-space-planning">
+
+
+<div class="ans"><b>Space planning is the process of deciding where every activity, room and piece of furniture goes so a space works well before it looks good.</b> It moves from the brief to an adjacency study, zoning into public, private and service areas, circulation, and finally a dimensioned furniture layout checked against minimum sizes and clearances. In India, NBC 2016 sets minimums such as 9.5 m² for a single habitable room and 5.0 m² for a kitchen. This guide walks through each step, gives the key numbers, and shows worked layouts for a 2BHK, a bedroom, a kitchen and a small office.</div>
+
+<figure class="dfig wide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 960"><rect x="0" y="0" width="1100" height="960" rx="0" fill="#f7f9fa" stroke="none"/><text x="45" y="45" font-size="30" text-anchor="start" fill="#233f50" font-family="Arial,sans-serif">2BHK: public, private and service zones</text><text x="45" y="79" font-size="20" text-anchor="start" fill="#233f50" font-family="Arial,sans-serif">Two bedrooms · Living / dining · Separate kitchen · Common bathroom</text><rect x="70" y="180" width="360" height="360" rx="0" fill="#e9f1f8" stroke="#9aafb7"/><rect x="430" y="180" width="120" height="600" rx="0" fill="#f0f2f3" stroke="#9aafb7"/><rect x="550" y="180" width="420" height="300" rx="0" fill="#f0eaf5" stroke="#9aafb7"/><rect x="550" y="480" width="420" height="300" rx="0" fill="#f0eaf5" stroke="#9aafb7"/><rect x="70" y="540" width="210" height="240" rx="0" fill="#fbf0db" stroke="#9aafb7"/><rect x="280" y="540" width="150" height="90" rx="0" fill="#fbf0db" stroke="#9aafb7"/><rect x="280" y="630" width="150" height="150" rx="0" fill="#fbf0db" stroke="#9aafb7"/><rect x="70" y="115" width="360" height="65" rx="0" fill="#eef3f2" stroke="#9aafb7"/><text x="250" y="153" font-size="19" text-anchor="middle" fill="#233f50" font-family="Arial,sans-serif">BALCONY</text><path d="M70 430V180H180 M320 180H970V230 M970 350V570 M970 690V780H70V510" fill="none" stroke="#233f50" stroke-width="7" stroke-linejoin="round"/><path d="M430 180V460 M430 530V550 M430 610V670 M430 730V780 M550 180V390 M550 460V520 M550 590V780 M550 480H970 M70 540H130 M210 540H430 M280 540V780 M280 630H430" fill="none" stroke="#233f50" stroke-width="7" stroke-linejoin="round"/><path d="M180 180H320 M970 230V350 M970 570V690" fill="none" stroke="#70a3b6" stroke-width="4" stroke-linejoin="round"/><path d="M70 510H150 M150 510A80 80 0 0 0 70 430 M130 540V620 M130 620A80 80 0 0 0 210 540 M550 460H620 M620 460A70 70 0 0 0 550 390 M550 590H620 M620 590A70 70 0 0 0 550 520 M430 730H370 M370 730A60 60 0 0 1 430 670" fill="none" stroke="#8198a5" stroke-width="1.5" stroke-linejoin="round"/><text x="250" y="345" font-size="23" text-anchor="middle" fill="#233f50" font-family="Arial,sans-serif">Living / dining</text><text x="760" y="330" font-size="23" text-anchor="middle" fill="#233f50" font-family="Arial,sans-serif">Bedroom 1</text><text x="760" y="645" font-size="23" text-anchor="middle" fill="#233f50" font-family="Arial,sans-serif">Bedroom 2</text><text x="175" y="665" font-size="23" text-anchor="middle" fill="#233f50" font-family="Arial,sans-serif">Kitchen</text><text x="355" y="590" font-size="23" text-anchor="middle" fill="#233f50" font-family="Arial,sans-serif">Utility</text><text x="355" y="715" font-size="23" text-anchor="middle" fill="#233f50" font-family="Arial,sans-serif">Bath / WC</text><text x="490" y="490" font-size="18" text-anchor="middle" fill="#233f50" font-family="Arial,sans-serif">Passage</text><text x="10" y="420" font-size="18" text-anchor="start" fill="#233f50" font-family="Arial,sans-serif">ENTRY</text><text x="460" y="820" font-size="19" text-anchor="start" fill="#233f50" font-family="Arial,sans-serif">Room openings connect to shared circulation.</text><rect x="70" y="855" width="22" height="22" rx="0" fill="#e9f1f8" stroke="#9aafb7"/><text x="105" y="873" font-size="20" text-anchor="start" fill="#233f50" font-family="Arial,sans-serif">Public</text><rect x="300" y="855" width="22" height="22" rx="0" fill="#f0eaf5" stroke="#9aafb7"/><text x="335" y="873" font-size="20" text-anchor="start" fill="#233f50" font-family="Arial,sans-serif">Private</text><rect x="530" y="855" width="22" height="22" rx="0" fill="#fbf0db" stroke="#9aafb7"/><text x="565" y="873" font-size="20" text-anchor="start" fill="#233f50" font-family="Arial,sans-serif">Service</text><text x="45" y="925" font-size="18" text-anchor="start" fill="#233f50" font-family="Arial,sans-serif">AUGMINTECH · Schematic teaching plan, not to scale or for construction</text></svg><figcaption>The same illustrative 2BHK is used below for furniture planning. Two separate bedrooms share a passage; living/dining forms the public zone, with a separate kitchen and common bathroom.</figcaption></figure>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Plan before you decorate:</strong> zoning, circulation and furniture fit decide whether a space works.</li>
+  <li><strong>Follow a process:</strong> brief, measure, analyse, adjacency, zoning, circulation, layout, test.</li>
+  <li><strong>Separate public, private and service zones</strong> so guests, family and services do not cross.</li>
+  <li><strong>Know the minimums:</strong> under NBC 2016, a single habitable room is at least 9.5 m² and 2.4 m wide, a <a href="https://augmintech.com/types-of-kitchen-layout/">kitchen</a> 5.0 m² and 1.8 m wide, a bath-plus-WC 2.8 m².</li>
+  <li><strong>Respect clearances:</strong> NKBA recommends 914 mm walkways and 1,067 mm work aisles in kitchens.</li>
+  <li><strong>Draw to scale and test in 3D</strong> before the client sees it.</li>
+</ul>
+
+<h2 id="what">What Space Planning Is, and Why It Comes First</h2>
+<p>Space planning sits between the brief and the design details. It answers practical questions: where the sofa goes, whether two people can pass in the kitchen, whether the bed blocks the wardrobe, whether guests walk past the bedrooms. A beautiful material palette cannot rescue a plan where the dining table blocks the balcony door. Good planning also saves money, because fewer changes are needed once carpentry and services begin.</p>
+<p>Planning works at three scales: the whole home or floor (zoning), each room (layout), and each piece of furniture (clearances). You move between them constantly.</p>
+
+<h2 id="process">The Space Planning Process in 8 Steps</h2>
+<ol class="steps">
+  <li><b>Write the brief and the programme</b>List users, activities, rooms, storage needs, furniture to keep, budget and must-haves. A programme turns the brief into a list of spaces with approximate areas.</li>
+  <li><b>Measure the site accurately</b>Wall-to-wall dimensions, ceiling heights, beams, columns, windows, doors, <a href="https://augmintech.com/plumbing-system-in-building/">plumbing</a> and electrical points. A wrong measurement here ruins every later step.</li>
+  <li><b>Analyse the shell</b>Mark daylight and views, noise, ventilation, structural walls you cannot move, and fixed services such as shafts and drains.</li>
+  <li><b>Map adjacencies</b>Decide which spaces must be next to each other, which should be near, and which must be apart. A bubble diagram or adjacency matrix captures this.</li>
+  <li><b>Zone the plan</b>Group spaces into public, private and service zones, placing each where light, access and services suit it.</li>
+  <li><b>Plan circulation</b>Draw the main paths from the entry. Keep them short, direct and clear of furniture, and avoid routes through private rooms.</li>
+  <li><b>Lay out furniture to scale</b>Place real furniture sizes, check clearances and door swings, and test two or three options.</li>
+  <li><b>Test and refine</b>Check against minimum sizes and codes, model it quickly in 3D, walk through it with the client, and revise.</li>
+</ol>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/112-original-adjacency-example-links-indicate.webp" alt="Original adjacency example. Links indicate useful relationships, not measured distances." loading="lazy"></div><figcaption>Original adjacency example. Links indicate useful relationships, not measured distances.</figcaption></figure>
+
+<div class="cta">
+  <div><h3>Plan in BIM, Not Just Lines</h3><p>In BIM, rooms carry areas and data, so space plans and schedules stay in step. Augmintech's PG Program in BIM Architecture teaches building information modelling for architecture. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">Explore the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="adjacency">Adjacency: Which Spaces Belong Together</h2>
+<p>An adjacency matrix makes relationships explicit. Here is a simple one for a family apartment:</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Space</th><th>Must be next to</th><th>Should be near</th><th>Keep away from</th></tr></thead>
+  <tbody>
+    <tr><td>Foyer / entry</td><td>Living</td><td>Shoe storage, guest toilet</td><td>Bedrooms (direct views)</td></tr>
+    <tr><td>Living</td><td>Foyer</td><td>Dining, balcony</td><td>Master bedroom door</td></tr>
+    <tr><td>Dining</td><td>Kitchen</td><td>Living</td><td>Toilet doors</td></tr>
+    <tr><td>Kitchen</td><td>Dining, utility</td><td>Entry (groceries, waste)</td><td>Bedrooms (smell, noise)</td></tr>
+    <tr><td>Bedrooms</td><td>Their toilets, wardrobes</td><td>Quiet side of the plan</td><td>Entry, kitchen, living TV wall</td></tr>
+    <tr><td>Toilets</td><td>Bedrooms or passage</td><td>Plumbing shafts</td><td>Kitchen and dining (direct opening)</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Augmintech example; every brief changes the matrix. Offices, shops and restaurants each need their own.</p>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="zoning">Zoning: Public, Private and Service</h2>
+<div class="cards">
+  <div><b>Public zone</b><span>Foyer, living, dining. Near the entry, with the best light and views, where guests are received.</span></div>
+  <div class="c4"><b>Private zone</b><span>Bedrooms, study, family lounge. Away from the entry and noise, reached without passing through public rooms.</span></div>
+  <div class="c3"><b>Service zone</b><span>Kitchen, utility, toilets, store. Grouped around plumbing shafts and with direct access for deliveries and waste.</span></div>
+</div>
+<p>The 2BHK diagram above separates living/dining from two bedrooms reached by a shared passage. The kitchen opens from the public area; the utility and common bathroom are accessed from the passage. This is a zoning study without verified dimensions. Use the requirements below as checks when developing a dimensioned plan, not as evidence that this illustration complies.</p>
+
+<h2 id="minimums">Minimum Room Sizes in India (NBC 2016)</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Space</th><th>Minimum area</th><th>Minimum width</th></tr></thead>
+  <tbody>
+    <tr><td>Habitable room (where a unit has only one)</td><td class="m">9.5 m²</td><td class="m">2.4 m</td></tr>
+    <tr><td>Kitchen (separate)</td><td class="m">5.0 m²</td><td class="m">1.8 m</td></tr>
+    <tr><td>Kitchen with store</td><td class="m">5.5 m²</td><td class="m">1.8 m</td></tr>
+    <tr><td>Kitchen-cum-dining</td><td class="m">7.5 m²</td><td class="m">2.1 m</td></tr>
+    <tr><td>Bathroom (without WC)</td><td class="m">1.8 m²</td><td class="m">1.2 m</td></tr>
+    <tr><td>WC (without bath)</td><td class="m">1.1 m²</td><td class="m">0.9 m</td></tr>
+    <tr><td>Combined bath + WC</td><td class="m">2.8 m²</td><td class="m">1.2 m</td></tr>
+    <tr><td>Bathroom / WC door</td><td class="m">–</td><td class="m">0.75 m clear (0.90 m accessible)</td></tr>
+    <tr><td>Ceiling height, habitable rooms</td><td class="m" colspan="2">About 2.75 m generally</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Infralens thumb-rule pages citing NBC 2016 (Parts 3 and 4) and IS 4963 for accessible doors; ceiling height from HouseYog citing NBC 2016. State and city by-laws may differ; always check the local rules.</p>
+<div class="alert"><b>Minimum is not comfortable:</b> these are legal floors, not targets. A 9.5 m² bedroom fits a double bed and a wardrobe only with careful planning; most designers aim higher where the plan allows.</div>
+
+<h2 id="clearances">Clearances and Circulation</h2>
+<p>Clearances are the space people need to move and use furniture. The most widely used figures for kitchens and dining come from the NKBA's planning guidelines:</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Situation</th><th>Recommended clearance</th></tr></thead>
+  <tbody>
+    <tr><td>Walkway</td><td class="m">914 mm (36 in) minimum</td></tr>
+    <tr><td>Kitchen work aisle, one cook</td><td class="m">1,067 mm (42 in)</td></tr>
+    <tr><td>Kitchen work aisle, more than one cook</td><td class="m">1,219 mm (48 in)</td></tr>
+    <tr><td>Behind a seated diner, no traffic</td><td class="m">813 mm (32 in)</td></tr>
+    <tr><td>Behind a seated diner, people edging past</td><td class="m">914 mm (36 in)</td></tr>
+    <tr><td>Behind a seated diner, people walking past</td><td class="m">1,118 mm (44 in)</td></tr>
+    <tr><td>Landing beside the sink</td><td class="m">610 mm one side, 457 mm the other</td></tr>
+    <tr><td>Landing beside the hob</td><td class="m">305 mm one side, 381 mm the other</td></tr>
+    <tr><td>Hallway within a home (US IRC reference)</td><td class="m">915 mm (36 in)</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">NKBA Kitchen Planning Guidelines; hallway figure from the US International Residential Code, as summarised by Learn Architecture. Use them as good practice alongside Indian codes.</p>
+<p>Beyond the numbers, three circulation rules matter in every plan: keep the main path free of furniture, never route circulation diagonally across a room's usable centre, and check every door swing against furniture, other doors and switches.</p>
+
+<h2 id="examples">Layout Examples</h2>
+
+<h3>Example 1: The 2BHK apartment</h3>
+<p>This example contains two bedrooms, a living/dining area and a separate kitchen: the spaces that make it a 2BHK. It also shows a common bathroom, a utility area, a balcony and a shared passage. Both bedrooms and the bathroom open from the passage, so neither bedroom becomes a route to another room.</p>
+<p>The sofa faces the TV on the living-room wall beside the passage. Dining sits nearer the kitchen, while the balcony opens from the living area. Wardrobes sit against the passage-side walls of the bedrooms, clear of the illustrated door swings. The teal lines show selected circulation routes, not measured clearance widths.</p>
+<p>Before developing this into a real layout, dimension the rooms and furniture, test pulled-out dining chairs and open wardrobe shutters, and check every door swing. Confirm daylight, ventilation, plumbing shafts, structure and applicable local requirements. The schematic does not establish accessibility, minimum clearances or code compliance.</p>
+<figure class="pf"><div class="ph"><img loading="lazy" alt="Two-bedroom apartment furniture plan with separate kitchen, living dining, common bathroom and circulation routes" src="https://augmintech.com/wp-content/uploads/2026/11/112-twobedroom-apartment-furniture-plan-with.webp"></div><figcaption>Illustrative 2BHK furniture plan: two bedrooms, living/dining, a separate kitchen, common bathroom, utility and balcony. Teal lines trace selected routes; verify all dimensions in the actual project.</figcaption></figure>
+
+<h3>Example 2: The bedroom</h3>
+<ul class="bullets">
+  <li><strong>Place the bed first,</strong> with the headboard on a suitable wall. Check window operation, privacy and access rather than treating one orientation as a universal rule.</li>
+  <li><strong>Keep walking space on both sides</strong> of a double bed and at the foot, so two people can get in and out without climbing over.</li>
+  <li><strong>Check the wardrobe:</strong> leave room for hinged shutters to open fully, or use sliding shutters in tight rooms.</li>
+  <li><strong>Plan the switches:</strong> bedside switches for lights and fan at both sides of the bed.</li>
+  <li><strong>Keep the window clear</strong> for light and ventilation, and avoid the door hitting furniture.</li>
+</ul>
+
+<h3>Example 3: The kitchen</h3>
+<p>Choose the layout from the room width. A single straight run fits the 1.8 m minimum width; an L-shape suits a near-square room; a parallel or U-shaped kitchen needs about 2.3 m or more so the 1,067 mm work aisle survives. Keep sink, hob and fridge within an efficient triangle (NKBA suggests each leg between 1.2 and 2.7 m, totalling no more than 7.9 m), with landing space beside the sink and hob as in the table above.</p>
+
+<h3>Example 4: A small office</h3>
+<p>Office planning works from people and desks. Studio Matrx's 2026 benchmarks, which it describes as illustrative, put typical gross area at about 10–12 m² per person including meeting rooms, circulation and support space, and open-plan desks at about 6–8 m² of usable area each including local circulation. Bench positions range from a compact 1.4 m to a generous 1.8 m width, and with hybrid working, seven or eight desks per ten people is a common sharing ratio.</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Step</th><th>For a 20-person team (illustrative)</th></tr></thead>
+  <tbody>
+    <tr><td>Gross area estimate</td><td>20 × 10–12 m² ≈ 200–240 m²</td></tr>
+    <tr><td>Desks at a 7–8 per 10 sharing ratio</td><td>14–16 desks</td></tr>
+    <tr><td>Open-plan desk zone</td><td>14–16 × 6–8 m² ≈ 85–130 m²</td></tr>
+    <tr><td>Remaining area</td><td>Meeting rooms, focus rooms, pantry, reception, storage, toilets, circulation</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Augmintech arithmetic from Studio Matrx's illustrative benchmarks; check fire egress, occupant load and accessibility against the NBC and local rules.</p>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/112-aigenerated-office-scalemodel-illustration-it.webp" alt="AI-generated office scale-model illustration. It demonstrates zoning, not a verified capacity or compliant layout." loading="lazy"></div><figcaption>AI-generated office scale-model illustration. It demonstrates zoning, not a verified capacity or compliant layout.</figcaption></figure>
+
+<h2 id="mistakes">8 Common Space Planning Mistakes</h2>
+<ol class="nl">
+  <li><div><b>Designing before measuring.</b> Planning on a builder's brochure plan instead of site dimensions.</div></li>
+  <li><div><b>Using furniture that is not to scale,</b> or downloaded blocks with unrealistic sizes.</div></li>
+  <li><div><b>Forgetting door swings,</b> including wardrobe, appliance and balcony doors.</div></li>
+  <li><div><b>Circulation through the middle of rooms,</b> leaving no usable space.</div></li>
+  <li><div><b>Ignoring structure and services:</b> beams, columns, shafts and drain points fix where some things must go.</div></li>
+  <li><div><b>Too little storage,</b> the most common complaint in Indian homes after move-in.</div></li>
+  <li><div><b>Blocking light and ventilation</b> with tall furniture in front of windows.</div></li>
+  <li><div><b>Treating minimums as targets,</b> producing rooms that pass code but feel cramped.</div></li>
+</ol>
+
+<h2 id="tools">Tools for Space Planning</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Tool</th><th>Best for</th></tr></thead>
+  <tbody>
+    <tr><td>Trace paper and pencil</td><td>Bubble diagrams, zoning and quick options</td></tr>
+    <tr><td>AutoCAD</td><td>Accurate, dimensioned 2D layouts and furniture blocks</td></tr>
+    <tr><td>SketchUp</td><td>Testing layouts in 3D and showing clients</td></tr>
+    <tr><td>Revit</td><td>Rooms with automatic areas, room and furniture schedules, and drawings that update together</td></tr>
+  </tbody>
+</table>
+</div>
+<p><a href="https://augmintech.com/learn-revit/">Revit</a> is especially useful once a plan grows. Rooms calculate their own areas (measured to the wall finish by default), furniture is counted automatically, and model changes update relevant model-based views and schedules; annotations, constraints and schedule settings still require review. If you want to plan in BIM rather than lines, a structured course such as Augmintech's PG Program in BIM Architecture is one way to build that skill.</p>
+
+<h2 id="gulf">Space Planning for Gulf Homes and Offices</h2>
+<p><a href="https://augmintech.com/bim-careers-middle-east-uae-ksa/">Gulf projects</a> bring their own planning patterns: open kitchens are common in apartments, while larger villas often add a closed "dirty kitchen" for heavy cooking, majlis rooms for receiving guests separately from the family zone, and maid's rooms with their own access. Offices and hotels are often planned in BIM: since 1 January 2024, Dubai has required BIM model submissions in IFC format for building permits on larger buildings, as summarised on Autodesk's Dubai BIM mandate page.</p>
+
+<h2 id="layout-test">Worked Check: Does the Furniture Actually Fit?</h2><p>Take a fictional rectangular room with an internal width of 4,000 mm. A sofa projects 900 mm from one wall and a storage unit projects 450 mm from the opposite wall. The width remaining between their faces is 4,000 − 900 − 450 = 2,650 mm. A coffee table, occupied seating and circulation must all fit within that remainder. This arithmetic is a first check, not proof that the layout is accessible or comfortable.</p><p>Next, test movement: draw the entrance swing, open cabinet doors, pull out a chair and trace the route to the window and storage. Use actual product dimensions. A layout that works with closed cupboards and empty chairs can fail during use.</p><h3>Compare Options Against the Same Brief</h3><p>Keep the shell, openings and user needs identical in both options. Compare circulation, furniture access, daylight, privacy, service relocation and storage. Write one advantage and one compromise for each. Do not decide from the perspective image alone: a wide camera lens can make a tight room appear generous.</p><h3>What to Do When the Plan Fails</h3><p>First remove unnecessary furniture or choose a different footprint. Then test a different orientation, storage arrangement or door strategy where permissible. Do not quietly reduce the clearance assumption to preserve a preferred design. Record unresolved constraints and verify the appropriate requirements before finalising the layout.</p><p>The <a href="https://www.bis.gov.in/standards/national-building-code/?lang=en">BIS overview</a> describes NBC as a model code for adoption. The <a href="https://cpwd.gov.in/Publication/Booklet-Guide-for-Using-NBC-2016.pdf">CPWD guide to NBC 2016</a> summarises selected room provisions. Read the applicable clauses and local adopted rules; minimum area alone does not establish a usable or compliant room.</p><h2 id="checklist">Space Planning Checklist</h2>
+<div class="chk">
+  <div><span><b>Brief and programme</b> agreed and written down.</span></div>
+  <div><span><b>Site measured</b> and drawn, with structure and services marked.</span></div>
+  <div><span><b>Adjacencies and zones</b> resolved before furniture.</span></div>
+  <div><span><b>Circulation</b> short, clear and not through private rooms.</span></div>
+  <div><span><b>Rooms checked</b> against NBC minimums and local by-laws.</span></div>
+  <div><span><b>Clearances and door swings</b> checked at every piece of furniture.</span></div>
+  <div><span><b>Storage</b> counted for every room.</span></div>
+  <div><span><b>Tested in 3D</b> and walked through with the client.</span></div>
+</div>
+
+<div class="cta cta-green">
+  <div><h3>Take Your Plans Into BIM</h3><p>Rooms with live areas, schedules that update and coordinated drawings: Augmintech's PG Program in BIM Architecture is a structured way to build those skills. Check the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-green">See the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What is space planning in interior design?</div><div class="faq-a">It is the process of organising a space for its users: deciding which activities go where, how people move between them, and how furniture fits, before choosing finishes and decor.</div></div>
+<div class="faq-item"><div class="faq-q">What are the steps of space planning?</div><div class="faq-a">Brief and programme, site measurement, analysis of the shell, adjacency study, zoning, circulation, furniture layout to scale, and testing against codes, clearances and the client's needs.</div></div>
+<div class="faq-item"><div class="faq-q">What is the minimum size of a bedroom in India?</div><div class="faq-a">NBC 2016 sets 9.5 m² with a minimum width of 2.4 m for a single habitable room. Local by-laws can differ, so check them for each project.</div></div>
+<div class="faq-item"><div class="faq-q">What is the minimum kitchen size in India?</div><div class="faq-a">A separate kitchen should be at least 5.0 m² with a minimum width of 1.8 m under NBC 2016; a kitchen-cum-dining room at least 7.5 m² and 2.1 m wide.</div></div>
+<div class="faq-item"><div class="faq-q">How much space is needed between furniture?</div><div class="faq-a">NKBA recommends at least 914 mm for walkways, 1,067 mm for a one-cook kitchen aisle, and 914–1,118 mm behind dining chairs where people pass.</div></div>
+<div class="faq-item"><div class="faq-q">How much office space is needed per person?</div><div class="faq-a">Studio Matrx's illustrative 2026 benchmarks suggest about 10–12 m² gross per person including support space, and 6–8 m² of usable area per open-plan desk.</div></div>
+<div class="faq-item"><div class="faq-q">Which software is best for space planning?</div><div class="faq-a">Start on paper for zoning, use AutoCAD for accurate layouts and SketchUp to test in 3D. Revit adds rooms with automatic areas and schedules, useful on larger projects.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Infralens (citing NBC 2016)</strong>: <a href="https://infralens.in/thumbrules/habitable-room-minimum-area-single" target="_blank" rel="noopener">Habitable room minimum area</a>; <a href="https://infralens.in/thumbrules/kitchen-min-area" target="_blank" rel="noopener">Kitchen minimum area</a>; <a href="https://infralens.in/thumbrules/bathroom-minimum-area" target="_blank" rel="noopener">Bathroom minimum area</a>; <a href="https://infralens.in/thumbrules/wc-minimum-area" target="_blank" rel="noopener">WC minimum area</a>; <a href="https://infralens.in/thumbrules/bath-wc-combined-area" target="_blank" rel="noopener">Combined bath and WC</a>; <a href="https://infralens.in/thumbrules/bathroom-wc-door-width" target="_blank" rel="noopener">Bathroom and WC door width</a>.</li>
+  <li><strong>HouseYog</strong>, <a href="https://www.houseyog.com/blog/minimum-room-size-standards-india/" target="_blank" rel="noopener">Minimum room size standards in India</a> (February 2026).</li>
+  <li><strong>NKBA</strong>, <a href="https://kb.nkba.org/uploads/2022/05/Kitchen-Planning-Guidelines.pdf" target="_blank" rel="noopener">Kitchen Planning Guidelines</a>.</li>
+  <li><strong>Learn Architecture</strong>, <a href="https://learnarchitecture.net/articles/35632-minimum-corridor-width.html" target="_blank" rel="noopener">Minimum corridor width</a>.</li>
+  <li><strong>Studio Matrx</strong>, <a href="https://www.studiomatrx.org/students/workplace-and-office-design/space-standards-and-densities" target="_blank" rel="noopener">Space standards and densities</a> (October 2026).</li>
+  <li><strong>Autodesk</strong>: <a href="https://help.autodesk.com/cloudhelp/2022/ENU/RevitLT-ArchDes/files/GUID-0BB62832-36DD-4E06-A9D4-EE98CE0FCF89.htm" target="_blank" rel="noopener">Room area boundary location</a>; <a href="https://boards.autodesk.com/dubai-bim-mandate" target="_blank" rel="noopener">Dubai Municipality BIM mandate</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 8 November 2026. Codes and by-laws change; confirm minimum sizes with the local authority for every project.</p>
+</div>
