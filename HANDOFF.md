@@ -50,13 +50,17 @@ Network notes: the cloud container can reach GitHub but **not** augmintech.com (
 - **WhatsApp:** remove every WhatsApp link/button from the client HTML; the banner's WhatsApp link is the only one. If a CTA box only offered something "on WhatsApp", remove the box (or retitle it as a course CTA if it also promotes the course) and remove sentences promising that freebie.
 - **First heading:** the client's top heading (hero H1, older drafts used first H2) is removed from the HTML and used as the Elementor H1.
 - **Course links:** all course links, sidebar CTA and bottom CTA → `course_url`. Tell him if any client link was different.
-- **Internal links:** 2–7 per post, anchor ≤4–5 words, in body paragraphs/lists (not headings), only to **published** posts (see `tools/published_posts_2026-10-19.json`; refresh from `https://augmintech.com/post-sitemap.xml` via WebFetch). Don't link to unpublished drafts. Follow any client editor note asking for a specific link.
+- **Internal links:** 2–7 per post, anchor ≤4–5 words, in body paragraphs/lists (not headings), only to **published** posts (see `tools/published_posts_2026-10-19.json`; refresh from `https://augmintech.com/post-sitemap.xml` via WebFetch). Don't link to unpublished drafts (team publishes sometimes one by one, sometimes in batches, so a draft link could 404). On "refresh links" / "published X": re-read the sitemap and rebuild remaining drafts (`create-blog-draft` with `post_id`) to add links to newly live posts. Published posts can't be edited by the tool. Follow any client editor note asking for a specific link (e.g. "see our ... guide").
+- **Featured image:** first image, but skip software logos (pick the first real picture).
+- **Sheet quirks:** `html_file` names may not match the folder; match by number prefix and report it. Build check only flags the progress *bar* (`id="progress"`), not the word.
 - **SEO (Rank Math):** if blank in the sheet, write them: title ≤60 chars with the focus keyword first, description 140–160 chars, focus keyword = slug words.
 - **Author:** Augmintech. **Theme:** h2 28px #1a1a1a, links #0F4C81 (hover #18d104), CTA boxes #1a1a1a with green button (already in build_blog.py).
 - **No large data URIs** in anything sent to WordPress.
 
-## Open items (as of 2026-11-10)
-- Drafts awaiting Ashish: 73443 pipe-schedule-chart, 73444 piping-engineer, 73466 flange-types, 73467 boq-full-form.
-- After 81/82 are published, add links to them from 83 flange-types (e.g. "pipe schedule", "piping engineer") by rebuilding and calling `create-blog-draft` with `post_id`.
+## Open items (as of 2026-11-10 evening)
+- 81–95 are published. Drafts 96–110 (posts 73659–73673) await review/publish.
+- Linking from published posts (e.g. 83 → 81/82, older posts → 85–110) needs snippet #49 changed to allow updating published posts; ask Ashish first.
+- 89 fire-fighting-system: "Full guide" labels for hydrant/sprinkler are plain text; 86/87 are live now, so they could be linked (needs the snippet change, since 89 is published). "Wet riser / Fire pump (coming soon)" labels are still on the live post.
+- 100, 102–105 use software logos and vendor/third-party screenshots and renders (Autodesk, Chaos/V-Ray, D5, Vu Nguyen render reused in 104). Check rights before publishing.
 - Bottom CTA text comes from template 73340 (MEP Career Program); only its link is swapped. Ask whether he wants per-course CTA banners.
 - Test draft 73420 should be deleted (tools can't delete).
