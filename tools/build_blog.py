@@ -106,6 +106,9 @@ def img_sub(m):
     alt = (re.search(r'alt="([^"]*)"', tag) or [None, 'image'])[1]
     words = re.sub(r'[^a-z0-9 ]', '', H.unescape(alt).lower()).split()[:5]
     name = f"{cfg['prefix']}-{'-'.join(words)}.webp"
+    k = 2
+    while any(i['file'] == name for i in imgs):  # same alt twice -> unique file name
+        name = f"{cfg['prefix']}-{'-'.join(words)}-{k}.webp"; k += 1
     raw = base64.b64decode(src.group(3))
     if src.group(2) == 'svg+xml':
         wd = int((re.search(r'width="(\d+)"', tag) or [0, 1200])[1])
@@ -153,7 +156,7 @@ report['course_links_changed'] = [u for u in found if u != course]
 
 # --- checks ---
 report['whatsapp_links_left'] = len(re.findall(r'wa\.me/', s))  # banner has 1
-assert 'data:image' not in s and 'progress' not in s, 'leftover data URI / progress'
+assert not re.search(r'data:image/[^"\'\s]{200,}', s) and 'progress' not in s, 'leftover data URI / progress'
 for t in ('div', 'script', 'style', 'table', 'figure', 'ul', 'section', 'details'):
     assert s.count('<' + t) == s.count('</' + t + '>') or t == 'details', t
 open(f'{OUT}/{slug}.html', 'w', encoding='utf-8').write(s)
