@@ -1,0 +1,354 @@
+<style>
+#aug-boq-full-form{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-boq-full-form *,#aug-boq-full-form *::before,#aug-boq-full-form *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-boq-full-form{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-boq-full-form.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-boq-full-form .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-boq-full-form .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-boq-full-form .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-boq-full-form .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-boq-full-form .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-boq-full-form .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-boq-full-form h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-boq-full-form h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-boq-full-form p{margin-bottom:.9rem;font-size:16px;}
+#aug-boq-full-form a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-boq-full-form a:hover{border-color:var(--brand);}
+#aug-boq-full-form hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-boq-full-form .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-boq-full-form .chart svg{width:100%;height:auto;display:block;}
+#aug-boq-full-form .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-boq-full-form .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-boq-full-form .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-boq-full-form .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-boq-full-form .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-boq-full-form .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-boq-full-form .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-boq-full-form table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-boq-full-form caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-boq-full-form thead tr{background:var(--slate);color:#fff;}
+#aug-boq-full-form thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-boq-full-form tbody tr:nth-child(even){background:var(--surface);}
+#aug-boq-full-form tbody tr:hover{background:var(--brand-lite);}
+#aug-boq-full-form td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-boq-full-form td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-boq-full-form tbody tr.hl{background:var(--green-lite)!important;}
+#aug-boq-full-form tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-boq-full-form ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-boq-full-form ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-boq-full-form .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-boq-full-form .cta-green{background:var(--slate);}
+#aug-boq-full-form .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-boq-full-form .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-boq-full-form .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-boq-full-form .cta-btn-blue{color:var(--brand);}#aug-boq-full-form .cta-btn-green{color:var(--slate);}
+#aug-boq-full-form figure{margin:1.5rem 0;}
+#aug-boq-full-form figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-boq-full-form figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-boq-full-form dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-boq-full-form dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-boq-full-form dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-boq-full-form .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-boq-full-form .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-boq-full-form .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-boq-full-form .srcs{list-style:none;padding:0;}
+#aug-boq-full-form .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-boq-full-form .srcs li:last-child{border-bottom:none;}
+
+/* ===== answer ===== */#aug-boq-full-form .ff{display:flex;gap:0;margin:1.4rem 0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--brand-border);}
+#aug-boq-full-form .ff-l{background:var(--brand);color:#fff;padding:1rem 1.2rem;display:flex;flex-direction:column;justify-content:center;min-width:150px;}
+#aug-boq-full-form .ff-l b{font-family:var(--display);font-size:38px;font-weight:800;line-height:1;}
+#aug-boq-full-form .ff-l span{font-family:var(--mono);font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;opacity:.8;margin-top:.3rem;}
+#aug-boq-full-form .ff-r{padding:1rem 1.2rem;background:var(--brand-lite);}
+#aug-boq-full-form .ff-r p{margin:0;font-size:16px;line-height:1.7;color:var(--ink-mid);}
+#aug-boq-full-form .ff-r strong{color:var(--ink);}
+#aug-boq-full-form .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-boq-full-form .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+
+/* ===== uses strip ===== */#aug-boq-full-form .uses{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:1.1rem 0;}
+#aug-boq-full-form .uses div{border-top:3px solid var(--teal);background:var(--surface);border-radius:0 0 var(--radius-sm) var(--radius-sm);padding:.6rem .7rem;font-size:13.5px;line-height:1.5;color:var(--ink-mid);}
+#aug-boq-full-form .uses b{display:block;font-family:var(--display);font-size:14.5px;color:var(--ink);}
+
+/* ===== six columns ===== */#aug-boq-full-form .cols6{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin:1.2rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+#aug-boq-full-form .c6{padding:.7rem .6rem;border-right:1px solid var(--border);}
+#aug-boq-full-form .c6:last-child{border-right:none;}
+#aug-boq-full-form .c6 i{display:block;font-style:normal;font-family:var(--mono);font-size:10px;color:var(--muted);}
+#aug-boq-full-form .c6 b{display:block;font-family:var(--display);font-size:14.5px;color:var(--brand);margin:.15rem 0 .25rem;}
+#aug-boq-full-form .c6 span{font-size:12.5px;line-height:1.45;color:var(--ink-mid);}
+
+/* ===== sample BOQ ===== */#aug-boq-full-form .boq-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius);margin:.8rem 0 .6rem;}
+#aug-boq-full-form table.boq{border-collapse:collapse;width:100%;min-width:600px;margin:0;font-size:13px;}
+#aug-boq-full-form table.boq th{background:var(--slate);color:#fff;font-family:var(--mono);font-size:11px;font-weight:600;padding:7px 8px;text-align:left;}
+#aug-boq-full-form table.boq td{padding:6px 8px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.45;color:var(--ink-mid);}
+#aug-boq-full-form table.boq td.n{font-family:var(--mono);font-weight:600;color:var(--ink);white-space:nowrap;}
+#aug-boq-full-form table.boq td.u,#aug-boq-full-form table.boq td.q{font-family:var(--mono);text-align:center;white-space:nowrap;}
+#aug-boq-full-form table.boq td.a{font-family:var(--mono);text-align:right;white-space:nowrap;color:var(--ink);}
+#aug-boq-full-form table.boq tr.sec td{background:var(--brand-lite);font-family:var(--display);font-weight:800;color:var(--brand);}
+#aug-boq-full-form table.boq tr.sub td{background:var(--surface);font-family:var(--mono);font-weight:600;color:var(--ink);}
+#aug-boq-full-form table.boq tr.tot td{background:var(--slate);color:#fff;font-family:var(--mono);font-weight:700;}
+#aug-boq-full-form table.boq input{width:72px;font-family:var(--mono);font-size:12.5px;padding:4px 6px;border:1px solid var(--warn);border-radius:4px;background:#FFFBEF;text-align:right;}
+#aug-boq-full-form .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+
+/* ===== BOQ vs BOM ===== */#aug-boq-full-form .vs2{display:grid;grid-template-columns:120px 1fr 1fr;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.2rem 0;}
+#aug-boq-full-form .vs2 div{padding:.6rem .8rem;border-bottom:1px solid var(--border);font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-boq-full-form .vs2 .h{background:var(--slate);color:#fff;font-family:var(--display);font-weight:800;font-size:15px;}
+#aug-boq-full-form .vs2 .k{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--ink);background:var(--surface);}
+
+/* ===== steps ===== */#aug-boq-full-form .steps6{counter-reset:s;list-style:none;padding:0;margin:1.2rem 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+#aug-boq-full-form .steps6 li{counter-increment:s;border:1px solid var(--border);border-radius:var(--radius-sm);padding:.75rem .85rem .75rem 3.1rem;position:relative;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-boq-full-form .steps6 li::before{content:counter(s);position:absolute;left:.75rem;top:.75rem;width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--display);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;}
+#aug-boq-full-form .steps6 li b{display:block;color:var(--ink);font-family:var(--display);font-size:15px;margin-bottom:.15rem;}
+#aug-boq-full-form .mom{border-left:4px solid var(--purple);background:var(--purple-lite);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.8rem 1rem;margin:1rem 0;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-boq-full-form .mom b{color:var(--purple);}
+
+/* ===== revit flow ===== */#aug-boq-full-form .rflow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:1.2rem 0;}
+#aug-boq-full-form .rf{position:relative;padding:.8rem .8rem;background:var(--surface);border:1px solid var(--border);margin-right:-1px;}
+#aug-boq-full-form .rf:first-child{border-radius:var(--radius-sm) 0 0 var(--radius-sm);} #aug-boq-full-form .rf:last-child{border-radius:0 var(--radius-sm) var(--radius-sm) 0;}
+#aug-boq-full-form .rf i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--teal);letter-spacing:1px;text-transform:uppercase;}
+#aug-boq-full-form .rf b{display:block;font-family:var(--display);font-size:14.5px;margin:.2rem 0;}
+#aug-boq-full-form .rf span{font-size:12.5px;line-height:1.5;color:var(--ink-mid);}
+#aug-boq-full-form .rmap td:first-child{font-weight:700;color:var(--ink);}
+#aug-boq-full-form .code{font-family:var(--mono);font-size:13px;background:var(--slate);color:#fff;padding:.6rem .9rem;border-radius:var(--radius-sm);margin:.6rem 0;line-height:1.6;}
+
+/* ===== gulf ===== */#aug-boq-full-form .gb{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:1.2rem 0;}
+#aug-boq-full-form .gbc{border:1px solid var(--border);border-radius:var(--radius-sm);padding:.75rem .85rem;}
+#aug-boq-full-form .gbc b{display:block;font-family:var(--display);font-size:15px;color:var(--coral);margin-bottom:.2rem;}
+#aug-boq-full-form .gbc span{font-size:13.5px;line-height:1.55;color:var(--ink-mid);}
+#aug-boq-full-form .cta-btn-wa{background:#fff;color:var(--green);margin-left:6px;}
+
+@media(max-width:640px){
+  #aug-boq-full-form .ff{flex-direction:column;}
+  #aug-boq-full-form .uses{grid-template-columns:1fr 1fr;}
+  #aug-boq-full-form .cols6{grid-template-columns:1fr 1fr;} #aug-boq-full-form .c6{border-bottom:1px solid var(--border);}
+  #aug-boq-full-form .vs2{grid-template-columns:90px 1fr 1fr;} #aug-boq-full-form .vs2 div{font-size:12.5px;padding:.5rem .55rem;}
+  #aug-boq-full-form .steps6{grid-template-columns:1fr;}
+  #aug-boq-full-form .rflow{grid-template-columns:1fr;} #aug-boq-full-form .rf{margin-right:0;margin-bottom:-1px;border-radius:0 !important;}
+  #aug-boq-full-form .gb{grid-template-columns:1fr;}
+  #aug-boq-full-form .cta{flex-direction:column;align-items:flex-start;}
+  #aug-boq-full-form .cta>div{max-width:100%;} #aug-boq-full-form .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-boq-full-form .cta>div:last-child .cta-btn{margin-left:0;}
+}
+#aug-boq-full-form .sheet84{overflow-x:auto;border:1px solid #ccd9df;border-radius:8px}#aug-boq-full-form .sheet84 img{width:100%;min-width:720px;height:auto;display:block}#aug-boq-full-form .duct84{border:1px solid #bed1d7;border-radius:10px;background:#f6fafb;padding:clamp(14px,3vw,27px);color:#183848}#aug-boq-full-form .ey84{font:600 12px/1.4 system-ui;letter-spacing:.08em;color:#185e63}#aug-boq-full-form .duct84 h3{margin:.4rem 0}#aug-boq-full-form .duct84 p{font-size:15px}#aug-boq-full-form .r84{display:flex;gap:5px 12px;flex-wrap:wrap;align-items:baseline;font:15px/1.5 system-ui;margin-top:14px}#aug-boq-full-form .r84 strong{margin-left:auto}#aug-boq-full-form .r84 span{color:#42616c}#aug-boq-full-form .track84{margin-top:4px;background:#e1ebed;border-radius:3px;height:8px}#aug-boq-full-form .track84 i{display:block;height:100%;background:#17767b;border-radius:3px}#aug-boq-full-form .duct84 .end84{margin:20px 0 0;border-top:1px solid #c5d4d9;padding-top:8px}@media(max-width:520px){#aug-boq-full-form .r84 span{order:3;width:100%}}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-boq-full-form.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-boq-full-form h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-boq-full-form a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-boq-full-form a:hover{color:#18d104;}
+#aug-boq-full-form .cta{background:#1a1a1a;}
+#aug-boq-full-form .cta a.cta-btn{text-decoration:none;}
+#aug-boq-full-form .cta-btn-blue{background:#18d104;color:#000;}
+#aug-boq-full-form .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-boq-full-form [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-boq-full-form">
+
+<div class="ff">
+  <div class="ff-l"><b>BOQ</b><span>Bill of Quantities</span></div>
+  <div class="ff-r"><p><strong>BOQ stands for Bill of Quantities.</strong> It is a document that lists every item of work in a project with its description, unit and quantity, so contractors can price the same scope at tender and the client can control cost through construction.</p></div>
+</div>
+
+
+<p>Below you will find a sample MEP BOQ you can price yourself, a BOQ vs BOM comparison, the steps to prepare a BOQ, and how to pull quantities out of <a href="https://augmintech.com/revit-mep/">Revit</a>.</p>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>BOQ full form is Bill of Quantities</strong>: a list of work items with descriptions, units and firm quantities.</li>
+  <li><strong>A quantity surveyor or cost consultant usually prepares it</strong> once the design and specifications are complete.</li>
+  <li><strong>Contractors price the BOQ at tender</strong>, which gives every bidder the same basis and makes bids comparable.</li>
+  <li><strong>An MEP BOQ needs six columns</strong>: item number, description, unit, quantity, rate and amount.</li>
+  <li><strong>A BOQ is for tendering and cost control; a BOM is a component list for procurement and production.</strong></li>
+  <li><strong>Quantities follow a named method of measurement</strong>, such as IS 1200 in India or the method named in a Gulf tender.</li>
+</ul>
+
+<h2 id="what-is">What Is a Bill of Quantities (BOQ)?</h2>
+<p>A <strong>bill of quantities</strong> is, in the RICS NRM2 definition quoted by RIB Software, "a list of items that gives detailed identifying descriptions and firm quantities of the work comprising a contract" (<a href="https://www.rib-software.com/en/blogs/bill-of-quantities" target="_blank" rel="noopener">RIB Software</a>). It is "a document prepared by a quantity surveyor or cost consultant" (<a href="https://www.jonesmelling.co.uk/newsroom/insights/what-is-a-bill-of-quantities/" target="_blank" rel="noopener">Jones Melling</a>), and is usually issued to bidding contractors as part of the tender documents once design and specifications are complete.</p>
+<p>A <strong>BOQ in construction</strong> does more than one job across the project:</p>
+<div class="uses">
+  <div><b>Tendering</b>All bidders price the same items, so bids can be compared fairly.</div>
+  <div><b>Pricing</b>The priced BOQ becomes the basis of the contract sum.</div>
+  <div><b>Cost control</b>Budgets, forecasts and interim payments are tracked against it.</div>
+  <div><b>Variations</b>Its rates are used to value changes and the final account.</div>
+</div>
+<p>Typical sections include preliminaries, measured work, provisional sums, dayworks and a summary (<a href="https://www.rib-software.com/en/blogs/bill-of-quantities" target="_blank" rel="noopener">RIB Software</a>). For <a href="https://augmintech.com/mep-systems-construction/">MEP</a>, the measured work is usually split by trade: <a href="https://augmintech.com/types-of-hvac-systems/">HVAC</a>, plumbing, electrical, fire fighting and ELV.</p>
+
+<figure>
+  <div class="sheet84" tabindex="0" aria-label="HVAC worksheet preview"><img src="https://augmintech.com/wp-content/uploads/2026/11/84-hvac-worksheet-with-four-sample.webp" width="1722" height="623" alt="HVAC worksheet with four sample quantities, yellow rate inputs and an automatic subtotal"></div>
+  <figcaption>HVAC section from the sample BOQ workbook. Enter unit rates in the yellow cells; calculated amounts roll up to the trade subtotal and project summary.</figcaption>
+</figure>
+
+<h2 id="columns">6 Columns Every MEP BOQ Needs</h2>
+<div class="cols6">
+  <div class="c6"><i>Col 1</i><b>Item No.</b><span>A unique reference (1.1, 1.2) used in queries, payments and variations.</span></div>
+  <div class="c6"><i>Col 2</i><b>Description</b><span>What, size, rating, and what is included: supply, install, test, commission.</span></div>
+  <div class="c6"><i>Col 3</i><b>Unit</b><span>m², Rm, No., Set or kg, as the method of measurement sets.</span></div>
+  <div class="c6"><i>Col 4</i><b>Quantity</b><span>The measured quantity from the drawings.</span></div>
+  <div class="c6"><i>Col 5</i><b>Rate</b><span>The bidder's price per unit, filled in at tender.</span></div>
+  <div class="c6"><i>Col 6</i><b>Amount</b><span>Quantity × rate, summed into subtotals and the total.</span></div>
+</div>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h3 id="sample">Sample MEP BOQ (try pricing it)</h3>
+<p>This sample is for an imaginary office floor. The rates are blank, as they would be in a tender BOQ. Type a rate into any yellow cell to see the amount, subtotal and total update.</p>
+<div class="boq-wrap"><table class="boq" id="boq"><thead><tr><th>Item</th><th>Description</th><th>Unit</th><th>Qty</th><th>Rate (₹)</th><th>Amount (₹)</th></tr></thead><tbody>
+<tr class="sec"><td colspan="6">1. HVAC</td></tr>
+<tr data-s="1"><td class="n">1.1</td><td>Supply, fabricate and install GI rectangular ductwork, thickness as per specification, including supports, flanges, sealant and leakage testing</td><td class="u">m²</td><td class="q">850</td><td><input type="number" min="0" step="any" data-q="850" aria-label="Rate for item 1.1" placeholder="rate"></td><td class="a">-</td></tr>
+<tr data-s="1"><td class="n">1.2</td><td>Supply and install 600 × 600 mm square ceiling supply diffuser with opposed-blade volume control damper</td><td class="u">No.</td><td class="q">64</td><td><input type="number" min="0" step="any" data-q="64" aria-label="Rate for item 1.2" placeholder="rate"></td><td class="a">-</td></tr>
+<tr data-s="1"><td class="n">1.3</td><td>Supply, install, test and commission ceiling-concealed chilled water fan coil unit, 5.3 kW (1.5 TR), with controls</td><td class="u">No.</td><td class="q">12</td><td><input type="number" min="0" step="any" data-q="12" aria-label="Rate for item 1.3" placeholder="rate"></td><td class="a">-</td></tr>
+<tr data-s="1"><td class="n">1.4</td><td>Supply and apply 19 mm closed-cell elastomeric insulation on chilled water pipes, 50 mm dia</td><td class="u">Rm</td><td class="q">240</td><td><input type="number" min="0" step="any" data-q="240" aria-label="Rate for item 1.4" placeholder="rate"></td><td class="a">-</td></tr>
+<tr class="sub" data-sub="1"><td></td><td colspan="4">Subtotal, HVAC</td><td class="a">-</td></tr>
+<tr class="sec"><td colspan="6">2. Plumbing</td></tr>
+<tr data-s="2"><td class="n">2.1</td><td>Supply and fix CPVC pipe SDR 11, 25 mm dia, including fittings, clamps and pressure testing</td><td class="u">Rm</td><td class="q">420</td><td><input type="number" min="0" step="any" data-q="420" aria-label="Rate for item 2.1" placeholder="rate"></td><td class="a">-</td></tr>
+<tr data-s="2"><td class="n">2.2</td><td>Supply and fix uPVC SWR drainage pipe, 110 mm dia, including fittings and testing</td><td class="u">Rm</td><td class="q">260</td><td><input type="number" min="0" step="any" data-q="260" aria-label="Rate for item 2.2" placeholder="rate"></td><td class="a">-</td></tr>
+<tr data-s="2"><td class="n">2.3</td><td>Supply and fix wall-hung European water closet with concealed cistern and flush plate</td><td class="u">No.</td><td class="q">18</td><td><input type="number" min="0" step="any" data-q="18" aria-label="Rate for item 2.3" placeholder="rate"></td><td class="a">-</td></tr>
+<tr class="sub" data-sub="2"><td></td><td colspan="4">Subtotal, Plumbing</td><td class="a">-</td></tr>
+<tr class="sec"><td colspan="6">3. Electrical</td></tr>
+<tr data-s="3"><td class="n">3.1</td><td>Supply, lay and terminate 4C × 16 mm² XLPE armoured copper cable on cable tray, including glands and lugs</td><td class="u">Rm</td><td class="q">180</td><td><input type="number" min="0" step="any" data-q="180" aria-label="Rate for item 3.1" placeholder="rate"></td><td class="a">-</td></tr>
+<tr data-s="3"><td class="n">3.2</td><td>Supply and fix 600 × 600 mm recessed LED panel light, 36 W, including wiring from junction box</td><td class="u">No.</td><td class="q">96</td><td><input type="number" min="0" step="any" data-q="96" aria-label="Rate for item 3.2" placeholder="rate"></td><td class="a">-</td></tr>
+<tr data-s="3"><td class="n">3.3</td><td>Supply, install and test 12-way TPN distribution board with MCBs and RCCB</td><td class="u">No.</td><td class="q">6</td><td><input type="number" min="0" step="any" data-q="6" aria-label="Rate for item 3.3" placeholder="rate"></td><td class="a">-</td></tr>
+<tr class="sub" data-sub="3"><td></td><td colspan="4">Subtotal, Electrical</td><td class="a">-</td></tr>
+<tr class="sec"><td colspan="6">4. Fire fighting</td></tr>
+<tr data-s="4"><td class="n">4.1</td><td>Supply and fix pendent quick-response sprinkler, 15 mm, 68 °C, K-factor 80, including drop and fittings</td><td class="u">No.</td><td class="q">140</td><td><input type="number" min="0" step="any" data-q="140" aria-label="Rate for item 4.1" placeholder="rate"></td><td class="a">-</td></tr>
+<tr class="sub" data-sub="4"><td></td><td colspan="4">Subtotal, Fire fighting</td><td class="a">-</td></tr>
+<tr class="tot"><td></td><td colspan="4">Total (excluding taxes)</td><td class="a" id="boq-total">-</td></tr>
+</tbody></table></div>
+<p class="note">Fictional sample for learning only: no real project data and no market rates. Units: m² = square metres of duct sheet, Rm = running metre, No. = number.</p>
+
+<div class="cta">
+  <div><h3>Learn to Extract BOQs from a Revit MEP Model</h3><p>Augmintech's PG Program in BIM MEP covers MEP modelling, schedules for MEP elements and BOQ and quantity take-off on three building projects, across 150+ live hours over 6 months, with recordings for 1000 days and 500+ interview questions. ₹1,50,000 + GST in India, $1,800 abroad.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-mep-program/" class="cta-btn cta-btn-blue">View the BIM MEP program</a></div>
+</div>
+
+<h2 id="boq-vs-bom">BOQ vs BOM</h2>
+<p>The two are often confused because both list quantities. They serve different people at different stages.</p>
+<div class="vs2">
+  <div class="h"></div><div class="h">BOQ (Bill of Quantities)</div><div class="h">BOM (Bill of Materials)</div>
+  <div class="k">Purpose</div><div>Tendering, pricing and cost control of construction work</div><div>Planning, procurement and production of a product or assembly</div>
+  <div class="k">Prepared by</div><div>Quantity surveyor or cost consultant</div><div>Engineering, production or procurement teams</div>
+  <div class="k">Stage</div><div>Pre-construction, issued with the tender</div><div>Detailed design, before procurement and production</div>
+  <div class="k">Pricing</div><div>Every item carries a rate and amount</div><div>Usually quantities and part data; costing done separately</div>
+  <div class="k">Detail</div><div>Work items with measured quantities, including labour</div><div>Components down to part numbers and specifications</div>
+</div>
+<p class="note">Based on <a href="https://kreo.net/news-2d-takeoff/what-is-the-difference-between-boq-and-bom" target="_blank" rel="noopener">Kreo</a> and <a href="https://www.netstock.com/?p=5605" target="_blank" rel="noopener">Netstock</a>; "prepared by" for the BOQ from Jones Melling. On MEP projects, contractors often prepare BOMs from the approved BOQ and shop drawings to order material.</p>
+
+<h2 id="prepare">How to Prepare a BOQ</h2>
+<ol class="steps6">
+  <li><b>Read drawings and specs</b>Collect the latest drawings, specifications, schedules and the tender's method of measurement.</li>
+  <li><b>Break into trades</b>Split into HVAC, plumbing, electrical, fire and ELV, then into systems and floors.</li>
+  <li><b>Take off quantities</b>Measure lengths, areas and counts from drawings or the model, following the measurement rules.</li>
+  <li><b>Describe each item</b>State material, size, rating and inclusions so every bidder prices the same thing.</li>
+  <li><b>Price</b>Contractors add rates; the consultant prepares a priced estimate to check bids against.</li>
+  <li><b>Review</b>Cross-check totals against drawings, remove duplicates, and confirm every specified item is billed.</li>
+</ol>
+<div class="mom"><b>Method of measurement.</b> In India, IS 1200 sets measurement rules for building and civil works, part by part. Part 19 covers water supply, plumbing and drains, and Part 16 covers laying of water and sewer lines (<a href="https://law.resource.org/pub/in/bis/manifest.ced.44.html" target="_blank" rel="noopener">BIS IS 1200 parts list</a>). IS 1200 has no part for electrical or HVAC work, so for those trades the measurement rules are written into the tender specification. On Gulf projects, the tender documents name the method of measurement to follow.</div>
+
+<h2 id="revit">Quantity Takeoff from Revit Schedules</h2>
+<p>On a <a href="https://augmintech.com/bim-mep/">BIM project</a>, most MEP quantities can come straight out of the model. A Revit schedule is a live table of model elements, so when the model changes, the quantities change with it.</p>
+<div class="rflow">
+  <div class="rf"><i>Step 1</i><b>Create schedules</b><span>Duct, pipe, fitting, air terminal, plumbing fixture and lighting fixture schedules.</span></div>
+  <div class="rf"><i>Step 2</i><b>Pick fields</b><span>System type, size, length and count; add filters by level or system.</span></div>
+  <div class="rf"><i>Step 3</i><b>Group and total</b><span>Sort by size, untick "Itemize every instance", and show totals.</span></div>
+  <div class="rf"><i>Step 4</i><b>Export to Excel</b><span>Export the schedule, open it in Excel, and map lines to BOQ items.</span></div>
+</div>
+<div class="code">File tab › Export › Reports › Schedule › choose delimiter › Save</div>
+<p>Revit saves the schedule "as delimited text, a format that can be opened in spreadsheet programs, such as Microsoft Excel" (<a href="https://help.autodesk.com/cloudhelp/2023/ENU/Revit-DocumentPresent/files/GUID-B2CCAC4F-1D38-4D5D-B4D1-95619D1B7EBE.htm" target="_blank" rel="noopener">Autodesk Revit Help</a>). In Excel, convert schedule data into BOQ units:</p>
+<div class="tbl-wrap">
+<table class="rmap">
+  <thead><tr><th>Revit schedule</th><th>Fields</th><th>BOQ item and unit</th></tr></thead>
+  <tbody>
+    <tr><td>Duct schedule</td><td>Width, height, length</td><td>Duct sheet area in m²: 2 × (W + H) × length</td></tr>
+    <tr><td>Pipe schedule</td><td>System type, size, length</td><td>Pipe by size and system in Rm</td></tr>
+    <tr><td>Air terminal schedule</td><td>Family and type, count</td><td>Diffusers and grilles by type in No.</td></tr>
+    <tr><td>Plumbing fixture schedule</td><td>Family and type, count</td><td>Sanitary fixtures in No.</td></tr>
+    <tr><td>Lighting fixture schedule</td><td>Family and type, count</td><td>Light fittings in No.</td></tr>
+  </tbody>
+</table>
+</div>
+<p>A model only gives what has been modelled. Hangers, sealant, testing and small fittings often still need allowances or manual takeoff. Linking quantities like this to cost is what 5D BIM means; our <a href="https://augmintech.com/bim-scheduling/">BIM scheduling page</a> covers it in more depth.</p>
+
+<figure>
+  <div class="duct84"><span class="ey84">WORKED TAKEOFF · BOQ ITEM 1.1</span><h3>From duct lengths to 850 m² of sheet area</h3><p>Illustrative grouped schedule for straight rectangular duct. Each bar shows one size’s contribution.</p><div class="r84"><b>600 × 400 mm</b><span>200 m length × 2.0 m perimeter</span><strong>400 m²</strong></div><div class="track84"><i style="width:100.0%"></i></div><div class="r84"><b>500 × 300 mm</b><span>200 m length × 1.6 m perimeter</span><strong>320 m²</strong></div><div class="track84"><i style="width:80.0%"></i></div><div class="r84"><b>400 × 250 mm</b><span>100 m length × 1.3 m perimeter</span><strong>130 m²</strong></div><div class="track84"><i style="width:32.5%"></i></div><p class="end84">Total sheet area: 400 + 320 + 130 = <strong>850 m²</strong></p></div>
+  <figcaption>Group duct lengths by size before converting to area. This worked example excludes fittings, seams and waste; apply the project’s measurement rules separately.</figcaption>
+</figure>
+
+<h2 id="gulf">BOQs on Gulf Projects</h2>
+<div class="gb">
+  <div class="gbc"><b>Method named in the tender</b><span>The BOQ preamble states which method of measurement applies; quantities and descriptions must follow it.</span></div>
+  <div class="gbc"><b>POMI is widely known</b><span>A survey of Middle East quantity surveyors found POMI had "the most recognition", followed by CESMM; NRM was "still not well recognized" (Magdy and Ezeldin, 2016).</span></div>
+  <div class="gbc"><b>BOQ status depends on contract</b><span>In re-measurement or unit-price contracts the BOQ ranks high among contract documents; in lump-sum contracts it is mainly used to value variations.</span></div>
+</div>
+<p>Survey source: <a href="https://www.isec-society.org/ISEC_PRESS/ASEA_SEC_03/pdf/C-15_v3_130.pdf" target="_blank" rel="noopener">Magdy, A. and Ezeldin, S. (2016), ISEC Press</a>, a questionnaire of 140 quantity surveying professionals with 45 replies. Always read the tender's own preamble and BOQ format before pricing or preparing quantities.</p>
+
+<figure>
+  <div class="ph">
+  
+  <img src="https://augmintech.com/wp-content/uploads/2026/11/84-quantity-surveyor-marking-up-mep.webp" alt="Quantity surveyor marking up MEP drawings for quantity takeoff next to a BOQ spreadsheet" width="1200" height="675" loading="lazy">
+  </div>
+  <figcaption>Manual takeoff from drawings is still common for items the model does not carry.</figcaption>
+</figure>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What is the full form of BOQ?</div><div class="faq-a">BOQ stands for Bill of Quantities.</div></div>
+<div class="faq-item"><div class="faq-q">What is a BOQ in construction?</div><div class="faq-a">A document listing every item of work with its description, unit and quantity, issued with the tender so contractors can price the same scope. The priced BOQ is then used for the contract sum, interim payments and valuing variations.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between a BOQ and a BOM?</div><div class="faq-a">A BOQ lists priced work items for tendering and cost control in construction. A BOM lists the components and materials needed to make or procure something, usually without rates, for production and purchasing.</div></div>
+<div class="faq-item"><div class="faq-q">Who prepares the BOQ?</div><div class="faq-a">Usually a quantity surveyor or cost consultant on behalf of the client, once the design and specifications are complete. Contractors then fill in the rates when they bid.</div></div>
+<div class="faq-item"><div class="faq-q">How do you take off quantities from Revit?</div><div class="faq-a">Create schedules for ducts, pipes, fittings and fixtures, add fields such as size, length and count, group and total them, then export via File › Export › Reports › Schedule as delimited text and open the file in Excel to map quantities to BOQ items.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>RIB Software</strong>, "Bill of Quantities", <a href="https://www.rib-software.com/en/blogs/bill-of-quantities" target="_blank" rel="noopener">rib-software.com</a> (quotes the RICS NRM2 definition).</li>
+  <li><strong>Jones Melling</strong>, "What is a bill of quantities?", <a href="https://www.jonesmelling.co.uk/newsroom/insights/what-is-a-bill-of-quantities/" target="_blank" rel="noopener">jonesmelling.co.uk</a>.</li>
+  <li><strong>Kreo</strong>, "What is the difference between BOQ and BOM", <a href="https://kreo.net/news-2d-takeoff/what-is-the-difference-between-boq-and-bom" target="_blank" rel="noopener">kreo.net</a>; <strong>Netstock</strong>, "Bill of Materials vs Bill of Quantities", <a href="https://www.netstock.com/?p=5605" target="_blank" rel="noopener">netstock.com</a>.</li>
+  <li><strong>Bureau of Indian Standards</strong>, IS 1200 parts list (Method of measurement of building and civil engineering works), via <a href="https://law.resource.org/pub/in/bis/manifest.ced.44.html" target="_blank" rel="noopener">law.resource.org</a>.</li>
+  <li><strong>Autodesk</strong>, Revit Help, "Export a Schedule", <a href="https://help.autodesk.com/cloudhelp/2023/ENU/Revit-DocumentPresent/files/GUID-B2CCAC4F-1D38-4D5D-B4D1-95619D1B7EBE.htm" target="_blank" rel="noopener">help.autodesk.com</a>.</li>
+  <li><strong>Magdy, A. and Ezeldin, S.</strong> (2016), "A Decision Support System for Methods of Measurement in Construction Projects", ISEC Press, <a href="https://www.isec-society.org/ISEC_PRESS/ASEA_SEC_03/pdf/C-15_v3_130.pdf" target="_blank" rel="noopener">isec-society.org</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 4 November 2026.</p>
+
+</div>
+<script>
+(function(){
+  const t=document.getElementById('boq'); if(!t) return;
+  const fmt=n=>n>0?n.toLocaleString('en-IN',{maximumFractionDigits:2}):'-';
+  function run(){
+    const subs={}; let tot=0;
+    t.querySelectorAll('input[data-q]').forEach(i=>{
+      const tr=i.closest('tr'), s=tr.dataset.s, r=parseFloat(i.value), a=isNaN(r)?0:r*parseFloat(i.dataset.q);
+      tr.querySelector('td.a').textContent=fmt(a); subs[s]=(subs[s]||0)+a; tot+=a;
+    });
+    t.querySelectorAll('tr[data-sub]').forEach(tr=>{tr.querySelector('td.a').textContent=fmt(subs[tr.dataset.sub]||0);});
+    document.getElementById('boq-total').textContent=fmt(tot);
+  }
+  t.addEventListener('input',run); run();
+})();
+</script>
