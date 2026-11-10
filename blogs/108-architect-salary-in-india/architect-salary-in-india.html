@@ -1,0 +1,386 @@
+<style>
+#aug-architect-salary-in-india{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-architect-salary-in-india *,#aug-architect-salary-in-india *::before,#aug-architect-salary-in-india *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-architect-salary-in-india{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-architect-salary-in-india.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-architect-salary-in-india .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-architect-salary-in-india .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-architect-salary-in-india .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-architect-salary-in-india .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-architect-salary-in-india .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-architect-salary-in-india .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-architect-salary-in-india h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-architect-salary-in-india h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-architect-salary-in-india p{margin-bottom:.9rem;font-size:16px;}
+#aug-architect-salary-in-india a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-architect-salary-in-india a:hover{border-color:var(--brand);}
+#aug-architect-salary-in-india hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-architect-salary-in-india .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-architect-salary-in-india .chart svg{width:100%;height:auto;display:block;}
+#aug-architect-salary-in-india .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-architect-salary-in-india .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-architect-salary-in-india .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-architect-salary-in-india .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-architect-salary-in-india .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-architect-salary-in-india .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-architect-salary-in-india .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-architect-salary-in-india table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-architect-salary-in-india caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-architect-salary-in-india thead tr{background:var(--slate);color:#fff;}
+#aug-architect-salary-in-india thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-architect-salary-in-india tbody tr:nth-child(even){background:var(--surface);}
+#aug-architect-salary-in-india tbody tr:hover{background:var(--brand-lite);}
+#aug-architect-salary-in-india td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-architect-salary-in-india td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-architect-salary-in-india tbody tr.hl{background:var(--green-lite)!important;}
+#aug-architect-salary-in-india tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-architect-salary-in-india ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-architect-salary-in-india ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-architect-salary-in-india .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-architect-salary-in-india .cta-green{background:var(--slate);}
+#aug-architect-salary-in-india .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-architect-salary-in-india .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-architect-salary-in-india .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-architect-salary-in-india .cta-btn-blue{color:var(--brand);}#aug-architect-salary-in-india .cta-btn-green{color:var(--slate);}
+#aug-architect-salary-in-india figure{margin:1.5rem 0;}
+#aug-architect-salary-in-india figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-architect-salary-in-india figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-architect-salary-in-india dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-architect-salary-in-india dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-architect-salary-in-india dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-architect-salary-in-india .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-architect-salary-in-india .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-architect-salary-in-india .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-architect-salary-in-india .srcs{list-style:none;padding:0;}
+#aug-architect-salary-in-india .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-architect-salary-in-india .srcs li:last-child{border-bottom:none;}
+
+#aug-architect-salary-in-india .ans{margin:1.3rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#F4F6F8;border-left:4px solid var(--brand);font-size:16.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-architect-salary-in-india .ans b{color:var(--ink);}
+#aug-architect-salary-in-india .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-architect-salary-in-india .dfig svg{display:block;width:100%;height:auto;}
+#aug-architect-salary-in-india .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-architect-salary-in-india .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-architect-salary-in-india .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-architect-salary-in-india figure.pf{margin:1.2rem 0;} #aug-architect-salary-in-india figure.pf figcaption{font-family:var(--body);font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-architect-salary-in-india .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;} #aug-architect-salary-in-india .pair figure{margin:0;}
+#aug-architect-salary-in-india .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-architect-salary-in-india .alert{margin:1.2rem 0;padding:.85rem 1rem;border-radius:var(--radius);background:#FFF4E5;border:1px solid #F3D3A4;font-size:14.5px;line-height:1.6;}
+#aug-architect-salary-in-india .alert b{color:var(--warn);}
+#aug-architect-salary-in-india .t table{font-size:13.5px;} #aug-architect-salary-in-india .t td:first-child{font-weight:700;color:var(--ink);} #aug-architect-salary-in-india .t th{white-space:normal;}
+#aug-architect-salary-in-india .t .m{font-family:var(--mono);font-size:12px;white-space:nowrap;}
+#aug-architect-salary-in-india .t caption{caption-side:bottom;text-align:left;font-family:var(--body);text-transform:none;letter-spacing:0;font-size:12.5px;color:var(--muted);padding:.5rem .2rem 0;}
+#aug-architect-salary-in-india .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.2rem 0;}
+#aug-architect-salary-in-india .cards.two{grid-template-columns:1fr 1fr;} #aug-architect-salary-in-india .cards.four{grid-template-columns:repeat(4,1fr);}
+#aug-architect-salary-in-india .cards>div{border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:var(--radius);padding:.85rem .95rem;background:#fff;}
+#aug-architect-salary-in-india .cards>div.c2{border-top-color:#1D6B43;} #aug-architect-salary-in-india .cards>div.c3{border-top-color:#8A5A00;} #aug-architect-salary-in-india .cards>div.c4{border-top-color:#5B3A86;} #aug-architect-salary-in-india .cards>div.c5{border-top-color:#B5371B;}
+#aug-architect-salary-in-india .cards b{display:block;font-family:var(--display);font-size:15.5px;color:var(--ink);margin-bottom:.25rem;line-height:1.3;}
+#aug-architect-salary-in-india .cards span{display:block;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-architect-salary-in-india .cards em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.5rem;}
+#aug-architect-salary-in-india .cards ul{margin:.3rem 0 0;padding-left:1.05rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-architect-salary-in-india .steps{list-style:none;margin:1.2rem 0;padding:0;counter-reset:s;display:grid;gap:10px;}
+#aug-architect-salary-in-india .steps li{counter-increment:s;position:relative;padding:.8rem 1rem .8rem 3.4rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;font-size:15px;line-height:1.6;}
+#aug-architect-salary-in-india .steps li::before{content:counter(s);position:absolute;left:.9rem;top:.8rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--display);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+#aug-architect-salary-in-india .steps li b{display:block;font-family:var(--display);color:var(--ink);font-size:15.5px;margin-bottom:2px;}
+#aug-architect-salary-in-india .nl{list-style:none;padding:0;margin:1.2rem 0;counter-reset:u;}
+#aug-architect-salary-in-india .nl li{counter-increment:u;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;padding:.75rem 0;border-top:1px solid var(--border);font-size:15px;line-height:1.6;}
+#aug-architect-salary-in-india .nl li:first-child{border-top:none;}
+#aug-architect-salary-in-india .nl li::before{content:counter(u,decimal-leading-zero);font-family:var(--mono);font-weight:700;color:var(--coral);font-size:14px;padding-top:2px;}
+#aug-architect-salary-in-india .nl b{color:var(--ink);}
+#aug-architect-salary-in-india .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-architect-salary-in-india .pick>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-architect-salary-in-india .pick .a{background:#EEF7F1;border:1px solid #C6E3D1;} #aug-architect-salary-in-india .pick .r{background:#FDF1EC;border:1px solid #F1CDBE;}
+#aug-architect-salary-in-india .pick h3{margin:0 0 .4rem;font-size:15.5px;} #aug-architect-salary-in-india .pick .a h3{color:#1D6B43;} #aug-architect-salary-in-india .pick .r h3{color:#9A3B1E;}
+#aug-architect-salary-in-india .pick ul{margin:0;padding-left:1.1rem;} #aug-architect-salary-in-india .pick li{margin-bottom:.3rem;}
+#aug-architect-salary-in-india .chk{margin:1.2rem 0;border:1px solid var(--border);border-radius:var(--radius);background:#fff;padding:.4rem 1rem;}
+#aug-architect-salary-in-india .chk div{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:.6rem 0;border-top:1px solid var(--border);font-size:14.5px;line-height:1.55;}
+#aug-architect-salary-in-india .chk div:first-child{border-top:none;}
+#aug-architect-salary-in-india .chk div::before{content:"";width:16px;height:16px;border:2px solid var(--green);border-radius:4px;margin-top:3px;}
+#aug-architect-salary-in-india .chk b{color:var(--ink);}
+#aug-architect-salary-in-india .qa{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-architect-salary-in-india .qa .q{padding:.75rem 1rem;background:var(--surface);font-family:var(--display);font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.45;}
+#aug-architect-salary-in-india .qa .q span{font-family:var(--mono);font-size:11px;color:var(--brand);font-weight:700;margin-right:8px;letter-spacing:.04em;}
+#aug-architect-salary-in-india .qa .a{padding:.75rem 1rem;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-architect-salary-in-india .qa .a i{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--coral);margin-top:.5rem;letter-spacing:.03em;}
+#aug-architect-salary-in-india .bar{display:flex;margin:1.2rem 0 .4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-architect-salary-in-india .bar div{padding:.75rem .7rem;font-size:13px;line-height:1.4;color:#fff;}
+#aug-architect-salary-in-india .bar div b{display:block;font-family:var(--display);font-size:17px;}
+#aug-architect-salary-in-india .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-architect-salary-in-india .split>div{border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);padding:.9rem 1rem;}
+#aug-architect-salary-in-india .split h3{margin:0 0 .5rem;font-size:16px;} #aug-architect-salary-in-india .split dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14px;}
+#aug-architect-salary-in-india .split dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:2px;} #aug-architect-salary-in-india .split dd{margin:0;color:var(--ink);}
+
+@media(max-width:820px){ #aug-architect-salary-in-india .cards,#aug-architect-salary-in-india .cards.four{grid-template-columns:1fr 1fr;} }
+@media(max-width:640px){
+  #aug-architect-salary-in-india .t table{min-width:600px;}
+  #aug-architect-salary-in-india .cards,#aug-architect-salary-in-india .cards.two,#aug-architect-salary-in-india .cards.four,#aug-architect-salary-in-india .pick,#aug-architect-salary-in-india .pair,#aug-architect-salary-in-india .split{grid-template-columns:1fr;}
+  #aug-architect-salary-in-india .bar{flex-direction:column;} #aug-architect-salary-in-india .bar div{flex:none!important;}
+  #aug-architect-salary-in-india .steps li{padding-left:3rem;}
+  #aug-architect-salary-in-india .dfig.wide{overflow-x:auto;} #aug-architect-salary-in-india .dfig.wide svg{min-width:640px;}
+  #aug-architect-salary-in-india .cta{flex-direction:column;align-items:flex-start;}
+  #aug-architect-salary-in-india .cta>div{max-width:100%;} #aug-architect-salary-in-india .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-architect-salary-in-india .cta>div:last-child .cta-btn{margin-left:0;white-space:normal;text-align:center;line-height:1.5;}
+}
+#aug-architect-salary-in-india .pf .ph{height:auto!important;aspect-ratio:auto!important;min-height:0!important;padding:0!important;background:#f4f8fb!important;overflow:hidden}#aug-architect-salary-in-india .ph::before,#aug-architect-salary-in-india .ph::after{display:none!important}#aug-architect-salary-in-india .pf .ph img{position:static!important;display:block;width:100%!important;height:auto!important;object-fit:contain!important;opacity:1!important;filter:none!important}#aug-architect-salary-in-india .pf figcaption{font-family:Arial,sans-serif!important;font-size:14px!important;line-height:1.65!important;padding:16px!important;overflow-wrap:anywhere}#aug-architect-salary-in-india.blog{overflow-wrap:break-word}#aug-architect-salary-in-india .tbl-wrap{overflow-x:auto}#aug-architect-salary-in-india .cta-btn{white-space:normal!important}#aug-architect-salary-in-india .dfig svg{max-width:100%;height:auto}#aug-architect-salary-in-india .wide{overflow-x:auto}@media(max-width:650px){#aug-architect-salary-in-india .pair,#aug-architect-salary-in-india .grid3,#aug-architect-salary-in-india .gq3{grid-template-columns:1fr!important}}
+/* ===== Augmintech theme overrides ===== */
+#aug-architect-salary-in-india.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-architect-salary-in-india h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-architect-salary-in-india a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-architect-salary-in-india a:hover{color:#18d104;}
+#aug-architect-salary-in-india .cta{background:#1a1a1a;}
+#aug-architect-salary-in-india .cta a.cta-btn{text-decoration:none;}
+#aug-architect-salary-in-india .cta-btn-blue{background:#18d104;color:#000;}
+#aug-architect-salary-in-india .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-architect-salary-in-india [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-architect-salary-in-india">
+
+
+<div class="ans"><b>The average architect in India earns about ₹4.2 lakh a year in base pay, according to PayScale, with most salaries between about ₹1.9 lakh and ₹20 lakh.</b> Freshers typically start near ₹2–3 lakh, project architects average about ₹5.2 lakh and senior project architects about ₹9.7 lakh. Pay rises fastest with experience, responsibility and firm type, and with skills such as BIM, coordination and project management. Below are the numbers by role, experience, city and sector, what government architects earn, how the Gulf compares, and practical steps to move your pay up.</div>
+
+<figure class="dfig wide">
+  <svg viewBox="0 0 1000 398" role="img" aria-label="Average annual salaries for architecture roles in India from PayScale: entry-level architect 2.26 lakh, architect 4.20 lakh, BIM modeller 4.20 lakh, project architect 5.20 lakh, BIM manager 9.06 lakh, senior project architect 9.72 lakh rupees"><rect width="1000" height="398" fill="#fff"/><text x="20" y="28" font-size="14" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">AVERAGE ANNUAL PAY BY ROLE, INDIA (₹ LAKH)</text><line x1="300.0" y1="45" x2="300.0" y2="353" stroke="#E6EBF0" stroke-width="1"/><text x="300.0" y="370" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">0</text><line x1="405.45454545454544" y1="45" x2="405.45454545454544" y2="353" stroke="#E6EBF0" stroke-width="1"/><text x="405.45454545454544" y="370" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">2</text><line x1="510.9090909090909" y1="45" x2="510.9090909090909" y2="353" stroke="#E6EBF0" stroke-width="1"/><text x="510.9090909090909" y="370" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">4</text><line x1="616.3636363636364" y1="45" x2="616.3636363636364" y2="353" stroke="#E6EBF0" stroke-width="1"/><text x="616.3636363636364" y="370" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">6</text><line x1="721.8181818181818" y1="45" x2="721.8181818181818" y2="353" stroke="#E6EBF0" stroke-width="1"/><text x="721.8181818181818" y="370" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">8</text><line x1="827.2727272727273" y1="45" x2="827.2727272727273" y2="353" stroke="#E6EBF0" stroke-width="1"/><text x="827.2727272727273" y="370" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">10</text><g><title>Entry-level architect (total pay): ₹2.26 lakh a year (31 salaries, Sep 2025)</title><text x="288" y="71" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">Entry-level architect (total pay)</text><text x="288" y="87" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">31 salaries, Sep 2025</text><path d="M300,61 h115.16363636363636 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-115.16363636363636 z" fill="#0F4C81"/><text x="427.16363636363633" y="77" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">₹2.26 L</text></g><g><title>Architect, all levels: ₹4.20 lakh a year (107 profiles, Sep 2025)</title><text x="288" y="119" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">Architect, all levels</text><text x="288" y="135" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">107 profiles, Sep 2025</text><path d="M300,109 h217.45454545454547 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-217.45454545454547 z" fill="#0F4C81"/><text x="529.4545454545455" y="125" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">₹4.20 L</text></g><g><title>BIM modeller: ₹4.20 lakh a year (69 profiles, Sep 2026)</title><text x="288" y="167" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">BIM modeller</text><text x="288" y="183" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">69 profiles, Sep 2026</text><path d="M300,157 h217.45454545454547 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-217.45454545454547 z" fill="#0F4C81"/><text x="529.4545454545455" y="173" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">₹4.20 L</text></g><g><title>Project architect: ₹5.20 lakh a year (85 profiles, Feb 2026)</title><text x="288" y="215" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">Project architect</text><text x="288" y="231" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">85 profiles, Feb 2026</text><path d="M300,205 h270.1818181818182 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-270.1818181818182 z" fill="#0F4C81"/><text x="582.1818181818182" y="221" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">₹5.20 L</text></g><g><title>BIM manager (Revit Architecture): ₹9.06 lakh a year (33 profiles, Mar 2023)</title><text x="288" y="263" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">BIM manager (Revit Architecture)</text><text x="288" y="279" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">33 profiles, Mar 2023</text><path d="M300,253 h473.70909090909095 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-473.70909090909095 z" fill="#0F4C81"/><text x="785.709090909091" y="269" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">₹9.06 L</text></g><g><title>Senior project architect: ₹9.72 lakh a year (37 profiles, Mar 2025)</title><text x="288" y="311" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">Senior project architect</text><text x="288" y="327" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">37 profiles, Mar 2025</text><path d="M300,301 h508.5090909090909 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-508.5090909090909 z" fill="#0F4C81"/><text x="820.5090909090909" y="317" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">₹9.72 L</text></g><line x1="300" y1="45" x2="300" y2="353" stroke="#9AA6B2" stroke-width="1"/><text x="20" y="390" font-size="11.5" text-anchor="start" fill="#7A8794" font-weight="400" font-family="sans-serif">Source: PayScale India (base pay averages; entry level is average total pay). Sample sizes and update dates differ; treat as indicative.</text></svg>
+  <figcaption>Average annual pay for architecture roles in India. Data: PayScale; chart by Augmintech.</figcaption>
+</figure>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Average base pay is about ₹4.2 lakh a year</strong> (PayScale, 107 profiles), with the 10th to 90th percentile running from about ₹1.9 lakh to ₹20 lakh.</li>
+  <li><strong>The first five years are the low point:</strong> AmbitionBox shows ranges of ₹1.5–6.8 lakh at two years and ₹3–26 lakh at five.</li>
+  <li><strong>Responsibility pays more than years alone:</strong> project architects average about ₹5.2 lakh and senior project architects about ₹9.7 lakh.</li>
+  <li><strong>Government architects start at Pay Level 10,</strong> with a basic pay of ₹56,100 a month before allowances, at bodies such as DDA.</li>
+  <li><strong>BIM roles open a separate ladder:</strong> <a href="https://augmintech.com/bim-job-roles-explained-from-modeler-to-manager/">BIM coordinators</a> and managers lead teams and models, and industry guides place them above general architect pay at mid-career.</li>
+  <li><strong>An international benchmark needs context:</strong> Bespoke Careers puts an architect in Dubai at about AED 28,000 a month on average.</li>
+</ul>
+
+<h2 id="experience">Architect Salary by Experience</h2>
+<p>Experience is the biggest single factor, but the spread at every level is wide, because a five-year architect in a small studio and one in a large consultancy can earn very different amounts. AmbitionBox publishes ranges from about 22,000 reported salaries:</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Experience</th><th>Annual range (AmbitionBox)</th><th>What typically changes</th></tr></thead>
+  <tbody>
+    <tr><td>1 year</td><td class="m">₹0.2 L – ₹5 L</td><td>Drafting, drawings, assisting on design; many freshers in small studios</td></tr>
+    <tr><td>2 years</td><td class="m">₹1.5 L – ₹6.8 L</td><td>Owning drawing sets, some client and site exposure</td></tr>
+    <tr><td>3 years</td><td class="m">₹2 L – ₹7.8 L</td><td>Running parts of projects, coordinating consultants</td></tr>
+    <tr><td>4 years</td><td class="m">₹2.4 L – ₹13.7 L</td><td>Leading smaller projects; the spread starts widening sharply</td></tr>
+    <tr><td>5 years</td><td class="m">₹3 L – ₹26 L</td><td>Project architect level; firm type and specialism matter most</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">AmbitionBox, updated 5 March 2025, ranges only (the site does not show averages publicly). PayScale reports average total pay for entry-level architects at about ₹2.26 lakh (31 salaries).</p>
+<p>PayScale's experience bands point the same way: compared with the overall average, its figures show entry-level pay well below average and late-career pay more than three times higher. In practice, architects who move from "drawing" to "running projects" between years four and eight see the biggest jumps.</p>
+
+<div class="cta">
+  <div><h3>Build the Skills That Move Pay Up</h3><p>BIM and coordination skills open roles on larger projects. Augmintech's PG Program in BIM Architecture teaches building information modelling for architecture. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">Explore the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="role">Architect Salary by Role</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Role</th><th>What you do</th><th>Average base pay (PayScale)</th></tr></thead>
+  <tbody>
+    <tr><td>Junior / entry-level architect</td><td>Drawings, models, presentations under supervision</td><td class="m">~₹2.26 L total pay</td></tr>
+    <tr><td>Architect</td><td>Design development, drawing sets, coordination</td><td class="m">₹4.20 L</td></tr>
+    <tr><td>BIM modeller</td><td>Builds and documents Revit models</td><td class="m">₹4.20 L</td></tr>
+    <tr><td>Project architect</td><td>Runs a project day to day, consultants and site</td><td class="m">₹5.20 L</td></tr>
+    <tr><td>BIM manager (Revit Architecture)</td><td>Sets BIM standards, leads model coordination</td><td class="m">₹9.06 L (2023 data)</td></tr>
+    <tr><td>Senior project architect</td><td>Leads several projects or a large one, mentors team</td><td class="m">₹9.72 L</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">PayScale India; sample sizes 31 to 107 profiles and update dates from March 2023 to September 2026, shown in the chart above. Small samples mean these are indicative, not definitive.</p>
+<p>For a wider view, Archgyan's 2026 salary guide gives what it calls indicative monthly ranges based on job postings and industry discussions. It places architects and senior architects at 3–8 years at about ₹35,000–75,000 a month, project architects at ₹50,000–90,000, and BIM coordinators or leads at ₹55,000–95,000; at senior level it puts BIM managers at ₹1–1.8 lakh a month and principal architects at ₹1.2–2.5 lakh or more. Treat these as a rough guide rather than survey data.</p>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="city">Architect Salary by City</h2>
+<p>Big metros pay more but cost more to live in. AmbitionBox's ranges (1–16 years' experience) show how wide each city's band is:</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>City</th><th>Annual range (AmbitionBox)</th></tr></thead>
+  <tbody>
+    <tr><td>Bengaluru</td><td class="m">₹3.2 L – ₹46 L</td></tr>
+    <tr><td>Hyderabad</td><td class="m">₹3 L – ₹43 L</td></tr>
+    <tr><td>Pune</td><td class="m">₹2.4 L – ₹39 L</td></tr>
+    <tr><td>New Delhi</td><td class="m">₹2.7 L – ₹27 L</td></tr>
+    <tr><td>Mumbai</td><td class="m">₹2.4 L – ₹26.5 L</td></tr>
+  </tbody>
+</table>
+</div>
+<p>For freshers, Archgyan's indicative ranges put Mumbai at about ₹22,000–40,000 a month, Bengaluru at ₹20,000–38,000, Delhi NCR at ₹18,000–35,000, and tier-2 cities at ₹10,000–20,000. The gap between cities narrows when you account for rent, so compare take-home after living costs, not the headline number.</p>
+
+<h2 id="firm">How Firm Type Changes Pay</h2>
+<div class="cards">
+  <div><b>Small design studio</b><span>Broad experience fast, direct contact with the principal, but usually the lowest pay and fewer formal promotions.</span></div>
+  <div class="c2"><b>Mid-size or large practice</b><span>Clearer roles and ladders, bigger projects, better pay at the project-architect level and above.</span></div>
+  <div class="c3"><b>Developer or corporate in-house</b><span>Steadier hours and often better pay; the work leans to coordination, approvals and vendor management.</span></div>
+  <div class="c4"><b>International consultancy or BIM-led firm</b><span>Archgyan's guide says firms such as AECOM, Arup, WSP and Jacobs typically pay 30–50% above local rates for equivalent BIM roles (its indicative estimate).</span></div>
+  <div class="c5"><b>Government or PSU</b><span>Fixed pay levels with allowances, job security and pension benefits; entry through recruitment exams or notifications.</span></div>
+  <div><b>Own practice</b><span>The widest range of all: from uncertain early years to the highest incomes for established principals.</span></div>
+</div>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/108-aigenerated-architectural-designreview-scene-not.webp" alt="AI-generated architectural design-review scene; not evidence of a salary outcome." loading="lazy" decoding="async"></div><figcaption>AI-generated architectural design-review scene; not evidence of a salary outcome.</figcaption></figure>
+
+<h2 id="government">Government Architect Salaries</h2>
+<p>Central and state bodies such as the Delhi Development Authority (DDA), CPWD and urban development authorities employ architects at fixed pay levels under the 7th Pay Commission. DDA, for example, lists these architecture posts:</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Post (DDA)</th><th>7th CPC pay level</th><th>Entry basic pay per month</th></tr></thead>
+  <tbody>
+    <tr><td>Assistant Director (Architecture)</td><td>Level 10</td><td class="m">₹56,100</td></tr>
+    <tr><td>Deputy Director (Architecture)</td><td>Level 11</td><td class="m">₹67,700</td></tr>
+    <tr><td>Additional Chief Architect</td><td>Level 13</td><td class="m">₹1,23,100</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Pay levels from DDA's architecture personnel page; entry basic pay from the 7th CPC civilian pay matrix. Dearness allowance, HRA and other allowances are paid on top of basic pay.</p>
+<p>An entry basic of ₹56,100 a month is about ₹6.7 lakh a year before allowances, which already compares well with private-sector averages for the first decade, and allowances add substantially. Recruitment happens through notifications from each body or through the UPSC, so watch the official websites rather than job portals.</p>
+
+<h2 id="skills">Skills That Influence an Architect's Pay</h2>
+<p>Salary surveys rarely put a precise number on each skill, so be wary of anyone who promises a fixed raise for a course. What the data and job adverts do show is which skills move you into better-paid roles:</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Skill</th><th>Why it pays</th><th>Roles it opens</th></tr></thead>
+  <tbody>
+    <tr><td>BIM (Revit) and coordination</td><td>Larger and international projects need coordinated models; fewer people can run them well</td><td>BIM coordinator, BIM manager, digital delivery</td></tr>
+    <tr><td>Project management</td><td>Owning time, cost and consultants is what separates project architects from architects</td><td>Project architect, project manager, associate</td></tr>
+    <tr><td>Working drawings and detailing</td><td>Firms pay for people whose drawings go to site without errors</td><td>Technical architect, design manager</td></tr>
+    <tr><td>Sustainability (GRIHA, LEED, energy)</td><td>Green-rated projects need specialists</td><td>Sustainability consultant</td></tr>
+    <tr><td>Visualisation</td><td>Wins competitions and clients</td><td>Visualisation lead</td></tr>
+    <tr><td>Client handling and business</td><td>Brings in work</td><td>Associate, partner, own practice</td></tr>
+  </tbody>
+</table>
+</div>
+<p>BIM deserves a special mention because it changes the kind of work you can do, not just the software you use. PayScale's averages for BIM modellers sit close to architects' at the early stage, but BIM managers average about ₹9 lakh, in line with senior project architects, and international firms recruit heavily for these roles. A structured route such as Augmintech's PG Program in BIM Architecture is one way to build those skills alongside your job.</p>
+
+<h2 id="gulf">How Gulf Salaries Compare</h2>
+<p>Many Indian architects look at Dubai, Abu Dhabi, Doha and Riyadh. Bespoke Careers' 2026 salary guide gives these monthly packages for Dubai:</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Level (Dubai)</th><th>Low</th><th>Average</th><th>High</th></tr></thead>
+  <tbody>
+    <tr><td>Architect (general average)</td><td class="m">–</td><td class="m">AED 28,000</td><td class="m">–</td></tr>
+    <tr><td>Intermediate architect</td><td class="m">AED 24,000</td><td class="m">AED 29,000</td><td class="m">AED 33,000</td></tr>
+    <tr><td>Senior architect</td><td class="m">AED 26,500</td><td class="m">AED 36,000</td><td class="m">AED 46,000</td></tr>
+    <tr><td>Associate</td><td class="m">AED 40,000</td><td class="m">AED 46,000</td><td class="m">AED 53,000</td></tr>
+    <tr><td>Director</td><td class="m">AED 70,000</td><td class="m">AED 95,000</td><td class="m">AED 120,000</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Bespoke Careers Global Salary Guide 2026, monthly total packages.</p>
+<p>Two cautions. These figures reflect the roles Bespoke recruits for, often in larger international practices, and Dubai's rent and schooling costs are high, so compare savings, not salaries. Gulf projects are also increasingly BIM-led: Dubai has required BIM model submissions in IFC format for building permits on larger buildings since 1 January 2024, according to Autodesk's summary of the mandate, so Revit skills strengthen a Gulf application.</p>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/108-responsibility-examples-to-discuss-in.webp" alt="Responsibility examples to discuss in an appraisal; they do not guarantee a pay rise." loading="lazy" decoding="async"></div><figcaption>Responsibility examples to discuss in an appraisal; they do not guarantee a pay rise.</figcaption></figure>
+
+
+<h2 id="path">A 10-Year Pay Path: An Illustrative Example</h2>
+<p>To make the numbers concrete, here is how one architect's pay might progress in a metro, using the sourced figures above. It is an illustration, not a forecast; real careers vary widely.</p>
+<ol class="steps">
+  <li><b>Years 0–2: Junior architect</b>Drawings and presentations in a design studio. Pay near PayScale's entry-level average of about ₹2.3 lakh a year, rising towards ₹4 lakh.</li>
+  <li><b>Years 2–4: Architect</b>Owns drawing sets, starts coordinating consultants, learns Revit. Pay around the ₹4–5 lakh band where PayScale's architect and BIM-modeller averages sit.</li>
+  <li><b>Years 4–7: Project architect or BIM coordinator</b>Runs projects or the model on a large job. PayScale's project-architect average is about ₹5.2 lakh; Archgyan's indicative mid-career ranges reach ₹90,000–95,000 a month for strong project architects and BIM leads.</li>
+  <li><b>Years 7–10: Senior project architect or BIM manager</b>Leads several projects or a firm's BIM. PayScale averages about ₹9–10 lakh, with the top of the range far higher in large and international firms.</li>
+</ol>
+<p>The steps that move you up are responsibility and scarce skills, not just years. An architect who stays on drawings at year eight is often paid like one at year four.</p>
+
+<h2 id="compare-careers">How Architects Compare With Related Careers</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Career</th><th>Average pay in India</th><th>Source</th></tr></thead>
+  <tbody>
+    <tr><td>Architect (all levels)</td><td class="m">₹4.20 L base</td><td>PayScale, 2025 update</td></tr>
+    <tr><td>Interior designer</td><td class="m">₹3.3 L base</td><td>PayScale, October 2026 update (see our <a href="https://augmintech.com/interior-designer-salary/">interior designer salary guide</a>)</td></tr>
+    <tr><td>BIM modeller</td><td class="m">₹4.20 L base</td><td>PayScale, September 2026</td></tr>
+    <tr><td>Project architect</td><td class="m">₹5.20 L base</td><td>PayScale, February 2026</td></tr>
+    <tr><td>Assistant Professor of Architecture (SPA)</td><td class="m">Pay Level 10</td><td>SPA New Delhi recruitment rules</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Teaching is a real alternative for architects with a master's degree. SPA New Delhi's recruitment rules place Assistant Professors of Architecture at Pay Level 10, with a master's degree and at least 60% marks as the qualification; private colleges set their own pay.</p>
+
+<h2 id="salary-evidence">Build a Salary Discussion Around Comparable Evidence</h2><p>First check whether each figure refers to base salary, gross salary, total CTC or take-home pay. A package containing variable pay and employer contributions cannot be compared directly with another offer’s fixed cash salary. For an overseas role, compare housing, transport, insurance, relocation costs and working conditions separately.</p><p>Build a small personal comparison sheet from vacancies matching your city, experience, project sector and actual responsibilities. Record the posting date and pay definition where supplied. A role asking for Revit production is different from one requiring model coordination, issue ownership and client reviews, even when both use the word “BIM”.</p><h3>Prepare Three Examples Before Asking for a Raise</h3><p>Choose one drawing-quality improvement, one coordination issue you resolved and one delivery responsibility you owned. Explain the starting problem, your action, the review or approval and the result. Use measured time or cost savings only when you have records. Otherwise describe the observable outcome, such as closing an outstanding query before a drawing issue.</p><p>A useful discussion is: “My scope now includes these reviews and deliverables. Here is evidence of the work, and here are comparable responsibilities in the roles I am targeting. What salary band and review criteria apply?” Agree on a review date and specific expectations. Completing a software course can support the case, but it does not itself establish a market salary or guarantee promotion.</p><h2 id="negotiate">How to Negotiate Your Salary</h2>
+<div class="cards two">
+  <div><b>Before the conversation</b><ul><li>Collect role-specific ranges for your city and experience from at least two salary sites and three job adverts.</li><li>List what you own: projects led, drawing sets issued, software, site responsibility.</li><li>Decide your target and your walk-away number.</li></ul></div>
+  <div class="c2"><b>In the conversation</b><ul><li>Lead with value: "I ran the working drawings for a 40-unit project and coordinate the <a href="https://augmintech.com/mep-systems-construction/">MEP model</a>."</li><li>Give a range anchored slightly above your target, backed by your data.</li><li>If base pay is fixed, negotiate a review in six months, training budget or title.</li></ul></div>
+</div>
+
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/108-an-offercomparison-checklist-compare-equivalent.webp" alt="An offer-comparison checklist. Compare equivalent pay definitions and employment conditions." loading="lazy" decoding="async"></div><figcaption>An offer-comparison checklist. Compare equivalent pay definitions and employment conditions.</figcaption></figure>
+
+<h2 id="increase">8 Ways to Increase Your Salary as an Architect</h2>
+<ol class="nl">
+  <li><div><b>Register with the Council of Architecture.</b> Only registered architects can use the title "Architect" in India; registration is expected for any architect role.</div></li>
+  <li><div><b>Own projects, not just drawings.</b> Ask to run a small project end to end; that is the step to project-architect pay.</div></li>
+  <li><div><b>Add BIM and coordination skills.</b> They open better-paid roles in larger and international firms.</div></li>
+  <li><div><b>Specialise.</b> Healthcare, hospitality, sustainability, facades or computational design are less crowded than general practice.</div></li>
+  <li><div><b>Move firm type at the right time.</b> Two or three years in a studio for breadth, then a larger practice for scale and pay, is a common route.</div></li>
+  <li><div><b>Keep your <a href="https://augmintech.com/bim-portfolio/">portfolio</a> current.</b> Add built work, drawing sets and your role on each project every six months.</div></li>
+  <li><div><b>Negotiate with data.</b> Bring role-specific figures from salary sites and job adverts in your city.</div></li>
+  <li><div><b>Consider a master's or the Gulf deliberately.</b> Both can raise pay, but both have real costs; plan them as investments.</div></li>
+</ol>
+
+<h2 id="caveats">How to Read Salary Data Honestly</h2>
+<ul class="bullets">
+  <li><strong>Samples are small.</strong> PayScale's role pages here rest on 31 to 107 profiles each.</li>
+  <li><strong>Data is self-reported</strong> and may skew towards people in larger firms who use these sites.</li>
+  <li><strong>Dates differ.</strong> Some figures were last updated in 2023 or 2025; salaries move every year.</li>
+  <li><strong>Base vs total pay.</strong> Some figures exclude bonuses and allowances; government pay excludes allowances.</li>
+  <li><strong>Ranges beat averages.</strong> Use the range for your experience and city, not the national average.</li>
+</ul>
+
+<div class="cta cta-green">
+  <div><h3>Ready for the Next Pay Bracket?</h3><p>Coordination and BIM skills help architects step into larger projects and roles. Augmintech's PG Program in BIM Architecture is a structured way to build them. Check the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-green">See the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What is the average salary of an architect in India?</div><div class="faq-a">About ₹4.2 lakh a year in base pay, according to PayScale's 2026 page (107 profiles), with the 10th to 90th percentile running from about ₹1.9 lakh to ₹20 lakh.</div></div>
+<div class="faq-item"><div class="faq-q">What is the starting salary of a fresher architect?</div><div class="faq-a">PayScale reports average total pay of about ₹2.26 lakh a year for entry-level architects. Archgyan's indicative ranges put metro freshers at roughly ₹18,000–40,000 a month, lower in smaller cities.</div></div>
+<div class="faq-item"><div class="faq-q">How much do government architects earn?</div><div class="faq-a">At DDA, for example, Assistant Directors (Architecture) are at Pay Level 10, with an entry basic pay of ₹56,100 a month, plus dearness and other allowances.</div></div>
+<div class="faq-item"><div class="faq-q">Do BIM skills increase an architect's salary?</div><div class="faq-a">They open better-paid roles rather than adding a fixed amount. PayScale's averages show BIM managers at about ₹9 lakh, similar to senior project architects, and industry guides place BIM coordinators above general architect pay at mid-career.</div></div>
+<div class="faq-item"><div class="faq-q">Which city pays architects the most in India?</div><div class="faq-a">AmbitionBox's ranges are widest at the top in Bengaluru and Hyderabad, but averages are not public, and higher pay in metros comes with higher living costs.</div></div>
+<div class="faq-item"><div class="faq-q">How much does an architect earn in Dubai?</div><div class="faq-a">Bespoke Careers' 2026 guide gives an average of about AED 28,000 a month for an architect, AED 36,000 for a senior architect and AED 46,000 for an associate, as total monthly packages.</div></div>
+<div class="faq-item"><div class="faq-q">Is architecture a well-paid career in India?</div><div class="faq-a">Starting pay is modest compared with many professions, but pay grows substantially with project responsibility, specialisation and firm type, and senior architects, BIM managers and successful principals earn well.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>PayScale India</strong>: <a href="https://www.payscale.com/research/IN/Job=Architect_(but_not_Landscape_or_Naval)/Salary" target="_blank" rel="noopener">Architect</a>; <a href="https://www.payscale.com/research/IN/Job=Project_Architect/Salary" target="_blank" rel="noopener">Project Architect</a>; <a href="https://www.payscale.com/research/IN/Job=Senior_Project_Architect/Salary" target="_blank" rel="noopener">Senior Project Architect</a>; <a href="https://www.payscale.com/research/IN/Job=Building_Information_Modeling_(BIM)_Modeler/Salary" target="_blank" rel="noopener">BIM Modeler</a>; <a href="https://www.payscale.com/research/IN/Job=Building_Information_Modeling_(BIM)_Manager/Salary/960cbdb9/Autodesk-Revit-Architecture" target="_blank" rel="noopener">BIM Manager (Revit Architecture)</a>.</li>
+  <li><strong>AmbitionBox</strong>, <a href="https://ambitionbox.com/profile/architect-salary" target="_blank" rel="noopener">Architect salary in India</a> (updated 5 March 2025).</li>
+  <li><strong>Archgyan</strong>, <a href="https://archgyan.com/architecture-salary-guide-india-earnings-career-stages/" target="_blank" rel="noopener">Architecture salary guide India 2026</a> (10 March 2026; indicative ranges).</li>
+  <li><strong>Delhi Development Authority</strong>, <a href="https://www.dda.gov.in/personnel/architecture-groupA" target="_blank" rel="noopener">Architecture Group A posts</a>.</li>
+  <li><strong>Gconnect</strong>, <a href="https://www.gconnect.in/pay-matrix-table-civilian" target="_blank" rel="noopener">7th CPC pay matrix (civilian)</a>.</li>
+  <li><strong>Bespoke Careers</strong>, <a href="https://www.bespokecareers.com/salary-guide/dubai/" target="_blank" rel="noopener">Dubai salary guide 2026</a>.</li>
+  <li><strong>SPA New Delhi</strong>, <a href="https://spa.ac.in/sites/default/files/2024-07/recruitment-rules-qualifications-of-teaching-posts.pdf" target="_blank" rel="noopener">Recruitment rules: qualifications of teaching posts</a>.</li>
+  <li><strong>PayScale India</strong>, <a href="https://www.payscale.com/research/IN/Job=Interior_Designer/Salary" target="_blank" rel="noopener">Interior Designer</a>.</li>
+  <li><strong>Free Press Journal</strong>, <a href="https://www.freepressjournal.in/amp/business/council-of-architecture-warns-against-unregistered-individuals-misusing-architect-title-issues-public-advisory" target="_blank" rel="noopener">CoA advisory on the "Architect" title</a> (2 August 2026).</li>
+  <li><strong>Autodesk</strong>, <a href="https://boards.autodesk.com/dubai-bim-mandate" target="_blank" rel="noopener">Dubai Municipality BIM mandate</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 8 November 2026. Salary data changes often; check the sources for the latest figures in your city and role.</p>
+</div>

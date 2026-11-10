@@ -1,0 +1,408 @@
+<style>
+#aug-revit-vs-sketchup{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-revit-vs-sketchup *,#aug-revit-vs-sketchup *::before,#aug-revit-vs-sketchup *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-revit-vs-sketchup{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-revit-vs-sketchup.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-revit-vs-sketchup .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-revit-vs-sketchup .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-revit-vs-sketchup .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-revit-vs-sketchup .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-revit-vs-sketchup .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-revit-vs-sketchup .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-revit-vs-sketchup h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-revit-vs-sketchup h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-revit-vs-sketchup p{margin-bottom:.9rem;font-size:16px;}
+#aug-revit-vs-sketchup a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-revit-vs-sketchup a:hover{border-color:var(--brand);}
+#aug-revit-vs-sketchup hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-revit-vs-sketchup .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-revit-vs-sketchup .chart svg{width:100%;height:auto;display:block;}
+#aug-revit-vs-sketchup .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-revit-vs-sketchup .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-revit-vs-sketchup .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-revit-vs-sketchup .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-revit-vs-sketchup .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-revit-vs-sketchup .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-revit-vs-sketchup .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-revit-vs-sketchup table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-revit-vs-sketchup caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-revit-vs-sketchup thead tr{background:var(--slate);color:#fff;}
+#aug-revit-vs-sketchup thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-revit-vs-sketchup tbody tr:nth-child(even){background:var(--surface);}
+#aug-revit-vs-sketchup tbody tr:hover{background:var(--brand-lite);}
+#aug-revit-vs-sketchup td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-revit-vs-sketchup td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-revit-vs-sketchup tbody tr.hl{background:var(--green-lite)!important;}
+#aug-revit-vs-sketchup tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-revit-vs-sketchup ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-revit-vs-sketchup ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-revit-vs-sketchup .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-revit-vs-sketchup .cta-green{background:var(--slate);}
+#aug-revit-vs-sketchup .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-revit-vs-sketchup .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-revit-vs-sketchup .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-revit-vs-sketchup .cta-btn-blue{color:var(--brand);}#aug-revit-vs-sketchup .cta-btn-green{color:var(--slate);}
+#aug-revit-vs-sketchup figure{margin:1.5rem 0;}
+#aug-revit-vs-sketchup figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-revit-vs-sketchup figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-revit-vs-sketchup dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-revit-vs-sketchup dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-revit-vs-sketchup dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-revit-vs-sketchup .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-revit-vs-sketchup .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-revit-vs-sketchup .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-revit-vs-sketchup .srcs{list-style:none;padding:0;}
+#aug-revit-vs-sketchup .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-revit-vs-sketchup .srcs li:last-child{border-bottom:none;}
+
+/* ===== answer ===== */#aug-revit-vs-sketchup .vs101{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:1.3rem 0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-revit-vs-sketchup .vs101>div{padding:.95rem 1.05rem;font-size:14.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-revit-vs-sketchup .vs101 .a{background:#FDF3EF;} #aug-revit-vs-sketchup .vs101 .r{background:#EEF4FA;border-left:1px solid var(--border);}
+#aug-revit-vs-sketchup .vs101 b{display:block;font-family:var(--display);font-size:19px;margin-bottom:.2rem;}
+#aug-revit-vs-sketchup .vs101 .a b{color:#B5371B;} #aug-revit-vs-sketchup .vs101 .r b{color:#1F4A6E;}
+#aug-revit-vs-sketchup .vs101 i{display:block;font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem;}
+
+/* ===== table ===== */#aug-revit-vs-sketchup .cmp101 th:nth-child(2){background:#B5371B;} #aug-revit-vs-sketchup .cmp101 th:nth-child(3){background:#1F4A6E;}
+#aug-revit-vs-sketchup .cmp101 td:first-child{font-weight:700;white-space:nowrap;}
+
+/* ===== figures ===== */#aug-revit-vs-sketchup .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-revit-vs-sketchup .dfig svg{display:block;width:100%;height:auto;}
+#aug-revit-vs-sketchup .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-revit-vs-sketchup .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-revit-vs-sketchup .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-revit-vs-sketchup figure.pf{margin:1.2rem 0;} #aug-revit-vs-sketchup figure.pf figcaption{font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;font-family:var(--body);}
+#aug-revit-vs-sketchup .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-revit-vs-sketchup .pair figure{margin:0;}
+
+/* ===== change test ===== */#aug-revit-vs-sketchup .chg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-revit-vs-sketchup .chg>div{border-radius:var(--radius);padding:.9rem 1rem;border:1px solid var(--border);background:#fff;}
+#aug-revit-vs-sketchup .chg h3{margin:0 0 .5rem;font-size:16px;display:flex;justify-content:space-between;align-items:baseline;}
+#aug-revit-vs-sketchup .chg h3 span{font-family:var(--mono);font-size:12px;font-weight:700;padding:3px 9px;border-radius:12px;}
+#aug-revit-vs-sketchup .chg .a h3{color:#B5371B;} #aug-revit-vs-sketchup .chg .a h3 span{background:#FBE7DF;color:#9A3B1E;}
+#aug-revit-vs-sketchup .chg .r h3{color:#1F4A6E;} #aug-revit-vs-sketchup .chg .r h3 span{background:#E3EEF8;color:#1F4A6E;}
+#aug-revit-vs-sketchup .chg ul{list-style:none;margin:0;padding:0;}
+#aug-revit-vs-sketchup .chg li{padding:.35rem 0 .35rem 1.7rem;position:relative;font-size:14px;line-height:1.5;color:var(--ink-mid);border-bottom:1px dashed var(--border);}
+#aug-revit-vs-sketchup .chg li:last-child{border-bottom:none;}
+#aug-revit-vs-sketchup .chg .a li::before{content:"✎";position:absolute;left:.3rem;color:#B5371B;}
+#aug-revit-vs-sketchup .chg .r li::before{content:"↻";position:absolute;left:.3rem;color:#1F4A6E;font-weight:700;}
+#aug-revit-vs-sketchup .chg .r li.first::before{content:"✎";}
+
+/* ===== collab ===== */#aug-revit-vs-sketchup .flow3{display:flex;align-items:stretch;gap:8px;margin:1.1rem 0;flex-wrap:wrap;}
+#aug-revit-vs-sketchup .flow3 div{flex:1 1 150px;border-radius:var(--radius-sm);padding:.7rem .8rem;background:var(--surface);font-size:13.5px;line-height:1.5;color:var(--ink-mid);}
+#aug-revit-vs-sketchup .flow3 b{display:block;font-family:var(--mono);font-size:12px;color:var(--ink);margin-bottom:.2rem;}
+#aug-revit-vs-sketchup .price td:last-child{font-family:var(--mono);text-align:right;white-space:nowrap;}
+#aug-revit-vs-sketchup .price td:first-child{font-weight:700;}
+
+/* ===== decision ===== */#aug-revit-vs-sketchup .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-revit-vs-sketchup .pick>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-revit-vs-sketchup .pick .a{background:#FDF3EF;border:1px solid #F0C9BB;} #aug-revit-vs-sketchup .pick .r{background:#EEF4FA;border:1px solid #CFDDEB;}
+#aug-revit-vs-sketchup .pick h3{margin:0 0 .4rem;font-size:15.5px;} #aug-revit-vs-sketchup .pick .a h3{color:#B5371B;} #aug-revit-vs-sketchup .pick .r h3{color:#1F4A6E;}
+#aug-revit-vs-sketchup .pick ul{margin:0;padding-left:1.1rem;} #aug-revit-vs-sketchup .pick li{margin-bottom:.3rem;}
+#aug-revit-vs-sketchup .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-revit-vs-sketchup .alert{border-left:4px solid var(--warn);background:#FBF4E8;border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.8rem 1rem;margin:1rem 0;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-revit-vs-sketchup .alert b{color:var(--warn);}
+
+#aug-revit-vs-sketchup .set101 table{font-size:13.5px;} #aug-revit-vs-sketchup .set101 td:first-child{font-weight:700;color:var(--ink);}
+#aug-revit-vs-sketchup .set101 td:nth-child(2){color:#9A3B1E;} #aug-revit-vs-sketchup .set101 td:nth-child(3){color:#1F4A6E;}
+#aug-revit-vs-sketchup .hw{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-revit-vs-sketchup .hw>div{border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem;background:#fff;}
+#aug-revit-vs-sketchup .hw h3{margin:0 0 .5rem;font-size:16px;} #aug-revit-vs-sketchup .hw dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14px;}
+#aug-revit-vs-sketchup .hw dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:2px;} #aug-revit-vs-sketchup .hw dd{margin:0;color:var(--ink);}
+#aug-revit-vs-sketchup .unl{list-style:none;padding:0;margin:1.2rem 0;counter-reset:u;}
+#aug-revit-vs-sketchup .unl li{counter-increment:u;display:grid;grid-template-columns:2.2rem 1fr;gap:.2rem .8rem;padding:.75rem 0;border-top:1px solid var(--border);font-size:15px;line-height:1.6;}
+#aug-revit-vs-sketchup .unl li:first-child{border-top:none;}
+#aug-revit-vs-sketchup .unl li::before{content:counter(u,decimal-leading-zero);font-family:var(--mono);font-weight:700;color:var(--coral);font-size:14px;padding-top:2px;}
+#aug-revit-vs-sketchup .unl b{color:var(--ink);}
+#aug-revit-vs-sketchup .skl{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-revit-vs-sketchup .skl>div{border-radius:var(--radius);padding:.9rem 1rem;background:var(--surface);border:1px solid var(--border);}
+#aug-revit-vs-sketchup .skl h3{margin:0 0 .5rem;font-size:16px;} #aug-revit-vs-sketchup .skl ol{margin:0;padding-left:1.2rem;font-size:14.5px;line-height:1.6;}
+
+#aug-revit-vs-sketchup .lt101 table{font-size:13.5px;} #aug-revit-vs-sketchup .lt101 td:first-child{font-weight:700;color:var(--ink);}
+@media(max-width:640px){
+  #aug-revit-vs-sketchup .hw,#aug-revit-vs-sketchup .skl{grid-template-columns:1fr;} #aug-revit-vs-sketchup .set101 table{min-width:600px;}
+  #aug-revit-vs-sketchup .vs101,#aug-revit-vs-sketchup .pair,#aug-revit-vs-sketchup .chg,#aug-revit-vs-sketchup .pick{grid-template-columns:1fr;} #aug-revit-vs-sketchup .vs101 .r{border-left:none;border-top:1px solid var(--border);}
+  #aug-revit-vs-sketchup .cmp101 table{min-width:560px;}
+  #aug-revit-vs-sketchup .dfig.wide{overflow-x:auto;} #aug-revit-vs-sketchup .dfig.wide svg{min-width:620px;}
+  #aug-revit-vs-sketchup .cta{flex-direction:column;align-items:flex-start;}
+  #aug-revit-vs-sketchup .cta>div{max-width:100%;} #aug-revit-vs-sketchup .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-revit-vs-sketchup .cta>div:last-child .cta-btn{margin-left:0;white-space:normal;text-align:center;line-height:1.5;}
+}
+#aug-revit-vs-sketchup .pair{grid-template-columns:1fr}#aug-revit-vs-sketchup .ph{aspect-ratio:auto}#aug-revit-vs-sketchup .ph img{position:static;display:block;width:100%;height:auto;object-fit:contain}#aug-revit-vs-sketchup .pf figcaption{font-size:14px!important;line-height:1.65!important;padding:12px 4px!important}#aug-revit-vs-sketchup .tbl-wrap{overflow-x:auto}#aug-revit-vs-sketchup .cta-btn{white-space:normal}#aug-revit-vs-sketchup .hw dd{overflow-wrap:anywhere}#aug-revit-vs-sketchup img{max-width:100%} #aug-revit-vs-sketchup .pf{break-inside:avoid} @media(max-width:640px){#aug-revit-vs-sketchup .tbl-wrap table{min-width:620px}#aug-revit-vs-sketchup h2{overflow-wrap:anywhere}#aug-revit-vs-sketchup .flow3{display:grid;grid-template-columns:1fr}#aug-revit-vs-sketchup .hw dl{grid-template-columns:1fr}#aug-revit-vs-sketchup .hw dt{margin-top:8px}} 
+/* ===== Augmintech theme overrides ===== */
+#aug-revit-vs-sketchup.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-revit-vs-sketchup h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-revit-vs-sketchup a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-revit-vs-sketchup a:hover{color:#18d104;}
+#aug-revit-vs-sketchup .cta{background:#1a1a1a;}
+#aug-revit-vs-sketchup .cta a.cta-btn{text-decoration:none;}
+#aug-revit-vs-sketchup .cta-btn-blue{background:#18d104;color:#000;}
+#aug-revit-vs-sketchup .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-revit-vs-sketchup [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-revit-vs-sketchup">
+
+
+<p><strong>SketchUp is a fast, flexible 3D modeller: you push and pull faces to shape ideas quickly. Revit is <a href="https://augmintech.com/what-is-bim-software/">BIM software</a>: you build a model of real building elements, with model-based views and schedules alongside manually added annotations and details.</strong> SketchUp wins when you are exploring a design; Revit wins when you have to document, schedule and coordinate it. The tools can complement each other, but a project does not always need both. This guide compares them in depth, shows how they work together, and helps you decide which to learn first.</p>
+
+<div class="vs101">
+  <div class="a"><i>3D modelling · concept</i><b>SketchUp</b>Edges and faces grouped into groups and components. Quick to learn, quick to model, runs on Windows and Mac. Drawings are made in LayOut, its companion app.</div>
+  <div class="r"><i>BIM · documentation</i><b>Revit</b>Walls, floors, doors, rooms and furniture as intelligent objects in one model. Model-based views and schedules stay connected; settings and annotations still need checking. Windows only.</div>
+</div>
+
+<figure class="dfig wide">
+  <svg viewBox="0 0 1000 330" role="img" aria-label="Where SketchUp and Revit are strongest across six project stages: SketchUp leads at concept and client visuals; Revit leads in design development, drawing sets, schedules and team coordination"><rect width="1000" height="330" fill="#fff"/><text x="500" y="26" font-size="14" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">WHERE EACH TOOL IS STRONGEST, STAGE BY STAGE</text><text x="257.5" y="70" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">Concept and</text><text x="257.5" y="87" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">massing</text><rect x="190" y="100" width="135" height="190" fill="#F7F9FB"/><text x="392.5" y="70" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">Design</text><text x="392.5" y="87" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">development</text><text x="527.5" y="70" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">Drawing set</text><rect x="460" y="100" width="135" height="190" fill="#F7F9FB"/><text x="662.5" y="70" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">Schedules and</text><text x="662.5" y="87" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">quantities</text><text x="797.5" y="70" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">Team</text><text x="797.5" y="87" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">coordination</text><rect x="730" y="100" width="135" height="190" fill="#F7F9FB"/><text x="932.5" y="70" font-size="13" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">Client visuals</text><text x="30" y="146" font-size="17" text-anchor="start" fill="#B5371B" font-weight="800" font-family="sans-serif">SketchUp</text><text x="30" y="166" font-size="11.5" text-anchor="start" fill="#7A8794" font-weight="400" font-family="sans-serif">surface modelling</text><circle cx="227.5" cy="150" r="10" fill="#B5371B" stroke="#B5371B" stroke-width="2"/><circle cx="257.5" cy="150" r="10" fill="#B5371B" stroke="#B5371B" stroke-width="2"/><circle cx="287.5" cy="150" r="10" fill="#B5371B" stroke="#B5371B" stroke-width="2"/><circle cx="362.5" cy="150" r="10" fill="#B5371B" stroke="#B5371B" stroke-width="2"/><circle cx="392.5" cy="150" r="10" fill="#B5371B" stroke="#B5371B" stroke-width="2"/><circle cx="422.5" cy="150" r="10" fill="#fff" stroke="#B5371B" stroke-width="2"/><circle cx="497.5" cy="150" r="10" fill="#B5371B" stroke="#B5371B" stroke-width="2"/><circle cx="527.5" cy="150" r="10" fill="#fff" stroke="#B5371B" stroke-width="2"/><circle cx="557.5" cy="150" r="10" fill="#fff" stroke="#B5371B" stroke-width="2"/><circle cx="632.5" cy="150" r="10" fill="#B5371B" stroke="#B5371B" stroke-width="2"/><circle cx="662.5" cy="150" r="10" fill="#fff" stroke="#B5371B" stroke-width="2"/><circle cx="692.5" cy="150" r="10" fill="#fff" stroke="#B5371B" stroke-width="2"/><circle cx="767.5" cy="150" r="10" fill="#B5371B" stroke="#B5371B" stroke-width="2"/><circle cx="797.5" cy="150" r="10" fill="#fff" stroke="#B5371B" stroke-width="2"/><circle cx="827.5" cy="150" r="10" fill="#fff" stroke="#B5371B" stroke-width="2"/><circle cx="902.5" cy="150" r="10" fill="#B5371B" stroke="#B5371B" stroke-width="2"/><circle cx="932.5" cy="150" r="10" fill="#B5371B" stroke="#B5371B" stroke-width="2"/><circle cx="962.5" cy="150" r="10" fill="#B5371B" stroke="#B5371B" stroke-width="2"/><text x="30" y="236" font-size="17" text-anchor="start" fill="#1F4A6E" font-weight="800" font-family="sans-serif">Revit</text><text x="30" y="256" font-size="11.5" text-anchor="start" fill="#7A8794" font-weight="400" font-family="sans-serif">BIM modelling</text><circle cx="227.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="257.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="287.5" cy="240" r="10" fill="#fff" stroke="#1F4A6E" stroke-width="2"/><circle cx="362.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="392.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="422.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="497.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="527.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="557.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="632.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="662.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="692.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="767.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="797.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="827.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="902.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="932.5" cy="240" r="10" fill="#1F4A6E" stroke="#1F4A6E" stroke-width="2"/><circle cx="962.5" cy="240" r="10" fill="#fff" stroke="#1F4A6E" stroke-width="2"/><text x="500" y="316" font-size="12" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">Augmintech's assessment for typical architecture and interior projects. 3 dots = strongest fit.</text></svg>
+  <figcaption>Where each program fits through a project. Augmintech's assessment, not a benchmark.</figcaption>
+</figure>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>SketchUp is faster for concept design, massing and client 3D;</strong> Revit is slower to start but far stronger for drawing sets, schedules and teamwork.</li>
+  <li><strong>SketchUp models geometry; Revit models building elements with data,</strong> which is why Revit can produce live schedules and coordinated drawings.</li>
+  <li><strong>SketchUp Pro costs US$399 a year and Revit US$3,005</strong> at 2026 US list prices; students pay US$55 a year for SketchUp and nothing for Revit through Autodesk's education plan.</li>
+  <li><strong>They work together:</strong> SketchUp models can be linked into Revit as a reference, and SketchUp can import and export IFC.</li>
+  <li><strong>Choose your first tool by the required deliverable</strong> rather than assuming everybody needs the same learning order.</li>
+</ul>
+
+<h2 id="at-a-glance">Revit vs SketchUp at a Glance</h2>
+<div class="tbl-wrap cmp101">
+<table>
+  <thead><tr><th></th><th>SketchUp</th><th>Revit</th></tr></thead>
+  <tbody>
+    <tr><td>What you model</td><td>Edges and faces, grouped into groups and components</td><td>Walls, floors, roofs, doors, rooms, furniture (families)</td></tr>
+    <tr><td>Speed to first 3D</td><td>Very fast</td><td>Slower; needs levels, types and families</td></tr>
+    <tr><td>Drawings</td><td>Exported to LayOut, then dimensioned and annotated there</td><td>Plans, sections and elevations are views of the model</td></tr>
+    <tr><td>Schedules</td><td>Generate Report exports tables to CSV</td><td>Live schedules inside the model</td></tr>
+    <tr><td>Teamwork</td><td>Usually one person per file</td><td>Worksharing: several people in one central model</td></tr>
+    <tr><td>BIM exchange</td><td>Imports and exports IFC</td><td>Native BIM; exports IFC and DWG</td></tr>
+    <tr><td>Platforms</td><td>Windows 11 and Apple silicon Macs; also web and iPad (Go)</td><td>Windows only</td></tr>
+    <tr><td>Learning curve</td><td>Gentle</td><td>Steep</td></tr>
+    <tr><td>US list price (2026)</td><td>US$399/yr Pro (US$55 student)</td><td>US$3,005/yr (free education plan)</td></tr>
+    <tr><td>Best for</td><td>Concepts, small projects, interiors, quick client 3D</td><td>Full drawing sets, larger projects, BIM-required work</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Price examples are US-market figures before tax, not quotations for India or the Gulf. Check <a href="https://sketchup.trimble.com/en/plans-and-pricing">Trimble’s plans</a> and <a href="https://www.autodesk.com/products/revit/overview">Autodesk’s local Revit page</a> before purchase. Features and subscription bundles vary.</p>
+
+<div class="cta">
+  <div><h3>Ready to Go Beyond 3D Modelling?</h3><p>Augmintech's PG Program in BIM Architecture teaches building information modelling for architecture, so you can turn designs into coordinated drawing sets and schedules from one model. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">Explore the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="modelling">Modelling: Faces vs Building Elements</h2>
+<p>In SketchUp, a wall usually starts as edges and faces organised into a group or component. Naming, classification, attributes and extensions can add information, and some components can cut openings. However, ordinary geometry does not acquire Revit-style wall layers, level constraints and hosted-element relationships just because it looks like a wall. This flexibility makes SketchUp useful for exploring forms and bespoke interiors.</p>
+<p>In Revit, a wall is an object of a wall type, such as "230 mm brick with 12 mm plaster both sides". It knows its height, its base and top levels, its layers and materials, and it hosts the doors and windows placed in it. Change the wall type once and every wall of that type changes; move a level and the walls attached to it follow. That structure takes longer to set up, and supports coordinated outputs. Constraints, annotations and model information still need checking.</p>
+<div class="pick">
+  <div class="a"><h3>SketchUp gives you</h3><ul><li>Freedom to model any form, in any order</li><li>Groups and components for repetition</li><li>Dynamic components for simple parametric objects</li><li>A huge free library of models in 3D Warehouse</li></ul></div>
+  <div class="r"><h3>Revit gives you</h3><ul><li>Building elements with types, layers and data</li><li>Hosted elements: doors and windows cut their walls</li><li>Levels that walls, floors and roofs attach to</li><li>Families with parameters for size, material and maker</li></ul></div>
+</div>
+
+<h2 id="design">Design Speed: Why SketchUp Wins Early</h2>
+<p>At concept stage you change your mind every hour. SketchUp suits that: push a block up two floors, carve a courtyard, rotate the plan, check the shadows at 4 pm, and show the client three options in an afternoon. Scenes save camera views and shadow settings, so presenting is quick.</p>
+<p>Revit can do conceptual massing too, but it asks for decisions earlier: levels, wall types, which element is which. Many architects find that slows down free design. The usual answer is not to choose, but to sequence: design in SketchUp, then rebuild the chosen scheme in Revit once the form is settled.</p>
+<figure class="pf"><div class="ph"><img loading="lazy" src="https://augmintech.com/wp-content/uploads/2026/11/101-concept-alternatives-shown-as-architectural.webp" alt="Concept alternatives shown as architectural scale models. Original AI-generated illustration, not a SketchUp screenshot."></div><figcaption>Concept alternatives shown as architectural scale models. Original AI-generated illustration, not a SketchUp screenshot.</figcaption></figure>
+
+<h2 id="drawings">Drawings: LayOut vs Revit Sheets</h2>
+<p>This is the biggest practical difference. SketchUp Pro includes LayOut, a separate app where you place views of your SketchUp model on sheets at a chosen scale, then add dimensions, text, title blocks and details. It works well for small projects, interiors and presentation sheets, and LayOut can reload the model when it changes.</p>
+<p>LayOut is more capable than a static sheet editor: linked model references, associated dimensions and model-aware labels can update. You still need deliberate scene, section-plane and viewport management, and a workflow for reports and schedules. Revit integrates building-element data and documentation more deeply, which becomes valuable across a larger set. See <a href="https://help.sketchup.com/en/layout/managing-model-references">Trimble’s reference-update guidance</a> and <a href="https://help.sketchup.com/en/layout/adding-text-labels-and-dimensions">dimension guidance</a>.</p>
+<p>In Revit, plans, sections and elevations can be views of the same model. Tags and schedules read selected parameters. Model changes propagate to affected model-based views, but manually drafted details, text notes, view settings and constraints still need review. Revit reduces repeated editing; it does not remove drawing responsibility.</p>
+<div class="pair">
+  <figure class="pf"><div class="ph"><img loading="lazy" src="https://augmintech.com/wp-content/uploads/2026/11/101-illustrative-apartment-sheet-organisation-for.webp" alt="Illustrative apartment sheet organisation for a SketchUp and LayOut workflow. Dimensions and drawing scale must be set in the actual project."></div><figcaption>Illustrative apartment sheet organisation for a SketchUp and LayOut workflow. Dimensions and drawing scale must be set in the actual project.</figcaption></figure>
+  <figure class="pf"><div class="ph"><img loading="lazy" src="https://augmintech.com/wp-content/uploads/2026/11/101-illustrative-revit-documentation-workflow-schedule.webp" alt="Illustrative Revit documentation workflow. Schedule entries are teaching data, not an extracted software report."></div><figcaption>Illustrative Revit documentation workflow. Schedule entries are teaching data, not an extracted software report.</figcaption></figure>
+</div>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="data">Data and Schedules</h2>
+<p>SketchUp is not without data. Components can carry attributes, and SketchUp's Generate Report builds tables from the objects in a model, such as component quantities, tags and sizes, and downloads them as a CSV file for materials lists and estimates. That is useful for counting furniture or panels.</p>
+<p>Revit goes further. Its schedules are live views inside the model: door, window, room, furniture and material takeoff schedules update the moment the model changes, can be placed on sheets, and can be edited from the schedule itself. On a project with hundreds of doors or rooms, that is the difference between a report you regenerate and a live view of the information you have actually modelled. A live schedule can still be wrong when categories, parameters, phases or filters are wrong.</p>
+
+<h2 id="example">Same House, Both Tools: What Each Step Looks Like</h2>
+<p>Here is how a typical small house or 3BHK apartment moves through each program. This is an illustrative comparison based on standard practice, not a timed test.</p>
+<div class="tbl-wrap set101">
+<table>
+  <thead><tr><th>Step</th><th>In SketchUp</th><th>In Revit</th></tr></thead>
+  <tbody>
+    <tr><td>Concept options</td><td>Quick massing and shadow studies, saved as scenes</td><td>Possible with massing, but slower and more formal</td></tr>
+    <tr><td>Floor plans</td><td>Section plane and scene, then a LayOut viewport</td><td>A plan view of the model, ready to annotate</td></tr>
+    <tr><td>Sections and elevations</td><td>A section plane or camera per view, then LayOut</td><td>Place a section line or elevation marker</td></tr>
+    <tr><td>Dimensions and tags</td><td>Added in LayOut</td><td>Read from the model; tags fill themselves</td></tr>
+    <tr><td>Door and window schedule</td><td>Generate Report to CSV, then a table in LayOut</td><td>A live schedule placed on a sheet</td></tr>
+    <tr><td>Client 3D and renders</td><td>Already there; add a renderer</td><td>Already there; add a renderer</td></tr>
+    <tr><td>A late change</td><td>Edit the model, update LayOut, recheck every dimension and table</td><td>Edit the model; sheets and schedules update</td></tr>
+  </tbody>
+</table>
+</div>
+<figure class="pf"><div class="ph"><img loading="lazy" src="https://augmintech.com/wp-content/uploads/2026/11/101-original-revision-example-editing-a.webp" alt="Original revision example: editing a Revit type parameter affects the instances using that type. Check the family parameter setup."></div><figcaption>Original revision example: editing a Revit type parameter affects the instances using that type. Check the family parameter setup.</figcaption></figure>
+
+<h2 id="apartment-exercise">Worked Example: One Apartment, One Late Design Change</h2>
+<p>Use a fictional apartment with a 4,800 × 3,600 mm living-dining room, a bedroom and a <a href="https://augmintech.com/types-of-kitchen-layout/">compact kitchen</a>. Keep the same brief in both tools: seating for four, a dining table, built-in storage and a clear route to the balcony. These are exercise dimensions, not code-compliant design recommendations.</p>
+<h3>1. Develop two layouts</h3><p>In SketchUp, draw accurately, keep raw geometry organised inside groups, use components for repeated furniture and save a scene for each option. In Revit, establish levels and wall types, place appropriately categorised furniture families and use separate design options or separate exercise files without mixing alternatives. Compare the same camera and plan orientation.</p>
+<h3>2. Produce the same review package</h3><p>Submit a furniture plan, an internal elevation of the storage wall, a section through the room and a furniture list. In SketchUp, prepare the scenes and section cuts before referencing them in LayOut. In Revit, create the views and schedule with the required category and fields. In either tool, place them on a readable sheet and export a PDF.</p>
+<h3>3. Move a door and widen the storage</h3><p>Now shift the bedroom door 300 mm and increase the cabinet width from 1,200 to 1,500 mm. Check the swing, furniture access and remaining circulation. In SketchUp, edit the correct group or component and update the LayOut reference and relevant report. In Revit, check whether the width is a type or instance parameter before editing: a type change may alter every instance of that type.</p>
+<h3>4. Prove the revision is coordinated</h3><p>Review the plan, elevation, section, dimensions, schedule and perspective. Look for stale text notes, cropped geometry and missing schedule rows. Re-export the PDF and record the revision. The better workflow is the one that produces the required checked outputs efficiently in your project context, not the one that makes the first attractive view fastest.</p>
+<div class="alert"><b>Portfolio evidence:</b> show the brief, one rejected option, the final plan, a developed interior elevation, a schedule and the before/after revision. Add your role, software versions and what you checked. This gives a reviewer evidence of design thinking and documentation skill.</div>
+<h2 id="troubleshooting">Common Problems Students Face, and What to Check</h2>
+<div class="tbl-wrap"><table><thead><tr><th>Problem</th><th>Likely cause</th><th>Useful first action</th></tr></thead><tbody>
+<tr><td>SketchUp geometry sticks together</td><td>Unrelated edges and faces share an editing context</td><td>Group separate objects before moving them; enter the intended group before editing.</td></tr>
+<tr><td>Every chair changes</td><td>Repeated instances share a component definition</td><td>Use Make Unique for a genuinely different chair; keep shared components where repetition is intentional.</td></tr>
+<tr><td>LayOut shows an old design</td><td>Outdated or missing model reference, or an unintended scene</td><td>Check Document Setup → References, update or relink, then inspect each viewport’s scene and scale.</td></tr>
+<tr><td>A Revit element vanishes from plan</td><td>View range, category visibility, phase or template settings</td><td>Find it in another view and inspect visibility settings before creating duplicate geometry.</td></tr>
+<tr><td>The Revit schedule count is wrong</td><td>Category, filter, phase, grouping or duplicated elements</td><td>Review schedule properties and locate the listed elements; compare against the actual model.</td></tr>
+<tr><td>An imported model is huge or misplaced</td><td>Unit or origin mismatch</td><td>Test a known dimension and origin on a small import before transferring the full model.</td></tr>
+<tr><td>The file becomes slow</td><td>Over-detailed furniture, excessive textures or unnecessary imported geometry</td><td>Use lighter assets, remove unnecessary content and keep a backup before cleanup.</td></tr>
+</tbody></table></div>
+<p>For Revit schedules, Autodesk documents how <a href="https://help.autodesk.com/cloudhelp/2026/ENU/Revit-DocumentPresent/files/GUID-C5140A8E-EDB3-4C99-84F0-9299D5136369.htm">filters control which elements appear</a>. A convincing number is not enough: check what the schedule includes and excludes.</p>
+<h2 id="learning-project">A Learning Path With Measurable Outputs</h2>
+<p>Start with one room rather than an entire complex building. First demonstrate accurate geometry and organised objects. Then produce a plan and elevation at a consistent scale. Next add furniture data, materials and a presentation view. Finally make a design revision and check every affected output. Move forward when you can repeat the task independently, not simply when you have watched the lesson.</p>
+<p>For a SketchUp-focused path, make scenes, section cuts, components and LayOut part of the first project. For a Revit-focused path, include types, constraints, view templates, tags and schedules. Learn a renderer after the model and drawing workflow are reliable. There is no universal number of days that makes a student job-ready.</p>
+<p>If your target is BIM documentation and coordination, compare the project work and review process in <a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/">Augmintech’s PG Program in BIM Architecture</a> with the deliverables above. Look for feedback on editable models and drawings, not just a list of commands.</p>
+<h2 id="together">Using SketchUp and Revit Together</h2>
+<p>A combined workflow can use both, provided the extra handover serves a clear purpose. SketchUp's own help describes three ways to bring a SketchUp model into Revit, and the reverse route exists too:</p>
+<div class="flow3">
+  <div><b>Link the SKP</b>Insert it with Link CAD. It stays external, so you can update it in SketchUp and reload it in Revit, and use it as a reference to model native walls, floors and roofs.</div>
+  <div><b>In-place component</b>Bring the SKP inside an in-place family, for one-off objects such as a sculptural canopy, with SketchUp tags controlling visibility.</div>
+  <div><b>IFC</b>Export IFC from SketchUp and open it in Revit. Only classified groups and components that are solid come through, as in-place components.</div>
+  <div><b>Revit to SketchUp</b>SketchUp Studio (and the Pro Advanced Workflows plan) includes a Revit importer, Windows only, for taking Revit models into SketchUp for design studies or visualisation.</div>
+</div>
+<p>Two practical tips from SketchUp's help: check supported SKP versions for your Revit release; older Revit releases may need an older SKP format, and remember that SketchUp walls do not become native Revit walls. Use the linked model as a guide and rebuild walls, floors and roofs in Revit. Also note that Autodesk's comparison lists SketchUp import as one of the features Revit LT does not include.</p>
+
+<h2 id="rendering">Rendering and Client Presentations</h2>
+<p>Both can form part of an architectural rendering workflow. Choose the renderer only after checking its supported host release, operating system, GPU requirements and licence. Do not assume that every plugin supports every new Revit or SketchUp release immediately. Good materials, lighting, camera composition and model quality matter more than the host application name. For interior presentations, show a plan alongside the render so readers can judge furniture scale and circulation.</p>
+
+<figure class="pf"><div class="ph"><img loading="lazy" src="https://augmintech.com/wp-content/uploads/2026/11/101-original-aigenerated-interior-visual-illustrating.webp" alt="Original AI-generated interior visual illustrating presentation quality. It is not evidence of output from either software package."></div><figcaption>Original AI-generated interior visual illustrating presentation quality. It is not evidence of output from either software package.</figcaption></figure><h2 id="price">Price and Plans in 2026</h2>
+<div class="tbl-wrap price">
+<table>
+  <thead><tr><th>Plan</th><th>What you get</th><th>US list price</th></tr></thead>
+  <tbody>
+    <tr><td>SketchUp Go</td><td>Web and iPad only; no desktop app or LayOut</td><td>US$129/yr</td></tr>
+    <tr><td>SketchUp Pro</td><td>Desktop app, LayOut, extensions</td><td>US$399/yr</td></tr>
+    <tr><td>SketchUp Studio</td><td>Pro plus V-Ray, Scan Essentials and the Revit importer</td><td>About US$859/yr</td></tr>
+    <tr><td>SketchUp for students</td><td>For coursework only</td><td>US$55/yr</td></tr>
+    <tr><td>AutoCAD Revit LT Suite</td><td>Revit LT plus AutoCAD LT</td><td>Check local Autodesk pricing</td></tr>
+    <tr><td>Revit</td><td>Full BIM: architecture, structure and MEP</td><td>US$3,005/yr</td></tr>
+    <tr><td>Revit for students</td><td>Autodesk education plan, learning use only</td><td>Free</td></tr>
+  </tbody>
+</table>
+</div>
+<p>SketchUp’s official page displays annual-billing equivalents: Pro US$33.25/month and Studio US$71.58/month, plus US$55/year for eligible students. Revit education access is renewable annually for eligible learners, subject to verification, and is not for commercial work. See <a href="https://www.autodesk.com/education/edu-software/revit">Autodesk education eligibility</a>. Include renderers, collaboration subscriptions and taxes when comparing your total cost.</p>
+<p>Before choosing Revit LT to save money, check what it leaves out. Autodesk's comparison lists worksharing, view filters, in-place modelling, in-product rendering, <a href="https://augmintech.com/how-to-download-install-dynamo-revit/">Dynamo</a> and SketchUp import among the features Revit LT does not include, which matters if SketchUp is part of your workflow.</p>
+
+<h2 id="hardware">Hardware and Platform</h2>
+<div class="hw">
+  <div><h3>SketchUp 2027</h3><dl>
+    <dt>OS</dt><dd>Windows 11, or macOS on Apple silicon</dd>
+    <dt>RAM</dt><dd>At least 8 GB</dd>
+    <dt>Graphics</dt><dd>A discrete GPU with 8 GB VRAM for PBR materials and image-based lighting</dd>
+    <dt>CPU</dt><dd>2 GHz or faster (Apple M-series meets the minimum)</dd>
+  </dl></div>
+  <div><h3>Revit 2027</h3><dl><dt>Platform</dt><dd>Windows desktop application</dd><dt>Check</dt><dd>Match the exact release, model size and rendering workflow</dd><dt>Reference</dt><dd><a href="https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/System-requirements-for-Revit-2027-products.html">Official Revit 2027 requirements</a></dd><dt>Test</dt><dd>Open, orbit, edit and export a representative project before committing to hardware</dd></dl></div>
+</div>
+<p>SketchUp specifications above follow <a href="https://help.sketchup.com/en/sketchup/system-requirements">Trimble’s current requirements</a>; older releases differ. Revit has no native macOS application. Before relying on virtualisation, verify Autodesk support for the exact release and your Mac hardware, plus any renderer limitations. A minimum specification is not a guarantee of comfortable work on large projects.</p>
+
+<h2 id="which">Which Should You Learn First?</h2>
+<div class="tbl-wrap set101">
+<table>
+  <thead><tr><th>If you are…</th><th>Start with</th><th>Then add</th></tr></thead>
+  <tbody>
+    <tr><td>A first- or second-year architecture student</td><td>SketchUp, for design and juries</td><td>Revit by third year, for drawing sets</td></tr>
+    <tr><td>An interior designer doing homes and small offices</td><td>SketchUp for design and client 3D</td><td>Revit when projects grow or clients ask for BIM</td></tr>
+    <tr><td>An architect in a mid-size or large office</td><td>Revit, for the drawing set and teamwork</td><td>SketchUp for quick concept studies</td></tr>
+    <tr><td>Aiming at Gulf or BIM-led projects</td><td>Revit</td><td>SketchUp for concepts and presentations</td></tr>
+    <tr><td>Aiming at visualisation work</td><td>SketchUp plus one renderer</td><td><a href="https://augmintech.com/how-to-download-install-3ds-max-step-by-step-guide/">3ds Max</a> or Revit, depending on the studio</td></tr>
+  </tbody>
+</table>
+</div>
+<p>SketchUp is easy to pick up on your own from tutorials. Revit is harder, because the difficult part is the workflow: templates, levels, views, schedules and sheets. If you want a guided route into that, Augmintech's PG Program in BIM Architecture is one structured option to compare.</p>
+
+<h2 id="switching">Moving From SketchUp to Revit: 6 Habits to Change</h2>
+<ol class="unl">
+  <li><div><b>Modelling everything as generic geometry.</b> In Revit, use the right tool: Wall, Floor, Roof, Door. Generic-model families can be scheduled in their category, but they do not automatically behave like walls, doors or floors. Choose the category and parameters to match the required output.</div></li>
+  <li><div><b>Ignoring levels.</b> Set appropriate base levels, top constraints and offsets. A level change affects constrained elements; unconnected heights and manual geometry require separate checking.</div></li>
+  <li><div><b>Drawing thickness by hand.</b> Wall and floor thickness comes from their types. Create the type once, then reuse it.</div></li>
+  <li><div><b>Hunting for free models.</b> 3D Warehouse habits bring heavy, wrongly categorised objects. Use clean Revit families in the right category.</div></li>
+  <li><div><b>Making drawings at the end.</b> In Revit, set up the required views and sheets early, then review their content as the model develops.</div></li>
+  <li><div><b>Using tags like SketchUp tags.</b> In Revit, visibility is controlled per view by category and view templates, not by turning tags on and off.</div></li>
+</ol>
+
+<h2 id="skills">What to Learn in Each Program</h2>
+<div class="skl">
+  <div><h3>SketchUp essentials</h3><ol>
+    <li>Navigation, inference and exact inputs</li>
+    <li>Groups, components and tags</li>
+    <li>Push/pull, follow-me, offset and solid tools</li>
+    <li>Materials, scenes, shadows and section planes</li>
+    <li>Importing CAD plans and 3D Warehouse models wisely</li>
+    <li>LayOut: viewports, scale, dimensions, title blocks</li>
+  </ol></div>
+  <div><h3>Revit essentials</h3><ol>
+    <li>Levels, grids and the project template</li>
+    <li>Walls, floors, roofs, doors and windows</li>
+    <li>Rooms, areas and tags</li>
+    <li>Views, view templates and visibility</li>
+    <li>Schedules, sheets and title blocks</li>
+    <li>Families, linking SKP and DWG files, worksharing</li>
+  </ol></div>
+</div>
+
+<h2 id="watch-outs">Version and File Watch-outs</h2>
+<ul class="bullets">
+  <li><strong>Revit files only open forwards.</strong> A model saved in a newer Revit release cannot be opened in an earlier one, so agree one Revit version for the team.</li>
+  <li><strong>Check SKP compatibility before export.</strong> For older Revit releases, Trimble suggests considering an older SketchUp file format. Confirm the actual supported import versions and test a small file first.</li>
+  <li><strong>IFC is not perfect.</strong> SketchUp's help warns that some entities may not export, and recommends checking the file straight after export.</li>
+  <li><strong>Watch file size.</strong> Heavy 3D Warehouse models slow down both SketchUp and any Revit model they are linked into.</li>
+</ul>
+
+<h2 id="gulf">Revit and SketchUp on Gulf Projects</h2>
+<p>For a Gulf architecture or fit-out role, read the employer’s actual deliverables: concept visuals, coordinated models, IFC exchanges, construction drawings or a combination. A BIM requirement is an information-delivery requirement, not simply a request for a particular file extension. Check the project brief and current authority requirements. Build a <a href="https://augmintech.com/bim-portfolio/">portfolio</a> that demonstrates the requested outputs and your own contribution, rather than relying on software certificates alone.</p>
+
+<div class="cta cta-green">
+  <div><h3>Already Comfortable in SketchUp?</h3><p>The next step is turning your designs into coordinated drawing sets. Augmintech's PG Program in BIM Architecture is a structured way to build those BIM skills for architecture. Check the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-green">See the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">Is Revit better than SketchUp?</div><div class="faq-a">For drawing sets, schedules and teamwork on larger projects, yes. For concept design, quick 3D and small projects, SketchUp is usually faster. They do different jobs, and many offices use both.</div></div>
+<div class="faq-item"><div class="faq-q">Can SketchUp do BIM?</div><div class="faq-a">Partly. SketchUp can classify objects and import and export IFC, and Generate Report can list component data. But it does not have Revit's building elements, live schedules or worksharing, so it is not usually used as the main BIM tool on large projects.</div></div>
+<div class="faq-item"><div class="faq-q">Can I make working drawings in SketchUp?</div><div class="faq-a">Yes, with LayOut, which comes with SketchUp Pro. It suits small projects and interiors. For larger drawing sets with many sheets and schedules, Revit is much more efficient.</div></div>
+<div class="faq-item"><div class="faq-q">Can I import a SketchUp model into Revit?</div><div class="faq-a">Yes. You can link it with Link CAD, place it in an in-place family, or export IFC from SketchUp and open it in Revit. SketchUp walls do not become native Revit walls; use the model as a reference to build them. Revit LT does not include SketchUp import.</div></div>
+<div class="faq-item"><div class="faq-q">Should I learn SketchUp or Revit first?</div><div class="faq-a">Start with SketchUp for concept modelling and visualisation, or Revit for model-based documentation. Your course brief and target role should determine the order. If you already work in an office that uses Revit, start with Revit.</div></div>
+<div class="faq-item"><div class="faq-q">Does Revit run on a Mac?</div><div class="faq-a">Revit has no native macOS application. Verify support for your hardware and Revit release before planning a virtualised Windows setup. Current SketchUp releases support Apple silicon Macs.</div></div>
+<div class="faq-item"><div class="faq-q">How much do SketchUp and Revit cost?</div><div class="faq-a">At 2026 US list prices, SketchUp Pro is US$399 a year and Studio US$859; students pay US$55. Revit is US$3,005 a year, and students can use it free for learning through Autodesk's education plan.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>SketchUp Help</strong>: <a href="https://help.sketchup.com/revit-interoperability/sketchup-to-revit" target="_blank" rel="noopener">SketchUp to Revit</a>; <a href="https://help.sketchup.com/en/importing-and-exporting-ifc-files" target="_blank" rel="noopener">Importing and exporting IFC files</a>; <a href="https://help.sketchup.com/en/sketchup/generate-report" target="_blank" rel="noopener">Generate Report</a>; <a href="https://help.sketchup.com/en/layout/creating-scaled-drawing" target="_blank" rel="noopener">Creating a scaled drawing in LayOut</a>; <a href="https://help.sketchup.com/en/sketchup/system-requirements" target="_blank" rel="noopener">Hardware and software requirements</a>.</li>
+  <li><strong>Autodesk</strong>: <a href="https://www.autodesk.com/compare/compare-features/revit-vs-revit-lt" target="_blank" rel="noopener">Revit vs Revit LT comparison</a>; <a href="https://help.autodesk.com/cloudhelp/2024/ENU/RevitLT-GetStarted/files/GUID-B3112DE3-A923-4950-B547-3A83A30CDD38.htm" target="_blank" rel="noopener">Opening models from an earlier release</a>; <a href="https://www.autodesk.com:443/education/home" target="_blank" rel="noopener">Education plan</a>; <a href="https://boards.autodesk.com/dubai-bim-mandate" target="_blank" rel="noopener">Dubai Municipality BIM mandate</a>.</li>
+  
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 8 November 2026. Software features and prices change between releases; check each vendor's site before you buy.</p>
+</div>

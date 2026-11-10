@@ -1,0 +1,288 @@
+<style>
+#aug-carpet-area{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-carpet-area *,#aug-carpet-area *::before,#aug-carpet-area *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-carpet-area{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-carpet-area.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-carpet-area .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-carpet-area .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-carpet-area .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-carpet-area .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-carpet-area .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-carpet-area .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-carpet-area h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-carpet-area h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-carpet-area p{margin-bottom:.9rem;font-size:16px;}
+#aug-carpet-area a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-carpet-area a:hover{border-color:var(--brand);}
+#aug-carpet-area hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-carpet-area .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-carpet-area .chart svg{width:100%;height:auto;display:block;}
+#aug-carpet-area .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-carpet-area .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-carpet-area .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-carpet-area .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-carpet-area .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-carpet-area .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-carpet-area .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-carpet-area table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-carpet-area caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-carpet-area thead tr{background:var(--slate);color:#fff;}
+#aug-carpet-area thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-carpet-area tbody tr:nth-child(even){background:var(--surface);}
+#aug-carpet-area tbody tr:hover{background:var(--brand-lite);}
+#aug-carpet-area td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-carpet-area td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-carpet-area tbody tr.hl{background:var(--green-lite)!important;}
+#aug-carpet-area tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-carpet-area ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-carpet-area ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-carpet-area .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-carpet-area .cta-green{background:var(--slate);}
+#aug-carpet-area .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-carpet-area .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-carpet-area .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-carpet-area .cta-btn-blue{color:var(--brand);}#aug-carpet-area .cta-btn-green{color:var(--slate);}
+#aug-carpet-area figure{margin:1.5rem 0;}
+#aug-carpet-area figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-carpet-area figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-carpet-area dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-carpet-area dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-carpet-area dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-carpet-area .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-carpet-area .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-carpet-area .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-carpet-area .srcs{list-style:none;padding:0;}
+#aug-carpet-area .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-carpet-area .srcs li:last-child{border-bottom:none;}
+
+/* ===== answer ===== */#aug-carpet-area .ans99{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:1.3rem 0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-carpet-area .ans99 div{padding:.85rem .95rem;font-size:13.5px;line-height:1.5;color:var(--ink-mid);}
+#aug-carpet-area .ans99 div:nth-child(1){background:#DCEBF7;} #aug-carpet-area .ans99 div:nth-child(2){background:#E8ECF1;} #aug-carpet-area .ans99 div:nth-child(3){background:#F3EBDD;}
+#aug-carpet-area .ans99 b{display:block;font-family:var(--display);font-size:16px;color:var(--ink);margin-bottom:.2rem;}
+#aug-carpet-area .ans99 i{font-style:normal;font-family:var(--mono);font-size:11.5px;color:#1F4A6E;display:block;margin-top:.35rem;}
+
+/* ===== RERA quote ===== */#aug-carpet-area .act{margin:1.1rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#FBFAF6;border:1px solid #E5DFCF;border-left:5px solid #8A5A00;}
+#aug-carpet-area .act .src{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8A5A00;margin-bottom:.4rem;}
+#aug-carpet-area .act blockquote{margin:0;font-size:15.5px;line-height:1.7;color:var(--ink);font-style:italic;}
+#aug-carpet-area .ie{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1rem 0;}
+#aug-carpet-area .ie>div{border-radius:var(--radius);padding:.8rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-carpet-area .ie .in{background:#EEF6F2;border:1px solid #CBE4D7;} #aug-carpet-area .ie .out{background:#FDF1EC;border:1px solid #F2CDBF;}
+#aug-carpet-area .ie h3{margin:0 0 .35rem;font-size:15px;} #aug-carpet-area .ie .in h3{color:var(--green);} #aug-carpet-area .ie .out h3{color:#9A3B1E;}
+#aug-carpet-area .ie ul{margin:0;padding-left:1.1rem;} #aug-carpet-area .ie li{margin-bottom:.25rem;}
+
+/* ===== table ===== */#aug-carpet-area .c3 th:nth-child(2){background:#1F4A6E;} #aug-carpet-area .c3 th:nth-child(3){background:#56616D;} #aug-carpet-area .c3 th:nth-child(4){background:#8A5A00;}
+#aug-carpet-area .c3 td:first-child{font-weight:700;white-space:nowrap;}
+#aug-carpet-area .formula{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:1rem 0;font-family:var(--mono);font-size:13.5px;}
+#aug-carpet-area .formula span{padding:.4rem .65rem;border-radius:6px;background:var(--surface);border:1px solid var(--border);color:var(--ink);}
+#aug-carpet-area .formula span.r{background:#F3EBDD;border-color:#E5D3B0;font-weight:700;}
+#aug-carpet-area .formula i{font-style:normal;color:var(--muted);}
+
+/* ===== figures ===== */#aug-carpet-area .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-carpet-area .dfig svg{display:block;width:100%;height:auto;}
+#aug-carpet-area .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-carpet-area .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-carpet-area .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-carpet-area figure.pf{margin:1.2rem 0;} #aug-carpet-area figure.pf figcaption{font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;font-family:var(--body);}
+
+/* ===== worked steps ===== */#aug-carpet-area .ws{margin:1.1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+#aug-carpet-area .ws-r{display:grid;grid-template-columns:44px 1fr 130px;gap:10px;align-items:center;padding:.7rem .85rem;border-bottom:1px solid var(--border);background:#fff;}
+#aug-carpet-area .ws-r:last-child{border-bottom:none;}
+#aug-carpet-area .ws-r .n{width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--display);font-weight:800;display:flex;align-items:center;justify-content:center;}
+#aug-carpet-area .ws-r b{display:block;font-size:14.5px;color:var(--ink);}
+#aug-carpet-area .ws-r span{font-size:13px;line-height:1.5;color:var(--ink-mid);font-family:var(--mono);}
+#aug-carpet-area .ws-r .v{text-align:right;font-family:var(--mono);font-size:15px;font-weight:700;color:var(--ink);}
+#aug-carpet-area .ws-r .v small{display:block;font-size:11px;font-weight:400;color:var(--muted);}
+#aug-carpet-area .ws-r.hl{background:#F4F8FC;}
+#aug-carpet-area .stack{display:flex;height:34px;border-radius:6px;overflow:hidden;margin:1rem 0 .4rem;border:1px solid var(--border);}
+#aug-carpet-area .stack div{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:10.5px;color:#1E2833;white-space:nowrap;overflow:hidden;}
+#aug-carpet-area .stack-l{display:flex;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--muted);margin-bottom:1rem;}
+#aug-carpet-area .stack-l span{display:inline-flex;align-items:center;gap:5px;} #aug-carpet-area .stack-l i{display:inline-block;width:12px;height:12px;border-radius:2px;}
+
+/* ===== revit ===== */#aug-carpet-area .rv3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1rem 0;}
+#aug-carpet-area .rv3 div{border-radius:var(--radius);padding:.8rem .9rem;background:#EEF2F7;font-size:13.5px;line-height:1.55;color:var(--ink-mid);}
+#aug-carpet-area .rv3 b{display:block;font-family:var(--display);font-size:15px;color:#1F4A6E;margin-bottom:.2rem;}
+#aug-carpet-area .alert{border-left:4px solid var(--warn);background:#FBF4E8;border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.8rem 1rem;margin:1rem 0;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-carpet-area .alert b{color:var(--warn);}
+
+/* ===== gulf ===== */#aug-carpet-area .gt td:first-child{font-weight:700;white-space:nowrap;}
+#aug-carpet-area .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+
+@media(max-width:640px){
+  #aug-carpet-area .ans99,#aug-carpet-area .ie,#aug-carpet-area .rv3{grid-template-columns:1fr;}
+  #aug-carpet-area .c3 table,#aug-carpet-area .gt table{min-width:600px;}
+  #aug-carpet-area .ws-r{grid-template-columns:36px 1fr;} #aug-carpet-area .ws-r .v{grid-column:2;text-align:left;}
+  #aug-carpet-area .stack div{font-size:0;}
+  #aug-carpet-area .cta{flex-direction:column;align-items:flex-start;}
+  #aug-carpet-area .cta>div{max-width:100%;} #aug-carpet-area .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-carpet-area .cta>div:last-child .cta-btn{margin-left:0;}
+}
+#aug-carpet-area .ph{aspect-ratio:auto}#aug-carpet-area .ph img{position:static;display:block;width:100%;height:auto;object-fit:contain;cursor:zoom-in}#aug-carpet-area .dfig svg{cursor:zoom-in}#aug-carpet-area .dfig figcaption{font-family:var(--body);font-size:13px;line-height:1.6}#aug-carpet-area .cta-btn{white-space:normal;text-align:center}#aug-carpet-area.blog{overflow-wrap:break-word}#aug-carpet-area .blog img{max-width:100%}#aug-carpet-area .rv3{grid-template-columns:1fr}#aug-carpet-area .rv3 div{font-size:15px}#aug-carpet-area .ans99 div{font-size:14px}#aug-carpet-area .stack{height:44px}#aug-carpet-area #zoom99{border:0;border-radius:12px;padding:18px;width:96vw;max-width:1500px;max-height:94vh;margin:auto;background:white}#aug-carpet-area #zoom99::backdrop{background:rgba(10,25,40,.8)}#aug-carpet-area #zoom99 button{display:block;margin:0 0 14px auto;padding:10px 20px;background:#19394e;color:white;border:0;border-radius:6px;cursor:pointer}#aug-carpet-area #zoom99 img{display:block;width:100%;height:auto;cursor:zoom-in}#aug-carpet-area #zoom99 img.zoomed{width:1800px;max-width:none;cursor:zoom-out}@media(max-width:560px){#aug-carpet-area.blog{padding-left:18px;padding-right:18px}#aug-carpet-area .cta-btn{max-width:100%}#aug-carpet-area .formula{font-size:13px}#aug-carpet-area .ws-r span{overflow-wrap:anywhere}}
+/* ===== Augmintech theme overrides ===== */
+#aug-carpet-area.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-carpet-area h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-carpet-area a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-carpet-area a:hover{color:#18d104;}
+#aug-carpet-area .cta{background:#1a1a1a;}
+#aug-carpet-area .cta a.cta-btn{text-decoration:none;}
+#aug-carpet-area .cta-btn-blue{background:#18d104;color:#000;}
+#aug-carpet-area .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-carpet-area [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-carpet-area">
+
+
+<p><strong>Carpet area is the usable floor area inside the walls of a flat, the space you can actually use.</strong> Built-up area adds the walls and balcony, and super built-up area adds your share of the building's common areas. Here is the short version, followed by the legal definition and a worked floor plan where every figure is calculated, the way an architect would.</p>
+
+<div class="ans99">
+  <div><b>Carpet area</b>Usable area inside the external walls, including internal partitions.<i>Defined in RERA 2016</i></div>
+  <div><b>Built-up area</b>Carpet area plus external walls, shafts and your own balcony.<i>Market term, not in RERA</i></div>
+  <div><b>Super built-up area</b>Built-up area plus a share of lobbies, lifts, stairs and amenities.<i>Market term, not in RERA</i></div>
+</div>
+
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/99-apartment-interior-with-separate-private.webp" alt="Apartment interior with separate private balcony and measurement tools" loading="lazy"></div><figcaption>Interior floor space and a separate private balcony. AI-generated editorial illustration, not the measured flat in the example.</figcaption></figure>
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Carpet area is the net usable floor area of a flat,</strong> as defined in Section 2(k) of India's RERA Act, 2016.</li>
+  <li><strong>It includes internal partition walls but excludes external walls, shafts, and exclusive balconies and terraces.</strong></li>
+  <li><strong>Built-up area adds the external walls, shafts and balcony;</strong> its exact definition varies between builders.</li>
+  <li><strong>Super built-up area adds your proportionate share of common areas</strong> such as lobbies, lifts and the clubhouse.</li>
+  <li><strong>The loading factor is super built-up area divided by carpet area;</strong> 1.35 means you pay for 35% more area than you can use.</li>
+  <li><strong>Dubai listings usually quote BUA, not carpet area,</strong> and what BUA includes varies, so always ask.</li>
+</ul>
+
+<h2 id="what-is">What Is Carpet Area?</h2>
+<p>Before RERA, "carpet area" meant different things to different builders. The Real Estate (Regulation and Development) Act, 2016 fixed one legal definition:</p>
+<div class="act">
+  <div class="src">RERA Act 2016, Section 2(k)</div>
+  <blockquote>"carpet area" means the net usable floor area of an apartment, excluding the area covered by the external walls, areas under services shafts, exclusive balcony or verandah area and exclusive open terrace area, but includes the area covered by the internal partition walls of the apartment.</blockquote>
+</div>
+<p>The Act's Explanation adds that an "exclusive" balcony, verandah or open terrace is one that is attached to the flat and meant for the exclusive use of the buyer. RERA also requires promoters to state the carpet area of the apartments when they register a project (Section 4(2)(h)), and Haryana RERA (Gurugram) regulations from 2021 go further: no apartment in a project under them may be sold on any basis other than carpet area.</p>
+<div class="ie">
+  <div class="in"><h3>Included in carpet area</h3><ul><li>All rooms: living, bedrooms, <a href="https://augmintech.com/types-of-kitchen-layout/">kitchen</a>, toilets</li><li>Internal partition walls between rooms</li><li>Internal passages within the flat</li></ul></div>
+  <div class="out"><h3>Excluded from carpet area</h3><ul><li>External walls of the flat</li><li>Services shafts (<a href="https://augmintech.com/plumbing-system-in-building/">plumbing</a>, electrical ducts)</li><li>Exclusive balcony or verandah</li><li>Exclusive open terrace</li></ul></div>
+</div>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="comparison">Carpet Area vs Built-up Area vs Super Built-up Area</h2>
+<div class="tbl-wrap c3">
+<table>
+  <thead><tr><th></th><th>Carpet area</th><th>Built-up area</th><th>Super built-up area</th></tr></thead>
+  <tbody>
+    <tr><td>What it includes</td><td>Rooms and internal partitions</td><td>Carpet + external walls + shafts + own balcony</td><td>Built-up + share of common areas</td></tr>
+    <tr><td>Legal definition</td><td>Yes, RERA 2016 Section 2(k)</td><td>No; varies by builder</td><td>No; varies by builder</td></tr>
+    <tr><td>Who uses it</td><td>RERA registrations, buyers comparing usable space</td><td>Architects, some builders and banks</td><td>Builders' price lists, maintenance charges</td></tr>
+    <tr><td>Size, smallest to largest</td><td>Smallest</td><td>Middle</td><td>Largest</td></tr>
+    <tr><td>How they relate</td><td colspan="3">Super built-up = carpet × loading factor. Loading factor = super built-up ÷ carpet.</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="formula"><span>Carpet</span><i>+ external walls + shafts + own balcony =</i><span>Built-up</span><i>+ share of common areas =</i><span>Super built-up</span><i>÷ carpet =</i><span class="r">Loading factor</span></div>
+<p>ICICI Bank's home loan guide explains the loading factor with an example: a factor of 1.20 means the builder has added 20% to your carpet area, and it notes the factor is lower in projects with fewer amenities. The higher the loading factor, the less of what you pay for is space you can actually use.</p>
+
+<div class="cta">
+  <div><h3>Want to Calculate Areas the Way Architects Do?</h3><p>Augmintech's BIM Architecture program teaches building information modelling for architecture, including area plans and area schedules that update with the design. See the course page for details.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">View the BIM Architecture program</a></div>
+</div>
+
+<h2 id="worked-example">Worked Example with a Floor Plan</h2>
+<p>Here is a sample 2BHK flat. Inside its external walls it measures 10.00 × 8.00 m; its external walls are 230 mm thick, so outside it measures 10.46 × 8.46 m. It has one services shaft and one exclusive balcony.</p>
+<figure class="dfig">
+  <svg viewBox="0 0 640 680" role="img" aria-label="Worked example 2BHK floor plan showing carpet area inside the external walls, external walls, a services shaft and an exclusive balcony"><rect width="640" height="680" fill="#fff"/><defs><pattern id="sh99" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fff"/><line x1="0" y1="0" x2="0" y2="6" stroke="#B5371B" stroke-width="1.5"/></pattern></defs><rect x="70" y="50" width="523.0" height="423.0" fill="#9AA3AD"/><rect x="81.5" y="61.5" width="500.0" height="400.0" fill="#DCEBF7"/><rect x="301.5" y="61.5" width="30.0" height="50.0" fill="url(#sh99)" stroke="#B5371B"/><rect x="111.5" y="473.0" width="150.0" height="75.0" fill="#DDF1E6" stroke="#1D6B43" stroke-width="1.2"/><line x1="111.5" y1="548.0" x2="261.5" y2="548.0" stroke="#1D6B43" stroke-width="2"/><line x1="241.5" y1="61.5" x2="241.5" y2="221.5" stroke="#1E2833" stroke-width="5.75"/><line x1="81.5" y1="221.5" x2="241.5" y2="221.5" stroke="#1E2833" stroke-width="5.75"/><line x1="241.5" y1="61.5" x2="241.5" y2="161.5" stroke="#1E2833" stroke-width="5.75"/><line x1="301.5" y1="61.5" x2="301.5" y2="161.5" stroke="#1E2833" stroke-width="5.75"/><line x1="241.5" y1="161.5" x2="301.5" y2="161.5" stroke="#1E2833" stroke-width="5.75"/><line x1="331.5" y1="61.5" x2="331.5" y2="461.5" stroke="#1E2833" stroke-width="5.75"/><line x1="331.5" y1="251.5" x2="581.5" y2="251.5" stroke="#1E2833" stroke-width="5.75"/><line x1="491.5" y1="251.5" x2="491.5" y2="461.5" stroke="#1E2833" stroke-width="5.75"/><line x1="491.5" y1="341.5" x2="581.5" y2="341.5" stroke="#1E2833" stroke-width="5.75"/><text x="161.5" y="141.5" font-size="11" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">KITCHEN</text><text x="271.5" y="111.5" font-size="11" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">TOILET 2</text><text x="206.5" y="341.5" font-size="11" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">LIVING / DINING</text><text x="456.5" y="156.5" font-size="11" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">BEDROOM 2</text><text x="411.5" y="356.5" font-size="11" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">BEDROOM 1</text><text x="536.5" y="296.5" font-size="11" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">DRESS</text><text x="536.5" y="401.5" font-size="11" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">TOILET 1</text><text x="316.5" y="119.0" font-size="9" text-anchor="middle" fill="#B5371B" font-weight="700" font-family="sans-serif">SHAFT</text><text x="186.5" y="515.0" font-size="11" text-anchor="middle" fill="#1D6B43" font-weight="700" font-family="sans-serif">BALCONY 3.0 x 1.5 m</text><line x1="81.5" y1="42" x2="581.5" y2="42" stroke="#56616D"/><line x1="81.5" y1="37" x2="81.5" y2="47" stroke="#56616D"/><line x1="581.5" y1="37" x2="581.5" y2="47" stroke="#56616D"/><text x="331.5" y="38" font-size="11" text-anchor="middle" fill="#2A3540" font-family="monospace">10000 inside</text><line x1="70" y1="26" x2="593.0" y2="26" stroke="#56616D"/><line x1="70" y1="21" x2="70" y2="31" stroke="#56616D"/><line x1="593.0" y1="21" x2="593.0" y2="31" stroke="#56616D"/><text x="331.5" y="22" font-size="11" text-anchor="middle" fill="#2A3540" font-family="monospace">10460 outside</text><line x1="60" y1="61.5" x2="60" y2="461.5" stroke="#56616D"/><line x1="55" y1="61.5" x2="65" y2="61.5" stroke="#56616D"/><line x1="55" y1="461.5" x2="65" y2="461.5" stroke="#56616D"/><text x="54" y="261.5" font-size="11" text-anchor="middle" fill="#2A3540" font-family="monospace" transform="rotate(-90 54 261.5)">8000 inside</text><line x1="42" y1="50" x2="42" y2="473.0" stroke="#56616D"/><line x1="37" y1="50" x2="47" y2="50" stroke="#56616D"/><line x1="37" y1="473.0" x2="47" y2="473.0" stroke="#56616D"/><text x="36" y="261.5" font-size="11" text-anchor="middle" fill="#2A3540" font-family="monospace" transform="rotate(-90 36 261.5)">8460 outside</text><rect x="70" y="590" width="22" height="16" fill="#DCEBF7" stroke="#56616D"/><text x="100" y="602" font-size="11.5" fill="#1E2833" font-family="sans-serif" font-weight="700">Carpet area</text><text x="100" y="616" font-size="10.5" fill="#56616D" font-family="sans-serif">partitions included</text><rect x="350" y="590" width="22" height="16" fill="#9AA3AD" stroke="#56616D"/><text x="380" y="602" font-size="11.5" fill="#1E2833" font-family="sans-serif" font-weight="700">External walls</text><text x="380" y="616" font-size="10.5" fill="#56616D" font-family="sans-serif">not carpet</text><rect x="70" y="630" width="22" height="16" fill="url(#sh99)" stroke="#B5371B"/><text x="100" y="642" font-size="11.5" fill="#1E2833" font-family="sans-serif" font-weight="700">Services shaft</text><text x="100" y="656" font-size="10.5" fill="#56616D" font-family="sans-serif">not carpet</text><rect x="350" y="630" width="22" height="16" fill="#DDF1E6" stroke="#1D6B43"/><text x="380" y="642" font-size="11.5" fill="#1E2833" font-family="sans-serif" font-weight="700">Exclusive balcony</text><text x="380" y="656" font-size="10.5" fill="#56616D" font-family="sans-serif">not carpet</text><text x="70" y="575" font-size="11" fill="#56616D" font-family="sans-serif">Sample 2BHK, dimensions in mm. Partitions 115 mm. Shaft 600 x 1000 mm.</text></svg>
+  <figcaption>Sample 2BHK floor plan. Blue = carpet area; grey = external walls; hatched = shaft; green = exclusive balcony. Augmintech drawing.</figcaption>
+</figure>
+<div class="ws">
+  <div class="ws-r"><div class="n">1</div><div><b>Area inside the external walls</b><span>10.00 × 8.00 = 80.00 m²</span></div><div class="v">80.00 m²</div></div>
+  <div class="ws-r"><div class="n">2</div><div><b>Subtract the services shaft</b><span>0.60 × 1.00 = 0.60 m²; partitions are not subtracted</span></div><div class="v">−0.60 m²</div></div>
+  <div class="ws-r hl"><div class="n">=</div><div><b>Carpet area (RERA)</b><span>80.00 − 0.60</span></div><div class="v">79.40 m²<small>854.7 sq ft</small></div></div>
+  <div class="ws-r"><div class="n">3</div><div><b>Add the external walls</b><span>(10.46 × 8.46) − 80.00 = 88.49 − 80.00</span></div><div class="v">+8.49 m²</div></div>
+  <div class="ws-r"><div class="n">4</div><div><b>Add back the shaft and the exclusive balcony</b><span>0.60 + (3.00 × 1.50 = 4.50)</span></div><div class="v">+5.10 m²</div></div>
+  <div class="ws-r hl"><div class="n">=</div><div><b>Built-up area</b><span>79.40 + 8.49 + 0.60 + 4.50</span></div><div class="v">92.99 m²<small>1,001.0 sq ft</small></div></div>
+  <div class="ws-r"><div class="n">5</div><div><b>Add this flat's share of common areas</b><span>Assumed share of lobby, lifts, stairs, clubhouse</span></div><div class="v">+14.20 m²</div></div>
+  <div class="ws-r hl"><div class="n">=</div><div><b>Super built-up area</b><span>92.99 + 14.20</span></div><div class="v">107.19 m²<small>1,153.8 sq ft</small></div></div>
+  <div class="ws-r"><div class="n">6</div><div><b>Loading factor</b><span>107.19 ÷ 79.40</span></div><div class="v">1.35</div></div>
+</div>
+<div class="stack"><div style="width:74.1%;background:#DCEBF7">Carpet 79.40</div><div style="width:7.9%;background:#9AA3AD">Walls</div><div style="width:0.6%;background:#B5371B"></div><div style="width:4.2%;background:#DDF1E6"></div><div style="width:13.2%;background:#F3EBDD">Common 14.20</div></div>
+<div class="stack-l"><span><i style="background:#DCEBF7"></i>Carpet 74%</span><span><i style="background:#9AA3AD"></i>External walls 8%</span><span><i style="background:#B5371B"></i>Shaft 0.6%</span><span><i style="background:#DDF1E6"></i>Balcony 4%</span><span><i style="background:#F3EBDD"></i>Common share 13%</span></div>
+<p class="note">1 m² = 10.7639 sq ft. The 14.20 m² common-area share is an assumed figure for this example; in a real project it is the builder's allocation of total common area across all flats. Some builders count only half the thickness of walls shared with a neighbouring flat, which would reduce the built-up figure.</p>
+<p>The useful number for a buyer is the last one. If a builder quotes a price per sq ft of super built-up area, multiply it by the loading factor to get the effective price per sq ft of carpet area, the space you actually live in.</p>
+
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/99-comparison-chart-of-7940-square.webp" alt="Comparison chart of 79.40 square metres carpet, 92.99 built-up and 107.19 super built-up area" loading="lazy"></div><figcaption>Bar lengths use a common zero baseline. Totals follow the worked example and its assumed common-area allocation.</figcaption></figure>
+<h2 id="revit">How Revit Area Plans Calculate It</h2>
+<p>Architects do not measure areas by hand on a real project. In <a href="https://augmintech.com/learn-revit/">Revit</a>, areas come from <strong>area plans</strong>, which are separate from the room layout. Revit creates two <strong>area schemes</strong> by default: Gross Building (total constructed area, which cannot be edited) and Rentable (based on an office measurement standard). You can add your own, such as a "RERA Carpet" scheme.</p>
+<div class="rv3">
+  <div><b>1. Area scheme and plan</b>Create a scheme, for example "RERA Carpet", then an area plan for each floor under it.</div>
+  <div><b>2. Area boundaries</b>Draw boundary lines on the inside face of the external walls and around each shaft, and keep the balcony as a separate area so it can be excluded.</div>
+  <div><b>3. Area schedule</b>Schedule the areas by flat and type. The totals update whenever the walls move.</div>
+</div>
+<div class="alert"><b>Watch out:</b> adding up Revit <em>room</em> areas does not give RERA carpet area. Rooms are measured to the faces of the walls around them, so they leave out the internal partitions, which RERA includes. In the example above, the partitions take up about 3.3 m², so the room total would be about 76 m², not 79.4 m².</div>
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/99-carpet-area-boundary-excluding-external.webp" alt="Carpet area boundary excluding external walls, services shaft and balcony" loading="lazy"></div>
+  <figcaption>Carpet area boundary concept: include internal partitions and exclude the shaft, balcony and external walls. Illustrative diagram, not a Revit screenshot.</figcaption>
+</figure>
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/99-area-schedule-separating-carpet-area.webp" alt="Area schedule separating carpet area, walls, shaft, balcony and common share" loading="lazy"></div>
+  <figcaption>An illustrative area schedule for the worked example, with the assumed common-area share listed separately. Not a software screenshot.</figcaption>
+</figure>
+
+<h2 id="gulf">Area Measurement in the Gulf</h2>
+<p>If you compare an Indian flat with one in Dubai or Riyadh, the numbers are not like for like. Gulf listings do not use RERA carpet area or loading factors.</p>
+<div class="tbl-wrap gt">
+<table>
+  <thead><tr><th>Market</th><th>What listings usually quote</th><th>Watch for</th></tr></thead>
+  <tbody>
+    <tr><td>India</td><td>Carpet area (RERA), often alongside super built-up area</td><td>Price per sq ft quoted on super built-up area</td></tr>
+    <tr><td>Dubai</td><td>BUA (built-up area), usually in sq ft; GFA is used for planning approvals</td><td>Sources disagree on what BUA includes: some include walls, balconies and terraces, others measure inside the walls</td></tr>
+    <tr><td>Saudi Arabia</td><td>Area in square metres</td><td>Labels can be unclear; check whether the figure is the plot, the building or the unit</td></tr>
+  </tbody>
+</table>
+</div>
+<p>In Dubai, Engel &amp; Völkers notes that BUA is typically the number used in property listings and usually exceeds GFA, while dubizzle describes BUA as the internal floor area and says covered balconies are included only in some cases. With two respected sources differing, the safe move is to ask the agent exactly what the stated area includes. In Saudi Arabia, one Riyadh listing we checked showed the same "2,400" as square metres in one place and square feet in another, so confirm the unit and the basis against the title deed before comparing prices.</p>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What is carpet area?</div><div class="faq-a">Carpet area is the usable floor area inside a flat's external walls. Under RERA 2016 it includes internal partition walls but excludes external walls, services shafts, and exclusive balconies, verandahs and open terraces.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between carpet area and built-up area?</div><div class="faq-a">Built-up area is carpet area plus the area of the external walls, services shafts and the flat's own balcony. It is always larger than carpet area, and since RERA does not define it, builders calculate it in slightly different ways.</div></div>
+<div class="faq-item"><div class="faq-q">How is super built-up area calculated?</div><div class="faq-a">Super built-up area is built-up area plus the flat's proportionate share of common areas such as lobbies, lifts, staircases and amenities. It can also be written as carpet area multiplied by the loading factor.</div></div>
+<div class="faq-item"><div class="faq-q">What is carpet area as per RERA?</div><div class="faq-a">Section 2(k) of the RERA Act 2016 defines carpet area as the net usable floor area of an apartment, excluding the area covered by the external walls, areas under services shafts, exclusive balcony or verandah area and exclusive open terrace area, but including the area covered by the internal partition walls.</div></div>
+<div class="faq-item"><div class="faq-q">What is the loading factor?</div><div class="faq-a">The loading factor is the ratio of super built-up area to carpet area. A loading factor of 1.35 means the area you pay for is 35% larger than the area you can use. ICICI Bank's guide notes it is lower in projects with fewer amenities.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Government of India</strong>, <a href="https://www.indiacode.nic.in/bitstream/123456789/19012/1/reraact.pdf" target="_blank" rel="noopener">Real Estate (Regulation and Development) Act, 2016</a>, Sections 2(k) and 4(2)(h); <strong>Haryana RERA, Gurugram</strong>, <a href="https://haryanarera.gov.in/regulations/Sale_of_ApartmentsFloors_in_a_Real_Estate_Project_on_the_basis_of_Carpet_Area.pdf" target="_blank" rel="noopener">Sale of apartments/floors on the basis of carpet area regulations, 2021</a>.</li>
+  <li><strong>ICICI Bank</strong>, <a href="https://www.icici.bank.in/personal-banking/blogs/loan/home-loan/all-about-carpet-area-built-up-area-and-super-built-up-area" target="_blank" rel="noopener">All about carpet area, built-up area and super built-up area</a>.</li>
+  <li><strong>Autodesk</strong>, <a href="https://help.autodesk.com/cloudhelp/2026/ENU/RevitLT-Model/files/GUID-194A8E37-06C5-426D-964C-D9148A1FEFE3.htm" target="_blank" rel="noopener">Area schemes</a> and <a href="https://help.autodesk.com/cloudhelp/2027/ENU/RevitLT-Model/files/GUID-B4AC3088-DBA8-4EB0-BA8F-CAF8EC1EBF9D.htm" target="_blank" rel="noopener">Area type rules</a>.</li>
+  <li><strong>dubizzle</strong>, <a href="https://www.dubizzle.com/blog/property/bua-vs-gfa-dubai/" target="_blank" rel="noopener">BUA vs GFA in Dubai</a> (March 2026, updated September 2026); <strong>Engel &amp; Völkers</strong>, <a href="https://www.engelvoelkers.com/ae/en/resources/gfa-vs-bua" target="_blank" rel="noopener">GFA vs BUA</a> (February 2026).</li>
+  <li><strong>Bayut Saudi Arabia</strong>, <a href="https://www.bayut.sa/en/property/details-87580761.html" target="_blank" rel="noopener">example Riyadh listing</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 7 November 2026. This is general information, not legal advice; check the RERA rules of your state.</p>
+</div>
+<dialog id="zoom99" aria-label="Enlarged area illustration"><button type="button">Close</button><img alt="Enlarged illustration"></dialog><script>(function(){const d=document.getElementById('zoom99'),im=d.querySelector('img');document.querySelectorAll('.ph img,.dfig svg').forEach(el=>{el.tabIndex=0;el.title='Click to enlarge';function open(){im.classList.remove('zoomed');im.src=el.tagName.toLowerCase()==='svg'?'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(el)):el.src;im.alt=el.getAttribute('alt')||el.getAttribute('aria-label')||'Diagram';d.showModal()}el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter')open()})});d.querySelector('button').onclick=()=>d.close();im.onclick=()=>im.classList.toggle('zoomed');d.onclick=e=>{if(e.target===d)d.close()}})();</script>

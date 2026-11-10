@@ -1,0 +1,370 @@
+<style>
+#aug-interior-design-course{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-interior-design-course *,#aug-interior-design-course *::before,#aug-interior-design-course *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-interior-design-course{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-interior-design-course.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-interior-design-course .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-interior-design-course .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-interior-design-course .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-interior-design-course .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-interior-design-course .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-interior-design-course .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-interior-design-course h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-interior-design-course h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-interior-design-course p{margin-bottom:.9rem;font-size:16px;}
+#aug-interior-design-course a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-interior-design-course a:hover{border-color:var(--brand);}
+#aug-interior-design-course hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-interior-design-course .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-interior-design-course .chart svg{width:100%;height:auto;display:block;}
+#aug-interior-design-course .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-interior-design-course .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-interior-design-course .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-interior-design-course .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-interior-design-course .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-interior-design-course .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-interior-design-course .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-interior-design-course table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-interior-design-course caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-interior-design-course thead tr{background:var(--slate);color:#fff;}
+#aug-interior-design-course thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-interior-design-course tbody tr:nth-child(even){background:var(--surface);}
+#aug-interior-design-course tbody tr:hover{background:var(--brand-lite);}
+#aug-interior-design-course td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-interior-design-course td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-interior-design-course tbody tr.hl{background:var(--green-lite)!important;}
+#aug-interior-design-course tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-interior-design-course ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-interior-design-course ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-interior-design-course .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-interior-design-course .cta-green{background:var(--slate);}
+#aug-interior-design-course .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-interior-design-course .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-interior-design-course .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-interior-design-course .cta-btn-blue{color:var(--brand);}#aug-interior-design-course .cta-btn-green{color:var(--slate);}
+#aug-interior-design-course figure{margin:1.5rem 0;}
+#aug-interior-design-course figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-interior-design-course figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-interior-design-course dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-interior-design-course dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-interior-design-course dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-interior-design-course .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-interior-design-course .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-interior-design-course .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-interior-design-course .srcs{list-style:none;padding:0;}
+#aug-interior-design-course .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-interior-design-course .srcs li:last-child{border-bottom:none;}
+
+#aug-interior-design-course .ans{margin:1.3rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#F4F6F8;border-left:4px solid var(--brand);font-size:16.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-interior-design-course .ans b{color:var(--ink);}
+#aug-interior-design-course .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-interior-design-course .dfig svg{display:block;width:100%;height:auto;}
+#aug-interior-design-course .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-interior-design-course .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-interior-design-course .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-interior-design-course figure.pf{margin:1.2rem 0;} #aug-interior-design-course figure.pf figcaption{font-family:var(--body);font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-interior-design-course .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;} #aug-interior-design-course .pair figure{margin:0;}
+#aug-interior-design-course .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-interior-design-course .alert{margin:1.2rem 0;padding:.85rem 1rem;border-radius:var(--radius);background:#FFF4E5;border:1px solid #F3D3A4;font-size:14.5px;line-height:1.6;}
+#aug-interior-design-course .alert b{color:var(--warn);}
+#aug-interior-design-course .t table{font-size:13.5px;} #aug-interior-design-course .t td:first-child{font-weight:700;color:var(--ink);} #aug-interior-design-course .t th{white-space:normal;}
+#aug-interior-design-course .t .m{font-family:var(--mono);font-size:12px;white-space:nowrap;}
+#aug-interior-design-course .t caption{caption-side:bottom;text-align:left;font-family:var(--body);text-transform:none;letter-spacing:0;font-size:12.5px;color:var(--muted);padding:.5rem .2rem 0;}
+#aug-interior-design-course .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.2rem 0;}
+#aug-interior-design-course .cards.two{grid-template-columns:1fr 1fr;} #aug-interior-design-course .cards.four{grid-template-columns:repeat(4,1fr);}
+#aug-interior-design-course .cards>div{border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:var(--radius);padding:.85rem .95rem;background:#fff;}
+#aug-interior-design-course .cards>div.c2{border-top-color:#1D6B43;} #aug-interior-design-course .cards>div.c3{border-top-color:#8A5A00;} #aug-interior-design-course .cards>div.c4{border-top-color:#5B3A86;} #aug-interior-design-course .cards>div.c5{border-top-color:#B5371B;}
+#aug-interior-design-course .cards b{display:block;font-family:var(--display);font-size:15.5px;color:var(--ink);margin-bottom:.25rem;line-height:1.3;}
+#aug-interior-design-course .cards span{display:block;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-interior-design-course .cards em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.5rem;}
+#aug-interior-design-course .cards ul{margin:.3rem 0 0;padding-left:1.05rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-interior-design-course .steps{list-style:none;margin:1.2rem 0;padding:0;counter-reset:s;display:grid;gap:10px;}
+#aug-interior-design-course .steps li{counter-increment:s;position:relative;padding:.8rem 1rem .8rem 3.4rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;font-size:15px;line-height:1.6;}
+#aug-interior-design-course .steps li::before{content:counter(s);position:absolute;left:.9rem;top:.8rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--display);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+#aug-interior-design-course .steps li b{display:block;font-family:var(--display);color:var(--ink);font-size:15.5px;margin-bottom:2px;}
+#aug-interior-design-course .nl{list-style:none;padding:0;margin:1.2rem 0;counter-reset:u;}
+#aug-interior-design-course .nl li{counter-increment:u;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;padding:.75rem 0;border-top:1px solid var(--border);font-size:15px;line-height:1.6;}
+#aug-interior-design-course .nl li:first-child{border-top:none;}
+#aug-interior-design-course .nl li::before{content:counter(u,decimal-leading-zero);font-family:var(--mono);font-weight:700;color:var(--coral);font-size:14px;padding-top:2px;}
+#aug-interior-design-course .nl b{color:var(--ink);}
+#aug-interior-design-course .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-interior-design-course .pick>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-interior-design-course .pick .a{background:#EEF7F1;border:1px solid #C6E3D1;} #aug-interior-design-course .pick .r{background:#FDF1EC;border:1px solid #F1CDBE;}
+#aug-interior-design-course .pick h3{margin:0 0 .4rem;font-size:15.5px;} #aug-interior-design-course .pick .a h3{color:#1D6B43;} #aug-interior-design-course .pick .r h3{color:#9A3B1E;}
+#aug-interior-design-course .pick ul{margin:0;padding-left:1.1rem;} #aug-interior-design-course .pick li{margin-bottom:.3rem;}
+#aug-interior-design-course .chk{margin:1.2rem 0;border:1px solid var(--border);border-radius:var(--radius);background:#fff;padding:.4rem 1rem;}
+#aug-interior-design-course .chk div{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:.6rem 0;border-top:1px solid var(--border);font-size:14.5px;line-height:1.55;}
+#aug-interior-design-course .chk div:first-child{border-top:none;}
+#aug-interior-design-course .chk div::before{content:"";width:16px;height:16px;border:2px solid var(--green);border-radius:4px;margin-top:3px;}
+#aug-interior-design-course .chk b{color:var(--ink);}
+#aug-interior-design-course .qa{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-interior-design-course .qa .q{padding:.75rem 1rem;background:var(--surface);font-family:var(--display);font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.45;}
+#aug-interior-design-course .qa .q span{font-family:var(--mono);font-size:11px;color:var(--brand);font-weight:700;margin-right:8px;letter-spacing:.04em;}
+#aug-interior-design-course .qa .a{padding:.75rem 1rem;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-interior-design-course .qa .a i{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--coral);margin-top:.5rem;letter-spacing:.03em;}
+#aug-interior-design-course .bar{display:flex;margin:1.2rem 0 .4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-interior-design-course .bar div{padding:.75rem .7rem;font-size:13px;line-height:1.4;color:#fff;}
+#aug-interior-design-course .bar div b{display:block;font-family:var(--display);font-size:17px;}
+#aug-interior-design-course .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-interior-design-course .split>div{border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);padding:.9rem 1rem;}
+#aug-interior-design-course .split h3{margin:0 0 .5rem;font-size:16px;} #aug-interior-design-course .split dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14px;}
+#aug-interior-design-course .split dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:2px;} #aug-interior-design-course .split dd{margin:0;color:var(--ink);}
+
+@media(max-width:820px){ #aug-interior-design-course .cards,#aug-interior-design-course .cards.four{grid-template-columns:1fr 1fr;} }
+@media(max-width:640px){
+  #aug-interior-design-course .t table{min-width:600px;}
+  #aug-interior-design-course .cards,#aug-interior-design-course .cards.two,#aug-interior-design-course .cards.four,#aug-interior-design-course .pick,#aug-interior-design-course .pair,#aug-interior-design-course .split{grid-template-columns:1fr;}
+  #aug-interior-design-course .bar{flex-direction:column;} #aug-interior-design-course .bar div{flex:none!important;}
+  #aug-interior-design-course .steps li{padding-left:3rem;}
+  #aug-interior-design-course .dfig.wide{overflow-x:auto;} #aug-interior-design-course .dfig.wide svg{min-width:640px;}
+  #aug-interior-design-course .cta{flex-direction:column;align-items:flex-start;}
+  #aug-interior-design-course .cta>div{max-width:100%;} #aug-interior-design-course .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-interior-design-course .cta>div:last-child .cta-btn{margin-left:0;white-space:normal;text-align:center;line-height:1.5;}
+}
+#aug-interior-design-course .pf .ph{height:auto!important;aspect-ratio:auto!important;min-height:0!important;padding:0!important;background:#f4f8fb!important;overflow:hidden}#aug-interior-design-course .ph::before,#aug-interior-design-course .ph::after{display:none!important}#aug-interior-design-course .pf .ph img{position:static!important;display:block;width:100%!important;height:auto!important;object-fit:contain!important;opacity:1!important;filter:none!important}#aug-interior-design-course .pf figcaption{font-family:Arial,sans-serif!important;font-size:14px!important;line-height:1.65!important;padding:16px!important;overflow-wrap:anywhere}#aug-interior-design-course.blog{overflow-wrap:break-word}#aug-interior-design-course .tbl-wrap{overflow-x:auto}#aug-interior-design-course .cta-btn{white-space:normal!important}#aug-interior-design-course .dfig svg{max-width:100%;height:auto}#aug-interior-design-course .wide{overflow-x:auto}@media(max-width:650px){#aug-interior-design-course .pair,#aug-interior-design-course .grid3,#aug-interior-design-course .gq3{grid-template-columns:1fr!important}}
+/* ===== Augmintech theme overrides ===== */
+#aug-interior-design-course.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-interior-design-course h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-interior-design-course a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-interior-design-course a:hover{color:#18d104;}
+#aug-interior-design-course .cta{background:#1a1a1a;}
+#aug-interior-design-course .cta a.cta-btn{text-decoration:none;}
+#aug-interior-design-course .cta-btn-blue{background:#18d104;color:#000;}
+#aug-interior-design-course .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-interior-design-course [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-interior-design-course">
+
+
+<div class="ans"><b>Interior design courses in India come at four levels: short certificates (a few weeks to a year), diplomas (one to three years), bachelor's degrees such as a B.Des or B.Sc (three to five years) and master's degrees such as an M.Des (two to two-and-a-half years).</b> Fees range from about ₹34,000 for a full three-year government polytechnic diploma to more than ₹20 lakh at premium private design schools. This guide explains each level, what you will study, real 2026 fees, how admission works and what jobs each course leads to.</div>
+
+<figure class="dfig wide">
+  <svg viewBox="0 0 1000 380" role="img" aria-label="Four levels of interior design courses: certificate, diploma, bachelor's degree and master's degree, with typical duration, entry point and what each leads to"><rect width="1000" height="380" fill="#fff"/><text x="500" y="26" font-size="14" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">THE FOUR LEVELS OF INTERIOR DESIGN COURSES</text><rect x="40" y="235" width="215" height="110" rx="10" fill="#8A5A00" opacity=".1"/><rect x="40" y="235" width="215" height="6" rx="3" fill="#8A5A00"/><text x="54" y="267" font-size="17" text-anchor="start" fill="#8A5A00" font-weight="800" font-family="sans-serif">Certificate</text><text x="54" y="291" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">A few weeks – 1 year</text><text x="54" y="313" font-size="11.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">After Class 12 or a degree</text><text x="54" y="333" font-size="11.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">Leads to: Software, styling, decor</text><rect x="275" y="180" width="215" height="165" rx="10" fill="#1D6B43" opacity=".1"/><rect x="275" y="180" width="215" height="6" rx="3" fill="#1D6B43"/><text x="289" y="212" font-size="17" text-anchor="start" fill="#1D6B43" font-weight="800" font-family="sans-serif">Diploma</text><text x="289" y="236" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">1 – 3 years</text><text x="289" y="258" font-size="11.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">After Class 10 (polytechnic) or 12</text><text x="289" y="278" font-size="11.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">Leads to: Drafting, site, decor jobs</text><rect x="510" y="125" width="215" height="220" rx="10" fill="#1F4A6E" opacity=".1"/><rect x="510" y="125" width="215" height="6" rx="3" fill="#1F4A6E"/><text x="524" y="157" font-size="17" text-anchor="start" fill="#1F4A6E" font-weight="800" font-family="sans-serif">Bachelor's degree</text><text x="524" y="181" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">3 – 5 years</text><text x="524" y="203" font-size="11.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">After Class 12; entrance test at many</text><text x="524" y="223" font-size="11.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">Leads to: Full design career</text><rect x="745" y="70" width="215" height="275" rx="10" fill="#5B3A86" opacity=".1"/><rect x="745" y="70" width="215" height="6" rx="3" fill="#5B3A86"/><text x="759" y="102" font-size="17" text-anchor="start" fill="#5B3A86" font-weight="800" font-family="sans-serif">Master's degree</text><text x="759" y="126" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">2 – 2.5 years</text><text x="759" y="148" font-size="11.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">After a bachelor's</text><text x="759" y="168" font-size="11.5" text-anchor="start" fill="#56616D" font-weight="400" font-family="sans-serif">Leads to: Specialist roles, teaching</text><line x1="40" y1="352" x2="960" y2="352" stroke="#C9D3DD" stroke-width="2"/><text x="500" y="372" font-size="12" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">Typical ranges in India; each institute sets its own duration and entry rules.</text></svg>
+  <figcaption>The four levels of interior design education in India. Augmintech diagram.</figcaption>
+</figure>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>For a full design career, a bachelor's degree is the standard route:</strong> a four-year B.Des or a three- or four-year B.Sc or BID.</li>
+  <li><strong>Diplomas and certificates are faster and cheaper</strong> and suit drafting, decor, styling and site roles, or people already working.</li>
+  <li><strong>Fees vary enormously:</strong> from ₹33,918 for a full polytechnic diploma to about ₹15.8 lakh for NID's B.Des and over ₹20 lakh at some private schools.</li>
+  <li><strong>Most courses teach the same core:</strong> design studio, drawing, materials and construction, services, history, software and professional practice.</li>
+  <li><strong>India has no statutory licence for interior designers,</strong> so your <a href="https://augmintech.com/bim-portfolio/">portfolio</a>, skills and the course's reputation matter more than the title.</li>
+  <li><strong>Software skills decide early job offers:</strong> <a href="https://augmintech.com/autocad-download/">AutoCAD</a>, SketchUp, a renderer and increasingly <a href="https://augmintech.com/learn-revit/">Revit</a>.</li>
+</ul>
+
+<h2 id="types">Types of Interior Design Courses Compared</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Course</th><th>Duration</th><th>Entry</th><th>Example and fee</th><th>Best for</th></tr></thead>
+  <tbody>
+    <tr><td>Certificate</td><td>A few weeks to 11 months</td><td>Class 12 or graduates; often no test</td><td>Pearl Academy Professional Certificate in Styling for Interiors: ₹4,44,778 total (11 months)</td><td>Upskilling, decor and styling, career changers</td></tr>
+    <tr><td>Diploma (polytechnic)</td><td>3 years</td><td>After Class 10; state polytechnic entrance</td><td>Government Polytechnic Ghaziabad, Interior Decoration: about ₹33,918 total</td><td>Affordable route into drafting and site work</td></tr>
+    <tr><td>B.Sc / BID</td><td>3–4 years</td><td>After Class 12; college or university admission</td><td>Pillai University BID: about ₹1.5 lakh a year (4 years)</td><td>A degree with a strong practical base</td></tr>
+    <tr><td>B.Des (Interior)</td><td>3–4 years</td><td>After Class 12; design aptitude test at most institutes</td><td>NID B.Des Furniture and Interior Design: about ₹15.83 lakh total (4 years)</td><td>A full design career, studio-led learning</td></tr>
+    <tr><td>M.Des / Master's</td><td>2–2.5 years</td><td>After a bachelor's; entrance test and interview</td><td>NID M.Des Furniture and Interior Design: about ₹11.50 lakh total (2.5 years)</td><td>Specialisation, research, teaching</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Fees as published in 2026 by the institute or by Careers360 (see sources); they change every year. A detailed fee comparison is in our guide to interior design course fees.</p>
+
+<div class="cta">
+  <div><h3>Add BIM to Your Design Education</h3><p>Whichever course you choose, BIM is becoming part of interior and architecture work. Augmintech's PG Program in BIM Architecture teaches building information modelling for architecture. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">Explore the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="degrees">Bachelor's Degrees: B.Des, B.Sc and BID</h2>
+<p>A bachelor's degree is the most complete preparation for a design career. You will see three names, and the difference is mostly in emphasis, not in the job you can do afterwards:</p>
+<div class="cards">
+  <div><b>B.Des (Interior or Interior Architecture)</b><span>Design-school model with heavy studio work, design thinking and furniture or product design. NID's B.Des in Furniture and Interior Design is four years; Pearl Academy's B.Des in Interior Architectural Design is listed as three years.</span><em>Usually needs a design aptitude test</em></div>
+  <div class="c2"><b>B.Sc Interior Design</b><span>University model, often three years, with a balance of studio, technical drawing, construction and management subjects. The University of Mumbai's B.Sc (Hons) Interior Design is a six-semester programme.</span><em>Usually merit or college test</em></div>
+  <div class="c3"><b>BID (Bachelor of Interior Design)</b><span>Professional-style degree, three to five years. Pillai University's BID is four years. CEPT's five-year BID, once well known, has not taken admissions since 2023 according to CEPT's own page.</span><em>Check admissions are open before applying</em></div>
+</div>
+<p><strong>Entrance exams.</strong> Design schools test drawing, observation, creativity and visual thinking. The best-known is NID's Design Aptitude Test (DAT), with Prelims and Mains stages; for the 2027 intake, applications run from 9 September to 29 November 2026, and the Prelims exam is on 19 December 2026, according to Careers360. Many private institutes run their own tests and portfolio interviews. Start preparing six months ahead with daily sketching, perspective drawing and visual-composition practice.</p>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="diplomas">Diplomas and Certificates</h2>
+<p>Diplomas and certificates are the fastest and often the cheapest way in. They suit three groups: students after Class 10 who want a practical route, graduates from other fields switching to design, and working people adding a skill.</p>
+<ul class="bullets">
+  <li><strong>Polytechnic diplomas</strong> run for three years after Class 10. Government polytechnics are very affordable; Government Polytechnic Ghaziabad's three-year Interior Decoration diploma is listed at about ₹33,918 in total, with admission through Uttar Pradesh's JEECUP entrance and counselling. Lateral entry is possible after Class 12 or ITI.</li>
+  <li><strong>Private diplomas</strong> of one to two years focus on drafting, decor and software, and are offered by many design institutes. Quality varies widely, so check the faculty, studio work and recognition before paying.</li>
+  <li><strong>Certificates</strong> last from a few weeks to about a year. Some cover styling and decor, such as Pearl Academy's 11-month Professional Certificate in Styling for Interiors; others teach software such as AutoCAD, SketchUp, Revit or rendering.</li>
+</ul>
+<div class="alert"><b>Be realistic:</b> a short certificate can get you a drafting or visualisation job, but most design firms expect a degree for designer roles that lead projects. If you start with a diploma, plan how you might add a degree later.</div>
+
+<h2 id="masters">Master's Degrees</h2>
+<p>A master's suits graduates who want to specialise or teach. NID's M.Des in Furniture and Interior Design takes two and a half years and needs a four-year bachelor's degree; Careers360 lists its total fee at about ₹11.50 lakh. Pearl Academy's two-year M.Des in Interior Design is listed at ₹5,97,800 a year plus a one-time ₹85,000. CEPT also offers a master's in Interior Design. Architects can enter interior master's programmes too, as can designers from related fields.</p>
+
+<h2 id="syllabus">What You Will Study: The Syllabus</h2>
+<p>Course names differ, but the content is remarkably similar. Here is a real example: the six-semester B.Sc (Hons) Interior Design structure under the University of Mumbai, as published by B. K. Birla College.</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Semester</th><th>Design studio</th><th>Technical and supporting subjects</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>2D design fundamentals; residential interior design</td><td>History of design; construction and building materials; graphics and freehand sketching; model making</td></tr>
+    <tr><td>2</td><td>3D design; villa and bungalow interiors</td><td>Design movements; advanced construction and materials; advanced graphics</td></tr>
+    <tr><td>3</td><td>Boutique interior design</td><td>Technical drawing; services; enclosures; introduction to CAD; internship</td></tr>
+    <tr><td>4</td><td>Club house interior design</td><td>Ceiling and floor construction; <a href="https://augmintech.com/plumbing-system-in-building/">plumbing</a> and HVAC basics; advanced CAD; internship</td></tr>
+    <tr><td>5</td><td>Restaurant interior design</td><td>Millwork techniques; tender documents; rendering software; project management or building management; dissertation</td></tr>
+    <tr><td>6</td><td>Professional practice</td><td>Electives such as sustainable development or entrepreneurship; 6–8 week internship; dissertation</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Across almost every course, you will cover six areas:</p>
+<div class="cards">
+  <div><b>Design studio</b><span>Projects that grow in size and complexity: a room, a home, a shop, a restaurant, an office, a hotel.</span></div>
+  <div class="c2"><b>Drawing and representation</b><span>Freehand sketching, technical drawing, perspective, model making, then CAD, 3D and rendering.</span></div>
+  <div class="c3"><b>Materials and construction</b><span>Flooring, ceilings, partitions, joinery, finishes and how they are built and specified.</span></div>
+  <div class="c4"><b>Services</b><span>Lighting, electrical layouts, plumbing, HVAC basics, acoustics and fire safety, so your design works with engineers.</span></div>
+  <div class="c5"><b>History and theory</b><span>Design movements, styles, colour theory, ergonomics and anthropometrics.</span></div>
+  <div><b>Professional practice</b><span>Estimation, tender documents, contracts, client handling, site supervision and internships.</span></div>
+</div>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/106-aigenerated-illustration-of-a-materialselection.webp" alt="AI-generated illustration of a material-selection studio exercise." loading="lazy" decoding="async"></div><figcaption>AI-generated illustration of a material-selection studio exercise.</figcaption></figure>
+
+<p class="note">Autodesk education access is eligibility-based and restricted to educational purposes. See the <a href="https://www.autodesk.com/company/educational-purposes">official terms</a>; training enrolment alone should not be taken as proof of eligibility.</p><h2 id="software">The Software Every Course Should Teach</h2>
+<p>Software is where courses differ most, and where employers test hardest. A good course should leave you confident in:</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Tool</th><th>Used for</th><th>When to learn it</th></tr></thead>
+  <tbody>
+    <tr><td>AutoCAD</td><td>2D plans, furniture layouts, ceiling plans, elevations, details</td><td>First year</td></tr>
+    <tr><td>SketchUp</td><td>Quick 3D design and client presentations</td><td>First or second year</td></tr>
+    <tr><td>A renderer (Enscape, D5, V-Ray, Twinmotion)</td><td>Photo-real images and walkthroughs</td><td>Second year onwards</td></tr>
+    <tr><td>Photoshop and a layout tool</td><td>Presentation boards and the portfolio</td><td>Alongside studio work</td></tr>
+    <tr><td>Revit (BIM)</td><td>Coordinated drawing sets and schedules on larger projects</td><td>Final years or after graduating</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Students can use Autodesk software, including AutoCAD and Revit, free for learning through Autodesk's education plan. If your course does not cover BIM, it is worth adding later, especially for larger commercial and Gulf projects; Augmintech's PG Program in BIM Architecture is one structured option for that step.</p>
+
+<h2 id="fees">What Interior Design Courses Cost</h2>
+<p>Fees depend far more on the type of institute than on the course name. Here are real published examples for 2026:</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Institute and course</th><th>Published fee</th><th>About, full course</th></tr></thead>
+  <tbody>
+    <tr><td>Govt Polytechnic Ghaziabad, Diploma (3 yrs)</td><td class="m">₹33,918 total</td><td class="m">₹0.34 lakh</td></tr>
+    <tr><td>Pillai University, BID (4 yrs)</td><td class="m">~₹1.5 lakh/yr</td><td class="m">~₹6 lakh</td></tr>
+    <tr><td>DIT University, B.Des Interior (4 yrs)</td><td class="m">₹2.07–2.43 lakh/yr</td><td class="m">~₹8.9 lakh</td></tr>
+    <tr><td>NID, M.Des Furniture and Interior (2.5 yrs)</td><td class="m">₹11.50 lakh total</td><td class="m">₹11.5 lakh</td></tr>
+    <tr><td>NID, B.Des Furniture and Interior (4 yrs)</td><td class="m">₹15.83 lakh total</td><td class="m">₹15.8 lakh</td></tr>
+    <tr><td>Pearl Academy, B.Des Interior Arch. Design (4 yrs)</td><td class="m">₹7.32 lakh/yr + ₹85,000 once</td><td class="m">~₹30.14 lakh</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">"About" totals are our arithmetic from the published yearly figures, before annual fee increases, hostel, travel, laptop and materials. Pearl Academy's page lists more than one fee table without naming the campus; we used the higher listing.</p>
+<p>Budget too for a capable laptop, software after your student licences end, printing, model-making materials and site visits. We break these down in our full guide to interior design course fees.</p>
+
+<h2 id="careers">Career Paths After an Interior Design Course</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Role</th><th>What you do</th><th>Skills that matter most</th></tr></thead>
+  <tbody>
+    <tr><td>Junior interior designer</td><td>Layouts, drawings, material selection, client presentations under a senior</td><td>AutoCAD, SketchUp, materials knowledge</td></tr>
+    <tr><td>3D visualiser</td><td>Renders and walkthroughs for designers and developers</td><td>SketchUp or 3ds Max, a renderer, Photoshop</td></tr>
+    <tr><td>Draughtsperson / working drawings</td><td>Detailed plans, elevations, ceiling plans and joinery details</td><td>AutoCAD, Revit, construction knowledge</td></tr>
+    <tr><td>Site supervisor / project coordinator</td><td>Executes designs on site, coordinates contractors and vendors</td><td>Reading drawings, materials, scheduling</td></tr>
+    <tr><td>Modular kitchen / wardrobe designer</td><td>Designs and sells modular systems for manufacturers and retailers</td><td>Kitchen planning, joinery, sales software</td></tr>
+    <tr><td>Commercial / retail / hospitality designer</td><td>Offices, shops, restaurants and hotels, often in larger firms</td><td>Codes, services coordination, BIM</td></tr>
+    <tr><td>BIM modeller for interiors</td><td>Models interiors in Revit for coordinated drawing sets</td><td>Revit, drawing standards, coordination</td></tr>
+    <tr><td>Furniture, lighting or set designer</td><td>Specialist product or production work</td><td>Specialist studio work, fabrication knowledge</td></tr>
+    <tr><td>Own practice</td><td>Runs projects for clients end to end</td><td>All of the above plus business and client skills</td></tr>
+  </tbody>
+</table>
+</div>
+<p>For pay at each level, see our guide to <a href="https://augmintech.com/interior-designer-salary/">interior designer salaries</a> in India and the Gulf.</p>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/106-sitevisit-checklist-what-a-learner.webp" alt="Site-visit checklist: what a learner should observe and record." loading="lazy" decoding="async"></div><figcaption>Site-visit checklist: what a learner should observe and record.</figcaption></figure>
+
+<h2 id="regulation">Do Interior Designers Need a Licence in India?</h2>
+<p>No. Unlike architects, whose title is protected under the Architects Act 1972, there is no national statutory licensing body for interior designers in India, and the title is not legally protected. The Institute of Indian Interior Designers (IIID), founded in 1972, is a voluntary professional society with a code of conduct; membership is an affiliation, not a legal licence. One important limit: work that affects structure or needs statutory approval must be designed and certified by a licensed architect or structural engineer.</p>
+<p>This has a practical consequence for students. Because anyone can call themselves an interior designer, employers judge you on your portfolio, drawings and software skills, and on the reputation of where you studied.</p>
+
+<h2 id="course-output">What a Useful First Project Should Teach</h2><p>Ask a course provider to walk through one compact residential room from measured brief to issued drawings. The learning should connect decisions: why the furniture fits, how the ceiling works, what each finish code means and how the cost follows the specification.</p><ol><li><strong>Understand the brief:</strong> record users, activities, existing services and budget assumptions before selecting a style.</li><li><strong>Test the layout:</strong> compare two options using real furniture sizes, door swings and circulation. Explain why one option is stronger.</li><li><strong>Document the solution:</strong> produce a furniture plan, ceiling plan, internal elevation, finish schedule and one joinery detail.</li><li><strong>Revise after feedback:</strong> record what changed and recheck every affected drawing. A polished render alone does not prove coordination.</li></ol><p>For software training, ask to see the editable files as well as final images. A learner should be able to explain layers and plotting in AutoCAD, groups and components in SketchUp, or rooms, views and schedules in Revit. A practical assessment should test those decisions, not just whether the learner can repeat commands.</p><h3>Before Paying an Admission Deposit</h3><p>Obtain the exact qualification name, awarding institution, entry requirements, full fee schedule, refund terms and weekly timetable in writing. Ask which licences and computer specifications are required. Compare feedback hours and assessed project work alongside the programme duration. Confirm that the qualification fits your intended next step, particularly if you plan further study.</p><h2 id="choose">How to Choose the Right Course: 10 Questions to Ask</h2>
+<div class="chk">
+  <div><span><b>Is it recognised?</b> Check the university's UGC status, or AICTE approval for polytechnic diplomas, before you apply.</span></div>
+  <div><span><b>Are admissions open?</b> Some well-known programmes have paused intake, as CEPT's BID has.</span></div>
+  <div><span><b>Who teaches?</b> Look for practising designers and architects among the faculty, not only full-time lecturers.</span></div>
+  <div><span><b>How much studio time?</b> Ask how many hours a week go to design studio and drawing.</span></div>
+  <div><span><b>Which software, and how deeply?</b> AutoCAD, SketchUp and rendering at minimum; ask whether Revit is taught.</span></div>
+  <div><span><b>Is there an internship?</b> A structured internship of at least six to eight weeks is common in good programmes.</span></div>
+  <div><span><b>Can you see student work?</b> Ask for recent final-year portfolios; they show what the course really produces.</span></div>
+  <div><span><b>Where do graduates work?</b> Ask for a list of firms that hired last year's batch.</span></div>
+  <div><span><b>What is the full cost?</b> Tuition plus one-time fees, hostel, materials, software and annual increases.</span></div>
+  <div><span><b>Does it fit your next step?</b> If you may want a master's later, check that the degree meets those entry rules (NID's M.Des, for example, asks for a four-year bachelor's).</span></div>
+</div>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/106-original-illustrative-teaching-sheet-not.webp" alt="Original illustrative teaching sheet, not a student submission or construction drawing." loading="lazy" decoding="async"></div><figcaption>Original illustrative teaching sheet, not a student submission or construction drawing.</figcaption></figure>
+
+<h2 id="paths">Which Course Fits You?</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Your situation</th><th>Suggested route</th></tr></thead>
+  <tbody>
+    <tr><td>Class 12, want a full design career</td><td>B.Des or B.Sc/BID; prepare for design aptitude tests</td></tr>
+    <tr><td>Class 10, want an affordable practical route</td><td>Government polytechnic diploma, then a degree later if possible</td></tr>
+    <tr><td>Graduate from another field</td><td>One- to two-year diploma or a recognised master's that accepts any bachelor's</td></tr>
+    <tr><td>Working in interiors without formal training</td><td>Software certificate now, diploma or degree part-time if you need the credential</td></tr>
+    <tr><td>Architect or interior graduate wanting to specialise</td><td>M.Des, or a focused course in BIM, lighting or visualisation</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="gulf">Studying Interior Design With a Gulf Career in Mind</h2>
+<p>Many Indian interior designers move to Dubai, Abu Dhabi, Doha or Riyadh, where hotel, retail and office fit-outs are a large part of the work. Employers there typically look for strong working drawings, fit-out detailing and software skills. Larger projects are increasingly BIM-led: since 1 January 2024, Dubai has required BIM model submissions in IFC format for building permits on larger buildings, as summarised on Autodesk's Dubai BIM mandate page. If the Gulf is your goal, choose a course with solid technical drawing, and add Revit before you apply.</p>
+
+<div class="cta cta-green">
+  <div><h3>Planning Beyond Your First Course?</h3><p>Design courses build your eye; BIM builds the coordinated drawings larger projects demand. Augmintech's PG Program in BIM Architecture is a structured way to add it. Check the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-green">See the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">Which interior design course is best after Class 12?</div><div class="faq-a">For a full design career, a bachelor's degree: a four-year B.Des or a three- or four-year B.Sc or BID. Design schools such as NID admit through an aptitude test; many universities admit on merit or their own test.</div></div>
+<div class="faq-item"><div class="faq-q">How long is an interior design course?</div><div class="faq-a">Certificates take a few weeks to about a year, diplomas one to three years, bachelor's degrees three to five years, and master's degrees two to two-and-a-half years.</div></div>
+<div class="faq-item"><div class="faq-q">What are interior design course fees in India?</div><div class="faq-a">From about ₹34,000 for a full government polytechnic diploma, to around ₹6–9 lakh for many private university degrees, ₹15.8 lakh for NID's four-year B.Des and over ₹20 lakh at some private design schools, based on published 2026 figures.</div></div>
+<div class="faq-item"><div class="faq-q">Can I do interior design without maths or science?</div><div class="faq-a">Often yes: many B.Des and B.Sc programmes accept Class 12 from any stream. Some programmes set subject requirements; CEPT's former BID, for example, asked for Physics and Mathematics. Always check each institute's rules.</div></div>
+<div class="faq-item"><div class="faq-q">Is a licence needed to work as an interior designer in India?</div><div class="faq-a">No. There is no statutory licence and the title is not protected. IIID membership is voluntary. Structural or statutory work must be certified by a licensed architect or structural engineer.</div></div>
+<div class="faq-item"><div class="faq-q">Is an online interior design course worth it?</div><div class="faq-a">For software skills, often yes. For a full design education, online courses rarely replace studio work, model making, site visits and internships. Use them to add skills, not as your only qualification.</div></div>
+<div class="faq-item"><div class="faq-q">Can an interior designer learn Revit?</div><div class="faq-a">Yes, and it is increasingly useful for larger commercial and Gulf projects, where coordinated drawing sets and schedules matter. Students can use Revit free for learning through Autodesk's education plan.</div></div>
+
+<p class="note">Pearl’s <a href="https://www.pearlacademy.com/programs/bachelors-degree/interiors">current interiors programme page</a> describes a four-year degree. Using ₹7,32,200 per year plus ₹85,000 once gives an illustrative ₹30,13,800 total before fee increases and other charges. Confirm the exact campus and intake quotation.</p><h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Careers360</strong>: <a href="https://www.careers360.com/university/national-institute-of-design-ahmedabad/bdes-furniture-and-interior-design-course" target="_blank" rel="noopener">NID B.Des Furniture and Interior Design</a>; <a href="https://www.careers360.com/university/national-institute-of-design-ahmedabad/mdes-furniture-and-interior-design-course" target="_blank" rel="noopener">NID M.Des Furniture and Interior Design</a>; <a href="https://www.careers360.com/colleges/government-polytechnic-ghaziabad/diploma-in-interior-decoration-course" target="_blank" rel="noopener">Government Polytechnic Ghaziabad diploma</a>; <a href="https://www.careers360.com/university/cept-university-ahmedabad/bid-course" target="_blank" rel="noopener">CEPT BID</a>.</li>
+  <li><strong>CEPT University</strong>, <a href="https://cept.ac.in/programs/bachelors-in-interior-design" target="_blank" rel="noopener">Bachelor's in Interior Design</a>.</li>
+  <li><strong>Pearl Academy</strong>, <a href="https://www.pearlacademy.com/admissions/fee-structure" target="_blank" rel="noopener">Fee structure</a>; <a href="https://www.pearlacademy.com/faqs/what-is-pearl-academy-interior-design-fees" target="_blank" rel="noopener">Interior design programmes</a>.</li>
+  <li><strong>DIT University</strong>, <a href="https://www.dituniversity.edu.in/assets/frontend/course-structure/BDes-ID-Fee-Structure-2026.pdf" target="_blank" rel="noopener">B.Des Interior Design fee structure 2026</a>.</li>
+  <li><strong>Pillai University</strong>, <a href="https://pillai.edu.in/programs/bachelor-of-interior-design" target="_blank" rel="noopener">Bachelor of Interior Design</a>.</li>
+  <li><strong>B. K. Birla College (University of Mumbai)</strong>, <a href="https://bkbirlacollegekalyan.com/files/criterion_link/file/1697/1.2.1%20B.Sc.%20(Hons.)%20-%20Interior%20Design%20c.pdf" target="_blank" rel="noopener">B.Sc (Hons) Interior Design course structure</a>.</li>
+  <li><strong>Studio Matrx</strong>, <a href="https://www.studiomatrx.org/students/interior-professional-practice/role-of-the-interior-designer" target="_blank" rel="noopener">Role of the interior designer</a> (July 2026).</li>
+  <li><strong>Autodesk</strong>, <a href="https://www.autodesk.com:443/education/home" target="_blank" rel="noopener">Education plan</a>; <a href="https://boards.autodesk.com/dubai-bim-mandate" target="_blank" rel="noopener">Dubai Municipality BIM mandate</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 8 November 2026. Fees, durations and admission dates change every year; check each institute's official notice before you apply.</p>
+</div>

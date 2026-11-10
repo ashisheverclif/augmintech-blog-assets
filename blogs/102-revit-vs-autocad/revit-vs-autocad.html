@@ -1,0 +1,403 @@
+<style>
+#aug-revit-vs-autocad{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-revit-vs-autocad *,#aug-revit-vs-autocad *::before,#aug-revit-vs-autocad *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-revit-vs-autocad{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-revit-vs-autocad.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-revit-vs-autocad .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-revit-vs-autocad .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-revit-vs-autocad .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-revit-vs-autocad .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-revit-vs-autocad .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-revit-vs-autocad .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-revit-vs-autocad h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-revit-vs-autocad h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-revit-vs-autocad p{margin-bottom:.9rem;font-size:16px;}
+#aug-revit-vs-autocad a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-revit-vs-autocad a:hover{border-color:var(--brand);}
+#aug-revit-vs-autocad hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-revit-vs-autocad .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-revit-vs-autocad .chart svg{width:100%;height:auto;display:block;}
+#aug-revit-vs-autocad .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-revit-vs-autocad .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-revit-vs-autocad .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-revit-vs-autocad .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-revit-vs-autocad .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-revit-vs-autocad .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-revit-vs-autocad .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-revit-vs-autocad table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-revit-vs-autocad caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-revit-vs-autocad thead tr{background:var(--slate);color:#fff;}
+#aug-revit-vs-autocad thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-revit-vs-autocad tbody tr:nth-child(even){background:var(--surface);}
+#aug-revit-vs-autocad tbody tr:hover{background:var(--brand-lite);}
+#aug-revit-vs-autocad td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-revit-vs-autocad td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-revit-vs-autocad tbody tr.hl{background:var(--green-lite)!important;}
+#aug-revit-vs-autocad tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-revit-vs-autocad ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-revit-vs-autocad ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-revit-vs-autocad .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-revit-vs-autocad .cta-green{background:var(--slate);}
+#aug-revit-vs-autocad .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-revit-vs-autocad .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-revit-vs-autocad .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-revit-vs-autocad .cta-btn-blue{color:var(--brand);}#aug-revit-vs-autocad .cta-btn-green{color:var(--slate);}
+#aug-revit-vs-autocad figure{margin:1.5rem 0;}
+#aug-revit-vs-autocad figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-revit-vs-autocad figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-revit-vs-autocad dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-revit-vs-autocad dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-revit-vs-autocad dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-revit-vs-autocad .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-revit-vs-autocad .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-revit-vs-autocad .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-revit-vs-autocad .srcs{list-style:none;padding:0;}
+#aug-revit-vs-autocad .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-revit-vs-autocad .srcs li:last-child{border-bottom:none;}
+
+/* ===== answer ===== */#aug-revit-vs-autocad .vs102{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:1.3rem 0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-revit-vs-autocad .vs102>div{padding:.95rem 1.05rem;font-size:14.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-revit-vs-autocad .vs102 .a{background:#FDF3EF;} #aug-revit-vs-autocad .vs102 .r{background:#EEF4FA;border-left:1px solid var(--border);}
+#aug-revit-vs-autocad .vs102 b{display:block;font-family:var(--display);font-size:19px;margin-bottom:.2rem;}
+#aug-revit-vs-autocad .vs102 .a b{color:#B5371B;} #aug-revit-vs-autocad .vs102 .r b{color:#1F4A6E;}
+#aug-revit-vs-autocad .vs102 i{display:block;font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem;}
+
+/* ===== table ===== */#aug-revit-vs-autocad .cmp102 th:nth-child(2){background:#B5371B;} #aug-revit-vs-autocad .cmp102 th:nth-child(3){background:#1F4A6E;}
+#aug-revit-vs-autocad .cmp102 td:first-child{font-weight:700;white-space:nowrap;}
+
+/* ===== figures ===== */#aug-revit-vs-autocad .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-revit-vs-autocad .dfig svg{display:block;width:100%;height:auto;}
+#aug-revit-vs-autocad .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-revit-vs-autocad .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-revit-vs-autocad .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-revit-vs-autocad figure.pf{margin:1.2rem 0;} #aug-revit-vs-autocad figure.pf figcaption{font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;font-family:var(--body);}
+#aug-revit-vs-autocad .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-revit-vs-autocad .pair figure{margin:0;}
+
+/* ===== change test ===== */#aug-revit-vs-autocad .chg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-revit-vs-autocad .chg>div{border-radius:var(--radius);padding:.9rem 1rem;border:1px solid var(--border);background:#fff;}
+#aug-revit-vs-autocad .chg h3{margin:0 0 .5rem;font-size:16px;display:flex;justify-content:space-between;align-items:baseline;}
+#aug-revit-vs-autocad .chg h3 span{font-family:var(--mono);font-size:12px;font-weight:700;padding:3px 9px;border-radius:12px;}
+#aug-revit-vs-autocad .chg .a h3{color:#B5371B;} #aug-revit-vs-autocad .chg .a h3 span{background:#FBE7DF;color:#9A3B1E;}
+#aug-revit-vs-autocad .chg .r h3{color:#1F4A6E;} #aug-revit-vs-autocad .chg .r h3 span{background:#E3EEF8;color:#1F4A6E;}
+#aug-revit-vs-autocad .chg ul{list-style:none;margin:0;padding:0;}
+#aug-revit-vs-autocad .chg li{padding:.35rem 0 .35rem 1.7rem;position:relative;font-size:14px;line-height:1.5;color:var(--ink-mid);border-bottom:1px dashed var(--border);}
+#aug-revit-vs-autocad .chg li:last-child{border-bottom:none;}
+#aug-revit-vs-autocad .chg .a li::before{content:"✎";position:absolute;left:.3rem;color:#B5371B;}
+#aug-revit-vs-autocad .chg .r li::before{content:"↻";position:absolute;left:.3rem;color:#1F4A6E;font-weight:700;}
+#aug-revit-vs-autocad .chg .r li.first::before{content:"✎";}
+
+/* ===== collab ===== */#aug-revit-vs-autocad .flow3{display:flex;align-items:stretch;gap:8px;margin:1.1rem 0;flex-wrap:wrap;}
+#aug-revit-vs-autocad .flow3 div{flex:1 1 150px;border-radius:var(--radius-sm);padding:.7rem .8rem;background:var(--surface);font-size:13.5px;line-height:1.5;color:var(--ink-mid);}
+#aug-revit-vs-autocad .flow3 b{display:block;font-family:var(--mono);font-size:12px;color:var(--ink);margin-bottom:.2rem;}
+#aug-revit-vs-autocad .price td:last-child{font-family:var(--mono);text-align:right;white-space:nowrap;}
+#aug-revit-vs-autocad .price td:first-child{font-weight:700;}
+
+/* ===== decision ===== */#aug-revit-vs-autocad .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-revit-vs-autocad .pick>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-revit-vs-autocad .pick .a{background:#FDF3EF;border:1px solid #F0C9BB;} #aug-revit-vs-autocad .pick .r{background:#EEF4FA;border:1px solid #CFDDEB;}
+#aug-revit-vs-autocad .pick h3{margin:0 0 .4rem;font-size:15.5px;} #aug-revit-vs-autocad .pick .a h3{color:#B5371B;} #aug-revit-vs-autocad .pick .r h3{color:#1F4A6E;}
+#aug-revit-vs-autocad .pick ul{margin:0;padding-left:1.1rem;} #aug-revit-vs-autocad .pick li{margin-bottom:.3rem;}
+#aug-revit-vs-autocad .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-revit-vs-autocad .alert{border-left:4px solid var(--warn);background:#FBF4E8;border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.8rem 1rem;margin:1rem 0;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-revit-vs-autocad .alert b{color:var(--warn);}
+
+#aug-revit-vs-autocad .set102 table{font-size:13.5px;} #aug-revit-vs-autocad .set102 td:first-child{font-weight:700;color:var(--ink);}
+#aug-revit-vs-autocad .set102 td:nth-child(2){color:#9A3B1E;} #aug-revit-vs-autocad .set102 td:nth-child(3){color:#1F4A6E;}
+#aug-revit-vs-autocad .hw{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-revit-vs-autocad .hw>div{border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem;background:#fff;}
+#aug-revit-vs-autocad .hw h3{margin:0 0 .5rem;font-size:16px;} #aug-revit-vs-autocad .hw dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14px;}
+#aug-revit-vs-autocad .hw dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:2px;} #aug-revit-vs-autocad .hw dd{margin:0;color:var(--ink);}
+#aug-revit-vs-autocad .unl{list-style:none;padding:0;margin:1.2rem 0;counter-reset:u;}
+#aug-revit-vs-autocad .unl li{counter-increment:u;display:grid;grid-template-columns:2.2rem 1fr;gap:.2rem .8rem;padding:.75rem 0;border-top:1px solid var(--border);font-size:15px;line-height:1.6;}
+#aug-revit-vs-autocad .unl li:first-child{border-top:none;}
+#aug-revit-vs-autocad .unl li::before{content:counter(u,decimal-leading-zero);font-family:var(--mono);font-weight:700;color:var(--coral);font-size:14px;padding-top:2px;}
+#aug-revit-vs-autocad .unl b{color:var(--ink);}
+#aug-revit-vs-autocad .skl{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-revit-vs-autocad .skl>div{border-radius:var(--radius);padding:.9rem 1rem;background:var(--surface);border:1px solid var(--border);}
+#aug-revit-vs-autocad .skl h3{margin:0 0 .5rem;font-size:16px;} #aug-revit-vs-autocad .skl ol{margin:0;padding-left:1.2rem;font-size:14.5px;line-height:1.6;}
+
+#aug-revit-vs-autocad .lt102 table{font-size:13.5px;} #aug-revit-vs-autocad .lt102 td:first-child{font-weight:700;color:var(--ink);}
+@media(max-width:640px){
+  #aug-revit-vs-autocad .hw,#aug-revit-vs-autocad .skl{grid-template-columns:1fr;} #aug-revit-vs-autocad .set102 table{min-width:600px;}
+  #aug-revit-vs-autocad .vs102,#aug-revit-vs-autocad .pair,#aug-revit-vs-autocad .chg,#aug-revit-vs-autocad .pick{grid-template-columns:1fr;} #aug-revit-vs-autocad .vs102 .r{border-left:none;border-top:1px solid var(--border);}
+  #aug-revit-vs-autocad .cmp102 table{min-width:560px;}
+  #aug-revit-vs-autocad .dfig.wide{overflow-x:auto;} #aug-revit-vs-autocad .dfig.wide svg{min-width:620px;}
+  #aug-revit-vs-autocad .cta{flex-direction:column;align-items:flex-start;}
+  #aug-revit-vs-autocad .cta>div{max-width:100%;} #aug-revit-vs-autocad .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-revit-vs-autocad .cta>div:last-child .cta-btn{margin-left:0;white-space:normal;text-align:center;line-height:1.5;}
+}
+
+/* Completed educational visuals */#aug-revit-vs-autocad .ph{height:auto!important;aspect-ratio:auto!important;min-height:0!important;background:#f3f7fa!important;padding:10px!important;overflow:hidden}#aug-revit-vs-autocad .ph::before,#aug-revit-vs-autocad .ph::after{display:none!important}#aug-revit-vs-autocad .ph img{position:static!important;display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;filter:none!important;opacity:1!important;cursor:zoom-in}#aug-revit-vs-autocad .pf figcaption,#aug-revit-vs-autocad .dfig figcaption{font-family:var(--body);font-size:13px;line-height:1.65;overflow-wrap:anywhere}#aug-revit-vs-autocad .pair{grid-template-columns:1fr!important}#aug-revit-vs-autocad .interface-key{padding:18px;margin:0 0 24px;background:#f3f7fb;border:1px solid #dce6ee;border-radius:8px}#aug-revit-vs-autocad .interface-key h4{margin-bottom:12px}#aug-revit-vs-autocad .interface-key ol{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;padding:0;list-style:none}#aug-revit-vs-autocad .interface-key li{font-size:13px;display:flex;gap:9px;align-items:flex-start;line-height:1.5}#aug-revit-vs-autocad .interface-key li span{min-width:23px;background:#d00079;border-radius:50%;color:#fff;text-align:center;font-size:12px}#aug-revit-vs-autocad .interface-key p{font-size:13px;margin-top:15px}#aug-revit-vs-autocad .brand-strip{display:flex;flex-wrap:wrap;gap:12px 20px;padding:16px 0;margin:10px 0 20px;border-bottom:1px solid #e0e7ed}#aug-revit-vs-autocad .brand-strip span{display:flex;align-items:center;gap:8px;font-size:13px}#aug-revit-vs-autocad .brand-strip img,#aug-revit-vs-autocad .software-logo{width:32px;height:32px;object-fit:contain;vertical-align:middle}#aug-revit-vs-autocad .software-logo{margin-right:9px}#aug-revit-vs-autocad .practice-box{background:#f4f8fc;border-left:3px solid #0f4c81;padding:20px;margin:24px 0}#aug-revit-vs-autocad .practice-box p:last-child{margin-bottom:0}#aug-revit-vs-autocad.blog{overflow-wrap:break-word}#aug-revit-vs-autocad .tbl-wrap{overflow-x:auto}#aug-revit-vs-autocad .tbl-wrap table{min-width:620px}#aug-revit-vs-autocad .cta-btn{white-space:normal!important;text-align:center}#aug-revit-vs-autocad .dfig svg{max-width:100%;height:auto;cursor:zoom-in}#aug-revit-vs-autocad .wide svg{min-width:0!important}#aug-revit-vs-autocad dialog.img-zoom{border:0;padding:16px;border-radius:10px;width:96vw;max-width:1600px;max-height:95vh;margin:auto}#aug-revit-vs-autocad dialog.img-zoom::backdrop{background:#102132dc}#aug-revit-vs-autocad dialog.img-zoom img{display:block;width:100%;height:auto}#aug-revit-vs-autocad dialog.img-zoom button{display:block;margin:0 0 12px auto;background:#173e58;color:#fff;border:0;padding:9px 18px;border-radius:6px;cursor:pointer}@media(max-width:600px){#aug-revit-vs-autocad .interface-key ol{grid-template-columns:1fr}#aug-revit-vs-autocad.blog{padding-left:18px!important;padding-right:18px!important}#aug-revit-vs-autocad .ph{padding:5px!important}#aug-revit-vs-autocad .steps,#aug-revit-vs-autocad .grid3,#aug-revit-vs-autocad .gq3{grid-template-columns:1fr!important}}
+
+/* ===== Augmintech theme overrides ===== */
+#aug-revit-vs-autocad.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-revit-vs-autocad h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-revit-vs-autocad a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-revit-vs-autocad a:hover{color:#18d104;}
+#aug-revit-vs-autocad .cta{background:#1a1a1a;}
+#aug-revit-vs-autocad .cta a.cta-btn{text-decoration:none;}
+#aug-revit-vs-autocad .cta-btn-blue{background:#18d104;color:#000;}
+#aug-revit-vs-autocad .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-revit-vs-autocad [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-revit-vs-autocad">
+
+<div class="brand-strip" aria-label="Software featured"><span><img src="https://augmintech.com/wp-content/uploads/2026/11/102-autocad-logo.webp" alt="AutoCAD logo">AutoCAD</span><span><img src="https://augmintech.com/wp-content/uploads/2026/11/102-revit-logo.webp" alt="Revit logo">Revit</span></div>
+
+
+<p><strong><a href="https://augmintech.com/autocad-download/">AutoCAD</a> is drafting software: you draw each plan, elevation and section as separate lines. Revit is <a href="https://augmintech.com/what-is-bim-software/">BIM software</a>: you build one model of walls, floors and doors, and model-based views are generated from it, supplemented by drafting details and annotations.</strong> That one difference decides how fast you can produce drawings, how safely you can make changes, and what kind of projects each tool suits. Here is the comparison, side by side.</p>
+
+<div class="vs102">
+  <div class="a"><i>CAD · drafting</i><b>AutoCAD</b>Lines, arcs, blocks and layers in 2D (and 3D). Fast, flexible and universal. Every view is drawn and updated by hand.</div>
+  <div class="r"><i>BIM · modelling</i><b>Revit</b>Walls, doors, floors and rooms as intelligent objects in one model. Plans, sections, elevations and schedules all come from that model.</div>
+</div>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>AutoCAD draws lines; Revit models building objects</strong> that carry height, materials and other data.</li>
+  <li><strong>In Revit, a change made once updates every plan, section, elevation and schedule;</strong> in AutoCAD you edit each drawing.</li>
+  <li><strong>AutoCAD is quicker to learn and better for small projects and details;</strong> Revit has a steeper learning curve.</li>
+  <li><strong>Revit wins on larger projects</strong> where many people work on one model and schedules must stay accurate.</li>
+  <li><strong>Revit costs more:</strong> US$3,005 a year against US$2,095 for AutoCAD at 2026 US list prices.</li>
+  <li><strong>Most offices use both:</strong> Revit for the model and set, AutoCAD for details and DWG exchange.</li>
+</ul>
+
+<h2 id="at-a-glance">Revit vs AutoCAD at a Glance</h2>
+<div class="tbl-wrap cmp102">
+<table>
+  <thead><tr><th></th><th>AutoCAD</th><th>Revit</th></tr></thead>
+  <tbody>
+    <tr><td>What you work with</td><td>Lines, arcs, polylines, blocks, layers</td><td>Walls, floors, roofs, doors, windows, rooms (families)</td></tr>
+    <tr><td>Views</td><td>Each plan, elevation and section drawn separately</td><td>All views generated from one 3D model</td></tr>
+    <tr><td>Design changes</td><td>Edit every affected drawing by hand</td><td>Change once; views, dimensions and schedules update</td></tr>
+    <tr><td>Schedules</td><td>Typed tables or block attributes</td><td>Live schedules read from the model</td></tr>
+    <tr><td>Teamwork</td><td>Xrefs between separate drawing files</td><td>Worksharing: several people in one central model</td></tr>
+    <tr><td>File format</td><td>DWG (also DXF)</td><td>RVT; exports DWG and IFC</td></tr>
+    <tr><td>Learning curve</td><td>Gentler</td><td>Steeper</td></tr>
+    <tr><td>US list price (2026)</td><td>US$2,095/yr (US$540 for LT)</td><td>US$3,005/yr</td></tr>
+    <tr><td>Best for</td><td>Small projects, details, site and shop drawings</td><td>Large, coordinated, data-rich projects</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Prices: Autodesk US list prices before tax, as reported by Render a House (September 2026). Workflow differences: Microsol Resources; Revit's change propagation: Wikipedia's Revit article.</p>
+
+<div class="cta">
+  <div><h3>Move from CAD to BIM</h3><p>Augmintech's PG Program in BIM Architecture teaches building information modelling for architecture, so you can produce coordinated drawing sets from one model. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">Explore the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="modeling">Modeling: Lines vs Objects</h2>
+<p>In AutoCAD, a wall on a plan is usually two parallel lines on a wall layer. AutoCAD knows they are lines, not that they are a wall, so it has no idea how tall the wall is, what it is made of, or which window sits in it. In Revit, the same wall is one object with a type, a height, its material layers and parameters such as a fire rating, and it hosts the window placed in it.</p>
+<figure class="dfig wide">
+  <svg viewBox="0 0 900 330" role="img" aria-label="In AutoCAD a wall is two lines on a layer; in Revit a wall is one object with type, height, materials and fire rating that appears in every view"><rect width="900" height="330" fill="#fff"/><text x="30" y="30" font-size="15" text-anchor="start" fill="#B5371B" font-weight="700" font-family="sans-serif">AUTOCAD: a wall is lines</text><text x="470" y="30" font-size="15" text-anchor="start" fill="#1F4A6E" font-weight="700" font-family="sans-serif">REVIT: a wall is an object</text><line x1="40" y1="90" x2="360" y2="90" stroke="#1E2833" stroke-width="2"/><rect x="36" y="86" width="8" height="8" fill="#2B6CB0"/><rect x="196" y="86" width="8" height="8" fill="#2B6CB0"/><rect x="356" y="86" width="8" height="8" fill="#2B6CB0"/><line x1="40" y1="112" x2="360" y2="112" stroke="#1E2833" stroke-width="2"/><rect x="36" y="108" width="8" height="8" fill="#2B6CB0"/><rect x="196" y="108" width="8" height="8" fill="#2B6CB0"/><rect x="356" y="108" width="8" height="8" fill="#2B6CB0"/><path d="M40 112 L40 90" stroke="#1E2833" stroke-width="2"/><path d="M360 112 L360 90" stroke="#1E2833" stroke-width="2"/><rect x="40" y="140" width="320" height="158" rx="6" fill="#FDF3EF" stroke="#F0C9BB"/><text x="54" y="164" font-size="12" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Layer</text><text x="170" y="164" font-size="12" text-anchor="start" fill="#56616D" font-weight="400" font-family="monospace">A-WALL</text><text x="54" y="188" font-size="12" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Colour</text><text x="170" y="188" font-size="12" text-anchor="start" fill="#56616D" font-weight="400" font-family="monospace">ByLayer</text><text x="54" y="212" font-size="12" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Linetype</text><text x="170" y="212" font-size="12" text-anchor="start" fill="#56616D" font-weight="400" font-family="monospace">Continuous</text><text x="54" y="236" font-size="12" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Height</text><text x="170" y="236" font-size="12" text-anchor="start" fill="#9A3B1E" font-weight="400" font-family="monospace">not stored</text><text x="54" y="260" font-size="12" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Material</text><text x="170" y="260" font-size="12" text-anchor="start" fill="#9A3B1E" font-weight="400" font-family="monospace">not stored</text><text x="54" y="284" font-size="12" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Fire rating</text><text x="170" y="284" font-size="12" text-anchor="start" fill="#9A3B1E" font-weight="400" font-family="monospace">a text note, if any</text><polygon points="480,110 760,110 800,85 520,85" fill="#D2CCBF" stroke="#1E2833"/><polygon points="480,110 760,110 760,150 480,150" fill="#E3DED3" stroke="#1E2833"/><polygon points="760,110 800,85 800,125 760,150" fill="#C5BEB0" stroke="#1E2833"/><rect x="560" y="122" width="60" height="28" fill="#DDEBF6" stroke="#1E2833"/><rect x="480" y="170" width="380" height="158" rx="6" fill="#EEF4FA" stroke="#CFDDEB"/><text x="494" y="194" font-size="12" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Type</text><text x="590" y="194" font-size="12" text-anchor="start" fill="#1F4A6E" font-weight="400" font-family="monospace">Basic Wall: 230 Brick</text><text x="494" y="218" font-size="12" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Height</text><text x="590" y="218" font-size="12" text-anchor="start" fill="#1F4A6E" font-weight="400" font-family="monospace">3000 mm, base to level</text><text x="494" y="242" font-size="12" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Layers</text><text x="590" y="242" font-size="12" text-anchor="start" fill="#1F4A6E" font-weight="400" font-family="monospace">plaster | brick | plaster</text><text x="494" y="266" font-size="12" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Fire rating</text><text x="590" y="266" font-size="12" text-anchor="start" fill="#1F4A6E" font-weight="400" font-family="monospace">2 hr (parameter)</text><text x="494" y="290" font-size="12" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Hosts</text><text x="590" y="290" font-size="12" text-anchor="start" fill="#1F4A6E" font-weight="400" font-family="monospace">window W1</text><text x="494" y="314" font-size="12" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Appears in</text><text x="590" y="314" font-size="12" text-anchor="start" fill="#1F4A6E" font-weight="400" font-family="monospace">plan, elevation, section, schedule</text></svg>
+  <figcaption>The same wall in each program. AutoCAD stores geometry on a layer; Revit stores a wall with its data, and shows it in every view. Augmintech diagram.</figcaption>
+</figure>
+<p>AutoCAD can work in 3D, and its Architecture toolset adds wall and door objects, but most offices use AutoCAD for 2D drafting. Revit is designed around the 3D model from the start: its core is a parametric change engine, so changes propagate through model relationships; joined or constrained elements still need review.</p>
+
+<h2 id="documentation">Documentation: Drawings and Schedules</h2>
+<div class="pair">
+  <figure class="pf completed-visual"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/102-autocad-workspace-with-a-furniture.webp" alt="AutoCAD workspace with a furniture floor plan and Count palette" loading="lazy" decoding="async"></div><figcaption>A genuine AutoCAD floor-plan workspace with furniture blocks and the Count palette. This is model space, not a plotted sheet. <a href="https://www.autodesk.com/products/autocad/overview" target="_blank" rel="noopener">Source: Autodesk</a>. Click to enlarge.</figcaption></figure>
+  <figure class="pf completed-visual"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/102-revit-building-model-and-annotated.webp" alt="Revit building model and annotated architectural interface" loading="lazy" decoding="async"></div><figcaption>Autodesk’s architectural Revit workspace example. The numbered key below identifies all 16 interface areas. <a href="https://help.autodesk.com/cloudhelp/2026/ENU/Revit-GetStarted/files/GUID-7793667D-5657-4382-9BEC-F7CB6AC8F53E.htm" target="_blank" rel="noopener">Source: Autodesk</a>. Click to enlarge.</figcaption></figure><div class="interface-key"><h4>Revit interface key</h4><ol><li><span>1</span> Revit Home</li><li><span>2</span> File tab</li><li><span>3</span> Quick Access toolbar</li><li><span>4</span> InfoCenter</li><li><span>5</span> Options Bar</li><li><span>6</span> Type Selector</li><li><span>7</span> Properties palette</li><li><span>8</span> Project Browser</li><li><span>9</span> Status bar</li><li><span>10</span> View Control Bar</li><li><span>11</span> Drawing area</li><li><span>12</span> Ribbon</li><li><span>13</span> Ribbon tabs</li><li><span>14</span> Contextual tab</li><li><span>15</span> Active-tab tools</li><li><span>16</span> Ribbon panels</li></ol><p>Start with Properties (7), Project Browser (8) and the drawing area (11). Names follow Autodesk’s example; layouts vary by release.</p></div>
+</div>
+<p>Both programs produce professional drawing sets with title blocks and sheets. The difference is where the information comes from. In AutoCAD, a door schedule is a table someone typed or built from block attributes, and it is only as accurate as the last person who updated it. In Revit, each view, schedule and dimension is derived from the model's database, so a door schedule reads model elements, subject to its category, phase, filters and populated parameters.</p>
+
+<h2 id="changes">Project Changes: The One-Wall Test</h2>
+<p>Changes are where the two programs differ most. Take a simple client request: move an internal wall 300 mm to make a bedroom bigger.</p>
+<div class="chg">
+  <div class="a"><h3>AutoCAD <span>Several coordinated edits</span></h3><ul><li>Move the wall lines on the floor plan</li><li>Fix the furniture and door positions</li><li>Update the dimensions</li><li>Redraw the wall on the section</li><li>Update the room areas table</li><li>Check the ceiling and electrical plans by hand</li></ul></div>
+  <div class="r"><h3>Revit <span>Model edit + review</span></h3><ul><li class="first">Move the wall once in any view</li><li>Plan, section and 3D update</li><li>Dimensions update</li><li>Room areas and schedules update</li><li>Doors hosted in the wall move with it</li><li>Review ceiling boundaries, hosted fittings and dimensions</li></ul></div>
+</div>
+<p class="note">Illustrative workflow, not a timed test. In practice you still check every sheet in Revit, but you are checking, not redrawing.</p>
+<p>On a single house, the AutoCAD edits take a few minutes. On a hotel with hundreds of rooms and dozens of sheets, the same kind of change, made dozens of times through a project, is where Revit saves the most time and errors.</p>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="example">Same Project, Both Tools: A 2BHK Drawing Set</h2>
+<p>To see the difference on real work, here is how each part of a typical apartment drawing set is produced in each program. This is an illustrative comparison based on standard practice, not a timed test.</p>
+<div class="tbl-wrap set102">
+<table>
+  <thead><tr><th>Deliverable</th><th>In AutoCAD</th><th>In Revit</th></tr></thead>
+  <tbody>
+    <tr><td>Floor plan</td><td>Draw wall lines, insert door and window blocks, hatch</td><td>Place walls, doors and windows; the plan is a view</td></tr>
+    <tr><td>Furniture layout</td><td>Copy the plan file or freeze layers, insert furniture blocks</td><td>Duplicate the plan view and set what it shows; furniture placed once</td></tr>
+    <tr><td>Sections and elevations</td><td>Project lines from the plan and draw each one</td><td>Place a section line or elevation marker; the view is generated</td></tr>
+    <tr><td>Door and window schedule</td><td>Type a table or extract block attributes</td><td>Create a schedule; it fills itself from the model</td></tr>
+    <tr><td>Area statement</td><td>Draw boundary polylines and list areas by hand</td><td>Rooms calculate areas; a room schedule totals them</td></tr>
+    <tr><td>3D view for the client</td><td>Model separately in 3D, or in SketchUp</td><td>Already there: open a 3D view or walkthrough</td></tr>
+    <tr><td>A late revision</td><td>Edit plan, sections, elevations and tables one by one</td><td>Edit the model; check sheets, add a revision cloud</td></tr>
+  </tbody>
+</table>
+</div>
+<p>The pattern is clear. AutoCAD is quick for the first plan, because drawing lines is fast. Revit is slower for the first plan, because you set wall types, levels and families, but every drawing after that costs much less. The more drawings and revisions a project has, the more Revit pays back that set-up time.</p>
+
+<figure class="pf completed-visual"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/102-apartment-revision-checks-in-autocad.webp" alt="Apartment revision checks in AutoCAD and Revit" loading="lazy" decoding="async"></div><figcaption>The same design brief requires different update methods. Both routes still need a reviewed issue package. Click to enlarge.</figcaption></figure>
+
+<h2 id="together">Working Together: DWG, Revit and IFC</h2>
+<p>You rarely have to choose one for life. The two programs work together:</p>
+<div class="flow3">
+  <div><b>DWG into Revit</b>Revit links or imports AutoCAD drawings, such as a survey or site plan. Autodesk recommends linking in most cases, so the file can be reloaded when it changes.</div>
+  <div><b>Revit to DWG</b>Revit views and sheets export to DWG for consultants and contractors who work in AutoCAD.</div>
+  <div><b>Worksharing</b>In Revit, several team members can work on one central model at the same time, over a network or the cloud.</div>
+  <div><b>IFC</b>Revit exports IFC, the open BIM format some authorities, such as Dubai Municipality, require for permit submissions.</div>
+</div>
+
+<h3>Watch the version numbers</h3>
+<p>One practical trap catches many teams. Autodesk's help states that Revit models are not backwards-compatible: once you open and save a model in a newer release, you can no longer open it in an earlier one. If your consultant is on Revit 2025 and you are on 2027, they cannot open your file. Agree on one Revit release for the whole project before modelling starts, and keep backups before any upgrade. AutoCAD is easier here, because a drawing can be saved in an older DWG format for someone on an older version.</p>
+
+<h2 id="toolset">The Middle Ground: AutoCAD's Architecture Toolset</h2>
+<p>Many people do not realise that full AutoCAD (not AutoCAD LT) includes the Architecture toolset. Autodesk describes it as adding more than 8,800 architectural components, placing walls, doors and windows as real construction objects, and automatically generating floor plans, elevations, sections and ceiling grids. Autodesk claims it can raise drafting productivity by up to 61%; that figure comes from studies Autodesk commissioned, comparing basic AutoCAD with the toolsets for experienced users, so treat it as the vendor's own estimate.</p>
+<p>The toolset is a useful step for an AutoCAD office that is not ready for Revit. But it is still drawing-based, not a full BIM model: its project and collaboration workflow differs from Revit's. AutoCAD Architecture does support IFC import and export; exchange settings and recipient requirements still need checking. If your clients or authorities ask for BIM, the toolset does not replace Revit.</p>
+
+<h2 id="cost">Cost and Licences</h2>
+<div class="tbl-wrap price">
+<table>
+  <thead><tr><th>Product</th><th>What you get</th><th>US list price (2026)</th></tr></thead>
+  <tbody>
+    <tr><td>AutoCAD LT</td><td>2D drafting only</td><td>US$540/yr</td></tr>
+    <tr><td>AutoCAD</td><td>2D and 3D, with specialised toolsets such as Architecture</td><td>US$2,095/yr</td></tr>
+    <tr><td>AutoCAD Revit LT Suite</td><td>Revit LT plus AutoCAD LT</td><td>US$680/yr</td></tr>
+    <tr><td>Revit</td><td>Full BIM: architecture, structure and MEP</td><td>US$3,005/yr</td></tr>
+    <tr><td>AEC Collection</td><td>Revit, AutoCAD, 3ds Max and more</td><td>US$3,675/yr</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Render a House, September 2026, from Autodesk's US purchase pages, before tax. In India, an authorised reseller quotes AutoCAD at about ₹17,000 a month before 18% GST (Cloudfy Systems, May 2026). Students and educators can get both programs free for a year through Autodesk's education plan, for learning use only.</p>
+
+<h3>Revit or Revit LT?</h3>
+<p>The AutoCAD Revit LT Suite looks like a bargain at US$680 a year, and for a one- or two-person architecture studio it can be. But Autodesk's own comparison lists several things Revit LT does not include, and some of them matter a lot:</p>
+<div class="tbl-wrap lt102">
+<table>
+  <thead><tr><th>Missing in Revit LT</th><th>Why it matters</th></tr></thead>
+  <tbody>
+    <tr><td>Worksharing (multi-user model)</td><td>Only one person can work on a model at a time, so LT does not suit teams</td></tr>
+    <tr><td>In-product rendering, sun and shadow studies</td><td>LT has cloud rendering instead; most offices use <a href="https://augmintech.com/how-to-download-install-enscape/">Enscape</a> or Twinmotion either way</td></tr>
+    <tr><td>View filters and in-place modelling</td><td>Everyday tools for graphics control and one-off elements</td></tr>
+    <tr><td>Dynamo, add-ins and macros</td><td>No automation or third-party plugins</td></tr>
+    <tr><td>Structure and MEP tools, point clouds</td><td>Architecture only; no scan-to-BIM work</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Rule of thumb: Revit LT suits a solo architect doing small buildings who mainly needs drawings from a model. If you work in a team, coordinate with consultants in Revit, or want plugins, you need full Revit.</p>
+
+<h2 id="hardware">Hardware: What Each Program Needs</h2>
+<p>Revit is far heavier than AutoCAD, so check your computer before you switch.</p>
+<div class="hw">
+  <div><h3>Revit 2027</h3><dl>
+    <dt>OS</dt><dd>64-bit Windows 11; no macOS version</dd>
+    <dt>RAM</dt><dd>16 GB minimum; 32 GB or more recommended</dd>
+    <dt>Graphics</dt><dd>DirectX 11 card; 4 GB VRAM minimum, 6–8 GB better</dd>
+    <dt>CPU</dt><dd>Highest single-core clock speed you can afford</dd>
+    <dt>Disk</dt><dd>30 GB to install, plus 100 GB free for temporary files</dd>
+  </dl></div>
+  <div><h3>AutoCAD 2027</h3><dl>
+    <dt>OS</dt><dd>A 64-bit Windows version supported by Microsoft; a separate Mac version of AutoCAD also exists</dd>
+    <dt>Load</dt><dd>Much lighter for 2D drafting; most office laptops cope</dd>
+    <dt>Tip</dt><dd>Large 3D models and point clouds need more memory and a better graphics card</dd>
+  </dl></div>
+</div>
+<p class="note">Revit figures: Render a House (September 2026), citing Autodesk. AutoCAD: Autodesk's 2027 installation notes. Because Revit relies on single-core speed, a desktop often runs it better than a thin laptop with the same specification.</p>
+
+<h2 id="switching">Switching From AutoCAD to Revit: 7 Habits to Unlearn</h2>
+<p>Most AutoCAD users struggle with Revit not because it is hard, but because their drafting habits work against it. These are the most common ones.</p>
+<ol class="unl">
+  <li><div><b>Drawing walls with lines.</b> Detail lines look like walls but are not in the model, so they will not appear in sections, 3D or schedules. Use the Wall tool.</div></li>
+  <li><div><b>Thinking in layers.</b> Revit controls what you see by category and view settings (Visibility/Graphics), not by layers. Hide things per view, not by deleting them.</div></li>
+  <li><div><b>Editing each view separately.</b> Change the model, not the drawing. If you are fixing the same thing in two views, something is wrong.</div></li>
+  <li><div><b>Exploding imported DWGs.</b> Exploding a DWG inside Revit fills the model with thousands of loose lines. Link it and trace over it instead.</div></li>
+  <li><div><b>Skipping the template.</b> Wall types, text styles, title blocks and view settings belong in a project template. Set it up once and every project starts right.</div></li>
+  <li><div><b>Modelling every detail in 3D.</b> Model what changes and must be counted; draw small construction details as 2D detail components on top of sections.</div></li>
+  <li><div><b>Working alone in a team file.</b> On shared projects, use worksharing and synchronise often, instead of passing copies of the file around.</div></li>
+</ol>
+
+<h2 id="skills">What to Learn in Each Program</h2>
+<p>A practical checklist, in the order we recommend learning it.</p>
+<div class="skl">
+  <div><h3>AutoCAD essentials</h3><ol>
+    <li>Drawing and modify commands, object snaps</li>
+    <li>Layers, linetypes and lineweights</li>
+    <li>Blocks and attributes</li>
+    <li>Dimensions, text and annotation scale</li>
+    <li>Layouts, viewports and plotting to PDF</li>
+    <li>Xrefs for sharing drawings in a team</li>
+  </ol></div>
+  <div><h3>Revit essentials</h3><ol>
+    <li>Levels, grids and the project template</li>
+    <li>Walls, floors, roofs, doors and windows</li>
+    <li>Rooms, areas and room tags</li>
+    <li>Views, view templates and visibility</li>
+    <li>Schedules, sheets and title blocks</li>
+    <li>Families, linking DWGs and worksharing</li>
+  </ol></div>
+</div>
+<p>Most people learn AutoCAD essentials from tutorials and daily use. Revit is harder to teach yourself, because the hard part is not the buttons but the workflow: templates, views, schedules and teamwork. That is where a structured course, such as Augmintech's PG Program in BIM Architecture, can shorten the learning curve.</p>
+
+<h2 id="which">When to Use Which</h2>
+<div class="pick">
+  <div class="a"><h3>Choose AutoCAD when</h3><ul><li>The project is small, such as a house or a single shop</li><li>You are drawing details, site plans or shop drawings</li><li>The client or contractor works in DWG</li><li>You are learning drafting for the first time</li></ul></div>
+  <div class="r"><h3>Choose Revit when</h3><ul><li>The project is large or repetitive: offices, hotels, hospitals</li><li>Many people and disciplines must work on one model</li><li>Schedules and quantities must stay accurate through changes</li><li>The client or authority asks for a BIM model or IFC</li></ul></div>
+</div>
+<p>Microsol Resources sums it up the same way: AutoCAD remains common for single-family homes and limited-scope work, while Revit fits projects where a data-rich model adds value, and the choice also depends on the team's skills and the contract.</p>
+
+<h2 id="gulf">Revit and AutoCAD on Gulf Projects</h2>
+<p>The <a href="https://augmintech.com/bim-careers-middle-east-uae-ksa/">Gulf</a> is moving faster towards BIM than many markets. Since 1 January 2024, Dubai has required BIM model submissions in IFC format for building permits on larger projects, including buildings over 20 floors or 20,000 m² for architectural designs, specialised buildings such as hospitals and universities, and government projects (as summarised on Autodesk's Dubai BIM mandate page). For architects and draftsmen planning a move to Dubai, Abu Dhabi or Riyadh, Revit skills are increasingly expected on large projects, while AutoCAD remains the common language for details, shop drawings and smaller fit-out work.</p>
+<div class="alert"><b>Practical tip:</b> read the software list in each Gulf job advert. Many ask for both, so a portfolio that shows one project modelled in Revit and detailed in AutoCAD covers both bases.</div>
+
+<div class="cta cta-green">
+  <div><h3>Ready to Make the Switch to BIM?</h3><p>If this comparison has you leaning towards Revit, Augmintech's PG Program in BIM Architecture is a structured way to build BIM skills for architecture, from the model to a coordinated drawing set. Check the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-green">See the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What is the main difference between Revit and AutoCAD?</div><div class="faq-a">AutoCAD is drafting software where you draw lines and blocks to make each drawing. Revit is BIM software where you build one model of building objects, and the plans, sections, elevations and schedules are generated from it and update together.</div></div>
+<div class="faq-item"><div class="faq-q">Is Revit better than AutoCAD?</div><div class="faq-a">For large, coordinated projects with many drawings and changes, yes. For small projects, quick layouts and detailed 2D drawings, AutoCAD is often faster. Most offices use both.</div></div>
+<div class="faq-item"><div class="faq-q">Should I learn AutoCAD before Revit?</div><div class="faq-a">It helps. AutoCAD teaches drafting conventions and drawing discipline that carry over to Revit, and you will still use DWG files when working with others. But you can learn Revit directly; it simply requires thinking in models rather than lines.</div></div>
+<div class="faq-item"><div class="faq-q">Can Revit open AutoCAD files?</div><div class="faq-a">Yes. Revit can link or import DWG files, and Autodesk recommends linking in most cases so the drawing can be reloaded when it changes. Revit can also export its views and sheets back to DWG.</div></div>
+<div class="faq-item"><div class="faq-q">Can I run Revit on a Mac?</div><div class="faq-a">Not directly. Revit runs only on Windows. Before considering a virtual machine, check Autodesk’s supported configuration for your exact Revit release, processor and virtualisation platform. AutoCAD has a native Mac version.</div></div>
+<div class="faq-item"><div class="faq-q">Can I open a newer Revit file in an older version?</div><div class="faq-a">No. Revit models are not backwards-compatible: once saved in a newer release, they cannot be opened in an earlier one. Agree on one Revit version for the whole project team.</div></div>
+<div class="faq-item"><div class="faq-q">Can Revit completely replace AutoCAD?</div><div class="faq-a">For producing a building's drawing set, yes; many offices model and document entirely in Revit. But AutoCAD remains useful for quick sketches, some 2D details and exchanging DWG files with consultants, so most offices keep both.</div></div>
+<div class="faq-item"><div class="faq-q">Is Revit LT enough?</div><div class="faq-a">For a solo architect on small projects, often yes. It lacks worksharing, view filters, in-place modelling, in-product rendering, Dynamo and add-ins, so teams and consultants usually need full Revit.</div></div>
+<div class="faq-item"><div class="faq-q">Is AutoCAD's Architecture toolset the same as Revit?</div><div class="faq-a">No. The toolset adds architectural objects and automatic plans, elevations and sections to AutoCAD, but it uses a different project and collaboration workflow. It also supports IFC import and export, so IFC alone is not the distinction.</div></div>
+<div class="faq-item"><div class="faq-q">Is Revit more expensive than AutoCAD?</div><div class="faq-a">Yes. At 2026 US list prices, Revit is US$3,005 a year and AutoCAD US$2,095 a year. AutoCAD LT is US$540 and the AutoCAD Revit LT Suite US$680. Students can use both free for learning through Autodesk's education plan.</div></div>
+
+<h2 id="practice-review">A Practical Test Before You Choose</h2><p>Use one small apartment brief in both tools: a dimensioned plan, one section, one door schedule and two issue sheets. Keep the same units, drawing scale and revision request. Record setup time separately from revision time; a first attempt is a learning exercise, not a productivity benchmark.</p><ol><li><strong>Make one controlled revision:</strong> move a bedroom partition 300 mm, change one door width and update the room name.</li><li><strong>Check the drawing evidence:</strong> compare plan and section, door swing, dimension references, room boundaries and the schedule row. In Revit, model-driven information updates through valid relationships; manually written notes do not become correct automatically.</li><li><strong>Check the issued PDF:</strong> look for cropped dimensions, unreadable text, missing lineweights and the correct sheet revision. A correct model can still produce a poor sheet.</li><li><strong>Test handover:</strong> export a DWG, reopen it and check units, layers, fonts and coordinates. Send a trial file to your recipient before exporting the complete set.</li></ol><h3>Three Problems Beginners Commonly Meet</h3><p><strong>A linked DWG appears far away or at the wrong size:</strong> verify the source units and agreed origin before moving geometry. Use a known dimension to confirm scale. <strong>A Revit door is missing from a schedule:</strong> check the schedule category, phase, filters and whether the door belongs to a linked model. <strong>A view looks different on another sheet:</strong> compare its view template, scale, detail level and visibility settings before redrawing anything.</p><p>For IFC capabilities in the Architecture toolset, see <a href="https://help.autodesk.com/cloudhelp/2026/ENU/AutoCAD-Architecture/files/GUID-4B021E54-BA99-4B4D-8337-0503AD316204.htm" target="_blank" rel="noopener">Autodesk’s IFC documentation</a>.</p><h2 id="sources">Sources</h2><p class="note">Software logos and credited screenshots belong to their respective owners. Interface examples may differ from your installed release. Editorial diagrams and generated illustrations are labelled separately.</p>
+<ul class="srcs">
+  <li><strong>Microsol Resources</strong>, <a href="https://microsolresources.com/tech-resources/article/autocad-vs-revit-know-the-differences/" target="_blank" rel="noopener">AutoCAD vs Revit: know the differences</a> (2021).</li>
+  <li><strong>Wikipedia</strong>, <a href="https://en.wikipedia.org/wiki/Autodesk_Revit" target="_blank" rel="noopener">Autodesk Revit</a>.</li>
+  <li><strong>Autodesk</strong>, <a href="https://help.autodesk.com/cloudhelp/2026/ENU/RevitLT-Model/files/GUID-630EC38E-37FE-41BC-8369-2238825BF4F6.htm" target="_blank" rel="noopener">About importing or linking CAD files</a>; <a href="https://www.autodesk.com:443/education/home" target="_blank" rel="noopener">Education plan</a>; <a href="https://boards.autodesk.com/dubai-bim-mandate" target="_blank" rel="noopener">Dubai Municipality BIM mandate</a>.</li>
+  <li><strong>Autodesk</strong>, <a href="https://help.autodesk.com/cloudhelp/2024/ENU/RevitLT-GetStarted/files/GUID-B3112DE3-A923-4950-B547-3A83A30CDD38.htm" target="_blank" rel="noopener">Opening models from an earlier release</a>; <a href="https://www.autodesk.com/compare/compare-features/revit-vs-revit-lt" target="_blank" rel="noopener">Revit vs Revit LT comparison</a>; <a href="https://www.autodesk.com/eu/products/autocad/included-toolsets/autocad-architecture" target="_blank" rel="noopener">Architecture toolset included with AutoCAD</a>; <a href="https://help.autodesk.com/cloudhelp/2027/ENU/AutoCAD-ReleaseNotes/files/installation/INSTALLATION_REQUIREMENTS_AUTOCAD_2027.html" target="_blank" rel="noopener">AutoCAD 2027 installation requirements</a>.</li>
+  <li><strong>Render a House</strong>, <a href="https://www.renderahouse.com/blog/revit-pricing" target="_blank" rel="noopener">Revit pricing 2026</a>; <a href="https://www.renderahouse.com/blog/revit-system-requirements" target="_blank" rel="noopener">Revit system requirements 2027</a> (5 September 2026).</li>
+  <li><strong>Cloudfy Systems</strong>, <a href="https://cloudfysystems.com/blog/autocad-pricing-india-2025" target="_blank" rel="noopener">AutoCAD pricing in India</a> (May 2026).</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 8 November 2026. Software prices change often; check Autodesk's site before you buy.</p>
+</div>
+<dialog class="img-zoom" aria-label="Enlarged figure"><button type="button">Close</button><img alt=""></dialog><script>(()=>{const d=document.querySelector('.img-zoom'),im=d.querySelector('img');document.querySelectorAll('.ph img,.dfig svg').forEach(el=>{el.tabIndex=0;el.title='Click to enlarge';const show=()=>{im.src=el.tagName.toLowerCase()==='svg'?'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(el)):el.src;im.alt=el.getAttribute('alt')||el.getAttribute('aria-label')||'Enlarged figure';d.showModal()};el.onclick=show;el.onkeydown=e=>{if(e.key==='Enter')show()}});d.querySelector('button').onclick=()=>d.close();d.onclick=e=>{if(e.target===d)d.close()}})();</script>

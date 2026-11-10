@@ -1,0 +1,309 @@
+<style>
+#aug-interior-design-interview-questions{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-interior-design-interview-questions *,#aug-interior-design-interview-questions *::before,#aug-interior-design-interview-questions *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-interior-design-interview-questions{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-interior-design-interview-questions.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-interior-design-interview-questions .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-interior-design-interview-questions .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-interior-design-interview-questions .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-interior-design-interview-questions .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-interior-design-interview-questions .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-interior-design-interview-questions .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-interior-design-interview-questions h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-interior-design-interview-questions h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-interior-design-interview-questions p{margin-bottom:.9rem;font-size:16px;}
+#aug-interior-design-interview-questions a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-interior-design-interview-questions a:hover{border-color:var(--brand);}
+#aug-interior-design-interview-questions hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-interior-design-interview-questions .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-interior-design-interview-questions .chart svg{width:100%;height:auto;display:block;}
+#aug-interior-design-interview-questions .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-interior-design-interview-questions .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-interior-design-interview-questions .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-interior-design-interview-questions .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-interior-design-interview-questions .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-interior-design-interview-questions .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-interior-design-interview-questions .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-interior-design-interview-questions table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-interior-design-interview-questions caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-interior-design-interview-questions thead tr{background:var(--slate);color:#fff;}
+#aug-interior-design-interview-questions thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-interior-design-interview-questions tbody tr:nth-child(even){background:var(--surface);}
+#aug-interior-design-interview-questions tbody tr:hover{background:var(--brand-lite);}
+#aug-interior-design-interview-questions td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-interior-design-interview-questions td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-interior-design-interview-questions tbody tr.hl{background:var(--green-lite)!important;}
+#aug-interior-design-interview-questions tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-interior-design-interview-questions ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-interior-design-interview-questions ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-interior-design-interview-questions .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-interior-design-interview-questions .cta-green{background:var(--slate);}
+#aug-interior-design-interview-questions .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-interior-design-interview-questions .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-interior-design-interview-questions .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-interior-design-interview-questions .cta-btn-blue{color:var(--brand);}#aug-interior-design-interview-questions .cta-btn-green{color:var(--slate);}
+#aug-interior-design-interview-questions figure{margin:1.5rem 0;}
+#aug-interior-design-interview-questions figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-interior-design-interview-questions figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-interior-design-interview-questions dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-interior-design-interview-questions dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-interior-design-interview-questions dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-interior-design-interview-questions .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-interior-design-interview-questions .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-interior-design-interview-questions .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-interior-design-interview-questions .srcs{list-style:none;padding:0;}
+#aug-interior-design-interview-questions .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-interior-design-interview-questions .srcs li:last-child{border-bottom:none;}
+
+#aug-interior-design-interview-questions .ans{margin:1.3rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#F4F6F8;border-left:4px solid var(--brand);font-size:16.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-interior-design-interview-questions .ans b{color:var(--ink);}
+#aug-interior-design-interview-questions .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-interior-design-interview-questions .dfig svg{display:block;width:100%;height:auto;}
+#aug-interior-design-interview-questions .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-interior-design-interview-questions .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-interior-design-interview-questions .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-interior-design-interview-questions figure.pf{margin:1.2rem 0;} #aug-interior-design-interview-questions figure.pf figcaption{font-family:var(--body);font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-interior-design-interview-questions .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;} #aug-interior-design-interview-questions .pair figure{margin:0;}
+#aug-interior-design-interview-questions .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-interior-design-interview-questions .alert{margin:1.2rem 0;padding:.85rem 1rem;border-radius:var(--radius);background:#FFF4E5;border:1px solid #F3D3A4;font-size:14.5px;line-height:1.6;}
+#aug-interior-design-interview-questions .alert b{color:var(--warn);}
+#aug-interior-design-interview-questions .t table{font-size:13.5px;} #aug-interior-design-interview-questions .t td:first-child{font-weight:700;color:var(--ink);} #aug-interior-design-interview-questions .t th{white-space:normal;}
+#aug-interior-design-interview-questions .t .m{font-family:var(--mono);font-size:12px;white-space:nowrap;}
+#aug-interior-design-interview-questions .t caption{caption-side:bottom;text-align:left;font-family:var(--body);text-transform:none;letter-spacing:0;font-size:12.5px;color:var(--muted);padding:.5rem .2rem 0;}
+#aug-interior-design-interview-questions .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.2rem 0;}
+#aug-interior-design-interview-questions .cards.two{grid-template-columns:1fr 1fr;} #aug-interior-design-interview-questions .cards.four{grid-template-columns:repeat(4,1fr);}
+#aug-interior-design-interview-questions .cards>div{border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:var(--radius);padding:.85rem .95rem;background:#fff;}
+#aug-interior-design-interview-questions .cards>div.c2{border-top-color:#1D6B43;} #aug-interior-design-interview-questions .cards>div.c3{border-top-color:#8A5A00;} #aug-interior-design-interview-questions .cards>div.c4{border-top-color:#5B3A86;} #aug-interior-design-interview-questions .cards>div.c5{border-top-color:#B5371B;}
+#aug-interior-design-interview-questions .cards b{display:block;font-family:var(--display);font-size:15.5px;color:var(--ink);margin-bottom:.25rem;line-height:1.3;}
+#aug-interior-design-interview-questions .cards span{display:block;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-interior-design-interview-questions .cards em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.5rem;}
+#aug-interior-design-interview-questions .cards ul{margin:.3rem 0 0;padding-left:1.05rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-interior-design-interview-questions .steps{list-style:none;margin:1.2rem 0;padding:0;counter-reset:s;display:grid;gap:10px;}
+#aug-interior-design-interview-questions .steps li{counter-increment:s;position:relative;padding:.8rem 1rem .8rem 3.4rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;font-size:15px;line-height:1.6;}
+#aug-interior-design-interview-questions .steps li::before{content:counter(s);position:absolute;left:.9rem;top:.8rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--display);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+#aug-interior-design-interview-questions .steps li b{display:block;font-family:var(--display);color:var(--ink);font-size:15.5px;margin-bottom:2px;}
+#aug-interior-design-interview-questions .nl{list-style:none;padding:0;margin:1.2rem 0;counter-reset:u;}
+#aug-interior-design-interview-questions .nl li{counter-increment:u;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;padding:.75rem 0;border-top:1px solid var(--border);font-size:15px;line-height:1.6;}
+#aug-interior-design-interview-questions .nl li:first-child{border-top:none;}
+#aug-interior-design-interview-questions .nl li::before{content:counter(u,decimal-leading-zero);font-family:var(--mono);font-weight:700;color:var(--coral);font-size:14px;padding-top:2px;}
+#aug-interior-design-interview-questions .nl b{color:var(--ink);}
+#aug-interior-design-interview-questions .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-interior-design-interview-questions .pick>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-interior-design-interview-questions .pick .a{background:#EEF7F1;border:1px solid #C6E3D1;} #aug-interior-design-interview-questions .pick .r{background:#FDF1EC;border:1px solid #F1CDBE;}
+#aug-interior-design-interview-questions .pick h3{margin:0 0 .4rem;font-size:15.5px;} #aug-interior-design-interview-questions .pick .a h3{color:#1D6B43;} #aug-interior-design-interview-questions .pick .r h3{color:#9A3B1E;}
+#aug-interior-design-interview-questions .pick ul{margin:0;padding-left:1.1rem;} #aug-interior-design-interview-questions .pick li{margin-bottom:.3rem;}
+#aug-interior-design-interview-questions .chk{margin:1.2rem 0;border:1px solid var(--border);border-radius:var(--radius);background:#fff;padding:.4rem 1rem;}
+#aug-interior-design-interview-questions .chk div{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:.6rem 0;border-top:1px solid var(--border);font-size:14.5px;line-height:1.55;}
+#aug-interior-design-interview-questions .chk div:first-child{border-top:none;}
+#aug-interior-design-interview-questions .chk div::before{content:"";width:16px;height:16px;border:2px solid var(--green);border-radius:4px;margin-top:3px;}
+#aug-interior-design-interview-questions .chk b{color:var(--ink);}
+#aug-interior-design-interview-questions .qa{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-interior-design-interview-questions .qa .q{padding:.75rem 1rem;background:var(--surface);font-family:var(--display);font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.45;}
+#aug-interior-design-interview-questions .qa .q span{font-family:var(--mono);font-size:11px;color:var(--brand);font-weight:700;margin-right:8px;letter-spacing:.04em;}
+#aug-interior-design-interview-questions .qa .a{padding:.75rem 1rem;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-interior-design-interview-questions .qa .a i{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--coral);margin-top:.5rem;letter-spacing:.03em;}
+#aug-interior-design-interview-questions .bar{display:flex;margin:1.2rem 0 .4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-interior-design-interview-questions .bar div{padding:.75rem .7rem;font-size:13px;line-height:1.4;color:#fff;}
+#aug-interior-design-interview-questions .bar div b{display:block;font-family:var(--display);font-size:17px;}
+#aug-interior-design-interview-questions .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-interior-design-interview-questions .split>div{border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);padding:.9rem 1rem;}
+#aug-interior-design-interview-questions .split h3{margin:0 0 .5rem;font-size:16px;} #aug-interior-design-interview-questions .split dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14px;}
+#aug-interior-design-interview-questions .split dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:2px;} #aug-interior-design-interview-questions .split dd{margin:0;color:var(--ink);}
+
+@media(max-width:820px){ #aug-interior-design-interview-questions .cards,#aug-interior-design-interview-questions .cards.four{grid-template-columns:1fr 1fr;} }
+@media(max-width:640px){
+  #aug-interior-design-interview-questions .t table{min-width:600px;}
+  #aug-interior-design-interview-questions .cards,#aug-interior-design-interview-questions .cards.two,#aug-interior-design-interview-questions .cards.four,#aug-interior-design-interview-questions .pick,#aug-interior-design-interview-questions .pair,#aug-interior-design-interview-questions .split{grid-template-columns:1fr;}
+  #aug-interior-design-interview-questions .bar{flex-direction:column;} #aug-interior-design-interview-questions .bar div{flex:none!important;}
+  #aug-interior-design-interview-questions .steps li{padding-left:3rem;}
+  #aug-interior-design-interview-questions .dfig.wide{overflow-x:auto;} #aug-interior-design-interview-questions .dfig.wide svg{min-width:640px;}
+  #aug-interior-design-interview-questions .cta{flex-direction:column;align-items:flex-start;}
+  #aug-interior-design-interview-questions .cta>div{max-width:100%;} #aug-interior-design-interview-questions .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-interior-design-interview-questions .cta>div:last-child .cta-btn{margin-left:0;white-space:normal;text-align:center;line-height:1.5;}
+}
+#aug-interior-design-interview-questions .pf .ph{height:auto!important;aspect-ratio:auto!important;min-height:0!important;padding:0!important;background:#f4f8fb!important;overflow:hidden}#aug-interior-design-interview-questions .ph::before,#aug-interior-design-interview-questions .ph::after{display:none!important}#aug-interior-design-interview-questions .pf .ph img{position:static!important;display:block;width:100%!important;height:auto!important;object-fit:contain!important;opacity:1!important;filter:none!important}#aug-interior-design-interview-questions .pf figcaption{font-family:Arial,sans-serif!important;font-size:14px!important;line-height:1.65!important;padding:16px!important;overflow-wrap:anywhere}#aug-interior-design-interview-questions.blog{overflow-wrap:break-word}#aug-interior-design-interview-questions .tbl-wrap{overflow-x:auto}#aug-interior-design-interview-questions .cta-btn{white-space:normal!important}#aug-interior-design-interview-questions .dfig svg{max-width:100%;height:auto}#aug-interior-design-interview-questions .wide{overflow-x:auto}@media(max-width:650px){#aug-interior-design-interview-questions .pair,#aug-interior-design-interview-questions .grid3,#aug-interior-design-interview-questions .gq3{grid-template-columns:1fr!important}}
+/* ===== Augmintech theme overrides ===== */
+#aug-interior-design-interview-questions.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-interior-design-interview-questions h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-interior-design-interview-questions a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-interior-design-interview-questions a:hover{color:#18d104;}
+#aug-interior-design-interview-questions .cta{background:#1a1a1a;}
+#aug-interior-design-interview-questions .cta a.cta-btn{text-decoration:none;}
+#aug-interior-design-interview-questions .cta-btn-blue{background:#18d104;color:#000;}
+#aug-interior-design-interview-questions .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-interior-design-interview-questions [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-interior-design-interview-questions">
+
+
+<div class="ans"><b>Interior design interviews test four things: how you make design decisions, whether you can read and produce working drawings, how well you know materials and services, and how fluent you are in software such as AutoCAD, SketchUp and Revit.</b> Expect a portfolio walkthrough, technical questions with specific numbers, and often a practical design or software test. Below are 40 common questions grouped by topic, each with what the interviewer is really checking and a model answer you can adapt, plus test tips and questions to ask them.</div>
+
+<figure class="dfig wide">
+  <svg viewBox="0 0 1000 220" role="img" aria-label="Five typical stages of an interior design job interview: screening call, portfolio review, technical round, practical test, and final or HR round"><rect width="1000" height="220" fill="#fff"/><text x="500" y="26" font-size="14" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">HOW AN INTERIOR DESIGN INTERVIEW USUALLY RUNS</text><path d="M20,50 h166 l18,45 l-18,45 h-166 z" fill="#56616D" opacity=".12" stroke="#56616D" stroke-width="1.6"/><circle cx="56" cy="95" r="15" fill="#56616D"/><text x="56" y="100" font-size="14" text-anchor="middle" fill="#fff" font-weight="800" font-family="sans-serif">1</text><text x="80" y="93" font-size="13.5" text-anchor="start" fill="#56616D" font-weight="800" font-family="sans-serif">Screening call</text><text x="112" y="163" font-size="11.5" text-anchor="middle" fill="#56616D" font-weight="400" font-family="sans-serif">CV, portfolio link,</text><text x="112" y="178" font-size="11.5" text-anchor="middle" fill="#56616D" font-weight="400" font-family="sans-serif">salary, notice period</text><path d="M216,50 h166 l18,45 l-18,45 h-166 l18,-45 z" fill="#1F4A6E" opacity=".12" stroke="#1F4A6E" stroke-width="1.6"/><circle cx="252" cy="95" r="15" fill="#1F4A6E"/><text x="252" y="100" font-size="14" text-anchor="middle" fill="#fff" font-weight="800" font-family="sans-serif">2</text><text x="276" y="93" font-size="13.5" text-anchor="start" fill="#1F4A6E" font-weight="800" font-family="sans-serif">Portfolio review</text><text x="308" y="163" font-size="11.5" text-anchor="middle" fill="#56616D" font-weight="400" font-family="sans-serif">Walk through 2–3</text><text x="308" y="178" font-size="11.5" text-anchor="middle" fill="#56616D" font-weight="400" font-family="sans-serif">projects and your role</text><path d="M412,50 h166 l18,45 l-18,45 h-166 l18,-45 z" fill="#1D6B43" opacity=".12" stroke="#1D6B43" stroke-width="1.6"/><circle cx="448" cy="95" r="15" fill="#1D6B43"/><text x="448" y="100" font-size="14" text-anchor="middle" fill="#fff" font-weight="800" font-family="sans-serif">3</text><text x="472" y="93" font-size="13.5" text-anchor="start" fill="#1D6B43" font-weight="800" font-family="sans-serif">Technical round</text><text x="504" y="163" font-size="11.5" text-anchor="middle" fill="#56616D" font-weight="400" font-family="sans-serif">Drawings, materials,</text><text x="504" y="178" font-size="11.5" text-anchor="middle" fill="#56616D" font-weight="400" font-family="sans-serif">services, standards</text><path d="M608,50 h166 l18,45 l-18,45 h-166 l18,-45 z" fill="#8A5A00" opacity=".12" stroke="#8A5A00" stroke-width="1.6"/><circle cx="644" cy="95" r="15" fill="#8A5A00"/><text x="644" y="100" font-size="14" text-anchor="middle" fill="#fff" font-weight="800" font-family="sans-serif">4</text><text x="668" y="93" font-size="13.5" text-anchor="start" fill="#8A5A00" font-weight="800" font-family="sans-serif">Practical test</text><text x="700" y="163" font-size="11.5" text-anchor="middle" fill="#56616D" font-weight="400" font-family="sans-serif">Design, drawing or</text><text x="700" y="178" font-size="11.5" text-anchor="middle" fill="#56616D" font-weight="400" font-family="sans-serif">software task</text><path d="M804,50 h166 l18,45 l-18,45 h-166 l18,-45 z" fill="#5B3A86" opacity=".12" stroke="#5B3A86" stroke-width="1.6"/><circle cx="840" cy="95" r="15" fill="#5B3A86"/><text x="840" y="100" font-size="14" text-anchor="middle" fill="#fff" font-weight="800" font-family="sans-serif">5</text><text x="864" y="93" font-size="13.5" text-anchor="start" fill="#5B3A86" font-weight="800" font-family="sans-serif">Final / HR</text><text x="896" y="163" font-size="11.5" text-anchor="middle" fill="#56616D" font-weight="400" font-family="sans-serif">Fit, expectations,</text><text x="896" y="178" font-size="11.5" text-anchor="middle" fill="#56616D" font-weight="400" font-family="sans-serif">offer</text><text x="500" y="212" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">Typical sequence; small studios often combine stages into one meeting.</text></svg>
+  <figcaption>The usual stages of an interior design interview. Augmintech diagram.</figcaption>
+</figure>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Know your <a href="https://augmintech.com/bim-portfolio/">portfolio</a> cold:</strong> be ready to explain the brief, your role, each decision and what you would change, for every project.</li>
+  <li><strong>Quote real numbers:</strong> counter heights, work-triangle limits, lux levels and material properties show you can be trusted on site.</li>
+  <li><strong>Expect a practical test:</strong> a space-planning sketch, a drawing to correct, or a software task with a time limit.</li>
+  <li><strong>Answer with structure:</strong> situation, what you did and why, result.</li>
+  <li><strong>Ask good questions back:</strong> about project types, software, site exposure and how juniors are reviewed.</li>
+</ul>
+
+<h2 id="about-you">About You and Your Portfolio</h2>
+<div class="qa"><div class="q"><span>Q1</span>Tell us about yourself.</div><div class="a">Keep it to 60–90 seconds: education, the kind of projects you enjoy, one strength with proof, and why this firm. "I graduated in interior design in 2026, interned for six months on office fit-outs, where I drew the RCPs and joinery details, and I want to grow in commercial interiors, which is why your workplace projects interest me."<i>CHECKING: clarity, focus, and that you researched the firm</i></div></div>
+<div class="qa"><div class="q"><span>Q2</span>Walk us through your best project.</div><div class="a">Follow the order of your portfolio page: brief and constraint, concept, two key design moves, how you detailed one of them, and the result. End with one thing you would do differently. Keep it under five minutes unless they ask for more.<i>CHECKING: design thinking, communication, honesty about your role</i></div></div>
+<div class="qa"><div class="q"><span>Q3</span>What exactly was your role in this project?</div><div class="a">Be specific and honest: "The concept was a team effort; I personally drew the furniture layout, both bedroom elevations and the wardrobe details, and made the material board." Interviewers often test this by asking detailed questions about the part you claim.<i>CHECKING: authorship</i></div></div>
+<div class="qa"><div class="q"><span>Q4</span>Which project are you least happy with, and why?</div><div class="a">Choose a real one, name a specific weakness (for example, a kitchen with too little landing space beside the hob), and explain what you learned and would now do differently.<i>CHECKING: self-awareness and learning</i></div></div>
+<div class="qa"><div class="q"><span>Q5</span>Why do you want to work here?</div><div class="a">Refer to two of their actual projects and connect them to your skills or interests. Generic praise is a red flag.<i>CHECKING: genuine interest, research</i></div></div>
+
+<div class="cta">
+  <div><h3>Stand Out in the Technical Round</h3><p>Coordinated drawings and BIM skills are increasingly tested in interviews for larger projects. Augmintech's PG Program in BIM Architecture teaches building information modelling for architecture. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">Explore the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="design">Design Decision Questions</h2>
+<div class="qa"><div class="q"><span>Q6</span>How do you start a new project?</div><div class="a">Brief and budget first, then site measurement and photos, user needs and daily routines, constraints (structure, services, approvals), then zoning, concept options and a mood board before any detailed drawings.<i>CHECKING: a repeatable process</i></div></div>
+<div class="qa"><div class="q"><span>Q7</span>How would you plan a small 2BHK for a family of four?</div><div class="a">Prioritise storage and circulation: built-in wardrobes to full height, multifunctional furniture, a compact kitchen layout suited to the room width, sliding doors where swing space is tight, and light colours with layered lighting to make rooms feel larger. Mention specific dimensions you would check, such as clearances around the bed and dining table.<i>CHECKING: practical space planning</i></div></div>
+<div class="qa"><div class="q"><span>Q8</span>Which kitchen layout would you choose for a narrow kitchen?</div><div class="a">A straight or L-shaped layout. India's building code thumb rules give a minimum kitchen width of about 1.8 m, which suits a single run; U-shaped and parallel layouts need about 2.3 m or more so the work aisle stays near the NKBA's 1,067 mm recommendation for one cook.<i>CHECKING: layouts and real dimensions</i></div></div>
+<div class="qa"><div class="q"><span>Q9</span>What is the kitchen work triangle?</div><div class="a">The path between sink, hob and fridge. NKBA guidelines suggest each leg be between 1.2 m and 2.7 m and the total no more than 7.9 m, without a tall unit or island cutting through it.<i>CHECKING: ergonomics knowledge</i></div></div>
+<div class="qa"><div class="q"><span>Q10</span>What counter height and depth do you use in Indian kitchens?</div><div class="a">Usually about 860 mm high and 600 mm deep, adjusted to the main user's height, with wall cabinets fixed roughly 450–600 mm above the counter.<i>CHECKING: standards you can apply on site</i></div></div>
+<div class="qa"><div class="q"><span>Q11</span>How do you plan lighting for a living room?</div><div class="a">In layers. Ambient light at about 100–200 lux for general use, task light at about 300–500 lux where people read or work, and accent light on features at roughly three times the surrounding brightness so they stand out. I show fixtures, switching and a fixture schedule on the reflected ceiling plan.<i>CHECKING: lighting design logic</i></div></div>
+<div class="qa"><div class="q"><span>Q12</span>How do you choose a colour palette?</div><div class="a">From the brief and the light: orientation and daylight, the mood the client wants, existing fixed finishes such as flooring, and a 60-30-10 balance of base, secondary and accent colours. I test samples in the actual room before finalising.<i>CHECKING: reasoning, not taste alone</i></div></div>
+<div class="qa"><div class="q"><span>Q13</span>How do you balance design with a tight budget?</div><div class="a">Spend where people touch and see most (kitchen counters, door hardware, lighting), save on hidden or low-wear areas, use standard sizes to cut waste, and give the client two specification options with clear cost differences.<i>CHECKING: commercial sense</i></div></div>
+<div class="qa"><div class="q"><span>Q14</span>A client wants a design you think is wrong. What do you do?</div><div class="a">Understand the reason behind the request, explain the practical impact with drawings or a quick 3D view, offer an alternative that meets their underlying need, and then respect their decision while documenting it.<i>CHECKING: client handling</i></div></div>
+<div class="qa"><div class="q"><span>Q15</span>How do you design for a commercial office differently from a home?</div><div class="a">More users and stricter requirements: circulation and egress, workstation density, meeting-room mix, acoustics, durable finishes, services coordination with HVAC and fire systems, and the brand. Approvals and coordination with consultants take a bigger share of the work.<i>CHECKING: range beyond residential</i></div></div>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="drawings">Drawing and Technical Questions</h2>
+<div class="qa"><div class="q"><span>Q16</span>What drawings are in an interior working drawing set?</div><div class="a">Furniture layout, flooring or finish plan, reflected ceiling plan, electrical and lighting layout, interior elevations for each room, joinery details, door and finish schedules, and any sections needed for ceilings or built-ins, all on titled, numbered sheets.<i>CHECKING: you know what a complete set is</i></div></div>
+<div class="qa"><div class="q"><span>Q17</span>What does a reflected ceiling plan show?</div><div class="a">The ceiling as if seen from above: ceiling types and heights, bulkheads and coves, light fittings, AC grilles, sprinklers and access panels, with a legend and heights tagged.<i>CHECKING: RCP literacy</i></div></div>
+<div class="qa"><div class="q"><span>Q18</span>What scale would you use for a furniture layout and for a joinery detail?</div><div class="a">Typically 1:50 for furniture layouts of a home or small office (1:100 for large floors), and 1:10 or 1:5 for joinery and ceiling details.<i>CHECKING: drafting judgement</i></div></div>
+<div class="qa"><div class="q"><span>Q19</span>How do you show electrical points on interior elevations?</div><div class="a">With standard symbols at the correct height above finished floor, dimensioned from a fixed reference, and coordinated with furniture and joinery so switches are not hidden behind a wardrobe or bedside table.<i>CHECKING: coordination detail</i></div></div>
+<div class="qa"><div class="q"><span>Q20</span>What is carpet area, and why does it matter to an interior designer?</div><div class="a">Under Section 2(k) of India's RERA Act, carpet area is the net usable floor area of a flat, excluding external walls, service shafts and exclusive balconies or terraces, but including internal partition walls. It matters when clients compare spaces and when area figures appear on drawings.<i>CHECKING: industry awareness</i></div></div>
+<div class="qa"><div class="q"><span>Q21</span>A contractor says your detail cannot be built. What do you do?</div><div class="a">Visit or call, understand the specific problem (material size, fixing, sequence), revise the detail with them if needed, and issue a revised drawing with a revision cloud and number, so site and office stay in step.<i>CHECKING: site practicality and drawing control</i></div></div>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/110-aigenerated-portfolio-interview-scene-not.webp" alt="AI-generated portfolio interview scene, not an actual employer assessment." loading="lazy" decoding="async"></div><figcaption>AI-generated portfolio interview scene, not an actual employer assessment.</figcaption></figure>
+
+<h2 id="materials">Materials and Site Questions</h2>
+<div class="qa"><div class="q"><span>Q22</span>Gypsum or POP false ceiling: which would you choose?</div><div class="a">Gypsum board for most flat ceilings because it installs faster and cracks less; POP where I need curves or cornices. Near wet areas or AC units I would use moisture-resistant gypsum board, with access panels where services need maintenance.<i>CHECKING: material judgement</i></div></div>
+<div class="qa"><div class="q"><span>Q23</span>Laminate, SPC vinyl or vitrified tile for a kitchen floor?</div><div class="a">Vitrified tile or SPC. Laminate has a fibreboard core that can swell if water stands on it, so I avoid it in kitchens and bathrooms. SPC is waterproof and clicks together; vitrified tiles are hard-wearing and water-resistant.<i>CHECKING: performance, not just looks</i></div></div>
+<div class="qa"><div class="q"><span>Q24</span>How do you check a site before starting work?</div><div class="a">Measure every room and ceiling height, photograph existing services, check walls for level and damp, note structural elements and beams, confirm electrical load and plumbing positions, and record everything on a dimensioned site plan before designing.<i>CHECKING: field discipline</i></div></div>
+<div class="qa"><div class="q"><span>Q25</span>How do you estimate the cost of an interior?</div><div class="a">Quantities from the drawings (areas of flooring and ceiling, running length of joinery, counts of fittings), multiplied by current rates from vendors, plus labour, wastage and a contingency, with a clear list of exclusions. Rates vary by city and change often, so I always refresh them.<i>CHECKING: estimation logic</i></div></div>
+<div class="qa"><div class="q"><span>Q26</span>How do you handle a vendor delay that affects the handover date?</div><div class="a">Inform the client early with options: an alternative product, a revised sequence so other work continues, or a revised date. Record the change and its cost or time impact in writing.<i>CHECKING: project management</i></div></div>
+
+<h2 id="software">Software Questions</h2>
+<div class="qa"><div class="q"><span>Q27</span>Which software do you use, and for what?</div><div class="a">Match each tool to a task: "AutoCAD for layouts, RCPs and details; SketchUp for 3D design and client views; Enscape or D5 for renders; Photoshop for presentation boards; and Revit for coordinated drawing sets on larger projects." Only list what you can demonstrate.<i>CHECKING: honest, task-based fluency</i></div></div>
+<div class="qa"><div class="q"><span>Q28</span>How do you keep AutoCAD drawings organised?</div><div class="a">A standard template with named layers, lineweights and text styles; blocks for furniture and symbols; annotative dimensions; layouts with viewports at fixed scales; and Xrefs when a team shares one base plan.<i>CHECKING: production habits</i></div></div>
+<div class="qa"><div class="q"><span>Q29</span>Have you used Revit for interiors?</div><div class="a">If yes, give specifics: rooms with finish parameters, a room finish schedule, furniture families, ceilings in ceiling plan views and interior elevations from the model. Mention that Revit measures room area to the wall finish by default. If not, say so and explain how you are learning it.<i>CHECKING: BIM readiness</i></div></div>
+<div class="qa"><div class="q"><span>Q30</span>How do you make a realistic render quickly?</div><div class="a">Correct materials with real-world scale, a believable light source (sun angle or fixtures), sensible exposure, a human-eye camera height, and restraint with props. Then light post-production for contrast and colour.<i>CHECKING: visualisation craft</i></div></div>
+<div class="qa"><div class="q"><span>Q31</span>How would you share drawings with a contractor who uses only AutoCAD?</div><div class="a">Issue PDF sheets as the contract set and DWG files of plans and elevations for setting out, with a clear revision number and date on both.<i>CHECKING: real-world workflow</i></div></div>
+<p>Software questions are where many candidates are weakest, especially on BIM. If larger commercial or <a href="https://augmintech.com/bim-careers-middle-east-uae-ksa/">Gulf projects</a> are your aim, learning <a href="https://augmintech.com/learn-revit/">Revit</a> before you apply makes these answers much stronger; a structured course such as Augmintech's PG Program in BIM Architecture is one way to get there.</p>
+
+<h2 id="practical">The Practical Test: What to Expect</h2>
+<div class="cards">
+  <div><b>Design test</b><span>A small plan, such as a studio flat or café, to zone and lay out in 60–120 minutes, with a short explanation.</span><em>Show zoning, circulation, dimensions</em></div>
+  <div class="c2"><b>Drawing test</b><span>Draw an elevation or detail from a sketch, or find mistakes in a drawing set.</span><em>Show line weights, scale, annotation</em></div>
+  <div class="c3"><b>Software test</b><span>Produce a furniture layout in AutoCAD, a SketchUp model or a Revit plan in a set time.</span><em>Show speed and clean organisation</em></div>
+</div>
+<p class="note">Typical formats; durations vary by firm.</p>
+<ul class="bullets">
+  <li><strong>Read the brief twice</strong> and list the requirements before drawing anything.</li>
+  <li><strong>Plan your time:</strong> zoning first, then layout, then annotation; an unfinished but clear plan beats a detailed corner.</li>
+  <li><strong>Dimension the key things:</strong> room sizes, clearances, counter runs.</li>
+  <li><strong>Write two or three lines</strong> explaining your main decisions.</li>
+  <li><strong>In software tests,</strong> name layers and save often; examiners notice organisation.</li>
+</ul>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/110-original-practice-layout-not-an.webp" alt="Original practice layout, not an employer’s test or a construction-ready design. Explain circulation and verify dimensions." loading="lazy" decoding="async"></div><figcaption>Original practice layout, not an employer’s test or a construction-ready design. Explain circulation and verify dimensions.</figcaption></figure>
+
+<h2 id="behavioural">Client, Team and Behavioural Questions</h2>
+<div class="qa"><div class="q"><span>Q32</span>Tell us about a time you missed a deadline.</div><div class="a">Pick a real case, take responsibility, explain how you recovered and what system you changed (for example, a drawing checklist or earlier review).<i>CHECKING: accountability</i></div></div>
+<div class="qa"><div class="q"><span>Q33</span>How do you handle feedback on your designs?</div><div class="a">Listen for the reason, ask questions, separate personal taste from project needs, revise and show the change. Give an example where feedback improved the result.<i>CHECKING: coachability</i></div></div>
+<div class="qa"><div class="q"><span>Q34</span>How do you present a design to a client?</div><div class="a">Start with their brief, show the plan before the renders, explain two or three key decisions, show materials physically if possible, and close with next steps and decisions needed from them.<i>CHECKING: communication</i></div></div>
+<div class="qa"><div class="q"><span>Q35</span>How do you manage several projects at once?</div><div class="a">A simple tracker of deliverables and dates, weekly priorities agreed with my lead, and early warning when two deadlines clash.<i>CHECKING: organisation</i></div></div>
+<div class="qa"><div class="q"><span>Q36</span>Where do you see yourself in three years?</div><div class="a">Be realistic and linked to the firm: "Leading small projects end to end, from design to site, and stronger in commercial detailing and Revit."<i>CHECKING: ambition that fits the role</i></div></div>
+
+<h2 id="gulf">Questions for Gulf Interviews</h2>
+<div class="qa"><div class="q"><span>Q37</span>Have you worked on fit-out projects?</div><div class="a">Describe your role in any office, retail or hospitality fit-out: drawings you produced, coordination with MEP, and site work. If you have not, show fit-out-style details from your studio work.<i>CHECKING: relevance to Gulf work</i></div></div>
+<div class="qa"><div class="q"><span>Q38</span>What would you consider for interiors in a hot, humid climate with constant AC?</div><div class="a">Materials that handle humidity and condensation, such as moisture-resistant boards near AC units and wet rooms; flooring that copes with heat, such as porcelain tile, stone or SPC rather than solid wood; and access to AC drain pans for maintenance.<i>CHECKING: climate awareness</i></div></div>
+<div class="qa"><div class="q"><span>Q39</span>Do you know BIM?</div><div class="a">Many larger Gulf projects are BIM-led; since 1 January 2024 Dubai has required BIM model submissions in IFC format for building permits on larger buildings. Explain your Revit experience honestly, with examples.<i>CHECKING: readiness for large projects</i></div></div>
+<div class="qa"><div class="q"><span>Q40</span>Are you comfortable working in metric units and to international standards?</div><div class="a">Yes, with examples: metric drawings, product data sheets and international brands you have specified.<i>CHECKING: professional fit</i></div></div>
+
+<h2 id="ask-them">Questions to Ask the Interviewer</h2>
+<div class="chk">
+  <div><span><b>What kinds of projects would I work on</b> in the first six months?</span></div>
+  <div><span><b>Which software does the team use</b> for drawings and coordination?</span></div>
+  <div><span><b>How much site exposure</b> do juniors get?</span></div>
+  <div><span><b>How are drawings reviewed</b> before they are issued?</span></div>
+  <div><span><b>What does growth look like</b> here after one or two years?</span></div>
+</div>
+
+<h2 id="practice-brief">A 60-Minute Practice Interview Exercise</h2><p>This is an Augmintech practice brief, not a claimed employer test. Plan a compact reading lounge for two adults, with seating, storage and a clear entrance. Begin by asking for room dimensions, openings, existing services, accessibility needs and the expected deliverable. State any missing information as an assumption.</p><ol><li><strong>First 10 minutes:</strong> read the brief, check units and sketch two zoning options.</li><li><strong>Next 25 minutes:</strong> develop one layout with realistic furniture footprints and a circulation check.</li><li><strong>Next 15 minutes:</strong> add one elevation or a short finish schedule, depending on the requested role.</li><li><strong>Final 10 minutes:</strong> review dimensions, labels, file organisation and the PDF output. Explain what needs further verification.</li></ol><h3>How to Answer When a Number Depends on the Project</h3><p>Explain the design intent, give a clearly qualified starting assumption if useful, then identify the applicable brief, local requirement or manufacturer’s specification to check. Do not present a remembered clearance, lux level or material thickness as universal. Interviewers need to see how you verify a decision, not only whether you remember a number.</p><h3>When You Do Not Know a Tool</h3><p>Be direct: “I have produced these deliverables in this application; I have not yet used that feature on a live project. I would test it on a copy and review the result with the project lead.” Then demonstrate a related workflow you actually understand. Keep backup PDFs and your own editable files available, and never invent experience to match a job description.</p><h2 id="prepare">Your Interview Preparation Checklist</h2>
+<div class="chk">
+  <div><span><b>Portfolio:</b> printed or on a tablet, best project first, and you can explain every page.</span></div>
+  <div><span><b>Numbers:</b> revise kitchen, lighting, ceiling and flooring basics with real figures.</span></div>
+  <div><span><b>The firm:</b> study three of their projects and prepare one specific comment on each.</span></div>
+  <div><span><b>Software:</b> practise a timed furniture layout in AutoCAD and a quick SketchUp model.</span></div>
+  <div><span><b>Stories:</b> prepare three short examples: a design decision, a problem solved, a mistake fixed.</span></div>
+  <div><span><b>Salary:</b> know the range for your city and level before the HR round.</span></div>
+</div>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/110-original-software-practice-checklist-no.webp" alt="Original software practice checklist. No generated image is represented as a real application screenshot." loading="lazy" decoding="async"></div><figcaption>Original software practice checklist. No generated image is represented as a real application screenshot.</figcaption></figure>
+
+<div class="cta cta-green">
+  <div><h3>Walk In With BIM on Your CV</h3><p>Revit and coordinated drawings answer many of the toughest technical questions. Augmintech's PG Program in BIM Architecture is a structured way to build those skills. Check the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-green">See the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What questions are asked in an interior design interview?</div><div class="faq-a">Expect questions about your portfolio and role, design decisions (layouts, lighting, colour, budgets), working drawings and standards, materials and site work, software, and client handling, often followed by a practical design or software test.</div></div>
+<div class="faq-item"><div class="faq-q">How do I prepare for an interior design interview as a fresher?</div><div class="faq-a">Know every page of your portfolio, revise key dimensions and material basics, practise a timed AutoCAD layout and a SketchUp model, research the firm's projects, and prepare short examples of decisions you made.</div></div>
+<div class="faq-item"><div class="faq-q">What is asked in an interior design practical test?</div><div class="faq-a">Usually a short design task such as laying out a small flat or café, a drawing task such as drafting an elevation or finding errors, or a timed software task in AutoCAD, SketchUp or Revit.</div></div>
+<div class="faq-item"><div class="faq-q">Which software questions come up most?</div><div class="faq-a">How you use AutoCAD for layouts and details, SketchUp for 3D, a renderer for visuals, and increasingly whether you can produce drawings and schedules in Revit.</div></div>
+<div class="faq-item"><div class="faq-q">What should I bring to an interior design interview?</div><div class="faq-a">A printed portfolio or a tablet, a one-page CV, a pen and scale for any sketch test, and a short list of questions for the interviewer.</div></div>
+<div class="faq-item"><div class="faq-q">How long should my answers be?</div><div class="faq-a">Most answers should be 30 to 90 seconds; a portfolio walkthrough can take three to five minutes per project unless the interviewer asks for more.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>NKBA</strong>, <a href="https://kb.nkba.org/uploads/2022/05/Kitchen-Planning-Guidelines.pdf" target="_blank" rel="noopener">Kitchen Planning Guidelines</a>.</li>
+  <li><strong>HouseYog</strong>, <a href="https://www.houseyog.com/blog/kitchen-platform-height-depth-walkway/" target="_blank" rel="noopener">Kitchen platform height, depth and walkway</a>.</li>
+  <li><strong>Infralens</strong>: <a href="https://infralens.in/thumbrules/kitchen-min-area" target="_blank" rel="noopener">Kitchen minimum area</a>; <a href="https://infralens.in/thumbrules/lux-living-room" target="_blank" rel="noopener">Living room lux levels</a>.</li>
+  <li><strong>Lighting Design Lab</strong>, <a href="https://www.lightingdesignlab.com/node/820" target="_blank" rel="noopener">Accent lighting contrast</a>.</li>
+  <li><strong>JK Cement</strong>, <a href="https://www.jkcement.com/blog/interior-design/pop-vs-gypsum-ceiling/" target="_blank" rel="noopener">POP vs gypsum ceiling</a>; <strong>Knauf</strong>, <a href="https://knauf.com/en-AE/p/product/moisture-resistant-mr-12.5mm-gypsum-board-10004_0606" target="_blank" rel="noopener">Moisture-resistant gypsum board</a>.</li>
+  <li><strong>Designing Buildings</strong>, <a href="https://www.designingbuildings.co.uk/wiki/Laminate_flooring" target="_blank" rel="noopener">Laminate flooring</a>; <strong>Alpine Floor</strong>, <a href="https://www.alpinefloor.com/news/spc-flooring-wear-layer-guide-0-3mm-0-5mm-and-0-7mm.html" target="_blank" rel="noopener">SPC flooring guide</a>.</li>
+  <li><strong>Floorworld</strong>, <a href="https://www.floorworld.com/blog-flooring-ideas-expert-advice/2026/july/best-flooring-for-uae-homes-how-heat-humidity-affect-your-choice/" target="_blank" rel="noopener">Best flooring for UAE homes</a> (July 2026).</li>
+  <li><strong>Government of India</strong>, <a href="https://www.indiacode.nic.in/bitstream/123456789/19012/1/reraact.pdf" target="_blank" rel="noopener">RERA Act 2016</a>, Section 2(k).</li>
+  <li><strong>Autodesk</strong>: <a href="https://help.autodesk.com/cloudhelp/2022/ENU/RevitLT-ArchDes/files/GUID-0BB62832-36DD-4E06-A9D4-EE98CE0FCF89.htm" target="_blank" rel="noopener">Room area boundary location</a>; <a href="https://boards.autodesk.com/dubai-bim-mandate" target="_blank" rel="noopener">Dubai Municipality BIM mandate</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 8 November 2026. Model answers are examples; adapt them to your own projects and experience.</p>
+</div>

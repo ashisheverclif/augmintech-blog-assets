@@ -1,0 +1,280 @@
+<style>
+#aug-elevation-drawing{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-elevation-drawing *,#aug-elevation-drawing *::before,#aug-elevation-drawing *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-elevation-drawing{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-elevation-drawing.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-elevation-drawing .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-elevation-drawing .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-elevation-drawing .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-elevation-drawing .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-elevation-drawing .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-elevation-drawing .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-elevation-drawing h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-elevation-drawing h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-elevation-drawing p{margin-bottom:.9rem;font-size:16px;}
+#aug-elevation-drawing a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-elevation-drawing a:hover{border-color:var(--brand);}
+#aug-elevation-drawing hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-elevation-drawing .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-elevation-drawing .chart svg{width:100%;height:auto;display:block;}
+#aug-elevation-drawing .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-elevation-drawing .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-elevation-drawing .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-elevation-drawing .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-elevation-drawing .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-elevation-drawing .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-elevation-drawing .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-elevation-drawing table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-elevation-drawing caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-elevation-drawing thead tr{background:var(--slate);color:#fff;}
+#aug-elevation-drawing thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-elevation-drawing tbody tr:nth-child(even){background:var(--surface);}
+#aug-elevation-drawing tbody tr:hover{background:var(--brand-lite);}
+#aug-elevation-drawing td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-elevation-drawing td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-elevation-drawing tbody tr.hl{background:var(--green-lite)!important;}
+#aug-elevation-drawing tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-elevation-drawing ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-elevation-drawing ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-elevation-drawing .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-elevation-drawing .cta-green{background:var(--slate);}
+#aug-elevation-drawing .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-elevation-drawing .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-elevation-drawing .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-elevation-drawing .cta-btn-blue{color:var(--brand);}#aug-elevation-drawing .cta-btn-green{color:var(--slate);}
+#aug-elevation-drawing figure{margin:1.5rem 0;}
+#aug-elevation-drawing figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-elevation-drawing figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-elevation-drawing dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-elevation-drawing dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-elevation-drawing dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-elevation-drawing .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-elevation-drawing .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-elevation-drawing .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-elevation-drawing .srcs{list-style:none;padding:0;}
+#aug-elevation-drawing .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-elevation-drawing .srcs li:last-child{border-bottom:none;}
+
+/* ===== definition ===== */#aug-elevation-drawing .def97{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin:1.3rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#F4F6F8;border:1px solid var(--border);}
+#aug-elevation-drawing .def97 p{margin:0;font-size:16.5px;line-height:1.65;color:var(--ink-mid);} #aug-elevation-drawing .def97 b{color:var(--ink);}
+#aug-elevation-drawing .def97 .eye{display:flex;gap:6px;align-items:center;font-family:var(--mono);font-size:11px;color:var(--muted);}
+#aug-elevation-drawing .def97 .eye svg{width:96px;height:64px;}
+
+/* ===== figures ===== */#aug-elevation-drawing .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-elevation-drawing .dfig svg{display:block;width:100%;height:auto;}
+#aug-elevation-drawing .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;}
+#aug-elevation-drawing .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-elevation-drawing .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-elevation-drawing figure.pf{margin:1.2rem 0;} #aug-elevation-drawing figure.pf figcaption{font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+
+/* ===== comparison ===== */#aug-elevation-drawing .pse th:nth-child(2){background:#2B6CB0;} #aug-elevation-drawing .pse th:nth-child(3){background:#B5371B;} #aug-elevation-drawing .pse th:nth-child(4){background:#3A4652;}
+#aug-elevation-drawing .pse td:first-child{font-weight:700;white-space:nowrap;}
+
+/* ===== elevation list ===== */#aug-elevation-drawing .elv{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1rem 0;}
+#aug-elevation-drawing .elv>div{border:1px solid var(--border);border-radius:var(--radius);padding:.8rem .95rem;background:#fff;}
+#aug-elevation-drawing .elv h3{margin:0 0 .4rem;font-size:15.5px;}
+#aug-elevation-drawing .elv ul{margin:0;padding-left:1.1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);} #aug-elevation-drawing .elv li{margin-bottom:.25rem;}
+
+/* ===== cut vs beyond ===== */#aug-elevation-drawing .cvb{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:1rem 0;}
+#aug-elevation-drawing .cvb div{border-radius:var(--radius-sm);padding:.7rem .8rem;font-size:13.5px;line-height:1.5;color:var(--ink-mid);background:var(--surface);}
+#aug-elevation-drawing .cvb b{display:flex;align-items:center;gap:8px;font-size:14.5px;color:var(--ink);margin-bottom:.25rem;}
+#aug-elevation-drawing .cvb i{display:inline-block;width:34px;height:12px;}
+#aug-elevation-drawing .cvb .c i{background:repeating-linear-gradient(45deg,#1E2833 0 1.5px,#fff 1.5px 5px);border:1.5px solid #1E2833;}
+#aug-elevation-drawing .cvb .b i{border-top:1px solid #7A8794;height:0;margin-top:6px;}
+#aug-elevation-drawing .cvb .h i{border-top:1.5px dashed #7A8794;height:0;margin-top:6px;}
+
+/* ===== details ===== */#aug-elevation-drawing .det3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1.1rem 0;}
+#aug-elevation-drawing .det3 figure{margin:0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-elevation-drawing .det3 svg{display:block;width:100%;height:auto;}
+#aug-elevation-drawing .det3 figcaption{font-family:var(--body);margin-top:0;padding:.55rem .75rem;border-top:1px solid var(--border);font-size:12.5px;line-height:1.5;color:var(--ink-mid);background:var(--surface);}
+#aug-elevation-drawing .det3 figcaption b{display:block;color:var(--ink);font-size:13.5px;}
+
+/* ===== cad vs revit ===== */#aug-elevation-drawing .cr{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-elevation-drawing .cr>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-elevation-drawing .cr .a{background:#FDF3EF;border:1px solid #F0C9BB;} #aug-elevation-drawing .cr .r{background:#EEF4FA;border:1px solid #CFDDEB;}
+#aug-elevation-drawing .cr h3{margin:0 0 .4rem;font-size:16px;} #aug-elevation-drawing .cr .a h3{color:#B5371B;} #aug-elevation-drawing .cr .r h3{color:#1F4A6E;}
+#aug-elevation-drawing .cr ol{margin:0;padding-left:1.15rem;} #aug-elevation-drawing .cr li{margin-bottom:.3rem;}
+
+/* ===== gulf ===== */#aug-elevation-drawing .gc{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+#aug-elevation-drawing .gc-r{display:grid;grid-template-columns:160px 1fr;border-bottom:1px solid var(--border);}
+#aug-elevation-drawing .gc-r:last-child{border-bottom:none;}
+#aug-elevation-drawing .gc-r>div{padding:.6rem .85rem;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-elevation-drawing .gc-r>div:first-child{font-weight:700;color:#8A5A00;background:#FBF4E8;}
+#aug-elevation-drawing .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-elevation-drawing .code{font-family:var(--mono);font-size:12.5px;background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:1px 5px;color:var(--ink);}
+
+@media(max-width:640px){
+  #aug-elevation-drawing .def97{grid-template-columns:1fr;} #aug-elevation-drawing .def97 .eye{display:none;}
+  #aug-elevation-drawing .elv,#aug-elevation-drawing .cr,#aug-elevation-drawing .cvb,#aug-elevation-drawing .det3{grid-template-columns:1fr;}
+  #aug-elevation-drawing .gc-r{grid-template-columns:1fr;} #aug-elevation-drawing .gc-r>div:first-child{padding-bottom:.3rem;}
+  #aug-elevation-drawing .pse table{min-width:600px;}
+  #aug-elevation-drawing .dfig.wide{overflow-x:auto;} #aug-elevation-drawing .dfig.wide svg{min-width:620px;}
+  #aug-elevation-drawing .cta{flex-direction:column;align-items:flex-start;}
+  #aug-elevation-drawing .cta>div{max-width:100%;} #aug-elevation-drawing .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-elevation-drawing .cta>div:last-child .cta-btn{margin-left:0;}
+}
+#aug-elevation-drawing .ph{aspect-ratio:auto}#aug-elevation-drawing .ph img{position:static;display:block;width:100%;height:auto;object-fit:contain;cursor:zoom-in}#aug-elevation-drawing .dfig svg,#aug-elevation-drawing .det3 svg{cursor:zoom-in}#aug-elevation-drawing .dfig.wide svg{min-width:0!important}#aug-elevation-drawing .det3{grid-template-columns:1fr}#aug-elevation-drawing .det3 figure{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:center}#aug-elevation-drawing .det3 figcaption{font-size:15px;border:0;background:white}#aug-elevation-drawing .det3 figcaption b{font-size:17px;margin-bottom:10px}#aug-elevation-drawing .dfig figcaption{font-family:var(--body);font-size:13px;line-height:1.6}#aug-elevation-drawing .cta-btn{white-space:normal;text-align:center}#aug-elevation-drawing.blog{overflow-wrap:break-word}#aug-elevation-drawing .blog img{max-width:100%}
+#aug-elevation-drawing #zoom97{border:0;border-radius:12px;padding:18px;width:96vw;max-width:1500px;max-height:94vh;margin:auto;background:white}#aug-elevation-drawing #zoom97::backdrop{background:rgba(10,25,40,.8)}#aug-elevation-drawing #zoom97 button{display:block;margin:0 0 14px auto;padding:10px 20px;background:#19394e;color:white;border:0;border-radius:6px;cursor:pointer}#aug-elevation-drawing #zoom97 img{display:block;width:100%;height:auto;cursor:zoom-in}#aug-elevation-drawing #zoom97 img.zoomed{width:1800px;max-width:none;cursor:zoom-out}@media(max-width:560px){#aug-elevation-drawing .det3 figure{grid-template-columns:1fr}#aug-elevation-drawing.blog{padding-left:18px;padding-right:18px}#aug-elevation-drawing .cta-btn{max-width:100%}}
+/* ===== Augmintech theme overrides ===== */
+#aug-elevation-drawing.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-elevation-drawing h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-elevation-drawing a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-elevation-drawing a:hover{color:#18d104;}
+#aug-elevation-drawing .cta{background:#1a1a1a;}
+#aug-elevation-drawing .cta a.cta-btn{text-decoration:none;}
+#aug-elevation-drawing .cta-btn-blue{background:#18d104;color:#000;}
+#aug-elevation-drawing .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-elevation-drawing [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-elevation-drawing">
+
+
+<div class="def97">
+  <p><b>An elevation drawing shows one face of a building as if you were standing straight in front of it, with nothing cut away.</b> Below, the same small building is drawn as a plan, a section and an elevation, side by side, so you can see exactly how the three differ.</p>
+  <div class="eye"><svg viewBox="0 0 96 64" aria-hidden="true"><circle cx="10" cy="32" r="6" fill="#fff" stroke="#1E2833" stroke-width="1.5"/><circle cx="10" cy="32" r="2.2" fill="#1E2833"/><line x1="18" y1="32" x2="52" y2="32" stroke="#1E2833" stroke-dasharray="3 2"/><rect x="56" y="12" width="34" height="40" fill="#E3DED3" stroke="#1E2833"/><rect x="62" y="30" width="8" height="22" fill="#C8B49A"/><rect x="74" y="24" width="12" height="10" fill="#DDEBF6" stroke="#1E2833" stroke-width=".6"/></svg></div>
+</div>
+<p>If you are a student learning to read and draw architectural drawings, these three views are the core of every drawing set. Once you can picture how each one is made, the rest of the set makes sense.</p>
+
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/97-architectural-cutaway-study-model-with.webp" alt="Architectural cutaway study model with printed plans and elevations on a studio desk" loading="lazy"></div><figcaption>A cutaway study model reveals interior space and construction depth. AI-generated editorial illustration, separate from the dimensioned studio example below.</figcaption></figure>
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>A plan is a horizontal cut,</strong> usually about 1.2 m above the floor, looking down.</li>
+  <li><strong>A section is a vertical cut</strong> through the building, looking sideways in the direction of the arrows on the plan.</li>
+  <li><strong>An elevation cuts nothing:</strong> it shows one outside face, with materials, openings and levels.</li>
+  <li><strong>In a section, what is cut is drawn thick or hatched;</strong> what you see beyond the cut is drawn thin.</li>
+  <li><strong>A detail drawing zooms in at 1:10 or 1:20</strong> to show how one junction, such as a wall base or window head, is built.</li>
+  <li><strong>In <a href="https://augmintech.com/learn-revit/">Revit</a>, all of them are views of one model,</strong> so they never disagree; in <a href="https://augmintech.com/autocad-download/">AutoCAD</a> you draw and update each by hand.</li>
+</ul>
+
+<h2 id="difference">Plan, Section and Elevation: The Difference</h2>
+<p>All three are flat, measured drawings of the same building. The difference is <strong>where you cut and which way you look</strong>.</p>
+<figure class="dfig">
+  <svg viewBox="0 0 640 390" role="img" aria-label="How plans, sections and elevations are cut: a horizontal plane at window height makes the plan, a vertical plane makes the section, and looking straight at a face gives the elevation"><rect width="640" height="390" fill="#fff"/><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#1E2833"/></marker></defs><polygon points="250.0,55.0 405.9,145.0 302.0,205.0 146.1,115.0" fill="#EEF0F2" stroke="#1E2833" stroke-width="1"/><polygon points="146.1,235.0 302.0,325.0 302.0,205.0 146.1,115.0" fill="#E3DED3" stroke="#1E2833" stroke-width="1"/><polygon points="405.9,265.0 302.0,325.0 302.0,205.0 405.9,145.0" fill="#D2CCBF" stroke="#1E2833" stroke-width="1"/><polygon points="166.9,247.0 192.8,262.0 192.8,199.0 166.9,184.0" fill="#C8B49A" stroke="#1E2833" stroke-width=".8"/><polygon points="224.0,253.0 276.0,283.0 276.0,242.5 224.0,212.5" fill="#DDEBF6" stroke="#1E2833" stroke-width=".8"/><polygon points="250.0,103.0 468.2,229.0 302.0,325.0 83.7,199.0" fill="#2B6CB0" fill-opacity=".14" stroke="#2B6CB0" stroke-width="1.2" stroke-dasharray="5 3"/><polygon points="372.1,218.5 205.8,314.5 205.8,155.5 372.1,59.5" fill="#B5371B" fill-opacity=".12" stroke="#B5371B" stroke-width="1.2" stroke-dasharray="5 3"/><line x1="468.2" y1="229.0" x2="498.2" y2="259.0" stroke="#2B6CB0" stroke-width="1"/><text x="502.2" y="263.0" font-size="12" text-anchor="start" fill="#2B6CB0" font-weight="700" font-family="sans-serif">PLAN: horizontal cut,</text><text x="502.2" y="277.0" font-size="10.5" text-anchor="start" fill="#7A8794" font-weight="400" font-family="sans-serif">1.2 m up, looking down</text><text x="380.1" y="63.5" font-size="12" text-anchor="start" fill="#B5371B" font-weight="700" font-family="sans-serif">SECTION: vertical cut,</text><text x="380.1" y="77.5" font-size="12" text-anchor="start" fill="#B5371B" font-weight="700" font-family="sans-serif">looking sideways</text><circle cx="117.5" cy="278.5" r="7" fill="#fff" stroke="#1E2833" stroke-width="1.2"/><circle cx="117.5" cy="278.5" r="2.5" fill="#1E2833"/><path d="M117.5 278.5 L211.0 224.5" stroke="#1E2833" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#ar)"/><text x="111.5" y="302.5" font-size="12" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">ELEVATION: no cut,</text><text x="111.5" y="316.5" font-size="10.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">looking straight at one face</text></svg>
+  <figcaption>A plan cuts horizontally and looks down; a section cuts vertically and looks sideways; an elevation looks straight at an outside face without cutting. Augmintech diagram.</figcaption>
+</figure>
+<p>Here is a small 6.0 × 4.0 m studio drawn all three ways. The dashed projection lines show how the front elevation lines up with the plan above it, and the section A-A is cut where the red line crosses the plan.</p>
+<figure class="dfig wide">
+  <svg viewBox="0 0 760 680" role="img" aria-label="The same small building drawn as a plan, a section A-A and a front elevation, aligned with projection lines"><rect width="760" height="680" fill="#fff"/><defs><pattern id="hat" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="5" fill="#fff"/><line x1="0" y1="0" x2="0" y2="5" stroke="#1E2833" stroke-width="1.4"/></pattern></defs><defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#1E2833"/></marker></defs><path d="M60 60 h270.0 v180.0 h-270.0 Z M70.35 70.35 v159.3 h249.3 v-159.3 Z" fill="url(#hat)" fill-rule="evenodd" stroke="#1E2833" stroke-width="1.6"/><rect x="96.0" y="228.7" width="45.0" height="12.3" fill="#fff" stroke="#fff" stroke-width="0"/><path d="M96.0 229.7 L96.0 184.7 A45.0 45.0 0 0 1 141.0 229.7" fill="none" stroke="#1E2833" stroke-width=".8"/><rect x="195.0" y="229.7" width="90.0" height="10.3" fill="#fff" stroke="#1E2833" stroke-width="1"/><line x1="195.0" y1="234.8" x2="285.0" y2="234.8" stroke="#1E2833" stroke-width="0.8"/><rect x="319.6" y="114.0" width="10.3" height="54.0" fill="#fff" stroke="#1E2833" stroke-width="1"/><line x1="324.8" y1="114.0" x2="324.8" y2="168.0" stroke="#1E2833" stroke-width="0.8"/><text x="195.0" y="150.0" font-size="12" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">STUDIO</text><text x="195.0" y="164.0" font-size="10" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">5.54 x 3.54 m</text><line x1="240.0" y1="42.0" x2="240.0" y2="258.0" stroke="#B5371B" stroke-width="1.3" stroke-dasharray="8 3 2 3"/><circle cx="240.0" cy="36" r="8" fill="#fff" stroke="#B5371B" stroke-width="1.2"/><text x="240.0" y="40.0" font-size="10" text-anchor="middle" fill="#B5371B" font-weight="700" font-family="sans-serif">A</text><circle cx="240.0" cy="270.0" r="8" fill="#fff" stroke="#B5371B" stroke-width="1.2"/><text x="240.0" y="274.0" font-size="10" text-anchor="middle" fill="#B5371B" font-weight="700" font-family="sans-serif">A</text><path d="M249.0 36 l12 0 m-4 -4 l4 4 l-4 4" fill="none" stroke="#B5371B" stroke-width="1.2"/><path d="M249.0 270.0 l12 0 m-4 -4 l4 4 l-4 4" fill="none" stroke="#B5371B" stroke-width="1.2"/><text x="60.0" y="26.0" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">1  PLAN</text><path d="M195.0 298.0 L195.0 280.0" stroke="#1E2833" stroke-width="1.3" marker-end="url(#ar2)"/><text x="203.0" y="296.0" font-size="10" text-anchor="start" fill="#7A8794" font-weight="400" font-family="sans-serif">view for front elevation</text><text x="60.0" y="367.5" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">3  FRONT (SOUTH) ELEVATION</text><line x1="35.0" y1="600.0" x2="334.0" y2="600.0" stroke="#1E2833" stroke-width="2"/><rect x="60.0" y="579.8" width="270.0" height="20.2" fill="#EDEAE2" stroke="#1E2833" stroke-width="1"/><rect x="60.0" y="444.8" width="270.0" height="135.0" fill="#fff" stroke="#1E2833" stroke-width="1"/><rect x="57.0" y="438.0" width="276.0" height="6.8" fill="#D9D4CA" stroke="#1E2833" stroke-width="1"/><rect x="60.0" y="397.5" width="270.0" height="40.5" fill="#fff" stroke="#1E2833" stroke-width="1"/><rect x="96.0" y="485.2" width="45.0" height="94.5" fill="#C8B49A" stroke="#1E2833" stroke-width="1"/><rect x="195.0" y="478.5" width="90.0" height="60.8" fill="#DDEBF6" stroke="#1E2833" stroke-width="1"/><line x1="240.0" y1="478.5" x2="240.0" y2="539.2" stroke="#1E2833" stroke-width="0.8"/><line x1="60.0" y1="244.0" x2="60.0" y2="393.5" stroke="#B8C0C9" stroke-width="0.5" stroke-dasharray="3 3"/><line x1="96.0" y1="244.0" x2="96.0" y2="393.5" stroke="#B8C0C9" stroke-width="0.5" stroke-dasharray="3 3"/><line x1="141.0" y1="244.0" x2="141.0" y2="393.5" stroke="#B8C0C9" stroke-width="0.5" stroke-dasharray="3 3"/><line x1="195.0" y1="244.0" x2="195.0" y2="393.5" stroke="#B8C0C9" stroke-width="0.5" stroke-dasharray="3 3"/><line x1="285.0" y1="244.0" x2="285.0" y2="393.5" stroke="#B8C0C9" stroke-width="0.5" stroke-dasharray="3 3"/><line x1="330.0" y1="244.0" x2="330.0" y2="393.5" stroke="#B8C0C9" stroke-width="0.5" stroke-dasharray="3 3"/><line x1="336.0" y1="600.0" x2="348.0" y2="600.0" stroke="#1E2833" stroke-width="0.8"/><text x="351.0" y="604.0" font-size="10" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">GL +0.000</text><line x1="336.0" y1="579.8" x2="348.0" y2="579.8" stroke="#1E2833" stroke-width="0.8"/><text x="351.0" y="583.8" font-size="10" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">FFL +0.450</text><line x1="336.0" y1="438.0" x2="348.0" y2="438.0" stroke="#1E2833" stroke-width="0.8"/><text x="351.0" y="442.0" font-size="10" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">TOS +3.600</text><line x1="336.0" y1="397.5" x2="348.0" y2="397.5" stroke="#1E2833" stroke-width="0.8"/><text x="351.0" y="401.5" font-size="10" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">+4.500</text><text x="60.0" y="622.0" font-size="10.5" text-anchor="start" fill="#7A8794" font-weight="400" font-family="sans-serif">Nothing is cut: you see the whole face, with</text><text x="60.0" y="636.0" font-size="10.5" text-anchor="start" fill="#7A8794" font-weight="400" font-family="sans-serif">materials and levels.</text><text x="470.0" y="367.5" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">2  SECTION A-A</text><line x1="445.0" y1="600.0" x2="654.0" y2="600.0" stroke="#1E2833" stroke-width="2"/><rect x="470.0" y="397.5" width="10.3" height="229.5" fill="url(#hat)" stroke="#1E2833" stroke-width="1.4"/><rect x="639.6" y="397.5" width="10.3" height="229.5" fill="url(#hat)" stroke="#1E2833" stroke-width="1.4"/><rect x="638.6" y="478.5" width="12.3" height="60.8" fill="#DDEBF6" stroke="#1E2833" stroke-width="1"/><rect x="470.0" y="438.0" width="180.0" height="6.8" fill="url(#hat)" stroke="#1E2833" stroke-width="1.4"/><rect x="470.0" y="579.8" width="180.0" height="4.5" fill="url(#hat)" stroke="#1E2833" stroke-width="1.4"/><rect x="524.0" y="478.5" width="54.0" height="60.8" fill="none" stroke="#7A8794" stroke-width="0.6"/><text x="551.0" y="510.0" font-size="9" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">window</text><text x="551.0" y="521.0" font-size="9" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">beyond</text><line x1="656.0" y1="600.0" x2="668.0" y2="600.0" stroke="#1E2833" stroke-width="0.8"/><text x="671.0" y="604.0" font-size="10" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">GL</text><line x1="656.0" y1="579.8" x2="668.0" y2="579.8" stroke="#1E2833" stroke-width="0.8"/><text x="671.0" y="583.8" font-size="10" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">FFL</text><line x1="656.0" y1="444.8" x2="668.0" y2="444.8" stroke="#1E2833" stroke-width="0.8"/><text x="671.0" y="454.8" font-size="10" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">SOFFIT</text><line x1="656.0" y1="438.0" x2="668.0" y2="438.0" stroke="#1E2833" stroke-width="0.8"/><text x="671.0" y="438.0" font-size="10" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">TOS</text><line x1="458" y1="579.75" x2="458" y2="444.75" stroke="#1E2833" stroke-width=".7"/><text x="454.0" y="512.2" font-size="10" text-anchor="middle" fill="#1E2833" font-weight="400" font-family="sans-serif" transform="rotate(-90 454.0 512.2)">3000 clear</text><text x="450.0" y="644.0" font-size="10.5" text-anchor="start" fill="#7A8794" font-weight="400" font-family="sans-serif">Hatched = cut. Thin grey = seen beyond.</text><text x="450.0" y="658.0" font-size="10.5" text-anchor="start" fill="#7A8794" font-weight="400" font-family="sans-serif">Left = rear (north) wall, right = front wall.</text></svg>
+  <figcaption>One building, three drawings: (1) plan with section line A-A, (2) section A-A looking east, (3) front elevation. Augmintech drawing, not to scale on screen.</figcaption>
+</figure>
+
+<div class="tbl-wrap pse">
+<table>
+  <thead><tr><th></th><th>Plan</th><th>Section</th><th>Elevation</th></tr></thead>
+  <tbody>
+    <tr><td>How it's made</td><td>Horizontal cut, looking down</td><td>Vertical cut, looking sideways</td><td>No cut, looking at one face</td></tr>
+    <tr><td>Main purpose</td><td>Layout: rooms, walls, doors, windows</td><td>Heights and how floors, walls and roof connect</td><td>Appearance: openings, materials, overall heights</td></tr>
+    <tr><td>Shows heights?</td><td>Only as levels or notes</td><td>Yes, floor to floor and floor to ceiling</td><td>Yes, levels of ground, floors, roof, parapet</td></tr>
+    <tr><td>What is thick</td><td>Walls cut at plan height</td><td>Walls, slabs and roof cut by the section</td><td>Building outline and ground line</td></tr>
+    <tr><td>Typical scale</td><td>1:50 or 1:100</td><td>Same as the plans</td><td>Same as the plans</td></tr>
+    <tr><td>Must label</td><td>Room names, dimensions, tags, section marks, north point</td><td>Levels, heights, materials, detail callouts</td><td>Levels, materials and finishes, opening tags</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Scales: IS 962:1989 recommends 1:50 or 1:100 for building plans (as summarised by Infralens); First in Architecture notes that external elevations are usually drawn at the same scale as the floor plans they relate to.</p>
+
+<div class="cta">
+  <div><h3>Generate Plans, Sections and Elevations from One Model</h3><p>Augmintech's BIM Architecture program teaches building information modelling for architecture, where every plan, section and elevation is a live view of the same model. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">View the BIM Architecture program</a></div>
+</div>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="elevation">What Is an Elevation Drawing?</h2>
+<p>An elevation is the view of one face of the building, drawn flat, as if you stood directly in front of every point of it at once. There is no perspective, so a window 2 m wide measures 2 m on the drawing at scale, wherever it sits on the façade.</p>
+<div class="elv">
+  <div><h3>Types of elevation</h3><ul><li><strong>Front, rear and side elevations</strong>, one for each face of the building</li><li>Often named by <strong>compass direction</strong> (north, south, east, west), the usual practice in UK-style sets</li><li><strong>Interior elevations</strong> of single walls, such as a <a href="https://augmintech.com/types-of-kitchen-layout/">kitchen</a> or bathroom, usually at a larger scale</li></ul></div>
+  <div><h3>What must be labelled</h3><ul><li><strong>Levels:</strong> ground, finished floor, top of slab, parapet</li><li><strong>Heights</strong> not shown on the plan, such as sill and lintel</li><li><strong>Materials and finishes</strong> for each surface</li><li><strong>Opening tags</strong> that match the plan and schedules, and gridlines on larger buildings</li></ul></div>
+</div>
+<p>In the studio elevation above, notice that you can read every height from the level marks on the right: ground at +0.000, finished floor at +0.450, top of slab at +3.600, parapet at +4.500.</p>
+
+<h2 id="section">What Is a Building Section?</h2>
+<p>A section is what you would see if you sliced the building vertically and pulled one half away. Its position is shown on the plan by a <strong>section line</strong>: a chain line with a tag (A-A) at each end, and arrows pointing the way you are looking. First in Architecture notes that sets usually include at least two sections at right angles to each other, and that the section mark on the plan references the drawing number and sheet where the section appears.</p>
+<div class="cvb">
+  <div class="c"><b><i></i>Cut</b>Anything the cutting plane passes through: walls, slabs, roof, foundations. Drawn with thick lines or hatching.</div>
+  <div class="b"><b><i></i>Beyond</b>Things you see past the cut but do not slice through, such as a window in the far wall. Drawn with thin lines.</div>
+  <div class="h"><b><i></i>Hidden</b>Things behind other surfaces, shown dashed only when they matter.</div>
+</div>
+<p>India's IS 962:1989 asks for two line thicknesses, with thick lines at least twice as thick as thin ones, which is what makes the cut stand out from what lies beyond. A section is also where you read <strong>floor-to-floor and floor-to-ceiling heights</strong>: in the studio section, the clear height from finished floor to slab soffit is 3,000 mm.</p>
+
+<h2 id="detail">What Is a Detail Drawing?</h2>
+<p>A detail drawing zooms in on one junction to show exactly how it is built: every layer, its thickness and how it meets the next. Details are called up from plans and sections by a circled reference, and IS 962:1989 recommends 1:10 or 1:20 for them (as summarised by Infralens). Here are three common ones:</p>
+<div class="det3">
+  <figure><svg viewBox="0 0 300 330" role="img" aria-label="Wall section detail at plinth level, 1:20, showing foundation, plinth, damp-proof course and floor build-up"><rect width="300" height="330" fill="#fff"/><line x1="10.0" y1="200.0" x2="290.0" y2="200.0" stroke="#1E2833" stroke-width="1.5"/><defs><pattern id="soil" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 8 L8 0" stroke="#C9B99A" stroke-width="1"/></pattern><pattern id="brk" width="10" height="6" patternUnits="userSpaceOnUse"><rect width="10" height="6" fill="#E8C9B5"/><path d="M0 6 H10 M5 0 V3" stroke="#B88A6E" stroke-width=".6"/></pattern></defs><rect x="10.0" y="200.0" width="280.0" height="120.0" fill="url(#soil)" stroke="none" stroke-width="0"/><rect x="60.0" y="290.0" width="150.0" height="22.0" fill="#D9D4CA" stroke="#1E2833" stroke-width="1"/><rect x="120.0" y="50.0" width="25.3" height="240.0" fill="url(#brk)" stroke="#1E2833" stroke-width="1"/><rect x="119.0" y="146.5" width="27.3" height="4.0" fill="#1E2833" stroke="#1E2833" stroke-width="0"/><rect x="145.3" y="150.5" width="150.0" height="6.0" fill="#9AA3AD" stroke="#1E2833" stroke-width="1"/><rect x="145.3" y="156.5" width="150.0" height="12.0" fill="#D9D4CA" stroke="#1E2833" stroke-width="1"/><rect x="145.3" y="168.5" width="150.0" height="51.5" fill="#F4F1E8" stroke="none" stroke-width="0"/><line x1="132.7" y1="148.5" x2="200.0" y2="136.5" stroke="#B5371B" stroke-width="0.6"/><text x="203.0" y="140.0" font-size="10" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">DPC</text><line x1="185.3" y1="159.5" x2="200.0" y2="172.5" stroke="#B5371B" stroke-width="0.6"/><text x="203.0" y="176.0" font-size="10" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">FLOOR BUILD-UP</text><line x1="160.0" y1="301.0" x2="200.0" y2="301.0" stroke="#B5371B" stroke-width="0.6"/><text x="203.0" y="304.5" font-size="10" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">PCC FOOTING</text><line x1="132.7" y1="100.0" x2="200.0" y2="100.0" stroke="#B5371B" stroke-width="0.6"/><text x="203.0" y="103.5" font-size="10" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">230 BRICK WALL</text><text x="112.0" y="153.5" font-size="9.5" text-anchor="end" fill="#1E2833" font-weight="400" font-family="sans-serif">FFL +0.450</text><text x="112.0" y="197.0" font-size="9.5" text-anchor="end" fill="#1E2833" font-weight="400" font-family="sans-serif">GL +0.000</text><text x="150.0" y="325.0" font-size="12" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">WALL SECTION 1:20</text></svg><figcaption><b>Wall section at plinth</b>Footing, brick wall, damp-proof course (DPC) and floor build-up, with ground and floor levels.</figcaption></figure>
+  <figure><svg viewBox="0 0 300 330" role="img" aria-label="Stair detail, 1:20, showing risers of 175 mm and treads of 275 mm on a waist slab"><rect width="300" height="330" fill="#fff"/><polygon points="30.0,270.0 30.0,242.0 74.0,242.0 74.0,214.0 118.0,214.0 118.0,186.0 162.0,186.0 162.0,158.0 206.0,158.0 206.0,130.0 250.0,130.0 250.0,170.0 30.0,310.0" fill="#D9D4CA" stroke="#1E2833" stroke-width="1.2"/><line x1="30.0" y1="310.0" x2="250.0" y2="170.0" stroke="#7A8794" stroke-width="0.8" stroke-dasharray="4 3"/><line x1="66.0" y1="214.0" x2="66.0" y2="242.0" stroke="#B5371B" stroke-width="0.7"/><text x="62.0" y="232.0" font-size="10" text-anchor="end" fill="#B5371B" font-weight="700" font-family="sans-serif">175</text><line x1="74.0" y1="206.0" x2="118.0" y2="206.0" stroke="#B5371B" stroke-width="0.7"/><text x="96.0" y="202.0" font-size="10" text-anchor="middle" fill="#B5371B" font-weight="700" font-family="sans-serif">275</text><text x="160.0" y="300.0" font-size="9.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">RCC WAIST SLAB</text><text x="20.0" y="40.0" font-size="10.5" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Riser 175 (max 190)</text><text x="20.0" y="55.0" font-size="10.5" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">Tread 275 (min 250)</text><text x="20.0" y="70.0" font-size="9.5" text-anchor="start" fill="#7A8794" font-weight="400" font-family="sans-serif">NBC 2016 Part 4, residential</text><text x="150.0" y="325.0" font-size="12" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">STAIR DETAIL 1:20</text></svg><figcaption><b>Stair</b>Riser and tread sizes on a waist slab. India's NBC 2016 (Part 4) allows residential risers up to 190 mm and treads from 250 mm.</figcaption></figure>
+  <figure><svg viewBox="0 0 300 330" role="img" aria-label="Window head detail, 1:10, showing lintel, drip, plaster, frame and glazing"><rect width="300" height="330" fill="#fff"/><rect x="100.0" y="40.0" width="82.0" height="90.0" fill="#C9CED6" stroke="#1E2833" stroke-width="1.2"/><text x="141.0" y="90.0" font-size="9.5" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">RCC LINTEL</text><rect x="92.0" y="130.0" width="98.0" height="6.0" fill="#EDEAE2" stroke="none" stroke-width="0"/><rect x="40.0" y="110.0" width="60.0" height="14.0" fill="#C9CED6" stroke="#1E2833" stroke-width="1"/><path d="M44 124 v6" stroke="#1E2833" stroke-width="1.5"/><rect x="122.0" y="136.0" width="38.0" height="26.0" fill="#B0BAC4" stroke="#1E2833" stroke-width="1.2"/><rect x="134.0" y="162.0" width="6.0" height="130.0" fill="#DDEBF6" stroke="#1E2833" stroke-width="1"/><rect x="142.0" y="162.0" width="6.0" height="130.0" fill="#DDEBF6" stroke="#1E2833" stroke-width="1"/><path d="M120 136 l-4 0" stroke="#1E2833" stroke-width="2"/><line x1="44.0" y1="128.0" x2="44.0" y2="190.0" stroke="#B5371B" stroke-width="0.6"/><text x="44.0" y="202.0" font-size="9.5" text-anchor="middle" fill="#1E2833" font-weight="400" font-family="sans-serif">DRIP GROOVE</text><line x1="160.0" y1="149.0" x2="215.0" y2="150.0" stroke="#B5371B" stroke-width="0.6"/><text x="218.0" y="153.0" font-size="9.5" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">FRAME</text><line x1="140.0" y1="230.0" x2="215.0" y2="230.0" stroke="#B5371B" stroke-width="0.6"/><text x="218.0" y="233.0" font-size="9.5" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">GLAZING</text><line x1="120.0" y1="136.0" x2="215.0" y2="118.0" stroke="#B5371B" stroke-width="0.6"/><text x="218.0" y="121.0" font-size="9.5" text-anchor="start" fill="#1E2833" font-weight="400" font-family="sans-serif">SEALANT</text><text x="65.0" y="104.0" font-size="9" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">OUTSIDE</text><text x="220.0" y="60.0" font-size="9" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">INSIDE</text><text x="150.0" y="325.0" font-size="12" text-anchor="middle" fill="#1E2833" font-weight="700" font-family="sans-serif">WINDOW HEAD DETAIL 1:10</text></svg><figcaption><b>Window head</b>Lintel, outside drip to throw water clear, frame, sealant and glazing.</figcaption></figure>
+</div>
+<p class="note">Detail drawings are schematic examples for learning, not construction details for a specific project. Stair limits: NBC 2016 Part 4, cl. 4.4.2, via Infralens.</p>
+
+<h2 id="draw">How to Draw Them in AutoCAD and Revit</h2>
+<div class="cr">
+  <div class="a"><h3>AutoCAD: draw each view</h3><ol><li>Draw the plan from the brief or site survey.</li><li>Draw construction lines down from the plan to project the elevation, then set heights from the levels.</li><li>Draw the section separately from the section line, layer by layer.</li><li>Change the design, and redraw the change in every view yourself.</li></ol></div>
+  <div class="r"><h3>Revit: generate views from one model</h3><ol><li>Model walls, floors, roof, doors and windows once, in 3D.</li><li>Elevations come from elevation markers, and a section from drawing a <span class="code">Section</span> line on the plan.</li><li>Cut elements are drawn thick and hatched automatically.</li><li>Change the model, and every plan, section and elevation updates.</li></ol></div>
+</div>
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/97-plan-section-line-and-corresponding.webp" alt="Plan section line and corresponding section A-A looking east" loading="lazy"></div>
+  <figcaption>Section A-A is located on the plan, with arrows indicating the viewing direction. Explanatory drawing, not a Revit screenshot.</figcaption>
+</figure>
+<p>AutoCAD is still the fastest way to learn projection, because you have to work out every line yourself. Revit is how most practices now produce coordinated sets, because a model cannot have a plan that disagrees with its section.</p>
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/97-front-elevation-aligned-to-plan.webp" alt="Front elevation aligned to plan openings using projection lines" loading="lazy"></div>
+  <figcaption>Project opening edges from the plan, then set vertical positions from the levels. Explanatory drawing, not an AutoCAD screenshot.</figcaption>
+</figure>
+
+<h2 id="gulf">Reading Drawings on Gulf Projects</h2>
+<p>Many Gulf consultancies work with British-style drawing practices, and the authorities add their own submission rules. Most of what you learned in India carries over: millimetres for dimensions, the same three views and the same symbols. A few things are worth knowing before your first Gulf set:</p>
+<div class="gc">
+  <div class="gc-r"><div>Levels</div><div>UK practice gives levels in metres to three decimal places, measured from a datum and kept positive (Designing Buildings). Expect labels such as FFL (finished floor level) and FSL (finished structural level).</div></div>
+  <div class="gc-r"><div>Datum and coordinates</div><div>Site plans tie into the local survey system. Dubai Municipality's survey network uses the DLTM coordinate system. If an absolute datum is used for levels, it must be stated on the drawings.</div></div>
+  <div class="gc-r"><div>Elevation names</div><div>Elevations are usually titled by compass direction (north, south, east, west) rather than front and rear.</div></div>
+  <div class="gc-r"><div>Revisions</div><div>Authorities can be strict about showing changes. Dubai Development Authority's submission standards (September 2021) require modifications to be clouded, with approved drawings in yellow clouds and proposals in red.</div></div>
+  <div class="gc-r"><div>Drawing numbers</div><div>Each authority sets a list of required drawings by discipline, such as architectural A-series and structural S-series sheets, so follow its numbering exactly.</div></div>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What is an elevation drawing?</div><div class="faq-a">An elevation drawing shows one face of a building as if you were standing straight in front of it, with nothing cut away. It shows openings, materials and the levels of the ground, floors, roof and parapet.</div></div>
+<div class="faq-item"><div class="faq-q">What is the difference between a section and an elevation?</div><div class="faq-a">A section cuts through the building and shows the inside: walls, floors and roof in cut, with heights. An elevation cuts nothing and shows only the outside face of the building.</div></div>
+<div class="faq-item"><div class="faq-q">What is a building section?</div><div class="faq-a">A building section is a vertical cut through a building, drawn as if one half were removed. Its position is marked on the plan by a section line with arrows, and it shows how floors, walls, roof and foundations fit together, with floor-to-floor heights.</div></div>
+<div class="faq-item"><div class="faq-q">What is a detail drawing in architecture?</div><div class="faq-a">A detail drawing is a large-scale drawing, usually 1:10 or 1:20, of one junction or element, such as a wall base, stair or window head. It shows every layer, size and material needed to build it.</div></div>
+<div class="faq-item"><div class="faq-q">What scale are elevation drawings drawn at?</div><div class="faq-a">Usually the same scale as the floor plans, which IS 962 recommends at 1:50 or 1:100. Interior elevations are often drawn larger to show more detail.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Bureau of Indian Standards</strong>, <a href="https://law.resource.org/pub/in/bis/S03/is.962.1989.pdf" target="_blank" rel="noopener">IS 962:1989, Code of Practice for Architectural and Building Drawings</a>; scale summary via <a href="https://infralens.in/code/IS-962-1989" target="_blank" rel="noopener">Infralens</a>.</li>
+  <li><strong>First in Architecture</strong>, <a href="https://www.firstinarchitecture.co.uk/technical-drawing-elevations-and-sections/" target="_blank" rel="noopener">Technical drawing: elevations and sections</a> (updated 13 September 2024).</li>
+  <li><strong>NBC 2016 Part 4</strong> stair limits via Infralens: <a href="https://infralens.in/thumbrules/max-staircase-riser-residential" target="_blank" rel="noopener">maximum riser</a>, <a href="https://infralens.in/thumbrules/min-staircase-tread-residential" target="_blank" rel="noopener">minimum tread</a>.</li>
+  <li><strong>Designing Buildings</strong>, <a href="https://www.designingbuildings.co.uk/w/Datum" target="_blank" rel="noopener">Datum</a>.</li>
+  <li><strong>Dubai Municipality</strong>, <a href="https://www.dm.gov.ae/survey-department/geodesy/" target="_blank" rel="noopener">Survey department: geodesy</a>; <strong>Dubai Development Authority</strong>, <a href="https://dda.gov.ae/-/media/Project/TECOM/Media/DDA/documents/drawings-submission-standards-september-2021.pdf" target="_blank" rel="noopener">Drawings submission standards</a> (September 2021).</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 7 November 2026.</p>
+</div>
+<dialog id="zoom97" aria-label="Enlarged diagram"><button type="button">Close</button><img alt="Enlarged diagram"></dialog><script>(function(){const d=document.getElementById('zoom97'),im=d.querySelector('img');document.querySelectorAll('.ph img,.dfig svg,.det3 svg').forEach(el=>{el.tabIndex=0;el.title='Click to enlarge';function open(){im.classList.remove('zoomed');im.src=el.tagName.toLowerCase()==='svg'?'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(el)):el.src;im.alt=el.getAttribute('alt')||el.getAttribute('aria-label')||'Drawing';d.showModal()}el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter')open()})});d.querySelector('button').onclick=()=>d.close();im.onclick=()=>im.classList.toggle('zoomed');d.onclick=e=>{if(e.target===d)d.close()}})();</script>

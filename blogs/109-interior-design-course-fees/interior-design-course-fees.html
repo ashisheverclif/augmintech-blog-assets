@@ -1,0 +1,365 @@
+<style>
+#aug-interior-design-course-fees{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-interior-design-course-fees *,#aug-interior-design-course-fees *::before,#aug-interior-design-course-fees *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-interior-design-course-fees{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-interior-design-course-fees.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-interior-design-course-fees .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-interior-design-course-fees .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-interior-design-course-fees .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-interior-design-course-fees .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-interior-design-course-fees .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-interior-design-course-fees .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-interior-design-course-fees h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-interior-design-course-fees h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-interior-design-course-fees p{margin-bottom:.9rem;font-size:16px;}
+#aug-interior-design-course-fees a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-interior-design-course-fees a:hover{border-color:var(--brand);}
+#aug-interior-design-course-fees hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-interior-design-course-fees .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-interior-design-course-fees .chart svg{width:100%;height:auto;display:block;}
+#aug-interior-design-course-fees .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-interior-design-course-fees .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-interior-design-course-fees .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-interior-design-course-fees .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-interior-design-course-fees .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-interior-design-course-fees .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-interior-design-course-fees .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-interior-design-course-fees table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-interior-design-course-fees caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-interior-design-course-fees thead tr{background:var(--slate);color:#fff;}
+#aug-interior-design-course-fees thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-interior-design-course-fees tbody tr:nth-child(even){background:var(--surface);}
+#aug-interior-design-course-fees tbody tr:hover{background:var(--brand-lite);}
+#aug-interior-design-course-fees td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-interior-design-course-fees td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-interior-design-course-fees tbody tr.hl{background:var(--green-lite)!important;}
+#aug-interior-design-course-fees tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-interior-design-course-fees ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-interior-design-course-fees ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-interior-design-course-fees .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-interior-design-course-fees .cta-green{background:var(--slate);}
+#aug-interior-design-course-fees .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-interior-design-course-fees .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-interior-design-course-fees .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-interior-design-course-fees .cta-btn-blue{color:var(--brand);}#aug-interior-design-course-fees .cta-btn-green{color:var(--slate);}
+#aug-interior-design-course-fees figure{margin:1.5rem 0;}
+#aug-interior-design-course-fees figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-interior-design-course-fees figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-interior-design-course-fees dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-interior-design-course-fees dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-interior-design-course-fees dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-interior-design-course-fees .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-interior-design-course-fees .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-interior-design-course-fees .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-interior-design-course-fees .srcs{list-style:none;padding:0;}
+#aug-interior-design-course-fees .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-interior-design-course-fees .srcs li:last-child{border-bottom:none;}
+
+#aug-interior-design-course-fees .ans{margin:1.3rem 0;padding:1rem 1.15rem;border-radius:var(--radius);background:#F4F6F8;border-left:4px solid var(--brand);font-size:16.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-interior-design-course-fees .ans b{color:var(--ink);}
+#aug-interior-design-course-fees .dfig{margin:1.4rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-interior-design-course-fees .dfig svg{display:block;width:100%;height:auto;}
+#aug-interior-design-course-fees .dfig figcaption{padding:.55rem .9rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);line-height:1.5;margin-top:0;}
+#aug-interior-design-course-fees .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-interior-design-course-fees .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-interior-design-course-fees figure.pf{margin:1.2rem 0;} #aug-interior-design-course-fees figure.pf figcaption{font-family:var(--body);font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;}
+#aug-interior-design-course-fees .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;} #aug-interior-design-course-fees .pair figure{margin:0;}
+#aug-interior-design-course-fees .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-interior-design-course-fees .alert{margin:1.2rem 0;padding:.85rem 1rem;border-radius:var(--radius);background:#FFF4E5;border:1px solid #F3D3A4;font-size:14.5px;line-height:1.6;}
+#aug-interior-design-course-fees .alert b{color:var(--warn);}
+#aug-interior-design-course-fees .t table{font-size:13.5px;} #aug-interior-design-course-fees .t td:first-child{font-weight:700;color:var(--ink);} #aug-interior-design-course-fees .t th{white-space:normal;}
+#aug-interior-design-course-fees .t .m{font-family:var(--mono);font-size:12px;white-space:nowrap;}
+#aug-interior-design-course-fees .t caption{caption-side:bottom;text-align:left;font-family:var(--body);text-transform:none;letter-spacing:0;font-size:12.5px;color:var(--muted);padding:.5rem .2rem 0;}
+#aug-interior-design-course-fees .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.2rem 0;}
+#aug-interior-design-course-fees .cards.two{grid-template-columns:1fr 1fr;} #aug-interior-design-course-fees .cards.four{grid-template-columns:repeat(4,1fr);}
+#aug-interior-design-course-fees .cards>div{border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:var(--radius);padding:.85rem .95rem;background:#fff;}
+#aug-interior-design-course-fees .cards>div.c2{border-top-color:#1D6B43;} #aug-interior-design-course-fees .cards>div.c3{border-top-color:#8A5A00;} #aug-interior-design-course-fees .cards>div.c4{border-top-color:#5B3A86;} #aug-interior-design-course-fees .cards>div.c5{border-top-color:#B5371B;}
+#aug-interior-design-course-fees .cards b{display:block;font-family:var(--display);font-size:15.5px;color:var(--ink);margin-bottom:.25rem;line-height:1.3;}
+#aug-interior-design-course-fees .cards span{display:block;font-size:14px;line-height:1.55;color:var(--ink-mid);}
+#aug-interior-design-course-fees .cards em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.5rem;}
+#aug-interior-design-course-fees .cards ul{margin:.3rem 0 0;padding-left:1.05rem;font-size:13.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-interior-design-course-fees .steps{list-style:none;margin:1.2rem 0;padding:0;counter-reset:s;display:grid;gap:10px;}
+#aug-interior-design-course-fees .steps li{counter-increment:s;position:relative;padding:.8rem 1rem .8rem 3.4rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;font-size:15px;line-height:1.6;}
+#aug-interior-design-course-fees .steps li::before{content:counter(s);position:absolute;left:.9rem;top:.8rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--display);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+#aug-interior-design-course-fees .steps li b{display:block;font-family:var(--display);color:var(--ink);font-size:15.5px;margin-bottom:2px;}
+#aug-interior-design-course-fees .nl{list-style:none;padding:0;margin:1.2rem 0;counter-reset:u;}
+#aug-interior-design-course-fees .nl li{counter-increment:u;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;padding:.75rem 0;border-top:1px solid var(--border);font-size:15px;line-height:1.6;}
+#aug-interior-design-course-fees .nl li:first-child{border-top:none;}
+#aug-interior-design-course-fees .nl li::before{content:counter(u,decimal-leading-zero);font-family:var(--mono);font-weight:700;color:var(--coral);font-size:14px;padding-top:2px;}
+#aug-interior-design-course-fees .nl b{color:var(--ink);}
+#aug-interior-design-course-fees .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.1rem 0;}
+#aug-interior-design-course-fees .pick>div{border-radius:var(--radius);padding:.85rem 1rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-interior-design-course-fees .pick .a{background:#EEF7F1;border:1px solid #C6E3D1;} #aug-interior-design-course-fees .pick .r{background:#FDF1EC;border:1px solid #F1CDBE;}
+#aug-interior-design-course-fees .pick h3{margin:0 0 .4rem;font-size:15.5px;} #aug-interior-design-course-fees .pick .a h3{color:#1D6B43;} #aug-interior-design-course-fees .pick .r h3{color:#9A3B1E;}
+#aug-interior-design-course-fees .pick ul{margin:0;padding-left:1.1rem;} #aug-interior-design-course-fees .pick li{margin-bottom:.3rem;}
+#aug-interior-design-course-fees .chk{margin:1.2rem 0;border:1px solid var(--border);border-radius:var(--radius);background:#fff;padding:.4rem 1rem;}
+#aug-interior-design-course-fees .chk div{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:.6rem 0;border-top:1px solid var(--border);font-size:14.5px;line-height:1.55;}
+#aug-interior-design-course-fees .chk div:first-child{border-top:none;}
+#aug-interior-design-course-fees .chk div::before{content:"";width:16px;height:16px;border:2px solid var(--green);border-radius:4px;margin-top:3px;}
+#aug-interior-design-course-fees .chk b{color:var(--ink);}
+#aug-interior-design-course-fees .qa{margin:1rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-interior-design-course-fees .qa .q{padding:.75rem 1rem;background:var(--surface);font-family:var(--display);font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.45;}
+#aug-interior-design-course-fees .qa .q span{font-family:var(--mono);font-size:11px;color:var(--brand);font-weight:700;margin-right:8px;letter-spacing:.04em;}
+#aug-interior-design-course-fees .qa .a{padding:.75rem 1rem;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-interior-design-course-fees .qa .a i{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--coral);margin-top:.5rem;letter-spacing:.03em;}
+#aug-interior-design-course-fees .bar{display:flex;margin:1.2rem 0 .4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+#aug-interior-design-course-fees .bar div{padding:.75rem .7rem;font-size:13px;line-height:1.4;color:#fff;}
+#aug-interior-design-course-fees .bar div b{display:block;font-family:var(--display);font-size:17px;}
+#aug-interior-design-course-fees .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0;}
+#aug-interior-design-course-fees .split>div{border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);padding:.9rem 1rem;}
+#aug-interior-design-course-fees .split h3{margin:0 0 .5rem;font-size:16px;} #aug-interior-design-course-fees .split dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14px;}
+#aug-interior-design-course-fees .split dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:2px;} #aug-interior-design-course-fees .split dd{margin:0;color:var(--ink);}
+
+@media(max-width:820px){ #aug-interior-design-course-fees .cards,#aug-interior-design-course-fees .cards.four{grid-template-columns:1fr 1fr;} }
+@media(max-width:640px){
+  #aug-interior-design-course-fees .t table{min-width:600px;}
+  #aug-interior-design-course-fees .cards,#aug-interior-design-course-fees .cards.two,#aug-interior-design-course-fees .cards.four,#aug-interior-design-course-fees .pick,#aug-interior-design-course-fees .pair,#aug-interior-design-course-fees .split{grid-template-columns:1fr;}
+  #aug-interior-design-course-fees .bar{flex-direction:column;} #aug-interior-design-course-fees .bar div{flex:none!important;}
+  #aug-interior-design-course-fees .steps li{padding-left:3rem;}
+  #aug-interior-design-course-fees .dfig.wide{overflow-x:auto;} #aug-interior-design-course-fees .dfig.wide svg{min-width:640px;}
+  #aug-interior-design-course-fees .cta{flex-direction:column;align-items:flex-start;}
+  #aug-interior-design-course-fees .cta>div{max-width:100%;} #aug-interior-design-course-fees .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-interior-design-course-fees .cta>div:last-child .cta-btn{margin-left:0;white-space:normal;text-align:center;line-height:1.5;}
+}
+#aug-interior-design-course-fees .pf .ph{height:auto!important;aspect-ratio:auto!important;min-height:0!important;padding:0!important;background:#f4f8fb!important;overflow:hidden}#aug-interior-design-course-fees .ph::before,#aug-interior-design-course-fees .ph::after{display:none!important}#aug-interior-design-course-fees .pf .ph img{position:static!important;display:block;width:100%!important;height:auto!important;object-fit:contain!important;opacity:1!important;filter:none!important}#aug-interior-design-course-fees .pf figcaption{font-family:Arial,sans-serif!important;font-size:14px!important;line-height:1.65!important;padding:16px!important;overflow-wrap:anywhere}#aug-interior-design-course-fees.blog{overflow-wrap:break-word}#aug-interior-design-course-fees .tbl-wrap{overflow-x:auto}#aug-interior-design-course-fees .cta-btn{white-space:normal!important}#aug-interior-design-course-fees .dfig svg{max-width:100%;height:auto}#aug-interior-design-course-fees .wide{overflow-x:auto}@media(max-width:650px){#aug-interior-design-course-fees .pair,#aug-interior-design-course-fees .grid3,#aug-interior-design-course-fees .gq3{grid-template-columns:1fr!important}}
+/* ===== Augmintech theme overrides ===== */
+#aug-interior-design-course-fees.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-interior-design-course-fees h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-interior-design-course-fees a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-interior-design-course-fees a:hover{color:#18d104;}
+#aug-interior-design-course-fees .cta{background:#1a1a1a;}
+#aug-interior-design-course-fees .cta a.cta-btn{text-decoration:none;}
+#aug-interior-design-course-fees .cta-btn-blue{background:#18d104;color:#000;}
+#aug-interior-design-course-fees .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-interior-design-course-fees [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-interior-design-course-fees">
+
+
+<div class="ans"><b>Interior design course fees in India range from about ₹34,000 for an entire three-year government polytechnic diploma to more than ₹20 lakh for a private design-school degree.</b> Private university degrees typically cost ₹6–9 lakh in total, NID's four-year B.Des about ₹15.8 lakh, master's degrees ₹11–13 lakh, and professional certificates around ₹4.5 lakh. Software training costs far less, and students can use key software free or cheaply. This guide compares real 2026 fees, shows the hidden costs, and helps you judge value before you pay.</div>
+
+<figure class="dfig wide">
+  <svg viewBox="0 0 1000 468" role="img" aria-label="Total course fees for interior design courses in India, 2026, from 0.34 lakh rupees for a government polytechnic diploma to about 22.8 lakh for a private B.Des"><rect width="1000" height="468" fill="#fff"/><text x="20" y="28" font-size="14" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">TOTAL TUITION FOR THE FULL COURSE, 2026 (₹ LAKH)</text><line x1="300.0" y1="45" x2="300.0" y2="418" stroke="#E6EBF0"/><text x="300.0" y="435" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">0</text><line x1="418.0" y1="45" x2="418.0" y2="418" stroke="#E6EBF0"/><text x="418.0" y="435" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">5</text><line x1="536.0" y1="45" x2="536.0" y2="418" stroke="#E6EBF0"/><text x="536.0" y="435" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">10</text><line x1="654.0" y1="45" x2="654.0" y2="418" stroke="#E6EBF0"/><text x="654.0" y="435" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">15</text><line x1="772.0" y1="45" x2="772.0" y2="418" stroke="#E6EBF0"/><text x="772.0" y="435" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">20</text><line x1="890.0" y1="45" x2="890.0" y2="418" stroke="#E6EBF0"/><text x="890.0" y="435" font-size="11.5" text-anchor="middle" fill="#7A8794" font-weight="400" font-family="sans-serif">25</text><g><title>Govt polytechnic diploma, 3 yrs · Govt Polytechnic Ghaziabad: about ₹0.34 lakh</title><text x="288" y="67" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">Govt polytechnic diploma</text><text x="288" y="83" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">3 yrs · Govt Polytechnic Ghaziabad</text><path d="M300,58 h4.024000000000001 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-4.024000000000001 z" fill="#0F4C81"/><text x="316.024" y="74" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">₹0.34 L</text></g><g><title>Professional certificate, 11 months · Pearl Academy: about ₹4.45 lakh</title><text x="288" y="111" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">Professional certificate</text><text x="288" y="127" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">11 months · Pearl Academy</text><path d="M300,102 h101.02000000000001 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-101.02000000000001 z" fill="#0F4C81"/><text x="413.02" y="118" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">₹4.45 L</text></g><g><title>BID, private university, 4 yrs · Pillai University: about ₹6.0 lakh (estimated from yearly fees)</title><text x="288" y="155" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">BID, private university</text><text x="288" y="171" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">4 yrs · Pillai University</text><path d="M300,146 h137.60000000000002 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-137.60000000000002 z" fill="#0F4C81"/><text x="449.6" y="162" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">~₹6 L</text></g><g><title>B.Des, private university, 4 yrs · DIT University: about ₹8.9 lakh (estimated from yearly fees)</title><text x="288" y="199" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">B.Des, private university</text><text x="288" y="215" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">4 yrs · DIT University</text><path d="M300,190 h206.04000000000002 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-206.04000000000002 z" fill="#0F4C81"/><text x="518.04" y="206" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">~₹8.9 L</text></g><g><title>M.Des Furniture &amp; Interior, 2.5 yrs · NID: about ₹11.5 lakh</title><text x="288" y="243" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">M.Des Furniture &amp; Interior</text><text x="288" y="259" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">2.5 yrs · NID</text><path d="M300,234 h267.40000000000003 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-267.40000000000003 z" fill="#0F4C81"/><text x="579.4000000000001" y="250" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">₹11.5 L</text></g><g><title>M.Des Interior Design, 2 yrs · Pearl Academy: about ₹12.8 lakh (estimated from yearly fees)</title><text x="288" y="287" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">M.Des Interior Design</text><text x="288" y="303" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">2 yrs · Pearl Academy</text><path d="M300,278 h298.08000000000004 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-298.08000000000004 z" fill="#0F4C81"/><text x="610.08" y="294" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">~₹12.8 L</text></g><g><title>B.Des Furniture &amp; Interior, 4 yrs · NID: about ₹15.83 lakh</title><text x="288" y="331" font-size="13" text-anchor="end" fill="#1E2833" font-weight="600" font-family="sans-serif">B.Des Furniture &amp; Interior</text><text x="288" y="347" font-size="10.5" text-anchor="end" fill="#7A8794" font-weight="400" font-family="sans-serif">4 yrs · NID</text><path d="M300,322 h369.588 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-369.588 z" fill="#0F4C81"/><text x="681.588" y="338" font-size="13" text-anchor="start" fill="#1E2833" font-weight="700" font-family="sans-serif">₹15.83 L</text></g><line x1="300" y1="45" x2="300" y2="418" stroke="#9AA6B2"/><text x="20" y="456" font-size="11.5" text-anchor="start" fill="#7A8794" font-weight="400" font-family="sans-serif">~ = Augmintech estimate from published yearly fees, before annual increases. Excludes hostel, travel, laptop and materials. Sources in the article.</text></svg>
+  <figcaption>Total tuition for the full course, from published 2026 fees. Chart by Augmintech.</figcaption>
+</figure>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>Government polytechnic diplomas are by far the cheapest:</strong> about ₹33,918 for three years at Government Polytechnic Ghaziabad.</li>
+  <li><strong>Private university degrees cost roughly ₹1.5–2.5 lakh a year:</strong> about ₹6 lakh at Pillai University and ₹8.9 lakh at DIT University for four years.</li>
+  <li><strong>Design schools cost the most:</strong> about ₹15.8 lakh for NID's B.Des and ₹7.3 lakh a year at Pearl Academy, plus one-time fees.</li>
+  <li><strong>Master's degrees cost ₹11–13 lakh:</strong> ₹11.5 lakh at NID and about ₹12.8 lakh at Pearl Academy.</li>
+  <li><strong>Budget 10–20% more than tuition</strong> for a laptop, software after <a href="https://augmintech.com/how-to-download-install-revit-student-version/">student licences</a>, materials, printing, travel and hostel.</li>
+  <li><strong>Higher fees do not guarantee better outcomes:</strong> compare faculty, studio time, internships and <a href="https://augmintech.com/bim-portfolio/">graduate portfolios</a>.</li>
+</ul>
+<p class="note">The 10–20% figure is an Augmintech planning rule of thumb, not survey data; see the hidden-costs section for what it covers.</p>
+
+<h2 id="compare">Interior Design Course Fees Compared</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Course and institute</th><th>Duration</th><th>Published fee</th><th>About, full course</th></tr></thead>
+  <tbody>
+    <tr><td>Diploma in Interior Decoration, Government Polytechnic Ghaziabad</td><td>3 years</td><td class="m">₹33,918 total</td><td class="m">₹0.34 lakh</td></tr>
+    <tr><td>Professional Certificate in Styling for Interiors, Pearl Academy</td><td>11 months</td><td class="m">₹4,44,778 incl. GST</td><td class="m">₹4.45 lakh</td></tr>
+    <tr><td>Bachelor of Interior Design, Pillai University</td><td>4 years</td><td class="m">~₹1,50,000 a year</td><td class="m">~₹6 lakh</td></tr>
+    <tr><td>B.Des Interior Design, DIT University</td><td>4 years</td><td>₹2,07,400–2,42,900 a year</td><td class="m">~₹8.9 lakh</td></tr>
+    <tr><td>M.Des Furniture and Interior Design, NID</td><td>2.5 years</td><td class="m">₹11,50,300 total</td><td class="m">₹11.5 lakh</td></tr>
+    <tr><td>M.Des Interior Design, Pearl Academy</td><td>2 years</td><td>₹5,97,800 a year + ₹85,000 once</td><td class="m">~₹12.8 lakh</td></tr>
+    <tr><td>B.Des Furniture and Interior Design, NID</td><td>4 years</td><td class="m">₹15,82,600 total</td><td class="m">₹15.83 lakh</td></tr>
+    <tr><td>B.Des Interior Architectural Design, Pearl Academy</td><td>4 years</td><td>₹7,32,200 a year + ₹85,000 once</td><td class="m">~₹30.14 lakh</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Published 2026 figures from each institute or from Careers360; "~" totals are our arithmetic before annual increases. Pearl Academy's page also lists a lower B.Des table (₹6,91,200 a year) without naming the campus; ask which applies to yours.</p>
+
+<div class="cta">
+  <div><h3>Add Job-Ready BIM Skills</h3><p>Fees buy you a foundation; BIM skills help on larger projects. Augmintech's PG Program in BIM Architecture teaches building information modelling for architecture. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">Explore the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="degree-fees">Degree Fees: Why the Range Is So Wide</h2>
+<p>Three kinds of institutes offer interior design degrees, and they price very differently:</p>
+<div class="cards">
+  <div><b>Private universities</b><span>Typically about ₹1.5–2.5 lakh a year. Pillai University quotes about ₹1.5 lakh a year for its four-year BID; DIT University's B.Des Interior Design runs from ₹2.07 lakh to ₹2.43 lakh a year.</span><em>~₹6–9 lakh for 4 years</em></div>
+  <div class="c2"><b>National design institutes</b><span>NID's B.Des in Furniture and Interior Design is about ₹15.8 lakh over four years, with only 13 seats and entry through the competitive DAT.</span><em>~₹15.8 lakh for 4 years</em></div>
+  <div class="c3"><b>Premium private design schools</b><span>Pearl Academy lists ₹7.32 lakh a year for its B.Des in Interior Architectural Design, plus ₹85,000 one-time, and says fees rise annually.</span><em>~₹30.14 lakh for 3 years</em></div>
+</div>
+<p>What drives the difference: studio size and faculty ratio, workshops and materials labs, campus facilities, industry projects and the brand's network. Some of that genuinely improves learning; some is the cost of a premium campus. Ask what your fee buys, in hours of studio teaching and access to workshops, not just facilities on a brochure.</p>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h3>Read the fee sheet line by line</h3>
+<p>DIT University's 2026 fee PDF is a good example of what a full fee sheet contains for one four-year B.Des:</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Item</th><th>Amount</th><th>When</th></tr></thead>
+  <tbody>
+    <tr><td>Tuition + academic services, Year 1</td><td class="m">₹2,09,300</td><td>Year 1</td></tr>
+    <tr><td>Tuition + academic services, Year 2</td><td class="m">₹2,07,400</td><td>Year 2</td></tr>
+    <tr><td>Year 3, including ₹25,000 industrial tour</td><td class="m">₹2,42,900</td><td>Year 3</td></tr>
+    <tr><td>Tuition + academic services, Year 4</td><td class="m">₹2,28,900</td><td>Year 4</td></tr>
+    <tr><td>Admission fee (non-refundable)</td><td class="m">₹10,000</td><td>Once</td></tr>
+    <tr><td>Caution money (refundable)</td><td class="m">₹5,000</td><td>Once</td></tr>
+    <tr><td>Transportation (optional)</td><td class="m">₹22,000</td><td>Listed separately</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">DIT University, All India category; the PDF labels the batch 2026–30 but the years 2025–26 to 2028–29, so confirm with the admissions office. Hostel fees are listed separately.</p>
+<p>Adding the four years and the one-time fees gives about ₹9 lakh before hostel and transport. Every institute's sheet looks different, so build the same table for each course you are comparing.</p>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/109-fullcost-checklist-replace-each-category.webp" alt="Full-cost checklist: replace each category with the institute’s written figures." loading="lazy" decoding="async"></div><figcaption>Full-cost checklist: replace each category with the institute’s written figures.</figcaption></figure>
+
+<h2 id="diploma-fees">Diploma and Certificate Fees</h2>
+<p><strong>Government polytechnic diplomas</strong> are the most affordable formal route. Government Polytechnic Ghaziabad's three-year Interior Decoration diploma is listed at about ₹33,918 in total, with admission through Uttar Pradesh's JEECUP entrance exam. Other state polytechnics are similarly low-cost; check your state's polytechnic admission portal.</p>
+<p><strong>Private diplomas</strong> of one to two years are offered by many design institutes and vary widely in price and quality. Because there is no single regulator for short interior courses, compare them on faculty, studio work, software taught and student portfolios rather than fees alone.</p>
+<p><strong>Professional certificates</strong> sit in between. Pearl Academy's 11-month Professional Certificate in Styling for Interiors costs ₹4,44,778 including GST, and Pearl says it offers a six-month no-cost EMI plan for its professional certificates through GrayQuest.</p>
+<div class="alert"><b>Value check:</b> a ₹4–5 lakh certificate costs as much as half a private university degree. If you want a long-term design career, compare it against a recognised diploma or degree before committing.</div>
+
+<h2 id="software-fees">Software Training and Licence Costs</h2>
+<p>Software skills are what employers test first, and they are the cheapest part of an interior design education to acquire. The software itself is free or inexpensive for students:</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Software</th><th>Student cost</th><th>Commercial cost after you graduate</th></tr></thead>
+  <tbody>
+    <tr><td>AutoCAD, Revit, 3ds Max</td><td>Free (Autodesk education plan)</td><td>Revit US$3,005/yr; AutoCAD Revit LT Suite US$680/yr</td></tr>
+    <tr><td>SketchUp</td><td>US$55/yr</td><td>Pro US$399/yr</td></tr>
+    <tr><td>Twinmotion, D5 Render</td><td>Free education licences</td><td>Paid plans for commercial use</td></tr>
+    <tr><td>Enscape and V-Ray (Chaos)</td><td>US$149/yr student bundle</td><td>Paid plans</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Autodesk education plan; SketchUp and Revit prices from Render a House (2026); renderer licences as covered in our architecture software roadmap. Education licences are for learning only.</p>
+<p>Training is where costs vary. Short software courses range from free tutorials to structured, paid programmes with project reviews. Free tutorials teach buttons; paid courses are worth it when they include real projects, feedback and a drawing set you can put in your portfolio. For BIM, a structured route such as Augmintech's PG Program in BIM Architecture is one option to compare; ask any provider for its syllabus, contact hours and sample student work before you pay.</p>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/109-software-names-identify-the-workflow.webp" alt="Software names identify the workflow. This is an original access checklist, not a software interface." loading="lazy" decoding="async"></div><figcaption>Software names identify the workflow. This is an original access checklist, not a software interface.</figcaption></figure>
+
+<h2 id="hidden">Hidden Costs Most Students Miss</h2>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Cost</th><th>Why you need it</th><th>How to keep it down</th></tr></thead>
+  <tbody>
+    <tr><td>Laptop</td><td>Revit needs at least 16 GB RAM (32 GB recommended) and a dedicated graphics card; rendering needs more</td><td>Buy once, from Year 2, to the spec in our software roadmap</td></tr>
+    <tr><td>Software after graduation</td><td>Student licences cannot be used for paid work</td><td>Join a firm that provides licences; freelance only with commercial licences</td></tr>
+    <tr><td>Materials and models</td><td>Model making, material boards and samples every semester</td><td>Collect free samples from suppliers; share bulk material buys</td></tr>
+    <tr><td>Printing</td><td>Juries, sheets and portfolio prints</td><td>Print only finals; present drafts on screen</td></tr>
+    <tr><td>Site visits and tours</td><td>Study tours and site visits, sometimes billed separately (DIT lists ₹25,000 for an industrial tour)</td><td>Check which are compulsory and included</td></tr>
+    <tr><td>Hostel, food and transport</td><td>Often more than tuition in a metro</td><td>Compare hostel vs shared rent near campus</td></tr>
+  </tbody>
+</table>
+</div>
+<figure class="pf"><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/109-aigenerated-illustration-of-study-equipment.webp" alt="AI-generated illustration of study equipment and material costs, not an institute’s supplied kit." loading="lazy" decoding="async"></div><figcaption>AI-generated illustration of study equipment and material costs, not an institute’s supplied kit.</figcaption></figure>
+
+<h2 id="value">Is a More Expensive Course Better?</h2>
+<p>Not automatically. Fees reflect brand, location and facilities as much as teaching quality. Judge value on what you actually get:</p>
+<div class="chk">
+  <div><span><b>Studio hours per week</b> and the number of students per studio teacher.</span></div>
+  <div><span><b>Who teaches:</b> practising designers and architects, not only full-time lecturers.</span></div>
+  <div><span><b>Internships:</b> structured, credited and long enough to work on real drawings.</span></div>
+  <div><span><b>Software depth:</b> AutoCAD, SketchUp, rendering and ideally Revit, taught through projects.</span></div>
+  <div><span><b>Graduate portfolios:</b> ask to see recent final-year work, including working drawings.</span></div>
+  <div><span><b>Recognition:</b> UGC-recognised university, or AICTE-approved polytechnic for diplomas.</span></div>
+  <div><span><b>Total cost:</b> tuition, one-time fees, annual increases, hostel and extras added up.</span></div>
+</div>
+
+<h2 id="roi">Fees vs Starting Salary: An Honest Look</h2>
+<p>Interior design is a rewarding field, but starting pay is modest. PayScale reports about ₹2.5 lakh a year for interior designers with under a year's experience and about ₹3.3 lakh on average across all levels (see our <a href="https://augmintech.com/interior-designer-salary/">interior designer salary guide</a>). Set against that:</p>
+<div class="tbl-wrap t">
+<table>
+  <thead><tr><th>Course</th><th>About, full course</th><th>Years of average starting pay it equals</th></tr></thead>
+  <tbody>
+    <tr><td>Government polytechnic diploma</td><td class="m">₹0.34 lakh</td><td class="m">about 0.1 years</td></tr>
+    <tr><td>Private university degree</td><td class="m">₹6–9 lakh</td><td class="m">about 2.5–3.5 years</td></tr>
+    <tr><td>NID B.Des</td><td class="m">₹15.8 lakh</td><td class="m">about 6 years</td></tr>
+    <tr><td>Premium private B.Des</td><td class="m">~₹30.14 lakh</td><td class="m">about 12 years</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Augmintech arithmetic: full-course tuition divided by ₹2.5 lakh. It ignores living costs, pay growth and the network a school provides, so treat it as a rough reality check, not a verdict.</p>
+<p>The point is not that expensive courses are bad. It is that the fee should match your plans: a premium school makes most sense if you will use its network for competitive roles, while a lower-cost degree plus strong software skills and a sharp portfolio can reach similar first jobs.</p>
+
+
+<h2 id="budgets">Three Sample Study Budgets</h2>
+<p>To see how choices add up, here are three illustrative routes using the published tuition above. Living costs depend on your city and are left out.</p>
+<div class="cards">
+  <div class="c2"><b>The low-cost route</b><span>Government polytechnic diploma (about ₹0.34 lakh), free Autodesk education licences and SketchUp at US$55 a year, then a focused BIM or rendering course.</span><em>Tuition under ₹1 lakh plus training</em></div>
+  <div><b>The university route</b><span>Four-year private university B.Des or BID (about ₹6–9 lakh), student software licences, one study tour and a mid-range laptop.</span><em>Tuition about ₹6–9 lakh plus extras</em></div>
+  <div class="c4"><b>The design-school route</b><span>NID B.Des (about ₹15.8 lakh) if you clear the DAT, or a premium private B.Des (about ₹22.8 lakh), plus a high-spec laptop for rendering.</span><em>Tuition about ₹16–23 lakh plus extras</em></div>
+</div>
+<p class="note">Illustrative combinations by Augmintech; tuition figures as sourced above.</p>
+
+<h2 id="working">Fees for Working Professionals</h2>
+<p>If you already work, a full-time degree may not be practical. Part-time diplomas, weekend certificates and online software courses cost less and let you keep earning. Check three things before paying: whether the credential is recognised for what you want to do next, how many hours of live teaching and feedback you get, and whether you finish with real drawings for your portfolio. For a degree you will rely on, confirm the university's recognition directly with the regulator's list, not the brochure.</p>
+
+<h2 id="pay">Ways to Pay for an Interior Design Course</h2>
+<ul class="bullets">
+  <li><strong>Institute scholarships.</strong> Many institutes offer merit or need-based scholarships; Pearl Academy and Pillai University both mention them. Ask for the criteria in writing.</li>
+  <li><strong>Education loans.</strong> Most banks offer education loans for recognised courses. Compare interest, collateral and repayment start dates; terms change often.</li>
+  <li><strong>EMI plans.</strong> Some institutes offer instalments for certificates, such as Pearl's six-month no-cost EMI.</li>
+  <li><strong>Earn while you learn.</strong> Freelance drafting or 3D work in later years can offset costs, using properly licensed software.</li>
+  <li><strong>Start lower, add later.</strong> A polytechnic diploma or affordable degree followed by targeted software training can cost a fraction of a premium degree.</li>
+</ul>
+
+<h2 id="fee-worked">Worked Example: Compare the Same Total Cost</h2><p>The following is a fictional budgeting exercise, not a provider quotation. Suppose a one-year course charges ₹1,20,000 tuition, ₹8,000 compulsory academic charges and ₹12,000 for materials and printing. Local travel adds ₹18,000 and an incremental laptop purchase adds ₹60,000. The study budget is ₹2,18,000 before any applicable taxes, finance charges, accommodation or lost earnings.</p><p>If you already own a suitable laptop, the incremental budget becomes ₹1,58,000. This is why a fixed percentage above tuition can be misleading. Use the actual costs of your situation and avoid counting an existing purchase as a new cash expense.</p><h3>Questions Behind a “Software Included” Offer</h3><p>Ask whether the fee covers instruction, a temporary lab login, an individual licence or only help applying for education access. Confirm the application edition, licence duration, renewal conditions and whether commercial use is permitted. A learning licence should not be assumed to cover freelance work. Check render plugins separately from the modelling application.</p><h3>Get the Payment Terms in Writing</h3><p>Request the full-course fee, instalment dates, refundable deposit, cancellation policy and all compulsory charges. For financed payments, compare total repayment, processing charges and interest, not just the monthly amount. Do not treat advertised placement assistance as a guaranteed salary or a guaranteed way to repay borrowing. Keep the signed quotation and terms with your receipt.</p><h2 id="questions">8 Questions to Ask Before You Pay</h2>
+<ol class="nl">
+  <li><div><b>What is the total fee for the whole course,</b> including one-time charges?</div></li>
+  <li><div><b>How much do fees rise each year?</b> Pearl Academy, for example, states that fees increase annually.</div></li>
+  <li><div><b>What is the refund policy</b> if you withdraw in the first weeks?</div></li>
+  <li><div><b>Are study tours, materials and software included</b> or charged separately?</div></li>
+  <li><div><b>Which campus and academic year</b> does the published fee apply to?</div></li>
+  <li><div><b>Is GST added</b> to any part of the fee?</div></li>
+  <li><div><b>What scholarships exist,</b> and when must you apply?</div></li>
+  <li><div><b>Can you see last year's student portfolios</b> and a list of firms that hired graduates?</div></li>
+</ol>
+
+<div class="cta cta-green">
+  <div><h3>Spend Smart on Skills</h3><p>Before paying for any course, compare what you will be able to produce at the end. Augmintech's PG Program in BIM Architecture is one structured option for BIM skills. Check the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-green">See the PG Program in BIM Architecture</a></div>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What is the fee for an interior design course in India?</div><div class="faq-a">From about ₹34,000 for an entire government polytechnic diploma, to about ₹6–9 lakh for many private university degrees, ₹15.8 lakh for NID's B.Des and over ₹20 lakh at premium private design schools, based on published 2026 figures.</div></div>
+<div class="faq-item"><div class="faq-q">What is NID's fee for interior design?</div><div class="faq-a">Careers360 lists NID's four-year B.Des in Furniture and Interior Design at about ₹15.83 lakh in total and its two-and-a-half-year M.Des at about ₹11.50 lakh. Confirm current fees on NID's admissions notice.</div></div>
+<div class="faq-item"><div class="faq-q">Which is the cheapest interior design course?</div><div class="faq-a">A government polytechnic diploma. Government Polytechnic Ghaziabad's three-year Interior Decoration diploma is listed at about ₹33,918 in total.</div></div>
+<div class="faq-item"><div class="faq-q">Is a diploma enough to become an interior designer?</div><div class="faq-a">It can get you into drafting, decor and site roles, especially with strong software skills and a good portfolio. Many design firms prefer a degree for designer roles that lead projects.</div></div>
+<div class="faq-item"><div class="faq-q">How much does software training cost?</div><div class="faq-a">The software is free or cheap for students: Autodesk tools are free through the education plan and SketchUp costs US$55 a year. Training ranges from free tutorials to paid structured programmes; pay for courses that include real projects and feedback.</div></div>
+<div class="faq-item"><div class="faq-q">Are interior design fees worth it?</div><div class="faq-a">They can be, if the course gives you strong studio teaching, technical drawing, software skills and internships. Starting salaries are modest, so match the fee to your plans and compare graduate portfolios, not brochures.</div></div>
+
+<p class="note">Pearl’s <a href="https://www.pearlacademy.com/programs/bachelors-degree/interiors">current interiors programme page</a> describes a four-year degree. Using ₹7,32,200 per year plus ₹85,000 once gives an illustrative ₹30,13,800 total before fee increases and other charges. Confirm the exact campus and intake quotation.</p><h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Careers360</strong>: <a href="https://www.careers360.com/university/national-institute-of-design-ahmedabad/bdes-furniture-and-interior-design-course" target="_blank" rel="noopener">NID B.Des Furniture and Interior Design</a>; <a href="https://www.careers360.com/university/national-institute-of-design-ahmedabad/mdes-furniture-and-interior-design-course" target="_blank" rel="noopener">NID M.Des Furniture and Interior Design</a>; <a href="https://www.careers360.com/colleges/government-polytechnic-ghaziabad/diploma-in-interior-decoration-course" target="_blank" rel="noopener">Government Polytechnic Ghaziabad diploma</a>.</li>
+  <li><strong>Pearl Academy</strong>, <a href="https://www.pearlacademy.com/admissions/fee-structure" target="_blank" rel="noopener">Fee structure</a>; <a href="https://www.pearlacademy.com/faqs/what-is-pearl-academy-interior-design-fees" target="_blank" rel="noopener">Interior design fees FAQ</a>.</li>
+  <li><strong>DIT University</strong>, <a href="https://www.dituniversity.edu.in/assets/frontend/course-structure/BDes-ID-Fee-Structure-2026.pdf" target="_blank" rel="noopener">B.Des Interior Design fee structure 2026</a>.</li>
+  <li><strong>Pillai University</strong>, <a href="https://pillai.edu.in/programs/bachelor-of-interior-design" target="_blank" rel="noopener">Bachelor of Interior Design</a>.</li>
+  <li><strong>Render a House</strong>: <a href="https://www.renderahouse.com/blog/sketchup-pricing" target="_blank" rel="noopener">SketchUp pricing</a>; <a href="https://www.renderahouse.com/blog/revit-pricing" target="_blank" rel="noopener">Revit pricing</a>; <a href="https://www.renderahouse.com/blog/revit-system-requirements" target="_blank" rel="noopener">Revit system requirements</a> (2026).</li>
+  <li><strong>Autodesk</strong>, <a href="https://www.autodesk.com:443/education/home" target="_blank" rel="noopener">Education plan</a>.</li>
+  <li><strong>PayScale India</strong>, <a href="https://www.payscale.com/research/IN/Job=Interior_Designer/Salary" target="_blank" rel="noopener">Interior Designer salary</a>.</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 8 November 2026. Fees change every year; always confirm with the institute's official fee notice before paying.</p>
+</div>

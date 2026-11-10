@@ -1,0 +1,342 @@
+<style>
+#aug-facade-design{
+  --brand:#0F4C81;--brand-mid:#185FA5;--brand-lite:#E8F2FC;--brand-border:#BAD4F0;
+  --green:#0F6E56;--green-lite:#E2F5EE;--green-border:#9FD9C5;
+  --warn:#9A6010;--warn-lite:#FDF3E0;--warn-border:#F5CC80;
+  --coral:#C0471F;--coral-lite:#FDF0EB;--coral-border:#F5C4B3;
+  --purple:#4A3EA8;--purple-lite:#F0EEFF;--purple-border:#CECBF6;
+  --teal:#00747D;--teal-lite:#E0F5F7;--teal-border:#9ED9DE;
+  --slate:#2C3D4F;--slate-lite:#EDF1F4;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;
+  --border:#E4E4E4;--surface:#F7F7F7;--white:#FFFFFF;
+  --radius:10px;--radius-sm:6px;
+  --display:inherit;--body:inherit;--mono:inherit;
+  --max:760px;
+}
+#aug-facade-design *,#aug-facade-design *::before,#aug-facade-design *::after{box-sizing:border-box;margin:0;padding:0;}
+#aug-facade-design{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+#aug-facade-design.blog{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 6rem;}
+#aug-facade-design .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:.9rem;}
+#aug-facade-design .hero-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);line-height:1.12;font-weight:800;margin-bottom:1rem;}
+#aug-facade-design .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;border-left:3px solid var(--brand);padding-left:1.1rem;margin-bottom:1.5rem;}
+#aug-facade-design .meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-family:var(--mono);align-items:center;}
+#aug-facade-design .pill{background:var(--brand-lite);color:var(--brand-mid);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--brand-border);}
+#aug-facade-design .pill-green{background:var(--green-lite);color:var(--green);border-color:var(--green-border);}
+#aug-facade-design h2{font-family:var(--display);font-size:25px;font-weight:700;margin:3rem 0 1rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+#aug-facade-design h3{font-family:var(--display);font-size:19px;font-weight:700;margin:2.25rem 0 .65rem;}
+#aug-facade-design p{margin-bottom:.9rem;font-size:16px;}
+#aug-facade-design a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--brand-border);}
+#aug-facade-design a:hover{border-color:var(--brand);}
+#aug-facade-design hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+#aug-facade-design .chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;margin:1.5rem 0;}
+#aug-facade-design .chart svg{width:100%;height:auto;display:block;}
+#aug-facade-design .chart-k{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;}
+#aug-facade-design .chart-n{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin-top:.6rem;}
+#aug-facade-design .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;}
+#aug-facade-design .stat-i{background:var(--white);padding:.9rem 1rem;text-align:center;}
+#aug-facade-design .stat-v{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;}
+#aug-facade-design .stat-l{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.45;margin-top:4px;}
+#aug-facade-design .tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);}
+#aug-facade-design table{width:100%;border-collapse:collapse;font-size:14px;}
+#aug-facade-design caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:10px 14px 0;}
+#aug-facade-design thead tr{background:var(--slate);color:#fff;}
+#aug-facade-design thead th{padding:10px 14px;text-align:left;font-weight:600;font-size:12px;font-family:var(--mono);white-space:nowrap;}
+#aug-facade-design tbody tr:nth-child(even){background:var(--surface);}
+#aug-facade-design tbody tr:hover{background:var(--brand-lite);}
+#aug-facade-design td{padding:9px 14px;vertical-align:top;border-bottom:1px solid var(--border);line-height:1.55;}
+#aug-facade-design td:first-child{font-weight:600;font-size:13px;color:var(--muted);}
+#aug-facade-design tbody tr.hl{background:var(--green-lite)!important;}
+#aug-facade-design tbody tr.tot{background:var(--slate-lite)!important;font-weight:600;}
+#aug-facade-design ul.bullets{padding-left:1.4rem;margin:.75rem 0;}
+#aug-facade-design ul.bullets li{padding:3px 0;font-size:15px;line-height:1.65;margin-bottom:.25rem;}
+#aug-facade-design .cta{background:var(--brand);color:#fff;border-radius:var(--radius);padding:1.4rem 1.75rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+#aug-facade-design .cta-green{background:var(--slate);}
+#aug-facade-design .cta h3{font-family:var(--display);font-size:18px;color:#fff;margin:0 0 3px;}
+#aug-facade-design .cta p{font-size:13px;color:rgba(255,255,255,.8);margin:0;font-family:var(--mono);}
+#aug-facade-design .cta-btn{background:#fff;font-size:12px;font-weight:700;padding:9px 20px;border-radius:20px;white-space:nowrap;text-decoration:none;font-family:var(--mono);letter-spacing:.5px;}
+#aug-facade-design .cta-btn-blue{color:var(--brand);}#aug-facade-design .cta-btn-green{color:var(--slate);}
+#aug-facade-design figure{margin:1.5rem 0;}
+#aug-facade-design figure img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);display:block;}
+#aug-facade-design figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.5rem;}
+#aug-facade-design dl.gloss{margin:1.2rem 0;border-top:1px solid var(--border);}
+#aug-facade-design dl.gloss dt{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--brand);padding-top:.65rem;}
+#aug-facade-design dl.gloss dd{font-size:14px;color:var(--ink-mid);line-height:1.65;padding:.2rem 0 .65rem;border-bottom:1px solid var(--border);margin:0;}
+#aug-facade-design .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+#aug-facade-design .faq-q{font-size:15.5px;font-weight:600;margin-bottom:.45rem;font-family:var(--display);}
+#aug-facade-design .faq-a{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+#aug-facade-design .srcs{list-style:none;padding:0;}
+#aug-facade-design .srcs li{font-size:13.5px;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--border);color:var(--muted);}
+#aug-facade-design .srcs li:last-child{border-bottom:none;}
+
+/* ===== photo strip ===== */#aug-facade-design .strip{display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px;margin:1.1rem 0 .4rem;}
+#aug-facade-design .strip .ph{aspect-ratio:auto;height:100%;min-height:150px;}
+#aug-facade-design .strip>div:first-child .ph{min-height:260px;}
+#aug-facade-design .strip-col{display:grid;grid-template-rows:1fr 1fr;gap:8px;}
+#aug-facade-design .strip-cap{font-size:12.5px;color:var(--muted);margin:0 0 1.2rem;}
+#aug-facade-design .ph{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;}
+#aug-facade-design .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;border-radius:0;}
+#aug-facade-design .lead98{font-size:17px;line-height:1.7;color:var(--ink-mid);margin:1rem 0;}
+#aug-facade-design .lead98 b{color:var(--ink);}
+#aug-facade-design .not-sw{display:inline-block;font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:12px;background:#FBF4E8;color:#8A5A00;border:1px solid #EFD9B4;}
+
+/* ===== jobs ===== */#aug-facade-design .jobs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:1rem 0;}
+#aug-facade-design .jobs div{text-align:center;padding:.75rem .5rem;border-radius:var(--radius-sm);background:var(--surface);font-size:12.5px;line-height:1.45;color:var(--ink-mid);}
+#aug-facade-design .jobs svg{width:30px;height:30px;display:block;margin:0 auto .35rem;}
+#aug-facade-design .jobs b{display:block;font-size:14px;color:var(--ink);}
+
+/* ===== type cards ===== */#aug-facade-design .ft6{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.2rem 0;}
+#aug-facade-design .ftc{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-facade-design .ftc .ph{border:none;border-bottom:1px solid var(--border);border-radius:0;}
+#aug-facade-design .ftc>div:last-child{padding:.8rem .95rem .9rem;}
+#aug-facade-design .ftc h3{margin:0 0 .35rem;font-size:17px;}
+#aug-facade-design .ftc p{margin:0 0 .5rem;font-size:14px;line-height:1.6;color:var(--ink-mid);}
+#aug-facade-design .ftc .tags{display:flex;flex-wrap:wrap;gap:5px;}
+#aug-facade-design .ftc .tags span{font-family:var(--mono);font-size:10.5px;padding:2px 7px;border-radius:9px;background:#EEF2F7;color:var(--brand);}
+#aug-facade-design .ftc .tags span.w{background:#FBE7DF;color:#9A3B1E;}
+
+/* ===== tables ===== */#aug-facade-design .mt td:first-child{font-weight:700;white-space:nowrap;}
+#aug-facade-design .fire-ok{color:var(--green);font-weight:600;} #aug-facade-design .fire-mid{color:#8A5A00;font-weight:600;} #aug-facade-design .fire-bad{color:#9A3B1E;font-weight:600;}
+#aug-facade-design .cost2{display:grid;grid-template-columns:1.3fr 1fr;gap:12px;margin:1.1rem 0;align-items:start;}
+#aug-facade-design .cost2 h3{margin:0;padding:.6rem .85rem;font-size:15px;color:#fff;}
+#aug-facade-design .cost2 .in h3{background:#1F4A6E;} #aug-facade-design .cost2 .gf h3{background:#8A5A00;}
+#aug-facade-design .cost2>div{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-facade-design .cost2 table{font-size:13px;} #aug-facade-design .cost2 td,#aug-facade-design .cost2 th{padding:.45rem .8rem;}
+#aug-facade-design .cost2 td:last-child{font-family:var(--mono);text-align:right;white-space:nowrap;}
+#aug-facade-design .cost2 p{margin:.55rem .85rem .7rem;font-size:12.5px;line-height:1.5;color:var(--muted);}
+
+/* ===== climate ===== */#aug-facade-design .clim{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:1.1rem 0;}
+#aug-facade-design .clim>div{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+#aug-facade-design .clim svg{display:block;width:100%;height:auto;background:#FFF9EC;border-bottom:1px solid var(--border);}
+#aug-facade-design .clim>div>div{padding:.6rem .75rem .7rem;font-size:13px;line-height:1.5;color:var(--ink-mid);}
+#aug-facade-design .clim b{display:block;font-size:14.5px;color:var(--ink);margin-bottom:.15rem;}
+#aug-facade-design figure.pf{margin:1.2rem 0;} #aug-facade-design figure.pf figcaption{font-size:13px;color:var(--muted);padding:.4rem .1rem 0;line-height:1.5;font-family:var(--body);}
+
+/* ===== revit ===== */#aug-facade-design .rvf{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1rem 0;}
+#aug-facade-design .rvf div{border-radius:var(--radius);padding:.85rem .9rem;background:#EEF2F7;font-size:13.5px;line-height:1.55;color:var(--ink-mid);}
+#aug-facade-design .rvf b{display:block;font-family:var(--display);font-size:15.5px;color:#1F4A6E;margin-bottom:.25rem;}
+#aug-facade-design .rvf em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.4rem;}
+
+/* ===== gulf timeline ===== */#aug-facade-design .tl{list-style:none;margin:1.1rem 0;padding:0;border-left:3px solid #E0A31B;}
+#aug-facade-design .tl li{position:relative;padding:.1rem 0 .9rem 1.1rem;font-size:14.5px;line-height:1.6;color:var(--ink-mid);}
+#aug-facade-design .tl li::before{content:"";position:absolute;left:-8px;top:.45rem;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid #E0A31B;}
+#aug-facade-design .tl b{display:block;font-family:var(--mono);font-size:12.5px;color:#8A5A00;}
+#aug-facade-design .note{font-size:13px;line-height:1.6;color:var(--muted);margin:.4rem 0 1rem;}
+#aug-facade-design .alert{border-left:4px solid var(--warn);background:#FBF4E8;border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.8rem 1rem;margin:1rem 0;font-size:14.5px;line-height:1.65;color:var(--ink-mid);}
+#aug-facade-design .alert b{color:var(--warn);}
+
+@media(max-width:640px){
+  #aug-facade-design .strip{grid-template-columns:1fr;} #aug-facade-design .strip-col{grid-template-columns:1fr 1fr;grid-template-rows:auto;} #aug-facade-design .strip>div:first-child .ph{min-height:200px;}
+  #aug-facade-design .jobs{grid-template-columns:repeat(3,1fr);}
+  #aug-facade-design .ft6,#aug-facade-design .cost2,#aug-facade-design .rvf{grid-template-columns:1fr;}
+  #aug-facade-design .clim{grid-template-columns:1fr 1fr;}
+  #aug-facade-design .mt table{min-width:660px;}
+  #aug-facade-design .cta{flex-direction:column;align-items:flex-start;}
+  #aug-facade-design .cta>div{max-width:100%;} #aug-facade-design .cta>div:last-child{display:flex;flex-wrap:wrap;gap:8px;} #aug-facade-design .cta>div:last-child .cta-btn{margin-left:0;}
+}
+#aug-facade-design .ph img{cursor:zoom-in}#aug-facade-design .pf .ph{aspect-ratio:auto}#aug-facade-design .pf .ph img{position:static;width:100%;height:auto;object-fit:contain}#aug-facade-design .strip{grid-template-columns:2fr 1fr 1fr}#aug-facade-design .strip .ph{min-height:120px}#aug-facade-design .ft6{gap:20px}#aug-facade-design .ftc p{font-size:15px;line-height:1.65}#aug-facade-design .clim{grid-template-columns:repeat(2,minmax(0,1fr))}#aug-facade-design .clim>div>div{font-size:14px}#aug-facade-design .cost2{grid-template-columns:1fr}#aug-facade-design .cost2 table{font-size:14px}#aug-facade-design .cost2 p{font-size:13px}#aug-facade-design .cta-btn{white-space:normal;text-align:center}#aug-facade-design.blog{overflow-wrap:break-word}#aug-facade-design .blog img{max-width:100%}#aug-facade-design .rvf{grid-template-columns:1fr}#aug-facade-design .rvf div{font-size:15px}#aug-facade-design .rvf em{font-size:12px}#aug-facade-design #zoom98{border:0;border-radius:12px;padding:18px;width:96vw;max-width:1500px;max-height:94vh;margin:auto;background:white}#aug-facade-design #zoom98::backdrop{background:rgba(10,25,40,.8)}#aug-facade-design #zoom98 button{display:block;margin:0 0 14px auto;padding:10px 20px;background:#19394e;color:white;border:0;border-radius:6px;cursor:pointer}#aug-facade-design #zoom98 img{display:block;width:100%;height:auto}@media(max-width:640px){#aug-facade-design .strip{grid-template-columns:1fr}#aug-facade-design .strip-col{grid-template-columns:1fr 1fr}#aug-facade-design .strip>div:first-child .ph{height:230px}#aug-facade-design .strip-col .ph{height:140px}#aug-facade-design .clim{grid-template-columns:1fr}#aug-facade-design.blog{padding-left:18px;padding-right:18px}#aug-facade-design .cta-btn{max-width:100%}}
+/* ===== Augmintech theme overrides ===== */
+#aug-facade-design.blog{max-width:none;margin:0;padding:0 0 1rem;}
+#aug-facade-design h2{font-size:28px;color:#1a1a1a;border-top:1px solid #e5e5e5;}
+#aug-facade-design a{color:#0F4C81;border-bottom:0;text-decoration:underline;text-underline-offset:2px;}
+#aug-facade-design a:hover{color:#18d104;}
+#aug-facade-design .cta{background:#1a1a1a;}
+#aug-facade-design .cta a.cta-btn{text-decoration:none;}
+#aug-facade-design .cta-btn-blue{background:#18d104;color:#000;}
+#aug-facade-design .cta-btn-blue:hover{background:#12b803;color:#000;}
+#aug-facade-design [class^="aug-cta-banner"] a{color:#fff;text-decoration:none;}
+</style>
+
+<div class="blog" id="aug-facade-design">
+
+
+<div class="strip">
+  <div><div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-glass-facade-on-a-gulf.webp" alt="Glass facade on a Gulf tower" width="1200" height="800" loading="lazy"></div></div>
+  <div class="strip-col">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-acp-facade-on-a-commercial.webp" alt="ACP facade on a commercial building" width="800" height="600" loading="lazy"></div>
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-brick-jaali-facade-with-patterned.webp" alt="Brick jaali facade with patterned shadow" width="800" height="600" loading="lazy"></div>
+  </div>
+  <div class="strip-col">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-stone-cladding-on-a-villa.webp" alt="Stone cladding on a villa facade" width="800" height="600" loading="lazy"></div>
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-green-facade-on-a-building.webp" alt="Green facade on a building" width="800" height="600" loading="lazy"></div>
+  </div>
+</div>
+<p class="strip-cap">Glass, ACP, brick, stone and green: five of the six facade types covered below. Façade images are AI-generated editorial illustrations.</p>
+
+<p class="lead98"><b>Facade design is the design of a building's outer face, balancing how it looks with how it handles light, heat, weather and cost.</b> This guide is about building facades, not the software "facade design pattern". It covers the six main types of facade, how their materials compare, what they cost in India and the Gulf, and how to design and model them.</p>
+
+<h2 id="tldr">TL;DR</h2>
+<ul class="bullets">
+  <li><strong>A facade keeps out weather, controls heat and light, frames views and gives the building its identity.</strong></li>
+  <li><strong>The six common types are glass, ACP, stone, brick, green and double-skin facades.</strong></li>
+  <li><strong>ACP is the cheapest modern cladding in India,</strong> at about ₹160 to ₹450 per sq ft installed in 2026.</li>
+  <li><strong>Structural glazing costs the most,</strong> at about ₹800 to ₹2,500+ per sq ft installed.</li>
+  <li><strong>In hot climates, shading and orientation matter more than material:</strong> fins, screens and less west-facing glass cut heat gain.</li>
+  <li><strong>ACP with a plastic (polyethylene) core can spread fire;</strong> UAE codes tightened after a series of tower fires.</li>
+  <li><strong>In <a href="https://augmintech.com/learn-revit/">Revit</a>, facades are modelled with curtain systems and <a href="https://augmintech.com/revit-families-explained-key-types-applications-and-emerging-trends/">panel families</a>,</strong> so every panel can be counted and <a href="https://augmintech.com/bim-scheduling/">scheduled</a>.</li>
+</ul>
+
+<h2 id="what-is">What Is Facade Design?</h2>
+<p>A facade is the exterior face of a building, usually the front, though designers use the word for every outside wall. Facade design decides what that face is made of, how it is put together and how it performs. A good facade does five jobs at once:</p>
+<div class="jobs">
+  <div><svg viewBox="0 0 30 30"><path d="M4 18 Q15 2 26 18" fill="none" stroke="#2B6CB0" stroke-width="2"/><path d="M9 20 l-2 6 M15 20 l-2 6 M21 20 l-2 6" stroke="#2B6CB0" stroke-width="1.6"/></svg><b>Weather</b>Keeps out rain, wind and dust</div>
+  <div><svg viewBox="0 0 30 30"><circle cx="15" cy="15" r="6" fill="#E0A31B"/><path d="M15 2v4M15 24v4M2 15h4M24 15h4" stroke="#E0A31B" stroke-width="2"/></svg><b>Heat</b>Limits solar gain and heat loss</div>
+  <div><svg viewBox="0 0 30 30"><rect x="6" y="5" width="18" height="20" fill="#DDEBF6" stroke="#2A3540" stroke-width="1.4"/><path d="M15 5v20M6 15h18" stroke="#2A3540"/></svg><b>Light</b>Lets daylight in without glare</div>
+  <div><svg viewBox="0 0 30 30"><circle cx="9" cy="15" r="4" fill="none" stroke="#2A3540" stroke-width="1.6"/><circle cx="9" cy="15" r="1.5" fill="#2A3540"/><path d="M14 15h12" stroke="#2A3540" stroke-dasharray="2 2"/></svg><b>Views</b>Frames the outlook, keeps privacy</div>
+  <div><svg viewBox="0 0 30 30"><rect x="5" y="4" width="20" height="22" fill="#E3DED3" stroke="#2A3540"/><path d="M5 10h20M5 16h20M5 22h20M12 4v22M19 4v22" stroke="#C0471F" stroke-width=".8"/></svg><b>Identity</b>Gives the building its character</div>
+</div>
+
+<p><strong>Facade, cladding and envelope</strong> are related but not the same. The <em>envelope</em> is everything that separates inside from outside, including the roof and ground floor. The <em>facade</em> is the visible outer wall within that envelope. <em>Cladding</em> is the outer layer fixed onto a facade, such as ACP, stone or terracotta panels hung on a sub-frame. A <a href="https://augmintech.com/curtain-wall/">glass curtain wall</a>, by contrast, is both the facade and the wall itself. Knowing the difference matters when you read a specification: a cladding package is usually priced and installed separately from the wall behind it.</p>
+<h2 id="types">6 Types of Facades</h2>
+<div class="ft6">
+  <div class="ftc">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-glass-facade.webp" alt="Glass facade" width="1200" height="675" loading="lazy"></div>
+    <div><h3>1. Glass facade</h3><p>Glass in an aluminium frame (curtain wall) or bonded flush with structural silicone. It gives daylight and views and the classic corporate look, but without solar control glass and shading it lets in a lot of heat.</p><div class="tags"><span>Offices</span><span>Towers</span><span>Showrooms</span><span class="w">Heat gain</span></div></div>
+  </div>
+  <div class="ftc">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-acp-facade.webp" alt="ACP facade" width="1200" height="675" loading="lazy"></div>
+    <div><h3>2. ACP facade</h3><p>Aluminium composite panels: two thin aluminium skins bonded to a core, routed, folded and fixed to a sub-frame. Light, flat, colourful and quick to fit. The core matters: plastic cores burn, so fire-rated cores are now specified.</p><div class="tags"><span>Retail</span><span>Commercial</span><span>Signage bands</span><span class="w">Check core</span></div></div>
+  </div>
+  <div class="ftc">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-stone-facade.webp" alt="Stone facade" width="1200" height="675" loading="lazy"></div>
+    <div><h3>3. Stone facade</h3><p>Natural stone slabs, such as granite, sandstone or limestone, fixed with mechanical anchors or as a ventilated rainscreen. Durable and non-combustible, with a premium look, but heavy and dependent on good fixings.</p><div class="tags"><span>Villas</span><span>Hotels</span><span>Institutions</span><span class="w">Heavy</span></div></div>
+  </div>
+  <div class="ftc">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-brick-facade.webp" alt="Brick facade" width="1200" height="675" loading="lazy"></div>
+    <div><h3>4. Brick and terracotta facade</h3><p>Exposed load-bearing brick, brick tiles or terracotta rainscreen panels. Brick can be laid as a jaali, a perforated screen that shades and ventilates. Low-tech, local and long-lasting.</p><div class="tags"><span>Homes</span><span>Campuses</span><span>Low-rise</span><span class="w">Labour skill</span></div></div>
+  </div>
+  <div class="ftc">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-green-facade.webp" alt="Green facade" width="1200" height="675" loading="lazy"></div>
+    <div><h3>5. Green facade</h3><p>A green facade is climbers grown on cables or mesh from the ground; a living wall has plants in modular panels on the wall. NBS notes established greenery can filter out around 80% of solar radiation. Living walls need irrigation and regular maintenance.</p><div class="tags"><span>Offices</span><span>Malls</span><span>Homes</span><span class="w">Maintenance</span></div></div>
+  </div>
+  <div class="ftc">
+    <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-doubleskin-facade.webp" alt="Double-skin facade" width="1200" height="675" loading="lazy"></div>
+    <div><h3>6. Double-skin facade</h3><p>Two layers of facade with an air cavity between them, often holding blinds. Air moving through the cavity carries heat away. A 2023 simulation for hot-climate Erbil found suitable double-skin designs cut annual cooling demand by 9 to 14%.</p><div class="tags"><span>Offices</span><span>HQ buildings</span><span class="w">Cost, depth</span></div></div>
+  </div>
+</div>
+
+<style>
+.aug-cta-banner-bimwa2, .aug-cta-banner-bimwa2 *{margin:0;padding:0;border:0;box-sizing:border-box;text-decoration:none;list-style:none;background:none;font-size:16px;line-height:1.5;letter-spacing:normal;text-transform:none;}
+.aug-cta-banner-bimwa2{display:flex !important;background:#18d104 !important;border-radius:10px !important;padding:22px 26px !important;margin:24px 0 !important;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;}
+.aug-cta-banner-bimwa2-text h3{display:block !important;font-size:18px !important;font-weight:700 !important;color:#111111 !important;margin:0 0 4px !important;line-height:1.3em !important;}
+.aug-cta-banner-bimwa2-text p{display:block !important;font-size:14px !important;font-weight:400 !important;color:rgba(0,0,0,0.68) !important;margin:0 !important;line-height:1.5em !important;}
+.aug-cta-banner-bimwa2-btn{display:inline-block !important;background:#1a1a1a !important;color:#ffffff !important;font-size:13px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:6px !important;white-space:nowrap;}
+.aug-cta-banner-bimwa2-btn:hover{background:#000000 !important;color:#ffffff !important;}
+</style>
+
+<div class="aug-cta-banner-bimwa2">
+  <div class="aug-cta-banner-bimwa2-text">
+    <h3>Start Your BIM Career Today</h3>
+    <p>Talk to our BIM training team on WhatsApp — get course structure, duration, fees and placement support in minutes.</p>
+  </div>
+  <a href="https://wa.me/917903480012?text=Hi+Augmintech%2C+I+visited+your+website+and+I%27m+interested+in+the+BIM+Course.+Please+share+the+course+details." class="aug-cta-banner-bimwa2-btn" target="_blank" rel="noopener">Enrol Now →</a>
+</div>
+
+<h2 id="materials">Facade Materials Compared</h2>
+<div class="tbl-wrap mt">
+<table>
+  <thead><tr><th>Material</th><th>Durability</th><th>Heat performance</th><th>Fire behaviour</th><th>Maintenance</th><th>Typical use</th></tr></thead>
+  <tbody>
+    <tr><td>Glass</td><td>High; seals need renewal</td><td>Depends on glass; solar control needed in heat</td><td class="fire-mid">Non-combustible; can crack in fire</td><td>Regular cleaning, sealant checks</td><td>Offices, towers</td></tr>
+    <tr><td>ACP</td><td>Good; finish fades over time</td><td>Thin; needs insulation behind</td><td class="fire-bad">Plastic core combustible; FR and A2 cores available</td><td>Low; washing, joint sealant</td><td>Retail, commercial</td></tr>
+    <tr><td>Natural stone</td><td>Very high</td><td>Thermal mass; ventilated cavity helps</td><td class="fire-ok">Non-combustible</td><td>Low; check anchors</td><td>Villas, hotels, institutions</td></tr>
+    <tr><td>Brick / terracotta</td><td>Very high</td><td>Thermal mass; jaali shades and ventilates</td><td class="fire-ok">Non-combustible</td><td>Low; repoint joints</td><td>Homes, campuses</td></tr>
+    <tr><td>HPL / compact laminate</td><td>Good</td><td>Thin; needs insulation behind</td><td class="fire-mid">Check fire grade before specifying</td><td>Low</td><td>Low-rise, feature panels</td></tr>
+    <tr><td>Plants (green facade)</td><td>Living; replace losses</td><td>Shades the wall, filters about 80% of solar radiation</td><td class="fire-mid">Dry growth must be removed</td><td>High for living walls</td><td>Feature walls, podiums</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Fire: ACP cores per Gulf News (2018) and Aludecor's FR, FRB1 and A2 grades; stone and brick are mineral materials. Shading figure: NBS guide to facade greening. Durability and maintenance are general comparisons, not test results.</p>
+
+<div class="cta">
+  <div><h3>Model and Schedule Facades in BIM</h3><p>Augmintech's BIM Architecture program teaches building information modelling for architecture, including walls, curtain systems and facade panels you can schedule and quantify. See the course page for the current syllabus, schedule and fees.</p></div>
+  <div><a href="https://augmintech.com/courses/autodesk-certified-bim-architecture-program/" class="cta-btn cta-btn-blue">View the BIM Architecture program</a></div>
+</div>
+
+<h2 id="cost">Facade Cost in India and the Gulf</h2>
+<div class="cost2">
+  <div class="in">
+    <h3>India: installed, ₹ per sq ft (2025–26)</h3>
+    <table><tbody>
+      <tr><td>Exposed brick</td><td>₹120–350</td></tr>
+      <tr><td>ACP</td><td>₹160–450</td></tr>
+      <tr><td>HPL / compact laminate</td><td>₹250–700</td></tr>
+      <tr><td>Natural stone cladding</td><td>₹250–1,500+</td></tr>
+      <tr><td>Terracotta rainscreen</td><td>₹600–1,500+</td></tr>
+      <tr><td>Structural glazing / curtain wall</td><td>₹800–2,500+</td></tr>
+    </tbody></table>
+    <p>Studio Matrx facade cost guide, last verified June 2026: supply-and-fix, excluding GST (generally 18% on facade works), access and design fees. Access at height can add ₹50–200 per sq ft. ACP sheet alone: ₹83–292 per sq ft by thickness (Aludecor 2026 list, before fabrication and fixing).</p>
+  </div>
+  <div class="gf">
+    <h3>Dubai: aluminium cladding, AED per m²</h3>
+    <table><tbody>
+      <tr><td>Aluminium sheet</td><td>AED 150–300</td></tr>
+      <tr><td>Composite panel (ACP)</td><td>AED 250–500</td></tr>
+      <tr><td>Rainscreen</td><td>AED 350–700</td></tr>
+    </tbody></table>
+    <p>Crystal Casa, Dubai: material plus installation; page undated (images from 2024). We found no dated public rates for glass, stone or brick facades in the Gulf, so none are quoted.</p>
+  </div>
+</div>
+<p>Studio Matrx's guide names the usual cost drivers for each system. For ACP, a fire-rated core, a PVDF coating, branded panels and the sub-frame push the rate up. For glazing, unitised systems, laminated or double-glazed units and spider fittings do. For stone, imported granite or limestone, thick slabs and mechanical anchors do. Building height adds access costs on top of every system.</p>
+<p>Treat all of these as planning bands. Facade prices move with aluminium and glass prices, panel size, fixing system, building height and access, so always get itemised quotes.</p>
+
+<h2 id="climate">Designing a Facade for Climate</h2>
+<p>In India and the Gulf the facade's biggest job is keeping out the sun without losing daylight. More glass means more daylight and views, but also more heat and glare, and the cooling plant pays for every extra square metre. The aim is to let in diffuse light while stopping direct sun before it reaches the glass. Four decisions do most of the work:</p>
+<div class="clim">
+  <div><svg viewBox="0 0 120 70" aria-hidden="true"><rect x="40" y="25" width="40" height="30" fill="#E3DED3" stroke="#2A3540"/><path d="M10 60 Q60 -10 110 60" fill="none" stroke="#E0A31B" stroke-width="2" stroke-dasharray="4 3"/><circle cx="104" cy="50" r="6" fill="#E0A31B"/><text x="104" y="68" font-size="8" text-anchor="middle" fill="#8A5A00" font-family="sans-serif">W</text><text x="16" y="68" font-size="8" text-anchor="middle" fill="#8A5A00" font-family="sans-serif">E</text></svg><div><b>Orientation</b>Put most glass on the north and south faces; keep east and west glass small, because low morning and evening sun is hard to block.</div></div>
+  <div><svg viewBox="0 0 120 70" aria-hidden="true"><rect x="20" y="10" width="80" height="55" fill="#E3DED3" stroke="#2A3540"/><rect x="34" y="28" width="52" height="26" fill="#DDEBF6" stroke="#2A3540"/><rect x="28" y="22" width="64" height="5" fill="#2A3540"/><rect x="34" y="28" width="3" height="26" fill="#5F6B78"/><rect x="58" y="28" width="3" height="26" fill="#5F6B78"/><rect x="83" y="28" width="3" height="26" fill="#5F6B78"/></svg><div><b>Shading devices</b>Horizontal overhangs and louvres block high sun; vertical fins block low side sun. Fit them outside the glass.</div></div>
+  <div><svg viewBox="0 0 120 70" aria-hidden="true"><rect x="20" y="10" width="80" height="55" fill="#E3DED3" stroke="#2A3540"/><rect x="30" y="22" width="25" height="30" fill="#DDEBF6" stroke="#2A3540"/><rect x="65" y="22" width="25" height="30" fill="#DDEBF6" stroke="#2A3540"/></svg><div><b>Glazing ratio</b>Every square metre of glass is a heat load. Size windows for daylight and views, and use solar control glass where large panes are needed.</div></div>
+  <div><svg viewBox="0 0 120 70" aria-hidden="true"><rect x="20" y="8" width="80" height="58" fill="#C8A47A" stroke="#6B4A2E"/><g fill="#FFF9EC">
+<circle cx="32" cy="20" r="4"/><circle cx="48" cy="20" r="4"/><circle cx="64" cy="20" r="4"/><circle cx="80" cy="20" r="4"/><circle cx="40" cy="32" r="4"/><circle cx="56" cy="32" r="4"/><circle cx="72" cy="32" r="4"/><circle cx="88" cy="32" r="4"/><circle cx="32" cy="44" r="4"/><circle cx="48" cy="44" r="4"/><circle cx="64" cy="44" r="4"/><circle cx="80" cy="44" r="4"/><circle cx="40" cy="56" r="4"/><circle cx="56" cy="56" r="4"/><circle cx="72" cy="56" r="4"/><circle cx="88" cy="56" r="4"/></g></svg><div><b>Screens: jaali and mashrabiya</b>Perforated stone, brick or timber screens let air and dappled light through while cutting glare and giving privacy.</div></div>
+</div>
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-jaali-and-mashrabiya-facade-screen.webp" alt="Jaali and mashrabiya facade screen" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Jaali in India and mashrabiya in the Gulf are the traditional answer to hot sun, now made in metal, GRC and stone.</figcaption>
+</figure>
+
+<h2 id="revit">Modelling Facades in Revit</h2>
+<p>Revit has three main ways to model a facade, from simple to complex. (Flat glass walls are covered in our curtain wall guide.)</p>
+<div class="rvf">
+  <div><b>Curtain systems</b>Apply a grid of panels and mullions to any face, including sloped or curved mass faces, using the Curtain System by Face tool.<em>For: glazed roofs, curved glass, ACP grids</em></div>
+  <div><b>Curtain panel pattern families</b>Divide a mass surface with a U/V grid and fill it with a Curtain Panel Pattern Based family, with sizes and materials as parameters.<em>For: patterned and parametric facades</em></div>
+  <div><b>Adaptive components</b>Families whose points stick to a grid and flex with it, so each panel can fold or open differently.<em>For: twisted panels, varying fins and screens</em></div>
+</div>
+<p>Whichever you use, schedule the panels: a curtain panel schedule counts panel types, areas and materials, and shared parameters can carry panel IDs, fire ratings and coatings, which is exactly what the facade contractor will ask for.</p>
+<figure class="pf">
+  <div class="ph"><img src="https://augmintech.com/wp-content/uploads/2026/11/98-illustrative-facade-panel-grid-with.webp" alt="Illustrative facade panel grid with matching type counts and schedule parameters" width="1200" height="675" loading="lazy"></div>
+  <figcaption>Illustrative panel grid and matching schedule: eight panels of each type, sixteen in total. Concept diagram, not a Revit screenshot.</figcaption>
+</figure>
+
+<h2 id="gulf">Facades on Gulf Projects</h2>
+<p>Facade fire safety reshaped Gulf cladding rules. A string of high-rise fires showed how flames could race up the outside of a building through combustible cladding:</p>
+<ul class="tl">
+  <li><b>2012</b>Fire at Al Baker Tower, Sharjah, the start of a series of more than 11 high-rise fires in the UAE, according to Gulf News.</li>
+  <li><b>2013</b>The UAE Fire and Life Safety Code required fire-resistant cladding on new buildings over 15 m (Cavendish Maxwell).</li>
+  <li><b>2015</b>Fires at the Address Downtown hotel on New Year's Eve and at the Torch tower in Dubai.</li>
+  <li><b>2017</b>An updated code required non-combustible cladding on new buildings across the UAE, fire-retardant mineral cores, and testing of the whole facade system, not just the panel (The National).</li>
+  <li><b>2018</b>Manufacturers began halting polyethylene-core panels, as revisions requiring A2 fire-rated panels were proposed (Gulf News).</li>
+</ul>
+<p>Under the code as described by Vortex Fire, each facade component must be reaction-to-fire tested and the complete assembly tested at full scale, a Civil Defence-approved fire consultant reviews the design, and the cladding supplier, system and installer must be registered with Civil Defence. Field inspections run at least every 20% of installation.</p>
+<div class="alert"><b>What this means for ACP:</b> panels with a plastic (polyethylene) core are the main problem, and the 2017 code calls for non-combustible cladding with fire-retardant mineral cores on new buildings, tested as a whole system. Manufacturers now sell fire-retardant and A2-grade ACP, but the classification your building needs depends on its type and height, so confirm it with the current code, Civil Defence and a fire consultant before specifying.</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-item"><div class="faq-q">What are the types of facade?</div><div class="faq-a">The six common types are glass facades (curtain wall or structural glazing), ACP facades, stone facades, brick and terracotta facades, green facades and living walls, and double-skin facades.</div></div>
+<div class="faq-item"><div class="faq-q">What is facade design in architecture?</div><div class="faq-a">Facade design is the design of a building's outer face: its materials, layout and details, chosen to keep out weather, control heat and light, frame views and give the building its character, within the budget.</div></div>
+<div class="faq-item"><div class="faq-q">What is a double-skin facade?</div><div class="faq-a">A double-skin facade has two layers, usually glass, separated by an air cavity that may hold blinds. Air moving through the cavity carries heat away; one 2023 hot-climate study found suitable designs cut cooling demand by 9 to 14%.</div></div>
+<div class="faq-item"><div class="faq-q">Which facade material is best for hot climates?</div><div class="faq-a">Heavy, non-combustible materials such as stone, brick and terracotta, used with shading devices and screens such as jaali or mashrabiya. Where glass is needed, use solar control glass and keep it off the east and west faces.</div></div>
+<div class="faq-item"><div class="faq-q">Is ACP cladding fire safe?</div><div class="faq-a">It depends on the core. ACP with a polyethylene (plastic) core can ignite and spread fire quickly. Fire-retardant and A2 mineral-core grades perform far better, and in the UAE the whole facade system must be tested and approved through Civil Defence.</div></div>
+
+<h2 id="sources">Sources</h2>
+<ul class="srcs">
+  <li><strong>Studio Matrx</strong>, <a href="https://www.studiomatrx.org/guides/facade-cost-guide-india" target="_blank" rel="noopener">Facade cost in India</a> (June 2026); <a href="https://www.studiomatrx.org/guides/green-living-facades-india" target="_blank" rel="noopener">Green and living facades</a> (June 2026).</li>
+  <li><strong>Aludecor</strong>, <a href="https://www.aludecor.com/acp-sheet-price" target="_blank" rel="noopener">ACP sheet price guide 2026</a>.</li>
+  <li><strong>Crystal Casa</strong>, <a href="https://crystalcasa.ae/?p=5890" target="_blank" rel="noopener">Estimating aluminium cladding costs</a> (Dubai).</li>
+  <li><strong>NBS</strong>, <a href="https://www.thenbs.com/knowledge/the-nbs-guide-to-facade-greening-part-two" target="_blank" rel="noopener">The NBS guide to facade greening, part two</a> (2015).</li>
+  <li><strong>Naddaf and Baper (2023)</strong>, <a href="https://www.nature.com/articles/s41598-023-35555-0.pdf" target="_blank" rel="noopener">Double-skin facade configurations in Erbil</a>, Scientific Reports 13, 8394.</li>
+  <li><strong>The National</strong>, <a href="https://thenationalnews.com/uae/new-fire-code-for-uae-sets-out-need-for-materials-that-halt-spread-of-fire-1.661889" target="_blank" rel="noopener">New UAE fire code</a> (26 September 2017); <strong>Gulf News</strong>, <a href="https://gulfnews.com/uae/uae-firm-stops-producing-flammable-cladding-1.1844666" target="_blank" rel="noopener">UAE firm stops producing flammable cladding</a> (15 September 2018).</li>
+  <li><strong>WFM / Vortex Fire</strong>, <a href="https://wfmmedia.com/the-uae-approach-to-mitigate-facade-fire-risk-in-tall-buildings/" target="_blank" rel="noopener">The UAE approach to facade fire risk</a> (2021, updated 2024); <strong>Cavendish Maxwell</strong>, <a href="https://www.cavendishmaxwell.com/blog/progression-fire-safety-uae/" target="_blank" rel="noopener">Progression of fire safety in the UAE</a>.</li>
+  <li><strong>Autodesk</strong>, <a href="https://help.autodesk.com/cloudhelp/2016/ENU/Revit-Model/files/GUID-62D7C2DF-9E9B-409B-B106-504387438E1C.htm" target="_blank" rel="noopener">Create a curtain system from a mass</a>; <strong>NOVEDGE</strong>, <a href="https://novedge.com/blogs/design-news/revit-tip-curtain-panel-and-patterning-workflow-for-scheduleable-facades" target="_blank" rel="noopener">Curtain panel and patterning workflow</a> (May 2026).</li>
+</ul>
+
+<p style="font-size:13.5px;color:var(--muted);">This article was last reviewed on 7 November 2026.</p>
+</div>
+<dialog id="zoom98" aria-label="Enlarged facade image"><button type="button">Close</button><img alt="Enlarged facade"></dialog><script>(function(){const d=document.getElementById('zoom98'),im=d.querySelector('img');document.querySelectorAll('.ph img').forEach(el=>{el.tabIndex=0;el.title='Click to enlarge';function open(){im.src=el.src;im.alt=el.alt;d.showModal()}el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter')open()})});d.querySelector('button').onclick=()=>d.close();d.onclick=e=>{if(e.target===d)d.close()}})();</script>
